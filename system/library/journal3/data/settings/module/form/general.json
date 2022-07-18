@@ -1,0 +1,95 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "New Form "
+  },
+  "status": {
+    "type": "Status"
+  },
+  "schedule": {
+    "type": "Range",
+    "php": true
+  },
+  "title": {
+    "type": "InputLang",
+    "value": "Contact Us",
+    "php": true
+  },
+  "formStyle": {
+    "type": "Variable",
+    "variable": "form",
+    "selector_prefix": ".module-form-%s"
+  },
+  "moduleTitle": {
+    "type": "Variable",
+    "variable": "title",
+    "selector_prefix": ".module-form-%s .title.module-title"
+  },
+  "pageButtons": {
+    "type": "Variable",
+    "variable": "page_buttons",
+    "selector_prefix": ".module-form-%s"
+  },
+  "background": {
+    "type": "Background",
+    "selector": ".module-form-%s"
+  },
+  "padding": {
+    "type": "Padding",
+    "selector": ".module-form-%s"
+  },
+  "agree": {
+    "type": "Catalog",
+    "php": true
+  },
+  "sentText": {
+    "type": "InputLang",
+    "value": "Sent",
+    "php": true
+  },
+  "sentEmailTo": {
+    "type": "Input",
+    "value": "",
+    "php": true
+  },
+  "sentEmailSubject": {
+    "type": "InputLang",
+    "value": "{{ $store }} - Enquiry from {{ $email }}",
+    "php": true
+  },
+  "sentEmailLogo": {
+    "type": "Toggle",
+    "php": true,
+    "value": "false"
+  },
+  "sentEmailTitle": {
+    "type": "InputLang",
+    "value": "A new message has been received!",
+    "php": true
+  },
+  "sentEmailField": {
+    "type": "InputLang",
+    "value": "Field",
+    "php": true
+  },
+  "sentEmailValue": {
+    "type": "InputLang",
+    "value": "Value",
+    "php": true
+  },
+  "sentEmailUsingModule": {
+    "type": "InputLang",
+    "value": "Sent using module",
+    "php": true
+  },
+  "sentEmailFrom": {
+    "type": "InputLang",
+    "value": "Sent from",
+    "php": true
+  },
+  "sentEmailIPAddress": {
+    "type": "InputLang",
+    "value": "IP Address",
+    "php": true
+  }
+}

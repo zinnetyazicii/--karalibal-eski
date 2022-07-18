@@ -1,0 +1,75 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "New Item"
+  },
+  "status": {
+    "type": "Status"
+  },
+  "title": {
+    "type": "InputLang",
+    "php": true
+  },
+  "icon": {
+    "type": "Icon",
+    "selector": "div.links-menu-%s .links-menu-item-%s > a::before"
+  },
+  "itemPadding": {
+    "type": "Padding",
+    "selector": "div.links-menu-%s .links-menu-item-%s a"
+  },
+  "iconHover": {
+    "type": "Color",
+    "selector": "div.links-menu-%s .links-menu-item-%s:hover a::before",
+    "property": "color"
+  },
+  "iconBG": {
+    "type": "Background",
+    "selector": "div.links-menu-%s .links-menu-item-%s a::before"
+  },
+  "iconBGHover": {
+    "type": "Background",
+    "selector": "div.links-menu-%s .links-menu-item-%s:hover a::before"
+  },
+  "link": {
+    "type": "Link",
+    "php": true
+  },
+  "itemBackground": {
+    "type": "Background",
+    "selector": "div.links-menu-%s .links-menu-item-%s"
+  },
+  "itemBackgroundHover": {
+    "type": "Background",
+    "selector": "div.links-menu-%s .links-menu-item-%s:hover"
+  },
+  "itemFont": {
+    "type": "Font",
+    "selector": "div.links-menu-%s .links-menu-item-%s a .links-text"
+  },
+  "itemFontHover": {
+    "type": "Font",
+    "selector": "div.links-menu-%s .links-menu-item-%s:hover a .links-text"
+  },
+  "label": {
+    "type": "InputLang",
+    "php": true
+  },
+  "labelStyle": {
+    "type": "Variable",
+    "variable": "menu_label",
+    "selector_prefix": "div.links-menu-%s .links-menu-item-%s"
+  },
+  "labelOffset": {
+    "type": "InputPair",
+    "selector": "div.links-menu-%s .links-menu-item-%s .menu-label",
+    "properties": {
+      "first": "margin-right:calc(0px - (%spx))",
+      "second": "margin-top:%spx"
+    },
+    "rtlProperties": {
+      "first": "margin-left:calc(0px - (%spx))",
+      "second": "margin-top:%spx"
+    }
+  }
+}

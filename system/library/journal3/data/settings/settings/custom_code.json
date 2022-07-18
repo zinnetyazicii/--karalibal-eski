@@ -1,0 +1,18 @@
+{
+  "customCSS": {
+    "type": "Input",
+    "php": true
+  },
+  "customJS": {
+    "type": "Input",
+    "php": true
+  },
+  "customCodeHeader": {
+    "type": "Input",
+    "php": true
+  },
+  "customCodeFooter": {
+    "type": "Input",
+    "php": true
+  }
+}

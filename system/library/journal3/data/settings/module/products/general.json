@@ -1,0 +1,165 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "New Products"
+  },
+  "status": {
+    "type": "Status"
+  },
+  "schedule": {
+    "type": "Range",
+    "php": true
+  },
+  "display": {
+    "type": "Radio",
+    "value": "grid",
+    "php": true
+  },
+  "sectionsDisplay": {
+    "type": "Radio",
+    "value": "blocks",
+    "php": true,
+    "device": true
+  },
+  "sectionsDisplayTablet": {
+    "type": "Radio",
+    "value": "",
+    "php": true
+  },
+  "sectionsDisplayPhone": {
+    "type": "Radio",
+    "value": "",
+    "php": true
+  },
+  "carousel": {
+    "type": "Toggle",
+    "value": "false",
+    "php": true,
+    "device": true
+  },
+  "carouselTablet": {
+    "type": "Toggle",
+    "value": "",
+    "php": true
+  },
+  "carouselPhone": {
+    "type": "Toggle",
+    "value": "",
+    "php": true
+  },
+  "moduleTitle": {
+    "type": "Variable",
+    "variable": "title",
+    "selector_prefix": ".module-products-%s .title.module-title"
+  },
+  "carouselStyle": {
+    "type": "Variable",
+    "variable": "carousel",
+    "selector_prefix": ".module-products-%s "
+  },
+  "accordionStyle": {
+    "type": "Variable",
+    "variable": "accordion",
+    "selector_prefix": ".module-products-%s "
+  },
+  "tabsStyle": {
+    "type": "Variable",
+    "variable": "tabs",
+    "selector_prefix": ".module-products-%s "
+  },
+  "itemsPerRow": {
+    "type": "ItemsPerRow",
+    "selector": ".module-products-%s .product-layout",
+    "php": true
+  },
+  "default": {
+    "type": "Select",
+    "value": "",
+    "php": true
+  },
+  "sectionMargin": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".module-products-%s .module-body > .module-item": "margin-bottom:%spx"
+      }
+    }
+  },
+  "carouselGutter": {
+    "type": "Padding",
+    "selector": ".module-products-%s .swiper-container"
+  },
+  "containerMargin": {
+    "type": "Margin",
+    "selector": ".module-products-%s:not(.carousel-mode) .module-body .module-item > div"
+  },
+  "imageDimensions": {
+    "type": "ImageDimensions",
+    "value": {
+      "resize": "fit"
+    },
+    "php": true
+  },
+  "moduleProductGrid": {
+    "type": "Variable",
+    "variable": "product_grid",
+    "selector_prefix": ".module-products-%s .product-grid"
+  },
+  "moduleProductList": {
+    "type": "Variable",
+    "variable": "product_list",
+    "selector_prefix": ".module-products-%s .product-list"
+  },
+  "moduleProductDescriptionLimit": {
+    "type": "Input",
+    "value": "150",
+    "php": true
+  },
+  "moduleProductStat1": {
+    "type": "Select",
+    "value": "none",
+    "php": true
+  },
+  "moduleProductStat2": {
+    "type": "Select",
+    "value": "none",
+    "php": true
+  },
+  "moduleBackground": {
+    "type": "Background",
+    "selector": ".module-products-%s .module-body"
+  },
+  "modulePadding": {
+    "type": "Padding",
+    "selector": ".module-products-%s .module-body"
+  },
+  "moduleMargin": {
+    "type": "Margin",
+    "selector": ".module-products-%s .module-body"
+  },
+  "moduleProductQuickviewTooltip": {
+    "type": "Variable",
+    "variable": "tooltip",
+    "selector_prefix": ".module-products-%s.quickview-tooltip"
+  },
+  "moduleProductCartTooltip": {
+    "type": "Variable",
+    "variable": "tooltip",
+    "selector_prefix": ".module-products-%s.cart-tooltip"
+  },
+  "moduleProductWishlistTooltip": {
+    "type": "Variable",
+    "variable": "tooltip",
+    "selector_prefix": ".module-products-%s.wishlist-tooltip"
+  },
+  "moduleProductCompareTooltip": {
+    "type": "Variable",
+    "variable": "tooltip",
+    "selector_prefix": ".module-products-%s.compare-tooltip"
+  },
+  "moduleProductExtraTooltip": {
+    "type": "Variable",
+    "variable": "tooltip",
+    "selector_prefix": ".module-products-%s.extra-tooltip"
+  }
+}

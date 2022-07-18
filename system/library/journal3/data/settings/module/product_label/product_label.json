@@ -1,0 +1,232 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "New Label"
+  },
+  "status": {
+    "type": "Status"
+  },
+  "type": {
+    "type": "Radio",
+    "value": "special",
+    "php": true
+  },
+  "label": {
+    "type": "InputLang",
+    "value": "Label",
+    "php": true
+  },
+  "filter": {
+    "type": "ProductFilter"
+  },
+
+  "vis": {
+    "type": "Radio",
+    "value": "always",
+    "rules": {
+      "always": {
+        ".product-label-default.product-label-%s": "display: flex",
+        ".product-label-diagonal.product-label-%s": "display: block"
+      },
+      "hover": {
+        ".product-label-default.product-label-%s": "display: none",
+        ".product-label-diagonal.product-label-%s": "display: none",
+        ".product-thumb:hover .product-label-default.product-label-%s": "display: flex;",
+        ".product-thumb:hover .product-label-diagonal.product-label-%s": "display: block;"
+      },
+      "hidden": {
+        ".product-label-default.product-label-%s": "display: none",
+        ".product-label-diagonal.product-label-%s": "display: none"
+      }
+    }
+  },
+  "display": {
+    "type": "Radio",
+    "value": "default",
+    "php": true
+  },
+  "offsets": {
+    "type": "InputNumber",
+    "selector": ".product-label-diagonal.product-label-%s",
+    "property": "margin:%spx"
+  },
+  "margin": {
+    "type": "Margin",
+    "selector": ".product-label-default.product-label-%s"
+  },
+  "scale": {
+    "type": "InputSlider",
+    "value": "10",
+    "selector": ".product-label-diagonal.product-label-%s > b",
+    "property": "transform: scale(calc(%s / 10));"
+  },
+
+  "labelStyle": {
+    "type": "Variable",
+    "variable": "label",
+    "selector_prefix": ".product-label-%s"
+  },
+  "labelSort": {
+    "type": "InputNumber",
+    "rules":{
+      "@":{
+        ".product-label-%s": "order:%s"
+      }
+    }
+  },
+  "labelIcon": {
+    "type": "Icon",
+    "selector": ".product-label-%s b::before"
+  },
+  "labelFont": {
+    "type": "Font",
+    "selector":".product-label-%s b"
+  },
+  "labelBackground": {
+    "type": "Background",
+    "selector":".product-label-%s b",
+    "value": {
+      "background-size":"contain",
+      "background-repeat":"no-repeat"
+    }
+  },
+  "labelBorder": {
+    "type": "Border",
+    "selector":".product-label-%s b"
+  },
+  "labelBorderRadius": {
+    "type": "BorderRadius",
+    "selector":".product-label-%s b"
+  },
+  "labelPadding": {
+    "type": "Padding",
+    "selector":".product-label-%s b"
+  },
+  "labelShadow": {
+    "type": "Shadow",
+    "selector":".product-label-%s b"
+  },
+  "labelSize": {
+    "type": "InputPair",
+    "selector": ".product-label-%s.product-label-default b",
+    "properties": {
+      "first": "min-width:%spx",
+      "second": "min-height:%spx"
+    }
+  },
+  "positionDefault": {
+    "type": "Radio",
+    "value": "group",
+    "rules": {
+      "group": {
+        ".product-label-default.product-label-%s": "position:relative; top:0; right:0; bottom:initial; left:initial; justify-content: flex-end;"
+      },
+      "tl": {
+        ".product-label-default.product-label-%s": "position:absolute; top:0; right:initial; bottom:initial; left:0"
+      },
+      "br": {
+        ".product-label-default.product-label-%s": "position:absolute; top:initial; right:0; bottom:0; left:initial"
+      },
+      "bl": {
+        ".product-label-default.product-label-%s": "position:absolute; top:initial; right:initial; bottom:0; left:0"
+      }
+    }
+  },
+  "positionDefaultP": {
+    "type": "Radio",
+    "value": "",
+    "rules": {
+      "group": {
+        ".product-info .product-label-default.product-label-%s": "position:relative; top:0; right:0; bottom:initial; left:initial; justify-content: flex-end;"
+      },
+      "tl": {
+        ".product-info .product-label-default.product-label-%s": "position:absolute; top:0; right:initial; bottom:initial; left:0"
+      },
+      "br": {
+        ".product-info .product-label-default.product-label-%s": "position:absolute; top:initial; right:0; bottom:0; left:initial"
+      },
+      "bl": {
+        ".product-info .product-label-default.product-label-%s": "position:absolute; top:initial; right:initial; bottom:0; left:0"
+      }
+    }
+  },
+  "marginP": {
+    "type": "Margin",
+    "selector": ".product-info .product-label-default.product-label-%s"
+  },
+  "position": {
+    "type": "Radio",
+    "value": "tl",
+    "rules": {
+      "tl": {
+        ".product-label-diagonal.product-label-%s": "top:0; left:0; right:initial; bottom:initial; transform: translate3d(-130px, 8px, 0) rotate(-45deg);"
+      },
+      "tr": {
+        ".product-label-diagonal.product-label-%s": "top:0; left:initial; right:0; bottom:initial; transform: translate3d(130px, 8px, 0) rotate(45deg);"
+      },
+      "br": {
+        ".product-label-diagonal.product-label-%s": "top:initial; left:initial; right:0; bottom:0; transform: translate3d(130px, -8px, 0) rotate(-45deg);"
+      },
+      "bl": {
+        ".product-label-diagonal.product-label-%s": "top:initial; left:0; right:initial; bottom:0; transform: translate3d(-130px, -8px, 0) rotate(45deg);"
+      }
+    }
+  },
+  "positionP": {
+    "type": "Radio",
+    "value": "",
+    "rules": {
+      "tl": {
+        ".product-info .product-label-diagonal.product-label-%s": "top:0; left:0; right:initial; bottom:initial; transform: translate3d(-130px, 8px, 0) rotate(-45deg);"
+      },
+      "tr": {
+        ".product-info .product-label-diagonal.product-label-%s": "top:0; left:initial; right:0; bottom:initial; transform: translate3d(130px, 8px, 0) rotate(45deg);"
+      },
+      "br": {
+        ".product-info .product-label-diagonal.product-label-%s": "top:initial; left:initial; right:0; bottom:0; transform: translate3d(130px, -8px, 0) rotate(-45deg);"
+      },
+      "bl": {
+        ".product-info .product-label-diagonal.product-label-%s": "top:initial; left:0; right:initial; bottom:0; transform: translate3d(-130px, -8px, 0) rotate(45deg);"
+      }
+    }
+  },
+  "offsetsP": {
+    "type": "InputNumber",
+    "selector":".product-info .product-label-diagonal.product-label-%s",
+    "property": "margin:%spx"
+  },
+  "scaleP": {
+    "type": "InputSlider",
+    "value": "10",
+    "selector": ".product-info .product-label-diagonal.product-label-%s > b",
+    "property": "transform: scale(calc(%s / 10));"
+  },
+
+  "visP": {
+    "type": "Radio",
+    "value": "",
+    "rules": {
+      "always": {
+        ".product-info .product-image .product-label-default.product-label-%s": "display: flex",
+        ".product-info .product-image .product-label-diagonal.product-label-%s": "display: block"
+      },
+      "hover": {
+        ".product-info .product-image .product-label-default.product-label-%s": "display: none",
+        ".product-info .product-image .product-label-diagonal.product-label-%s": "display: none",
+        ".product-info .product-image:hover .product-label-default.product-label-%s": "display: flex;",
+        ".product-info .product-image:hover .product-label-diagonal.product-label-%s": "display: block;"
+      },
+      "hidden": {
+        ".product-info .product-image .product-label-default.product-label-%s": "display: none",
+        ".product-info .product-image .product-label-diagonal.product-label-%s": "display: none"
+      }
+    }
+  },
+
+  "labelStyleP": {
+    "type": "Variable",
+    "variable": "label",
+    "selector_prefix": ".product-info .product-label-%s",
+    "important": true
+  }
+}

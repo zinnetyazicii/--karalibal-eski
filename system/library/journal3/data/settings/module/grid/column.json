@@ -1,0 +1,86 @@
+{
+  "status": {
+    "type": "Status"
+  },
+  "width": {
+    "type": "Input",
+    "value": "100",
+    "selector": ".module-grid-%s .grid-row-%s .grid-col-%s",
+    "property": "width: %s%"
+  },
+  "name": {
+    "type": "InputLang",
+    "value": "New Column",
+    "php": true
+  },
+  "background": {
+    "type": "Background",
+    "selector": ".module-grid-%s .grid-row-%s .grid-col-%s"
+  },
+  "padding": {
+    "type": "Padding",
+    "selector": ".module-grid-%s .grid-row-%s .grid-col-%s"
+  },
+  "border": {
+    "type": "Border",
+    "selector": ".module-grid-%s .grid-row-%s .grid-col-%s"
+  },
+  "margin": {
+    "type": "InputNumber",
+    "rules":{
+      "@":{
+        ".module-grid-%s .grid-row-%s .grid-col-%s": "margin-bottom:%spx"
+      }
+    }
+  },
+  "marginTop": {
+    "type": "InputNumber",
+    "rules":{
+      "@":{
+        ".module-grid-%s .grid-row-%s .grid-col-%s": "margin-top:%spx"
+      }
+    }
+  },
+  "autoHeight": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".module-grid-%s .grid-row-%s .grid-col-%s .grid-item": "height: auto"
+      },
+      "false": {
+        ".module-grid-%s .grid-row-%s .grid-col-%s .grid-item": "height: 100%"
+      }
+    }
+  },
+  "alignH": {
+    "type": "Radio",
+    "value": "",
+    "rules": {
+      "start": {
+        ".module-grid-%s .grid-row-%s .grid-col-%s .grid-item": "display:flex; justify-content:flex-start"
+      },
+      "center": {
+        ".module-grid-%s .grid-row-%s .grid-col-%s .grid-item": "display:flex; justify-content:center"
+      },
+      "end": {
+        ".module-grid-%s .grid-row-%s .grid-col-%s .grid-item": "display:flex; justify-content:flex-end"
+      }
+    }
+  },
+
+  "align": {
+    "type": "Radio",
+    "value": "top",
+    "rules": {
+      "top": {
+        ".module-grid-%s .grid-row-%s .grid-col-%s .grid-items": "justify-content: flex-start"
+      },
+      "middle": {
+        ".module-grid-%s .grid-row-%s .grid-col-%s .grid-items": "justify-content: center"
+      },
+      "bottom": {
+        ".module-grid-%s .grid-row-%s .grid-col-%s .grid-items": "justify-content: flex-end"
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "POST_STYLE"
+  },
+  "value": {
+    "include": "post_grid"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "MOBILE_WRAPPER"
+  },
+  "value": {
+    "include": "mobile_wrapper"
+  }
+}

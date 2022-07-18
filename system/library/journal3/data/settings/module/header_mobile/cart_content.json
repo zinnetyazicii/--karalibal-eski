@@ -1,0 +1,28 @@
+{
+
+  "headerMobileCartTitleFont": {
+    "type": "Font",
+    "selector": ".mobile-cart-wrapper .mobile-wrapper-header div"
+  },
+  "headerMobileCartTitleBG": {
+    "type": "Background",
+    "selector": ".mobile-cart-wrapper .mobile-wrapper-header div"
+  },
+  "headerMobileCartTitleShadow": {
+    "type": "Shadow",
+    "selector": ".mobile-cart-wrapper .mobile-wrapper-header div"
+  },
+  "headerMobileCartTitleBorder": {
+    "type": "Border",
+    "selector": ".mobile-cart-wrapper .mobile-wrapper-header div"
+  },
+  "headerMobileCartTitleIcon": {
+    "type": "Icon",
+    "selector": ".mobile-cart-wrapper .mobile-wrapper-header .x::before"
+  },
+  "headerMobileCartTitleIconBG": {
+    "type": "Background",
+    "selector": ".mobile-cart-wrapper .mobile-wrapper-header a"
+  }
+}
+

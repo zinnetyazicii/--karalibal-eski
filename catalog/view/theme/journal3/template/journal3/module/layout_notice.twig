@@ -1,0 +1,24 @@
+<div class="notice-module {{ j3.classes(classes) }}" data-options='{{ options|json_encode }}'>
+  <div class="module-body">
+    <div class="hn-body">
+      <div class="hn-content">{{ content }}</div>
+    </div>
+    {% if closeButton %}
+      <div class="layout-notice-close-button">
+        {% if closeLink.href %}
+          <a class="btn hn-close" href="{{ closeLink.href }}" {{ j3.linkAttrs(closeLink) }}>
+            {% if closeText %}
+              <span class="btn-text">{{ closeText }}</span>
+            {% endif %}
+          </a>
+        {% else %}
+          <button class="btn hn-close">
+            {% if closeText %}
+              <span class="btn-text">{{ closeText }}</span>
+            {% endif %}
+          </button>
+        {% endif %}
+      </div>
+    {% endif %}
+  </div>
+</div>

@@ -1,0 +1,60 @@
+{% if not j3.document.isPopup() %}
+<div class="admin-bar-wrapper">
+  <div class="admin-bar">
+    <div class="admin-bar-layout">
+      <a href="{{ edit_layout }}" target="_blank">Edit Layout</a>
+    </div>
+
+    <div class="admin-bar-skin">
+      <a href="{{ edit_skin }}" target="_blank">Edit Skin</a>
+    </div>
+
+    <div class="admin-bar-header">
+      <select data-key="headerDesktop">
+        {% for module in desktop_headers %}
+          <option value="{{ module.value }}" {% if module.selected %}selected{% endif %} >{{ module.name }}</option>
+        {% endfor %}
+      </select>
+
+      <select data-key="headerMobile">
+        {% for module in mobile_headers %}
+          <option value="{{ module.value }}" {% if module.selected %}selected{% endif %} >{{ module.name }}</option>
+        {% endfor %}
+      </select>
+    </div>
+
+    <div class="admin-bar-footer">
+
+    </div>
+
+    <div class="admin-bar-cache">
+      <button>clear</button>
+    </div>
+  </div>
+</div>
+<script>
+  $('.admin-bar select').on('change', function () {
+    var $this = $(this);
+    var data = {};
+    data[$this.data('key')] = $this.val();
+    $.ajax({
+      url: 'index.php?route=journal3/admin_bar/save',
+      method: 'post',
+      data: data,
+      success: function () {
+        location.reload()
+      }
+    });
+  });
+
+  $('.admin-bar-cache button').on('click', function () {
+    $.ajax({
+      url: 'cache.php',
+      method: 'get',
+      success: function () {
+        alert('done');
+      }
+    })
+  });
+</script>
+{% endif %}

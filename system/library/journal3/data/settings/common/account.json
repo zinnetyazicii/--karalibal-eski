@@ -1,0 +1,437 @@
+{
+  "LinkFont": {
+    "type": "Font",
+    "selector": ".account-list > li > a"
+  },
+  "LinkFontHover": {
+    "type": "Font",
+    "selector": ".account-list > li > a:hover",
+    "desktop":true
+  },
+  "Icon": {
+    "type": "Icon",
+    "selector": ".account-list > li > a::before",
+    "value": {
+      "icon": {
+        "name": "arrow-circle-right",
+        "code": "f0a9"
+      }
+    }
+  },
+  "IconHover": {
+    "type": "Color",
+    "selector": ".account-list > li > a:hover::before",
+    "property": "color",
+    "desktop":true
+  },
+
+
+  "Edit": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".account-list .edit-info": "display: flex",
+        ".route-information-sitemap .site-edit":"display:block"
+      },
+      "false": {
+        ".account-list .edit-info": "display: none",
+        ".route-information-sitemap .site-edit":"display:none"
+      }
+    }
+  },
+  "Password": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".account-list .edit-pass": "display: flex",
+        ".route-information-sitemap .site-pass":"display:block"
+      },
+      "false": {
+        ".account-list .edit-pass": "display: none",
+        ".route-information-sitemap .site-pass":"display:none"
+      }
+    }
+  },
+  "Address": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".account-list .edit-address": "display: flex",
+        ".route-information-sitemap .site-address":"display:block"
+      },
+      "false": {
+        ".account-list .edit-address": "display: none",
+        ".route-information-sitemap .site-address":"display:none"
+      }
+    }
+  },
+  "Wishlist": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".account-list .edit-wishlist": "display: flex"
+      },
+      "false": {
+        ".account-list .edit-wishlist": "display: none"
+      }
+    }
+  },
+  "Cards": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".my-cards": "display: block"
+      },
+      "false": {
+        ".my-cards": "display: none"
+      }
+    }
+  },
+  "History": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".account-list .edit-order": "display: flex",
+        ".route-information-sitemap .site-history":"display:block"
+      },
+      "false": {
+        ".account-list .edit-order": "display: none",
+        ".route-information-sitemap .site-history":"display:none"
+      }
+    }
+  },
+  "Downloads": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".account-list .edit-downloads": "display: flex",
+        ".route-information-sitemap .site-download":"display:block"
+      },
+      "false": {
+        ".account-list .edit-downloads": "display: none",
+        ".route-information-sitemap .site-download":"display:none"
+      }
+    }
+  },
+  "Rewards": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".account-list .edit-rewards": "display: flex"
+      },
+      "false": {
+        ".account-list .edit-rewards": "display: none"
+      }
+    }
+  },
+  "Returns": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".account-list .edit-returns": "display: flex"
+      },
+      "false": {
+        ".account-list .edit-returns": "display: none"
+      }
+    }
+  },
+  "Transactions": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".account-list .edit-transactions": "display: flex"
+      },
+      "false": {
+        ".account-list .edit-transactions": "display: none"
+      }
+    }
+  },
+  "Recurring": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".account-list .edit-recurring": "display: flex"
+      },
+      "false": {
+        ".account-list .edit-recurring": "display: none"
+      }
+    }
+  },
+  "Affiliates": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".my-affiliates": "display: block"
+      },
+      "false": {
+        ".my-affiliates": "display: none"
+      }
+    }
+  },
+  "Newsletter": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".my-newsletter .account-list": "display: flex"
+      },
+      "false": {
+        ".my-newsletter .account-list": "display: none"
+      }
+    }
+  },
+
+  "MyAffiliate": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".my-affiliates .title": "display: block"
+      },
+      "false": {
+        ".my-affiliates .title": "display: none"
+      }
+    }
+  },
+  "MyNewsletter": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".my-newsletter .title": "display: block"
+      },
+      "false": {
+        ".my-newsletter .title": "display: none"
+      }
+    }
+  },
+  "MyAccount": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".my-account .title": "display: block"
+      },
+      "false": {
+        ".my-account .title": "display: none"
+      }
+    }
+  },
+  "MyOrders": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".my-orders .title": "display: block"
+      },
+      "false": {
+        ".my-orders .title": "display: none"
+      }
+    }
+  },
+  "MyCards": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".my-cards .title": "display: block"
+      },
+      "false": {
+        ".my-cards .title": "display: none"
+      }
+    }
+  },
+
+  "TitlesStyle": {
+    "type": "Variable",
+    "variable": "title",
+    "selector_prefix": ".account-page .title"
+  },
+  "Boxes": {
+    "include": "common_hover",
+    "selector_prefix": ".account-list > li > a"
+  },
+  "BoxPerRow": {
+    "type": "InputNumber",
+    "value": "6",
+    "rules":{
+      "@":{
+        ".account-list > li": "width:calc(100% / %s)"
+      }
+    }
+  },
+  "BoxSpacing": {
+    "type": "InputNumber",
+    "value": "8",
+    "rules":{
+      "@":{
+        ".account-list": "margin:0 -%spx -%spx",
+        ".account-list > li": "padding:%spx"
+      }
+    }
+  },
+
+  "IconEdit": {
+    "type": "Icon",
+    "selector": ".account-list > .edit-info > a::before",
+    "value": {
+      "icon": {
+        "name": "iconmonstr-edit-11",
+        "code": "e90d"
+      }
+    }
+  },
+  "IconPassword": {
+    "type": "Icon",
+    "selector": ".account-list > .edit-pass > a::before",
+    "value": {
+      "icon": {
+        "name": "iconmonstr-lock-6",
+        "code": "eac4"
+      }
+    }
+  },
+  "IconAddress": {
+    "type": "Icon",
+    "selector": ".account-list > .edit-address > a::before",
+    "value": {
+      "icon": {
+        "name": "iconmonstr-id-card-8",
+        "code": "e956"
+      }
+    }
+  },
+  "IconWishlist": {
+    "type": "Icon",
+    "selector": ".account-list > .edit-wishlist > a::before",
+    "value": {
+      "icon": {
+        "name": "iconmonstr-favorite-9",
+        "code": "eaaa"
+      }
+    }
+  },
+  "IconCards": {
+    "type": "Icon",
+    "selector": ".my-cards .account-list > li > a::before",
+    "value": {
+      "icon": {
+        "name": "cards3",
+        "code": "e95e"
+      }
+    }
+  },
+  "IconHistory": {
+    "type": "Icon",
+    "selector": ".account-list > .edit-order > a::before",
+    "value": {
+      "icon": {
+        "name": "iconmonstr-task-1",
+        "code": "ead5"
+      }
+    }
+  },
+  "IconDownloads": {
+    "type": "Icon",
+    "selector": ".account-list > .edit-downloads > a::before",
+    "value": {
+      "icon": {
+        "name": "download-cloud",
+        "code": "eb4e"
+      }
+    }
+  },
+  "IconRewards": {
+    "type": "Icon",
+    "selector": ".account-list > .edit-rewards > a::before",
+    "value": {
+      "icon": {
+        "name": "iconmonstr-coin-7",
+        "code": "e952"
+      }
+    }
+  },
+  "IconReturns": {
+    "type": "Icon",
+    "selector": ".account-list > .edit-returns > a::before",
+    "value": {
+      "icon": {
+        "name": "mail-reply",
+        "code": "f112"
+      }
+    }
+  },
+  "IconTransactions": {
+    "type": "Icon",
+    "selector": ".account-list > .edit-transactions > a::before",
+    "value": {
+      "icon": {
+        "name": "iconmonstr-currency-37",
+        "code": "e928"
+      }
+    }
+  },
+  "IconRecurring": {
+    "type": "Icon",
+    "selector": ".account-list > .edit-recurring > a::before",
+    "value": {
+      "icon": {
+        "name": "restore",
+        "code": "e8b3"
+      }
+    }
+  },
+  "IconAffiliateAdd": {
+    "type": "Icon",
+    "selector": ".account-list > .affiliate-add > a::before",
+    "value": {
+      "icon": {
+        "name": "users2",
+        "code": "ebdf"
+      }
+    }
+  },
+  "IconAffiliateEdit": {
+    "type": "Icon",
+    "selector": ".account-list > .affiliate-edit > a::before",
+    "value": {
+      "icon": {
+        "name": "users2",
+        "code": "ebdf"
+      }
+    }
+  },
+  "IconAffiliateTrack": {
+    "type": "Icon",
+    "selector": ".account-list > .affiliate-track > a::before",
+    "value": {
+      "icon": {
+        "name": "code-fork",
+        "code": "f126"
+      }
+    }
+  },
+  "IconNewsletter": {
+    "type": "Icon",
+    "selector": ".my-newsletter .account-list > li > a::before",
+    "value": {
+      "icon": {
+        "name": "iconmonstr-email-1",
+        "code": "e94c"
+      }
+    }
+  },
+
+  "Display": {
+    "type": "Radio",
+    "value": "links",
+    "rules": {
+      "links": {
+        ".account-list": "flex-direction:column",
+        ".account-list > li": "margin-bottom: 5px; padding:0; width:100%",
+        ".account-list > li > a": "flex-direction: row; width: auto; text-align: left;",
+        ".account-list > li > a::before": "margin-right:5px"
+      },
+      "boxes": {
+        ".account-list": "flex-direction:row",
+        ".account-list > li": "margin: 0",
+        ".account-list > li > a": "flex-direction: column; width: 100%; text-align: center;",
+        ".account-list > li > a::before": "margin:0"
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "status": {
+    "type": "Status"
+  },
+  "width": {
+    "type": "Input",
+    "value": "100",
+    "selector": ".grid-col-%s-%s-%s",
+    "property": "width: %s%"
+  },
+  "name": {
+    "type": "InputLang",
+    "value": "New Column",
+    "php": true
+  },
+  "background": {
+    "type": "Background",
+    "selector": ".grid-col-%s-%s-%s"
+  },
+  "padding": {
+    "type": "Padding",
+    "selector": ".grid-col-%s-%s-%s"
+  },
+  "border": {
+    "type": "Border",
+    "selector": ".grid-col-%s-%s-%s"
+  },
+  "marginTop": {
+    "type": "InputNumber",
+    "rules":{
+      "@":{
+        ".grid-col-%s-%s-%s": "margin-top:%spx"
+      }
+    }
+  },
+  "margin": {
+    "type": "InputNumber",
+    "rules":{
+      "@":{
+        ".grid-col-%s-%s-%s": "margin-bottom:%spx"
+      }
+    }
+  },
+  "align": {
+    "type": "Radio",
+    "value": "top",
+    "rules": {
+      "top": {
+        ".grid-col-%s-%s-%s .grid-items": "justify-content: flex-start"
+      },
+      "middle": {
+        ".grid-col-%s-%s-%s .grid-items": "justify-content: center"
+      },
+      "bottom": {
+        ".grid-col-%s-%s-%s .grid-items": "justify-content: flex-end"
+      }
+    }
+  }
+}

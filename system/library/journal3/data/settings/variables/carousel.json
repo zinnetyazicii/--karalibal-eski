@@ -1,0 +1,9 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "NEW_CAROUSEL"
+  },
+  "value": {
+    "include": "carousel"
+  }
+}

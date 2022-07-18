@@ -1,0 +1,51 @@
+{% if j3 is not defined %}
+  <style>
+    body {
+      display: none !important;
+    }
+  </style>
+  <script>
+    window.location = 'index.php?route=journal3/startup/error';
+  </script>
+{% endif %}
+{{ j3.loadController('journal3/layout', 'bottom') }}
+
+{% if not j3.document.isPopup() %}
+
+<footer>
+  {{ footer_menu }}
+</footer>
+
+{% endif %}
+</div><!-- .site-wrapper -->
+
+{{ j3.loadController('journal3/layout', 'bottom_menu') }}
+
+{{ j3.loadController('journal3/layout', 'side_menu') }}
+
+{{ j3.loadController('journal3/layout', 'notification') }}
+
+{% for script in j3.document.getScripts('footer') %}
+<script src="{{ j3.document.staticUrl(script, false) }}" {% if j3.settings.get('performanceJSDefer') %} defer {% endif %}></script>
+{% endfor %}
+
+{% if j3.canLiveReload() %}
+<script src="http://{{ j3.getHost() }}:35729/livereload.js?snipver=1" async></script>
+{% endif %}
+
+{% if j3.settings.get('customJS') %}
+<script type="text/javascript">{{ j3.settings.get('customJS') }}</script>
+{% endif %}
+
+{% if not j3.document.isPopup() and j3.settings.get('customCodeFooter') %}
+{{ j3.settings.get('customCodeFooter') }}
+{% endif %}
+
+{% if not j3.document.isPopup() and j3.settings.get('scrollTop') %}
+<div class="scroll-top">
+  <i class="fa fa-angle-up"></i>
+</div>
+{% endif %}
+
+</body>
+</html>

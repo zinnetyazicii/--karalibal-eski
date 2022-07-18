@@ -1,0 +1,75 @@
+{
+  "languageStyle": {
+    "type": "Variable",
+    "variable": "language_currency",
+    "selector_prefix": ".language"
+  },
+  "currencyStyle": {
+    "type": "Variable",
+    "variable": "language_currency",
+    "selector_prefix": ".currency"
+  },
+  "langPosition": {
+    "type": "Radio",
+    "value": "top",
+    "php": true
+  },
+  "languageDropdownStyle": {
+    "type": "Variable",
+    "variable": "dropdown",
+    "selector_prefix": ".language-currency.top-menu .dropdown"
+  },
+
+  "currencyDropdownStyle": {
+    "type": "Variable",
+    "variable": "dropdown",
+    "selector_prefix": ".language-currency.top-menu .currency .dropdown"
+  },
+
+  "headerLangPosition": {
+    "type": "Radio",
+    "value": "center",
+    "rules": {
+      "left": {
+        ".desktop-header-active .header .top-bar .language-currency": "margin-right:auto"
+      },
+      "center": {
+        ".desktop-header-active .header .top-bar .language-currency": "position: absolute; left: 50%; transform: translateX(-50%)"
+      },
+      "right": {
+        ".desktop-header-active .header .top-bar .language-currency": "margin-left:auto"
+      }
+    },
+    "rtlRules": {
+      "left": {
+        ".desktop-header-active .header .top-bar .language-currency": "margin-left:auto"
+      },
+      "center": {
+        ".desktop-header-active .header .top-bar .language-currency": "position: absolute; left: 50%; transform: translateX(-50%)"
+      },
+      "right": {
+        ".desktop-header-active .header .top-bar .language-currency": "margin-right:auto"
+      }
+    }
+  },
+  "headerLangTopMenuAlign": {
+    "type": "Radio",
+    "value": "left",
+    "rules": {
+      "left": {
+        ".desktop-header-active .header .top-bar": "justify-content: space-between"
+      },
+      "center": {
+        ".desktop-header-active .header .top-bar": "justify-content: center"
+      },
+      "right": {
+        ".desktop-header-active .header .top-bar": "justify-content: flex-end"
+      }
+    }
+  },
+  "languageMargin": {
+    "type": "Margin",
+    "selector": ".desktop-header-active .header .mid-bar .language-currency"
+  }
+}
+

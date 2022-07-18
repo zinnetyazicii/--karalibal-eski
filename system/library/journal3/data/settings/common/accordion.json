@@ -1,0 +1,157 @@
+{
+
+  "Icon": {
+    "type": "Icon",
+    "selector": ".panel-group .panel-heading a::before",
+    "value": {
+      "icon": {
+        "name": "plus2",
+        "code": "e9d8"
+      }
+    }
+  },
+  "IconHover": {
+    "type": "Color",
+    "selector": ".panel-group .panel-heading:hover a::before",
+    "property": "color",
+    "desktop":true
+  },
+  "IconActive": {
+    "type": "Icon",
+    "selector": ".panel-group .panel-active .panel-heading a::before",
+    "value": {
+      "icon": {
+        "name": "minus2",
+        "code": "e9bd"
+      }
+    }
+  },
+  "IconPosition": {
+    "type": "Radio",
+    "value": "left",
+    "rules": {
+      "left": {
+        ".panel-group .panel-heading a::before": "order:-1",
+        ".panel-group .panel-heading a": "justify-content:flex-start"
+      },
+      "right": {
+        ".panel-group .panel-heading a::before": "order:10",
+        ".panel-group .panel-heading a": "justify-content:space-between"
+      }
+    }
+  },
+  "ContainerBackground": {
+    "type": "Background",
+    "selector": ".panel-group"
+  },
+  "ContainerPadding": {
+    "type": "Padding",
+    "selector": ".panel-group"
+  },
+  "Font": {
+    "type": "Font",
+    "selector": ".panel-group .panel-heading a"
+  },
+  "FontHover": {
+    "type": "Font",
+    "selector": ".panel-group .panel-heading:hover a"
+  },
+  "FontActive": {
+    "type": "Font",
+    "selector": ".panel-group .panel-active .panel-heading:hover a, .panel-group .panel-active .panel-heading a"
+  },
+  "Background": {
+    "type": "Background",
+    "selector": ".panel-group .panel-heading"
+  },
+  "BackgroundHover": {
+    "type": "Background",
+    "selector": ".panel-group .panel-heading:hover, .panel-group .panel-active .panel-heading"
+  },
+  "BackgroundActive": {
+    "type": "Background",
+    "selector": ".panel-group .panel-active .panel-heading:hover, .panel-group .panel-active .panel-heading"
+  },
+  "Shadow": {
+    "type": "Shadow",
+    "selector": ".panel-group .panel-heading"
+  },
+  "Spacing": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".panel-group .panel": "margin-top:%spx !important",
+        ".panel-group": "margin-top:-%spx"
+      }
+    }
+  },
+  "ShadowHover": {
+    "type": "Shadow",
+    "selector": ".panel-group .panel-heading:hover, .panel-group .panel-active .panel-heading"
+  },
+  "ShadowActive": {
+    "type": "Shadow",
+    "selector": ".panel-group .panel-active .panel-heading:hover, .panel-group .panel-active .panel-heading"
+  },
+  "Border": {
+    "type": "Border",
+    "selector": ".panel-group"
+  },
+  "Divider": {
+    "type": "Border",
+    "selector": ".panel-group .panel-heading"
+  },
+  "BorderFirst": {
+    "type": "Border",
+    "selector": ".panel-group .panel:first-child .panel-heading"
+  },
+  "BorderLast": {
+    "type": "Border",
+    "selector": ".panel-group .panel:last-child .panel-heading"
+  },
+  "OuterBorderRadius": {
+    "type": "BorderRadius",
+    "selector": ".panel-group"
+  },
+  "BorderRadius": {
+    "type": "BorderRadius",
+    "selector": ".panel-group .panel-heading"
+  },
+  "BorderRadiusActive": {
+    "type": "BorderRadius",
+    "selector": ".panel-group .panel-collapsed .panel-heading"
+  },
+  "Padding": {
+    "type": "Padding",
+    "selector": ".panel-group .panel-heading a",
+    "value": {
+      "padding":"10"
+    }
+  },
+
+  "BodyShadow": {
+    "type": "Shadow",
+    "selector": ".panel-group"
+  },
+
+  "BodyBackground": {
+    "type": "Background",
+    "selector": ".panel-group .panel-body"
+  },
+  "Margin": {
+    "type": "Margin",
+    "selector": ".panel-group .panel-body"
+  },
+  "BodyPadding": {
+    "type": "Padding",
+    "selector": ".panel-group .panel-body"
+  },
+  "BodyBorder": {
+    "type": "Border",
+    "selector": ".panel-group .panel-heading + .panel-collapse .panel-body"
+  },
+  "BodyBorderRadius": {
+    "type": "BorderRadius",
+    "selector": ".panel-group .panel-body"
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "Icon": {
+    "type": "Color",
+    "selector": ".alert i",
+    "property": "color"
+  },
+  "Font": {
+    "type": "Font",
+    "selector": ".alert"
+  },
+  "Close": {
+    "type": "Color",
+    "selector": ".alert.alert-dismissible .close",
+    "property": "color"
+  },
+  "CloseHover": {
+    "type": "Color",
+    "selector": ".alert.alert-dismissible .close:hover",
+    "property": "color"
+  },
+  "Margin": {
+    "type": "Margin",
+    "selector": ".alert"
+  },
+
+  "SuccessIcon": {
+    "type": "Color",
+    "selector": ".alert.alert-success i",
+    "property": "color"
+  },
+  "SuccessFont": {
+    "type": "Font",
+    "selector": ".alert.alert-success"
+  },
+  "SuccessClose": {
+    "type": "Color",
+    "selector": ".alert.alert-success .close",
+    "property": "color"
+  },
+  "SuccessCloseHover": {
+    "type": "Color",
+    "selector": ".alert.alert-success .close:hover",
+    "property": "color"
+  },
+  "SuccessBackground": {
+    "type": "Background",
+    "selector": ".alert.alert-success"
+  },
+
+  "InfoIcon": {
+    "type": "Color",
+    "selector": ".alert.alert-info i",
+    "property": "color"
+  },
+  "InfoFont": {
+    "type": "Font",
+    "selector": ".alert.alert-info"
+  },
+  "InfoBackground": {
+    "type": "Background",
+    "selector": ".alert.alert-info"
+  },
+  "InfoClose": {
+    "type": "Color",
+    "selector": ".alert-info.alert-dismissible .close",
+    "property": "color"
+  },
+  "InfoCloseHover": {
+    "type": "Color",
+    "selector": ".alert-info.alert-dismissible .close:hover",
+    "property": "color"
+  },
+
+
+  "WarningIcon": {
+    "type": "Color",
+    "selector": ".alert.alert-warning i",
+    "property": "color"
+  },
+  "WarningFont": {
+    "type": "Font",
+    "selector": ".alert.alert-warning"
+  },
+  "WarningBackground": {
+    "type": "Background",
+    "selector": ".alert.alert-warning"
+  },
+  "WarningClose": {
+    "type": "Color",
+    "selector": ".alert-warning.alert-dismissible .close",
+    "property": "color"
+  },
+  "WarningCloseHover": {
+    "type": "Color",
+    "selector": ".alert-warning.alert-dismissible .close:hover",
+    "property": "color"
+  },
+
+
+  "DangerIcon": {
+    "type": "Color",
+    "selector": ".alert.alert-danger i",
+    "property": "color"
+  },
+  "DangerFont": {
+    "type": "Font",
+    "selector": ".alert.alert-danger"
+  },
+  "DangerBackground": {
+    "type": "Background",
+    "selector": ".alert.alert-danger"
+  },
+  "DangerClose": {
+    "type": "Color",
+    "selector": ".alert-danger.alert-dismissible .close",
+    "property": "color"
+  },
+  "DangerCloseHover": {
+    "type": "Color",
+    "selector": ".alert-danger.alert-dismissible .close:hover",
+    "property": "color"
+  }
+}

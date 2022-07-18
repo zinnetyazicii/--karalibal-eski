@@ -1,0 +1,10 @@
+{
+  "background": {
+    "type": "Background",
+    "selector": "header .grid-row-%s"
+  },
+  "padding": {
+    "type": "Padding",
+    "selector": "header .grid-row-%s"
+  }
+}

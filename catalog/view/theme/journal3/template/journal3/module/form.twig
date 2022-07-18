@@ -1,0 +1,167 @@
+{% set id = j3.uniqueId('field-') %}
+<div class="{{ j3.classes(classes) }}">
+  {% if title %}
+    <h3 class="title module-title">{{ title }}</h3>
+  {% endif %}
+  <div class="module-body">
+    <form action="{{ action }}" method="post" enctype="multipart/form-data" class="form-horizontal" data-language="{{ datepicker }}">
+      <fieldset>
+        {% for index, item in items %}
+          {% if item.type == 'legend' %}
+            <legend>{{ item.label }}</legend>
+          {% endif %}
+
+          {% if item.type == 'select' %}
+            <div class="form-group custom-field {% if item.required %}required{% endif %}">
+              <label class="col-sm-2 control-label" for="{{ id }}-{{ index }}">{{ item.label }}</label>
+              <div class="col-sm-10">
+                <select name="item[{{ index }}]" id="{{ id }}-{{ index }}" class="form-control">
+                  <option value="">{{ item.placeholder }}</option>
+                  {% for subitem in item.items %}
+                    <option value="{{ subitem.label }}">{{ subitem.label }}</option>
+                  {% endfor %}
+                </select>
+              </div>
+            </div>
+          {% endif %}
+
+          {% if item.type == 'radio' %}
+            <div class="form-group custom-field {% if item.required %}required{% endif %}">
+              <label class="col-sm-2 control-label">{{ item.label }}</label>
+              <div class="col-sm-10">
+                {% for subitem in item.items %}
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="item[{{ index }}]" value="{{ subitem.label }}"/>
+                      {{ subitem.label }}</label>
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
+          {% endif %}
+
+          {% if item.type == 'checkbox' %}
+            <div class="form-group custom-field {% if item.required %}required{% endif %}">
+              <label class="col-sm-2 control-label">{{ item.label }}</label>
+              <div class="col-sm-10">
+                {% for subitem in item.items %}
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox" name="item[{{ index }}][]" value="{{ subitem.label }}"/>
+                      {{ subitem.label }}</label>
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
+          {% endif %}
+
+          {% if item.type == 'text' or item.type == 'name' %}
+            <div class="form-group custom-field {% if item.required %}required{% endif %}">
+              <label class="col-sm-2 control-label" for="{{ id }}-{{ index }}">{{ item.label }}</label>
+              <div class="col-sm-10">
+                <input type="text" name="item[{{ index }}]" value="" placeholder="{{ item.placeholder }}" id="{{ id }}-{{ index }}" class="form-control"/>
+              </div>
+            </div>
+          {% endif %}
+
+          {% if item.type == 'email' %}
+            <div class="form-group custom-field {% if item.required %}required{% endif %}">
+              <label class="col-sm-2 control-label" for="{{ id }}-{{ index }}">{{ item.label }}</label>
+              <div class="col-sm-10">
+                <input type="email" name="item[{{ index }}]" value="" placeholder="{{ item.placeholder }}" id="{{ id }}-{{ index }}" class="form-control"/>
+              </div>
+            </div>
+          {% endif %}
+
+          {% if item.type == 'tel' %}
+            <div class="form-group custom-field {% if item.required %}required{% endif %}">
+              <label class="col-sm-2 control-label" for="{{ id }}-{{ index }}">{{ item.label }}</label>
+              <div class="col-sm-10">
+                <input type="tel" name="item[{{ index }}]" value="" placeholder="{{ item.placeholder }}" id="{{ id }}-{{ index }}" class="form-control"/>
+              </div>
+            </div>
+          {% endif %}
+
+          {% if item.type == 'textarea' %}
+            <div class="form-group custom-field {% if item.required %}required{% endif %}">
+              <label class="col-sm-2 control-label" for="{{ id }}-{{ index }}">{{ item.label }}</label>
+              <div class="col-sm-10">
+                <textarea name="item[{{ index }}]" rows="5" placeholder="{{ item.placeholder }}" id="{{ id }}-{{ index }}" class="form-control"></textarea>
+              </div>
+            </div>
+          {% endif %}
+
+          {% if item.type == 'file' %}
+          <div class="form-group custom-field {% if item.required %}required{% endif %}">
+            <label class="col-sm-2 control-label" for="form-upload-{{ id }}-{{ index }}">{{ item.label }}</label>
+            <div class="col-sm-10">
+              <button type="button" id="form-upload-{{ id }}-{{ index }}" data-loading-text="{{ text_loading }}" class="btn btn-default upload-btn"><i class="fa fa-upload"></i> {{ button_upload }}</button>
+              <input type="hidden" name="item[{{ index }}]" value="" id="{{ id }}-{{ index }}" class="form-control"/>
+            </div>
+          </div>
+          {% endif %}
+
+          {% if item.type == 'date' %}
+            <div class="form-group custom-field {% if item.required %}required{% endif %}">
+              <label class="col-sm-2 control-label" for="{{ id }}-{{ index }}">{{ item.label }}</label>
+              <div class="col-sm-10">
+                <div class="input-group date" data-picker-class="module-form-{{ module_id }}">
+                  <input type="text" name="item[{{ index }}]" value="" placeholder="{{ item.label }}" data-date-format="YYYY-MM-DD" id="{{ id }}-{{ index }}" class="form-control"/>
+                  <div class="input-group-btn">
+                    <button type="button" class="btn btn-default"><i class="fa fa-calendar"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% endif %}
+
+          {% if item.type == 'time' %}
+            <div class="form-group custom-field {% if item.required %}required{% endif %}">
+              <label class="col-sm-2 control-label" for="{{ id }}-{{ index }}">{{ item.label }}</label>
+              <div class="col-sm-10">
+                <div class="input-group time" data-picker-class="module-form-{{ module_id }}">
+                  <input type="text" name="item[{{ index }}]" value="" placeholder="{{ item.label }}" data-date-format="HH:mm" id="{{ id }}-{{ index }}" class="form-control"/>
+                  <div class="input-group-btn">
+                    <button type="button" class="btn btn-default"><i class="fa fa-calendar"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% endif %}
+
+          {% if item.type == 'datetime' %}
+            <div class="form-group custom-field {% if item.required %}required{% endif %}">
+              <label class="col-sm-2 control-label" for="{{ id }}-{{ index }}">{{ item.label }}</label>
+              <div class="col-sm-10">
+                <div class="input-group datetime" data-picker-class="module-form-{{ module_id }}">
+                  <input type="text" name="item[{{ index }}]" value="" placeholder="{{ item.label }}" data-date-format="YYYY-MM-DD HH:mm" id="{{ id }}-{{ index }}" class="form-control"/>
+                  <div class="input-group-btn">
+                    <button type="button" class="btn btn-default"><i class="fa fa-calendar"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+        {% if captcha %}
+        <div class="form-group captcha">
+          {{ captcha }}
+        </div>
+        {% endif %}
+        {% if agree_data %}
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" name="agree" value="1"/>
+              {{ agree_data.text }}
+            </label>
+          </div>
+        {% endif %}
+      </fieldset>
+      <div class="buttons">
+        <div class="pull-right">
+          <button type="submit" class="btn btn-primary"  data-loading-text="<span>{{ button_submit }}</span>"><span>{{ button_submit }}</span></button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

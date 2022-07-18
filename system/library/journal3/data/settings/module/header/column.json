@@ -1,0 +1,21 @@
+{
+  "width": {
+    "type": "Select",
+    "value": "100",
+    "selector": "header > .grid-rows > .grid-row-%s > .grid-cols > .grid-col-%s",
+    "property": "width: %s%"
+  },
+  "name": {
+    "type": "InputLang",
+    "value": "New Column",
+    "php": true
+  },
+  "background": {
+    "type": "Background",
+    "selector": "header .grid-row-%s .grid-col-%s"
+  },
+  "padding": {
+    "type": "Padding",
+    "selector": "header .grid-row-%s .grid-col-%s"
+  }
+}

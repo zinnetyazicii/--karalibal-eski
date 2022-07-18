@@ -1,0 +1,81 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "New Slider"
+  },
+  "status": {
+    "type": "Status"
+  },
+  "schedule": {
+    "type": "Range",
+    "php": true
+  },
+  "imageDimensions": {
+    "type": "ImageDimensions",
+    "value": {
+      "resize": "fill"
+    },
+    "php": true
+  },
+  "sliderDimensions": {
+    "type": "InputPair",
+    "php": true
+  },
+  "type": {
+    "type": "Radio",
+    "value": "responsive",
+    "php": true,
+    "js": true
+  },
+  "autoStart": {
+    "type": "Toggle",
+    "js": true
+  },
+  "pauseOnHover": {
+    "type": "Radio",
+    "value": "enable",
+    "js": true
+  },
+  "transition": {
+    "type": "Select",
+    "value": "",
+    "php": true
+  },
+  "transitionSpeed": {
+    "type": "Input",
+    "value": "1000",
+    "php": true
+  },
+  "transitionDelay": {
+    "type": "Input",
+    "value": "4000",
+    "php": true
+  },
+  "navPrevNext": {
+    "type": "Toggle",
+    "js": true
+  },
+  "navButtons": {
+    "type": "Toggle",
+    "js": true
+  },
+  "thumbnailNavigation": {
+    "type": "Radio",
+    "value": "disabled",
+    "js": true
+  },
+  "thumbnailDimensions": {
+    "type": "ImageDimensions",
+    "value": {
+      "width": "75",
+      "height": "75",
+      "resize": "fill"
+    },
+    "php": true
+  },
+  "showBarTimer": {
+    "type": "Toggle",
+    "value": "false",
+    "js": true
+  }
+}

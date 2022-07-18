@@ -1,0 +1,168 @@
+{
+  "Font": {
+    "type": "Font",
+    "selector": "table td"
+  },
+  "FontOdd": {
+    "type": "Font",
+    "selector": "table tbody tr:nth-child(even) td"
+  },
+  "FontHover": {
+    "type": "Font",
+    "selector": "table tbody tr:hover td"
+  },
+
+  "Link": {
+    "type": "Font",
+    "selector": "table a"
+  },
+  "LinkHover": {
+    "type": "Font",
+    "selector": "table a:hover"
+  },
+  "Background": {
+    "type": "Background",
+    "selector": "table td"
+  },
+
+  "BackgroundOdd": {
+    "type": "Background",
+    "selector": "table tbody tr:nth-child(even) td"
+  },
+
+  "BackgroundHover": {
+    "type": "Background",
+    "selector": "table tbody tr:hover td"
+  },
+
+  "Divider": {
+    "type": "Divider",
+    "selector": "table td, table th",
+    "important": true
+  },
+
+  "BorderH": {
+    "type": "Border",
+    "selector": "table tbody td",
+    "important": true
+  },
+
+  "Spacing": {
+    "type": "InputNumber",
+    "rules":{
+      "@":{
+        "table": "margin-bottom:%spx !important"
+      }
+    }
+  },
+
+  "Border": {
+    "type": "Border",
+    "selector": "table",
+    "important": true
+  },
+
+  "Padding": {
+    "type": "Padding",
+    "selector": "table td",
+    "important": true
+  },
+
+
+  "HeadFont": {
+    "type": "Font",
+    "selector": "table thead td"
+  },
+  "HeadBackground": {
+    "type": "Background",
+    "selector": "table thead td"
+  },
+  "HeadPadding": {
+    "type": "Padding",
+    "selector": "table thead td",
+    "important": true
+  },
+  "HeadDivider": {
+    "type": "Divider",
+    "selector": "table thead td, table thead th",
+    "important": true
+  },
+  "HeadHBorder": {
+    "type": "Border",
+    "selector": "table thead td, table thead th",
+    "important": true
+  },
+
+
+  "FootFont": {
+    "type": "Font",
+    "selector": "table tfoot td"
+  },
+  "FootBackground": {
+    "type": "Background",
+    "selector": "table tfoot td"
+  },
+  "FootPadding": {
+    "type": "Padding",
+    "selector": "table tfoot td",
+    "important": true
+  },
+  "FootDivider": {
+    "type": "Divider",
+    "selector": "table tfoot td, table tfoot th",
+    "important": true
+  },
+  "FootHBorder": {
+    "type": "Border",
+    "selector": "table tfoot td, table tfoot th",
+    "important": true
+  },
+  "TableResponsiveBorder": {
+    "type": "Border",
+    "selector": ".table-responsive"
+  },
+  "ResponsiveBorder": {
+    "type": "Border",
+    "selector": ".table-responsive > table",
+    "important": true
+  },
+
+
+  "ScrollColor": {
+    "type": "Color",
+    "selector": ".table-responsive::-webkit-scrollbar-thumb",
+    "property": "background-color"
+  },
+  "TrackColor": {
+    "type": "Color",
+    "selector": ".table-responsive::-webkit-scrollbar-track",
+    "property": "background-color"
+  },
+  "TrackHeight": {
+    "type": "InputNumber",
+    "value": "1",
+    "rules":{
+      "@":{
+        ".table-responsive::-webkit-scrollbar": "height:%spx; width: %spx"
+      }
+    }
+  },
+  "ThumbRadius": {
+    "type": "InputNumber",
+    "value": "5",
+    "rules":{
+      "@":{
+        ".table-responsive::-webkit-scrollbar-thumb": "border-radius:%spx"
+      }
+    }
+  },
+  "ScrollTouch": {
+    "type": "Toggle",
+    "value": "false",
+    "rules": {
+      "true": {
+        ".table-responsive": "-webkit-overflow-scrolling:touch;"
+      }
+    }
+  }
+}

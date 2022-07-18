@@ -1,0 +1,53 @@
+<div class="mobile-header mobile-default mobile-2">
+  <div class="mobile-top-bar">
+    <div class="mobile-top-menu-wrapper">
+      {{ j3.settings.get('mobile_top_menu') }}
+    </div>
+    {% if j3.settings.get('mobileLangPosition') == 'top' %}
+    <div class="language-currency top-menu">
+      <div class="mobile-currency-wrapper">
+        {{ j3.document.hasClass('mobile-header-active') ? currency : '' }}
+      </div>
+      <div class="mobile-language-wrapper">
+        {{ j3.document.hasClass('mobile-header-active') ? language : '' }}
+      </div>
+    </div>
+    {% endif %}
+  </div>
+  <div class="mobile-bar sticky-bar">
+    <div class="menu-trigger">
+      <button><span>Menu</span></button>
+    </div>
+    {% if j3.settings.get('mobileCustomMenuStatus1') %}
+    <a class="mobile-custom-menu mobile-custom-menu-1" href="{{ j3.settings.get('mobileCustomMenuLink1.href') }}" {{ j3.linkAttrs(j3.settings.get('mobileCustomMenuLink1.attrs')) }}>
+      {{ j3.countBadge(j3.settings.get('mobileCustomMenuLink1.name'), j3.cache.update(j3.settings.get('mobileCustomMenuLink1.total')), j3.settings.get('mobileCustomMenuLink1.classes')) }}
+    </a>
+    {% endif %}
+    <div class="mobile-logo-wrapper">
+      {% if j3.document.hasClass('mobile-header-active') %}
+        <div id="logo">
+          {% if j3.settings.get('logo_src') %}
+            <a href="{{ home }}">
+              <img src="{{ j3.settings.get('logo_src') }}" {% if j3.settings.get('logo2x_src') %}srcset="{{ j3.settings.get('logo_src') }} 1x, {{ j3.settings.get('logo2x_src') }} 2x"{% endif %} width="{{ j3.settings.get('logo_width') }}" height="{{ j3.settings.get('logo_height') }}" alt="{{ name }}" title="{{ name }}"/>
+            </a>
+          {% else %}
+            <h1><a href="{{ home }}">{{ name }}</a></h1>
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
+    {% if j3.settings.get('mobileCustomMenuStatus2') %}
+    <a class="mobile-custom-menu mobile-custom-menu-2" href="{{ j3.settings.get('mobileCustomMenuLink2.href') }}" {{ j3.linkAttrs(j3.settings.get('mobileCustomMenuLink2.attrs')) }}>
+      {{ j3.countBadge(j3.settings.get('mobileCustomMenuLink2.name'), j3.cache.update(j3.settings.get('mobileCustomMenuLink2.total')), j3.settings.get('mobileCustomMenuLink2.classes')) }}
+    </a>
+    {% endif %}
+    <div class="mobile-cart-wrapper mini-cart">
+      {{ j3.document.hasClass('mobile-header-active') ? cart : '' }}
+    </div>
+  </div>
+  <div class="mobile-bar-group mobile-search-group">
+    <div class="mobile-search-wrapper full-search">
+      {{ j3.document.hasClass('mobile-header-active') ? search : '' }}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,150 @@
+{
+  "comparePageTableStyle": {
+    "type": "Variable",
+    "variable": "table",
+    "selector_prefix": ".route-product-compare #content"
+  },
+  "comparePageCartButtonStyle": {
+    "type": "Variable",
+    "variable": "button",
+    "selector_prefix": ".route-product-compare .compare-buttons .btn-cart&"
+  },
+  "comparePageRemoveButtonStyle": {
+    "type": "Variable",
+    "variable": "button",
+    "selector_prefix": ".route-product-compare .compare-buttons .btn-remove&"
+  },
+  "comparePageCartButtonVisibility": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".route-product-compare .compare-buttons .btn-cart": "display: flex"
+      },
+      "false": {
+        ".route-product-compare .compare-buttons .btn-cart": "display: none"
+      }
+    }
+  },
+  "comparePageRemoveButtonVisibility": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".route-product-compare .compare-buttons .btn-remove": "display: flex"
+      },
+      "false": {
+        ".route-product-compare .compare-buttons .btn-remove": "display: none"
+      }
+    }
+  },
+
+  "comparePageName": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".compare-name": "display: table-row"
+      },
+      "false": {
+        ".compare-name": "display: none"
+      }
+    }
+  },
+  "comparePageImage": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".compare-image": "display: table-row"
+      },
+      "false": {
+        ".compare-image": "display: none"
+      }
+    }
+  },
+  "comparePagePrice": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".compare-price": "display: table-row"
+      },
+      "false": {
+        ".compare-price": "display: none"
+      }
+    }
+  },
+  "comparePageModel": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".compare-model": "display: table-row"
+      },
+      "false": {
+        ".compare-model": "display: none"
+      }
+    }
+  },
+  "comparePageBrand": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".compare-manufacturer": "display: table-row"
+      },
+      "false": {
+        ".compare-manufacturer": "display: none"
+      }
+    }
+  },
+  "comparePageAvailability": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".compare-availability": "display: table-row"
+      },
+      "false": {
+        ".compare-availability": "display: none"
+      }
+    }
+  },
+  "comparePageRating": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".compare-rating": "display: table-row"
+      },
+      "false": {
+        ".compare-rating": "display: none"
+      }
+    }
+  },
+  "comparePageSummary": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".compare-summary": "display: table-row"
+      },
+      "false": {
+        ".compare-summary": "display: none"
+      }
+    }
+  },
+  "comparePageWeight": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".compare-weight": "display: table-row"
+      },
+      "false": {
+        ".compare-weight": "display: none"
+      }
+    }
+  },
+  "comparePageDimensions": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".compare-dimensions": "display: table-row"
+      },
+      "false": {
+        ".compare-dimensions": "display: none"
+      }
+    }
+  }
+}

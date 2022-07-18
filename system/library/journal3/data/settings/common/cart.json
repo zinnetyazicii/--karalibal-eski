@@ -1,0 +1,205 @@
+{
+  "CartLabel": {
+    "type": "InputLang",
+    "php": true
+  },
+  "CartCustomText": {
+    "type": "Radio",
+    "value": "default",
+    "php": true
+  },
+  "CartLabelVisibility": {
+    "type": "Radio",
+    "value": "below",
+    "rules": {
+      "true": {
+        "#cart .cart-label": "display: inline-block"
+      },
+      "false": {
+        "#cart .cart-label": "display: none"
+      }
+    }
+  },
+
+  "CartLabelFont": {
+    "type": "Font",
+    "selector": "#cart .cart-label"
+  },
+  "CartLabelFontHover": {
+    "type": "Font",
+    "selector": "#cart:hover .cart-label"
+  },
+  "CartLabelOffset": {
+    "type": "InputPair",
+    "selector": "#cart .cart-label",
+    "properties": {
+      "first": "left:%spx",
+      "second": "top:%spx"
+    },
+    "rtlProperties": {
+      "first": "right:%spx",
+      "second": "top:%spx"
+    }
+  },
+  "CartCheckoutLink": {
+    "type": "Toggle",
+    "value": "false",
+    "php": true
+  },
+  "CartIcon": {
+    "type": "Icon",
+    "selector": "#cart > a > i::before"
+  },
+  "CartIconHover": {
+    "type": "Color",
+    "property": "color",
+    "selector": "#cart:hover > a > i::before",
+    "desktop":true
+  },
+  "CartIconBackground": {
+    "type": "Background",
+    "selector": "#cart > a > i"
+  },
+  "CartIconBackgroundHover": {
+    "type": "Background",
+    "selector": "#cart:hover > a > i",
+    "desktop":true
+  },
+  "CartIconBorder": {
+    "type": "Border",
+    "selector": "#cart > a > i",
+    "desktop":true
+  },
+  "CartIconBorderHover": {
+    "type": "Color",
+    "property": "border-color;",
+    "selector": "#cart:hover > a > i",
+    "desktop":true
+  },
+  "CartIconBorderRadius": {
+    "type": "BorderRadius",
+    "selector": "#cart > a > i"
+  },
+  "CartIconSize": {
+    "type": "InputNumber",
+    "value": "40",
+    "rules":{
+      "@":{
+        "#cart > a > i": "width:%spx; height:%spx"
+      }
+    }
+  },
+  "CartCountBadge": {
+    "type": "Variable",
+    "variable": "count_badge",
+    "selector_prefix": "#cart-items&"
+  },
+  "CartCountBadgeOffset": {
+    "type": "InputPair",
+    "selector": "#cart-items",
+    "properties": {
+      "first": "transform: translateX(%spx)",
+      "second": "margin-top:%spx"
+    },
+    "rtlProperties":{
+      "first": "transform: translateX(calc(0px - (%spx)))",
+      "second": "margin-top:%spx"
+    }
+  },
+  "CartCountBadgeVisibility": {
+    "type": "Toggle",
+    "value": "false",
+    "rules": {
+      "true": {
+        "#cart-items": "display: inline-flex"
+      },
+      "false": {
+        "#cart-items": "display: none"
+      }
+    }
+  },
+  "CartCountBadgeZ": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        "#cart-items": "z-index: 1"
+      },
+      "false": {
+        "#cart-items": "z-index: -1"
+      }
+    }
+  },
+  "CartTextVisibility": {
+    "type": "Toggle",
+    "value": "false",
+    "rules": {
+      "true": {
+        "#cart-total": "display: flex"
+      },
+      "false": {
+        "#cart-total": "display: none"
+      }
+    }
+  },
+  "CartBackground": {
+    "type": "Background",
+    "selector": "#cart"
+  },
+  "CartBackgroundHover": {
+    "type": "Background",
+    "selector": "#cart:hover",
+    "desktop": true
+  },
+  "CartBorder": {
+    "type": "Border",
+    "selector": "#cart"
+  },
+  "CartBorderHover": {
+    "type": "Color",
+    "property": "border-color",
+    "selector": "#cart:hover",
+    "desktop": true
+  },
+  "CartBorderRadius": {
+    "type": "BorderRadius",
+    "selector": "#cart"
+  },
+  "CartShadow": {
+    "type": "Shadow",
+    "selector": "#cart"
+  },
+  "CartShadowHover": {
+    "type": "Shadow",
+    "selector": "#cart:hover"
+  },
+  "CartTextPadding": {
+    "type": "Padding",
+    "selector": "#cart-total",
+    "value": {
+      "padding-left": "15",
+      "padding-right": "15"
+    }
+  },
+  "CartTextFont": {
+    "type": "Font",
+    "selector": "#cart-total"
+  },
+  "CartTextFontHover": {
+    "type": "Color",
+    "property": "color:%s;",
+    "selector": "#cart:hover #cart-total",
+    "desktop": true
+  },
+  "CartTextAlign": {
+    "type": "Radio",
+    "value": "left",
+    "rules": {
+      "left": {
+        "#cart-total": "order:0"
+      },
+      "right": {
+        "#cart-total": "order:5"
+      }
+    }
+  }
+}

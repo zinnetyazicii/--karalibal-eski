@@ -1,0 +1,361 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "New Newsletter "
+  },
+  "status": {
+    "type": "Status"
+  },
+  "schedule": {
+    "type": "Range",
+    "php": true
+  },
+  "title": {
+    "type": "InputLang",
+    "php": true
+  },
+  "background": {
+    "type": "Background",
+    "selector": ".module-newsletter-%s"
+  },
+  "padding": {
+    "type": "Padding",
+    "selector": ".module-newsletter-%s"
+  },
+  "shadow": {
+    "type": "Shadow",
+    "selector": ".module-newsletter-%s"
+  },
+  "border": {
+    "type": "Border",
+    "selector": ".module-newsletter-%s"
+  },
+  "borderRadius": {
+    "type": "BorderRadius",
+    "selector": ".module-newsletter-%s"
+  },
+  "moduleTitle": {
+    "type": "Variable",
+    "variable": "title",
+    "selector_prefix": ".module-newsletter-%s .title.module-title"
+  },
+  "titleFont": {
+    "type": "Font",
+    "selector": ".module-newsletter-%s .title.module-title"
+  },
+  "titleDivider": {
+    "type": "Toggle",
+    "value": "",
+    "rules": {
+      "true": {
+        ".module-newsletter-%s .title.module-title::after": "display: block"
+      },
+      "false": {
+        ".module-newsletter-%s .title.module-title::after": "display: none"
+      }
+    }
+  },
+  "titleAlign": {
+    "type": "Radio",
+    "value": "",
+    "rules": {
+      "left": {
+        ".module-newsletter-%s .title.module-title":"text-align:left",
+        ".module-newsletter-%s .title.module-title::after": "margin-left:0; margin-right:auto; transform: none"
+      },
+      "center": {
+        ".module-newsletter-%s .title.module-title":"text-align:center",
+        ".module-newsletter-%s .title.module-title::after": "left: 50%; right:initial; transform: translate3d(-50%,0,0);"
+      },
+      "right": {
+        ".module-newsletter-%s .title.module-title":"text-align:right",
+        ".module-newsletter-%s .title.module-title::after": "margin-left:auto; margin-right:0; transform:none"
+      }
+    },
+    "rtlRules": {
+      "left": {
+        ".module-newsletter-%s .title.module-title":"text-align:left",
+        ".module-newsletter-%s .title.module-title::after": "margin-left:auto; margin-right:0; transform: none"
+      },
+      "center": {
+        ".module-newsletter-%s .title.module-title":"text-align:center",
+        ".module-newsletter-%s .title.module-title::after": "left: 50%; right:initial; transform: translate3d(-50%,0,0);"
+      },
+      "right": {
+        ".module-newsletter-%s .title.module-title":"text-align:right",
+        ".module-newsletter-%s .title.module-title::after": "margin-left:0; margin-right:auto; transform:none"
+      }
+    }
+  },
+  "moduleAlign": {
+    "type": "Radio",
+    "value": "left",
+    "rules": {
+      "left": {
+        ".module-newsletter-%s": "text-align:left; justify-content: flex-start",
+        ".module-newsletter-%s .module-body > div":"align-self:flex-start",
+        ".module-newsletter-%s .title::after":"left:0; right:auto; transform: none"
+      },
+      "center": {
+        ".module-newsletter-%s": "text-align:center; justify-content: center",
+        ".module-newsletter-%s .module-body > div":"align-self:center",
+        ".module-newsletter-%s .title::after":"left: 50%; right:auto; transform: translate3d(-50%,0,0)"
+      },
+      "right": {
+        ".module-newsletter-%s": "text-align:right; justify-content: flex-end",
+        ".module-newsletter-%s .module-body > div":"align-self:flex-end",
+        ".module-newsletter-%s .title::after":"left:100%; right:auto; transform:translate3d(-100%,0,0)"
+      }
+    },
+    "rtlRules": {
+      "left": {
+        ".module-newsletter-%s": "text-align:right; justify-content: flex-start",
+        ".module-newsletter-%s .module-body > div":"align-self:flex-start",
+        ".module-newsletter-%s .title::after":"left:auto; right:0; transform:none"
+      },
+      "center": {
+        ".module-newsletter-%s": "text-align:center; justify-content: center",
+        ".module-newsletter-%s .module-body > div":"align-self:center",
+        ".module-newsletter-%s .title::after":"right: 50%; left:auto; transform: translate3d(50%,0,0)"
+      },
+      "right": {
+        ".module-newsletter-%s": "text-align:left; justify-content: flex-end",
+        ".module-newsletter-%s .module-body > div":"align-self:flex-end",
+        ".module-newsletter-%s .title::after":"left:auto; right:100%; transform:translate3d(100%,0,0)"
+      }
+    }
+  },
+  "position": {
+    "type": "Radio",
+    "value": "column",
+    "rules": {
+      "row": {
+        ".module-newsletter-%s .module-body": "flex-direction:row"
+      },
+      "column": {
+        ".module-newsletter-%s .module-body": "flex-direction:column"
+      }
+    }
+  },
+  "text": {
+    "type": "InputLang",
+    "value": "Stay up to date with news and promotions by signing up for our newsletter",
+    "php": true
+  },
+  "textFont": {
+    "type": "Font",
+    "selector": ".module-newsletter-%s .newsletter-text"
+  },
+  "textBackground": {
+    "type": "Background",
+    "selector": ".module-newsletter-%s .newsletter-text"
+  },
+  "textPadding": {
+    "type": "Padding",
+    "selector": ".module-newsletter-%s .newsletter-text"
+  },
+  "textMargin": {
+    "type": "Margin",
+    "selector": ".module-newsletter-%s .newsletter-text"
+  },
+  "placeholder": {
+    "type": "InputLang",
+    "php": true
+  },
+  "placeholderColor": {
+    "type": "Color",
+    "rules": {
+      "@": {
+        ".module-newsletter-%s input::-webkit-input-placeholder": "color: %s",
+        ".module-newsletter-%s input::-moz-input-placeholder": "color: %s",
+        ".module-newsletter-%s input:-ms-input-placeholder": "color: %s"
+      }
+    }
+  },
+  "placeholderColorHover": {
+    "type": "Color",
+    "rules": {
+      "@": {
+        ".module-newsletter-%s .input-group:hover input::-webkit-input-placeholder": "color: %s",
+        ".module-newsletter-%s .input-group:hover input::-moz-input-placeholder": "color: %s",
+        ".module-newsletter-%s .input-group:hover input:-ms-input-placeholder": "color: %s"
+      }
+    }
+  },
+  "inputHeight": {
+    "type": "InputNumber",
+    "selector": ".module-newsletter-%s .module-body .input-group",
+    "property": "height:%spx"
+  },
+  "inputWidth": {
+    "type": "InputNumber",
+    "value": "300",
+    "selector": ".module-newsletter-%s .module-body .newsletter-form .input-group input",
+    "property": "width:%spx; max-width:100%"
+  },
+  "moduleInput": {
+    "type":"Variable",
+    "variable": "form_input",
+    "selector_prefix": ".module-newsletter-%s .module-body .form-control"
+  },
+
+
+  "buttonType": {
+    "type": "Radio",
+    "value": "both",
+    "php": true,
+    "rules": {
+      "icon": {
+        ".module-newsletter-%s .btn span": "display:none"
+      },
+      "text": {
+        ".module-newsletter-%s .btn::before": "display:none"
+      }
+    }
+  },
+  "buttonIcon": {
+    "type": "Icon",
+    "selector": ".module-newsletter-%s .btn::before"
+  },
+  "buttonText": {
+    "type": "InputLang",
+    "value": "Send",
+    "php": true
+  },
+
+  "buttonStyle": {
+    "type": "Variable",
+    "variable": "button",
+    "selector_prefix": ".module-newsletter-%s .input-group .input-group-btn"
+  },
+
+  "buttonRadius": {
+    "type": "BorderRadius",
+    "selector": ".module-newsletter-%s .input-group .input-group-btn .btn",
+    "important": true
+  },
+
+  "buttonFont": {
+    "type": "Font",
+    "selector": ".module-newsletter-%s .input-group .input-group-btn .btn"
+  },
+  "buttonFontHover": {
+    "type": "Font",
+    "selector": ".module-newsletter-%s .input-group .input-group-btn .btn:hover"
+  },
+  "buttonPadding": {
+    "type": "Padding",
+    "selector": ".module-newsletter-%s .input-group .input-group-btn .btn"
+  },
+  "buttonHeight": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".module-newsletter-%s .input-group .input-group-btn .btn": "min-height:%spx; height:%spx"
+      }
+    }
+  },
+
+  "buttonOffset": {
+    "type": "InputPair",
+    "selector": ".module-newsletter-%s .input-group-btn .btn",
+    "properties": {
+      "first": "transform: translateX(%spx)",
+      "second": "margin-top: %spx"
+    },
+    "rtlProperties": {
+      "first": "transform: translateX(calc(%spx - (%spx * 2)))",
+      "second": "margin-top: %spx"
+    }
+  },
+
+  "tooltipStatus": {
+    "type": "Toggle",
+    "value": "true",
+    "php": true
+  },
+  "tooltipText": {
+    "type": "InputLang",
+    "value": "Subscribe",
+    "php": true
+  },
+  "tooltipPosition": {
+    "type": "Radio",
+    "value": "top",
+    "php": true
+  },
+
+  "tooltipStyle": {
+    "type": "Variable",
+    "variable": "tooltip",
+    "selector_prefix": ".newsletter-tooltip-%s"
+  },
+
+  "subscribedMessage": {
+    "type": "InputLang",
+    "value": "You have been subscribed to our newsletter.",
+    "php": true
+  },
+  "subscribedEmail": {
+    "type": "Toggle",
+    "php": true
+  },
+  "subscribedEmailMessage": {
+    "type": "InputLang",
+    "value": "Thank you for subscribing to our newsletter.",
+    "php": true
+  },
+  "unsubscribeMessage": {
+    "type": "InputLang",
+    "value": "You are already subscribed. Do you want to unsubscribe?",
+    "php": true
+  },
+  "unsubscribedMessage": {
+    "type": "InputLang",
+    "value": "You have been unsubscribed from our newsletter.",
+    "php": true
+  },
+  "unsubscribedEmail": {
+    "type": "Toggle",
+    "php": true
+  },
+  "unsubscribedEmailMessage": {
+    "type": "InputLang",
+    "value": "We're sorry to see you go.",
+    "php": true
+  },
+  "emailLogo": {
+    "type": "Toggle",
+    "php": true,
+    "value": "false"
+  },
+  "adminAlerts": {
+    "type": "Toggle",
+    "php": true
+  },
+  "agree": {
+    "type": "Catalog",
+    "php": true
+  },
+  "agreeFont": {
+    "type": "Font",
+    "selector": ".module-newsletter-%s .checkbox label"
+  },
+  "agreeLink": {
+    "type": "Font",
+    "selector": ".module-newsletter-%s .checkbox label a"
+  },
+  "agreeLinkHover": {
+    "type": "Font",
+    "selector": ".module-newsletter-%s .checkbox label a:hover"
+  },
+  "agreePadding": {
+    "type": "Padding",
+    "selector": ".module-newsletter-%s .module-body .newsletter-form .checkbox"
+  },
+  "captcha": {
+    "type": "Toggle",
+    "php": true,
+    "value": "false"
+  }
+}

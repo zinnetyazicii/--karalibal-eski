@@ -1,0 +1,102 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "New Blog Posts "
+  },
+  "status": {
+    "type": "Status"
+  },
+  "schedule": {
+    "type": "Range",
+    "php": true
+  },
+  "display": {
+    "type": "Radio",
+    "value": "grid",
+    "php": true
+  },
+  "moduleTitle": {
+    "type": "Variable",
+    "variable": "title",
+    "selector_prefix": ".module-blog_posts-%s .title.module-title"
+  },
+  "sectionsDisplay": {
+    "type": "Radio",
+    "value": "blocks",
+    "php": true,
+    "device": true
+  },
+  "sectionsDisplayTablet": {
+    "type": "Radio",
+    "value": "",
+    "php": true
+  },
+  "sectionsDisplayPhone": {
+    "type": "Radio",
+    "value": "",
+    "php": true
+  },
+  "carousel": {
+    "type": "Toggle",
+    "value": "false",
+    "php": true,
+    "device": true
+  },
+  "carouselTablet": {
+    "type": "Toggle",
+    "value": "",
+    "php": true
+  },
+  "carouselPhone": {
+    "type": "Toggle",
+    "value": "",
+    "php": true
+  },
+  "carouselStyle": {
+    "type": "Variable",
+    "variable": "carousel",
+    "selector_prefix": ".module-blog_posts-%s "
+  },
+  "accordionStyle": {
+    "type": "Variable",
+    "variable": "accordion",
+    "selector_prefix": ".module-blog_posts-%s "
+  },
+  "tabsStyle": {
+    "type": "Variable",
+    "variable": "tabs",
+    "selector_prefix": ".module-blog_posts-%s "
+  },
+  "itemsPerRow": {
+    "type": "ItemsPerRow",
+    "selector": ".module-blog_posts-%s.module-blog_posts-grid .post-layout",
+    "php": true
+  },
+  "default": {
+    "type": "Select",
+    "value": "",
+    "php": true
+  },
+  "carouselGutter": {
+    "type": "Padding",
+    "selector": ".module-blog_posts-%s .swiper-container"
+  },
+  "containerMargin": {
+    "type": "Margin",
+    "selector": ".module-blog_posts-%s:not(.carousel-mode) .module-body > .module-item > .post-grid"
+  },
+  "imageDimensions": {
+    "type": "ImageDimensions",
+    "php": true
+  },
+  "modulePostGrid": {
+    "type": "Variable",
+    "variable": "post_grid",
+    "selector_prefix": ".module-blog_posts-%s.module-blog_posts-grid"
+  },
+  "modulePostList": {
+    "type": "Variable",
+    "variable": "post_list",
+    "selector_prefix": ".module-blog_posts-%s.module-blog_posts-list"
+  }
+}

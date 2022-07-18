@@ -1,0 +1,94 @@
+{
+  "developerMode": {
+    "type": "Toggle",
+    "value": "false",
+    "php": true
+  },
+  "performanceQueryStrings": {
+    "type": "Toggle",
+    "php": true
+  },
+  "performanceMinifiersStatus": {
+    "type": "Toggle",
+    "value": "false",
+    "php": true
+  },
+  "performanceHTMLMinify": {
+    "type": "Toggle",
+    "value": "false",
+    "php": true
+  },
+  "performanceHTMLMinifyIgnoredRoutes": {
+    "type": "Text",
+    "php": true
+  },
+  "performanceCSSMinify": {
+    "type": "Toggle",
+    "value": "false",
+    "php": true
+  },
+  "performanceCSSMinifyIgnoredRoutes": {
+    "type": "Text",
+    "php": true
+  },
+  "performanceCSSInline": {
+    "type": "Toggle",
+    "value": "false",
+    "php": true
+  },
+  "performanceCSSInlineIgnoredRoutes": {
+    "type": "Text",
+    "php": true
+  },
+  "performanceJSMinify": {
+    "type": "Toggle",
+    "value": "false",
+    "php": true
+  },
+  "performanceJSMinifyIgnoredRoutes": {
+    "type": "Text",
+    "php": true
+  },
+  "performanceJSDefer": {
+    "type": "Toggle",
+    "value": "false",
+    "php": true
+  },
+  "performanceJSDeferIgnoredRoutes": {
+    "type": "Text",
+    "php": true
+  },
+  "performanceLazyLoadImagesStatus": {
+    "type": "Toggle",
+    "value": "false",
+    "php": true
+  },
+  "performanceCompressImagesStatus": {
+    "type": "Toggle",
+    "value": "false",
+    "php": true
+  },
+  "performanceAsyncFontsStatus": {
+    "type": "Toggle",
+    "value": "false",
+    "php": true
+  },
+  "performanceSwapFontsStatus": {
+    "type": "Toggle",
+    "value": "false",
+    "php": true
+  },
+  "performanceCDNStatus": {
+    "type": "Toggle",
+    "value": "false",
+    "php": true
+  },
+  "performanceCDNHttp": {
+    "type": "Input",
+    "php": true
+  },
+  "performanceCDNHttps": {
+    "type": "Input",
+    "php": true
+  }
+}

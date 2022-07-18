@@ -1,0 +1,208 @@
+<?php $val = array (
+  'css' => 'footer>div{background:rgba(248, 248, 248, 1)}footer .grid-row-1{padding-top:40px;padding-right:0px;padding-bottom:20px;padding-left:0px}footer .grid-row-1::before{display:block;left:0;width:100vw}@media (max-width: 760px){footer .grid-row-1{padding-bottom:0px}}footer .grid-row-1 .grid-col-1{width:20%;padding:20px;padding-top:0px;padding-bottom:30px;padding-left:0px}footer .grid-row-1 .grid-col-1 .grid-items{justify-content:flex-start}footer .grid-row-1 .grid-col-1 .grid-item{height:auto}@media (max-width: 1300px){footer .grid-row-1 .grid-col-1{padding-left:18px}}@media (max-width: 1024px){footer .grid-row-1 .grid-col-1{width:50%}}@media (max-width: 760px){footer .grid-row-1 .grid-col-1{width:100%}}footer .grid-row-1 .grid-col-2{width:20%;padding:20px;padding-top:0px;padding-bottom:30px;padding-left:0px}footer .grid-row-1 .grid-col-2 .grid-items{justify-content:flex-start}footer .grid-row-1 .grid-col-2 .grid-item{height:auto}@media (max-width: 1300px){footer .grid-row-1 .grid-col-2{padding-left:18px}}@media (max-width: 1024px){footer .grid-row-1 .grid-col-2{width:50%}}@media (max-width: 760px){footer .grid-row-1 .grid-col-2{width:100%}}footer .grid-row-1 .grid-col-3{width:20%;padding:20px;padding-top:0px}footer .grid-row-1 .grid-col-3 .grid-items{justify-content:center}footer .grid-row-1 .grid-col-3 .grid-item{height:auto}@media (max-width: 1024px){footer .grid-row-1 .grid-col-3{width:50%}}@media (max-width: 359px){footer .grid-row-1 .grid-col-3{width:100%}}footer .grid-row-1 .grid-col-4{width:20%;padding:20px;padding-top:0px}footer .grid-row-1 .grid-col-4 .grid-items{justify-content:center}footer .grid-row-1 .grid-col-4 .grid-item{height:auto}@media (max-width: 1024px){footer .grid-row-1 .grid-col-4{width:50%}}@media (max-width: 760px){footer .grid-row-1 .grid-col-4{width:100%;background:rgba(238, 238, 238, 1);padding:20px}}footer .grid-row-1 .grid-col-5{width:20%;padding:20px;padding-top:0px;padding-bottom:30px;padding-left:0px}footer .grid-row-1 .grid-col-5 .grid-items{justify-content:flex-start}footer .grid-row-1 .grid-col-5 .grid-item{height:auto}@media (max-width: 1300px){footer .grid-row-1 .grid-col-5{padding-left:18px}}@media (max-width: 1024px){footer .grid-row-1 .grid-col-5{width:50%}}@media (max-width: 760px){footer .grid-row-1 .grid-col-5{width:100%}}footer .grid-row-2{background:rgba(58, 71, 84, 1);padding:20px}footer .grid-row-2::before{display:block;left:0;width:100vw}footer .grid-row-2 .grid-col-1{width:33.33333333333333%}footer .grid-row-2 .grid-col-1 .grid-items{justify-content:center}footer .grid-row-2 .grid-col-1 .grid-item{height:auto}@media (max-width: 980px){footer .grid-row-2 .grid-col-1{width:100%;margin-bottom:10px}}footer .grid-row-2 .grid-col-2{width:66.66666666666666%}footer .grid-row-2 .grid-col-2 .grid-items{justify-content:center}footer .grid-row-2 .grid-col-2 .grid-item{height:auto}@media (max-width: 980px){footer .grid-row-2 .grid-col-2{width:100%}}',
+  'fonts' => 
+  array (
+  ),
+  'settings' => 
+  array (
+    'footerType' => 'default',
+    'grid_classes' => 
+    array (
+      0 => 'grid-rows',
+    ),
+    'rows' => 
+    array (
+      1 => 
+      array (
+        'classes' => 
+        array (
+          0 => 'grid-row',
+          1 => 'grid-row-1',
+        ),
+        'columns' => 
+        array (
+          1 => 
+          array (
+            'classes' => 
+            array (
+              0 => 'grid-col',
+              1 => 'grid-col-1',
+            ),
+            'items' => 
+            array (
+              1 => 
+              array (
+                'classes' => 
+                array (
+                  0 => 'grid-item',
+                  1 => 'grid-item-1',
+                ),
+                'item' => 
+                array (
+                ),
+              ),
+            ),
+          ),
+          2 => 
+          array (
+            'classes' => 
+            array (
+              0 => 'grid-col',
+              1 => 'grid-col-2',
+            ),
+            'items' => 
+            array (
+              1 => 
+              array (
+                'classes' => 
+                array (
+                  0 => 'grid-item',
+                  1 => 'grid-item-1',
+                ),
+                'item' => 
+                array (
+                  'id' => '215',
+                  'name' => 'Info Blocks Product Page',
+                  'type' => 'info_blocks',
+                ),
+              ),
+            ),
+          ),
+          3 => 
+          array (
+            'classes' => 
+            array (
+              0 => 'grid-col',
+              1 => 'grid-col-3',
+            ),
+            'items' => 
+            array (
+              1 => 
+              array (
+                'classes' => 
+                array (
+                  0 => 'grid-item',
+                  1 => 'grid-item-1',
+                ),
+                'item' => 
+                array (
+                  'id' => '75',
+                  'name' => 'Customer Service',
+                  'type' => 'links_menu',
+                ),
+              ),
+            ),
+          ),
+          4 => 
+          array (
+            'classes' => 
+            array (
+              0 => 'grid-col',
+              1 => 'grid-col-4',
+            ),
+            'items' => 
+            array (
+              1 => 
+              array (
+                'classes' => 
+                array (
+                  0 => 'grid-item',
+                  1 => 'grid-item-1',
+                ),
+                'item' => 
+                array (
+                  'id' => '67',
+                  'name' => 'Footer Newsletter',
+                  'type' => 'newsletter',
+                ),
+              ),
+            ),
+          ),
+          5 => 
+          array (
+            'classes' => 
+            array (
+              0 => 'grid-col',
+              1 => 'grid-col-5',
+            ),
+            'items' => 
+            array (
+              1 => 
+              array (
+                'classes' => 
+                array (
+                  0 => 'grid-item',
+                  1 => 'grid-item-1',
+                ),
+                'item' => 
+                array (
+                ),
+              ),
+            ),
+          ),
+        ),
+      ),
+      2 => 
+      array (
+        'classes' => 
+        array (
+          0 => 'grid-row',
+          1 => 'grid-row-2',
+        ),
+        'columns' => 
+        array (
+          1 => 
+          array (
+            'classes' => 
+            array (
+              0 => 'grid-col',
+              1 => 'grid-col-1',
+            ),
+            'items' => 
+            array (
+              1 => 
+              array (
+                'classes' => 
+                array (
+                  0 => 'grid-item',
+                  1 => 'grid-item-1',
+                ),
+                'item' => 
+                array (
+                  'id' => '77',
+                  'name' => 'Copyright',
+                  'type' => 'links_menu',
+                ),
+              ),
+            ),
+          ),
+          2 => 
+          array (
+            'classes' => 
+            array (
+              0 => 'grid-col',
+              1 => 'grid-col-2',
+            ),
+            'items' => 
+            array (
+              1 => 
+              array (
+                'classes' => 
+                array (
+                  0 => 'grid-item',
+                  1 => 'grid-item-1',
+                ),
+                'item' => 
+                array (
+                  'id' => '228',
+                  'name' => 'Payments',
+                  'type' => 'icons_menu',
+                ),
+              ),
+            ),
+          ),
+        ),
+      ),
+    ),
+  ),
+);

@@ -1,0 +1,176 @@
+<?php $val = array (
+  'css' => '.module-info_blocks-194 .module-item.swiper-slide{margin-right:0px;width:calc((100% - 0 * 0px) / 1 - 0.01px)}.module-info_blocks-194 .module-item:not(.swiper-slide){padding:0px;width:calc(100% / 1 - 0.01px)}.one-column #content .module-info_blocks-194 .module-item.swiper-slide{margin-right:0px;width:calc((100% - 0 * 0px) / 1 - 0.01px)}.one-column #content .module-info_blocks-194 .module-item:not(.swiper-slide){padding:0px;width:calc(100% / 1 - 0.01px)}.two-column #content .module-info_blocks-194 .module-item.swiper-slide{margin-right:0px;width:calc((100% - 0 * 0px) / 1 - 0.01px)}.two-column #content .module-info_blocks-194 .module-item:not(.swiper-slide){padding:0px;width:calc(100% / 1 - 0.01px)}.side-column .module-info_blocks-194 .module-item.swiper-slide{margin-right:0px;width:calc((100% - 0 * 0px) / 1 - 0.01px)}.side-column .module-info_blocks-194 .module-item:not(.swiper-slide){padding:0px;width:calc(100% / 1 - 0.01px)}.module-info_blocks-194 .info-block .info-block-title{font-family:\'Ubuntu\';font-weight:700;font-size:20px;color:rgba(51, 51, 51, 1);display:block}.module-info_blocks-194 .info-block .info-block-text{font-size:14px;color:rgba(105, 105, 115, 1);font-weight:400;line-height:1.3;display:block}.module-info_blocks-194 .info-block{display:flex;flex-direction:row;justify-content:flex-start;text-align:left}.module-info_blocks-194 .info-block-content{display:flex}.module-info_blocks-194 .info-block::before{align-self:center;width:60px;height:60px;color:rgba(51, 51, 51, 1)}.module-info_blocks-194 .info-block-img{align-self:center}.module-info_blocks-194 .info-block::before, .module-info_blocks-194 .info-block-img{margin-right:15px;border-width:2px;border-style:solid;border-color:rgba(139, 145, 152, 1);border-radius:50%}.module-info_blocks-194 .info-block .count-badge{display:none}@media (max-width: 470px){.module-info_blocks-194 .info-block::before{width:40px;height:40px}.module-info_blocks-194 .info-block::before, .module-info_blocks-194 .info-block-img{margin-right:8px}}.module-info_blocks-194 .module-item-1 .info-block::before{content:\'\\eb7b\' !important;font-family:icomoon !important;font-size:30px}.module-info_blocks-194 .module-item-2 .info-block::before{content:\'\\eaad\' !important;font-family:icomoon !important;font-size:30px}.module-info_blocks-194 .module-item-3 .info-block::before{content:\'\\e943\' !important;font-family:icomoon !important;font-size:30px}',
+  'fonts' => 
+  array (
+    'fonts' => 
+    array (
+      'Ubuntu' => 
+      array (
+        700 => '700',
+      ),
+    ),
+    'subsets' => 
+    array (
+      'latin-ext' => 'latin-ext',
+    ),
+  ),
+  'settings' => 
+  array (
+    'schedule' => 
+    array (
+      'from' => '',
+      'to' => '',
+      'between' => true,
+    ),
+    'itemsPerRow' => 
+    array (
+      'c0' => 
+      array (
+        0 => 
+        array (
+          'items' => 1,
+          'spacing' => 0,
+        ),
+      ),
+      'c1' => 
+      array (
+        0 => 
+        array (
+          'items' => 1,
+          'spacing' => 0,
+        ),
+      ),
+      'c2' => 
+      array (
+        0 => 
+        array (
+          'items' => 1,
+          'spacing' => 0,
+        ),
+      ),
+      'sc' => 
+      array (
+        0 => 
+        array (
+          'items' => 1,
+          'spacing' => 0,
+        ),
+      ),
+    ),
+    'imageDimensions' => 
+    array (
+      'width' => NULL,
+      'height' => NULL,
+      'resize' => 'fill',
+    ),
+    'status' => true,
+    'id' => 'info_blocks-627663e04f65c',
+    'module_id' => 194,
+    'classes' => 
+    array (
+      0 => 'module',
+      1 => 'module-info_blocks',
+      2 => 'module-info_blocks-194',
+    ),
+    'items' => 
+    array (
+      1 => 
+      array (
+        'title' => 'Adres',
+        'link' => 
+        array (
+          'type' => '',
+          'id' => '128',
+          'href' => '',
+          'name' => '',
+          'total' => NULL,
+          'attrs' => 
+          array (
+          ),
+          'classes' => 
+          array (
+          ),
+        ),
+        'type' => 'icon',
+        'content' => 'Tophane, Kanarya Sk. No:14<br />Merkez/Rize',
+        'button' => false,
+        'id' => '194-1',
+        'classes' => 
+        array (
+          0 => 'module-item',
+          1 => 'module-item-1',
+          2 => 'info-blocks',
+          3 => 'info-blocks-icon',
+        ),
+        'items' => 
+        array (
+        ),
+      ),
+      2 => 
+      array (
+        'title' => 'Bizi Arayın',
+        'link' => 
+        array (
+          'type' => 'custom',
+          'id' => '',
+          'href' => 'tel:18005559090',
+          'name' => '',
+          'total' => NULL,
+          'attrs' => 
+          array (
+          ),
+          'classes' => 
+          array (
+          ),
+        ),
+        'type' => 'icon',
+        'content' => 'Tel: <br />
+Fax:',
+        'button' => false,
+        'id' => '194-2',
+        'classes' => 
+        array (
+          0 => 'module-item',
+          1 => 'module-item-2',
+          2 => 'info-blocks',
+          3 => 'info-blocks-icon',
+        ),
+        'items' => 
+        array (
+        ),
+      ),
+      3 => 
+      array (
+        'title' => 'Mağaza Çalışma Saatleri',
+        'link' => 
+        array (
+          'type' => '',
+          'id' => '',
+          'href' => '',
+          'name' => '',
+          'total' => NULL,
+          'attrs' => 
+          array (
+          ),
+          'classes' => 
+          array (
+          ),
+        ),
+        'type' => 'icon',
+        'content' => 'Pazartesi-Cumartesi: 8:00 - 20:00',
+        'button' => false,
+        'id' => '194-3',
+        'classes' => 
+        array (
+          0 => 'module-item',
+          1 => 'module-item-3',
+          2 => 'info-blocks',
+          3 => 'info-blocks-icon',
+        ),
+        'items' => 
+        array (
+        ),
+      ),
+    ),
+  ),
+);

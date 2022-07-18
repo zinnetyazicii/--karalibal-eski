@@ -1,0 +1,147 @@
+{
+  "SidePostBox": {
+    "include": "common_hover",
+    "selector_prefix": ".side-posts .post-thumb"
+  },
+
+  "ImageBorder": {
+    "type": "Border",
+    "selector": ".side-posts .post-thumb img"
+  },
+  "ImageBorderHover": {
+    "type": "Color",
+    "property": "border-color:%s",
+    "selector": ".side-posts .post-thumb:hover img",
+    "desktop":true
+  },
+  "ImageBorderRadius": {
+    "type": "BorderRadius",
+    "selector": ".side-posts .post-thumb img"
+  },
+  "ImagePadding": {
+    "type": "Padding",
+    "selector": ".side-posts .post-thumb .image a"
+  },
+  "ImageBackground": {
+    "type": "Background",
+    "selector": ".side-posts .post-thumb .image a"
+  },
+  "ImageShadow": {
+    "type": "Shadow",
+    "selector": ".side-posts .post-thumb img"
+  },
+  "ImageShadowHover": {
+    "type": "Shadow",
+    "selector": ".side-posts .post-thumb:hover img",
+    "desktop":true
+  },
+  "Grayscale": {
+    "type": "Radio",
+    "value": "",
+    "rules": {
+      "none": {
+        ".side-posts .post-thumb img": "filter: grayscale(0)"
+      },
+      "always": {
+        ".side-posts .post-thumb img": "filter: grayscale(1)"
+      },
+      "hover": {
+        ".side-posts .post-thumb img": "filter: grayscale(1)",
+        ".side-posts .post-thumb:hover img": "filter: grayscale(0)"
+      }
+    }
+  },
+
+
+
+  "NameStatus": {
+    "type": "Toggle",
+    "value": "true",
+    "rules": {
+      "true": {
+        ".side-posts .post-thumb .name": "display:block"
+      },
+      "false": {
+        ".side-posts .post-thumb .name": "display:none"
+      }
+    }
+  },
+  "NameOverflow": {
+    "type": "Toggle",
+    "value": "false",
+    "rules": {
+      "false": {
+        ".side-posts .post-thumb .name a": "white-space: normal; overflow: visible; text-overflow: initial"
+      },
+      "true": {
+        ".side-posts .post-thumb .name a": "white-space: nowrap; overflow: hidden; text-overflow: ellipsis"
+      }
+    }
+  },
+  "NameFont": {
+    "type": "Font",
+    "selector": ".side-posts .post-thumb .name a"
+  },
+  "NameFontHover": {
+    "type": "Font",
+    "selector": ".side-posts .post-thumb .name a:hover"
+  },
+  "NameBox": {
+    "include": "common",
+    "selector_prefix": ".side-posts .post-thumb .name a"
+  },
+
+  "StatStatus": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".side-posts .post-thumb .post-stats": "display:flex"
+      },
+      "false": {
+        ".side-posts .post-thumb .post-stats": "display:none"
+      }
+    }
+  },
+  "StatFont": {
+    "type": "Font",
+    "selector": ".side-posts .post-thumb .post-stats"
+  },
+  "DateIcon": {
+    "type": "Icon",
+    "selector": ".side-posts .post-thumb .post-stats .p-date::before"
+  },
+  "CommentsIcon": {
+    "type": "Icon",
+    "selector": ".side-posts .post-thumb .post-stats .p-comment::before"
+  },
+  "StatContainer": {
+    "include": "common",
+    "selector_prefix": ".side-posts .post-thumb .post-stats"
+  },
+  "DateVisibility": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".side-posts .post-thumb .post-stats .p-date": "display:inline-flex"
+      },
+      "false": {
+        ".side-posts .post-thumb .post-stats .p-date": "display:none"
+      }
+    }
+  },
+  "CommentsVisibility": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".side-posts .post-thumb .post-stats .p-comment": "display:inline-flex"
+      },
+      "false": {
+        ".side-posts .post-thumb .post-stats .p-comment": "display:none"
+      }
+    }
+  }
+}
+
+
+
+

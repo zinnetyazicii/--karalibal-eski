@@ -1,0 +1,65 @@
+{% if iframe %}
+  {% if contentType == 'image' %}
+    <div class="popup-content">
+      <img src="{{ image }}" alt="" width="{{ imageDimensions.width }}" height="{{ imageDimensions.height }}"/>
+    </div>
+  {% elseif contentType == 'text' %}
+    <div class="popup-content">
+      {{ text }}
+    </div>
+  {% else %}
+    {{ content }}
+  {% endif %}
+{% else %}
+  <div class="popup-wrapper {{ j3.classes(classes) }}" data-options='{{ options|json_encode }}'>
+    <div class="popup-container">
+      {% if closeButton %}
+        <button class="btn popup-close"></button>
+      {% endif %}
+      <div class="popup-body">
+        <div class="popup-inner-body">
+          {% if headerText %}
+            <div class="title popup-header">{{ headerText }}</div>
+          {% endif %}
+          {% if ajax and contentType == 'grid' %}
+            <div class="journal-loading"><i class="fa fa-spinner fa-spin"></i></div>
+            <iframe src="index.php?route=journal3/popup/page&module_id={{ module_id }}&popup=module" width="100%" height="100%" frameborder="0" onload="this.height = this.contentWindow.document.querySelector('.site-wrapper').offsetHeight; $(this).prev('.journal-loading').hide();"></iframe>
+          {% elseif contentType == 'image' %}
+            <div class="popup-content">
+              <img src="{{ image }}" alt="" width="{{ imageDimensions.width }}" height="{{ imageDimensions.height }}"/>
+            </div>
+          {% elseif contentType == 'text' %}
+            <div class="popup-content">
+              {{ text }}
+            </div>
+          {% else %}
+            {{ content }}
+          {% endif %}
+
+          {% if footer %}
+            <div class="popup-footer">
+              {% if button1 or button2 %}
+                <div class="popup-buttons">
+                  {% if button1 %}
+                    <a class="btn btn-popup btn-popup-1"{% if button1Link.href %} href="{{ button1Link.href }}"{% endif %}><span class="btn-text">{{ button1Text }}</span></a>
+                  {% endif %}
+
+                  {% if button2 %}
+                    <a class="btn btn-popup btn-popup-2"{% if button2Link.href %} href="{{ button2Link.href }}"{% endif %}><span class="btn-text">{{ button2Text }}</span></a>
+                  {% endif %}
+                </div>
+              {% endif %}
+              {% if not ajax and doNotShowAgain %}
+                <label class="popup-dont-show">
+                  <input type="checkbox" {% if doNotShowAgainChecked %}checked{% endif %}/>
+                  <span>{{ doNotShowAgainText }}</span>
+                </label>
+              {% endif %}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    <div class="popup-bg {% if closeButton %}popup-bg-closable{% endif %}"></div>
+  </div>
+{% endif %}

@@ -1,0 +1,9 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "VERTICAL_MENU"
+  },
+  "value": {
+    "include": "vertical_menu"
+  }
+}

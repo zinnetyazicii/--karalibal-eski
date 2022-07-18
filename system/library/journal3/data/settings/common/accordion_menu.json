@@ -1,0 +1,180 @@
+{
+  "AccordionMenuStyle": {
+    "type": "Variable",
+    "variable": "menu",
+    "selector_prefix": "&.accordion-menu"
+  },
+  "Background": {
+    "type": "Background",
+    "selector": "&.accordion-menu > .j-menu"
+  },
+  "Padding": {
+    "type": "Padding",
+    "selector": "&.accordion-menu > .j-menu"
+  },
+  "AccordionOpenIcon": {
+    "type": "Icon",
+    "selector": ".open-menu i::before",
+    "value": {
+      "icon": {
+        "name": "plus2",
+        "code": "eba0"
+      }
+    }
+  },
+
+  "AccordionOpenIconHover": {
+    "type": "Color",
+    "selector": ".accordion-menu-item:hover > a > .open-menu i::before",
+    "property": "color",
+    "important": true
+  },
+  "AccordionOpenIconActive": {
+    "type": "Color",
+    "selector": ".accordion-menu-item.open > a > .open-menu i::before",
+    "property": "color"
+  },
+  "AccordionCloseIcon": {
+    "type": "Icon",
+    "selector": ".open-menu[aria-expanded='true'] i::before",
+    "value": {
+      "icon": {
+        "name": "minus2",
+        "code": "eb85"
+      }
+    }
+  },
+
+  "AccordionCloseIconHover": {
+    "type": "Color",
+    "selector": ".menu-item.open > a:hover > .open-menu[aria-expanded='true'] i::before",
+    "property": "color",
+    "desktop":true
+  },
+  "AccordionCloseIconActive": {
+    "type": "Color",
+    "selector": ".menu-item.open > a > .open-menu[aria-expanded='true'] i::before",
+    "property": "color"
+  },
+  "AccordionOpenPadding": {
+    "type": "Padding",
+    "selector": ".open-menu"
+  },
+  "AccordionBackground": {
+    "type": "Background",
+    "selector": ".open-menu"
+  },
+  "AccordionBackgroundHover": {
+    "type": "Background",
+    "selector": ".accordion-menu-item:hover > a > .open-menu, .accordion-menu-item.open > a > .open-menu",
+    "desktop":true
+  },
+  "AccordionBorder": {
+    "type": "Border",
+    "selector": ".open-menu"
+  },
+  "AccordionBorderHover": {
+    "type": "Color",
+    "selector": ".accordion-menu-item:hover > a > .open-menu, .accordion-menu-item.open > a > .open-menu",
+    "property": "border-color",
+    "desktop":true
+  },
+  "AccordionBorderRadius": {
+    "type": "BorderRadius",
+    "selector": ".open-menu"
+  },
+  "AccordionSubStyle1": {
+    "type": "Variable",
+    "variable": "menu",
+    "selector_prefix": "&.accordion-menu .j-menu"
+  },
+  "AccordionSubPadding1": {
+    "type": "InputNumber",
+    "rules":{
+      "@":{
+        ".j-menu > li > div .j-menu > li > a": "padding-left:%spx !important"
+      }
+    },
+    "rtlRules":{
+      "@":{
+        ".j-menu > li > div .j-menu > li > a": "padding-right:%spx !important"
+      }
+    }
+  },
+  "AccordionSubStyle2": {
+    "type": "Variable",
+    "variable": "menu",
+    "selector_prefix": "&.accordion-menu .j-menu .j-menu"
+  },
+
+  "AccordionSubIconMargin": {
+    "type": "Margin",
+    "selector": "&.accordion-menu .j-menu .j-menu > li > a::before"
+  },
+  "AccordionSubIconWidth": {
+    "type": "InputNumber",
+    "rules":{
+      "@":{
+        "&.accordion-menu .j-menu .j-menu > li > a::before": "min-width:%spx"
+      }
+    }
+  },
+  "AccordionSubIconSize": {
+    "type": "InputNumber",
+    "rules":{
+      "@":{
+        "&.accordion-menu .j-menu .j-menu > li > a::before": "font-size:%spx"
+      }
+    }
+  },
+
+  "AccordionSubPadding2": {
+    "type": "InputNumber",
+    "rules":{
+      "@":{
+        ".j-menu > li > div .j-menu > li > div > .j-menu > li > a": "padding-left:%spx !important"
+      }
+    },
+    "rtlRules":{
+      "@":{
+        ".j-menu > li > div .j-menu > li > div > .j-menu > li > a": "padding-right:%spx !important"
+      }
+    }
+  },
+  "AccordionSubStyle3": {
+    "type": "Variable",
+    "variable": "menu",
+    "selector_prefix": "&.accordion-menu .j-menu .j-menu .j-menu"
+  },
+  "AccordionSubPadding3": {
+    "type": "InputNumber",
+    "rules":{
+      "@":{
+        ".j-menu > li > div .j-menu > li > div > .j-menu > li > div > .j-menu > li > a": "padding-left:%spx !important"
+      }
+    },
+    "rtlRules":{
+      "@":{
+        ".j-menu > li > div .j-menu > li > div > .j-menu > li > div > .j-menu > li > a": "padding-right:%spx !important"
+      }
+    }
+  },
+  "AccordionSubStyle4": {
+    "type": "Variable",
+    "variable": "menu",
+    "selector_prefix": "&.accordion-menu .j-menu .j-menu .j-menu .j-menu"
+  },
+  "AccordionSubPadding4": {
+    "type": "InputNumber",
+    "rules":{
+      "@":{
+        ".j-menu > li > div .j-menu > li > div > .j-menu > li > div > .j-menu > li > div > .j-menu > li > a": "padding-left:%spx !important"
+      }
+    },
+    "rtlRules":{
+      "@":{
+        ".j-menu > li > div .j-menu > li > div > .j-menu > li > div > .j-menu > li > div > .j-menu > li > a": "padding-right:%spx !important"
+      }
+    }
+  }
+}

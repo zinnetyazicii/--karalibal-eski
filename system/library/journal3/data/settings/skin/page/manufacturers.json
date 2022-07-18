@@ -1,0 +1,35 @@
+{
+  "manufacturersImageStatus": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".route-product-manufacturer #content a img": "display: block"
+      },
+      "false": {
+        ".route-product-manufacturer #content a img": "display: none"
+      }
+    }
+  },
+
+  "manufacturerBox": {
+    "include": "common_hover",
+    "selector_prefix": ".route-product-manufacturer .manufacturer a"
+  },
+  "manufacturerTitle": {
+    "type": "Variable",
+    "variable": "title",
+    "selector_prefix": ".route-product-manufacturer h2.title"
+  },
+  "manufacturerTitleFont": {
+    "type": "Font",
+    "selector": ".route-product-manufacturer h2.title"
+  },
+  "manufacturerLinkFont": {
+    "type": "Font",
+    "selector": ".route-product-manufacturer #content a"
+  },
+  "manufacturerLinkFontHover": {
+    "type": "Font",
+    "selector": ".route-product-manufacturer #content a:hover"
+  }
+}

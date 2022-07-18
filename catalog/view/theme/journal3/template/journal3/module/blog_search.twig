@@ -1,0 +1,13 @@
+<div class="{{ j3.classes(classes) }}" data-url="{{ url }}">
+  {% if title %}
+    <h3 class="title module-title">{{ title }}</h3>
+  {% endif %}
+  <div class="module-body">
+    <div class="box-search">
+      <input type="text" class="form-control blog-search" value="{{ search }}" placeholder="{{ placeholder }}"/>
+      <button class="btn search-btn">
+        <i class="fa fa-search"></i>
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,195 @@
+<div class="checkout-section {{ type }}-address" v-if="('{{ type }}' === 'payment') || (('{{ type }}' === 'shipping') && !same_address && shipping_required)">
+  <div class="title section-title">{{ type == 'payment' ? j3.settings.get('sectionTitlePaymentAddress') : j3.settings.get('sectionTitleShippingAddress') }}</div>
+  <div class="section-body">
+    <div class="radio" v-if="customer_id && Object.keys(addresses).length">
+      <label>
+        <input type="radio" v-model="{{ type }}_address_type" v-on:change="save()" value="existing"/>
+        {{ text_address_existing }}</label>
+    </div>
+
+    <div id="{{ type }}-existing" v-if="customer_id && ({{ type }}_address_type === 'existing')">
+      <select v-model="order_data.{{ type }}_address_id" id="input-{{ type }}-address" class="form-control">
+        <option v-for="address in addresses" v-bind:value="address.address_id" v-html="address.firstname + ' ' + address.lastname + ' ' + address.address_1 + ' ' + address.city + ' ' + address.zone + ' ' + address.country"></option>
+      </select>
+      <span class="text-danger" v-if="error && error.{{ type }}_address_error" v-html="error.{{ type }}_address_error"></span>
+    </div>
+
+    <div class="radio" v-if="customer_id && Object.keys(addresses).length">
+      <label>
+        <input type="radio" v-model="{{ type }}_address_type" v-on:change="save()" value="new"/>
+        {{ text_address_new }}</label>
+    </div>
+
+    <div v-if="!customer_id || (customer_id && ({{ type }}_address_type === 'new'))">
+      <div class="form-group required address-firstname" v-if="customer_id || (!customer_id && '{{ type }}' === 'shipping')">
+        <label class="control-label" for="input-{{ type }}-firstname">{{ entry_firstname }}</label>
+        <input v-model="order_data.{{ type }}_firstname" type="text" name="firstname" value="" placeholder="{{ entry_firstname }}" id="input-{{ type }}-firstname" class="form-control"/>
+        <span class="text-danger" v-if="error && error.{{ type }}_firstname" v-html="error.{{ type }}_firstname"></span>
+      </div>
+
+      <div class="form-group required address-lastname" v-if="customer_id || (!customer_id && '{{ type }}' === 'shipping')">
+        <label class="control-label" for="input-{{ type }}-lastname">{{ entry_lastname }}</label>
+        <input v-model="order_data.{{ type }}_lastname" type="text" name="lastname" value="" placeholder="{{ entry_lastname }}" id="input-{{ type }}-lastname" class="form-control"/>
+        <span class="text-danger" v-if="error && error.{{ type }}_lastname" v-html="error.{{ type }}_lastname"></span>
+      </div>
+
+      <div class="form-group required address-company">
+        <label class="control-label" for="input-{{ type }}-company">{{ entry_company }}</label>
+        <input v-model="order_data.{{ type }}_company" type="text" name="company" value="" placeholder="{{ entry_company }}" id="input-{{ type }}-company" class="form-control"/>
+        <span class="text-danger" v-if="error && error.{{ type }}_company" v-html="error.{{ type }}_company"></span>
+      </div>
+
+      <div class="form-group required address-address-1">
+        <label class="control-label" for="input-{{ type }}-address-1">{{ entry_address_1 }}</label>
+        <input v-model="order_data.{{ type }}_address_1" type="text" name="address_1" value="" placeholder="{{ entry_address_1 }}" id="input-{{ type }}-address-1" class="form-control"/>
+        <span class="text-danger" v-if="error && error.{{ type }}_address_1" v-html="error.{{ type }}_address_1"></span>
+      </div>
+
+      <div class="form-group required address-address-2">
+        <label class="control-label" for="input-{{ type }}-address-2">{{ entry_address_2 }}</label>
+        <input v-model="order_data.{{ type }}_address_2" type="text" name="address_2" value="" placeholder="{{ entry_address_2 }}" id="input-{{ type }}-address-2" class="form-control"/>
+        <span class="text-danger" v-if="error && error.{{ type }}_address_2" v-html="error.{{ type }}_address_2"></span>
+      </div>
+
+      <div class="form-group required address-city">
+        <label class="control-label" for="input-{{ type }}-city">{{ entry_city }}</label>
+        <input v-model="order_data.{{ type }}_city" type="text" name="city" value="" placeholder="{{ entry_city }}" id="input-{{ type }}-city" class="form-control"/>
+        <span class="text-danger" v-if="error && error.{{ type }}_city" v-html="error.{{ type }}_city"></span>
+      </div>
+
+      {% if j3.settings.get('quickCheckoutAddressPostcodeField') != 'hidden' %}
+      <div class="form-group required address-postcode">
+        <label class="control-label" for="input-{{ type }}-postcode">{{ entry_postcode }}</label>
+        <input v-model="order_data.{{ type }}_postcode" type="text" name="postcode" value="" placeholder="{{ entry_postcode }}" id="input-{{ type }}-postcode" class="form-control"/>
+        <span class="text-danger" v-if="error && error.{{ type }}_postcode" v-html="error.{{ type }}_postcode"></span>
+      </div>
+      {% endif %}
+
+      {% if j3.settings.get('quickCheckoutAddressCountryField') != 'hidden' %}
+      <div class="form-group required address-country">
+        <label class="control-label" for="input-{{ type }}-country">{{ entry_country }}</label>
+        <select v-model="order_data.{{ type }}_country_id" name="country_id" id="input-{{ type }}-country" class="form-control">
+          <option value="">{{ text_select }}</option>
+          <option v-for="country in countries" v-bind:value="country.country_id" v-html="country.name"></option>
+        </select>
+        <span class="text-danger" v-if="error && error.{{ type }}_country" v-html="error.{{ type }}_country"></span>
+      </div>
+      {% endif %}
+
+      {% if j3.settings.get('quickCheckoutAddressRegionField') != 'hidden' %}
+      <div class="form-group required address-zone">
+        <label class="control-label" for="input-{{ type }}-zone">{{ entry_zone }}</label>
+        <select v-model="order_data.{{ type }}_zone_id" name="zone_id" id="input-{{ type }}-zone" class="form-control">
+          <option v-if="{{ type }}_zones.length > 0" value="">{{ text_select }}</option>
+          <option v-if="{{ type }}_zones.length == 0" value="">{{ text_none }}</option>
+          <option v-for="zone in {{ type }}_zones" v-bind:value="zone.zone_id" v-html="zone.name"></option>
+        </select>
+        <span class="text-danger" v-if="error && error.{{ type }}_zone" v-html="error.{{ type }}_zone"></span>
+      </div>
+      {% endif %}
+
+      {# custom fields - select #}
+
+      <div v-for="custom_field in custom_fields.custom_fields.address" v-if="custom_field.type === 'select'" v-bind:id="'{{ type }}-custom-field' + custom_field.custom_field_id" v-bind:class="'form-group custom-field' + (custom_field.required ? ' required' : '')">
+        <label class="control-label" v-bind:for="'input-{{ type }}-custom-field' + custom_field.custom_field_id" v-html="custom_field.name"></label>
+        <select v-model="order_data.{{ type }}_custom_field[custom_field.custom_field_id]" v-bind:id="'input-{{ type }}-custom-field' + custom_field.custom_field_id" class="form-control">
+          <option value="">{{ text_select }}</option>
+          <option v-for="custom_field_value in custom_field.custom_field_value" v-bind:value="custom_field_value.custom_field_value_id" v-html="custom_field_value.name"></option>
+        </select>
+        <span class="text-danger" v-if="error && error.{{ type }}_custom_field && error.{{ type }}_custom_field[custom_field.custom_field_id]" v-html="error.{{ type }}_custom_field[custom_field.custom_field_id]"></span>
+      </div>
+
+      {# custom fields - radio #}
+
+      <div v-for="custom_field in custom_fields.custom_fields.address" v-if="custom_field.type === 'radio'" v-bind:id="'{{ type }}-custom-field' + custom_field.custom_field_id" v-bind:class="'form-group custom-field' + (custom_field.required ? ' required' : '')">
+        <label class="control-label" v-html="custom_field.name"></label>
+        <div v-bind:id="'input-{{ type }}-custom-field' + custom_field.custom_field_id">
+          <div class="radio" v-for="custom_field_value in custom_field.custom_field_value">
+            <label>
+              <input type="radio" v-model="order_data.{{ type }}_custom_field[custom_field.custom_field_id]" v-bind:value="custom_field_value.custom_field_value_id"/>
+              <span v-html="custom_field_value.name"></span></label>
+          </div>
+        </div>
+        <span class="text-danger" v-if="error && error.{{ type }}_custom_field && error.{{ type }}_custom_field[custom_field.custom_field_id]" v-html="error.{{ type }}_custom_field[custom_field.custom_field_id]"></span>
+      </div>
+
+      {# custom fields - checkbox #}
+
+      <div v-for="custom_field in custom_fields.custom_fields.address" v-if="custom_field.type === 'checkbox'" v-bind:id="'{{ type }}-custom-field' + custom_field.custom_field_id" v-bind:class="'form-group custom-field' + (custom_field.required ? ' required' : '')">
+        <label class="control-label" v-html="custom_field.name"></label>
+        <div v-bind:id="'input-{{ type }}-custom-field' + custom_field.custom_field_id"> {% for custom_field_value in custom_field.custom_field_value %}
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="custom_field[{{ custom_field.location }}][{{ custom_field.custom_field_id }}][]" value="{{ custom_field_value.custom_field_value_id }}"/>
+                {{ custom_field_value.name }}</label>
+            </div>
+          {% endfor %} </div>
+        <span class="text-danger" v-if="error && error.{{ type }}_custom_field && error.{{ type }}_custom_field[custom_field.custom_field_id]" v-html="error.{{ type }}_custom_field[custom_field.custom_field_id]"></span>
+      </div>
+
+      {# custom fields - text #}
+
+      <div v-for="custom_field in custom_fields.custom_fields.address" v-if="custom_field.type === 'text'" v-bind:id="'{{ type }}-custom-field' + custom_field.custom_field_id" v-bind:class="'form-group custom-field' + (custom_field.required ? ' required' : '')">
+        <label class="control-label" v-bind:for="'input-{{ type }}-custom-field' + custom_field.custom_field_id" v-html="custom_field.name"></label>
+        <input type="text" v-model="order_data.{{ type }}_custom_field[custom_field.custom_field_id]" value="{{ custom_field.value }}" v-bind:placeholder="custom_field.name" v-bind:id="'input-{{ type }}-custom-field' + custom_field.custom_field_id" class="form-control"/>
+        <span class="text-danger" v-if="error && error.{{ type }}_custom_field && error.{{ type }}_custom_field[custom_field.custom_field_id]" v-html="error.{{ type }}_custom_field[custom_field.custom_field_id]"></span>
+      </div>
+
+      {# custom fields - textarea #}
+
+      <div v-for="custom_field in custom_fields.custom_fields.address" v-if="custom_field.type === 'textarea'" v-bind:id="'{{ type }}-custom-field' + custom_field.custom_field_id" v-bind:class="'form-group custom-field' + (custom_field.required ? ' required' : '')">
+        <label class="control-label" v-bind:for="'input-{{ type }}-custom-field' + custom_field.custom_field_id" v-html="custom_field.name"></label>
+        <textarea v-model="order_data.{{ type }}_custom_field[custom_field.custom_field_id]" rows="5" v-bind:placeholder="custom_field.name" v-bind:id="'input-{{ type }}-custom-field' + custom_field.custom_field_id" class="form-control">{{ custom_field.value }}</textarea>
+        <span class="text-danger" v-if="error && error.{{ type }}_custom_field && error.{{ type }}_custom_field[custom_field.custom_field_id]" v-html="error.{{ type }}_custom_field[custom_field.custom_field_id]"></span>
+      </div>
+
+      {# custom fields - file #}
+
+      <div v-for="custom_field in custom_fields.custom_fields.address" v-if="custom_field.type === 'file'" v-bind:id="'{{ type }}-custom-field' + custom_field.custom_field_id" v-bind:class="'form-group custom-field' + (custom_field.required ? ' required' : '')">
+        <label class="control-label" v-bind:for="'input-{{ type }}-custom-field' + custom_field.custom_field_id" v-html="custom_field.name"></label>
+        <br/>
+        <button type="button" v-on:click="upload('{{ type }}_custom_field', custom_field.custom_field_id, $event)" v-bind:id="'button-account-custom-field' + custom_field.custom_field_id" class="btn btn-default"><i class="fa fa-upload"></i> {{ button_upload }}</button>
+        <input type="hidden" v-model="order_data.{{ type }}_custom_field[custom_field.custom_field_id]" value="" v-bind:placeholder="custom_field.name" v-bind:id="'input-{{ type }}-custom-field' + custom_field.custom_field_id" class="form-control"/>
+        <span class="text-danger" v-if="error && error.{{ type }}_custom_field && error.{{ type }}_custom_field[custom_field.custom_field_id]" v-html="error.{{ type }}_custom_field[custom_field.custom_field_id]"></span>
+      </div>
+
+      {# custom fields - date #}
+
+      <div v-for="custom_field in custom_fields.custom_fields.address" v-if="custom_field.type === 'date'" v-bind:id="'{{ type }}-custom-field' + custom_field.custom_field_id" v-bind:class="'form-group custom-field' + (custom_field.required ? ' required' : '')">
+        <label class="control-label" v-bind:for="'input-{{ type }}-custom-field' + custom_field.custom_field_id" v-html="custom_field.name"></label>
+        <div class="input-group date">
+          <input type="text" v-model="order_data.{{ type }}_custom_field[custom_field.custom_field_id]" v-on:change="saveDateTime('{{ type }}_custom_field', custom_field.custom_field_id, $event)" value="{{ custom_field.value }}" v-bind:placeholder="custom_field.name" data-date-format="YYYY-MM-DD" v-bind:id="'input-{{ type }}-custom-field' + custom_field.custom_field_id" class="form-control"/>
+          <span class="input-group-btn"><button type="button" class="btn btn-default"><i class="fa fa-calendar"></i></button></span>
+        </div>
+        <span class="text-danger" v-if="error && error.{{ type }}_custom_field && error.{{ type }}_custom_field[custom_field.custom_field_id]" v-html="error.{{ type }}_custom_field[custom_field.custom_field_id]"></span>
+      </div>
+
+      {# custom fields - time #}
+
+      <div v-for="custom_field in custom_fields.custom_fields.address" v-if="custom_field.type === 'time'" v-bind:id="'{{ type }}-custom-field' + custom_field.custom_field_id" v-bind:class="'form-group custom-field' + (custom_field.required ? ' required' : '')">
+        <label class="control-label" v-bind:for="'input-{{ type }}-custom-field' + custom_field.custom_field_id" v-html="custom_field.name"></label>
+        <div class="input-group time">
+          <input type="text" v-model="order_data.{{ type }}_custom_field[custom_field.custom_field_id]" v-on:change="saveDateTime('{{ type }}_custom_field', custom_field.custom_field_id, $event)" value="{{ custom_field.value }}" v-bind:placeholder="custom_field.name" data-date-format="HH:mm" v-bind:id="'input-{{ type }}-custom-field' + custom_field.custom_field_id" class="form-control"/>
+          <span class="input-group-btn"><button type="button" class="btn btn-default"><i class="fa fa-calendar"></i></button></span>
+        </div>
+        <span class="text-danger" v-if="error && error.{{ type }}_custom_field && error.{{ type }}_custom_field[custom_field.custom_field_id]" v-html="error.{{ type }}_custom_field[custom_field.custom_field_id]"></span>
+      </div>
+
+      {# custom fields - datetime #}
+
+      <div v-for="custom_field in custom_fields.custom_fields.address" v-if="custom_field.type === 'datetime'" v-bind:id="'{{ type }}-custom-field' + custom_field.custom_field_id" v-bind:class="'form-group custom-field' + (custom_field.required ? ' required' : '')">
+        <label class="control-label" v-bind:for="'input-{{ type }}-custom-field' + custom_field.custom_field_id" v-html="custom_field.name"></label>
+        <div class="input-group time">
+          <input type="text" v-model="order_data.{{ type }}_custom_field[custom_field.custom_field_id]" v-on:change="saveDateTime('{{ type }}_custom_field', custom_field.custom_field_id, $event)" value="{{ custom_field.value }}" v-bind:placeholder="custom_field.name" data-date-format="YYYY-MM-DD HH:mm" v-bind:id="'input-{{ type }}-custom-field' + custom_field.custom_field_id" class="form-control"/>
+          <span class="input-group-btn"><button type="button" class="btn btn-default"><i class="fa fa-calendar"></i></button></span>
+        </div>
+        <span class="text-danger" v-if="error && error.{{ type }}_custom_field && error.{{ type }}_custom_field[custom_field.custom_field_id]" v-html="error.{{ type }}_custom_field[custom_field.custom_field_id]"></span>
+      </div>
+    </div>
+    <div v-if="('{{ type }}' === 'payment') && shipping_required" class="checkbox checkout-same-address">
+      <label>
+        <input v-model="same_address" v-on:change="save()" type="checkbox"/>
+        {{ entry_shipping }}</label>
+    </div>
+  </div>
+</div>

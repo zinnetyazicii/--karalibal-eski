@@ -1,0 +1,13 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "New Top Menu"
+  },
+  "status": {
+    "type": "Status"
+  },
+  "scheduledStatus": {
+    "type": "Range",
+    "php": true
+  }
+}

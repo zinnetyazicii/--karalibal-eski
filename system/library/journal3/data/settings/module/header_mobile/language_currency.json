@@ -1,0 +1,22 @@
+{
+  "mobileLanguageStyle": {
+    "type": "Variable",
+    "variable": "language_currency",
+    "selector_prefix": ".mobile-header-active .language"
+  },
+  "mobileCurrencyStyle": {
+    "type": "Variable",
+    "variable": "language_currency",
+    "selector_prefix": ".mobile-header-active .currency"
+  },
+  "mobileLanguageDropdownStyle": {
+    "type": "Variable",
+    "variable": "dropdown",
+    "selector_prefix": ".mobile-header-active .language-currency.top-menu"
+  },
+  "mobileLangPosition": {
+    "type": "Radio",
+    "value": "top",
+    "php": true
+  }
+}

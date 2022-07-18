@@ -1,0 +1,9 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "MENU_LABEL"
+  },
+  "value": {
+    "include": "menu_label"
+  }
+}

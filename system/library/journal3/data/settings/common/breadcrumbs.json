@@ -1,0 +1,163 @@
+{
+  "BreadcrumbsVisibility": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".breadcrumb": "display: block !important"
+      },
+      "false": {
+        ".breadcrumb": "display: none !important"
+      }
+    }
+  },
+  "BreadcrumbsAlign": {
+    "type": "Radio",
+    "value": "left",
+    "rules": {
+      "left": {
+        ".breadcrumb": "text-align:left"
+      },
+      "center": {
+        ".breadcrumb": "text-align:center"
+      },
+      "right": {
+        ".breadcrumb": "text-align:right"
+      }
+    },
+    "rtlRules": {
+      "left": {
+        ".breadcrumb": "text-align:right"
+      },
+      "center": {
+        ".breadcrumb": "text-align:center"
+      },
+      "right": {
+        ".breadcrumb": "text-align:left"
+      }
+    }
+  },
+  "BreadcrumbsBackground": {
+    "type": "Background",
+    "selector": ".breadcrumb"
+  },
+  "BreadcrumbsFullBackground": {
+    "type": "Background",
+    "selector": ".breadcrumb::before"
+  },
+  "BreadcrumbsPadding": {
+    "type": "Padding",
+    "selector": ".breadcrumb"
+  },
+  "FullBreadcrumbsShadow": {
+    "type": "Shadow",
+    "selector": ".breadcrumb::before"
+  },
+  "BreadcrumbsMargin": {
+    "type": "Margin",
+    "selector": ".breadcrumb"
+  },
+  "BreadcrumbsBorder": {
+    "type": "Border",
+    "selector": ".breadcrumb"
+  },
+  "FullBreadcrumbsBorder": {
+    "type": "Border",
+    "selector": ".breadcrumb::before"
+  },
+  "BreadcrumbsBorderRadius": {
+    "type": "BorderRadius",
+    "selector": ".breadcrumb"
+  },
+  "BreadcrumbsHomeIcon": {
+    "type": "Icon",
+    "selector": ".breadcrumb li:first-of-type a i::before"
+  },
+  "BreadcrumbsHomeIconHover": {
+    "type": "Color",
+    "selector": ".breadcrumb li:first-of-type a:hover i::before",
+    "property": "color"
+  },
+  "BreadcrumbsFont": {
+    "type": "Font",
+    "selector": ".breadcrumb a"
+  },
+  "BreadcrumbsFontHover": {
+    "type": "Font",
+    "selector": ".breadcrumb a:hover"
+  },
+  "BreadcrumbsFontActive": {
+    "type": "Font",
+    "selector": ".breadcrumb li:last-of-type a"
+  },
+  "BreadcrumbsSymbolPadding": {
+    "type": "Padding",
+    "selector": ".breadcrumb > li + li:before"
+  },
+  "BreadcrumbsSymbol": {
+    "type": "Input",
+    "selector": ".breadcrumb > li + li:before",
+    "property": "content: '%s'"
+  },
+  "BreadcrumbsSymbolColor": {
+    "type": "Color",
+    "selector": ".breadcrumb > li + li:before",
+    "property": "color"
+  },
+  "BreadcrumbsSymbolOffset": {
+    "type": "InputPair",
+    "selector": ".breadcrumb > li + li:before",
+    "properties": {
+      "first": "left: %spx",
+      "second": "top: %spx"
+    }
+  },
+
+  "BreadcrumbScroll": {
+    "type": "Toggle",
+    "value": "false",
+    "rules": {
+      "true": {
+        ".breadcrumb": "white-space: nowrap",
+        ".mobile .breadcrumb": "overflow-x: scroll",
+        ".breadcrumb::-webkit-scrollbar": "-webkit-appearance: none; height: 1px",
+        ".breadcrumb::-webkit-scrollbar-track": "background-color: white",
+        ".breadcrumb::-webkit-scrollbar-thumb": "background-color: #999"
+      },
+      "false": {
+        ".breadcrumb": "white-space: normal",
+        ".mobile .breadcrumb": "overflow-x: visible",
+        ".breadcrumb::-webkit-scrollbar": "-webkit-appearance: initial; height: 1px",
+        ".breadcrumb::-webkit-scrollbar-track": "background-color: white",
+        ".breadcrumb::-webkit-scrollbar-thumb": "background-color: #999"
+      }
+    }
+  },
+  "BreadcrumbScrollColor": {
+    "type": "Color",
+    "selector": ".breadcrumb::-webkit-scrollbar-thumb",
+    "property": "background-color"
+  },
+  "BreadcrumbTrackColor": {
+    "type": "Color",
+    "selector": ".breadcrumb::-webkit-scrollbar-track",
+    "property": "background-color"
+  },
+  "BreadcrumbTrackHeight": {
+    "type": "InputNumber",
+    "value": "1",
+    "rules":{
+      "@":{
+        ".breadcrumb::-webkit-scrollbar": "height:%spx; width: %spx"
+      }
+    }
+  },
+  "BreadcrumbScrollTouch": {
+    "type": "Toggle",
+    "value": "true",
+    "rules": {
+      "true": {
+        ".breadcrumb": "-webkit-overflow-scrolling:touch;"
+      }
+    }
+  }
+}

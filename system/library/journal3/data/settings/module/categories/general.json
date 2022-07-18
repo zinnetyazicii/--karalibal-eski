@@ -1,0 +1,115 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "New Categories "
+  },
+  "status": {
+    "type": "Status"
+  },
+  "schedule": {
+    "type": "Range",
+    "php": true
+  },
+  "viewMoreText": {
+    "type": "InputLang",
+    "value": "View More",
+    "php": true
+  },
+  "moduleTitle": {
+    "type": "Variable",
+    "variable": "title",
+    "selector_prefix": ".module-categories-%s .title.module-title"
+  },
+  "descLimit": {
+    "type": "Input",
+    "value": "75",
+    "php": true
+  },
+  "sectionMargin": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".module-categories-%s .module-body > .module-item": "margin-bottom:%spx"
+      }
+    }
+  },
+  "sectionsDisplay": {
+    "type": "Radio",
+    "value": "blocks",
+    "php": true,
+    "device": true
+  },
+  "sectionsDisplayTablet": {
+    "type": "Radio",
+    "value": "",
+    "php": true
+  },
+  "sectionsDisplayPhone": {
+    "type": "Radio",
+    "value": "",
+    "php": true
+  },
+  "moduleCategory": {
+    "type": "Variable",
+    "variable": "category",
+    "selector_prefix": ".module-categories-%s"
+  },
+  "carousel": {
+    "type": "Toggle",
+    "value": "false",
+    "php": true,
+    "device": true
+  },
+  "carouselTablet": {
+    "type": "Toggle",
+    "value": "",
+    "php": true
+  },
+  "carouselPhone": {
+    "type": "Toggle",
+    "value": "",
+    "php": true
+  },
+  "carouselStyle": {
+    "type": "Variable",
+    "variable": "carousel",
+    "selector_prefix": ".module-categories-%s "
+  },
+  "accordionStyle": {
+    "type": "Variable",
+    "variable": "accordion",
+    "selector_prefix": ".module-categories-%s "
+  },
+  "tabsStyle": {
+    "type": "Variable",
+    "variable": "tabs",
+    "selector_prefix": ".module-categories-%s "
+  },
+  "itemsPerRow": {
+    "type": "ItemsPerRow",
+    "selector": ".module-categories-%s .category-layout",
+    "php": true
+  },
+  "default": {
+    "type": "Select",
+    "value": "",
+    "php": true
+  },
+  "carouselGutter": {
+    "type": "Padding",
+    "selector": ".module-categories-%s .swiper-container"
+  },
+  "containerMargin": {
+    "type": "Margin",
+    "selector": ".module-categories-%s .category-grid:not(.swiper-wrapper)"
+  },
+  "images": {
+    "type": "Toggle",
+    "value": "true",
+    "php": true
+  },
+  "imageDimensions": {
+    "type": "ImageDimensions",
+    "php": true
+  }
+}

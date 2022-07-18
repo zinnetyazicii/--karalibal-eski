@@ -1,0 +1,847 @@
+<?php $val = array (
+  'css' => '.module-gallery-176 .swiper-container{overflow:hidden}.module-gallery-176 .swiper-buttons{display:none;top:50%;width:calc(100% - (-15px * 2));margin-top:-10px}.module-gallery-176:hover .swiper-buttons{display:block}.module-gallery-176 .swiper-button-prev{left:0;right:auto;transform:translate(0, -50%)}.module-gallery-176 .swiper-button-next{left:auto;right:0;transform:translate(0, -50%)}.module-gallery-176 .swiper-buttons
+div{width:35px;height:35px;background:rgba(44, 54, 64, 1);border-width:4px;border-style:solid;border-color:rgba(255, 255, 255, 1);border-radius:50%}.module-gallery-176 .swiper-button-disabled{opacity:0}.module-gallery-176 .swiper-buttons div::before{content:\'\\e408\' !important;font-family:icomoon !important;color:rgba(255, 255, 255, 1)}.module-gallery-176 .swiper-buttons .swiper-button-next::before{content:\'\\e409\' !important;font-family:icomoon !important;color:rgba(255, 255, 255, 1)}.module-gallery-176 .swiper-buttons div:not(.swiper-button-disabled):hover{background:rgba(239, 80, 66, 1)}.module-gallery-176 .swiper-pagination{display:block;margin-bottom:-10px;left:50%;right:auto;transform:translateX(-50%)}.module-gallery-176
+.swiper{padding-bottom:20px}.module-gallery-176 .swiper-pagination-bullet{width:8px;height:8px;background-color:rgba(226, 226, 226, 1)}.module-gallery-176 .swiper-pagination>span+span{margin-left:8px}.desktop .module-gallery-176 .swiper-pagination-bullet:hover{background-color:rgba(143, 157, 166, 1)}.module-gallery-176 .swiper-pagination-bullet.swiper-pagination-bullet-active{background-color:rgba(239, 80, 66, 1)}.module-gallery-176 .swiper-pagination>span{border-radius:50px}.module-gallery-176 .module-item.swiper-slide{margin-right:0px;width:calc((100% - 3 * 0px) / 4 - 0.01px)}.module-gallery-176 .module-item:not(.swiper-slide){padding:0px;width:calc(100% / 4 - 0.01px)}.one-column #content .module-gallery-176 .module-item.swiper-slide{margin-right:0px;width:calc((100% - 0 * 0px) / 1 - 0.01px)}.one-column #content .module-gallery-176 .module-item:not(.swiper-slide){padding:0px;width:calc(100% / 1 - 0.01px)}.two-column #content .module-gallery-176 .module-item.swiper-slide{margin-right:0px;width:calc((100% - 0 * 0px) / 1 - 0.01px)}.two-column #content .module-gallery-176 .module-item:not(.swiper-slide){padding:0px;width:calc(100% / 1 - 0.01px)}.side-column .module-gallery-176 .module-item.swiper-slide{margin-right:10px;width:calc((100% - 2 * 10px) / 3 - 0.01px)}.side-column .module-gallery-176 .module-item:not(.swiper-slide){padding:5px;width:calc(100% / 3 - 0.01px)}.module-gallery-176:not(.carousel-mode) .module-body{margin:-5px}.module-gallery-176 .module-item>a::after{display:block;content:\'\\eba0\' !important;font-family:icomoon !important;color:rgba(255, 255, 255, 1)}.module-gallery-176 .module-item>a>span::before{display:none}.module-gallery-176 .module-item>a::before{background-color:rgba(51, 55, 154, 0.45)}.module-gallery-176 .module-item > a
+img{filter:grayscale(1);transform:scale(1)}.module-gallery-176 .module-item > a:hover
+img{filter:grayscale(0)}.module-gallery-176 .gallery-image-caption{display:none}.lg-176.lg-backdrop{background:rgba(0, 0, 0, 0.85)}.lg-176 #lg-download{display:none}.lg-176 .lg-image{border-radius:px;max-height:calc(100% - 100px)}.lg-176 .lg-actions .lg-prev::before{content:\'\\e93e\' !important;font-family:icomoon !important;font-size:45px;color:rgba(230, 230, 230, 1);left:-10px}.desktop .lg-176 .lg-actions .lg-prev:hover::before{color:rgba(239, 80, 66, 1)}.lg-176 .lg-actions .lg-next::before{content:\'\\e93f\' !important;font-family:icomoon !important;font-size:45px;color:rgba(230, 230, 230, 1);left:10px}.desktop .lg-176 .lg-actions .lg-next:hover::before{color:rgba(239, 80, 66, 1)}.lg-176 .lg-actions .lg-icon{background:none}.lg-176 .lg-toolbar{color:rgba(230, 230, 230, 1)}.lg-176 #lg-counter{display:inline-block}.lg-176 #lg-zoom-in{display:block}.lg-176 #lg-actual-size{display:block}.lg-176 #lg-download-in::after{content:\'\\eb4d\' !important;font-family:icomoon !important}.lg-176 #lg-zoom-in::after{content:\'\\ebef\' !important;font-family:icomoon !important}.lg-176 #lg-zoom-in:hover::after{color:rgba(239, 80, 66, 1)}.lg-176 #lg-actual-size::after{content:\'\\ebf0\' !important;font-family:icomoon !important}.lg-176 #lg-actual-size:hover::after{color:rgba(239, 80, 66, 1)}.lg-176 .lg-close::after{content:\'\\ebeb\' !important;font-family:icomoon !important}.desktop .lg-176 .lg-close:hover::after{color:rgba(239, 80, 66, 1)}.lg-176 .lg-sub-html{font-size:18px;color:rgba(230, 230, 230, 1);background:rgba(0, 0, 0, 0.6);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;top:auto;display:none}.lg-176.lg-thumb-open .lg-sub-html{bottom:90px !important}.lg-176 .lg-thumb-item{margin-top:10px;padding-right:10px}.lg-176 .lg-thumb-item
+img{margin-bottom:10px;border-width:1px;border-style:solid;border-color:rgba(0, 0, 0, 0);border-radius:px}.lg-176 .lg-thumb-outer{padding-left:10px;background:rgba(17, 17, 17, 1)}.desktop .lg-176 .lg-thumb-item img:hover, .lg-176 .lg-thumb-item.active
+img{border-color:rgba(239, 80, 66, 1)}.lg-176 div.lg-thumb-item.active
+img{border-color:rgba(239, 80, 66, 1)}.lg-176 .lg-toogle-thumb::after{color:rgba(230, 230, 230, 1)}.desktop .lg-176 .lg-toogle-thumb:hover::after{color:rgba(239, 80, 66, 1)}.lg-176 .lg-toogle-thumb{background:rgba(17, 17, 17, 1);left:auto;right:20px;transform:translateX(0)}.module-gallery-176 .module-body{justify-content:flex-start}.module-gallery-176 .open-btn{transform:scale(calc(100 / 100));transform-origin:top left}@media (max-width: 1024px){.module-gallery-176 .swiper-buttons{display:none !important}}@media (max-width: 760px){.module-gallery-176 .swiper-container{overflow:visible}}.module-gallery-176 .module-item-1>a>span::before{content:\'Image Caption\'}.module-gallery-176 .module-item-2>a>span::before{content:\'Image Caption\'}.module-gallery-176 .module-item-3>a>span::before{content:\'Image Caption\'}.module-gallery-176 .module-item-4>a>span::before{content:\'Image Caption\'}.module-gallery-176 .module-item-5>a>span::before{content:\'Image Caption\'}.module-gallery-176 .module-item-6>a>span::before{content:\'Image Caption\'}.module-gallery-176 .module-item-7>a>span::before{content:\'Image Caption\'}.module-gallery-176 .module-item-8>a>span::before{content:\'Image Caption\'}.module-gallery-176 .module-item-9>a>span::before{content:\'Image Caption\'}.module-gallery-176 .module-item-10>a>span::before{content:\'Image Caption\'}.module-gallery-176 .module-item-11>a>span::before{content:\'Image Caption\'}.module-gallery-176 .module-item-12>a>span::before{content:\'Image Caption\'}.module-gallery-176 .module-item-13>a>span::before{content:\'Image Caption\'}.module-gallery-176 .module-item-14>a>span::before{content:\'Image Caption\'}.module-gallery-176 .module-item-15>a>span::before{content:\'Image Caption\'}.module-gallery-176 .module-item-16>a>span::before{content:\'Image Caption\'}.module-gallery-176 .module-item-17>a>span::before{content:\'Image Caption\'}',
+  'fonts' => 
+  array (
+  ),
+  'settings' => 
+  array (
+    'schedule' => 
+    array (
+      'from' => '',
+      'to' => '',
+      'between' => true,
+    ),
+    'title' => 'Gallery Module',
+    'carousel' => false,
+    'itemsPerRow' => 
+    array (
+      'c0' => 
+      array (
+        0 => 
+        array (
+          'items' => 8,
+          'spacing' => 0,
+        ),
+        '' => 
+        array (
+          'items' => 4,
+          'spacing' => 0,
+        ),
+      ),
+      'c1' => 
+      array (
+        0 => 
+        array (
+          'items' => 1,
+          'spacing' => 0,
+        ),
+      ),
+      'c2' => 
+      array (
+        0 => 
+        array (
+          'items' => 1,
+          'spacing' => 0,
+        ),
+      ),
+      'sc' => 
+      array (
+        0 => 
+        array (
+          'items' => 3,
+          'spacing' => 10,
+        ),
+      ),
+    ),
+    'source' => 'local',
+    'instagramPage' => '',
+    'thumbsLimit' => '9',
+    'thumbDimensions' => 
+    array (
+      'width' => 60,
+      'height' => 60,
+      'resize' => 'fill',
+    ),
+    'popupThumbDimensions' => 
+    array (
+      'width' => 80,
+      'height' => 80,
+      'resize' => 'fill',
+    ),
+    'moduleGalleryDownload' => true,
+    'moduleGalleryDownloadVisibility' => false,
+    'moduleGalleryFullScreen' => false,
+    'moduleGalleryMode' => 'lg-slide',
+    'button' => false,
+    'buttonText' => 'Open Gallery',
+    'status' => true,
+    'id' => 'gallery-62765a5a14e28',
+    'module_id' => 176,
+    'classes' => 
+    array (
+      0 => 'module',
+      1 => 'module-gallery',
+      2 => 'module-gallery-176',
+      'carousel-mode' => false,
+    ),
+    'images' => 
+    array (
+      0 => 
+      array (
+        'src' => 'http://localhost/image/cache/catalog/journal3/gallery/233H-2000x1333.jpg',
+        'thumb' => 'http://localhost/image/cache/catalog/journal3/gallery/233H-80x80h.jpg',
+        'html' => NULL,
+        'subHtml' => 'Image Caption',
+      ),
+      1 => 
+      array (
+        'src' => 'https://www.youtube.com/watch?v=Bey4XXJAqS8',
+        'thumb' => 'http://localhost/image/cache/catalog/journal3/misc/4k-80x80h.png',
+        'html' => NULL,
+        'subHtml' => 'Image Caption',
+      ),
+      2 => 
+      array (
+        'src' => 'http://localhost/image/cache/catalog/journal3/gallery/demo27-1606x1072.jpg',
+        'thumb' => 'http://localhost/image/cache/catalog/journal3/gallery/demo27-80x80h.jpg',
+        'html' => NULL,
+        'subHtml' => 'Image Caption',
+      ),
+      3 => 
+      array (
+        'src' => 'http://localhost/image/cache/catalog/journal3/gallery/beauty-1000x1503.jpg',
+        'thumb' => 'http://localhost/image/cache/catalog/journal3/gallery/beauty-80x80w.jpg',
+        'html' => NULL,
+        'subHtml' => 'Image Caption',
+      ),
+      4 => 
+      array (
+        'src' => 'http://localhost/image/cache/catalog/journal3/gallery/demo06-1500x737.jpg',
+        'thumb' => 'http://localhost/image/cache/catalog/journal3/gallery/demo06-80x80h.jpg',
+        'html' => NULL,
+        'subHtml' => 'Image Caption',
+      ),
+      5 => 
+      array (
+        'src' => 'http://localhost/image/cache/catalog/journal3/gallery/backdrop031-1500x1000.jpg',
+        'thumb' => 'http://localhost/image/cache/catalog/journal3/gallery/backdrop031-80x80h.jpg',
+        'html' => NULL,
+        'subHtml' => 'Image Caption',
+      ),
+      6 => 
+      array (
+        'src' => 'http://localhost/image/cache/placeholder-1000x1000.png',
+        'thumb' => 'http://localhost/image/cache/placeholder-80x80.png',
+        'html' => NULL,
+        'subHtml' => 'Image Caption',
+      ),
+      7 => 
+      array (
+        'src' => 'http://localhost/image/cache/catalog/journal3/gallery/backdrop036-2000x1420.jpg',
+        'thumb' => 'http://localhost/image/cache/catalog/journal3/gallery/backdrop036-80x80h.jpg',
+        'html' => NULL,
+        'subHtml' => 'Image Caption',
+      ),
+      8 => 
+      array (
+        'src' => 'http://localhost/image/cache/catalog/journal3/gallery/backdrop023-1607x1072.jpg',
+        'thumb' => 'http://localhost/image/cache/catalog/journal3/gallery/backdrop023-80x80h.jpg',
+        'html' => NULL,
+        'subHtml' => 'Image Caption',
+      ),
+      9 => 
+      array (
+        'src' => 'http://localhost/image/cache/catalog/journal3/gallery/backdrop008-1606x1072.jpg',
+        'thumb' => 'http://localhost/image/cache/catalog/journal3/gallery/backdrop008-80x80h.jpg',
+        'html' => NULL,
+        'subHtml' => 'Image Caption',
+      ),
+      10 => 
+      array (
+        'src' => 'http://localhost/image/cache/catalog/journal3/gallery/backdrop006b-2000x1333.jpg',
+        'thumb' => 'http://localhost/image/cache/catalog/journal3/gallery/backdrop006b-80x80h.jpg',
+        'html' => NULL,
+        'subHtml' => 'Image Caption',
+      ),
+      11 => 
+      array (
+        'src' => 'http://localhost/image/cache/catalog/journal3/gallery/backdrop020-1606x1072.jpg',
+        'thumb' => 'http://localhost/image/cache/catalog/journal3/gallery/backdrop020-80x80h.jpg',
+        'html' => NULL,
+        'subHtml' => 'Image Caption',
+      ),
+      12 => 
+      array (
+        'src' => 'http://localhost/image/cache/catalog/journal3/gallery/backdrop021-2000x1333.jpg',
+        'thumb' => 'http://localhost/image/cache/catalog/journal3/gallery/backdrop021-80x80h.jpg',
+        'html' => NULL,
+        'subHtml' => 'Image Caption',
+      ),
+      13 => 
+      array (
+        'src' => 'http://localhost/image/cache/catalog/journal3/gallery/backdrop038-1500x1000.jpg',
+        'thumb' => 'http://localhost/image/cache/catalog/journal3/gallery/backdrop038-80x80h.jpg',
+        'html' => NULL,
+        'subHtml' => 'Image Caption',
+      ),
+      14 => 
+      array (
+        'src' => 'http://localhost/image/cache/catalog/journal3/gallery/wing-1500x1000.jpg',
+        'thumb' => 'http://localhost/image/cache/catalog/journal3/gallery/wing-80x80h.jpg',
+        'html' => NULL,
+        'subHtml' => 'Image Caption',
+      ),
+      15 => 
+      array (
+        'src' => 'http://localhost/image/cache/catalog/journal3/gallery/demo19-1500x1001.jpg',
+        'thumb' => 'http://localhost/image/cache/catalog/journal3/gallery/demo19-80x80h.jpg',
+        'html' => NULL,
+        'subHtml' => 'Image Caption',
+      ),
+      16 => 
+      array (
+        'src' => 'http://localhost/image/cache/catalog/journal3/gallery/demo26-1606x1072.jpg',
+        'thumb' => 'http://localhost/image/cache/catalog/journal3/gallery/demo26-80x80h.jpg',
+        'html' => NULL,
+        'subHtml' => 'Image Caption',
+      ),
+    ),
+    'options' => 
+    array (
+      'thumbWidth' => 80,
+      'thumbContHeight' => 80,
+      'addClass' => 'lg-176',
+      'mode' => 'lg-slide',
+      'download' => true,
+      'fullScreen' => false,
+    ),
+    'carouselOptions' => 
+    array (
+      'speed' => 500,
+      'autoplay' => false,
+      'pauseOnHover' => true,
+      'loop' => false,
+    ),
+    'items' => 
+    array (
+      1 => 
+      array (
+        'title' => 'Image Caption',
+        'type' => 'image',
+        'videoType' => 'html5',
+        'link' => 
+        array (
+          'type' => '',
+          'id' => '',
+          'href' => '',
+          'name' => '',
+          'total' => NULL,
+          'attrs' => 
+          array (
+          ),
+          'classes' => 
+          array (
+          ),
+        ),
+        'id' => '176-1',
+        'classes' => 
+        array (
+          0 => 'module-item',
+          1 => 'module-item-1',
+          'swiper-slide' => false,
+        ),
+        'alt' => 'Image Caption',
+        'popup' => 'http://localhost/image/cache/catalog/journal3/gallery/233H-2000x1333.jpg',
+        'thumb' => 'http://localhost/image/cache/catalog/journal3/gallery/233H-60x60h.jpg',
+        'thumb2x' => 'http://localhost/image/cache/catalog/journal3/gallery/233H-120x120h.jpg',
+        'popupThumb' => 'http://localhost/image/cache/catalog/journal3/gallery/233H-80x80h.jpg',
+        'html' => NULL,
+        'items' => 
+        array (
+        ),
+      ),
+      2 => 
+      array (
+        'title' => 'Image Caption',
+        'type' => 'video',
+        'videoType' => 'youtube',
+        'link' => 
+        array (
+          'type' => '',
+          'id' => '',
+          'href' => '',
+          'name' => '',
+          'total' => NULL,
+          'attrs' => 
+          array (
+          ),
+          'classes' => 
+          array (
+          ),
+        ),
+        'id' => '176-2',
+        'classes' => 
+        array (
+          0 => 'module-item',
+          1 => 'module-item-2',
+          'swiper-slide' => false,
+        ),
+        'alt' => 'Image Caption',
+        'popup' => 'https://www.youtube.com/watch?v=Bey4XXJAqS8',
+        'thumb' => 'http://localhost/image/cache/catalog/journal3/misc/4k-60x60h.png',
+        'popupThumb' => 'http://localhost/image/cache/catalog/journal3/misc/4k-80x80h.png',
+        'html' => NULL,
+        'items' => 
+        array (
+        ),
+      ),
+      3 => 
+      array (
+        'title' => 'Image Caption',
+        'type' => 'image',
+        'videoType' => 'html5',
+        'link' => 
+        array (
+          'type' => 'category',
+          'id' => '107',
+          'href' => '',
+          'name' => '',
+          'total' => NULL,
+          'attrs' => 
+          array (
+          ),
+          'classes' => 
+          array (
+          ),
+        ),
+        'id' => '176-3',
+        'classes' => 
+        array (
+          0 => 'module-item',
+          1 => 'module-item-3',
+          'swiper-slide' => false,
+        ),
+        'alt' => 'Image Caption',
+        'popup' => 'http://localhost/image/cache/catalog/journal3/gallery/demo27-1606x1072.jpg',
+        'thumb' => 'http://localhost/image/cache/catalog/journal3/gallery/demo27-60x60h.jpg',
+        'thumb2x' => 'http://localhost/image/cache/catalog/journal3/gallery/demo27-120x120h.jpg',
+        'popupThumb' => 'http://localhost/image/cache/catalog/journal3/gallery/demo27-80x80h.jpg',
+        'html' => NULL,
+        'items' => 
+        array (
+        ),
+      ),
+      4 => 
+      array (
+        'title' => 'Image Caption',
+        'type' => 'image',
+        'videoType' => 'html5',
+        'link' => 
+        array (
+          'type' => '',
+          'id' => '',
+          'href' => '',
+          'name' => '',
+          'total' => NULL,
+          'attrs' => 
+          array (
+          ),
+          'classes' => 
+          array (
+          ),
+        ),
+        'id' => '176-4',
+        'classes' => 
+        array (
+          0 => 'module-item',
+          1 => 'module-item-4',
+          'swiper-slide' => false,
+        ),
+        'alt' => 'Image Caption',
+        'popup' => 'http://localhost/image/cache/catalog/journal3/gallery/beauty-1000x1503.jpg',
+        'thumb' => 'http://localhost/image/cache/catalog/journal3/gallery/beauty-60x60w.jpg',
+        'thumb2x' => 'http://localhost/image/cache/catalog/journal3/gallery/beauty-120x120w.jpg',
+        'popupThumb' => 'http://localhost/image/cache/catalog/journal3/gallery/beauty-80x80w.jpg',
+        'html' => NULL,
+        'items' => 
+        array (
+        ),
+      ),
+      5 => 
+      array (
+        'title' => 'Image Caption',
+        'type' => 'image',
+        'videoType' => 'html5',
+        'link' => 
+        array (
+          'type' => '',
+          'id' => '',
+          'href' => '',
+          'name' => '',
+          'total' => NULL,
+          'attrs' => 
+          array (
+          ),
+          'classes' => 
+          array (
+          ),
+        ),
+        'id' => '176-5',
+        'classes' => 
+        array (
+          0 => 'module-item',
+          1 => 'module-item-5',
+          'swiper-slide' => false,
+        ),
+        'alt' => 'Image Caption',
+        'popup' => 'http://localhost/image/cache/catalog/journal3/gallery/demo06-1500x737.jpg',
+        'thumb' => 'http://localhost/image/cache/catalog/journal3/gallery/demo06-60x60h.jpg',
+        'thumb2x' => 'http://localhost/image/cache/catalog/journal3/gallery/demo06-120x120h.jpg',
+        'popupThumb' => 'http://localhost/image/cache/catalog/journal3/gallery/demo06-80x80h.jpg',
+        'html' => NULL,
+        'items' => 
+        array (
+        ),
+      ),
+      6 => 
+      array (
+        'title' => 'Image Caption',
+        'type' => 'image',
+        'videoType' => 'html5',
+        'link' => 
+        array (
+          'type' => '',
+          'id' => '',
+          'href' => '',
+          'name' => '',
+          'total' => NULL,
+          'attrs' => 
+          array (
+          ),
+          'classes' => 
+          array (
+          ),
+        ),
+        'id' => '176-6',
+        'classes' => 
+        array (
+          0 => 'module-item',
+          1 => 'module-item-6',
+          'swiper-slide' => false,
+        ),
+        'alt' => 'Image Caption',
+        'popup' => 'http://localhost/image/cache/catalog/journal3/gallery/backdrop031-1500x1000.jpg',
+        'thumb' => 'http://localhost/image/cache/catalog/journal3/gallery/backdrop031-60x60h.jpg',
+        'thumb2x' => 'http://localhost/image/cache/catalog/journal3/gallery/backdrop031-120x120h.jpg',
+        'popupThumb' => 'http://localhost/image/cache/catalog/journal3/gallery/backdrop031-80x80h.jpg',
+        'html' => NULL,
+        'items' => 
+        array (
+        ),
+      ),
+      7 => 
+      array (
+        'title' => 'Image Caption',
+        'type' => 'image',
+        'videoType' => 'html5',
+        'link' => 
+        array (
+          'type' => 'page',
+          'id' => '',
+          'href' => 'http://localhost/index.php?route=product/special',
+          'name' => '',
+          'total' => NULL,
+          'attrs' => 
+          array (
+          ),
+          'classes' => 
+          array (
+          ),
+        ),
+        'id' => '176-7',
+        'classes' => 
+        array (
+          0 => 'module-item',
+          1 => 'module-item-7',
+          'swiper-slide' => false,
+        ),
+        'alt' => 'Image Caption',
+        'popup' => 'http://localhost/image/cache/placeholder-1000x1000.png',
+        'thumb' => 'http://localhost/image/cache/placeholder-60x60.png',
+        'thumb2x' => 'http://localhost/image/cache/placeholder-120x120.png',
+        'popupThumb' => 'http://localhost/image/cache/placeholder-80x80.png',
+        'html' => NULL,
+        'items' => 
+        array (
+        ),
+      ),
+      8 => 
+      array (
+        'title' => 'Image Caption',
+        'type' => 'image',
+        'videoType' => 'html5',
+        'link' => 
+        array (
+          'type' => '',
+          'id' => '',
+          'href' => '',
+          'name' => '',
+          'total' => NULL,
+          'attrs' => 
+          array (
+          ),
+          'classes' => 
+          array (
+          ),
+        ),
+        'id' => '176-8',
+        'classes' => 
+        array (
+          0 => 'module-item',
+          1 => 'module-item-8',
+          'swiper-slide' => false,
+        ),
+        'alt' => 'Image Caption',
+        'popup' => 'http://localhost/image/cache/catalog/journal3/gallery/backdrop036-2000x1420.jpg',
+        'thumb' => 'http://localhost/image/cache/catalog/journal3/gallery/backdrop036-60x60h.jpg',
+        'thumb2x' => 'http://localhost/image/cache/catalog/journal3/gallery/backdrop036-120x120h.jpg',
+        'popupThumb' => 'http://localhost/image/cache/catalog/journal3/gallery/backdrop036-80x80h.jpg',
+        'html' => NULL,
+        'items' => 
+        array (
+        ),
+      ),
+      9 => 
+      array (
+        'title' => 'Image Caption',
+        'type' => 'image',
+        'videoType' => 'html5',
+        'link' => 
+        array (
+          'type' => '',
+          'id' => '',
+          'href' => '',
+          'name' => '',
+          'total' => NULL,
+          'attrs' => 
+          array (
+          ),
+          'classes' => 
+          array (
+          ),
+        ),
+        'id' => '176-9',
+        'classes' => 
+        array (
+          0 => 'module-item',
+          1 => 'module-item-9',
+          'swiper-slide' => false,
+        ),
+        'alt' => 'Image Caption',
+        'popup' => 'http://localhost/image/cache/catalog/journal3/gallery/backdrop023-1607x1072.jpg',
+        'thumb' => 'http://localhost/image/cache/catalog/journal3/gallery/backdrop023-60x60h.jpg',
+        'thumb2x' => 'http://localhost/image/cache/catalog/journal3/gallery/backdrop023-120x120h.jpg',
+        'popupThumb' => 'http://localhost/image/cache/catalog/journal3/gallery/backdrop023-80x80h.jpg',
+        'html' => NULL,
+        'items' => 
+        array (
+        ),
+      ),
+      10 => 
+      array (
+        'title' => 'Image Caption',
+        'type' => 'image',
+        'videoType' => 'html5',
+        'link' => 
+        array (
+          'type' => '',
+          'id' => '',
+          'href' => '',
+          'name' => '',
+          'total' => NULL,
+          'attrs' => 
+          array (
+          ),
+          'classes' => 
+          array (
+          ),
+        ),
+        'id' => '176-10',
+        'classes' => 
+        array (
+          0 => 'module-item',
+          1 => 'module-item-10',
+          'swiper-slide' => false,
+        ),
+        'alt' => 'Image Caption',
+        'popup' => 'http://localhost/image/cache/catalog/journal3/gallery/backdrop008-1606x1072.jpg',
+        'thumb' => 'http://localhost/image/cache/catalog/journal3/gallery/backdrop008-60x60h.jpg',
+        'thumb2x' => 'http://localhost/image/cache/catalog/journal3/gallery/backdrop008-120x120h.jpg',
+        'popupThumb' => 'http://localhost/image/cache/catalog/journal3/gallery/backdrop008-80x80h.jpg',
+        'html' => NULL,
+        'items' => 
+        array (
+        ),
+      ),
+      11 => 
+      array (
+        'title' => 'Image Caption',
+        'type' => 'image',
+        'videoType' => 'html5',
+        'link' => 
+        array (
+          'type' => '',
+          'id' => '',
+          'href' => '',
+          'name' => '',
+          'total' => NULL,
+          'attrs' => 
+          array (
+          ),
+          'classes' => 
+          array (
+          ),
+        ),
+        'id' => '176-11',
+        'classes' => 
+        array (
+          0 => 'module-item',
+          1 => 'module-item-11',
+          'swiper-slide' => false,
+        ),
+        'alt' => 'Image Caption',
+        'popup' => 'http://localhost/image/cache/catalog/journal3/gallery/backdrop006b-2000x1333.jpg',
+        'thumb' => 'http://localhost/image/cache/catalog/journal3/gallery/backdrop006b-60x60h.jpg',
+        'thumb2x' => 'http://localhost/image/cache/catalog/journal3/gallery/backdrop006b-120x120h.jpg',
+        'popupThumb' => 'http://localhost/image/cache/catalog/journal3/gallery/backdrop006b-80x80h.jpg',
+        'html' => NULL,
+        'items' => 
+        array (
+        ),
+      ),
+      12 => 
+      array (
+        'title' => 'Image Caption',
+        'type' => 'image',
+        'videoType' => 'html5',
+        'link' => 
+        array (
+          'type' => '',
+          'id' => '',
+          'href' => '',
+          'name' => '',
+          'total' => NULL,
+          'attrs' => 
+          array (
+          ),
+          'classes' => 
+          array (
+          ),
+        ),
+        'id' => '176-12',
+        'classes' => 
+        array (
+          0 => 'module-item',
+          1 => 'module-item-12',
+          'swiper-slide' => false,
+        ),
+        'alt' => 'Image Caption',
+        'popup' => 'http://localhost/image/cache/catalog/journal3/gallery/backdrop020-1606x1072.jpg',
+        'thumb' => 'http://localhost/image/cache/catalog/journal3/gallery/backdrop020-60x60h.jpg',
+        'thumb2x' => 'http://localhost/image/cache/catalog/journal3/gallery/backdrop020-120x120h.jpg',
+        'popupThumb' => 'http://localhost/image/cache/catalog/journal3/gallery/backdrop020-80x80h.jpg',
+        'html' => NULL,
+        'items' => 
+        array (
+        ),
+      ),
+      13 => 
+      array (
+        'title' => 'Image Caption',
+        'type' => 'image',
+        'videoType' => 'html5',
+        'link' => 
+        array (
+          'type' => '',
+          'id' => '',
+          'href' => '',
+          'name' => '',
+          'total' => NULL,
+          'attrs' => 
+          array (
+          ),
+          'classes' => 
+          array (
+          ),
+        ),
+        'id' => '176-13',
+        'classes' => 
+        array (
+          0 => 'module-item',
+          1 => 'module-item-13',
+          'swiper-slide' => false,
+        ),
+        'alt' => 'Image Caption',
+        'popup' => 'http://localhost/image/cache/catalog/journal3/gallery/backdrop021-2000x1333.jpg',
+        'thumb' => 'http://localhost/image/cache/catalog/journal3/gallery/backdrop021-60x60h.jpg',
+        'thumb2x' => 'http://localhost/image/cache/catalog/journal3/gallery/backdrop021-120x120h.jpg',
+        'popupThumb' => 'http://localhost/image/cache/catalog/journal3/gallery/backdrop021-80x80h.jpg',
+        'html' => NULL,
+        'items' => 
+        array (
+        ),
+      ),
+      14 => 
+      array (
+        'title' => 'Image Caption',
+        'type' => 'image',
+        'videoType' => 'html5',
+        'link' => 
+        array (
+          'type' => '',
+          'id' => '',
+          'href' => '',
+          'name' => '',
+          'total' => NULL,
+          'attrs' => 
+          array (
+          ),
+          'classes' => 
+          array (
+          ),
+        ),
+        'id' => '176-14',
+        'classes' => 
+        array (
+          0 => 'module-item',
+          1 => 'module-item-14',
+          'swiper-slide' => false,
+        ),
+        'alt' => 'Image Caption',
+        'popup' => 'http://localhost/image/cache/catalog/journal3/gallery/backdrop038-1500x1000.jpg',
+        'thumb' => 'http://localhost/image/cache/catalog/journal3/gallery/backdrop038-60x60h.jpg',
+        'thumb2x' => 'http://localhost/image/cache/catalog/journal3/gallery/backdrop038-120x120h.jpg',
+        'popupThumb' => 'http://localhost/image/cache/catalog/journal3/gallery/backdrop038-80x80h.jpg',
+        'html' => NULL,
+        'items' => 
+        array (
+        ),
+      ),
+      15 => 
+      array (
+        'title' => 'Image Caption',
+        'type' => 'image',
+        'videoType' => 'html5',
+        'link' => 
+        array (
+          'type' => '',
+          'id' => '',
+          'href' => '',
+          'name' => '',
+          'total' => NULL,
+          'attrs' => 
+          array (
+          ),
+          'classes' => 
+          array (
+          ),
+        ),
+        'id' => '176-15',
+        'classes' => 
+        array (
+          0 => 'module-item',
+          1 => 'module-item-15',
+          'swiper-slide' => false,
+        ),
+        'alt' => 'Image Caption',
+        'popup' => 'http://localhost/image/cache/catalog/journal3/gallery/wing-1500x1000.jpg',
+        'thumb' => 'http://localhost/image/cache/catalog/journal3/gallery/wing-60x60h.jpg',
+        'thumb2x' => 'http://localhost/image/cache/catalog/journal3/gallery/wing-120x120h.jpg',
+        'popupThumb' => 'http://localhost/image/cache/catalog/journal3/gallery/wing-80x80h.jpg',
+        'html' => NULL,
+        'items' => 
+        array (
+        ),
+      ),
+      16 => 
+      array (
+        'title' => 'Image Caption',
+        'type' => 'image',
+        'videoType' => 'html5',
+        'link' => 
+        array (
+          'type' => '',
+          'id' => '',
+          'href' => '',
+          'name' => '',
+          'total' => NULL,
+          'attrs' => 
+          array (
+          ),
+          'classes' => 
+          array (
+          ),
+        ),
+        'id' => '176-16',
+        'classes' => 
+        array (
+          0 => 'module-item',
+          1 => 'module-item-16',
+          'swiper-slide' => false,
+        ),
+        'alt' => 'Image Caption',
+        'popup' => 'http://localhost/image/cache/catalog/journal3/gallery/demo19-1500x1001.jpg',
+        'thumb' => 'http://localhost/image/cache/catalog/journal3/gallery/demo19-60x60h.jpg',
+        'thumb2x' => 'http://localhost/image/cache/catalog/journal3/gallery/demo19-120x120h.jpg',
+        'popupThumb' => 'http://localhost/image/cache/catalog/journal3/gallery/demo19-80x80h.jpg',
+        'html' => NULL,
+        'items' => 
+        array (
+        ),
+      ),
+      17 => 
+      array (
+        'title' => 'Image Caption',
+        'type' => 'image',
+        'videoType' => 'html5',
+        'link' => 
+        array (
+          'type' => '',
+          'id' => '',
+          'href' => '',
+          'name' => '',
+          'total' => NULL,
+          'attrs' => 
+          array (
+          ),
+          'classes' => 
+          array (
+          ),
+        ),
+        'id' => '176-17',
+        'classes' => 
+        array (
+          0 => 'module-item',
+          1 => 'module-item-17',
+          'swiper-slide' => false,
+        ),
+        'alt' => 'Image Caption',
+        'popup' => 'http://localhost/image/cache/catalog/journal3/gallery/demo26-1606x1072.jpg',
+        'thumb' => 'http://localhost/image/cache/catalog/journal3/gallery/demo26-60x60h.jpg',
+        'thumb2x' => 'http://localhost/image/cache/catalog/journal3/gallery/demo26-120x120h.jpg',
+        'popupThumb' => 'http://localhost/image/cache/catalog/journal3/gallery/demo26-80x80h.jpg',
+        'html' => NULL,
+        'items' => 
+        array (
+        ),
+      ),
+    ),
+  ),
+);

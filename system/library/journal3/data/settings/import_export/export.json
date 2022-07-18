@@ -1,0 +1,43 @@
+{
+  "variable": {
+    "type": "Toggle"
+  },
+  "skin": {
+    "type": "Toggle"
+  },
+  "style": {
+    "type": "Toggle"
+  },
+  "module": {
+    "type": "Toggle"
+  },
+  "layout": {
+    "type": "Toggle"
+  },
+  "setting": {
+    "type": "Toggle",
+    "value": "false"
+  },
+  "blog": {
+    "type": "Toggle",
+    "value": "false"
+  },
+  "newsletter": {
+    "type": "Toggle",
+    "value": "false"
+  },
+  "message": {
+    "type": "Toggle",
+    "value": "false"
+  },
+  "catalog": {
+    "type": "Toggle",
+    "value": "false"
+  },
+  "tf_user": {
+    "type": "Input"
+  },
+  "tf_pc": {
+    "type": "Input"
+  }
+}

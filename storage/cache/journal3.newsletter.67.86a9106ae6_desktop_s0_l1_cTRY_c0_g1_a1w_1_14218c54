@@ -1,0 +1,69 @@
+<?php $val = array (
+  'css' => '.module-newsletter-67 .title.module-title{font-size:20px;font-size:11px}.module-newsletter-67{text-align:left;justify-content:flex-start}.module-newsletter-67 .module-body>div{align-self:flex-start}.module-newsletter-67 .title::after{left:0;right:auto;transform:none}.module-newsletter-67 .module-body{flex-direction:column}.module-newsletter-67 .newsletter-text{font-size:10px;color:rgba(105, 105, 115, 1);margin-bottom:10px}.module-newsletter-67 .module-body .input-group{height:40px}.module-newsletter-67 .module-body .newsletter-form .input-group
+input{width:375px;max-width:100%}.module-newsletter-67 .module-body .form-control{background:rgba(255, 255, 255, 1) !important;border-width:1px !important;border-style:solid !important;border-color:rgba(226, 226, 226, 1) !important;border-radius:3px !important}.module-newsletter-67 .module-body .form-control:focus, .module-newsletter-67 .module-body .form-control:active{border-color:rgba(87, 154, 193, 1) !important}.module-newsletter-67 .module-body .form-control:hover{box-shadow:0 5px 35px -5px rgba(0, 0, 0, 0.07)}.module-newsletter-67 .module-body .form-control:focus{box-shadow:inset 0 0 5px rgba(0, 0, 0, 0.1)}.module-newsletter-67 .btn::before{content:\'\\eb79\' !important;font-family:icomoon !important;margin-right:5px}.module-newsletter-67 .input-group .input-group-btn .btn, .module-newsletter-67 .input-group .input-group-btn .btn:visited{font-family:\'Headland One\';font-weight:400;font-size:11px;text-transform:none;letter-spacing:0}.module-newsletter-67 .input-group .input-group-btn
+.btn{padding:2px;padding-right:7px;padding-left:7px;min-width:20px;min-height:20px;min-height:30px;height:30px}.desktop .module-newsletter-67 .input-group .input-group-btn .btn:hover{box-shadow:0 5px 30px -5px rgba(0, 0, 0, 0.25)}.module-newsletter-67 .input-group .input-group-btn .btn:active, .module-newsletter-67 .input-group .input-group-btn .btn:hover:active, .module-newsletter-67 .input-group .input-group-btn .btn:focus:active{box-shadow:inset 0 0 20px rgba(0, 0, 0, 0.25)}.module-newsletter-67 .input-group .input-group-btn .btn:focus{box-shadow:inset 0 0 20px rgba(0, 0, 0, 0.25)}.module-newsletter-67 .input-group .input-group-btn .btn.btn.disabled::after{font-size:20px}.module-newsletter-67 .input-group-btn
+.btn{transform:translateX(-5px);margin-top:5px}.module-newsletter-67 .checkbox
+label{font-size:10px;color:rgba(139, 145, 152, 1)}.module-newsletter-67 .checkbox label
+a{font-size:10px}.module-newsletter-67 .module-body .newsletter-form
+.checkbox{padding-top:10px}@media (max-width: 760px){.module-newsletter-67 .title.module-title::after{display:none}}',
+  'fonts' => 
+  array (
+    'fonts' => 
+    array (
+      'Headland One' => 
+      array (
+        400 => '400',
+      ),
+    ),
+    'subsets' => 
+    array (
+      'latin-ext' => 'latin-ext',
+    ),
+  ),
+  'settings' => 
+  array (
+    'schedule' => 
+    array (
+      'from' => '',
+      'to' => '',
+      'between' => true,
+    ),
+    'title' => '',
+    'text' => 'Bültenimize kaydolarak haberler ve promosyonlardan haberdar olun.',
+    'placeholder' => 'Mail adresiniz',
+    'buttonType' => 'both',
+    'buttonText' => 'Gönder',
+    'tooltipStatus' => true,
+    'tooltipText' => 'Subscribe',
+    'tooltipPosition' => 'top',
+    'subscribedMessage' => 'You have been subscribed to our newsletter.',
+    'subscribedEmail' => true,
+    'subscribedEmailMessage' => 'Thank you for subscribing to our newsletter.',
+    'unsubscribeMessage' => 'You are already subscribed. Do you want to unsubscribe?',
+    'unsubscribedMessage' => 'You have been unsubscribed from our newsletter.',
+    'unsubscribedEmail' => true,
+    'unsubscribedEmailMessage' => 'We\'re sorry to see you go.',
+    'emailLogo' => false,
+    'adminAlerts' => true,
+    'agree' => '3',
+    'captcha' => false,
+    'status' => true,
+    'id' => 'newsletter-6276577db491d',
+    'module_id' => 67,
+    'classes' => 
+    array (
+      0 => 'module',
+      1 => 'module-newsletter',
+      2 => 'module-newsletter-67',
+    ),
+    'action' => 'http://localhost/index.php?route=journal3/newsletter/newsletter&amp;module_id=67',
+    'agree_data' => 
+    array (
+      'text' => '<a href="http://localhost/index.php?route=information/information/agree&amp;information_id=3" class="agree"><b>Güvenlik Koşulları</b></a>\'ni okudum ve kabul ediyorum.',
+      'error' => 'Uyarı: Güvenlik Koşulları kabul etmelisiniz!',
+    ),
+    'items' => 
+    array (
+    ),
+  ),
+);

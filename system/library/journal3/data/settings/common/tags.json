@@ -1,0 +1,110 @@
+{
+  "TagsBackground": {
+    "type": "Background",
+    "selector": ".tags"
+  },
+  "TagsMargin": {
+    "type": "Margin",
+    "selector": ".tags"
+  },
+  "TagsPadding": {
+    "type": "Padding",
+    "selector": ".tags"
+  },
+  "TagsAlign": {
+    "type": "Radio",
+    "value": "left",
+    "rules": {
+      "left": {
+        ".tags": "justify-content:flex-start"
+      },
+      "center": {
+        ".tags": "justify-content:center"
+      },
+      "right": {
+        ".tags": "justify-content:flex-end"
+      }
+    }
+  },
+  "TagMargin": {
+    "type": "Margin",
+    "selector": ".tags a, .tags-title"
+  },
+  "TagsFont": {
+    "type": "Font",
+    "selector": ".tags"
+  },
+  "CommaVisibility": {
+    "type": "Toggle",
+    "value": "false",
+    "rules": {
+      "true": {
+        ".tags b": "display: inline"
+      },
+      "false": {
+        ".tags b": "display: none"
+      }
+    }
+  },
+  "CommaFont": {
+    "type": "Font",
+    "selector": ".tags b"
+  },
+  "TagsTitleBackground": {
+    "type": "Background",
+    "selector": ".tags-title"
+  },
+  "TagBorder": {
+    "type": "Border",
+    "selector": ".tags a"
+  },
+  "TagBorderHover": {
+    "type": "Color",
+    "selector": ".tags a",
+    "property": "border-color"
+  },
+  "TagBorderRadius": {
+    "type": "BorderRadius",
+    "selector": ".tags a"
+  },
+  "TagPadding": {
+    "type": "Padding",
+    "selector": ".tags a"
+  },
+  "TagFont": {
+    "type": "Font",
+    "selector": ".tags a"
+  },
+  "TagFontHover": {
+    "type": "Font",
+    "selector": ".tags a:hover"
+  },
+  "TagFontActive": {
+    "type": "Font",
+    "selector": ".tags a:active"
+  },
+  "TagBG": {
+    "type": "Background",
+    "selector": ".tags a"
+  },
+  "TagBGHover": {
+    "type": "Background",
+    "selector": ".tags a:hover"
+  },
+  "TagBGActive": {
+    "type": "Background",
+    "selector": ".tags a:active"
+  },
+  "TagShadow": {
+    "type": "Shadow",
+    "selector": ".tags a"
+  },
+  "TagShadowHover": {
+    "type": "Shadow",
+    "selector": ".tags a:hover"
+  },
+  "TagShadowActive": {
+    "type": "Shadow",
+    "selector": ".tags a:active"
+  }
+}

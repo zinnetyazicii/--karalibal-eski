@@ -1,0 +1,9 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "DROPDOWN"
+  },
+  "value": {
+    "include": "dropdown"
+  }
+}

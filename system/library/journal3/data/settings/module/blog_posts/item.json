@@ -1,0 +1,17 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "New Section"
+  },
+  "status": {
+    "type": "Status"
+  },
+  "title": {
+    "type": "InputLang",
+    "php": true
+  },
+  "filter": {
+    "type": "PostFilter",
+    "php": true
+  }
+}

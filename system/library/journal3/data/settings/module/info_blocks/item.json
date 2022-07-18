@@ -1,0 +1,60 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "New Info Block"
+  },
+  "status": {
+    "type": "Status"
+  },
+  "title": {
+    "type": "InputLang",
+    "php": true
+  },
+  "link": {
+    "type": "Link",
+    "php": true
+  },
+  "type": {
+    "type": "Radio",
+    "value": "icon",
+    "php": true
+  },
+  "imageOffset": {
+    "type": "InputPair",
+    "selector": ".module-info_blocks-%s .module-item-%s .info-block-img",
+    "properties": {
+      "first": "left:%spx",
+      "second": "top:%spx"
+    },
+    "rtlProperties": {
+      "first": "right:%spx",
+      "second": "top:%spx"
+    }
+  },
+  "icon": {
+    "type": "Icon",
+    "selector": ".module-info_blocks-%s .module-item-%s .info-block::before"
+  },
+  "iconHover": {
+    "type": "Color",
+    "selector": ".module-info_blocks-%s .module-item-%s:hover .info-block::before",
+    "property": "color"
+  },
+  "image": {
+    "type": "ImageLang"
+  },
+  "content": {
+    "type": "InputLang",
+    "php": true
+  },
+  "button": {
+    "type": "Toggle",
+    "value": "false",
+    "php": true
+  },
+  "style": {
+    "type": "Variable",
+    "variable": "info_block",
+    "selector_prefix": ".module-info_blocks-%s .module-item-%s"
+  }
+}

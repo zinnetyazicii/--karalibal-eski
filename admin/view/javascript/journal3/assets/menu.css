@@ -1,0 +1,26 @@
+#menu #journal3-theme .journal3-icon {
+    display: block;
+    width: 18px;
+    height: 18px;
+    background: url(j3.svg) no-repeat;
+    background-size: 12px 17px;
+    float: left;
+    position: relative;
+    left: 2px;
+    top: 1px;
+    margin-right: 8px;
+}
+
+#menu #journal3-theme.active .journal3-icon {
+    background: url(j3-blue.svg) no-repeat;
+    background-size: 12px 17px;
+}
+
+#menu #journal3-theme > a{
+    min-height: 40px;
+}
+
+#menu #journal3-theme .journal3-icon::before {
+    display: none;
+}
+

@@ -1,0 +1,29 @@
+{
+  "name": {
+    "type": "InputLang",
+    "value": "New Blog Category"
+  },
+  "keyword": {
+    "type": "InputLang",
+    "php": true
+  },
+  "description": {
+    "type": "EditorLang",
+    "php": true
+  },
+  "status": {
+    "type": "Toggle"
+  },
+  "sort_order": {
+    "type": "Input"
+  },
+  "meta_title": {
+    "type": "InputLang"
+  },
+  "meta_keywords": {
+    "type": "InputLang"
+  },
+  "meta_description": {
+    "type": "InputLang"
+  }
+}

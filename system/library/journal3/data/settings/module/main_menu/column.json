@@ -1,0 +1,74 @@
+{
+  "status": {
+    "type": "Status"
+  },
+  "width": {
+    "type": "Select",
+    "value": "100",
+    "selector": ".main-menu-%s .main-menu-item-%s.mega-menu .grid-row-%s .grid-col-%s",
+    "property": "width: %s%"
+  },
+  "background": {
+    "type": "Background",
+    "selector": ".main-menu-%s .main-menu-item-%s.mega-menu .grid-row-%s .grid-col-%s"
+  },
+  "border": {
+    "type": "Border",
+    "selector": ".main-menu-%s .main-menu-item-%s.mega-menu .grid-row-%s .grid-col-%s"
+  },
+  "padding": {
+    "type": "Padding",
+    "selector": ".main-menu-%s .main-menu-item-%s.mega-menu .grid-row-%s .grid-col-%s"
+  },
+  "autoHeight": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".main-menu-%s .main-menu-item-%s.mega-menu .grid-row-%s .grid-col-%s .grid-item": "height: auto"
+      },
+      "false": {
+        ".main-menu-%s .main-menu-item-%s.mega-menu .grid-row-%s .grid-col-%s .grid-item": "height: 100%"
+      }
+    }
+  },
+  "alignH": {
+    "type": "Radio",
+    "value": "",
+    "rules": {
+      "start": {
+        ".main-menu-%s .main-menu-item-%s.mega-menu .grid-row-%s .grid-col-%s .grid-item": "display:flex; justify-content:flex-start"
+      },
+      "center": {
+        ".main-menu-%s .main-menu-item-%s.mega-menu .grid-row-%s .grid-col-%s .grid-item": "display:flex; justify-content:center"
+      },
+      "end": {
+        ".main-menu-%s .main-menu-item-%s.mega-menu .grid-row-%s .grid-col-%s .grid-item": "display:flex; justify-content:flex-end"
+      }
+    }
+  },
+
+  "align": {
+    "type": "Radio",
+    "value": "top",
+    "rules": {
+      "top": {
+        ".main-menu-%s .main-menu-item-%s.mega-menu .grid-row-%s .grid-col-%s .grid-items": "justify-content: flex-start"
+      },
+      "middle": {
+        ".main-menu-%s .main-menu-item-%s.mega-menu .grid-row-%s .grid-col-%s .grid-items": "justify-content: center"
+      },
+      "bottom": {
+        ".main-menu-%s .main-menu-item-%s.mega-menu .grid-row-%s .grid-col-%s .grid-items": "justify-content: flex-end"
+      }
+    }
+  },
+
+  "margin": {
+    "type": "InputNumber",
+    "rules":{
+      "@":{
+        ".main-menu-%s .main-menu-item-%s.mega-menu .grid-row-%s .grid-col-%s": "margin-bottom:%spx"
+      }
+    }
+  }
+}

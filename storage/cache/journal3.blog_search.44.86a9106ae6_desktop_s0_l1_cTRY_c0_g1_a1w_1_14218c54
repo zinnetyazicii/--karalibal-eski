@@ -1,0 +1,31 @@
+<?php $val = array (
+  'css' => '.module-blog_search-44 .search-btn{padding:10px;transform:translate(-3px, -50%);height:calc(100% - 6px)}',
+  'fonts' => 
+  array (
+  ),
+  'settings' => 
+  array (
+    'schedule' => 
+    array (
+      'from' => '',
+      'to' => '',
+      'between' => true,
+    ),
+    'title' => '',
+    'placeholder' => 'Blog Arama',
+    'status' => true,
+    'id' => 'blog_search-62765a544dfab',
+    'module_id' => 44,
+    'classes' => 
+    array (
+      0 => 'module',
+      1 => 'module-blog_search',
+      2 => 'module-blog_search-44',
+    ),
+    'search' => NULL,
+    'url' => 'http://localhost/index.php?route=journal3/blog&amp;journal_blog_search=',
+    'items' => 
+    array (
+    ),
+  ),
+);

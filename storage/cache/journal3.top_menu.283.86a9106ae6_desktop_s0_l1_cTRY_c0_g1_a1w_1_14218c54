@@ -1,0 +1,212 @@
+<?php $val = array (
+  'css' => '.top-menu-283 .j-menu li.top-menu-item-1>a::before{content:\'\\f082\' !important;font-family:icomoon !important}.top-menu-283>ul>.top-menu-item-1>a{text-align:center}.top-menu-283>ul>.top-menu-item-1>a>.links-text{display:none}.top-menu-283 > ul > .top-menu-item-1 > a .count-badge{position:absolute;top:auto;right:auto}.top-menu-283 .j-menu li.top-menu-item-2>a::before{content:\'\\f099\' !important;font-family:icomoon !important}.top-menu-283>ul>.top-menu-item-2>a{text-align:center}.top-menu-283>ul>.top-menu-item-2>a>.links-text{display:none}.top-menu-283 > ul > .top-menu-item-2 > a .count-badge{position:absolute;top:auto;right:auto}.top-menu-283 .j-menu li.top-menu-item-3>a::before{content:\'\\eb6d\' !important;font-family:icomoon !important}.top-menu-283>ul>.top-menu-item-3>a{text-align:center}.top-menu-283>ul>.top-menu-item-3>a>.links-text{display:none}.top-menu-283 > ul > .top-menu-item-3 > a .count-badge{position:absolute;top:auto;right:auto}.top-menu-283 .j-menu li.top-menu-item-4>a::before{content:\'\\f0d3\' !important;font-family:icomoon !important}.top-menu-283>ul>.top-menu-item-4>a{text-align:center}.top-menu-283>ul>.top-menu-item-4>a>.links-text{display:none}.top-menu-283 > ul > .top-menu-item-4 > a .count-badge{position:absolute;top:auto;right:auto}.top-menu-283 .j-menu li.top-menu-item-5>a::before{content:\'\\f0d4\' !important;font-family:icomoon !important}.top-menu-283>ul>.top-menu-item-5>a{text-align:center}.top-menu-283>ul>.top-menu-item-5>a>.links-text{display:none}.top-menu-283 > ul > .top-menu-item-5 > a .count-badge{position:absolute;top:auto;right:auto}.top-menu-283 .j-menu li.top-menu-item-6>a::before{content:\'\\f16a\' !important;font-family:icomoon !important}.top-menu-283>ul>.top-menu-item-6>a{text-align:center}.top-menu-283>ul>.top-menu-item-6>a>.links-text{display:none}.top-menu-283 > ul > .top-menu-item-6 > a .count-badge{position:absolute;top:auto;right:auto}',
+  'fonts' => 
+  array (
+  ),
+  'settings' => 
+  array (
+    'scheduledStatus' => 
+    array (
+      'from' => '',
+      'to' => '',
+      'between' => true,
+    ),
+    'status' => true,
+    'id' => 'top-menu-6276577d9fae4',
+    'module_id' => 283,
+    'classes' => 
+    array (
+      0 => 'top-menu',
+      1 => 'top-menu-283',
+    ),
+    'items' => 
+    array (
+      1 => 
+      array (
+        'title' => '',
+        'link' => 
+        array (
+          'type' => 'custom',
+          'id' => '',
+          'href' => '#',
+          'name' => '',
+          'total' => NULL,
+          'attrs' => 
+          array (
+          ),
+          'classes' => 
+          array (
+          ),
+        ),
+        'classes' => 
+        array (
+          0 => 'menu-item',
+          1 => 'top-menu-item',
+          2 => 'top-menu-item-1',
+          'multi-level' => false,
+          'dropdown' => false,
+          'drop-menu' => false,
+          'icon-only' => true,
+        ),
+        'items' => 
+        array (
+        ),
+      ),
+      2 => 
+      array (
+        'title' => '',
+        'link' => 
+        array (
+          'type' => 'custom',
+          'id' => '4',
+          'href' => '#',
+          'name' => '',
+          'total' => NULL,
+          'attrs' => 
+          array (
+          ),
+          'classes' => 
+          array (
+          ),
+        ),
+        'classes' => 
+        array (
+          0 => 'menu-item',
+          1 => 'top-menu-item',
+          2 => 'top-menu-item-2',
+          'multi-level' => false,
+          'dropdown' => false,
+          'drop-menu' => false,
+          'icon-only' => true,
+        ),
+        'items' => 
+        array (
+        ),
+      ),
+      3 => 
+      array (
+        'title' => '',
+        'link' => 
+        array (
+          'type' => 'custom',
+          'id' => '',
+          'href' => '#',
+          'name' => '',
+          'total' => NULL,
+          'attrs' => 
+          array (
+          ),
+          'classes' => 
+          array (
+          ),
+        ),
+        'classes' => 
+        array (
+          0 => 'menu-item',
+          1 => 'top-menu-item',
+          2 => 'top-menu-item-3',
+          'multi-level' => false,
+          'dropdown' => false,
+          'drop-menu' => false,
+          'icon-only' => true,
+        ),
+        'items' => 
+        array (
+        ),
+      ),
+      4 => 
+      array (
+        'title' => '',
+        'link' => 
+        array (
+          'type' => 'custom',
+          'id' => '7',
+          'href' => '#',
+          'name' => '',
+          'total' => NULL,
+          'attrs' => 
+          array (
+          ),
+          'classes' => 
+          array (
+          ),
+        ),
+        'classes' => 
+        array (
+          0 => 'menu-item',
+          1 => 'top-menu-item',
+          2 => 'top-menu-item-4',
+          'multi-level' => false,
+          'dropdown' => false,
+          'drop-menu' => false,
+          'icon-only' => true,
+        ),
+        'items' => 
+        array (
+        ),
+      ),
+      5 => 
+      array (
+        'title' => 'Google',
+        'link' => 
+        array (
+          'type' => 'custom',
+          'id' => '7',
+          'href' => '#',
+          'name' => '',
+          'total' => NULL,
+          'attrs' => 
+          array (
+          ),
+          'classes' => 
+          array (
+          ),
+        ),
+        'classes' => 
+        array (
+          0 => 'menu-item',
+          1 => 'top-menu-item',
+          2 => 'top-menu-item-5',
+          'multi-level' => false,
+          'dropdown' => false,
+          'drop-menu' => false,
+          'icon-only' => true,
+        ),
+        'items' => 
+        array (
+        ),
+      ),
+      6 => 
+      array (
+        'title' => 'Youtube',
+        'link' => 
+        array (
+          'type' => 'custom',
+          'id' => '7',
+          'href' => '#',
+          'name' => '',
+          'total' => NULL,
+          'attrs' => 
+          array (
+          ),
+          'classes' => 
+          array (
+          ),
+        ),
+        'classes' => 
+        array (
+          0 => 'menu-item',
+          1 => 'top-menu-item',
+          2 => 'top-menu-item-6',
+          'multi-level' => false,
+          'dropdown' => false,
+          'drop-menu' => false,
+          'icon-only' => true,
+        ),
+        'items' => 
+        array (
+        ),
+      ),
+    ),
+  ),
+);

@@ -1,0 +1,781 @@
+{
+  "slide_transitions": {
+    "Fade": "fade",
+    "Fade Cross": "crossfade",
+    "Fade Through Black": "fadethroughdark",
+    "Fade Through Light": "fadethroughlight",
+    "Fade Through Transparent": "fadethroughtransparent",
+    "Slide To Top": "slideup",
+    "Slide To Bottom": "slidedown",
+    "Slide To Right": "slideright",
+    "Slide To Left": "slideleft",
+    "Slide Horizontal (Next/Previous)": "slidehorizontal",
+    "Slide Vertical (Next/Previous)": "slidevertical",
+    "Slide Over To Top": "slideoverup",
+    "Slide Over To Bottom": "slideoverdown",
+    "Slide Over To Riight": "slideoverright",
+    "Slide Over To Left": "slideoverleft",
+    "Slide Over Horizontal (Next/Previous)": "slideoverhorizontal",
+    "Slide Over Vertical (Next/Previous)": "slideoververtical",
+    "Slide Remove To Top": "slideremoveup",
+    "Slide Remove To Bottom": "slideremovedown",
+    "Slide Remove To Right": "slideremoveright",
+    "Slide Remove To Left": "slideremoveleft",
+    "Slide Remove Horizontal (Next/Previous)": "slideremovehorizontal",
+    "Slide Remove Vertical (Next/Previous)": "slideremovevertical",
+    "Slide Overlays To Top": "slidingoverlayup",
+    "Slide Overlays To Bottom": "slidingoverlaydown",
+    "Slide Overlays To Right": "slidingoverlayright",
+    "Slide Overlays To Left": "slidingoverlayleft",
+    "Sliding Overlays Horizontal (Next/Previous)": "slidingoverlayhorizontal",
+    "Sliding Overlays Vertical (Next/Previous)": "slidingoverlayvertical",
+    "Slide Boxes": "boxslide",
+    "Slide Slots Horizontal": "slotslide-horizontal",
+    "Slide Slots Vertical": "slotslide-vertical",
+    "Fade Boxes": "boxfade",
+    "Fade Slots Horizontal": "slotfade-horizontal",
+    "Fade Slots Veritcal": "slotfade-vertical",
+    "Fade and Slide from Right": "fadefromright",
+    "Fade and Slide from Left": "fadefromleft",
+    "Fade and Slide from Top": "fadefromtop",
+    "Fade and Slide from Bottom": "fadefrombottom",
+    "To Left From Right": "fadetoleftfadefromright",
+    "To Right From Left": "fadetorightfadefromleft",
+    "To Top From Bottom": "fadetotopfadefrombottom",
+    "To Bottom From Top": "fadetobottomfadefromtop",
+    "Parallax to Right": "parallaxtoright",
+    "Parallax to Left": "parallaxtoleft",
+    "Parallax to Top": "parallaxtotop",
+    "Parallax to Bottom": "parallaxtobottom",
+    "Parallax Horizontal": "parallaxhorizontal",
+    "Parallax Vertical": "parallaxvertical",
+    "Zoom Out and Fade from Right": "scaledownfromright",
+    "Zoom Out and Fade From Left": "scaledownfromleft",
+    "Zoom Out and Fade From Top": "scaledownfromtop",
+    "Zoom Out and Fade From Bottom": "scaledownfrombottom",
+    "Zoom Out": "zoomout",
+    "Zoom In": "zoomin",
+    "Zoom Slots Horizontal": "slotzoom-horizontal",
+    "Zoom Slots Vertical": "slotzoom-vertical",
+    "Curtain from Left": "curtain-1",
+    "Curtain from Right": "curtain-2",
+    "Curtain from Middle": "curtain-3",
+    "3D Curtain Horizontal": "3dcurtain-horizontal",
+    "3D Curtain Vertical": "3dcurtain-vertical",
+    "Cube Vertical": "cube",
+    "Cube Horizontal": "cube-horizontal",
+    "In Cube Vertical": "incube",
+    "In Cube Horizontal": "incube-horizontal",
+    "TurnOff Horizontal": "turnoff",
+    "TurnOff Vertical": "turnoff-vertical",
+    "Paper Cut": "papercut",
+    "Fly In": "flyin",
+    "Random Flat": "random-static",
+    "Random Premium": "random-premium",
+    "Random Flat and Premium": "random"
+  },
+  "layer_transitions": {
+    "Fade In": [
+      {
+        "from": "opacity:0;",
+        "speed": 300,
+        "to": "o:1;",
+        "delay": 500,
+        "ease": "Power2.easeOut",
+        "framename": "frame_0"
+      },
+      {
+        "delay": "wait",
+        "speed": 300,
+        "to": "auto:auto;",
+        "ease": "nothing",
+        "framename": "frame_999"
+      }
+    ],
+    "Short From Top": [
+      {
+        "from": "y:-50px;opacity:0;",
+        "speed": 300,
+        "to": "o:1;",
+        "delay": 500,
+        "ease": "Power2.easeOut"
+      },
+      {
+        "delay": "wait",
+        "speed": 300,
+        "to": "auto:auto;",
+        "ease": "nothing"
+      }
+    ],
+    "Short From Bottom": [
+      {
+        "from": "y:50px;opacity:0;",
+        "speed": 300,
+        "to": "o:1;",
+        "delay": 500,
+        "ease": "Power2.easeOut"
+      },
+      {
+        "delay": "wait",
+        "speed": 300,
+        "to": "auto:auto;",
+        "ease": "nothing"
+      }
+    ],
+    "Short From Left": [
+      {
+        "from": "x:-50px;opacity:0;",
+        "speed": 300,
+        "to": "o:1;",
+        "delay": 500,
+        "ease": "Power2.easeOut"
+      },
+      {
+        "delay": "wait",
+        "speed": 300,
+        "to": "auto:auto;",
+        "ease": "nothing"
+      }
+    ],
+    "Short From Right": [
+      {
+        "from": "x:50px;opacity:0;",
+        "speed": 300,
+        "to": "o:1;",
+        "delay": 500,
+        "ease": "Power2.easeOut"
+      },
+      {
+        "delay": "wait",
+        "speed": 300,
+        "to": "auto:auto;",
+        "ease": "nothing"
+      }
+    ],
+    "Long From Right": [
+      {
+        "from": "x:right;",
+        "speed": 300,
+        "to": "o:1;",
+        "delay": 500,
+        "ease": "Power2.easeOut"
+      },
+      {
+        "delay": "wait",
+        "speed": 300,
+        "to": "auto:auto;",
+        "ease": "nothing"
+      }
+    ],
+    "Long From Left": [
+      {
+        "from": "x:left;",
+        "speed": 300,
+        "to": "o:1;",
+        "delay": 500,
+        "ease": "Power2.easeOut"
+      },
+      {
+        "delay": "wait",
+        "speed": 300,
+        "to": "auto:auto;",
+        "ease": "nothing"
+      }
+    ],
+    "Long From Top": [
+      {
+        "from": "y:top;",
+        "speed": 300,
+        "to": "o:1;",
+        "delay": 500,
+        "ease": "Power2.easeOut"
+      },
+      {
+        "delay": "wait",
+        "speed": 300,
+        "to": "auto:auto;",
+        "ease": "nothing"
+      }
+    ],
+    "Long From Bottom": [
+      {
+        "from": "y:bottom;",
+        "speed": 300,
+        "to": "o:1;",
+        "delay": 500,
+        "ease": "Power2.easeOut"
+      },
+      {
+        "delay": "wait",
+        "speed": 300,
+        "to": "auto:auto;",
+        "ease": "nothing"
+      }
+    ],
+    "Skew From Long Left": [
+      {
+        "from": "x:left;skX:45px;",
+        "speed": 300,
+        "to": "o:1;",
+        "delay": 500,
+        "ease": "Power2.easeOut"
+      },
+      {
+        "delay": "wait",
+        "speed": 300,
+        "to": "auto:auto;",
+        "ease": "nothing"
+      }
+    ],
+    "Skew From Long Right": [
+      {
+        "from": "x:right;skX:-85px;",
+        "speed": 300,
+        "to": "o:1;",
+        "delay": 500,
+        "ease": "Power2.easeOut"
+      },
+      {
+        "delay": "wait",
+        "speed": 300,
+        "to": "auto:auto;",
+        "ease": "nothing"
+      }
+    ],
+    "Skew From Short Left": [
+      {
+        "from": "x:-200px;skX:85px;opacity:0;",
+        "speed": 300,
+        "to": "o:1;",
+        "delay": 500,
+        "ease": "Power2.easeOut"
+      },
+      {
+        "delay": "wait",
+        "speed": 300,
+        "to": "auto:auto;",
+        "ease": "nothing"
+      }
+    ],
+    "Skew From Short Right": [
+      {
+        "from": "x:200px;skX:-85px;opacity:0;",
+        "speed": 300,
+        "to": "o:1;",
+        "delay": 500,
+        "ease": "Power2.easeOut"
+      },
+      {
+        "delay": "wait",
+        "speed": 300,
+        "to": "auto:auto;",
+        "ease": "nothing"
+      }
+    ],
+    "Random Rotate &amp; Scale": [
+      {
+        "from": "x:{-250,250};y:{-150,150};rX:{-90,90};rY:{-90,90};rZ:{-360,360};sX:0;sY:0;opacity:0;",
+        "speed": 300,
+        "to": "o:1;",
+        "delay": 500,
+        "ease": "Power2.easeOut"
+      },
+      {
+        "delay": "wait",
+        "speed": 300,
+        "to": "auto:auto;",
+        "ease": "nothing"
+      }
+    ],
+    "Letter Fly In From Bottom": [
+      {
+        "from": "y:[100%];z:0;rZ:-35deg;sX:1;sY:1;skX:0;skY:0;",
+        "mask": "x:0px;y:0px;",
+        "speed": 2000,
+        "to": "o:1;",
+        "delay": 0,
+        "split": "chars",
+        "splitdelay": 0.05,
+        "ease": "Power4.easeInOut"
+      },
+      {
+        "delay": "wait",
+        "speed": 300,
+        "to": "opacity:0;",
+        "ease": "Power1.easeOut"
+      }
+    ],
+    "Letters Fly In From Left": [
+      {
+        "from": "x:[-105%];z:0;rX:0deg;rY:0deg;rZ:-90deg;sX:1;sY:1;skX:0;skY:0;",
+        "mask": "x:0px;y:0px;",
+        "speed": 2000,
+        "to": "o:1;",
+        "delay": 0,
+        "split": "chars",
+        "splitdelay": 0.1,
+        "ease": "Power4.easeInOut"
+      },
+      {
+        "delay": "wait",
+        "speed": 300,
+        "to": "opacity:0;",
+        "ease": "Power2.easeOut"
+      }
+    ],
+    "Letters Fly In From Right": [
+      {
+        "from": "x:[105%];z:0;rX:45deg;rY:0deg;rZ:90deg;sX:1;sY:1;skX:0;skY:0;",
+        "mask": "x:0px;y:0px;",
+        "speed": 2000,
+        "to": "o:1;",
+        "delay": 0,
+        "split": "chars",
+        "splitdelay": 0.05,
+        "ease": "Power4.easeInOut"
+      },
+      {
+        "delay": "wait",
+        "speed": 300,
+        "to": "opacity:0;",
+        "ease": "Power2.easeOut"
+      }
+    ],
+    "Letters Fly In From Top": [
+      {
+        "from": "y:[-100%];z:0;rZ:35deg;sX:1;sY:1;skX:0;skY:0;",
+        "mask": "x:0px;y:0px;",
+        "speed": 2000,
+        "to": "o:1;",
+        "delay": 0,
+        "split": "chars",
+        "splitdelay": 0.05,
+        "ease": "Power4.easeInOut"
+      },
+      {
+        "delay": "wait",
+        "speed": 300,
+        "to": "opacity:0;",
+        "ease": "Power2.easeOut"
+      }
+    ],
+    "Masked Zoom Out": [
+      {
+        "from": "z:0;rX:0deg;rY:0;rZ:0;sX:2;sY:2;skX:0;skY:0;opacity:0;",
+        "mask": "x:0px;y:0px;",
+        "speed": 1000,
+        "to": "o:1;",
+        "delay": 500,
+        "ease": "Power2.easeOut"
+      },
+      {
+        "delay": "wait",
+        "speed": 300,
+        "to": "auto:auto;",
+        "ease": "nothing"
+      }
+    ],
+    "Popup Smooth": [
+      {
+        "from": "z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;",
+        "speed": 1500,
+        "to": "o:1;",
+        "delay": 500,
+        "ease": "Power3.easeInOut"
+      },
+      {
+        "delay": "wait",
+        "speed": 300,
+        "to": "auto:auto;",
+        "ease": "nothing"
+      }
+    ],
+    "Rotate In From Bottom": [
+      {
+        "from": "y:bottom;rZ:90deg;sX:2;sY:2;",
+        "speed": 1500,
+        "to": "o:1;",
+        "delay": 500,
+        "ease": "Power3.easeInOut"
+      },
+      {
+        "delay": "wait",
+        "speed": 300,
+        "to": "auto:auto;",
+        "ease": "nothing"
+      }
+    ],
+    "Rotate In From Zero": [
+      {
+        "from": "y:bottom;rX:-20deg;rY:-20deg;rZ:0deg;",
+        "speed": 1500,
+        "to": "o:1;",
+        "delay": 500,
+        "ease": "Power3.easeOut"
+      },
+      {
+        "delay": "wait",
+        "speed": 300,
+        "to": "auto:auto;",
+        "ease": "nothing"
+      }
+    ],
+    "Slide Mask From Bottom": [
+      {
+        "from": "y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;",
+        "mask": "x:0px;y:[100%];",
+        "speed": 2000,
+        "to": "o:1;",
+        "delay": 500,
+        "ease": "Power2.easeInOut"
+      },
+      {
+        "delay": "wait",
+        "speed": 300,
+        "to": "auto:auto;",
+        "ease": "nothing"
+      }
+    ],
+    "Slide Mask From Left": [
+      {
+        "from": "x:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;",
+        "mask": "x:0px;y:0px;",
+        "speed": 1500,
+        "to": "o:1;",
+        "delay": 500,
+        "ease": "Power3.easeInOut"
+      },
+      {
+        "delay": "wait",
+        "speed": 300,
+        "to": "auto:auto;",
+        "ease": "nothing"
+      }
+    ],
+    "Slide Mask From Right": [
+      {
+        "from": "x:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;",
+        "mask": "x:0px;y:0px;",
+        "speed": 1500,
+        "to": "o:1;",
+        "delay": 500,
+        "ease": "Power3.easeInOut"
+      },
+      {
+        "delay": "wait",
+        "speed": 300,
+        "to": "auto:auto;",
+        "ease": "nothing"
+      }
+    ],
+    "Slide Mask From Top": [
+      {
+        "from": "y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;",
+        "mask": "x:0px;y:0px;",
+        "speed": 1500,
+        "to": "o:1;",
+        "delay": 500,
+        "ease": "Power3.easeInOut"
+      },
+      {
+        "delay": "wait",
+        "speed": 300,
+        "to": "auto:auto;",
+        "ease": "nothing"
+      }
+    ],
+    "Smooth Popup One": [
+      {
+        "from": "z:0;rX:0;rY:0;rZ:0;sX:0.8;sY:0.8;skX:0;skY:0;opacity:0;",
+        "speed": 1500,
+        "to": "o:1;",
+        "delay": 500,
+        "ease": "Power4.easeOut"
+      },
+      {
+        "delay": "wait",
+        "speed": 300,
+        "to": "auto:auto;",
+        "ease": "nothing"
+      }
+    ],
+    "Smooth Popup Two": [
+      {
+        "from": "z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;",
+        "speed": 1000,
+        "to": "o:1;",
+        "delay": 500,
+        "ease": "Power2.easeOut"
+      },
+      {
+        "delay": "wait",
+        "speed": 300,
+        "to": "auto:auto;",
+        "ease": "nothing"
+      }
+    ],
+    "Smooth Mask From Right": [
+      {
+        "from": "x:[-175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;",
+        "mask": "x:[100%];y:0;",
+        "speed": 1500,
+        "to": "o:1;",
+        "delay": 500,
+        "ease": "Power3.easeOut"
+      },
+      {
+        "delay": "wait",
+        "speed": 300,
+        "to": "auto:auto;",
+        "ease": "nothing"
+      }
+    ],
+    "Smooth Mask From Left": [
+      {
+        "from": "x:[175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;",
+        "mask": "x:[-100%];y:0;",
+        "speed": 1500,
+        "to": "o:1;",
+        "delay": 500,
+        "ease": "Power3.easeOut"
+      },
+      {
+        "delay": "wait",
+        "speed": 300,
+        "to": "auto:auto;",
+        "ease": "nothing"
+      }
+    ],
+    "Smooth Slide From Bottom": [
+      {
+        "from": "y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;",
+        "speed": 2000,
+        "to": "o:1;",
+        "delay": 500,
+        "ease": "Power4.easeInOut"
+      },
+      {
+        "delay": "wait",
+        "speed": 300,
+        "to": "auto:auto;",
+        "ease": "nothing"
+      }
+    ],
+    "No Animation": [
+      {
+        "speed": 300,
+        "to": "o:1;",
+        "delay": 500,
+        "ease": "Power2.easeOut"
+      },
+      {
+        "delay": "wait",
+        "speed": 300,
+        "to": "auto:auto;",
+        "ease": "nothing"
+      }
+    ]
+  },
+  "easings": [
+    {
+      "value": "Linear.easeNone",
+      "label": "Linear.easeNone"
+    },
+    {
+      "value": "Power0.easeIn",
+      "label": "Power0.easeIn"
+    },
+    {
+      "value": "Power0.easeInOut",
+      "label": "Power0.easeInOut"
+    },
+    {
+      "value": "Power0.easeOut",
+      "label": "Power0.easeOut"
+    },
+    {
+      "value": "Power1.easeIn",
+      "label": "Power1.easeIn"
+    },
+    {
+      "value": "Power1.easeInOut",
+      "label": "Power1.easeInOut"
+    },
+    {
+      "value": "Power1.easeOut",
+      "label": "Power1.easeOut"
+    },
+    {
+      "value": "Power2.easeIn",
+      "label": "Power2.easeIn"
+    },
+    {
+      "value": "Power2.easeInOut",
+      "label": "Power2.easeInOut"
+    },
+    {
+      "value": "Power2.easeOut",
+      "label": "Power2.easeOut"
+    },
+    {
+      "value": "Power3.easeIn",
+      "label": "Power3.easeIn"
+    },
+    {
+      "value": "Power3.easeInOut",
+      "label": "Power3.easeInOut"
+    },
+    {
+      "value": "Power3.easeOut",
+      "label": "Power3.easeOut"
+    },
+    {
+      "value": "Power4.easeIn",
+      "label": "Power4.easeIn"
+    },
+    {
+      "value": "Power4.easeInOut",
+      "label": "Power4.easeInOut"
+    },
+    {
+      "value": "Power4.easeOut",
+      "label": "Power4.easeOut"
+    },
+    {
+      "value": "Quad.easeIn",
+      "label": "Quad.easeIn"
+    },
+    {
+      "value": "Quad.easeInOut",
+      "label": "Quad.easeInOut"
+    },
+    {
+      "value": "Quad.easeOut",
+      "label": "Quad.easeOut"
+    },
+    {
+      "value": "Cubic.easeIn",
+      "label": "Cubic.easeIn"
+    },
+    {
+      "value": "Cubic.easeInOut",
+      "label": "Cubic.easeInOut"
+    },
+    {
+      "value": "Cubic.easeOut",
+      "label": "Cubic.easeOut"
+    },
+    {
+      "value": "Quart.easeIn",
+      "label": "Quart.easeIn"
+    },
+    {
+      "value": "Quart.easeInOut",
+      "label": "Quart.easeInOut"
+    },
+    {
+      "value": "Quart.easeOut",
+      "label": "Quart.easeOut"
+    },
+    {
+      "value": "Quint.easeIn",
+      "label": "Quint.easeIn"
+    },
+    {
+      "value": "Quint.easeInOut",
+      "label": "Quint.easeInOut"
+    },
+    {
+      "value": "Quint.easeOut",
+      "label": "Quint.easeOut"
+    },
+    {
+      "value": "Strong.easeIn",
+      "label": "Strong.easeIn"
+    },
+    {
+      "value": "Strong.easeInOut",
+      "label": "Strong.easeInOut"
+    },
+    {
+      "value": "Strong.easeOut",
+      "label": "Strong.easeOut"
+    },
+    {
+      "value": "Back.easeIn",
+      "label": "Back.easeIn"
+    },
+    {
+      "value": "Back.easeInOut",
+      "label": "Back.easeInOut"
+    },
+    {
+      "value": "Back.easeOut",
+      "label": "Back.easeOut"
+    },
+    {
+      "value": "Bounce.easeIn",
+      "label": "Bounce.easeIn"
+    },
+    {
+      "value": "Bounce.easeInOut",
+      "label": "Bounce.easeInOut"
+    },
+    {
+      "value": "Bounce.easeOut",
+      "label": "Bounce.easeOut"
+    },
+    {
+      "value": "Circ.easeIn",
+      "label": "Circ.easeIn"
+    },
+    {
+      "value": "Circ.easeInOut",
+      "label": "Circ.easeInOut"
+    },
+    {
+      "value": "Circ.easeOut",
+      "label": "Circ.easeOut"
+    },
+    {
+      "value": "Elastic.easeIn",
+      "label": "Elastic.easeIn"
+    },
+    {
+      "value": "Elastic.easeInOut",
+      "label": "Elastic.easeInOut"
+    },
+    {
+      "value": "Elastic.easeOut",
+      "label": "Elastic.easeOut"
+    },
+    {
+      "value": "Expo.easeIn",
+      "label": "Expo.easeIn"
+    },
+    {
+      "value": "Expo.easeInOut",
+      "label": "Expo.easeInOut"
+    },
+    {
+      "value": "Expo.easeOut",
+      "label": "Expo.easeOut"
+    },
+    {
+      "value": "Sine.easeIn",
+      "label": "Sine.easeIn"
+    },
+    {
+      "value": "Sine.easeInOut",
+      "label": "Sine.easeInOut"
+    },
+    {
+      "value": "Sine.easeOut",
+      "label": "Sine.easeOut"
+    },
+    {
+      "value": "SlowMo.ease",
+      "label": "SlowMo.ease"
+    }
+  ]
+}

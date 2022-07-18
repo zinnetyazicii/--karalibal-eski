@@ -1,0 +1,10 @@
+{
+  "footerMenu": {
+    "type": "Module",
+    "php": true
+  },
+  "footerMenuPhone": {
+    "type": "Module",
+    "php": true
+  }
+}

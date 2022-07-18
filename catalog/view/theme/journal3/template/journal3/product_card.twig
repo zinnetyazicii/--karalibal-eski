@@ -1,0 +1,162 @@
+{% set prefix = display == 'grid' ? 'ProductGrid' : 'ProductList' %}
+{% for product in products %}
+  {% set classes = j3.classes({
+    'out-of-stock': product.quantity <= 0,
+    'has-countdown': product.date_end,
+    'has-zero-price': not product.price_value,
+    'has-extra-button': product.extra_buttons,
+  }) %}
+  <div class="product-layout {{ j3.classes(product.classes) }} {{ classes }}">
+    <div class="product-thumb">
+      {% if (j3.settings.getIn(prefix ~ 'NamePosition', _context) == "image") %}
+        <div class="name"><a href="{{ product.href }}">{{ product.name }}</a></div>
+      {% endif %}
+      <div class="image">
+        {% if j3.settings.get('quickviewStatus') %}
+          <div class="quickview-button">
+            <a class="btn btn-quickview" {% if j3.settings.getIn(prefix ~ 'QuickviewDisplay', _context) == 'icon' and j3.settings.getIn(prefix ~ 'QuickviewTooltipStatus', _context) %}data-toggle="tooltip" data-tooltip-class="{{ module_id ? 'module-products-' ~ module_id ~ ' module-products-grid' : 'product-grid' }} quickview-tooltip" data-placement="{{ j3.settings.getIn(prefix ~ 'QuickviewTooltipPosition', _context) }}" title="{{ j3.settings.get('quickviewText') }}"{% endif %} onclick="quickview('{{ product.product_id }}')"><span class="btn-text">{{ j3.settings.get('quickviewText') }}</span></a>
+          </div>
+        {% endif %}
+
+        <a href="{{ product.href }}" class="product-img {% if product.second_thumb %}has-second-image{% endif %}">
+          <div>
+            {% if j3.settings.get('performanceLazyLoadImagesStatus') %}
+              <img src="{{ dummy_image }}" data-src="{{ product.thumb }}" {% if product.thumb2x %}data-srcset="{{ product.thumb }} 1x, {{ product.thumb2x }} 2x" {% endif %} width="{{ image_width }}" height="{{ image_height }}" alt="{{ product.name }}" title="{{ product.name }}" class="img-responsive img-first lazyload"/>
+            {% else %}
+              <img src="{{ product.thumb }}" {% if product.thumb2x %}srcset="{{ product.thumb }} 1x, {{ product.thumb2x }} 2x" {% endif %} width="{{ image_width }}" height="{{ image_height }}" alt="{{ product.name }}" title="{{ product.name }}" class="img-responsive img-first"/>
+            {% endif %}
+
+            {% if product.second_thumb %}
+              {% if j3.settings.get('performanceLazyLoadImagesStatus') %}
+                <img src="{{ dummy_image }}" data-src="{{ product.second_thumb }}" {% if product.second_thumb2x %}data-srcset="{{ product.second_thumb }} 1x, {{ product.second_thumb2x }} 2x" {% endif %} width="{{ image_width }}" height="{{ image_height }}" alt="{{ product.name }}" title="{{ product.name }}" class="img-responsive img-second lazyload"/>
+              {% else %}
+                <img src="{{ product.second_thumb }}" {% if product.second_thumb2x %}srcset="{{ product.second_thumb }} 1x, {{ product.second_thumb2x }} 2x" {% endif %} width="{{ image_width }}" height="{{ image_height }}" alt="{{ product.name }}" title="{{ product.name }}" class="img-responsive img-second"/>
+              {% endif %}
+            {% endif %}
+
+          </div>
+        </a>
+
+        {% if product.labels %}
+          <div class="product-labels">
+            {% for id, label in product.labels %}
+              <span class="product-label product-label-{{ id }} product-label-{{ label.display }}"><b>{{ label.label }}</b></span>
+            {% endfor %}
+          </div>
+        {% endif %}
+
+        {% if j3.settings.get('countdownStatus') and product.date_end %}
+          <div class="countdown" data-date="{{ product.date_end }}"></div>
+        {% endif %}
+      </div>
+
+      <div class="caption">
+        {% if product.stat1 or product.stat2 %}
+          <div class="stats">
+            {% if product.stat1 %}
+              <span class="stat-1"><span class="stats-label">{{ product.stat1.label }}:</span> <span>{{ product.stat1.text }}</span></span>
+            {% endif %}
+            {% if product.stat2 %}
+              <span class="stat-2"><span class="stats-label">{{ product.stat2.label }}:</span> <span>{{ product.stat2.text }}</span></span>
+            {% endif %}
+          </div>
+        {% endif %}
+
+        {% if (j3.settings.getIn(prefix ~ 'NamePosition', _context) == "default") %}
+          <div class="name"><a href="{{ product.href }}">{{ product.name }}</a></div>
+        {% endif %}
+
+        <div class="description">{{ product.description }}</div>
+
+        {% if product.price %}
+          <div class="price">
+            <div>
+              {% if product.special %}
+                <span class="price-new">{{ product.special }}</span> <span class="price-old">{{ product.price }}</span>
+              {% else %}
+                <span class="price-normal">{{ product.price }}</span>
+              {% endif %}
+            </div>
+            {% if product.tax %}
+              <span class="price-tax">{{ text_tax }}{{ product.tax }}</span>
+            {% endif %}
+          </div>
+        {% endif %}
+
+        {% if product.rating %}
+          <div class="rating {% if (j3.settings.getIn(prefix ~ 'RatingPosition', _context) == "hover") %}rating-hover{% endif %}">
+            <div class="rating-stars">
+              {% for i in 1..5 %}
+                {% if product.rating < i %}
+                  <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
+                {% else %}
+                  <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i><i class="fa fa-star-o fa-stack-2x"></i></span>
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+        {% else %}
+          <div class="rating no-rating {% if (j3.settings.getIn(prefix ~ 'RatingPosition', _context) == "hover") %}rating-hover{% endif %}">
+            <div class="rating-stars">
+              {% for i in 1..5 %}
+                {% if product.rating < i %}
+                  <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
+                {% else %}
+                  <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i><i class="fa fa-star-o fa-stack-2x"></i></span>
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+        {% endif %}
+
+        {% if j3.settings.get('catalogCartStatus') or j3.settings.get('catalogWishlistStatus') or j3.settings.get('catalogCompareStatus') %}
+        <div class="buttons-wrapper">
+          <div class="button-group">
+            {% if j3.settings.get('catalogCartStatus') %}
+            <div class="cart-group">
+              <div class="stepper">
+                <input type="text" name="quantity" value="{{ product.minimum }}" data-minimum="{{ product.minimum }}" class="form-control"/>
+                <input type="hidden" name="product_id" value="{{ product.product_id }}"/>
+                <span>
+                <i class="fa fa-angle-up"></i>
+                <i class="fa fa-angle-down"></i>
+              </span>
+              </div>
+              <a class="btn btn-cart" {% if (j3.settings.getIn(prefix ~ 'CartDisplay', _context) == "icon") and (j3.settings.getIn(prefix ~ 'CartTooltipStatus', _context)) %} data-toggle="tooltip" data-tooltip-class="{{ module_id ? 'module-products-' ~ module_id ~ ' module-products-grid' : 'product-grid' }} cart-tooltip" data-placement="{{ j3.settings.getIn(prefix ~ 'CartTooltipPosition', _context) }}" title="{{ button_cart }}" {% endif %} onclick="cart.add('{{ product.product_id }}', $(this).closest('.product-thumb').find('.button-group input[name=\'quantity\']').val());" data-loading-text="<span class='btn-text'>{{ button_cart }}</span>"><span class="btn-text">{{ button_cart }}</span></a>
+            </div>
+            {% endif %}
+
+            {% if j3.settings.get('catalogWishlistStatus') or j3.settings.get('catalogCompareStatus') %}
+            <div class="wish-group">
+              {% if j3.settings.get('catalogWishlistStatus') %}
+              <a class="btn btn-wishlist" {% if (j3.settings.getIn(prefix ~ 'WishlistDisplay', _context) == "icon") and (j3.settings.getIn(prefix ~ 'WishlistTooltipStatus', _context)) %} data-toggle="tooltip" data-tooltip-class="{{ module_id ? 'module-products-' ~ module_id ~ ' module-products-grid' : 'product-grid' }} wishlist-tooltip" data-placement="{{ j3.settings.getIn(prefix ~ 'WishlistTooltipPosition', _context) }}" title="{{ button_wishlist }}" {% endif %} onclick="wishlist.add('{{ product.product_id }}')"><span class="btn-text">{{ button_wishlist }}</span></a>
+              {% endif %}
+
+              {% if j3.settings.get('catalogCompareStatus') %}
+              <a class="btn btn-compare" {% if (j3.settings.getIn(prefix ~ 'CompareDisplay', _context) == "icon") and (j3.settings.getIn(prefix ~ 'CompareTooltipStatus', _context)) %} data-toggle="tooltip" data-tooltip-class="{{ module_id ? 'module-products-' ~ module_id ~ ' module-products-grid' : 'product-grid' }} compare-tooltip" data-placement="{{ j3.settings.getIn(prefix ~ 'CompareTooltipPosition', _context) }}" title="{{ button_compare }}" {% endif %} onclick="compare.add('{{ product.product_id }}')"><span class="btn-text">{{ button_compare }}</span></a>
+              {% endif %}
+            </div>
+            {% endif %}
+          </div>
+        </div>
+        {% endif %}
+
+        {% if product.extra_buttons %}
+          <div class="extra-group">
+            <div>
+              {% for id, extra_button in product.extra_buttons %}
+                <a class="btn btn-extra btn-extra-{{ id }}"
+                  {% if (j3.settings.getIn(prefix ~ 'ExtraButtonDisplay' ~ loop.index, _context) == "icon") and (j3.settings.getIn(prefix ~ 'ExtraButtonTooltipStatus', _context)) %} data-toggle="tooltip" data-tooltip-class="{{ module_id ? 'module-products-' ~ module_id ~ ' module-products-grid' : 'product-grid' }} extra-tooltip" data-placement="{{ j3.settings.getIn(prefix ~ 'ExtraButtonTooltipPosition', _context) }}" title="{{ extra_button.label }}" {% endif %}
+                  {% if extra_button.action == 'quickbuy' %}onclick="cart.add('{{ product.product_id }}', $(this).closest('.product-thumb').find('.button-group input[name=\'quantity\']').val(), true);"{% endif %}
+                  {% if extra_button.action == 'link' and extra_button.link.href %}href="{{ extra_button.link.href }}" {{ j3.linkAttrs(extra_button.link) }} data-product_id="{{ product.product_id }}" data-product_url="{{ product.href }}"{% endif %}
+                   data-loading-text="<span class='btn-text'>{{ extra_button.label }}</span>">
+                  <span class="btn-text">{{ extra_button.label }}</span>
+                </a>
+              {% endfor %}
+            </div>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endfor %}

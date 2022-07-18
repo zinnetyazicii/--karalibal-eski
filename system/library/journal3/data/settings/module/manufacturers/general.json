@@ -1,0 +1,100 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "New Brands "
+  },
+  "status": {
+    "type": "Status"
+  },
+  "schedule": {
+    "type": "Range",
+    "php": true
+  },
+  "moduleManufacturers": {
+    "type": "Variable",
+    "variable": "manufacturers",
+    "selector_prefix": ".module-manufacturers-%s"
+  },
+  "sectionsDisplay": {
+    "type": "Radio",
+    "value": "blocks",
+    "php": true,
+    "device": true
+  },
+  "sectionsDisplayTablet": {
+    "type": "Radio",
+    "value": "",
+    "php": true
+  },
+  "sectionMargin": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".module-manufacturers-%s .module-body > .module-item": "margin-bottom:%spx"
+      }
+    }
+  },
+  "sectionsDisplayPhone": {
+    "type": "Radio",
+    "value": "",
+    "php": true
+  },
+  "moduleTitle": {
+    "type": "Variable",
+    "variable": "title",
+    "selector_prefix": ".module-manufacturers-%s .title.module-title"
+  },
+  "carousel": {
+    "type": "Toggle",
+    "value": "false",
+    "php": true,
+    "device": true
+  },
+  "carouselTablet": {
+    "type": "Toggle",
+    "value": "",
+    "php": true
+  },
+  "carouselPhone": {
+    "type": "Toggle",
+    "value": "",
+    "php": true
+  },
+  "carouselStyle": {
+    "type": "Variable",
+    "variable": "carousel",
+    "selector_prefix": ".module-manufacturers-%s "
+  },
+  "accordionStyle": {
+    "type": "Variable",
+    "variable": "accordion",
+    "selector_prefix": ".module-manufacturers-%s "
+  },
+  "tabsStyle": {
+    "type": "Variable",
+    "variable": "tabs",
+    "selector_prefix": ".module-manufacturers-%s "
+  },
+  "itemsPerRow": {
+    "type": "ItemsPerRow",
+    "selector": ".module-manufacturers-%s .manufacturer-layout",
+    "php": true
+  },
+  "default": {
+    "type": "Select",
+    "value": "",
+    "php": true
+  },
+  "carouselGutter": {
+    "type": "Padding",
+    "selector": ".module-manufacturers-%s .swiper-container"
+  },
+  "containerMargin": {
+    "type": "Margin",
+    "selector": ".module-manufacturers-%s:not(.carousel-mode) .module-body > .module-item > .manufacturer-grid"
+  },
+  "imageDimensions": {
+    "type": "ImageDimensions",
+    "php": true
+  }
+}

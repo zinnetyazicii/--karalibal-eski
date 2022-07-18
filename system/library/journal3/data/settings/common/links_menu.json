@@ -1,0 +1,321 @@
+{
+  "ModuleTitle": {
+    "type": "Variable",
+    "variable": "title",
+    "selector_prefix": ".title.module-title"
+  },
+  "TitleFont": {
+    "type": "Font",
+    "selector": ".title.module-title"
+  },
+  "TitleAlign": {
+    "type": "Radio",
+    "value": "",
+    "rules": {
+      "left": {
+        ".title.module-title":"text-align:left",
+        ".title.module-title::after": "margin-left:0; margin-right:auto; transform: none"
+      },
+      "center": {
+        ".title.module-title":"text-align:center",
+        ".title.module-title::after": "left: 50%; right:initial; transform: translate3d(-50%,0,0);"
+      },
+      "right": {
+        ".title.module-title":"text-align:right",
+        ".title.module-title::after": "margin-left:auto; margin-right:0; transform:none"
+      }
+    },
+    "rtlRules": {
+      "left": {
+        ".title.module-title":"text-align:left",
+        ".title.module-title::after": "margin-left:auto; margin-right:0; transform: none"
+      },
+      "center": {
+        ".title.module-title":"text-align:center",
+        ".title.module-title::after": "left: 50%; right:initial; transform: translate3d(-50%,0,0);"
+      },
+      "right": {
+        ".title.module-title":"text-align:right",
+        ".title.module-title::after": "margin-left:0; margin-right:auto; transform:none"
+      }
+    }
+  },
+  "TitleDivider": {
+    "type": "Toggle",
+    "value": "",
+    "rules": {
+      "true": {
+        ".title.module-title::after": "display: block"
+      },
+      "false": {
+        ".title.module-title::after": "display: none"
+      }
+    }
+  },
+
+  "Background": {
+    "type": "Background",
+    "selector": ".module-body",
+    "desktop":true
+  },
+  "Padding": {
+    "type": "Padding",
+    "selector": ".module-body"
+  },
+  "Direction": {
+    "type": "Radio",
+    "value": "vertical",
+    "rules": {
+      "vertical": {
+        ".module-body": "display:block",
+        ".menu-item": "border-width: 1px 0 0 0",
+        ".menu-item a .links-text":"white-space:normal"
+      },
+      "horizontal": {
+        ".module-body": "display:flex; flex-direction:row",
+        ".menu-item": "border-width: 0 0 0 1px",
+        ".menu-item a .links-text":"white-space:nowrap"
+      }
+    },
+    "rtlRules": {
+      "vertical": {
+        ".module-body": "display:block; flex-direction:column;",
+        ".menu-item": "border-width: 1px 0 0 0",
+        ".menu-item a .links-text":"white-space:normal"
+      },
+      "horizontal": {
+        ".module-body": "display:flex; flex-direction:row",
+        ".menu-item": "border-width: 0 1px 0 0",
+        ".menu-item a .links-text":"white-space:nowrap"
+      }
+    }
+  },
+  "Align": {
+    "type": "Radio",
+    "value": "start",
+    "rules": {
+      "start": {
+        ".menu-item": "justify-content:flex-start;",
+        ".menu-item a": "justify-content:flex-start;"
+      },
+      "center": {
+        ".menu-item": "justify-content:center;",
+        ".menu-item a": "justify-content:center;"
+      },
+      "end": {
+        ".menu-item": "justify-content:flex-end;",
+        ".menu-item a": "justify-content:flex-end;"
+      }
+    }
+  },
+  "Layout": {
+    "type": "Radio",
+    "value": "start",
+    "rules": {
+      "start": {
+        ".menu-item": "flex-grow:0",
+        ".module-body": "justify-content: flex-start; align-items:flex-start;"
+      },
+      "stretch": {
+        ".menu-item": "flex-grow:1",
+        ".menu-item a": "justify-content: center; display:flex;"
+      },
+      "center": {
+        ".menu-item": "flex-grow:0",
+        ".module-body": "justify-content: center;  align-items:center;"
+      },
+      "end": {
+        ".menu-item": "flex-grow:0",
+        ".module-body": "justify-content: flex-end; align-items:flex-end;"
+      }
+    }
+  },
+
+  "ItemWidth": {
+    "type": "Radio",
+    "value": "auto",
+    "rules": {
+      "auto": {
+        ".menu-item": "width:auto"
+      },
+      "full": {
+        ".menu-item": "width:100%"
+      }
+    }
+  },
+  "ItemBackground": {
+    "type": "Background",
+    "selector": ".menu-item a"
+  },
+  "ItemBackgroundHover": {
+    "type": "Background",
+    "selector": ".menu-item a:hover"
+  },
+  "ItemPadding": {
+    "type": "Padding",
+    "selector": ".menu-item a"
+  },
+  "ItemFont": {
+    "type": "Font",
+    "selector": ".menu-item a .links-text"
+  },
+  "ItemFontHover": {
+    "type": "Font",
+    "selector": ".menu-item a:hover .links-text"
+  },
+  "ItemIcon": {
+    "type": "Icon",
+    "selector": ".menu-item a::before"
+  },
+  "ItemIconHover": {
+    "type": "Color",
+    "selector": ".menu-item a:hover::before",
+    "property": "color"
+  },
+  "ItemDivider": {
+    "type": "Divider",
+    "selector": ".menu-item"
+  },
+  "ItemDividerHover": {
+    "type": "Color",
+    "rules": {
+      "@": {
+        ".menu-item:hover": "border-color:%s",
+        ".menu-item:hover + .menu-item": "border-color:%s"
+      }
+    }
+  },
+  "Scroll": {
+    "type": "Toggle",
+    "value": "false",
+    "rules": {
+      "true": {
+        ".module-body": "flex-wrap: nowrap; overflow-x: auto; overflow-y: hidden",
+        ".menu-item":"white-space:nowrap",
+        ".mobile.touchevents .module-body": "overflow-x: scroll",
+        ".module-body::-webkit-scrollbar": "-webkit-appearance: none; height: 1px",
+        ".module-body::-webkit-scrollbar-track": "background-color: white",
+        ".module-body::-webkit-scrollbar-thumb": "background-color: #999"
+      }
+    }
+  },
+  "ScrollColor": {
+    "type": "Color",
+    "selector": ".module-body::-webkit-scrollbar-thumb",
+    "property": "background-color"
+  },
+  "TrackColor": {
+    "type": "Color",
+    "selector": ".module-body::-webkit-scrollbar-track",
+    "property": "background-color"
+  },
+  "ScrollTouch": {
+    "type": "Toggle",
+    "value": "true",
+    "rules": {
+      "true": {
+        ".module-body": "-webkit-overflow-scrolling:touch;"
+      }
+    }
+  },
+  "CountBadge": {
+    "type": "Variable",
+    "variable": "count_badge",
+    "selector_prefix": ".links-menu-%s"
+  },
+  "CountBadgeOffset": {
+    "type": "InputPair",
+    "selector": ".count-badge",
+    "properties": {
+      "first": "transform: translateX(%spx)",
+      "second": "margin-top:%spx"
+    },
+    "rtlProperties":{
+      "first": "transform: translateX(calc(0px - (%spx)))",
+      "second": "margin-top:%spx"
+    }
+  },
+  "CountBadgeVisibility": {
+    "type": "Toggle",
+    "value": "false",
+    "rules": {
+      "true": {
+        ".count-badge": "display: inline-flex"
+      },
+      "false": {
+        ".count-badge": "display: none"
+      }
+    }
+  },
+  "LinksColumns": {
+    "type": "Radio",
+    "value": "initial",
+    "selector": ".module-body",
+    "property": "column-count:%s"
+  },
+  "LinksColumnGap": {
+    "type": "InputNumber",
+    "selector": ".module-body",
+    "property": "column-gap:%spx"
+  },
+  "LinksColumnDividerColor": {
+    "type": "Color",
+    "selector": ".module-body",
+    "property": "column-rule-color"
+  },
+  "LinksColumnDividerWidth": {
+    "type": "InputNumber",
+    "selector": ".module-body",
+    "property": "column-rule-width:%spx"
+  },
+  "LinksColumnDividerStyle": {
+    "type": "Select",
+    "selector": ".module-body",
+    "property": "column-rule-style",
+    "value": "solid"
+  },
+
+
+  "LinksPlusButtonMobileStatus": {
+    "type": "Toggle",
+    "value": "false",
+    "rules": {
+      "true": {
+        ".module-title::before": "display: block;",
+        ".module-title.closed + .module-body > li":"display:none"
+      },
+      "false": {
+        ".module-title::before": "display: none",
+        ".module-title + .module-body > li":"display:flex"
+      }
+    },
+    "phone":true,
+    "parent_selector":"footer"
+  },
+  "LinksPlusMobileOpen": {
+    "type": "Icon",
+    "selector": ".module-title::before",
+    "phone":true,
+    "parent_selector":"footer"
+  },
+  "LinksPlusMobileClose": {
+    "type": "Icon",
+    "selector": ".module-title.closed::before",
+    "phone":true,
+    "parent_selector":"footer"
+  },
+  "LinksPlusMobileCloseOffset": {
+    "type": "InputPair",
+    "selector": ".module-title::before",
+    "phone":true,
+    "parent_selector":"footer",
+    "properties": {
+      "first": "margin-right:calc(0px - (%spx))",
+      "second": "margin-top:%spx"
+    },
+    "rtlProperties": {
+      "first": "margin-left:calc(0px - (%spx))",
+      "second": "margin-top:%spx"
+    }
+  }
+}

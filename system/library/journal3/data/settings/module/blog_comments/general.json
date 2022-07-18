@@ -1,0 +1,87 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "New Blog Comments "
+  },
+  "status": {
+    "type": "Status"
+  },
+  "schedule": {
+    "type": "Range",
+    "php": true
+  },
+  "title": {
+    "type": "InputLang",
+    "php": true
+  },
+  "moduleTitle": {
+    "type": "Variable",
+    "variable": "title",
+    "selector_prefix": ".module-blog_comments-%s .title.module-title"
+  },
+  "imageSize": {
+    "type": "Input",
+    "value": "50",
+    "php": true
+  },
+  "imageBorder": {
+    "type": "Border",
+    "selector": ".module-blog_comments-%s img"
+  },
+  "imageMargin2": {
+    "type": "Margin",
+    "selector": ".module-blog_comments-%s img",
+    "value": {
+      "margin-right":"7"
+    }
+  },
+  "imageBorderRadius": {
+    "type": "BorderRadius",
+    "selector": ".module-blog_comments-%s img"
+  },
+  "commentPadding": {
+    "type": "Padding",
+    "selector": ".module-blog_comments-%s .module-item"
+  },
+  "commentBackground": {
+    "type": "Background",
+    "selector": ".module-blog_comments-%s .module-item"
+  },
+  "authorFont": {
+    "type": "Font",
+    "selector": ".module-blog_comments-%s .side-subtitle"
+  },
+  "commentFont": {
+    "type": "Font",
+    "selector": ".module-blog_comments-%s .side-title"
+  },
+  "commentFontHover": {
+    "type": "Font",
+    "selector": ".module-blog_comments-%s .side-title:hover"
+  },
+  "commentDivider": {
+    "type": "Divider",
+    "selector": ".module-blog_comments-%s .module-body > div + div"
+  },
+  "spacing": {
+    "type": "InputNumber",
+    "value": "10",
+    "rules":{
+      "@":{
+        ".module-blog_comments-%s .module-item": "margin-bottom:%spx"
+      }
+    }
+  },
+  "titleTruncate": {
+    "type": "Toggle",
+    "value": "false",
+    "rules": {
+      "true": {
+        ".module-blog_comments-%s .side-details": "white-space: nowrap; overflow: hidden; text-overflow: ellipsis"
+      },
+      "false": {
+        ".module-blog_comments-%s .side-details": "white-space: normal; overflow: visible; text-overflow: initial"
+      }
+    }
+  }
+}

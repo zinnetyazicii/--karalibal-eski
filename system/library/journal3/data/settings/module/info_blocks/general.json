@@ -1,0 +1,113 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "New Info Blocks"
+  },
+  "status": {
+    "type": "Status"
+  },
+  "schedule": {
+    "type": "Range",
+    "php": true
+  },
+  "itemsPerRow": {
+    "type": "ItemsPerRow",
+    "selector": ".module-info_blocks-%s .module-item",
+    "php": true,
+    "value": {
+      "c0": {
+        "items": "3"
+      },
+      "c1": {
+        "items": "3"
+      },
+      "c2": {
+        "items": "3"
+      }
+    }
+  },
+  "imageDimensions": {
+    "type": "ImageDimensions",
+    "php": true
+  },
+  "align": {
+    "type": "Radio",
+    "value": "",
+    "rules": {
+      "left": {
+        ".module-info_blocks-%s .module-item .info-block": "justify-content: flex-start"
+      },
+      "center": {
+        ".module-info_blocks-%s .module-item .info-block": "justify-content: center"
+      },
+      "right": {
+        ".module-info_blocks-%s .module-item .info-block": "justify-content: flex-end"
+      }
+    }
+  },
+  "itemAutoWidth": {
+    "type": "Toggle",
+    "value": "false",
+    "rules": {
+      "true": {
+        ".module-info_blocks-%s .module-item:not(.swiper-slide)": "width: auto !important",
+        ".module-info_blocks-%s .module-body": "justify-content:center"
+      }
+    }
+  },
+  "style": {
+    "type": "Variable",
+    "variable": "info_block",
+    "selector_prefix": ".module-info_blocks-%s"
+  },
+  "gutter": {
+    "type": "Margin",
+    "selector": ".module-info_blocks-%s .module-body"
+  },
+  "shadow": {
+    "type": "Shadow",
+    "selector": ".module-info_blocks-%s .module-body"
+  },
+  "background": {
+    "type": "Background",
+    "selector": ".module-info_blocks-%s .module-body"
+  },
+  "border": {
+    "type": "Border",
+    "selector": ".module-info_blocks-%s .module-body"
+  },
+  "padding": {
+    "type": "Padding",
+    "selector": ".module-info_blocks-%s .module-body"
+  },
+  "borderRadius": {
+    "type": "BorderRadius",
+    "selector": ".module-info_blocks-%s .module-body"
+  },
+
+
+  "itemBG": {
+    "type": "Background",
+    "selector": ".module-info_blocks-%s .module-item .info-block"
+  },
+  "itemBGHover": {
+    "type": "Background",
+    "selector": ".module-info_blocks-%s .module-item .info-block:hover"
+  },
+  "text1Font": {
+    "type": "Font",
+    "selector": ".module-info_blocks-%s .module-item .info-block .info-block-title"
+  },
+  "text1FontHover": {
+    "type": "Font",
+    "selector": ".module-info_blocks-%s .module-item .info-block:hover .info-block-title"
+  },
+  "text2Font": {
+    "type": "Font",
+    "selector": ".module-info_blocks-%s .module-item .info-block .info-block-text"
+  },
+  "text2FontHover": {
+    "type": "Font",
+    "selector": ".module-info_blocks-%s .module-item .info-block:hover .info-block-text"
+  }
+}

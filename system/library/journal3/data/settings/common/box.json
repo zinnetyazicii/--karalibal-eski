@@ -1,0 +1,23 @@
+{
+  "Font": {
+    "type": "Font"
+  },
+  "Background": {
+    "type": "Background"
+  },
+  "Margin": {
+    "type": "Margin"
+  },
+  "Padding": {
+    "type": "Padding"
+  },
+  "Border": {
+    "type": "Border"
+  },
+  "BorderRadius": {
+    "type": "BorderRadius"
+  },
+  "Shadow": {
+    "type": "Shadow"
+  }
+}

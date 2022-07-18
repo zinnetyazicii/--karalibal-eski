@@ -1,0 +1,28 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "New Caption"
+  },
+  "status": {
+    "type": "Status"
+  },
+  "type": {
+    "type": "Radio",
+    "value": "image"
+  },
+  "image": {
+    "type": "Image"
+  },
+  "text": {
+    "type": "InputLang"
+  },
+  "font": {
+    "type": "Font",
+    "selector": "module-side_products-%s .module-item-%s .module-subitem-%s"
+  },
+  "hoverColor": {
+    "type": "Color",
+    "selector": "module-side_products-%s .module-item-%s .module-subitem-%s:hover",
+    "property": "color"
+  }
+}

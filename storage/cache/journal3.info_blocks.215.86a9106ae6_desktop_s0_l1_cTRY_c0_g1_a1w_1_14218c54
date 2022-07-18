@@ -1,0 +1,164 @@
+<?php $val = array (
+  'css' => '.module-info_blocks-215 .module-item.swiper-slide{margin-right:0px;width:calc((100% - 0 * 0px) / 1 - 0.01px)}.module-info_blocks-215 .module-item:not(.swiper-slide){padding:0px;width:calc(100% / 1 - 0.01px)}.one-column #content .module-info_blocks-215 .module-item.swiper-slide{margin-right:0px;width:calc((100% - 0 * 0px) / 1 - 0.01px)}.one-column #content .module-info_blocks-215 .module-item:not(.swiper-slide){padding:0px;width:calc(100% / 1 - 0.01px)}.two-column #content .module-info_blocks-215 .module-item.swiper-slide{margin-right:0px;width:calc((100% - 0 * 0px) / 1 - 0.01px)}.two-column #content .module-info_blocks-215 .module-item:not(.swiper-slide){padding:0px;width:calc(100% / 1 - 0.01px)}.side-column .module-info_blocks-215 .module-item.swiper-slide{margin-right:0px;width:calc((100% - 0 * 0px) / 1 - 0.01px)}.side-column .module-info_blocks-215 .module-item:not(.swiper-slide){padding:0px;width:calc(100% / 1 - 0.01px)}.module-info_blocks-215 .info-block .info-block-title{font-size:14px;display:block}.module-info_blocks-215 .info-block .info-block-text{display:block}.module-info_blocks-215 .info-block{padding:5px;padding-bottom:10px;padding-left:0px;display:flex;flex-direction:row;justify-content:flex-start;text-align:left}.module-info_blocks-215 .info-block-content{display:flex}.module-info_blocks-215 .info-block::before{align-self:center;width:30px;font-size:20px;color:rgba(105, 105, 115, 1)}.module-info_blocks-215 .info-block-img{align-self:center}.module-info_blocks-215 .info-block::before, .module-info_blocks-215 .info-block-img{margin-right:5px}.module-info_blocks-215 .info-block .count-badge{display:none}.module-info_blocks-215 .module-item .info-block .info-block-title{font-size:10px}.module-info_blocks-215 .module-item .info-block .info-block-text{font-size:10px}.module-info_blocks-215 .module-item-1 .info-block::before{content:\'\\eb7b\' !important;font-family:icomoon !important}.module-info_blocks-215 .module-item-2 .info-block::before{content:\'\\eb96\' !important;font-family:icomoon !important}.module-info_blocks-215 .module-item-3 .info-block::before{content:\'\\f16d\' !important;font-family:icomoon !important}',
+  'fonts' => 
+  array (
+  ),
+  'settings' => 
+  array (
+    'schedule' => 
+    array (
+      'from' => '',
+      'to' => '',
+      'between' => true,
+    ),
+    'itemsPerRow' => 
+    array (
+      'c0' => 
+      array (
+        0 => 
+        array (
+          'items' => 1,
+          'spacing' => 0,
+        ),
+      ),
+      'c1' => 
+      array (
+        0 => 
+        array (
+          'items' => 1,
+          'spacing' => 0,
+        ),
+      ),
+      'c2' => 
+      array (
+        0 => 
+        array (
+          'items' => 1,
+          'spacing' => 0,
+        ),
+      ),
+      'sc' => 
+      array (
+        0 => 
+        array (
+          'items' => 1,
+          'spacing' => 0,
+        ),
+      ),
+    ),
+    'imageDimensions' => 
+    array (
+      'width' => 150,
+      'height' => NULL,
+      'resize' => 'fill',
+    ),
+    'status' => true,
+    'id' => 'info_blocks-6276577dac895',
+    'module_id' => 215,
+    'classes' => 
+    array (
+      0 => 'module',
+      1 => 'module-info_blocks',
+      2 => 'module-info_blocks-215',
+    ),
+    'items' => 
+    array (
+      1 => 
+      array (
+        'title' => 'Tophane Mahallesi Kanarya Sokak Karali Apartmanı No:14 Merkez / RİZE',
+        'link' => 
+        array (
+          'type' => '',
+          'id' => '',
+          'href' => '',
+          'name' => '',
+          'total' => NULL,
+          'attrs' => 
+          array (
+          ),
+          'classes' => 
+          array (
+          ),
+        ),
+        'type' => 'icon',
+        'content' => '',
+        'button' => false,
+        'id' => '215-1',
+        'classes' => 
+        array (
+          0 => 'module-item',
+          1 => 'module-item-1',
+          2 => 'info-blocks',
+          3 => 'info-blocks-icon',
+        ),
+        'items' => 
+        array (
+        ),
+      ),
+      2 => 
+      array (
+        'title' => '0464 213 38 58',
+        'link' => 
+        array (
+          'type' => 'custom',
+          'id' => '',
+          'href' => '#',
+          'name' => '',
+          'total' => NULL,
+          'attrs' => 
+          array (
+          ),
+          'classes' => 
+          array (
+          ),
+        ),
+        'type' => 'icon',
+        'content' => '',
+        'button' => false,
+        'id' => '215-2',
+        'classes' => 
+        array (
+          0 => 'module-item',
+          1 => 'module-item-2',
+          2 => 'info-blocks',
+          3 => 'info-blocks-icon',
+        ),
+        'items' => 
+        array (
+        ),
+      ),
+      3 => 
+      array (
+        'title' => 'info@karalibal.com',
+        'link' => 
+        array (
+          'type' => 'custom',
+          'id' => '',
+          'href' => '#',
+          'name' => '',
+          'total' => NULL,
+          'attrs' => 
+          array (
+          ),
+          'classes' => 
+          array (
+          ),
+        ),
+        'type' => 'icon',
+        'content' => '',
+        'button' => false,
+        'id' => '215-3',
+        'classes' => 
+        array (
+          0 => 'module-item',
+          1 => 'module-item-3',
+          2 => 'info-blocks',
+          3 => 'info-blocks-icon',
+        ),
+        'items' => 
+        array (
+        ),
+      ),
+    ),
+  ),
+);

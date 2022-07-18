@@ -1,0 +1,66 @@
+{
+  "MenuLabelFont": {
+    "type": "Font",
+    "selector": ".menu-label"
+  },
+  "MenuLabelFontHover": {
+    "type": "Font",
+    "selector": "&:hover .menu-label"
+  },
+  "MenuLabelBackground": {
+    "type": "Background",
+    "selector": ".menu-label",
+    "value": {
+      "background-size":"contain"
+    }
+  },
+  "MenuLabelBackgroundHover": {
+    "type": "Background",
+    "selector": "&:hover .menu-label",
+    "value": {
+      "background-size":"contain"
+    }
+  },
+  "MenuLabelBorder": {
+    "type": "Border",
+    "selector": ".menu-label"
+  },
+  "MenuLabelBorderHover": {
+    "type": "Color",
+    "selector": "&:hover .menu-label",
+    "property": "border-color"
+  },
+  "MenuLabelBorderRadius": {
+    "type": "BorderRadius",
+    "selector": ".menu-label"
+  },
+  "MenuLabelPadding": {
+    "type": "Padding",
+    "selector": ".menu-label",
+    "value": {
+      "padding":"1",
+      "padding-left":"5",
+      "padding-right":"5"
+    }
+  },
+  "MenuLabelShadow": {
+    "type": "Shadow",
+    "selector": ".menu-label"
+  },
+  "MenuLabelShadowHover": {
+    "type": "Shadow",
+    "selector": "&:hover .menu-label"
+  },
+  "MenuLabelOffset": {
+    "type": "InputPair",
+    "selector": ".menu-label",
+    "properties": {
+      "first": "margin-right:calc(0px - (%spx))",
+      "second": "margin-top:%spx"
+    },
+    "rtlProperties": {
+      "first": "margin-left:calc(0px - (%spx))",
+      "second": "margin-top:%spx"
+    }
+  }
+}

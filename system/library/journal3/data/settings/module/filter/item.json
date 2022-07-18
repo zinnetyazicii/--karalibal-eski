@@ -1,0 +1,79 @@
+{
+  "id": {
+    "type": "Input"
+  },
+  "title": {
+    "type": "InputLang",
+    "php": true
+  },
+  "status": {
+    "type": "Toggle"
+  },
+  "display": {
+    "type": "Radio",
+    "value": "both",
+    "php": true
+  },
+  "input": {
+    "type": "Radio",
+    "value": "",
+    "php": true
+  },
+  "hideInput": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".module-filter-%s .module-item-%s .panel-body > div > label input": "display:inline-block",
+        ".module-filter-%s .module-item-%s .panel-body > div > label input + *": "margin:0 5px"
+      },
+      "false": {
+        ".module-filter-%s .module-item-%s .panel-body > div > label input": "display:none",
+        ".module-filter-%s .module-item-%s .panel-body > div > label input + *": "margin:0"
+      }
+    }
+  },
+  "collapsed": {
+    "type": "Toggle",
+    "value": ""
+  },
+  "sortOrder": {
+    "type": "Input",
+    "value": "100",
+    "selector": ".module-filter-%s .module-item-%s",
+    "property": "order"
+  },
+  "sectionCustomHeight": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".module-filter-%s .module-item-%s .panel-body": "max-height:%spx"
+      }
+    }
+  },
+  "sectionCustomBackground": {
+    "type": "Background",
+    "selector": ".module-filter-%s .module-item-%s .panel-body"
+  },
+  "itemFilterCountBadgeVisibility": {
+    "type": "Toggle",
+    "value": "false",
+    "rules": {
+      "true": {
+        ".module-filter-%s .module-item-%s .count-badge": "display: inline-flex"
+      },
+      "false": {
+        ".module-filter-%s .module-item-%s .count-badge": "display: none"
+      }
+    }
+  },
+  "inStockText": {
+    "type": "InputLang",
+    "value": "In Stock",
+    "php": true
+  },
+  "outOfStockText": {
+    "type": "InputLang",
+    "value": "Out of Stock",
+    "php": true
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "name": {
+    "type": "InputLang",
+    "value": "New Blog Post"
+  },
+  "keyword": {
+    "type": "InputLang"
+  },
+  "status": {
+    "type": "Toggle"
+  },
+  "sort_order": {
+    "type": "Input"
+  },
+  "comments": {
+    "type": "Toggle",
+    "value": ""
+  },
+  "image": {
+    "type": "Image"
+  },
+  "author_id": {
+    "type": "Select"
+  },
+  "description": {
+    "type": "InputLang"
+  },
+  "date_created": {
+    "type": "Input"
+  },
+  "meta_title": {
+    "type": "InputLang"
+  },
+  "meta_keywords": {
+    "type": "InputLang"
+  },
+  "meta_description": {
+    "type": "InputLang"
+  },
+  "tags": {
+    "type": "InputLang"
+  }
+}

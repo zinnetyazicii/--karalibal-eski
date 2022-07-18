@@ -1,0 +1,36 @@
+{
+  "countdownStatus": {
+    "type": "Toggle",
+    "value": "true",
+    "php": true
+  },
+  "countdownStyle": {
+    "type": "Variable",
+    "variable": "countdown",
+    "selector_prefix": ""
+  },
+  "countdownDay": {
+    "type": "InputLang",
+    "value": "Day",
+    "js": true,
+    "php": true
+  },
+  "countdownHour": {
+    "type": "InputLang",
+    "value": "Hour",
+    "js": true,
+    "php": true
+  },
+  "countdownMin": {
+    "type": "InputLang",
+    "value": "Min",
+    "js": true,
+    "php": true
+  },
+  "countdownSec": {
+    "type": "InputLang",
+    "value": "Sec",
+    "js": true,
+    "php": true
+  }
+}

@@ -1,0 +1,10 @@
+{% for key, value in data %}
+{% if value is iterable %}
+window['_oc_{{ key }}'] = {{ value | json_encode }};
+{% elseif value matches '/^\\d+$/' %}
+window['_oc_{{ key }}'] = {{ value }};
+{% else %}
+window['_oc_{{ key }}'] = '{{ value }}';
+{% endif %}
+{% endfor %}
+$('html').addClass('oc3');

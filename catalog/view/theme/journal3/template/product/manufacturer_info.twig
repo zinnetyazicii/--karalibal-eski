@@ -1,0 +1,80 @@
+{{ header }}
+<ul class="breadcrumb">
+  {% for breadcrumb in breadcrumbs %}
+  <li><a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a></li>
+  {% endfor %}
+</ul>
+{% if j3.settings.get('pageTitlePosition') == 'top' %}
+  <h1 class="title page-title"><span>{{ heading_title }}</span></h1>
+{% endif %}
+{{ j3.loadController('journal3/layout', 'top') }}
+<div id="product-manufacturer" class="container">
+  <div class="row">{{ column_left }}
+    {% if column_left and column_right %}
+    {% set class = 'col-sm-6' %}
+    {% elseif column_left or column_right %}
+    {% set class = 'col-sm-9' %}
+    {% else %}
+    {% set class = 'col-sm-12' %}
+    {% endif %}
+    <div id="content" class="{{ class }}">
+      {% if j3.settings.get('pageTitlePosition') == 'default' %}
+        <h1 class="title page-title">{{ heading_title }}</h1>
+      {% endif %}
+      {{ content_top }}
+      <div class="main-products-wrapper">
+      {% if products %}
+        {% if j3.settings.get('sortBarStatus') %}
+        <div class="products-filter">
+          <div class="grid-list">
+            <button id="btn-grid-view" class="view-btn {% if j3.settings.get('globalProductView') == 'grid' %}active{% endif %}" data-toggle="tooltip" title="{{ button_grid }}" data-view="grid"></button>
+            <button id="btn-list-view" class="view-btn {% if j3.settings.get('globalProductView') == 'list' %}active{% endif %}" data-toggle="tooltip" title="{{ button_list }}" data-view="list"></button>
+            <a href="{{ compare }}" id="compare-total" class="compare-btn">{{ text_compare }}</a>
+          </div>
+          <div class="select-group">
+            <div class="input-group input-group-sm sort-by">
+              <label class="input-group-addon" for="input-sort">{{ text_sort }}</label>
+              <select id="input-sort" class="form-control" onchange="location = this.value;">
+                {% for sorts in sorts %}
+                  {% if sorts.value == '%s-%s'|format(sort, order) %}
+                    <option value="{{ sorts.href }}" selected="selected">{{ sorts.text }}</option>
+                  {% else %}
+                    <option value="{{ sorts.href }}">{{ sorts.text }}</option>
+                  {% endif %}
+                {% endfor %}
+              </select>
+            </div>
+            <div class="input-group input-group-sm per-page">
+              <label class="input-group-addon" for="input-limit">{{ text_limit }}</label>
+              <select id="input-limit" class="form-control" onchange="location = this.value;">
+                {% for limits in limits %}
+                  {% if limits.value == limit %}
+                    <option value="{{ limits.href }}" selected="selected">{{ limits.text }}</option>
+                  {% else %}
+                    <option value="{{ limits.href }}">{{ limits.text }}</option>
+                  {% endif %}
+                {% endfor %}
+              </select>
+            </div>
+          </div>
+        </div>
+        {% endif %}
+        <div class="main-products product-{{ j3.settings.get('globalProductView') }}">
+          {% set display = j3.settings.get('globalProductView') %}
+          {% include "journal3/template/journal3/product_card.twig" %}
+        </div>
+        <div class="row pagination-results">
+          <div class="col-sm-6 text-left">{{ pagination }}</div>
+          <div class="col-sm-6 text-right">{{ results }}</div>
+        </div>
+      {% else %}
+        <p>{{ text_empty }}</p>
+        <div class="buttons">
+          <div class="pull-right"><a href="{{ continue }}" class="btn btn-primary">{{ button_continue }}</a></div>
+        </div>
+      {% endif %}
+      </div>
+      {{ content_bottom }}</div>
+    {{ column_right }}</div>
+</div>
+{{ footer }}

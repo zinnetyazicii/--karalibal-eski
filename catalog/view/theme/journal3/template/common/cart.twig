@@ -1,0 +1,70 @@
+{% if j3.settings.get('catalogMiniCartStatus') %}
+<div id="cart" class="dropdown">
+  <a data-toggle="dropdown" data-loading-text="{{ text_loading }}" class="dropdown-toggle cart-heading" {% if j3.settings.get('cartStyleCartCheckoutLink') %}href="{{ cart }}"{% endif %}>
+    {% if j3.settings.get('cartStyleCartCustomText') == 'default' %}
+    <span id="cart-total">{{ text_items }}</span>
+    {% endif %}
+    <i class="fa fa-shopping-cart">
+      {% if j3.settings.get('cartStyleCartCustomText') == 'custom' %}
+        <span class="cart-label">{{ j3.settings.get('cartStyleCartLabel') }}</span>
+      {% endif %}
+    </i>
+    <span id="cart-items" class="count-badge {% if not items_count %}count-zero{% endif %}">{{ items_count }}</span>
+  </a>
+  <div id="cart-content" class="dropdown-menu cart-content j-dropdown">
+    <ul>
+      {% if products or vouchers %}
+      <li class="cart-products">
+        <table class="table">
+          {% for product in products %}
+          <tr>
+            <td class="text-center td-image">{% if product.thumb %}
+              <a href="{{ product.href }}"><img src="{{ product.thumb }}" alt="{{ product.name }}" title="{{ product.name }}"/></a>
+              {% endif %}
+            <td class="text-left td-name"><a href="{{ product.href }}">{{ product.name }}</a><br /> {% if product.option %}
+            {% for option in product.option %}
+            <span>{{ option.name }}</span><small> {{ option.value }}</small><br /> {% endfor %}
+            {% endif %}
+            {% if product.recurring %}
+            <span>{{ text_recurring }}</span><small> {{ product.recurring }}</small> {% endif %}</td>
+            <td class="text-right td-qty">x {{ product.quantity }}</td>
+            <td class="text-right td-total">{{ product.total }}</td>
+            <td class="text-center td-remove"><button type="button" onclick="cart.remove('{{ product.cart_id }}');" title="{{ button_remove }}" class="cart-remove"><i class="fa fa-times-circle"></i></button></td>
+          </tr>
+          {% endfor %}
+          {% for voucher in vouchers %}
+          <tr>
+            <td class="text-center"></td>
+            <td class="text-left">{{ voucher.description }}</td>
+            <td class="text-right">x&nbsp;1</td>
+            <td class="text-right">{{ voucher.amount }}</td>
+            <td class="text-center text-danger"><button type="button" onclick="voucher.remove('{{ voucher.key }}');" title="{{ button_remove }}" class="btn btn-danger btn-xs"><i class="fa fa-times"></i></button></td>
+          </tr>
+          {% endfor %}
+        </table>
+      </li>
+      <li class="cart-totals">
+        <div>
+          <table class="table table-bordered">
+            {% for total in totals %}
+            <tr>
+              <td class="text-right td-total-title">{{ total.title }}</td>
+              <td class="text-right td-total-text">{{ total.text }}</td>
+            </tr>
+            {% endfor %}
+          </table>
+          <div class="cart-buttons">
+            <a class="btn-cart btn" href="{{ cart }}"><i class="fa"></i><span>{{ text_cart }}</span></a>
+            <a class="btn-checkout btn" href="{{ checkout }}"><i class="fa"></i><span>{{ text_checkout }}</span></a>
+          </div>
+        </div>
+      </li>
+      {% else %}
+      <li>
+        <p class="text-center cart-empty">{{ text_empty }}</p>
+      </li>
+      {% endif %}
+    </ul>
+  </div>
+</div>
+{% endif %}

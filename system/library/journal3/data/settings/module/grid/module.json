@@ -1,0 +1,8 @@
+{
+  "width": {
+    "type": "Select",
+    "value": "100",
+    "selector": ".module-grid-%s > .grid-rows > .grid-row-%s > .grid-cols > .grid-col-%s > .grid-items > .grid-item-%s",
+    "property": "width: %s%"
+  }
+}

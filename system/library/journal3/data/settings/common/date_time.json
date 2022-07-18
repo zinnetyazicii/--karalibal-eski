@@ -1,0 +1,96 @@
+{
+  "DateTimeFont": {
+    "type": "Font",
+    "selector": "&.bootstrap-datetimepicker-widget"
+  },
+  "DateTimeBackground": {
+    "type": "Background",
+    "selector": "&.bootstrap-datetimepicker-widget"
+  },
+  "TriangleColor": {
+    "type": "Color",
+    "important": true,
+    "rules": {
+      "@": {
+        "&.bootstrap-datetimepicker-widget.bottom:after": "border-bottom-color:%s",
+        "&.bootstrap-datetimepicker-widget.top:after": "border-top-color:%s"
+      }
+    }
+  },
+  "DateTimePadding": {
+    "type": "Padding",
+    "selector": "&.bootstrap-datetimepicker-widget"
+  },
+  "DateTimeBorder": {
+    "type": "Border",
+    "selector": "&.bootstrap-datetimepicker-widget"
+  },
+  "DateTimeBorderRadius": {
+    "type": "BorderRadius",
+    "selector": "&.bootstrap-datetimepicker-widget"
+  },
+  "DateTimeShadow": {
+    "type": "Shadow",
+    "selector": "&.bootstrap-datetimepicker-widget"
+  },
+
+  "ButtonStyle": {
+    "type": "Variable",
+    "variable": "button",
+    "selector_prefix": "&.bootstrap-datetimepicker-widget"
+  },
+
+  "TriangleOffset": {
+    "type": "InputPair",
+    "selector": "&.bootstrap-datetimepicker-widget::after",
+    "properties": {
+      "first": "transform: translateX(%spx)",
+      "second": "transform: translateY(%spx)"
+    },
+    "rtlProperties": {
+      "first": "transform: translateX(calc(0px - (%spx)))",
+      "second": "transform: translateY(%spx)"
+    },
+    "important": true
+  },
+  "HoverFont": {
+    "type": "Font",
+    "selector": "&.bootstrap-datetimepicker-widget td:hover, &.bootstrap-datetimepicker-widget th:hover, &.bootstrap-datetimepicker-widget td > span:hover",
+    "important": true
+  },
+  "DateTimeItemBackground": {
+    "type": "Background",
+    "selector": "&.bootstrap-datetimepicker-widget td, &.bootstrap-datetimepicker-widget th, &.bootstrap-datetimepicker-widget td > span"
+  },
+  "HoverBackground": {
+    "type": "Background",
+    "selector": "&.bootstrap-datetimepicker-widget td:hover, &.bootstrap-datetimepicker-widget th:hover, &.bootstrap-datetimepicker-widget td > span:hover",
+    "important": true
+  },
+  "ItemShadow": {
+    "type": "Shadow",
+    "selector": "&.bootstrap-datetimepicker-widget td, &.bootstrap-datetimepicker-widget th, &.bootstrap-datetimepicker-widget td > span"
+  },
+  "HoverShadow": {
+    "type": "Shadow",
+    "selector": "&.bootstrap-datetimepicker-widget td:hover, &.bootstrap-datetimepicker-widget th:hover, &.bootstrap-datetimepicker-widget td > span:hover"
+  },
+
+  "ItemBorderRadius": {
+    "type": "BorderRadius",
+    "selector": "&.bootstrap-datetimepicker-widget td, &.bootstrap-datetimepicker-widget th, &.bootstrap-datetimepicker-widget td > span"
+  },
+
+  "ActiveFont": {
+    "type": "Font",
+    "selector": "&.bootstrap-datetimepicker-widget td.active"
+  },
+  "ActiveBackground": {
+    "type": "Background",
+    "selector": "&.bootstrap-datetimepicker-widget td.active"
+  },
+  "ActiveShadow": {
+    "type": "Shadow",
+    "selector": "&.bootstrap-datetimepicker-widget td.active"
+  }
+}

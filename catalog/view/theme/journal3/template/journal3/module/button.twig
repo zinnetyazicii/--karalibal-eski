@@ -1,0 +1,7 @@
+<div class="{{ j3.classes(classes) }}">
+  {% if link.href %}
+    <a class="btn" href="{{ link.href }}" {{ j3.linkAttrs(link) }}>{{ title }}</a>
+  {% else %}
+    <a class="btn">{{ title }}</a>
+  {% endif %}
+</div>

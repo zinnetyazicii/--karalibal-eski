@@ -1,0 +1,18 @@
+{
+  "Border": {
+    "type": "Border",
+    "selector": ""
+  },
+  "BorderRadius": {
+    "type": "BorderRadius",
+    "selector": ""
+  },
+  "Margin": {
+    "type": "Margin",
+    "selector": ""
+  },
+  "Shadow": {
+    "type": "Shadow",
+    "selector": ""
+  }
+}

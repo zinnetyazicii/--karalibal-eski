@@ -1,0 +1,9 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "POPUP_STYLE"
+  },
+  "value": {
+    "include": "popup"
+  }
+}

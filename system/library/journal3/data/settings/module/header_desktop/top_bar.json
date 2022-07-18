@@ -1,0 +1,60 @@
+{
+  "headerTopBarHeight": {
+    "type": "InputNumber",
+    "value": "35",
+    "rules": {
+      "@": {
+        ".desktop-header-active .header .top-bar": "height: %spx",
+        ".desktop-header-active header::before": "content:''; height: %spx"
+      }
+    },
+    "php": true,
+    "js": true
+  },
+
+  "headerTopBarBG": {
+    "type": "Background",
+    "selector": ".header .top-bar"
+  },
+
+  "topBarPadding": {
+    "type": "Padding",
+    "selector": ".header .top-bar"
+  },
+
+  "headerTopBarFullBG": {
+    "type": "Background",
+    "selector": "header::before"
+  },
+
+  "headerTopBarFullBorder": {
+    "type": "Border",
+    "selector": "header::before"
+  },
+
+  "headerTopBarFullShadow": {
+    "type": "Shadow",
+    "selector": "header::before"
+  },
+
+  "topBarMaxWidth": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".desktop-header-active .header .top-bar": "max-width: %spx"
+      }
+    }
+  },
+
+  "topBarStatus": {
+    "type": "Toggle",
+    "php": true,
+    "js": true,
+    "rules": {
+      "false": {
+        ".desktop-header-active .header .top-bar": "display: none",
+        ".desktop-header-active header::before": "display: none"
+      }
+    }
+  }
+}

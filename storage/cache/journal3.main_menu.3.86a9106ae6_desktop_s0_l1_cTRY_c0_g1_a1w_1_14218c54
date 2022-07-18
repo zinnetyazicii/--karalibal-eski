@@ -1,0 +1,226 @@
+<?php $val = array (
+  'css' => 'div.main-menu.main-menu-3 > .j-menu .menu-item.main-menu-item-1>a::before{content:\'\\e8d2\' !important;font-family:icomoon !important;color:rgba(44, 54, 64, 1);top:-1px}div.main-menu.main-menu-3 > .j-menu li.main-menu-item-1>a{color:rgba(105, 105, 115, 1) !important}.desktop-main-menu-wrapper .main-menu-3 .mega-custom.main-menu-item-1 .mega-menu-content{width:500px;position:relative;left:0;transform:none}.desktop-main-menu-wrapper .main-menu-3 .mega-custom.main-menu-item-1>.dropdown-menu::before{left:0;transform:none}.desktop-main-menu-wrapper .main-menu-3 > .j-menu li.main-menu-item-1:not(.mega-fullwidth)>.dropdown-menu::before{display:block;border-bottom-color:rgba(254, 208, 117, 1)}.desktop-main-menu-wrapper .main-menu-3 > .j-menu li.main-menu-item-1.multi-level .dropdown-menu ul li .dropdown-menu{left:100%}.main-menu-3 > .j-menu li.main-menu-item-1>a>.menu-label{color:rgba(51, 51, 51, 1);background:rgba(254, 208, 117, 1);padding:1px;padding-right:5px;padding-left:5px}.desktop-main-menu-wrapper .main-menu-3 .main-menu-item-1>a>.menu-label{margin-right:calc(0px - (-10px));margin-top:13px}div.main-menu.main-menu-3 > .j-menu .menu-item.main-menu-item-2>a::before{color:rgba(51, 51, 51, 1)}div.main-menu.main-menu-3 > .j-menu li.main-menu-item-2>a{color:rgba(105, 105, 115, 1) !important}.desktop-main-menu-wrapper .main-menu-3 .mega-custom.main-menu-item-2 .mega-menu-content{width:500px;position:relative;left:0;transform:none}.desktop-main-menu-wrapper .main-menu-3 .mega-custom.main-menu-item-2>.dropdown-menu::before{left:0;transform:none}.desktop-main-menu-wrapper .main-menu-3 > .j-menu li.main-menu-item-2:not(.mega-fullwidth)>.dropdown-menu::before{display:block;margin-top:-10px}.desktop-main-menu-wrapper .main-menu-3 > .j-menu li.main-menu-item-2.multi-level .dropdown-menu ul li .dropdown-menu{left:100%}div.main-menu.main-menu-3 > .j-menu li.main-menu-item-3>a{color:rgba(105, 105, 115, 1) !important}.desktop-main-menu-wrapper .main-menu-3 .mega-custom.main-menu-item-3 .mega-menu-content{width:500px;position:relative;left:0;transform:none}.desktop-main-menu-wrapper .main-menu-3 .mega-custom.main-menu-item-3>.dropdown-menu::before{left:0;transform:none}.desktop-main-menu-wrapper .main-menu-3 > .j-menu li.main-menu-item-3:not(.mega-fullwidth)>.dropdown-menu::before{display:block;margin-top:-10px}.desktop-main-menu-wrapper .main-menu-3 > .j-menu li.main-menu-item-3.multi-level .dropdown-menu ul li .dropdown-menu{left:100%}div.main-menu.main-menu-3 > .j-menu li.main-menu-item-4>a{color:rgba(105, 105, 115, 1) !important}.desktop-main-menu-wrapper .main-menu-3 .mega-custom.main-menu-item-4 .mega-menu-content{width:500px;position:relative;left:0;transform:none}.desktop-main-menu-wrapper .main-menu-3 .mega-custom.main-menu-item-4>.dropdown-menu::before{left:0;transform:none}.desktop-main-menu-wrapper .main-menu-3 > .j-menu li.main-menu-item-4:not(.mega-fullwidth)>.dropdown-menu::before{display:block;margin-top:-10px}.desktop-main-menu-wrapper .main-menu-3 > .j-menu li.main-menu-item-4.multi-level .dropdown-menu ul li .dropdown-menu{left:100%}div.main-menu.main-menu-3 > .j-menu li.main-menu-item-5>a{color:rgba(105, 105, 115, 1) !important}.desktop-main-menu-wrapper .main-menu-3 .mega-custom.main-menu-item-5 .mega-menu-content{width:500px;position:relative;left:0;transform:none}.desktop-main-menu-wrapper .main-menu-3 .mega-custom.main-menu-item-5>.dropdown-menu::before{left:0;transform:none}.desktop-main-menu-wrapper .main-menu-3 > .j-menu li.main-menu-item-5:not(.mega-fullwidth)>.dropdown-menu::before{display:block;margin-top:-10px}.desktop-main-menu-wrapper .main-menu-3 > .j-menu li.main-menu-item-5.multi-level .dropdown-menu ul li .dropdown-menu{left:100%}',
+  'fonts' => 
+  array (
+  ),
+  'settings' => 
+  array (
+    'status' => true,
+    'id' => 'main-menu',
+    'module_id' => 3,
+    'classes' => 
+    array (
+      0 => 'main-menu',
+      1 => 'main-menu-3',
+      'accordion-menu' => false,
+    ),
+    'display' => 'dropdown',
+    'items' => 
+    array (
+      1 => 
+      array (
+        'title' => 'ÜRÜNLER',
+        'label' => '',
+        'link' => 
+        array (
+          'type' => 'category',
+          'id' => '',
+          'href' => '',
+          'name' => '',
+          'total' => NULL,
+          'attrs' => 
+          array (
+          ),
+          'classes' => 
+          array (
+          ),
+        ),
+        'type' => 'flyout',
+        'mobileOpen' => true,
+        'classes' => 
+        array (
+          0 => 'menu-item',
+          1 => 'main-menu-item',
+          2 => 'main-menu-item-1',
+          3 => 'dropdown',
+          4 => 'flyout',
+          'icon-only' => false,
+          'menu-fullwidth' => false,
+          'mega-fullwidth' => false,
+          'mega-custom' => false,
+          'drop-menu' => true,
+        ),
+        'items' => '7',
+        'isOpen' => true,
+      ),
+      2 => 
+      array (
+        'title' => 'Blog',
+        'label' => '',
+        'link' => 
+        array (
+          'type' => 'blog_home',
+          'id' => '',
+          'href' => 'http://localhost/index.php?route=journal3/blog',
+          'name' => '',
+          'total' => NULL,
+          'attrs' => 
+          array (
+          ),
+          'classes' => 
+          array (
+          ),
+        ),
+        'type' => '',
+        'mobileOpen' => false,
+        'classes' => 
+        array (
+          0 => 'menu-item',
+          1 => 'main-menu-item',
+          2 => 'main-menu-item-2',
+          'multi-level' => true,
+          'dropdown' => false,
+          'drop-menu' => 
+          array (
+            0 => false,
+            1 => false,
+          ),
+          'icon-only' => false,
+          'menu-fullwidth' => false,
+          'mega-fullwidth' => false,
+          'mega-custom' => false,
+        ),
+        'items' => 
+        array (
+        ),
+        'isOpen' => false,
+      ),
+      3 => 
+      array (
+        'title' => 'HAKKIMIZDA',
+        'label' => '',
+        'link' => 
+        array (
+          'type' => 'information',
+          'id' => '4',
+          'href' => 'http://localhost/index.php?route=information/information&amp;information_id=4',
+          'name' => 'Hakkımızda',
+          'total' => NULL,
+          'attrs' => 
+          array (
+          ),
+          'classes' => 
+          array (
+          ),
+        ),
+        'type' => 'multilevel',
+        'mobileOpen' => false,
+        'classes' => 
+        array (
+          0 => 'menu-item',
+          1 => 'main-menu-item',
+          2 => 'main-menu-item-3',
+          'multi-level' => true,
+          'dropdown' => false,
+          'drop-menu' => 
+          array (
+            0 => false,
+            1 => true,
+          ),
+          'icon-only' => false,
+          'menu-fullwidth' => false,
+          'mega-fullwidth' => false,
+          'mega-custom' => false,
+        ),
+        'items' => 
+        array (
+        ),
+        'isOpen' => false,
+      ),
+      4 => 
+      array (
+        'title' => 'ŞUBELERİMİZ',
+        'label' => '',
+        'link' => 
+        array (
+          'type' => 'information',
+          'id' => '8',
+          'href' => 'http://localhost/index.php?route=information/information&amp;information_id=8',
+          'name' => 'Şubeler',
+          'total' => NULL,
+          'attrs' => 
+          array (
+          ),
+          'classes' => 
+          array (
+          ),
+        ),
+        'type' => 'multilevel',
+        'mobileOpen' => false,
+        'classes' => 
+        array (
+          0 => 'menu-item',
+          1 => 'main-menu-item',
+          2 => 'main-menu-item-4',
+          'multi-level' => true,
+          'dropdown' => false,
+          'drop-menu' => 
+          array (
+            0 => false,
+            1 => true,
+          ),
+          'icon-only' => false,
+          'menu-fullwidth' => false,
+          'mega-fullwidth' => false,
+          'mega-custom' => false,
+        ),
+        'items' => 
+        array (
+        ),
+        'isOpen' => false,
+      ),
+      5 => 
+      array (
+        'title' => 'İLETİŞİM',
+        'label' => '',
+        'link' => 
+        array (
+          'type' => 'page',
+          'id' => '8',
+          'href' => 'http://localhost/index.php?route=information/contact',
+          'name' => '',
+          'total' => NULL,
+          'attrs' => 
+          array (
+          ),
+          'classes' => 
+          array (
+          ),
+        ),
+        'type' => 'multilevel',
+        'mobileOpen' => false,
+        'classes' => 
+        array (
+          0 => 'menu-item',
+          1 => 'main-menu-item',
+          2 => 'main-menu-item-5',
+          'multi-level' => true,
+          'dropdown' => false,
+          'drop-menu' => 
+          array (
+            0 => false,
+            1 => true,
+          ),
+          'icon-only' => false,
+          'menu-fullwidth' => false,
+          'mega-fullwidth' => false,
+          'mega-custom' => false,
+        ),
+        'items' => 
+        array (
+        ),
+        'isOpen' => false,
+      ),
+    ),
+  ),
+);

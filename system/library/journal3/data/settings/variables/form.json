@@ -1,0 +1,9 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "NEW_FORM"
+  },
+  "value": {
+    "include": "form"
+  }
+}

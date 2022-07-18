@@ -1,0 +1,94 @@
+{
+  "MarginTop": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".popup-inner-body": "max-height:calc(100vh - %spx * 2)"
+      }
+    }
+  },
+  "MarginSide": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".popup-container": "max-width:calc(100% - %spx * 2)"
+      }
+    }
+  },
+  "Backdrop": {
+    "type": "Background",
+    "selector": ".popup-bg",
+    "value": {
+      "background-color": "rgba(0,0,0,.7)"
+    }
+  },
+  "Background": {
+    "type": "Background",
+    "selector": ".popup-body, .popup"
+  },
+  "Padding": {
+    "type": "Padding",
+    "selector": ".popup-content, .popup .site-wrapper"
+  },
+  "PopupBorder": {
+    "type": "Border",
+    "selector": ".popup-body"
+  },
+  "PopupBorderRadius": {
+    "type": "BorderRadius",
+    "selector": ".popup-body"
+  },
+  "PopupShadow": {
+    "type": "Shadow",
+    "selector": ".popup-body"
+  },
+  "CloseIcon": {
+    "type": "Icon",
+    "selector": ".popup-container .popup-close::before",
+    "value": {
+      "icon": {
+        "name": "close2",
+        "code": "e5cd"
+      }
+    }
+  },
+  "CloseSize": {
+    "type": "InputPair",
+    "selector": ".popup-close",
+    "properties": {
+      "first": "width:%spx",
+      "second": "height:%spx",
+      "value": {
+        "first": "30",
+        "second": "30"
+      }
+    }
+  },
+  "CloseOffset": {
+    "type": "InputPair",
+    "selector": ".popup-close",
+    "properties": {
+      "first": "margin-right:%spx",
+      "second": "margin-top:%spx"
+    },
+    "rtlProperties": {
+      "first": "margin-left:%spx",
+      "second": "margin-top:%spx"
+    }
+  },
+  "CloseBorderRadius": {
+    "type": "BorderRadius",
+    "selector": ".popup-container .btn.popup-close",
+    "important": true
+  },
+  "ClosePadding": {
+    "type": "Padding",
+    "selector": ".popup-container .btn.popup-close",
+    "important": true
+  },
+  "CloseStyle": {
+    "type": "Variable",
+    "variable": "button",
+    "selector_prefix": ".popup-container >"
+  }
+}

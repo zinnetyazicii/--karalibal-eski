@@ -1,0 +1,115 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "New Button Module"
+  },
+  "status": {
+    "type": "Status"
+  },
+  "schedule": {
+    "type": "Range",
+    "php": true
+  },
+  "title": {
+    "type": "InputLang",
+    "php": true
+  },
+  "link": {
+    "type": "Link",
+    "php": true
+  },
+  "scale": {
+    "type": "InputSlider",
+    "value": "100",
+    "rules": {
+      "@": {
+        ".module-button-%s .btn": "transform: scale(calc(%s / 100))"
+      }
+    }
+  },
+  "scaleOrigin": {
+    "type": "Radio",
+    "value": "center",
+    "rules": {
+      "tl": {
+        ".module-button-%s .btn": "transform-origin: top left"
+      },
+      "tr": {
+        ".module-button-%s .btn": "transform-origin: top right"
+      },
+      "center": {
+        ".module-button-%s .btn": "transform-origin: center"
+      },
+      "bl": {
+        ".module-button-%s .btn": "transform-origin: bottom left"
+      },
+      "br": {
+        ".module-button-%s .btn": "transform-origin: bottom right"
+      }
+    }
+  },
+  "align": {
+    "type": "Radio",
+    "value": "center",
+    "rules": {
+      "left": {
+        ".module-button-%s": "display:flex; justify-content:flex-start"
+      },
+      "center": {
+        ".module-button-%s": "display:flex; justify-content:center"
+      },
+      "right": {
+        ".module-button-%s": "display:flex; justify-content:flex-end"
+      }
+    }
+  },
+
+  "width": {
+    "type": "Radio",
+    "value": "auto",
+    "rules": {
+      "auto": {
+        ".module-button-%s .btn": "width:auto"
+      },
+      "full": {
+        ".module-button-%s .btn": "width:100%"
+      }
+    }
+  },
+  "style": {
+    "type": "Variable",
+    "variable": "button",
+    "selector_prefix": ".module-button-%s"
+  },
+  "iconLeft": {
+    "type": "Icon",
+    "selector": ".module-button-%s .btn::before"
+  },
+  "iconLeftHover": {
+    "type": "Color",
+    "selector": ".module-button-%s .btn:hover::before",
+    "property": "color"
+  },
+  "iconRight": {
+    "type": "Icon",
+    "selector": ".module-button-%s .btn::after"
+  },
+  "iconRightHover": {
+    "type": "Color",
+    "selector": ".module-button-%s .btn:hover::after",
+    "property": "color"
+  },
+  "margin": {
+    "type": "Margin",
+    "selector": ".module-button-%s .btn"
+  },
+  "padding": {
+    "type": "Padding",
+    "selector": ".module-button-%s .btn"
+  },
+  "borderRadius": {
+    "type": "BorderRadius",
+    "selector": ".module-button-%s .btn",
+    "important": true
+  }
+}

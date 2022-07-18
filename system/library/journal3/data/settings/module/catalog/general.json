@@ -1,0 +1,120 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "New Catalog "
+  },
+  "status": {
+    "type": "Status"
+  },
+  "schedule": {
+    "type": "Range",
+    "php": true
+  },
+  "title": {
+    "type": "InputLang",
+    "php": true
+  },
+  "images": {
+    "type": "Toggle",
+    "php": true
+  },
+  "changeImageOnHover": {
+    "type": "Toggle",
+    "value": "true"
+  },
+  "carouselGutter": {
+    "type": "Padding",
+    "selector": ".module-catalog-%s .swiper-container"
+  },
+  "imageDimensions": {
+    "type": "ImageDimensions",
+    "value": {
+      "width": "150",
+      "height": "150"
+    },
+    "php": true
+  },
+  "itemsPerRow": {
+    "type": "ItemsPerRow",
+    "selector": ".module-catalog-%s .module-item",
+    "php": true
+  },
+  "carousel": {
+    "type": "Toggle",
+    "value": "false",
+    "php": true,
+    "device": true
+  },
+  "carouselTablet": {
+    "type": "Toggle",
+    "value": "",
+    "php": true
+  },
+  "carouselPhone": {
+    "type": "Toggle",
+    "value": "",
+    "php": true
+  },
+  "carouselStyle": {
+    "type": "Variable",
+    "variable": "carousel",
+    "selector_prefix": ".module-catalog-%s "
+  },
+  "moduleStyle": {
+    "type": "Variable",
+    "variable": "catalog",
+    "selector_prefix": ".module-catalog-%s "
+  },
+  "moduleTitle": {
+    "type": "Variable",
+    "variable": "title",
+    "selector_prefix": ".module-catalog-%s .title.module-title"
+  },
+  "containerMargin": {
+    "type": "Margin",
+    "selector": ".module-catalog-%s .module-body"
+  },
+  "viewMoreText": {
+    "type": "InputLang",
+    "value": "View More",
+    "php": true
+  },
+  "MarginOverride": {
+    "type": "Margin",
+    "selector": ".module-catalog-%s .item-content .catalog-image"
+  },
+
+  "PositionOverride": {
+    "type": "Radio",
+    "value": "",
+    "rules": {
+      "left": {
+        ".module-catalog-%s div.item-assets": "flex-direction:row",
+        ".module-catalog-%s div.item-assets > a":"max-width: 40%; order:0",
+        ".module-catalog-%s div.item-assets .subitems": "width:60%",
+        ".module-catalog-%s div.item-assets .catalog-image":"display:block"
+      },
+      "top": {
+        ".module-catalog-%s div.item-assets": "flex-direction:column",
+        ".module-catalog-%s div.item-assets > a":"max-width: 100%; order:0",
+        ".module-catalog-%s div.item-assets .subitems": "width:100%",
+        ".module-catalog-%s div.item-assets .catalog-image":"display:block"
+      },
+      "bottom": {
+        ".module-catalog-%s div.item-assets": "flex-direction:column",
+        ".module-catalog-%s div.item-assets > a":"max-width: 100%; order:2",
+        ".module-catalog-%s div.item-assets .subitems": "width:100%",
+        ".module-catalog-%s div.item-assets .catalog-image":"display:block"
+      },
+      "right": {
+        ".module-catalog-%s div.item-assets": "flex-direction:row",
+        ".module-catalog-%s div.item-assets > a":"max-width: 40%; order:5",
+        ".module-catalog-%s div.item-assets .subitems": "width:60%",
+        ".module-catalog-%s div.item-assets .catalog-image":"display:block"
+      },
+      "none":{
+        ".module-catalog-%s div.item-assets .catalog-image":"display:none"
+      }
+    }
+  }
+}

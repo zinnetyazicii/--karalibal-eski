@@ -1,0 +1,121 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "Menu Item"
+  },
+  "status": {
+    "type": "Status"
+  },
+  "title": {
+    "type": "InputLang",
+    "value": "Sub Menu Item",
+    "php": true
+  },
+  "icon": {
+    "type": "Icon",
+    "selector": ".main-menu-%s .main-menu-item-%s > a::before"
+  },
+  "iconHover": {
+    "type": "Color",
+    "selector": ".main-menu-%s .main-menu-item-%s:hover > a::before",
+    "property": "color",
+    "desktop":true
+  },
+  "font": {
+    "type": "Icon",
+    "selector": ".main-menu-%s .main-menu-item-%s > a::before"
+  },
+  "fontHover": {
+    "type": "Font",
+    "selector": ".main-menu-%s .main-menu-item-%s:hover > a::before",
+    "desktop":true
+  },
+  "bg": {
+    "type": "Background",
+    "selector": ".main-menu-%s .main-menu-item-%s"
+  },
+  "bgHover": {
+    "type": "Background",
+    "selector": ".main-menu-%s .main-menu-item-%s:hover",
+    "desktop":true
+  },
+  "link": {
+    "type": "Link",
+    "php": true
+  },
+  "subcategories": {
+    "type": "Toggle"
+  },
+  "type": {
+    "type": "Radio",
+    "value": "multilevel",
+    "php": true
+  },
+  "flyout": {
+    "type": "Module"
+  },
+  "position": {
+    "type": "Radio",
+    "value": "left",
+    "php": true
+  },
+  "flyoutMegaMenuWidth": {
+    "type": "InputNumber",
+    "selector": ".main-menu-%s .mega-menu.main-menu-item-%s .dropdown-menu",
+    "property": "width:%spx",
+    "value": "800"
+  },
+  "flyoutMegaMenuBG": {
+    "type": "Background",
+    "selector": ".main-menu-%s .mega-menu.main-menu-item-%s .dropdown-menu"
+  },
+  "flyoutMegaMenuBorder": {
+    "type": "Border",
+    "selector": ".main-menu-%s .mega-menu.main-menu-item-%s .dropdown-menu"
+  },
+  "flyoutMegaMenuShadow": {
+    "type": "Shadow",
+    "selector": ".main-menu-%s .mega-menu.main-menu-item-%s .dropdown-menu"
+  },
+  "flyoutMultiLevelPosition": {
+    "type": "Radio",
+    "value": "right",
+    "rules": {
+      "left": {
+        ".desktop-header-active .flyout-menu-%s .main-menu-item-%s.multi-level .dropdown-menu": "left:0%; transform: translateX(-100%);"
+      },
+      "right": {
+        ".desktop-header-active .flyout-menu-%s .main-menu-item-%s.multi-level .dropdown-menu": "left:100%"
+      }
+    },
+    "rtlRules": {
+      "right": {
+        ".desktop-header-active .flyout-menu-%s .main-menu-item-%s.multi-level .dropdown-menu": "right:100%"
+      },
+      "left": {
+        ".desktop-header-active .flyout-menu-%s .main-menu-item-%s.multi-level .dropdown-menu": "right:0; transform: translateX(100%);"
+      }
+    }
+  },
+  "flyoutMultiLevelOffset": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".desktop-header-active .flyout-menu-%s .main-menu-item-%s.multi-level .dropdown-menu": "margin-left:%spx"
+      }
+    },
+    "rtlRules": {
+      "@": {
+        ".desktop-header-active .flyout-menu-%s .main-menu-item-%s.multi-level .dropdown-menu": "margin-right:%spx"
+      }
+    }
+  },
+  "flyoutMultiLevelDropdownWidth": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".desktop-header-active .flyout-menu-%s .main-menu-item-%s.multi-level .dropdown-menu": "width:%spx"
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "New Main Menu "
+  },
+  "status": {
+    "type": "Status"
+  }
+}

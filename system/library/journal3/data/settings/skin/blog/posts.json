@@ -1,0 +1,87 @@
+{
+  "globalPostItemsPerRow": {
+    "type": "ItemsPerRow",
+    "selector": ".main-posts.post-grid .post-layout"
+  },
+  "globalPostGridGutter": {
+    "type": "Margin",
+    "selector": ".main-posts.post-grid"
+  },
+  "globalPostGrid": {
+    "type": "Variable",
+    "variable": "post_grid",
+    "selector_prefix": ".post-grid"
+  },
+  "globalPostList": {
+    "type": "Variable",
+    "variable": "post_list",
+    "selector_prefix": ".post-list"
+  },
+  "globalPostView": {
+    "type": "Radio",
+    "value": "grid",
+    "php":true
+  },
+  "rssIconOnly": {
+    "type": "Toggle",
+    "value": "false",
+    "rules": {
+      "true": {
+        ".blog-feed span": "display: none"
+      },
+      "false": {
+        ".blog-feed span": "display: block"
+      }
+    }
+  },
+  "rssVisibility": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".blog-feed": "display: inline-flex"
+      },
+      "false": {
+        ".blog-feed": "display: none"
+      }
+    }
+  },
+  "rssIcon": {
+    "type": "Icon",
+    "selector": ".blog-feed::before",
+    "value": {
+      "icon": {
+        "name": "rss-square",
+        "code": "f143"
+      }
+    }
+  },
+  "rssIconHover": {
+    "type": "Icon",
+    "selector": ".blog-feed:hover::before",
+    "property": "color",
+    "desktop":true
+  },
+  "rssFont": {
+    "type": "Font",
+    "selector": ".blog-feed span",
+    "important": true
+  },
+  "rssFontHover": {
+    "type": "Font",
+    "selector": ".blog-feed:hover span",
+    "important": true,
+    "desktop":true
+  },
+  "rssOffset": {
+    "type": "InputPair",
+    "selector": ".blog-feed",
+    "properties": {
+      "first": "margin-right:%spx",
+      "second": "margin-top:%spx"
+    },
+    "rtlProperties": {
+      "first": "margin-left:%spx",
+      "second": "margin-top:%spx"
+    }
+  }
+}

@@ -1,0 +1,494 @@
+{
+  "accountLoginTitle": {
+    "type": "Variable",
+    "variable": "title",
+    "selector_prefix": ".login-box .title"
+  },
+  "accountLoginForm": {
+    "type": "Variable",
+    "variable": "form",
+    "selector_prefix": ".login-box"
+  },
+  "accountLoginColumns": {
+    "type": "Radio",
+    "value": "2",
+    "rules": {
+      "1": {
+        ".login-box": "flex-direction:column"
+      },
+      "2": {
+        ".login-box": "flex-direction:row"
+      }
+    }
+  },
+  "accountLoginPopupForm": {
+    "type": "Variable",
+    "variable": "form",
+    "selector_prefix": ".popup-login"
+  },
+  "accountLoginPageButtons": {
+    "type": "Variable",
+    "variable": "page_buttons",
+    "selector_prefix": ".login-box"
+  },
+  "accountLoginBox": {
+    "include": "common",
+    "selector_prefix": ".login-box .well"
+  },
+  "accountLoginPopupTitle": {
+    "type": "Variable",
+    "variable": "title",
+    "selector_prefix": ".popup-login .title"
+  },
+  "accountRegisterPopupTitle": {
+    "type": "Variable",
+    "variable": "title",
+    "selector_prefix": ".popup-register .title"
+  },
+  "accountLoginPopup": {
+    "type": "Variable",
+    "variable": "popup",
+    "selector_prefix": ".popup-login&"
+  },
+  "accountRegisterPopup": {
+    "type": "Variable",
+    "variable": "popup",
+    "selector_prefix": ".popup-register&"
+  },
+
+  "accountPopupPageButtons": {
+    "type": "Variable",
+    "variable": "page_buttons",
+    "selector_prefix": ".popup-login"
+  },
+  "registerPopupPageButtons": {
+    "type": "Variable",
+    "variable": "page_buttons",
+    "selector_prefix": ".popup-register"
+  },
+
+  "accountLoginPopupWidth": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".popup-login .popup-container": "width:%spx"
+      }
+    },
+    "value": "500"
+  },
+
+  "accountLoginPopupHeight": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".popup-login .popup-inner-body": "height:%spx"
+      }
+    },
+    "value": "300"
+  },
+
+
+  "accountRegisterPopupWidth": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".popup-register .popup-container": "width:%spx"
+      }
+    },
+    "value": "500"
+  },
+
+  "accountRegisterPopupHeight": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".popup-register .popup-inner-body": "height:%spx"
+      }
+    },
+    "value": "650"
+  },
+  "accountLoginBoxMargin": {
+    "type": "Margin",
+    "selector": ".login-box > div:first-of-type"
+  },
+
+  "accountLoginFont": {
+    "type": "Font",
+    "selector": ".login-box p"
+  },
+  "accountForgotFont": {
+    "type": "Font",
+    "selector": ".form-group input[type='password'] + a"
+  },
+  "accountForgotFontHover": {
+    "type": "Font",
+    "selector": ".form-group input[type='password'] + a:hover"
+  },
+  "accountRegisterForm": {
+    "type": "Variable",
+    "variable": "form",
+    "selector_prefix": ".route-account-register"
+  },
+  "accountRegisterPopupForm": {
+    "type": "Variable",
+    "variable": "form",
+    "selector_prefix": ".popup-register"
+  },
+  "accountRegisterPageButtons": {
+    "type": "Variable",
+    "variable": "page_buttons",
+    "selector_prefix": ".route-account-register"
+  },
+  "accountRegisterFont": {
+    "type": "Font",
+    "selector": ".route-account-register p"
+  },
+  "accountRegisterTitle": {
+    "type": "Variable",
+    "variable": "title",
+    "selector_prefix": ".route-account-register legend"
+  },
+  "accountPageStyle": {
+    "type": "Variable",
+    "variable": "account"
+  },
+  "accountCustomerGroup": {
+    "type": "Radio",
+    "value": "visible",
+    "php": true,
+    "rules": {
+      "hidden": {
+        ".route-account-register .account-customer-group": "display: none !important"
+      },
+      "visible": {
+        ".route-account-register .account-customer-group label::after": "display: none !important"
+      }
+    }
+  },
+  "accountAccountFirstNameField": {
+    "type": "Radio",
+    "value": "required",
+    "php": true,
+    "rules": {
+      "hidden": {
+        "#account .account-firstname": "display: none !important"
+      },
+      "visible": {
+        "#account .account-firstname label::after": "display: none !important"
+      }
+    }
+  },
+  "accountAccountLastNameField": {
+    "type": "Radio",
+    "value": "required",
+    "php": true,
+    "rules": {
+      "hidden": {
+        "#account .account-lastname": "display: none !important"
+      },
+      "visible": {
+        "#account .account-lastname label::after": "display: none !important"
+      }
+    }
+  },
+  "accountAccountTelephoneField": {
+    "type": "Radio",
+    "value": "required",
+    "php": true,
+    "rules": {
+      "hidden": {
+        "#account .account-telephone": "display: none !important"
+      },
+      "visible": {
+        "#account .account-telephone label::after": "display: none !important"
+      }
+    }
+  },
+  "accountAccountFaxField": {
+    "type": "Radio",
+    "value": "visible",
+    "php": true,
+    "rules": {
+      "hidden": {
+        "#account .account-fax": "display: none !important"
+      },
+      "visible": {
+        "#account .account-fax label::after": "display: none !important"
+      }
+    }
+  },
+  "accountAddressFirstNameField": {
+    "type": "Radio",
+    "value": "required",
+    "php": true,
+    "rules": {
+      "hidden": {
+        ".route-account-register .address-firstname": "display: none !important",
+        "#account-address .address-firstname": "display: none !important"
+      },
+      "visible": {
+        ".route-account-register .address-firstname label::after": "display: none !important",
+        "#account-address .address-firstname label::after": "display: none !important"
+      }
+    }
+  },
+  "accountAddressLastNameField": {
+    "type": "Radio",
+    "value": "required",
+    "php": true,
+    "rules": {
+      "hidden": {
+        ".route-account-register .address-lastname": "display: none !important",
+        "#account-address .address-lastname": "display: none !important"
+      },
+      "visible": {
+        ".route-account-register .address-lastname label::after": "display: none !important",
+        "#account-address .address-lastname label::after": "display: none !important"
+      }
+    }
+  },
+  "accountAddressCompanyField": {
+    "type": "Radio",
+    "value": "visible",
+    "php": true,
+    "rules": {
+      "hidden": {
+        ".route-account-register .address-company": "display: none !important",
+        "#account-address .address-company": "display: none !important"
+      },
+      "visible": {
+        ".route-account-register .address-company label::after": "display: none !important",
+        "#account-address .address-company label::after": "display: none !important"
+      }
+    }
+  },
+  "accountAddressAddress1Field": {
+    "type": "Radio",
+    "value": "required",
+    "php": true,
+    "rules": {
+      "hidden": {
+        ".route-account-register .address-address-1": "display: none !important",
+        "#account-address .address-address-1": "display: none !important"
+      },
+      "visible": {
+        ".route-account-register .address-address-1 label::after": "display: none !important",
+        "#account-address .address-address-1 label::after": "display: none !important"
+      }
+    }
+  },
+  "accountAddressAddress2Field": {
+    "type": "Radio",
+    "value": "visible",
+    "php": true,
+    "rules": {
+      "hidden": {
+        ".route-account-register .address-address-2": "display: none !important",
+        "#account-address .address-address-2": "display: none !important"
+      },
+      "visible": {
+        ".route-account-register .address-address-2 label::after": "display: none !important",
+        "#account-address .address-address-2 label::after": "display: none !important"
+      }
+    }
+  },
+  "accountAddressCityField": {
+    "type": "Radio",
+    "value": "required",
+    "php": true,
+    "rules": {
+      "hidden": {
+        ".route-account-register .address-city": "display: none !important",
+        "#account-address .address-city": "display: none !important"
+      },
+      "visible": {
+        ".route-account-register .address-city label::after": "display: none !important",
+        "#account-address .address-city label::after": "display: none !important"
+      }
+    }
+  },
+  "accountAddressCountryField": {
+    "type": "Radio",
+    "value": "required",
+    "php": true,
+    "rules": {
+      "hidden": {
+        ".route-account-register .address-country": "display: none !important",
+        "#account-address .address-country": "display: none !important"
+      },
+      "visible": {
+        ".route-account-register .address-country label::after": "display: none !important",
+        "#account-address .address-country label::after": "display: none !important"
+      }
+    }
+  },
+  "accountAddressRegionField": {
+    "type": "Radio",
+    "value": "required",
+    "php": true,
+    "rules": {
+      "hidden": {
+        ".route-account-register .address-zone": "display: none !important",
+        "#account-address .address-zone": "display: none !important"
+      },
+      "visible": {
+        ".route-account-register .address-zone label::after": "display: none !important",
+        "#account-address .address-zone label::after": "display: none !important"
+      }
+    }
+  },
+  "accountAddressPostcodeField": {
+    "type": "Radio",
+    "value": "required",
+    "php": true,
+    "rules": {
+      "hidden": {
+        ".route-account-register .address-postcode": "display: none !important",
+        "#account-address .address-postcode": "display: none !important"
+      },
+      "visible": {
+        ".route-account-register .address-postcode label::after": "display: none !important",
+        "#account-address .address-postcode label::after": "display: none !important"
+      }
+    }
+  },
+  "accountCustomerGroupSort": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".route-account-register .account-customer-group": "order:%s"
+      }
+    }
+  },
+  "accountAccountFirstNameFieldSort": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        "#account .account-firstname": "order:%s"
+      }
+    }
+  },
+  "accountAccountLastNameFieldSort": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        "#account .account-lastname": "order:%s"
+      }
+    }
+  },
+  "accountAccountEmailFieldSort": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        "#account .account-email": "order:%s"
+      }
+    }
+  },
+  "accountAccountTelephoneFieldSort": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        "#account .account-telephone": "order:%s"
+      }
+    }
+  },
+  "accountAccountFaxFieldSort": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        "#account .account-fax": "order:%s"
+      }
+    }
+  },
+  "accountAddressFirstNameFieldSort": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".route-account-register .address-firstname": "order:%s",
+        "#account-address .address-firstname": "order:%s"
+      }
+    }
+  },
+  "accountAddressLastNameFieldSort": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".route-account-register .address-lastname": "order:%s",
+        "#account-address .address-lastname": "order:%s"
+      }
+    }
+  },
+  "accountAddressCompanyFieldSort": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".route-account-register .address-company": "order:%s",
+        "#account-address .address-company": "order:%s"
+      }
+    }
+  },
+  "accountAddressAddress1FieldSort": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".route-account-register .address-address-1": "order:%s",
+        "#account-address .address-address-1": "order:%s"
+      }
+    }
+  },
+  "accountAddressAddress2FieldSort": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".route-account-register .address-address-2": "order:%s",
+        "#account-address .address-address-2": "order:%s"
+      }
+    }
+  },
+  "accountAddressCityFieldSort": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".route-account-register .address-city": "order:%s",
+        "#account-address .address-city": "order:%s"
+      }
+    }
+  },
+  "accountAddressCountryFieldSort": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".route-account-register .address-country": "order:%s",
+        "#account-address .address-country": "order:%s"
+      }
+    }
+  },
+  "accountAddressRegionFieldSort": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".route-account-register .address-zone": "order:%s",
+        "#account-address .address-zone": "order:%s"
+      }
+    }
+  },
+  "accountAddressPostcodeFieldSort": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".route-account-register .address-postcode": "order:%s",
+        "#account-address .address-postcode": "order:%s"
+      }
+    }
+  },
+  "accountNewsletterField": {
+    "type": "Radio",
+    "value": "visible",
+    "rules": {
+      "hidden": {
+        ".route-account-register #account + fieldset + fieldset": "display: none !important",
+        ".route-account-account .my-newsletter": "display: none !important"
+      }
+    }
+  }
+}

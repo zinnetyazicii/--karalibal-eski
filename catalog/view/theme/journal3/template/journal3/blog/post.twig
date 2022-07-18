@@ -1,0 +1,241 @@
+{{ header }}
+<ul class="breadcrumb">
+  {% for breadcrumb in breadcrumbs %}
+  <li><a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a></li>
+  {% endfor %}
+</ul>
+{% if j3.settings.get('pageTitlePosition') == 'top' %}
+  <h1 class="title page-title"><span>{{ post_name }}</span></h1>
+{% endif %}
+{{ j3.loadController('journal3/layout', 'top') }}
+<div class="container blog-post">
+  <div class="row">{{ column_left }}
+    <div id="content">
+      {% if j3.settings.get('pageTitlePosition') == 'default' %}
+        <h1 class="title page-title">{{ post_name }}</h1>
+      {% endif %}
+      {{ content_top }}
+      <div class="post-details">
+        <div class="post-image">
+          {% if j3.settings.get('datePosition') == 'image' %}
+            <span class="p-date p-date-image">{{ j3.blog_date(post_date) }}</span>
+          {% endif %}
+          <img src="{{ post_image }}" {% if post_image2x %} srcset="{{ post_image }} 1x, {{ post_image2x }} 2x" {% endif %} width="{{ image_width }}" height="{{ image_height }}" alt="{{ post_name }}" title="{{ post_name }}"/>
+        </div>
+        <div class="post-stats">
+          {% if post_author %}
+            <span class="p-posted">{{ j3.settings.get('blogPostedByText') }}</span>
+            <span class="p-author">{{ post_author }}</span>
+          {% endif %}
+          {% if j3.settings.get('datePosition') == 'default' %}
+            <span class="p-date p-date-default">{{ j3.blog_date(post_date) }}</span>
+          {% endif %}
+          <span class="p-comment">{{ comments|length }} {{ j3.settings.get('blogCommentsText') }}</span>
+          <span class="p-view">{{ post_views }} {{ j3.settings.get('blogViewsText') }}</span>
+          {% if post_categories %}
+            <span class="p-category">
+          {% for category in post_categories %}
+            <a href="{{ category.href }}">{{ category.name }}</a>
+            {% if not loop.last %}
+            <span>, </span>
+          {% endif %}
+          {% endfor %}
+          </span>
+          {% endif %}
+        </div>
+        <div class="post-content">
+          {{ post_content }}
+        </div>
+        {% if post_tags %}
+          <div class="tags">
+            <span class="tags-title">{{ text_tags }}</span>
+            {% for tag in post_tags %}
+              <a href="{{ tag.href }}">{{ tag.name }}</a><b>,</b>
+            {% endfor %}
+          </div>
+        {% endif %}
+      </div>
+
+      {{ content_bottom }}
+
+      {% if allow_comments %}
+        <div class="post-comments">
+          {% if comments | length > 0 %}
+            <h3 class="title">{{ comments | length }} {{ j3.settings.get('blogCommentsText') }}</h3>
+          {% endif %}
+          {% for comment in comments %}
+            <div class="post-comment" data-comment-id="{{ comment.comment_id }}" data-has-form="false">
+              <img class="user-avatar" src="https://s.gravatar.com/avatar/{{ comment.avatar }}?s={{ j3.settings.get('postCommentImageSize') }}" width="{{ j3.settings.get('postCommentImageSize') }}" height="{{ j3.settings.get('postCommentImageSize') }}" alt="">
+              <div class="comment">
+                <div class="user-name">{{ comment.name }}:</div>
+                <div class="user-data">
+                  <div>
+                    <span class="user-date p-date">{{ j3.blog_date(comment.date) }}</span>
+                    <span class="user-time p-time">{{ comment.date | date(time_format) }}</span>
+                  </div>
+                  {% if comment.website %}
+                    <span class="user-site p-site"><a href="{{ comment.website }}" target="_blank">{{ comment.website }}</a></span>
+                  {% endif %}
+                </div>
+                <a class="btn reply-btn">{{ j3.settings.get('blogReplyText') }}</a>
+                <p>{{ comment.comment }}</p>
+                {% for reply in comment.replies %}
+                  <div class="post-reply">
+                    <img class="user-avatar" src="https://s.gravatar.com/avatar/{{ comment.avatar }}?s={{ j3.settings.get('postCommentImageSize') }}" width="{{ j3.settings.get('postCommentImageSize') }}" height="{{ j3.settings.get('postCommentImageSize') }}" alt="">
+                    <div class="comment">
+                      <div class="user-name">{{ reply.name }}:</div>
+                      <div class="user-data">
+                        <div>
+                          <span class="user-date p-date">{{ j3.blog_date(reply.date) }}</span>
+                          <span class="user-time p-time">{{ reply.date | date(time_format) }}</span>
+                        </div>
+                        {% if reply.website %}
+                          <span class="user-site p-site"><a href="{{ reply.website }}" target="_blank">{{ reply.website }}</a></span>
+                        {% endif %}
+                      </div>
+                      <p>{{ reply.comment }}</p>
+                    </div>
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
+          {% endfor %}
+          <div class="comment-form">
+            <h3 class="title">{{ j3.settings.get('blogLeaveCommentText') }}</h3>
+            <form method="post" enctype="multipart/form-data" class="form-horizontal">
+              <fieldset>
+                <div class="form-group required">
+                  <label class="col-sm-2 control-label" for="input-name">{{ entry_name }}</label>
+                  <div class="col-sm-10">
+                    <input type="text" name="name" value="{{ default_name }}" id="input-name" class="form-control"/>
+                  </div>
+                </div>
+
+                <div class="form-group required">
+                  <label class="col-sm-2 control-label" for="input-email">{{ entry_email }}</label>
+                  <div class="col-sm-10">
+                    <input type="text" name="email" value="{{ default_email }}" id="input-email" class="form-control"/>
+
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-2 control-label" for="input-website">{{ entry_website }}</label>
+                  <div class="col-sm-10">
+                    <input type="text" name="website" value="{{ default_website }}" id="input-website" class="form-control"/>
+                  </div>
+                </div>
+
+                <div class="form-group required">
+                  <label class="col-sm-2 control-label" for="input-comment">{{ text_comment }}</label>
+                  <div class="col-sm-10">
+                    <textarea name="comment" rows="10" id="input-comment" class="form-control">{{ default_comment }}</textarea>
+                  </div>
+                </div>
+              </fieldset>
+              <div class="buttons">
+                <div class="pull-right">
+                  <button type="button" class="btn comment-submit">{{ button_submit }}</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      {% endif %}
+
+    </div>
+    {{ column_right }}
+  </div>
+  {% if allow_comments %}
+    <script type="text/javascript">
+      function generateComment($form, cls, $appendTo, callback) {
+        $form.find('.has-error').removeClass('has-error');
+
+        $.post('index.php?route=journal3/blog/comment&post_id={{ post_id }}', $form.serializeArray(), function (response) {
+          if (response.status === 'success') {
+            if (response.response.data) {
+              var html = '';
+
+              html += '<div class="' + cls + '" data-comment-id="' + response.response.data.comment_id + '" data-has-form="false">';
+              html += ' <img class="user-avatar" src="https://s.gravatar.com/avatar/' + response.response.data.avatar + '?s={{ j3.settings.get('postCommentImageSize') }}" width="{{ j3.settings.get('postCommentImageSize') }}" height="{{ j3.settings.get('postCommentImageSize') }}" alt="">';
+              html += ' <div class="comment">';
+              html += '   <div class="user-name">' + response.response.data.name + ':</div>';
+              html += '   <div class="user-data">';
+              html += '     <div>';
+              html += '       <span class="user-date p-date">' + response.response.data.date + '</span>';
+              html += '       <span class="user-time p-time">' + response.response.data.time + '</span>';
+              html += '     </div>';
+              html += '     <span class="user-site p-site"><a href="' + response.response.data.website + '" target="_blank">' + response.response.data.website + '</a></span>';
+              html += '   </div>';
+
+              if (cls === 'post-comment') {
+                html += ' <a class="btn reply-btn">{{ j3.settings.get('blogReplyText') }}</a>';
+              }
+
+              html += ' <p>' + response.response.data.comment + '</p>';
+              html += '</div>';
+
+              $appendTo.before(html);
+            }
+
+            callback && callback(response.response.message);
+          }
+
+          if (response.status === 'error') {
+            $.each(response.response.errors, function (field) {
+              $form.find('[name="' + field + '"]').closest('.form-group').addClass('has-error');
+            });
+          }
+        }, 'json');
+      }
+
+      $(document).delegate('.reply-btn', 'click', function () {
+        var $comment = $(this).closest('.post-comment');
+
+        if ($comment.attr('data-has-form') === 'false') {
+          var $form = $('.post-comments form').clone();
+          $form.find('.has-error').removeClass('has-error');
+          $form.append('<input type="hidden" name="parent_id" value="' + $comment.attr('data-comment-id') + '" />');
+          $form.find('button').removeClass('comment-submit').addClass('reply-submit');
+          $comment.find('> .comment').append('<div class="reply-form"><h3 class="title">' + '{{ j3.settings.get('blogLeaveReplyText') }}' + '</h3><div class="comment-form"><div><form class="form-horizontal">' + $form.html() + '</form></div></div></div>');
+          $comment.attr('data-has-form', 'true');
+        } else {
+          $comment.find('.reply-form').remove();
+          $comment.attr('data-has-form', 'false');
+        }
+      });
+
+      $(document).delegate('form .comment-submit', 'click', function () {
+        var $form = $(this).closest('form');
+        var $comment_form = $('.comment-form');
+
+        generateComment($form, 'post-comment', $comment_form, function (message) {
+          $comment_form.before('<div class="success">' + message + '</div>');
+          setTimeout(function () {
+            $('.post-comments .success').slideUp(400, function () {
+              $(this).remove();
+            });
+          }, 1500);
+          $form[0].reset();
+        });
+      });
+
+      $(document).delegate('form .reply-submit', 'click', function () {
+        var $form = $(this).closest('form');
+        var $reply_form = $(this).closest('.post-comment').find('.reply-form');
+
+        generateComment($form, 'post-reply', $reply_form, function (message) {
+          $reply_form.before('<div class="success">' + message + '</div>');
+          setTimeout(function () {
+            $('.post-comments .success').slideUp(400, function () {
+              $(this).remove();
+            });
+          }, 1500);
+          $form.closest('.post-comment').attr('data-has-form', 'false');
+          $reply_form.remove();
+        });
+      });
+    </script>
+  {% endif %}
+</div>
+{{ footer }}

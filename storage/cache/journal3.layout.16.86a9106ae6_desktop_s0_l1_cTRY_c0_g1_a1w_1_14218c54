@@ -1,0 +1,388 @@
+<?php $val = array (
+  'settings' => 
+  array (
+    'column_left' => 
+    array (
+      'rows' => 
+      array (
+      ),
+      'grid_classes' => 
+      array (
+        0 => 'grid-rows',
+      ),
+    ),
+    'column_right' => 
+    array (
+      'rows' => 
+      array (
+        1 => 
+        array (
+          'videoBgStatus' => false,
+          'videoBg' => '',
+          'videoInline' => false,
+          'waveStatus' => false,
+          'waveDirection' => '5',
+          'wave2Status' => false,
+          'wave2Direction' => '5',
+          'classes' => 
+          array (
+            0 => 'grid-row',
+            1 => 'grid-row-column-right-1',
+          ),
+          'columns' => 
+          array (
+            1 => 
+            array (
+              'classes' => 
+              array (
+                0 => 'grid-col',
+                1 => 'grid-col-column-right-1-1',
+              ),
+              'items' => 
+              array (
+                1 => 
+                array (
+                  'classes' => 
+                  array (
+                    0 => 'grid-item',
+                    1 => 'grid-item-column-right-1-1-1',
+                  ),
+                  'item' => 
+                  array (
+                    'id' => '44',
+                    'name' => 'New Blog Search',
+                    'type' => 'blog_search',
+                  ),
+                ),
+              ),
+            ),
+            2 => 
+            array (
+              'classes' => 
+              array (
+                0 => 'grid-col',
+                1 => 'grid-col-column-right-1-2',
+              ),
+              'items' => 
+              array (
+                1 => 
+                array (
+                  'classes' => 
+                  array (
+                    0 => 'grid-item',
+                    1 => 'grid-item-column-right-1-2-1',
+                  ),
+                  'item' => 
+                  array (
+                    'id' => '42',
+                    'name' => 'New Blog Categories',
+                    'type' => 'blog_categories',
+                  ),
+                ),
+              ),
+            ),
+            3 => 
+            array (
+              'classes' => 
+              array (
+                0 => 'grid-col',
+                1 => 'grid-col-column-right-1-3',
+              ),
+              'items' => 
+              array (
+                1 => 
+                array (
+                  'classes' => 
+                  array (
+                    0 => 'grid-item',
+                    1 => 'grid-item-column-right-1-3-1',
+                  ),
+                  'item' => 
+                  array (
+                    'id' => '47',
+                    'name' => 'New Blog Comments ',
+                    'type' => 'blog_comments',
+                  ),
+                ),
+              ),
+            ),
+            4 => 
+            array (
+              'classes' => 
+              array (
+                0 => 'grid-col',
+                1 => 'grid-col-column-right-1-4',
+              ),
+              'items' => 
+              array (
+                1 => 
+                array (
+                  'classes' => 
+                  array (
+                    0 => 'grid-item',
+                    1 => 'grid-item-column-right-1-4-1',
+                  ),
+                  'item' => 
+                  array (
+                    'id' => '192',
+                    'name' => 'Popular Articles',
+                    'type' => 'blog_side_posts',
+                  ),
+                ),
+              ),
+            ),
+            5 => 
+            array (
+              'classes' => 
+              array (
+                0 => 'grid-col',
+                1 => 'grid-col-column-right-1-5',
+              ),
+              'items' => 
+              array (
+                1 => 
+                array (
+                  'classes' => 
+                  array (
+                    0 => 'grid-item',
+                    1 => 'grid-item-column-right-1-5-1',
+                  ),
+                  'item' => 
+                  array (
+                    'id' => '176',
+                    'name' => 'Gallery Side Column',
+                    'type' => 'gallery',
+                  ),
+                ),
+              ),
+            ),
+            6 => 
+            array (
+              'classes' => 
+              array (
+                0 => 'grid-col',
+                1 => 'grid-col-column-right-1-6',
+              ),
+              'items' => 
+              array (
+                1 => 
+                array (
+                  'classes' => 
+                  array (
+                    0 => 'grid-item',
+                    1 => 'grid-item-column-right-1-6-1',
+                  ),
+                  'item' => 
+                  array (
+                    'id' => '158',
+                    'name' => 'Deals Banner',
+                    'type' => 'banners',
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ),
+      ),
+      'grid_classes' => 
+      array (
+        0 => 'grid-rows',
+      ),
+    ),
+    'content_top' => 
+    array (
+      'rows' => 
+      array (
+      ),
+      'grid_classes' => 
+      array (
+        0 => 'grid-rows',
+      ),
+    ),
+    'content_bottom' => 
+    array (
+      'rows' => 
+      array (
+        1 => 
+        array (
+          'videoBgStatus' => false,
+          'videoBg' => '',
+          'videoInline' => false,
+          'waveStatus' => false,
+          'waveDirection' => '5',
+          'wave2Status' => false,
+          'wave2Direction' => '5',
+          'classes' => 
+          array (
+            0 => 'grid-row',
+            1 => 'grid-row-content-bottom-1',
+          ),
+          'columns' => 
+          array (
+            1 => 
+            array (
+              'classes' => 
+              array (
+                0 => 'grid-col',
+                1 => 'grid-col-content-bottom-1-1',
+              ),
+              'items' => 
+              array (
+                1 => 
+                array (
+                  'classes' => 
+                  array (
+                    0 => 'grid-item',
+                    1 => 'grid-item-content-bottom-1-1-1',
+                  ),
+                  'item' => 
+                  array (
+                    'id' => '57',
+                    'name' => 'Share Plugin Inline',
+                    'type' => 'blocks',
+                  ),
+                ),
+              ),
+            ),
+            2 => 
+            array (
+              'classes' => 
+              array (
+                0 => 'grid-col',
+                1 => 'grid-col-content-bottom-1-2',
+              ),
+              'items' => 
+              array (
+                1 => 
+                array (
+                  'classes' => 
+                  array (
+                    0 => 'grid-item',
+                    1 => 'grid-item-content-bottom-1-2-1',
+                  ),
+                  'item' => 
+                  array (
+                    'id' => '184',
+                    'name' => 'Reaction Buttons ShareThis',
+                    'type' => 'blocks',
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ),
+        2 => 
+        array (
+          'videoBgStatus' => false,
+          'videoBg' => '',
+          'videoInline' => false,
+          'waveStatus' => false,
+          'waveDirection' => '5',
+          'wave2Status' => false,
+          'wave2Direction' => '5',
+          'classes' => 
+          array (
+            0 => 'grid-row',
+            1 => 'grid-row-content-bottom-2',
+          ),
+          'columns' => 
+          array (
+            1 => 
+            array (
+              'classes' => 
+              array (
+                0 => 'grid-col',
+                1 => 'grid-col-content-bottom-2-1',
+              ),
+              'items' => 
+              array (
+                1 => 
+                array (
+                  'classes' => 
+                  array (
+                    0 => 'grid-item',
+                    1 => 'grid-item-content-bottom-2-1-1',
+                  ),
+                  'item' => 
+                  array (
+                    'id' => '182',
+                    'name' => 'Related Bottom',
+                    'type' => 'products',
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ),
+      ),
+      'grid_classes' => 
+      array (
+        0 => 'grid-rows',
+      ),
+    ),
+    'top' => 
+    array (
+      'rows' => 
+      array (
+      ),
+      'grid_classes' => 
+      array (
+        0 => 'grid-rows',
+      ),
+    ),
+    'bottom' => 
+    array (
+      'rows' => 
+      array (
+      ),
+      'grid_classes' => 
+      array (
+        0 => 'grid-rows',
+      ),
+    ),
+    'header_top' => 
+    array (
+      'rows' => 
+      array (
+      ),
+      'grid_classes' => 
+      array (
+        0 => 'grid-rows',
+      ),
+    ),
+    'footer_top' => 
+    array (
+      'rows' => 
+      array (
+      ),
+      'grid_classes' => 
+      array (
+        0 => 'grid-rows',
+      ),
+    ),
+    'footer_bottom' => 
+    array (
+      'rows' => 
+      array (
+      ),
+      'grid_classes' => 
+      array (
+        0 => 'grid-rows',
+      ),
+    ),
+  ),
+  'php' => 
+  array (
+    'pageStyleBoxedLayout' => 'fullwidth',
+    'pageStyleContentWidth' => '',
+    'pageStyleContainerWidth' => '1000',
+    'pageStyleColumnsWidth' => '',
+  ),
+  'js' => 
+  array (
+  ),
+  'fonts' => 
+  array (
+  ),
+  'css' => '.layout-16 .boxed-layout .site-wrapper{overflow:hidden}.layout-16 .site-wrapper > .container, .layout-16 .site-wrapper>h1.page-title>span{max-width:1000px}.layout-16 .page-title{display:block}.grid-row-column-right-1::before{display:block;left:0;width:100vw}.grid-row-column-right-1 .wave-top{display:block}.grid-row-column-right-1 .wave-bottom{display:block}.grid-col-column-right-1-1{width:100%;margin-bottom:25px}.grid-col-column-right-1-1 .grid-items{justify-content:flex-start}.grid-item-column-right-1-1-1{width:100%}.grid-col-column-right-1-2{width:100%;margin-bottom:25px}.grid-col-column-right-1-2 .grid-items{justify-content:flex-start}.grid-item-column-right-1-2-1{width:100%}.grid-col-column-right-1-3{width:100%;margin-bottom:25px}.grid-col-column-right-1-3 .grid-items{justify-content:flex-start}.grid-item-column-right-1-3-1{width:100%}.grid-col-column-right-1-4{width:100%;margin-bottom:30px}.grid-col-column-right-1-4 .grid-items{justify-content:flex-start}.grid-item-column-right-1-4-1{width:100%}.grid-col-column-right-1-5{width:100%;margin-bottom:20px}.grid-col-column-right-1-5 .grid-items{justify-content:flex-start}.grid-item-column-right-1-5-1{width:100%}.grid-col-column-right-1-6{width:100%;margin-bottom:20px}.grid-col-column-right-1-6 .grid-items{justify-content:flex-start}.grid-item-column-right-1-6-1{width:100%}.grid-row-content-bottom-1::before{display:block;left:0;width:100vw}.grid-row-content-bottom-1{padding-top:20px;padding-bottom:20px}.grid-row-content-bottom-1 .wave-top{display:block}.grid-row-content-bottom-1 .wave-bottom{display:block}.grid-col-content-bottom-1-1{width:60%}.grid-col-content-bottom-1-1 .grid-items{justify-content:center}@media (max-width: 1024px){.grid-col-content-bottom-1-1{width:100%}}.grid-item-content-bottom-1-1-1{width:100%}.grid-col-content-bottom-1-2{width:40%;padding:10px}.grid-col-content-bottom-1-2 .grid-items{justify-content:flex-start}@media (max-width: 1024px){.grid-col-content-bottom-1-2{width:100%}}.grid-item-content-bottom-1-2-1{width:100%}.grid-row-content-bottom-2::before{display:block;left:0;width:100vw}.grid-row-content-bottom-2 .wave-top{display:block}.grid-row-content-bottom-2 .wave-bottom{display:block}.grid-col-content-bottom-2-1{width:100%}.grid-col-content-bottom-2-1 .grid-items{justify-content:flex-start}.grid-item-content-bottom-2-1-1{width:100%}',
+);

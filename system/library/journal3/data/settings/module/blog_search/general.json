@@ -1,0 +1,75 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "New Blog Search"
+  },
+  "status": {
+    "type": "Status"
+  },
+  "schedule": {
+    "type": "Range",
+    "php": true
+  },
+  "title": {
+    "type": "InputLang",
+    "php": true
+  },
+  "placeholder": {
+    "type": "InputLang",
+    "value": "Blog Search",
+    "php": true
+  },
+  "titleStyle": {
+    "type": "Variable",
+    "variable": "title",
+    "selector_prefix": ".module-blog_search-%s .title.module-title"
+  },
+  "buttonStyle": {
+    "type": "Variable",
+    "variable": "button",
+    "selector_prefix": ".module-blog_search-%s"
+  },
+  "buttonPadding": {
+    "type": "Padding",
+    "selector": ".module-blog_search-%s .search-btn"
+  },
+  "buttonOffset": {
+    "type": "InputPair",
+    "selector": ".module-blog_search-%s .search-btn",
+    "properties": {
+      "first": "transform: translate(%spx, -50%)",
+      "second": "margin-top:%spx"
+    }
+  },
+  "buttonRadius": {
+    "type": "BorderRadius",
+    "selector": ".module-blog_search-%s .search-btn",
+    "important": true
+  },
+  "buttonHeight": {
+    "type": "InputNumber",
+    "value": "6",
+    "rules":{
+      "@":{
+        ".module-blog_search-%s .search-btn": "height:calc(100% - %spx)"
+      }
+    }
+  },
+  "inputStyle": {
+    "type": "Variable",
+    "variable": "form_input",
+    "selector_prefix": ".module-blog_search-%s .form-control"
+  },
+  "Background": {
+    "type": "Background",
+    "selector": ".module-blog_search-%s .module-body"
+  },
+  "Padding": {
+    "type": "Padding",
+    "selector": ".module-blog_search-%s .module-body"
+  },
+  "buttonMargin": {
+    "type": "Margin",
+    "selector": ".module-blog_search-%s .search-btn"
+  }
+}

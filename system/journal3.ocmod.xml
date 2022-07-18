@@ -1,0 +1,2175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<modification>
+    <name>Journal Theme</name>
+    <code>journal3_theme</code>
+    <version>3.0</version>
+    <author>DigitalAtelier</author>
+    <link>https://www.journal-theme.com</link>
+
+    <!--
+
+        Opencart Fix
+
+        Supress unlink warning
+
+    -->
+
+    <file path="system/library/cache/file.php">
+        <operation>
+            <search><![CDATA[unlink($file);]]></search>
+            <add position="replace"><![CDATA[@unlink($file);]]></add>
+        </operation>
+    </file>
+
+    <!-- startup -->
+
+    <file path="system/engine/{front,router}.php">
+        <operation>
+            <search><![CDATA[
+            while
+            ]]></search>
+            <add position="before"><![CDATA[
+            // Journal Theme Modification
+            define('JOURNAL3_INSTALLED', true);
+
+            if (is_file(DIR_SYSTEM . 'library/journal3/build.php')) {
+                require_once DIR_SYSTEM . 'library/journal3/build.php';
+            }
+
+            if (is_file(DIR_SYSTEM . 'library/journal3/vendor/__autoload.php')) {
+                require_once DIR_SYSTEM . 'library/journal3/vendor/__autoload.php';
+            }
+
+            if (version_compare(phpversion(), '7.1', '>=') && is_file(DIR_SYSTEM . 'library/journal3/vendor-composer/autoload.php')) {
+                require_once DIR_SYSTEM . 'library/journal3/vendor-composer/autoload.php';
+            }
+
+            $env = DIR_SYSTEM . '../.env';
+
+			if (is_file($env)) {
+				$lines = file($env);
+
+				foreach ($lines as $line) {
+					$line = trim($line);
+
+					if (!$line) {
+					    continue;
+					}
+
+					if ($line[0] === '#') {
+						continue;
+					}
+
+					$line = explode('=', $line);
+
+					if (count($line) === 2) {
+					    $value = trim($line[1]);
+
+					    if ($value === 'true') {
+                            $value = true;
+					    }
+
+					    if ($value === 'false') {
+                            $value = false;
+					    }
+
+						define(trim($line[0]), $value);
+					}
+				}
+			}
+
+			if (!defined('JOURNAL3_ENV')) {
+			    define('JOURNAL3_ENV', 'production');
+			}
+
+			if (!defined('JOURNAL3_CACHE')) {
+			    define('JOURNAL3_CACHE', true);
+			}
+
+			if (defined('SENTRY_DSN') && SENTRY_DSN && function_exists('Sentry\init')) {
+			    Sentry\init(array(
+                    'dsn' => SENTRY_DSN
+                ));
+			}
+
+            $this->execute(new Action('journal3/startup'));
+		    // End Journal Theme Modification
+            ]]></add>
+        </operation>
+    </file>
+
+    <!-- j3dt -->
+
+    <file path="catalog/controller/startup/startup.php">
+        <operation>
+            <search><![CDATA[
+            $this->registry->set('url', new Url($this->config->get('config_url'), $this->config->get('config_ssl')));
+            ]]></search>
+            <add position="after"><![CDATA[
+            // Journal Theme Modification
+            if (isset($this->session->data['user_id']) && $this->session->data['user_id'] && isset($this->request->get['j3dt']) && $this->request->get['j3dt']) {
+                if (version_compare(VERSION, '3', '>=')) {
+                    $this->config->set('config_theme', 'default');
+                    $this->config->set('theme_default_status', 1);
+                } else {
+                    $this->config->set('config_theme', 'theme_default');
+                    $this->config->set('theme_default_status', 1);
+                }
+            }
+            // End Journal Theme Modification
+            ]]></add>
+        </operation>
+    </file>
+
+    <!-- default language id -->
+
+    <file path="catalog/controller/startup/startup.php">
+        <operation>
+            <search><![CDATA[
+            $languages = $this->model_localisation_language->getLanguages();
+            ]]></search>
+            <add position="after"><![CDATA[
+            if (isset($languages[$this->config->get('config_language')])) {
+                $this->config->set('config_default_language_id', $languages[$this->config->get('config_language')]['language_id']);
+            }
+            ]]></add>
+        </operation>
+    </file>
+
+    <!-- journal2 compatibility -->
+
+    <file path="system/engine/{front,router}.php">
+        <operation error="skip">
+            <search><![CDATA[
+            self::$IS_JOURNAL = $config->get('config_template') === 'journal2' || $config->get('theme_default_directory') === 'journal2';
+            ]]></search>
+            <add position="replace"><![CDATA[
+            self::$IS_JOURNAL = ($config->get('config_theme') === 'theme_default' || $config->get('config_theme') === 'default') && ($config->get('config_template') === 'journal2' || $config->get('theme_default_directory') === 'journal2');
+            ]]></add>
+        </operation>
+    </file>
+
+    <!-- oc23 theme directory fix -->
+
+    <file path="catalog/controller/event/theme.php">
+        <operation error="skip">
+            <search><![CDATA[
+            if (is_file(DIR_TEMPLATE . $theme . '/template/' . $view . '.tpl')) {
+            ]]></search>
+            <add position="before"><![CDATA[
+            // Journal Theme Modification
+            if (defined('JOURNAL3_ACTIVE')) {
+                if ($theme === 'theme_journal3') {
+			        $theme = 'journal3';
+                }
+            }
+		    // End Journal Theme Modification
+            ]]></add>
+        </operation>
+    </file>
+
+    <!-- oc23 theme image fix -->
+
+    <file path="admin/controller/setting/setting.php">
+        <operation>
+            <search><![CDATA[
+            $theme = basename($this->request->get['theme']);
+            ]]></search>
+            <add position="after"><![CDATA[
+            // Journal Theme Modification
+            $theme = str_replace('theme_', '', $theme);
+		    // End Journal Theme Modification
+            ]]></add>
+        </operation>
+    </file>
+
+    <!-- oc23 maintenance fix -->
+
+    <file path="catalog/controller/common/maintenance.php">
+        <operation>
+            <search><![CDATA[
+            $data['header'] = $this->load->controller('common/header');
+            ]]></search>
+            <add position="replace"><![CDATA[]]></add>
+        </operation>
+
+        <operation>
+            <search><![CDATA[
+            $data['footer'] = $this->load->controller('common/footer');
+            ]]></search>
+            <add position="replace"><![CDATA[
+            // Journal Theme Modification
+            if (defined('JOURNAL3_ACTIVE')) {
+                $this->document->setTitle($this->journal3->settings->get('maintenanceMetaTitle'));
+
+                $data['grid'] = $this->load->controller('journal3/grid', array('module_type' => 'grid', 'module_id' => $this->journal3->settings->get('maintenanceGridModule')));
+            }
+
+            $data['footer'] = $this->load->controller('common/footer');
+            $data['header'] = $this->load->controller('common/header');
+
+		    // End Journal Theme Modification
+            ]]></add>
+        </operation>
+    </file>
+
+    <!-- oc30 config fix -->
+
+    <file path="system/engine/event.php">
+        <operation>
+            <search><![CDATA[
+            public function register($trigger, Action $action, $priority = 0) {
+            ]]></search>
+            <add position="after"><![CDATA[
+            if (defined('VERSION') && (VERSION === '3.0.2.0' || VERSION === '3.0.3.1') && $trigger === 'controller/*/after') {
+			    $action = new Action('event/language/after');
+		    }
+            ]]></add>
+        </operation>
+    </file>
+
+    <!-- j3 view variable -->
+
+    <file path="system/library/template.php">
+        <operation>
+            <search><![CDATA[
+            public function render
+            ]]></search>
+            <add position="after"><![CDATA[
+            // Journal Theme Modification
+            if (defined('JOURNAL3_ACTIVE')) {
+                $this->adaptor->set('j3', \Journal3::getInstance());
+                $this->adaptor->set('j3s', \Journal3::getInstance()->settings);
+            }
+		    // End Journal Theme Modification
+            ]]></add>
+        </operation>
+    </file>
+
+    <file path="catalog/controller/event/theme.php">
+        <operation>
+            <search><![CDATA[
+            if ($template) {
+            ]]></search>
+            <add position="after"><![CDATA[
+            // Journal Theme Modification
+            if (defined('JOURNAL3_ACTIVE')) {
+                $args['j3'] = \Journal3::getInstance();
+                $args['j3s'] = \Journal3::getInstance()->settings;
+            }
+		    // End Journal Theme Modification
+            ]]></add>
+        </operation>
+    </file>
+
+    <!-- oc 3.0.3.5 fix -->
+
+    <file path="system/library/template/twig.php">
+        <operation error="skip">
+            <search><![CDATA[
+            $loader = new \Twig\Loader\ArrayLoader
+            ]]></search>
+            <add position="after"><![CDATA[
+            // Journal Theme Modification
+            if (defined('JOURNAL3_ACTIVE')) {
+                $j3loader = new \Twig_Loader_Filesystem();
+
+			    if (defined('DIR_CATALOG') && is_dir(DIR_MODIFICATION . 'admin/view/template/')) {
+			        $j3loader->addPath(DIR_MODIFICATION . 'admin/view/template/');
+		        } elseif (is_dir(DIR_MODIFICATION . 'catalog/view/theme/')) {
+			        $j3loader->addPath(DIR_MODIFICATION . 'catalog/view/theme/');
+		        }
+
+		        $j3loader->addPath(DIR_TEMPLATE);
+
+			    $loader = new \Twig\Loader\ChainLoader(array($loader, $j3loader));
+            }
+		    // End Journal Theme Modification
+            ]]></add>
+        </operation>
+    </file>
+
+    <!-- cache clear -->
+
+    <file path="system/library/cache.php">
+        <operation>
+            <search><![CDATA[
+            public function delete($key) {
+            ]]></search>
+            <add position="after"><![CDATA[
+            // Journal Theme Modification
+            if (is_file(DIR_SYSTEM . 'library/journal3/vendor/SuperCache/SuperCache.php')) {
+                require_once DIR_SYSTEM . 'library/journal3/vendor/SuperCache/SuperCache.php';
+
+			    \SuperCache\SuperCache::clearAll();
+            }
+		    // End Journal Theme Modification
+            ]]></add>
+        </operation>
+    </file>
+
+    <!-- admin shortcut icon css -->
+
+    <file path="admin/controller/common/header.php">
+        <operation>
+            <search><![CDATA[
+                public function index() {
+            ]]></search>
+            <add position="after"><![CDATA[
+                $this->document->addStyle('view/javascript/journal3/assets/menu.css');
+            ]]></add>
+        </operation>
+    </file>
+
+    <!-- admin shortcut v2.3, v3-->
+
+    <file path="admin/controller/common/column_left.php">
+        <operation>
+            <search><![CDATA[
+                // Catalog
+            ]]></search>
+            <add position="before"><![CDATA[
+                // Journal3
+                $journal3 = $this->load->controller('journal3/journal3/menu');
+
+                if ($journal3) {
+                    $data['menus'][] = $journal3;
+                }
+            ]]></add>
+        </operation>
+    </file>
+
+    <file path="admin/controller/error/permission.php">
+        <operation>
+            <search><![CDATA[
+                $data['breadcrumbs'] = array();
+            ]]></search>
+            <add position="before"><![CDATA[
+                if (\Journal3\Utils\Request::isAdminRequest()) {
+                    $this->response->addHeader('Content-Type: application/json');
+
+                    return $this->response->setOutput(json_encode(array(
+                        'status'	=> 'error',
+                        'response'	=> $this->language->get('text_permission')
+                    )));
+                }
+            ]]></add>
+        </operation>
+    </file>
+
+    <file path="admin/controller/error/not_found.php">
+        <operation>
+            <search><![CDATA[
+                $data['breadcrumbs'] = array();
+            ]]></search>
+            <add position="before"><![CDATA[
+                if (\Journal3\Utils\Request::isAdminRequest()) {
+                    $this->response->addHeader('Content-Type: application/json');
+
+                    return $this->response->setOutput(json_encode(array(
+                        'status'	=> 'error',
+                        'response'	=> $this->language->get('text_not_found')
+                    )));
+                }
+            ]]></add>
+        </operation>
+    </file>
+
+    <!-- html minifier -->
+
+    <file path="system/library/response.php">
+        <operation>
+            <search><![CDATA[if ($this->output) {]]></search>
+            <add position="after"><![CDATA[
+                if (defined('JOURNAL3_ACTIVE')) {
+                    if (\Journal3::getInstance()->settings->get('performanceHTMLMinify')) {
+                        $this->output = \Journal3\Minifier::minifyHTML($this->output);
+                    }
+
+                    if (\Journal3::getInstance()->settings->get('performanceJSDefer')) {
+                        $this->output = str_replace('<script type="text/javascript">', '<script type="text/javascript/defer">', $this->output);
+                    }
+                }
+            ]]></add>
+        </operation>
+    </file>
+
+    <!-- crop resize type -->
+
+    <file path="catalog/model/tool/image.php">
+        <operation>
+            <search><![CDATA[public function resize($filename, $width, $height) {]]></search>
+            <add position="replace"><![CDATA[public function resize($filename, $width, $height, $type = '') {]]></add>
+        </operation>
+        <operation>
+            <search><![CDATA[(int)$height]]></search>
+            <add position="replace"><![CDATA[(int)$height . $type]]></add>
+        </operation>
+        <operation>
+            <search><![CDATA[$image->resize($width, $height);]]></search>
+            <add position="replace"><![CDATA[$image->resize($width, $height, $type);]]></add>
+        </operation>
+    </file>
+
+    <!-- image cdn -->
+
+    <file path="catalog/model/tool/image.php">
+        <operation>
+            <search><![CDATA[if ($this->request->server['HTTPS']) {]]></search>
+            <add position="before"><![CDATA[
+                if (defined('JOURNAL3_STATIC_URL')) {
+                    return JOURNAL3_STATIC_URL . 'image/' . $image_new;
+                }
+            ]]></add>
+        </operation>
+    </file>
+
+    <!-- image compression -->
+
+    <file path="catalog/model/tool/image.php">
+        <operation>
+            <search><![CDATA[$image->save(DIR_IMAGE . $image_new);]]></search>
+            <add position="after"><![CDATA[
+                if (defined('JOURNAL3_ACTIVE')) {
+                    if ($this->journal3->settings->get('performanceCompressImagesStatus')) {
+                        \Journal3\Utils\Img::optimise(DIR_IMAGE . $image_new);
+                    }
+                }
+            ]]></add>
+        </operation>
+
+        <operation>
+            <search><![CDATA[copy(DIR_IMAGE . $image_old, DIR_IMAGE . $image_new);]]></search>
+            <add position="after"><![CDATA[
+                if (defined('JOURNAL3_ACTIVE')) {
+                    if ($this->journal3->settings->get('performanceCompressImagesStatus')) {
+                        \Journal3\Utils\Img::optimise(DIR_IMAGE . $image_new);
+                    }
+                }
+            ]]></add>
+        </operation>
+    </file>
+
+    <!-- webp -->
+
+    <file path="catalog/model/tool/image.php">
+        <operation>
+            <search><![CDATA[$image_new = str_replace(' ', '%20', $image_new);]]></search>
+            <add position="before"><![CDATA[
+                if (defined('JOURNAL3_ACTIVE')) {
+                    if ($this->journal3->settings->get('performanceCompressImagesStatus')) {
+                        $image_new = \Journal3\Utils\Img::cwebp($image_new);
+                    }
+                }
+            ]]></add>
+        </operation>
+    </file>
+
+    <!-- menus -->
+
+    <file path="catalog/controller/common/footer.php">
+        <operation>
+            <search><![CDATA[
+            public function index() {
+            ]]></search>
+            <add position="after"><![CDATA[
+            if (defined('JOURNAL3_ACTIVE') && !$this->journal3->document->isPopup()) {
+                $this->journal3->settings->set('desktop_main_menu', $this->load->controller('journal3/main_menu', array('module_type' => 'main_menu', 'module_id' => $this->journal3->settings->get('headerMainMenu'), 'id' => 'main-menu')));
+                $this->journal3->settings->set('desktop_main_menu_2', $this->load->controller('journal3/main_menu', array('module_type' => 'main_menu', 'module_id' => $this->journal3->settings->get('headerMainMenu2'), 'id' => 'main-menu-2')));
+                $this->journal3->settings->set('desktop_top_menu', $this->load->controller('journal3/top_menu', array('module_type' => 'top_menu', 'module_id' => $this->journal3->settings->get('headerTopMenu'))));
+                $this->journal3->settings->set('desktop_top_menu_2', $this->load->controller('journal3/top_menu', array('module_type' => 'top_menu', 'module_id' => $this->journal3->settings->get('headerTopMenu2'))));
+                $this->journal3->settings->set('desktop_top_menu_3', $this->load->controller('journal3/top_menu', array('module_type' => 'top_menu', 'module_id' => $this->journal3->settings->get('headerTopMenu3'))));
+
+                if ($this->journal3->document->hasClass('mobile-header-active')) {
+                    $this->journal3->settings->set('mobile_main_menu', $this->load->controller('journal3/main_menu', array('module_type' => 'main_menu', 'module_id' => $this->journal3->settings->get('headerMobileMainMenu'))));
+                }
+
+                $this->journal3->settings->set('mobile_top_menu', $this->load->controller('journal3/top_menu', array('module_type' => 'top_menu', 'module_id' => $this->journal3->settings->get('headerMobileTopMenu'))));
+
+                $data['footer_menu'] = $this->load->controller('journal3/footer_menu', array('module_type' => 'footer_menu', 'module_id' => $this->journal3->settings->get('footerMenu')));
+            }
+            ]]></add>
+        </operation>
+    </file>
+
+    <!-- layout manager -->
+
+    <file path="catalog/controller/common/column_left.php">
+        <operation>
+            <search><![CDATA[
+            public function index() {
+            ]]></search>
+            <add position="after"><![CDATA[
+            if (defined('JOURNAL3_ACTIVE')) {
+                return $this->journal3->loadController('journal3/layout', 'column_left');
+            }
+            ]]></add>
+        </operation>
+    </file>
+
+    <file path="catalog/controller/common/column_right.php">
+        <operation>
+            <search><![CDATA[
+            public function index() {
+            ]]></search>
+            <add position="after"><![CDATA[
+            if (defined('JOURNAL3_ACTIVE')) {
+                return $this->journal3->loadController('journal3/layout', 'column_right');
+            }
+            ]]></add>
+        </operation>
+    </file>
+
+    <file path="catalog/controller/common/content_top.php">
+        <operation>
+            <search><![CDATA[
+            public function index() {
+            ]]></search>
+            <add position="after"><![CDATA[
+            if (defined('JOURNAL3_ACTIVE')) {
+                return $this->journal3->loadController('journal3/layout', 'content_top');
+            }
+            ]]></add>
+        </operation>
+    </file>
+
+    <file path="catalog/controller/common/content_bottom.php">
+        <operation>
+            <search><![CDATA[
+            public function index() {
+            ]]></search>
+            <add position="after"><![CDATA[
+            if (defined('JOURNAL3_ACTIVE')) {
+                return $this->journal3->loadController('journal3/layout', 'content_bottom');
+            }
+            ]]></add>
+        </operation>
+    </file>
+
+    <!-- cart items / price -->
+
+    <file path="catalog/controller/common/cart.php">
+        <operation>
+            <search><![CDATA[
+            foreach ($this->cart->getProducts() as $product) {
+            ]]></search>
+            <add position="before"><![CDATA[
+            if (defined('JOURNAL3_ACTIVE')) {
+                $data['items_count'] = $this->cart->countProducts() + (isset($this->session->data['vouchers']) ? count($this->session->data['vouchers']) : 0);
+                $data['items_price'] = $this->currency->format($total, $this->session->data['currency']);
+            }
+            ]]></add>
+        </operation>
+    </file>
+
+    <file path="catalog/controller/checkout/cart.php">
+        <operation>
+            <search><![CDATA[
+            $json['total'] = sprintf($this->language->get('text_items'), $this->cart->countProducts() + (isset($this->session->data['vouchers']) ? count($this->session->data['vouchers']) : 0), $this->currency->format($total, $this->session->data['currency']));
+            ]]></search>
+            <add position="after"><![CDATA[
+            if (defined('JOURNAL3_ACTIVE')) {
+                $json['items_count'] = $this->cart->countProducts() + (isset($this->session->data['vouchers']) ? count($this->session->data['vouchers']) : 0);
+                $json['items_price'] = $this->currency->format($total, $this->session->data['currency']);
+                switch ($this->journal3->settings->get('addToCartAction')) {
+                    case 'redirect_cart':
+                        $json['redirect'] = str_replace('&amp;', '&', $this->url->link('checkout/cart'));
+                        break;
+
+                    case 'redirect_checkout':
+                        $json['redirect'] = str_replace('&amp;', '&', $this->url->link('checkout/checkout'));
+                        break;
+                }
+            }
+            ]]></add>
+        </operation>
+    </file>
+
+    <!-- add to wishlist notification -->
+
+    <file path="catalog/controller/account/wishlist.php">
+        <operation>
+            <search><![CDATA[
+            $json['success'] = sprintf($this->language->get('text_success'), $this->url->link('product/product', 'product_id=' . (int)$this->request->post['product_id']), $product_info['name'], $this->url->link('account/wishlist'));
+            ]]></search>
+            <add position="after"><![CDATA[
+            if (defined('JOURNAL3_ACTIVE')) {
+                $json['notification'] = $this->journal3->loadController('journal3/notification/wishlist', array('product_info' => $product_info, 'message' => $json['success']));
+                $json['count'] = $this->model_account_wishlist->getTotalWishlist();
+            }
+            ]]></add>
+        </operation>
+
+        <operation>
+            <search><![CDATA[
+            $json['success'] = sprintf($this->language->get('text_login'), $this->url->link('account/login', '', true), $this->url->link('account/register', '', true), $this->url->link('product/product', 'product_id=' . (int)$this->request->post['product_id']), $product_info['name'], $this->url->link('account/wishlist'));
+            ]]></search>
+            <add position="after"><![CDATA[
+            if (defined('JOURNAL3_ACTIVE')) {
+                $json['notification'] = $this->journal3->loadController('journal3/notification/wishlist', array('product_info' => $product_info, 'message' => $json['success']));
+                $json['count'] = isset($this->session->data['wishlist']) ? count($this->session->data['wishlist']) : 0;
+            }
+            ]]></add>
+        </operation>
+    </file>
+
+    <!-- add to compare notification -->
+
+    <file path="catalog/controller/product/compare.php">
+        <operation>
+            <search><![CDATA[
+            $json['success'] = sprintf($this->language->get('text_success'), $this->url->link('product/product', 'product_id=' . $this->request->post['product_id']), $product_info['name'], $this->url->link('product/compare'));
+            ]]></search>
+            <add position="after"><![CDATA[
+            if (defined('JOURNAL3_ACTIVE')) {
+                $json['notification'] = $this->journal3->loadController('journal3/notification/compare', array('product_info' => $product_info, 'message' => $json['success']));
+                $json['count'] = isset($this->session->data['compare']) ? count($this->session->data['compare']) : 0;
+            }
+            ]]></add>
+        </operation>
+    </file>
+
+    <!-- add to compare no image fix -->
+
+    <file path="catalog/controller/product/compare.php">
+        <operation>
+            <search><![CDATA[
+            $image = false;
+            ]]></search>
+            <add position="replace"><![CDATA[
+            $image = defined('JOURNAL3_ACTIVE') ? $this->model_tool_image->resize('placeholder.png', $this->journal3->settings->get('image_dimensions_compare.width'), $this->journal3->settings->get('image_dimensions_compare.height')) : false;
+            ]]></add>
+        </operation>
+    </file>
+
+    <!-- add to cart notification + options popup -->
+
+    <file path="catalog/controller/checkout/cart.php">
+        <operation>
+            <search><![CDATA[
+            $json['success'] = sprintf($this->language->get('text_success'), $this->url->link('product/product', 'product_id=' . $this->request->post['product_id']), $product_info['name'], $this->url->link('checkout/cart'));
+            ]]></search>
+            <add position="after"><![CDATA[
+            if (defined('JOURNAL3_ACTIVE')) {
+                if (\Journal3\Utils\Arr::get($json, 'error.option')) {
+                    $json['options_popup'] = $this->journal3->settings->get('globalOptionsPopupStatus', true);
+                }
+
+                $json['notification'] = $this->journal3->loadController('journal3/notification/cart', array('product_info' => $product_info, 'message' => $json['success']));
+            }
+            ]]></add>
+        </operation>
+        <operation>
+            <search><![CDATA[
+            $json['redirect'] = str_replace('&amp;', '&', $this->url->link('product/product', 'product_id=' . $this->request->post['product_id']));
+            ]]></search>
+            <add position="after"><![CDATA[
+            if (defined('JOURNAL3_ACTIVE')) {
+                $json['options_popup'] = $this->journal3->settings->get('globalOptionsPopupStatus', true);
+            }
+            ]]></add>
+        </operation>
+    </file>
+
+    <!-- product grid -->
+
+    <file path="catalog/controller/product/{catalog,category,manufacturer,search,special}.php">
+        <operation>
+            <search><![CDATA[
+            $results = $this->model_catalog_product->getProduct
+            ]]></search>
+            <add position="after"><![CDATA[
+            if (defined('JOURNAL3_ACTIVE')) {
+                $this->load->model('journal3/product');
+
+                $data['image_width'] = $this->journal3->settings->get('image_dimensions_product.width');
+                $data['image_height'] = $this->journal3->settings->get('image_dimensions_product.height');
+
+                if ($this->journal3->settings->get('performanceLazyLoadImagesStatus')) {
+			        $data['dummy_image'] = $this->model_journal3_image->transparent($data['image_width'], $data['image_width']);
+                }
+            }
+            ]]></add>
+        </operation>
+    </file>
+
+    <file path="catalog/controller/product/{catalog,category,manufacturer,search,special}.php">
+        <operation>
+            <search><![CDATA[
+            $data['products'][] = array(
+            ]]></search>
+            <add position="before"><![CDATA[
+            if (defined('JOURNAL3_ACTIVE')) {
+                if ($result['image']) {
+                    $image2x = $this->model_journal3_image->resize($result['image'], $this->journal3->settings->get('image_dimensions_product.width') * 2, $this->journal3->settings->get('image_dimensions_product.height') * 2, $this->journal3->settings->get('image_dimensions_product.resize'));
+                } else {
+                    $image2x = $this->model_journal3_image->resize('placeholder.png', $this->journal3->settings->get('image_dimensions_product.width') * 2, $this->journal3->settings->get('image_dimensions_product.height') * 2, $this->journal3->settings->get('image_dimensions_product.resize'));
+                }
+
+                if ($this->journal3->document->isDesktop() && $this->journal3->settings->get('globalProductGridSecondImageStatus') && ($additional_image = $this->journal3->productSecondImage($result))) {
+                    $second_image = $this->model_journal3_image->resize($additional_image, $this->journal3->settings->get('image_dimensions_product.width'), $this->journal3->settings->get('image_dimensions_product.height'), $this->journal3->settings->get('image_dimensions_product.resize'));
+                    $second_image2x = $this->model_journal3_image->resize($additional_image, $this->journal3->settings->get('image_dimensions_product.width') * 2, $this->journal3->settings->get('image_dimensions_product.height') * 2, $this->journal3->settings->get('image_dimensions_product.resize'));
+                } else {
+                    $second_image = false;
+                    $second_image2x = false;
+                }
+            }
+            ]]></add>
+        </operation>
+    </file>
+
+    <file path="catalog/controller/product/{catalog,category,manufacturer,search,special}.php">
+        <operation>
+            <search><![CDATA[
+            $data['products'][] = array(
+            ]]></search>
+            <add position="after"><![CDATA[
+                'classes'        => array(
+					defined('JOURNAL3_ACTIVE') ? $this->journal3->productExcludeButton($result, $price, $special) : null,
+				),
+                'quantity'       => defined('JOURNAL3_ACTIVE') ? $result['quantity'] : null,
+				'stock_status'   => defined('JOURNAL3_ACTIVE') ? $result['stock_status'] : null,
+				'thumb2x'        => defined('JOURNAL3_ACTIVE') ? $image2x : null,
+				'second_thumb'   => defined('JOURNAL3_ACTIVE') ? $second_image : null,
+				'second_thumb2x' => defined('JOURNAL3_ACTIVE') ? $second_image2x : null,
+				'labels'         => defined('JOURNAL3_ACTIVE') ? $this->journal3->productLabels($result, $price, $special) : null,
+				'extra_buttons'  => defined('JOURNAL3_ACTIVE') ? $this->journal3->productExtraButton($result, $price, $special) : null,
+				'date_end'       => defined('JOURNAL3_ACTIVE') ? $this->journal3->productCountdown($result) : null,
+				'price_value'    => defined('JOURNAL3_ACTIVE') ? ($result['special'] ? $result['special'] > 0 : $result['price'] > 0) : null,
+				'stat1'          => defined('JOURNAL3_ACTIVE') ? $this->journal3->productStat($result, $this->journal3->settings->get('globalProductStat1')) : null,
+				'stat2'          => defined('JOURNAL3_ACTIVE') ? $this->journal3->productStat($result, $this->journal3->settings->get('globalProductStat2')) : null,
+            ]]></add>
+        </operation>
+    </file>
+
+    <file path="catalog/controller/product/compare.php">
+        <operation>
+            <search><![CDATA[
+            $data['products'][$product_id] = array(
+            ]]></search>
+            <add position="after"><![CDATA[
+                'classes'        => array(
+					defined('JOURNAL3_ACTIVE') ? $this->journal3->productExcludeButton($product_info, $price, $special) : null,
+				),
+				'quantity'       => $product_info['quantity'],
+				'price_value'    => defined('JOURNAL3_ACTIVE') ? ($product_info['special'] ? $product_info['special'] > 0 : $product_info['price'] > 0) : null,
+            ]]></add>
+        </operation>
+    </file>
+
+    <!-- main category image fit/crop oc23 -->
+
+    <file path="catalog/controller/product/category.php">
+        <operation error="skip">
+            <search><![CDATA[
+            $data['thumb'] = $this->model_tool_image->resize($category_info['image'], $this->config->get($this->config->get('config_theme') . '_image_category_width'), $this->config->get($this->config->get('config_theme') . '_image_category_height'));
+            ]]></search>
+            <add position="replace" trim="true"><![CDATA[
+            if (defined('JOURNAL3_ACTIVE')) {
+                if ($category_info['image']) {
+                    $data['thumb'] = $this->model_journal3_image->resize($category_info['image'], $this->journal3->settings->get('image_dimensions_category.width'), $this->journal3->settings->get('image_dimensions_category.height'), $this->journal3->settings->get('image_dimensions_category.resize'));
+                    $data['thumb2x'] = $this->model_journal3_image->resize($category_info['image'], $this->journal3->settings->get('image_dimensions_category.width') * 2, $this->journal3->settings->get('image_dimensions_category.height') * 2, $this->journal3->settings->get('image_dimensions_category.resize'));
+                } else {
+                    $data['thumb'] = false;
+                    $data['thumb2x'] = false;
+                }
+            } else {
+                $data['thumb'] = $this->model_tool_image->resize($category_info['image'], $this->config->get($this->config->get('config_theme') . '_image_category_width'), $this->config->get($this->config->get('config_theme') . '_image_category_height'));
+            }
+            ]]></add>
+        </operation>
+    </file>
+
+    <!-- main category image fit/crop oc30 -->
+
+    <file path="catalog/controller/product/category.php">
+        <operation>
+            <search><![CDATA[
+            $data['thumb'] = $this->model_tool_image->resize($category_info['image'], $this->config->get('theme_' . $this->config->get('config_theme') . '_image_category_width'), $this->config->get('theme_' . $this->config->get('config_theme') . '_image_category_height'));
+            ]]></search>
+            <add position="replace" trim="true"><![CDATA[
+            if (defined('JOURNAL3_ACTIVE')) {
+                $data['thumb'] = $this->model_journal3_image->resize($category_info['image'], $this->journal3->settings->get('image_dimensions_category.width'), $this->journal3->settings->get('image_dimensions_category.height'), $this->journal3->settings->get('image_dimensions_category.resize'));
+                $data['thumb2x'] = $this->model_journal3_image->resize($category_info['image'], $this->journal3->settings->get('image_dimensions_category.width') * 2, $this->journal3->settings->get('image_dimensions_category.height') * 2, $this->journal3->settings->get('image_dimensions_category.resize'));
+            } else {
+                $data['thumb'] = $this->model_tool_image->resize($category_info['image'], $this->config->get('theme_' . $this->config->get('config_theme') . '_image_category_width'), $this->config->get('theme_' . $this->config->get('config_theme') . '_image_category_height'));
+            }
+            ]]></add>
+        </operation>
+    </file>
+
+    <!-- product grid/list fit/crop oc23 -->
+
+    <file path="catalog/controller/product/{category,manufacturer,search,special}.php">
+        <operation error="skip">
+            <search><![CDATA[
+            $image = $this->model_tool_image->resize($result['image'], $this->config->get($this->config->get('config_theme') . '_image_product_width'), $this->config->get($this->config->get('config_theme') . '_image_product_height'));
+            ]]></search>
+            <add position="replace" trim="true"><![CDATA[
+            if (defined('JOURNAL3_ACTIVE')) {
+                $image = $this->model_journal3_image->resize($result['image'], $this->journal3->settings->get('image_dimensions_product.width'), $this->journal3->settings->get('image_dimensions_product.height'), $this->journal3->settings->get('image_dimensions_product.resize'));
+            } else {
+                $image = $this->model_tool_image->resize($result['image'], $this->config->get($this->config->get('config_theme') . '_image_product_width'), $this->config->get($this->config->get('config_theme') . '_image_product_height'));
+            }
+            ]]></add>
+        </operation>
+    </file>
+
+    <!-- product grid/list fit/crop oc30 -->
+
+    <file path="catalog/controller/product/{category,manufacturer,search,special}.php">
+        <operation>
+            <search><![CDATA[
+            $image = $this->model_tool_image->resize($result['image'], $this->config->get('theme_' . $this->config->get('config_theme') . '_image_product_width'), $this->config->get('theme_' . $this->config->get('config_theme') . '_image_product_height'));
+            ]]></search>
+            <add position="replace" trim="true"><![CDATA[
+            if (defined('JOURNAL3_ACTIVE')) {
+                $image = $this->model_journal3_image->resize($result['image'], $this->journal3->settings->get('image_dimensions_product.width'), $this->journal3->settings->get('image_dimensions_product.height'), $this->journal3->settings->get('image_dimensions_product.resize'));
+            } else {
+                $image = $this->model_tool_image->resize($result['image'], $this->config->get('theme_' . $this->config->get('config_theme') . '_image_product_width'), $this->config->get('theme_' . $this->config->get('config_theme') . '_image_product_height'));
+            }
+            ]]></add>
+        </operation>
+    </file>
+
+    <!-- refine images category page -->
+
+    <file path="catalog/controller/product/category.php">
+        <operation>
+            <search><![CDATA[
+            $results = $this->model_catalog_category->getCategories($category_id);
+            ]]></search>
+            <add position="replace" trim="true"><![CDATA[
+            if (defined('JOURNAL3_ACTIVE')) {
+                if ($this->journal3->settings->get('refineCategories') !== 'none') {
+                    if ($this->journal3->settings->get('subcategoriesDisplay') === 'carousel') {
+                        $this->journal3->document->addStyle('catalog/view/theme/journal3/lib/swiper/swiper.min.css');
+			            $this->journal3->document->addScript('catalog/view/theme/journal3/lib/swiper/swiper.min.js', 'footer');
+                    }
+                    $results = $this->model_catalog_category->getCategories($category_id);
+                } else {
+                    $results = array();
+                }
+            } else {
+                $results = $this->model_catalog_category->getCategories($category_id);
+            }
+            ]]></add>
+        </operation>
+
+        <operation>
+            <search><![CDATA[
+            $this->load->model('tool/image');
+            ]]></search>
+            <add position="after" trim="true"><![CDATA[
+            if (defined('JOURNAL3_ACTIVE')) {
+                $this->load->model('journal3/image');
+            }
+            ]]></add>
+        </operation>
+
+        <operation>
+            <search><![CDATA[
+            'name' => $result['name'] . ($this->config->get('config_product_count') ? ' (' . $this->model_catalog_product->getTotalProducts($filter_data) . ')' : ''),
+            ]]></search>
+            <add position="replace" trim="true"><![CDATA[
+            'name' => defined('JOURNAL3_ACTIVE') ? $this->journal3->countBadge($result['name'], $this->config->get('config_product_count') ? $this->model_catalog_product->getTotalProducts($filter_data) : null) : $result['name'] . ($this->config->get('config_product_count') ? ' (' . $this->model_catalog_product->getTotalProducts($filter_data) . ')' : ''),
+            'image' => defined('JOURNAL3_ACTIVE') ? $this->model_journal3_image->resize($result['image'], $this->journal3->settings->get('image_dimensions_subcategory.width'), $this->journal3->settings->get('image_dimensions_subcategory.height'), $this->journal3->settings->get('image_dimensions_subcategory.resize')) : '',
+            'image2x' => defined('JOURNAL3_ACTIVE') ? $this->model_journal3_image->resize($result['image'], $this->journal3->settings->get('image_dimensions_subcategory.width') * 2, $this->journal3->settings->get('image_dimensions_subcategory.height') * 2, $this->journal3->settings->get('image_dimensions_subcategory.resize')) : '',
+            'alt' => defined('JOURNAL3_ACTIVE') ? $result['name'] : '',
+            ]]></add>
+        </operation>
+    </file>
+
+    <!-- product compare count category page -->
+
+    <file path="catalog/controller/product/{catalog,category,manufacturer,search,special}.php">
+        <operation>
+            <search><![CDATA[
+            $data['text_compare'] = sprintf($this->language->get('text_compare'), (isset($this->session->data['compare']) ? count($this->session->data['compare']) : 0));
+            ]]></search>
+            <add position="replace" trim="true"><![CDATA[
+            if (defined('JOURNAL3_ACTIVE')) {
+                $data['text_compare'] = $this->journal3->countBadge($this->language->get('text_compare'), isset($this->session->data['compare']) ? count($this->session->data['compare']) : 0);
+            } else {
+                $data['text_compare'] = sprintf($this->language->get('text_compare'), (isset($this->session->data['compare']) ? count($this->session->data['compare']) : 0));
+            }
+            ]]></add>
+        </operation>
+    </file>
+
+    <file path="catalog/controller/product/compare.php">
+        <operation>
+            <search><![CDATA[
+            $json['total'] = sprintf($this->language->get('text_compare'), (isset($this->session->data['compare']) ? count($this->session->data['compare']) : 0));
+            ]]></search>
+            <add position="replace"><![CDATA[
+            if (defined('JOURNAL3_ACTIVE')) {
+                $json['total'] = $this->journal3->countBadge($this->language->get('text_compare'), isset($this->session->data['compare']) ? count($this->session->data['compare']) : 0);
+            } else {
+                $json['total'] = sprintf($this->language->get('text_compare'), (isset($this->session->data['compare']) ? count($this->session->data['compare']) : 0));
+            }
+            ]]></add>
+        </operation>
+    </file>
+
+    <!-- product page assets -->
+
+    <file path="catalog/controller/product/product.php">
+        <operation>
+            <search><![CDATA[
+            public function index() {
+            ]]></search>
+            <add position="after"><![CDATA[
+            if (defined('JOURNAL3_ACTIVE')) {
+                $this->journal3->document->addStyle('catalog/view/theme/journal3/lib/imagezoom/imagezoom.min.css');
+			    $this->journal3->document->addScript('catalog/view/theme/journal3/lib/imagezoom/jquery.imagezoom.min.js', 'footer');
+
+                $this->journal3->document->addStyle('catalog/view/theme/journal3/lib/lightgallery/css/lightgallery.min.css');
+                $this->journal3->document->addStyle('catalog/view/theme/journal3/lib/lightgallery/css/lg-transitions.min.css');
+                $this->journal3->document->addScript('catalog/view/theme/journal3/lib/lightgallery/js/lightgallery-all.js', 'footer');
+
+                $this->journal3->document->addStyle('catalog/view/theme/journal3/lib/swiper/swiper.min.css');
+			    $this->journal3->document->addScript('catalog/view/theme/journal3/lib/swiper/swiper.min.js', 'footer');
+            }
+            ]]></add>
+        </operation>
+    </file>
+
+    <!-- product images -->
+
+    <file path="catalog/controller/product/product.php">
+        <operation>
+            <search><![CDATA[
+            $results = $this->model_catalog_product->getProductImages
+            ]]></search>
+            <add position="after"><![CDATA[
+            if (defined('JOURNAL3_ACTIVE')) {
+                array_unshift($results, array('image' => $product_info['image']));
+
+                foreach ($results as $result) {
+				    $data['images'][] = array(
+                        'galleryThumb'  => $this->model_journal3_image->resize($result['image'], $this->journal3->settings->get('image_dimensions_popup_thumb.width'), $this->journal3->settings->get('image_dimensions_popup_thumb.height'), $this->journal3->settings->get('image_dimensions_popup_thumb.resize')),
+                        'image'         => $this->model_journal3_image->resize($result['image'], $this->journal3->settings->get('image_dimensions_thumb.width'), $this->journal3->settings->get('image_dimensions_thumb.height'), $this->journal3->settings->get('image_dimensions_thumb.resize')),
+                        'image2x'       => $this->model_journal3_image->resize($result['image'], $this->journal3->settings->get('image_dimensions_thumb.width') * 2, $this->journal3->settings->get('image_dimensions_thumb.height') * 2, $this->journal3->settings->get('image_dimensions_thumb.resize')),
+                        'popup'         => $this->model_journal3_image->resize($result['image'], $this->journal3->settings->get('image_dimensions_popup.width'), $this->journal3->settings->get('image_dimensions_popup.height'), $this->journal3->settings->get('image_dimensions_popup.resize')),
+                        'thumb'         => $this->model_journal3_image->resize($result['image'], $this->journal3->settings->get('image_dimensions_additional.width'), $this->journal3->settings->get('image_dimensions_additional.height'), $this->journal3->settings->get('image_dimensions_additional.resize')),
+                        'thumb2x'       => $this->model_journal3_image->resize($result['image'], $this->journal3->settings->get('image_dimensions_additional.width') * 2, $this->journal3->settings->get('image_dimensions_additional.height') * 2, $this->journal3->settings->get('image_dimensions_additional.resize'))
+				    );
+			    }
+
+			    $results = array();
+            }
+            ]]></add>
+        </operation>
+    </file>
+
+    <!-- product stats / labels / buttons / tabs / manufacturer -->
+
+    <file path="catalog/controller/product/product.php">
+        <operation>
+            <search><![CDATA[
+            if ($product_info) {
+            ]]></search>
+            <add position="after"><![CDATA[
+            if (defined('JOURNAL3_ACTIVE')) {
+                $this->load->language('product/compare');
+
+                $data['text_weight'] = $this->language->get('text_weight');
+                $data['text_dimension'] = $this->language->get('text_dimension');
+                $data['product_quantity'] = $product_info['quantity'];
+                $data['product_price_value'] = $product_info['special'] ? $product_info['special'] > 0 : $product_info['price'] > 0;
+                $data['product_sku'] = $product_info['sku'];
+                $data['product_upc'] = $product_info['upc'];
+                $data['product_ean'] = $product_info['ean'];
+                $data['product_jan'] = $product_info['jan'];
+                $data['product_isbn'] = $product_info['isbn'];
+                $data['product_mpn'] = $product_info['mpn'];
+                $data['product_location'] = $product_info['location'];
+                $data['product_dimension'] = (float)$product_info['length'] || (float)$product_info['width'] || (float)$product_info['height'];
+                $data['product_length'] = $this->length->format($product_info['length'], $product_info['length_class_id']);
+                $data['product_width'] = $this->length->format($product_info['width'], $product_info['length_class_id']);
+                $data['product_height'] = $this->length->format($product_info['height'], $product_info['length_class_id']);
+                $data['product_weight'] = (float)$product_info['weight'] ? $this->weight->format($product_info['weight'], $product_info['weight_class_id']) : false;
+
+                $data['product_labels'] = $this->journal3->productLabels($product_info, $product_info['price'], $product_info['special']);
+                $data['product_exclude_classes'] = $this->journal3->productExcludeButton($product_info, $product_info['price'], $product_info['special']);
+                $data['product_extra_buttons'] = $this->journal3->productExtraButton($product_info, $product_info['price'], $product_info['special']);
+                $data['product_blocks'] = array();
+
+                foreach($this->journal3->productBlocks($product_info, $product_info['price'], $product_info['special']) as $module_id => $module_data) {
+                    if ($module_data['position'] === 'quickview' && $this->journal3->document->isPopup()) {
+                    	if ($block = $this->load->controller('journal3/product_blocks', array('module_id' => $module_id, 'module_type' => 'product_blocks', 'product_info' => $product_info))) {
+							$data['product_blocks']['default'][] = $block;
+						}
+                    } else if ($module_data['position'] === 'quickview_details' && $this->journal3->document->isPopup()) {
+                    	if ($block = $this->load->controller('journal3/product_blocks', array('module_id' => $module_id, 'module_type' => 'product_blocks', 'product_info' => $product_info))) {
+							$data['product_blocks']['bottom'][] = $block;
+						}
+                    } else if ($module_data['position'] === 'quickview_image' && $this->journal3->document->isPopup()) {
+                    	if ($block = $this->load->controller('journal3/product_blocks', array('module_id' => $module_id, 'module_type' => 'product_blocks', 'product_info' => $product_info))) {
+							$data['product_blocks']['image'][] = $block;
+						}
+                    } else if (!$this->journal3->document->isPopup()) {
+                    	if ($block = $this->load->controller('journal3/product_blocks', array('module_id' => $module_id, 'module_type' => 'product_blocks', 'product_info' => $product_info))) {
+							$data['product_blocks'][$module_data['position']][] = $block;
+						}
+                    }
+                }
+
+                $product_tabs = array();
+
+                foreach($this->journal3->productTabs($product_info, $product_info['price'], $product_info['special']) as $module_id => $module_data) {
+                    if ($module_data['position'] === 'quickview' && $this->journal3->document->isPopup()) {
+                    	if ($tab = $this->load->controller('journal3/product_tabs', array('module_id' => $module_id, 'module_type' => 'product_tabs', 'product_info' => $product_info))) {
+							$product_tabs['default'][] = $tab;
+						}
+                    } else if ($module_data['position'] === 'quickview_details' && $this->journal3->document->isPopup()) {
+                    	if ($tab = $this->load->controller('journal3/product_tabs', array('module_id' => $module_id, 'module_type' => 'product_tabs', 'product_info' => $product_info))) {
+							$product_tabs['bottom'][] = $tab;
+						}
+                    } else if ($module_data['position'] === 'quickview_image' && $this->journal3->document->isPopup()) {
+                    	if ($tab = $this->load->controller('journal3/product_tabs', array('module_id' => $module_id, 'module_type' => 'product_tabs', 'product_info' => $product_info))) {
+							$product_tabs['image'][] = $tab;
+						}
+                    } else if (!$this->journal3->document->isPopup()) {
+                    	if ($tab = $this->load->controller('journal3/product_tabs', array('module_id' => $module_id, 'module_type' => 'product_tabs', 'product_info' => $product_info))) {
+							$product_tabs[$module_data['position']][] = $tab;
+						}
+                    }
+                }
+
+                foreach ($product_tabs as $position => &$items) {
+                    $_items = array();
+
+                    foreach ($items as $item) {
+                        $_items[$item['display']][] = $item;
+                    }
+
+                    foreach ($_items as $items) {
+                        $data['product_blocks'][$position][] = $this->load->controller('journal3/product_tabs/tabs', array('items' => $items, 'position' => $position));
+                    }
+                }
+
+                $this->load->model('catalog/manufacturer');
+
+                $manufacturer_info = $this->model_catalog_manufacturer->getManufacturer($product_info['manufacturer_id']);
+
+                if ($manufacturer_info && $manufacturer_info['image']) {
+                    $data['manufacturer_image'] = $this->model_journal3_image->resize($manufacturer_info['image'], $this->journal3->settings->get('image_dimensions_manufacturer_logo.width'), $this->journal3->settings->get('image_dimensions_manufacturer_logo.height'), $this->journal3->settings->get('image_dimensions_manufacturer_logo.resize'));
+                    $data['manufacturer_image2x'] = $this->model_journal3_image->resize($manufacturer_info['image'], $this->journal3->settings->get('image_dimensions_manufacturer_logo.width') * 2, $this->journal3->settings->get('image_dimensions_manufacturer_logo.height') * 2, $this->journal3->settings->get('image_dimensions_manufacturer_logo.resize'));
+                } else {
+                    $data['manufacturer_image'] = false;
+                }
+
+                if ($product_info['special']) {
+                    $data['date_end'] = $this->journal3->productCountdown($product_info);
+                } else {
+                    $data['date_end'] = false;
+                }
+
+                if ($this->journal3->document->isPopup()) {
+                    $data['view_more_url'] = $this->url->link('product/product', 'product_id=' . (int)$this->request->get['product_id']);
+                }
+            }
+            ]]></add>
+        </operation>
+    </file>
+
+    <!-- products quantity from popup fix -->
+
+    <file path="catalog/controller/product/product.php">
+        <operation>
+            <search><![CDATA[
+                $data['review_status'] = $this->config->get('config_review_status');
+            ]]></search>
+            <add position="after"><![CDATA[
+                if (defined('JOURNAL3_ACTIVE')) {
+                    $data['journal3_product_quantity'] = (int)\Journal3\Utils\Arr::get($this->request->get, 'product_quantity', 0);
+                }
+            ]]></add>
+        </operation>
+    </file>
+
+
+    <!-- product options image -->
+
+    <file path="catalog/controller/product/product.php">
+        <operation>
+            <search><![CDATA[
+            'image'                   => $this->model_tool_image->resize($option_value['image'], 50, 50),
+            ]]></search>
+            <add position="replace"><![CDATA[
+            'image'                   => defined('JOURNAL3_ACTIVE') ? ($option_value['image'] ? $this->model_journal3_image->resize($option_value['image'], $this->journal3->settings->get('image_dimensions_options.width'), $this->journal3->settings->get('image_dimensions_options.height'), $this->journal3->settings->get('image_dimensions_options.resize')) : false) : $this->model_tool_image->resize($option_value['image'], 50, 50),
+            ]]></add>
+        </operation>
+    </file>
+
+
+    <!-- manufacturer list images -->
+
+    <file path="catalog/controller/product/manufacturer.php">
+        <operation>
+            <search><![CDATA[
+                $this->load->model('tool/image');
+            ]]></search>
+            <add position="after"><![CDATA[
+                if (defined('JOURNAL3_ACTIVE')) {
+                    $this->load->model('journal3/image');
+                }
+            ]]></add>
+        </operation>
+        <operation>
+            <search><![CDATA[
+            $data['categories'][$key]['manufacturer'][] = array(
+            ]]></search>
+            <add position="after"><![CDATA[
+                'image' => defined('JOURNAL3_ACTIVE') ? $this->model_journal3_image->resize($result['image'] ? $result['image'] : 'placeholder.png', $this->journal3->settings->get('image_dimensions_manufacturer.width'), $this->journal3->settings->get('image_dimensions_manufacturer.height'), $this->journal3->settings->get('image_dimensions_manufacturer.resize')) : null,
+            ]]></add>
+        </operation>
+    </file>
+
+    <!-- account wishlist no image -->
+
+    <file path="catalog/controller/account/wishlist.php">
+        <operation>
+            <search><![CDATA[
+            $image = false;
+            ]]></search>
+            <add position="replace"><![CDATA[
+            $image = defined('JOURNAL3_ACTIVE') ? $this->model_tool_image->resize('placeholder.png', $this->journal3->settings->get('image_dimensions_wishlist.width'), $this->journal3->settings->get('image_dimensions_wishlist.height')) : false;
+            ]]></add>
+        </operation>
+    </file>
+
+    <!-- account wishlist stock -->
+
+    <file path="catalog/controller/account/wishlist.php">
+        <operation>
+            <search><![CDATA[
+            'stock'      => $stock,
+            ]]></search>
+            <add position="after"><![CDATA[
+            'classes'        => array(
+                defined('JOURNAL3_ACTIVE') ? $this->journal3->productExcludeButton($product_info, $price, $special) : null,
+            ),
+            'quantity'       => $product_info['quantity'],
+            ]]></add>
+        </operation>
+    </file>
+
+    <!-- quick checkout -->
+
+    <file path="catalog/controller/checkout/checkout.php">
+        <operation>
+            <search><![CDATA[$data['breadcrumbs'] = array();]]></search>
+            <add position="before"><![CDATA[
+                if (defined('JOURNAL3_ACTIVE') && $this->journal3->settings->get('activeCheckout') === 'journal') {
+                    return new Action('journal3/checkout');
+                }
+            ]]></add>
+        </operation>
+    </file>
+
+    <file path="catalog/controller/checkout/cart.php">
+        <operation>
+            <search><![CDATA[unset($this->session->data['shipping_method']);]]></search>
+            <add position="before"><![CDATA[
+                if (defined('JOURNAL3_ACTIVE') && $this->journal3->settings->get('activeCheckout') === 'journal') {
+                    $this->load->model('journal3/checkout');
+                    $this->model_journal3_checkout->setCheckoutId();
+                }
+            ]]></add>
+        </operation>
+    </file>
+
+    <!-- profiler -->
+
+    <file path="system/engine/loader.php">
+        <operation>
+            <search><![CDATA[$output = $action->execute($this->registry, array(&$data));]]></search>
+            <add position="replace"><![CDATA[
+                if (defined('JOURNAL3_ACTIVE') && \Journal3::getInstance()->isAdmin()) {
+                    \Journal3\Utils\Profiler::start($route);
+                    $output = $action->execute($this->registry, array(&$data));
+                    \Journal3\Utils\Profiler::end($route);
+                } else {
+                    $output = $action->execute($this->registry, array(&$data));
+                }
+            ]]></add>
+        </operation>
+    </file>
+
+    <file path="system/library/response.php">
+        <operation>
+            <search><![CDATA[echo $output;]]></search>
+            <add position="after"><![CDATA[
+                if (defined('JOURNAL3_ACTIVE')) {
+                    \Journal3::getInstance()->loadController('journal3/admin_bar');
+                }
+            ]]></add>
+        </operation>
+    </file>
+
+    <file path="system/library/db.php">
+        <operation>
+            <search><![CDATA[class DB {]]></search>
+            <add position="after"><![CDATA[
+    // Journal Theme Modification
+    public static $LOG = [];
+    // End Journal Theme Modification
+      ]]></add>
+        </operation>
+
+        <operation>
+            <search><![CDATA[return $this->adaptor->query($sql]]></search>
+            <add position="before"><![CDATA[
+    // Journal Theme Modification
+    $time = microtime(true);
+
+    if (version_compare(VERSION, '3', '>=')) {
+        $result = $this->adaptor->query($sql);
+    } else {
+        $result = $this->adaptor->query($sql, $params);
+    }
+
+    $time = (microtime(true) - $time) * 1000;
+
+    $data = [
+      'file' => debug_backtrace()[array_search(__FUNCTION__, array_column(debug_backtrace(), 'function'))]['file'],
+    ];
+
+    if (function_exists('clock')) {
+      clock()->addDatabaseQuery($sql, [], $time, $data);
+    } else {
+      static::$LOG[] = ['sql' => $sql, 'time' => $time, 'data' => $data];
+    }
+
+    return $result;
+    // End Journal Theme Modification
+      ]]></add>
+        </operation>
+    </file>
+
+    <!-- Cache -->
+
+    <file path="system/library/cache.php">
+        <operation>
+            <search><![CDATA[return $this->adaptor->get($key);]]></search>
+            <add position="replace"><![CDATA[
+    // Journal Theme Modification
+    $time = microtime(true);
+
+    $result = $this->adaptor->get($key);
+
+    $time = (microtime(true) - $time) * 1000;
+
+    $data = [
+      'file' => debug_backtrace()[array_search(__FUNCTION__, array_column(debug_backtrace(), 'function'))]['file'],
+    ];
+
+    if (function_exists('clock')) {
+      clock()->addCacheQuery('read', $key, $result, $time, $data);
+    }
+
+    return $result;
+    // End Journal Theme Modification
+      ]]></add>
+        </operation>
+    </file>
+
+    <!-- Debug -->
+
+    <file path="system/library/response.php">
+        <operation>
+            <search><![CDATA[echo $output;]]></search>
+            <add position="before"><![CDATA[
+      // Journal Theme Modification
+      if (function_exists('clock')) {
+        foreach (DB::$LOG as $log) {
+          clock()->addDatabaseQuery($log['sql'], [], $log['time'], $log['data']);
+        }
+
+        /*
+        $opencart = clock()->userData('opencart')->title('Opencart');
+
+        $opencart->table('REQUEST', [
+          [
+            'TYPE' => 'GET',
+                'VALUE' => Journal4\Journal4::registry()->get('request')->get
+            ],
+            [
+                'TYPE' => 'POST',
+                'VALUE' => Journal4\Journal4::registry()->get('request')->post
+            ],
+            [
+                'TYPE' => 'COOKIE',
+                'VALUE' => Journal4\Journal4::registry()->get('request')->cookie
+            ],
+            [
+                'TYPE' => 'SESSION',
+                'VALUE' => Journal4\Journal4::registry()->get('session')->data
+            ],
+            [
+                'TYPE' => 'SERVER',
+                'VALUE' => Journal4\Journal4::registry()->get('request')->server
+            ],
+        ]);
+        */
+
+        clock()->requestProcessed();
+      }
+      // End Journal Theme Modification
+      ]]></add>
+        </operation>
+    </file>
+
+    <!-- search categories -->
+
+    <file path="catalog/controller/common/search.php">
+        <operation>
+            <search><![CDATA[
+            public function index() {
+            ]]></search>
+            <add position="after"><![CDATA[
+            if (defined('JOURNAL3_ACTIVE')) {
+                $this->load->model('journal3/links');
+
+                $data['search_url'] = $this->model_journal3_links->url('product/search', 'search=');
+
+                if ($this->journal3->settings->get('searchStyleSearchCategoriesSelectorStatus')) {
+                    $this->load->language('product/search');
+                    $this->load->model('journal3/category');
+
+                    $category_id = (int)\Journal3\Utils\Arr::get($this->request->get, 'category_id', 0);
+                    $category = $this->language->get('text_category');
+
+                    if ($category_id) {
+                        $category_info = $this->model_catalog_category->getCategory($category_id);
+
+                        if ($category_info) {
+                            $category = $category_info['name'];
+                        }
+                    }
+
+                    $data['text_category'] = $this->language->get('text_category');
+                    $data['category'] = $category;
+                    $data['category_id'] = $category_id;
+
+                    if ($this->journal3->settings->get('searchStyleSearchCategoriesType') !== 'all') {
+                        $categories = $this->model_journal3_category->getCategories(0, 0, $this->journal3->settings->get('searchStyleSearchCategoriesType') === 'top_only');
+
+                        $data['categories'] = array();
+
+                        foreach ($categories as $category) {
+                            $data['categories'][] = array(
+                                'category_id' => $category['category_id'],
+                                'title' => $category['name'],
+                                'items' => array()
+                            );
+                        }
+                    } else {
+                        $data['categories'] = $this->model_journal3_category->getSubcategories(0);
+                    }
+                }
+            }
+            ]]></add>
+        </operation>
+    </file>
+
+    <!-- performance -->
+
+    <!-- disable header / footer menus -->
+
+    <file path="catalog/controller/common/header.php">
+        <operation error="skip">
+            <search><![CDATA[
+            $categories = $this->model_catalog_category->getCategories(0);
+            ]]></search>
+            <add position="replace" trim="true"><![CDATA[
+            $categories = defined('JOURNAL3_ACTIVE') ? array() : $this->model_catalog_category->getCategories(0);
+            ]]></add>
+        </operation>
+    </file>
+
+    <file path="catalog/controller/common/menu.php">
+        <operation error="skip">
+            <search><![CDATA[
+            $categories = $this->model_catalog_category->getCategories(0);
+            ]]></search>
+            <add position="replace" trim="true"><![CDATA[
+            $categories = defined('JOURNAL3_ACTIVE') ? array() : $this->model_catalog_category->getCategories(0);
+            ]]></add>
+        </operation>
+    </file>
+
+    <file path="catalog/controller/common/footer.php">
+        <operation>
+            <search><![CDATA[
+            foreach ($this->model_catalog_information->getInformations() as $result) {
+            ]]></search>
+            <add position="replace" trim="true"><![CDATA[
+            foreach (defined('JOURNAL3_ACTIVE') ? array() : $this->model_catalog_information->getInformations() as $result) {
+            ]]></add>
+        </operation>
+    </file>
+
+    <!-- disable related products query -->
+
+    <file path="catalog/controller/product/product.php">
+        <operation>
+            <search><![CDATA[
+            $results = $this->model_catalog_product->getProductRelated($this->request->get['product_id']);
+            ]]></search>
+            <add position="replace" trim="true"><![CDATA[
+            $results = defined('JOURNAL3_ACTIVE') ? array() : $this->model_catalog_product->getProductRelated($this->request->get['product_id']);
+            ]]></add>
+        </operation>
+    </file>
+
+    <!-- enhance getProducts n + 1 queries -->
+
+    <!--<file path="catalog/model/catalog/product.php">
+        <operation>
+            <search><![CDATA[p.product_id = '" . (int)$product_id . "']]></search>
+            <add position="replace" trim="true"><![CDATA[
+                p.product_id" . ( defined('JOURNAL3_ACTIVE') && is_array($product_id) && count($product_id) ? " IN (" . implode(',', array_map(function ($product_id) { return isset($product_id['product_id']) ? (int)$product_id['product_id'] : (int)$product_id; }, $product_id)) . ")" : " = '" . (int)$product_id . "'")  . "
+            ]]></add>
+        </operation>
+
+        <operation>
+            <search><![CDATA[return array(]]></search>
+            <add position="replace" trim="true"><![CDATA[
+                $res = array_map(function ($row) {$query = new stdClass(); $query->row = $row; return array(
+            ]]></add>
+        </operation>
+
+        <operation>
+            <search><![CDATA[return false;]]></search>
+            <add position="before" trim="true" offset="1"><![CDATA[
+                }, $query->rows); return $query->num_rows > 1 ? $res : (is_array($product_id) ? array(reset($res)) : reset($res));
+            ]]></add>
+        </operation>
+
+        <operation>
+            <search><![CDATA[return false;]]></search>
+            <add position="replace" trim="true"><![CDATA[
+                return is_array($product_id) ? array() : false;
+            ]]></add>
+        </operation>
+
+        <operation>
+            <search><![CDATA[$product_data[$result['product_id']] = $this->getProduct($result['product_id']);]]></search>
+            <add position="replace" trim="true"><![CDATA[
+                if (defined('JOURNAL3_ACTIVE')) {
+                    $product_data[$result['product_id']] = $result['product_id'];
+                } else {
+                    $product_data[$result['product_id']] = $this->getProduct($result['product_id']);
+                }
+            ]]></add>
+        </operation>
+
+        <operation>
+            <search><![CDATA[$product_data[$result['related_id']] = $this->getProduct($result['related_id']);]]></search>
+            <add position="replace" trim="true"><![CDATA[
+                if (defined('JOURNAL3_ACTIVE')) {
+                    $product_data[$result['related_id']] = $result['related_id'];
+                } else {
+                    $product_data[$result['related_id']] = $this->getProduct($result['related_id']);
+                }
+            ]]></add>
+        </operation>
+
+        <operation>
+            <search><![CDATA[return $product_data;]]></search>
+            <add position="replace" trim="true"><![CDATA[
+                if (defined('JOURNAL3_ACTIVE')) {
+                    return $this->getProduct($product_data);
+                } else {
+                    return $product_data;
+                }
+            ]]></add>
+        </operation>
+    </file>-->
+
+    <!-- default sort -->
+
+    <file path="catalog/controller/product/{catalog,category,manufacturer,search}.php">
+        <operation>
+            <search><![CDATA[$sort = 'p.sort_order';]]></search>
+            <add position="replace"><![CDATA[
+            if (defined('JOURNAL3_ACTIVE')) {
+                $sort = $this->journal3->settings->get('productSort');
+            } else {
+                $sort = 'p.sort_order';
+            }
+            ]]></add>
+        </operation>
+
+        <operation>
+            <search><![CDATA[$order = 'ASC';]]></search>
+            <add position="replace"><![CDATA[
+            if (defined('JOURNAL3_ACTIVE')) {
+                $order = $this->journal3->settings->get('productOrder');
+            } else {
+                $order = 'ASC';
+            }
+            ]]></add>
+        </operation>
+    </file>
+
+    <!-- category page filter -->
+
+    <file path="catalog/controller/product/{catalog,category,manufacturer,search}.php">
+        <operation>
+            <search><![CDATA[$product_total = $this->model_catalog_product->getTotalProducts($filter_data);]]></search>
+            <add position="replace"><![CDATA[
+            if (defined('JOURNAL3_ACTIVE')) {
+                $this->load->model('journal3/filter');
+
+                $filter_data = array_merge($this->model_journal3_filter->parseFilterData(), $filter_data);
+
+                $this->model_journal3_filter->setFilterData($filter_data);
+
+                \Journal3\Utils\Profiler::start('journal3/filter/total_products');
+
+                $product_total = $this->model_journal3_filter->getTotalProducts();
+
+                \Journal3\Utils\Profiler::end('journal3/filter/total_products');
+            } else {
+                $product_total = $this->model_catalog_product->getTotalProducts($filter_data);
+            }
+            ]]></add>
+        </operation>
+
+        <operation>
+            <search><![CDATA[$results = $this->model_catalog_product->getProducts($filter_data);]]></search>
+            <add position="replace"><![CDATA[
+            if (defined('JOURNAL3_ACTIVE')) {
+                \Journal3\Utils\Profiler::start('journal3/filter/products');
+
+                $results = $this->model_journal3_filter->getProducts($filter_data);
+
+                \Journal3\Utils\Profiler::end('journal3/filter/products');
+            } else {
+                $results = $this->model_catalog_product->getProducts($filter_data);
+            }
+            ]]></add>
+        </operation>
+
+        <operation>
+            <search><![CDATA[$data['sorts'] = array();]]></search>
+            <add position="before"><![CDATA[
+            if (defined('JOURNAL3_ACTIVE')) {
+                $url .= $this->model_journal3_filter->buildFilterData($filter_data);
+            }
+            ]]></add>
+        </operation>
+
+        <operation>
+            <search><![CDATA[sort($limits);]]></search>
+            <add position="after"><![CDATA[
+            if (defined('JOURNAL3_ACTIVE')) {
+                $url .= $this->model_journal3_filter->buildFilterData($filter_data);
+            }
+            ]]></add>
+        </operation>
+
+        <operation>
+            <search><![CDATA[$pagination = new Pagination();]]></search>
+            <add position="before"><![CDATA[
+            if (defined('JOURNAL3_ACTIVE')) {
+                $url .= $this->model_journal3_filter->buildFilterData($filter_data);
+            }
+            ]]></add>
+        </operation>
+    </file>
+
+    <file path="catalog/controller/product/special.php">
+        <operation>
+            <search><![CDATA[$product_total = $this->model_catalog_product->getTotalProductSpecials();]]></search>
+            <add position="replace"><![CDATA[
+            if (defined('JOURNAL3_ACTIVE')) {
+                // oc3 heading_title fix
+                $data['heading_title'] = $this->language->get('heading_title');
+
+                $this->load->model('journal3/filter');
+
+                $filter_data['special'] = true;
+
+                $filter_data = array_merge($this->model_journal3_filter->parseFilterData(), $filter_data);
+
+                $this->model_journal3_filter->setFilterData($filter_data);
+
+                \Journal3\Utils\Profiler::start('journal3/filter/total_products');
+
+                $product_total = $this->model_journal3_filter->getTotalProducts();
+
+                \Journal3\Utils\Profiler::end('journal3/filter/total_products');
+            } else {
+                $product_total = $this->model_catalog_product->getTotalProductSpecials();
+            }
+            ]]></add>
+        </operation>
+
+        <operation>
+            <search><![CDATA[$results = $this->model_catalog_product->getProductSpecials($filter_data);]]></search>
+            <add position="replace"><![CDATA[
+            if (defined('JOURNAL3_ACTIVE')) {
+                \Journal3\Utils\Profiler::start('journal3/filter/products');
+
+                $results = $this->model_journal3_filter->getProducts($filter_data);
+
+                \Journal3\Utils\Profiler::end('journal3/filter/products');
+            } else {
+                $results = $this->model_catalog_product->getProductSpecials($filter_data);
+            }
+            ]]></add>
+        </operation>
+
+        <operation>
+            <search><![CDATA[$data['sorts'] = array();]]></search>
+            <add position="before"><![CDATA[
+            if (defined('JOURNAL3_ACTIVE')) {
+                $url .= $this->model_journal3_filter->buildFilterData($filter_data);
+            }
+            ]]></add>
+        </operation>
+
+        <operation>
+            <search><![CDATA[foreach($limits as $value) {]]></search>
+            <add position="before"><![CDATA[
+            if (defined('JOURNAL3_ACTIVE')) {
+                $url .= $this->model_journal3_filter->buildFilterData($filter_data);
+            }
+            ]]></add>
+        </operation>
+
+        <operation>
+            <search><![CDATA[$pagination = new Pagination();]]></search>
+            <add position="before"><![CDATA[
+            if (defined('JOURNAL3_ACTIVE')) {
+                $url .= $this->model_journal3_filter->buildFilterData($filter_data);
+            }
+            ]]></add>
+        </operation>
+    </file>
+
+    <!-- pagination classes -->
+
+    <file path="system/library/pagination.php">
+        <operation>
+            <search><![CDATA['">' . $this->text_prev . ']]></search>
+            <add position="replace"><![CDATA['" class="prev">' . $this->text_prev . ']]></add>
+        </operation>
+
+        <operation>
+            <search><![CDATA['">' . $this->text_next . ']]></search>
+            <add position="replace"><![CDATA['" class="next">' . $this->text_next . ']]></add>
+        </operation>
+
+        <!--<operation>-->
+            <!--<search regex="true"><![CDATA[~<li>(.*)\$this->text_prev . '</a></li>~]]></search>-->
+            <!--<add position="replace"><![CDATA[<li class="prev">$1\$this->text_prev . '</a></li>]]></add>-->
+        <!--</operation>-->
+
+        <!--<operation>-->
+            <!--<search regex="true"><![CDATA[~<li>(.*)\$this->text_next . '</a></li>~]]></search>-->
+            <!--<add position="replace"><![CDATA[<li class="next">$1\$this->text_next . '</a></li>]]></add>-->
+        <!--</operation>-->
+    </file>
+
+    <!-- recently viewed / product views / products sold  -->
+
+    <file path="catalog/controller/product/product.php">
+        <operation>
+            <search><![CDATA[$this->model_catalog_product->updateViewed($this->request->get['product_id']);]]></search>
+            <add position="after"><![CDATA[
+            if (defined('JOURNAL3_ACTIVE')) {
+                $this->load->model('journal3/product');
+                $this->model_journal3_product->addRecentlyViewedProduct($this->request->get['product_id']);
+
+                $data['products_sold'] = $this->model_journal3_product->getProductsSold($this->request->get['product_id']);
+                $data['product_views'] = $product_info['viewed'];
+            }
+            ]]></add>
+        </operation>
+    </file>
+
+    <!-- in stock admin translation -->
+
+    <file path="catalog/controller/product/product.php">
+        <operation>
+            <search><![CDATA[$data['stock'] = $this->language->get('text_instock');]]></search>
+            <add position="replace"><![CDATA[
+            if (defined('JOURNAL3_ACTIVE')) {
+                $stylePrefix = $this->journal3->document->isPopup('quickview') ? 'quickviewPageStyle' : 'productPageStyle';
+                $data['stock'] = $this->journal3->settings->get($stylePrefix . 'ProductInStockText');
+
+                // some third party addons for in stock status
+                if (isset($product_info['in_stock_status']) && $product_info['in_stock_status']) {
+                    $data['stock'] = $product_info['in_stock_status'];
+                }
+            } else {
+                $data['stock'] = $this->language->get('text_instock');
+            }
+            ]]></add>
+        </operation>
+    </file>
+
+    <!-- account register validation -->
+
+    <file path="catalog/controller/account/register.php">
+        <operation>
+            <search><![CDATA[$data['action'] = $this->url->link('account/register', '', true);]]></search>
+            <add position="before"><![CDATA[
+            if (defined('JOURNAL3_ACTIVE')) {
+                if (isset($this->error['fax'])) {
+			        $data['error_fax'] = $this->error['fax'];
+		        } else {
+			        $data['error_fax'] = '';
+		        }
+
+		        if (isset($this->error['company'])) {
+			        $data['error_company'] = $this->error['company'];
+		        } else {
+			        $data['error_company'] = '';
+		        }
+
+		        if (isset($this->error['address_2'])) {
+			        $data['error_address_2'] = $this->error['address_2'];
+		        } else {
+			        $data['error_address_2'] = '';
+		        }
+            }
+            ]]></add>
+        </operation>
+
+
+        <operation>
+            <search><![CDATA[return !$this->error;]]></search>
+            <add position="before"><![CDATA[
+            if (defined('JOURNAL3_ACTIVE')) {
+                if ($this->journal3->settings->get('accountAccountFirstNameField') !== 'required') {
+                    unset($this->error['firstname']);
+                }
+
+                if ($this->journal3->settings->get('accountAccountLastNameField') !== 'required') {
+                    unset($this->error['lastname']);
+                }
+
+                if ($this->journal3->settings->get('accountAccountTelephoneField') !== 'required') {
+                    unset($this->error['telephone']);
+                }
+
+                if ($this->journal3->settings->get('accountAddressAddress1Field') !== 'required') {
+                    unset($this->error['address_1']);
+                }
+
+                if ($this->journal3->settings->get('accountAddressCityField') !== 'required') {
+                    unset($this->error['city']);
+                }
+
+                if ($this->journal3->settings->get('accountAddressCountryField') !== 'required') {
+                    unset($this->error['country']);
+                }
+
+                if ($this->journal3->settings->get('accountAddressRegionField') !== 'required') {
+                    unset($this->error['zone']);
+                }
+
+                if ($this->journal3->isOC2()) {
+                    if (($this->journal3->settings->get('accountAccountFaxField') === 'required') && !\Journal3\Utils\Arr::get($this->request->post, 'fax')) {
+                        $this->error['fax'] = sprintf($this->language->get('error_custom_field'), $this->language->get('entry_fax'));
+                    }
+
+                    if (($this->journal3->settings->get('accountAddressCompanyField') === 'required') && !\Journal3\Utils\Arr::get($this->request->post, 'company')) {
+                        $this->error['company'] = sprintf($this->language->get('error_custom_field'), $this->language->get('entry_company'));
+                    }
+
+                    if (($this->journal3->settings->get('accountAddressAddress2Field') === 'required') && !\Journal3\Utils\Arr::get($this->request->post, 'address_2')) {
+                        $this->error['address_2'] = sprintf($this->language->get('error_custom_field'), $this->language->get('entry_address_2'));
+                    }
+                }
+            }
+            ]]></add>
+        </operation>
+    </file>
+
+    <!-- account edit validation -->
+
+    <file path="catalog/controller/account/edit.php">
+        <operation>
+            <search><![CDATA[$data['back'] = $this->url->link('account/account', '', true);]]></search>
+            <add position="before"><![CDATA[
+            if (defined('JOURNAL3_ACTIVE')) {
+                if (isset($this->error['fax'])) {
+			        $data['error_fax'] = $this->error['fax'];
+		        } else {
+			        $data['error_fax'] = '';
+		        }
+
+		        if (isset($this->error['company'])) {
+			        $data['error_company'] = $this->error['company'];
+		        } else {
+			        $data['error_company'] = '';
+		        }
+
+		        if (isset($this->error['address_2'])) {
+			        $data['error_address_2'] = $this->error['address_2'];
+		        } else {
+			        $data['error_address_2'] = '';
+		        }
+            }
+            ]]></add>
+        </operation>
+
+
+        <operation>
+            <search><![CDATA[return !$this->error;]]></search>
+            <add position="before"><![CDATA[
+            if (defined('JOURNAL3_ACTIVE')) {
+                if ($this->journal3->settings->get('accountAccountFirstNameField') !== 'required') {
+                    unset($this->error['firstname']);
+                }
+
+                if ($this->journal3->settings->get('accountAccountLastNameField') !== 'required') {
+                    unset($this->error['lastname']);
+                }
+
+                if ($this->journal3->settings->get('accountAccountTelephoneField') !== 'required') {
+                    unset($this->error['telephone']);
+                }
+
+                if ($this->journal3->settings->get('accountAddressAddress1Field') !== 'required') {
+                    unset($this->error['address_1']);
+                }
+
+                if ($this->journal3->settings->get('accountAddressCityField') !== 'required') {
+                    unset($this->error['city']);
+                }
+
+                if ($this->journal3->settings->get('accountAddressCountryField') !== 'required') {
+                    unset($this->error['country']);
+                }
+
+                if ($this->journal3->settings->get('accountAddressRegionField') !== 'required') {
+                    unset($this->error['zone']);
+                }
+
+                if ($this->journal3->isOC2()) {
+                    if (($this->journal3->settings->get('accountAccountFaxField') === 'required') && !\Journal3\Utils\Arr::get($this->request->post, 'fax')) {
+                        $this->error['fax'] = sprintf($this->language->get('error_custom_field'), $this->language->get('entry_fax'));
+                    }
+
+                    if (($this->journal3->settings->get('accountAddressCompanyField') === 'required') && !\Journal3\Utils\Arr::get($this->request->post, 'company')) {
+                        $this->error['company'] = sprintf($this->language->get('error_custom_field'), $this->language->get('entry_company'));
+                    }
+
+                    if (($this->journal3->settings->get('accountAddressAddress2Field') === 'required') && !\Journal3\Utils\Arr::get($this->request->post, 'address_2')) {
+                        $this->error['address_2'] = sprintf($this->language->get('error_custom_field'), $this->language->get('entry_address_2'));
+                    }
+                }
+            }
+            ]]></add>
+        </operation>
+    </file>
+
+    <!-- account address validation -->
+
+    <file path="catalog/controller/account/address.php">
+        <operation>
+            <search><![CDATA[$data['back'] = $this->url->link('account/address', '', true);]]></search>
+            <add position="before"><![CDATA[
+            if (defined('JOURNAL3_ACTIVE')) {
+		        if (isset($this->error['company'])) {
+			        $data['error_company'] = $this->error['company'];
+		        } else {
+			        $data['error_company'] = '';
+		        }
+
+		        if (isset($this->error['address_2'])) {
+			        $data['error_address_2'] = $this->error['address_2'];
+		        } else {
+			        $data['error_address_2'] = '';
+		        }
+            }
+            ]]></add>
+        </operation>
+
+
+        <operation>
+            <search><![CDATA[return !$this->error;]]></search>
+            <add position="before"><![CDATA[
+            if (defined('JOURNAL3_ACTIVE')) {
+                if ($this->journal3->settings->get('accountAddressFirstNameField') !== 'required') {
+                    unset($this->error['firstname']);
+                }
+
+                if ($this->journal3->settings->get('accountAddressLastNameField') !== 'required') {
+                    unset($this->error['lastname']);
+                }
+
+                if ($this->journal3->settings->get('accountAddressTelephoneField') !== 'required') {
+                    unset($this->error['telephone']);
+                }
+
+                if ($this->journal3->settings->get('accountAddressAddress1Field') !== 'required') {
+                    unset($this->error['address_1']);
+                }
+
+                if ($this->journal3->settings->get('accountAddressCityField') !== 'required') {
+                    unset($this->error['city']);
+                }
+
+                if ($this->journal3->settings->get('accountAddressCountryField') !== 'required') {
+                    unset($this->error['country']);
+                }
+
+                if ($this->journal3->settings->get('accountAddressRegionField') !== 'required') {
+                    unset($this->error['zone']);
+                }
+
+                if (($this->journal3->settings->get('accountAddressCompanyField') === 'required') && !\Journal3\Utils\Arr::get($this->request->post, 'company')) {
+                    $this->error['company'] = sprintf($this->language->get('error_custom_field'), $this->language->get('entry_company'));
+                }
+
+                if (($this->journal3->settings->get('accountAddressAddress2Field') === 'required') && !\Journal3\Utils\Arr::get($this->request->post, 'address_2')) {
+                    $this->error['address_2'] = sprintf($this->language->get('error_custom_field'), $this->language->get('entry_address_2'));
+                }
+            }
+            ]]></add>
+        </operation>
+    </file>
+
+    <!-- login / register popup -->
+
+    <file path="catalog/controller/account/{login,register}.php">
+        <operation>
+            <search><![CDATA[$this->response->redirect]]></search>
+            <add position="before"><![CDATA[
+            if (defined('JOURNAL3_ACTIVE')) {
+                if (\Journal3\Utils\Request::isAjax()) {
+                    echo json_encode(array(
+                        'status' => 'success',
+                        'customer' => $this->customer->isLogged()
+                    ), true);
+
+                    exit;
+                }
+            }
+            ]]></add>
+        </operation>
+        <operation>
+            <search><![CDATA[return !$this->error;]]></search>
+            <add position="before"><![CDATA[
+            if (defined('JOURNAL3_ACTIVE')) {
+                if (\Journal3\Utils\Request::isAjax() && $this->error) {
+                    echo json_encode(array(
+                        'status' => 'error',
+                        'response' => $this->error
+                    ), true);
+
+                    exit;
+                }
+            }
+            ]]></add>
+        </operation>
+    </file>
+
+    <!-- blog seo urls -->
+
+    <file path="catalog/controller/startup/seo_url.php">
+        <operation>
+            <search><![CDATA[if ($query->num_rows) {]]></search>
+            <add position="before"><![CDATA[
+                // Journal Theme Modification
+                if ($part && !$query->num_rows) {
+                    $sql = "
+                        SELECT CONCAT('journal_blog_category_id=', category_id) as query FROM " . DB_PREFIX . "journal3_blog_category_description
+                        WHERE keyword = '" . $this->db->escape($part) . "'
+                        UNION
+                        SELECT CONCAT('journal_blog_post_id=', post_id) as query FROM " . DB_PREFIX . "journal3_blog_post_description
+                        WHERE keyword = '" . $this->db->escape($part) . "'
+                    ";
+                    $query = $this->db->query($sql);
+                }
+
+                if (!$query->num_rows) {
+                    $this->load->model('journal3/blog');
+                    $journal_blog_keywords = $this->model_journal3_blog->getBlogKeywords();
+
+                    if($part && is_array($journal_blog_keywords) && (in_array($part, $journal_blog_keywords))) {
+                        $this->request->get['route'] = 'journal3/blog';
+                        continue;
+                    }
+                }
+                // End Journal Theme Modification
+            ]]></add>
+        </operation>
+
+        <operation>
+            <search><![CDATA[if ($url[0] == 'product_id') {]]></search>
+            <add position="before"><![CDATA[
+                // Journal Theme Modification
+                if ($url[0] == 'journal_blog_post_id') {
+                    $this->request->get['journal_blog_post_id'] = $url[1];
+                }
+
+                if ($url[0] == 'journal_blog_category_id') {
+                    $this->request->get['journal_blog_category_id'] = $url[1];
+                }
+                // End Journal Theme Modification
+            ]]></add>
+        </operation>
+
+        <operation>
+            <search><![CDATA[if (!isset($this->request->get['route'])) {]]></search>
+            <add position="before"><![CDATA[
+                // Journal Theme Modification
+                if (isset($this->request->get['journal_blog_post_id'])) {
+                    $this->request->get['route'] = 'journal3/blog/post';
+                } else if (isset($this->request->get['journal_blog_category_id'])) {
+                    $this->request->get['route'] = 'journal3/blog';
+                }
+                // End Journal Theme Modification
+            ]]></add>
+        </operation>
+
+        <operation>
+            <search><![CDATA[public function rewrite($link) {]]></search>
+            <add position="after"><![CDATA[
+                // Journal Theme Modification
+                if (defined('JOURNAL3_ACTIVE')) {
+                    $this->load->model('journal3/blog');
+                    $is_journal3_blog = false;
+                }
+                // End Journal Theme Modification
+            ]]></add>
+        </operation>
+
+        <operation>
+            <search><![CDATA[$key == 'path']]></search>
+            <add position="before"><![CDATA[
+                // Journal Theme Modification
+                } elseif ($key == 'journal_blog_post_id') {
+                    $is_journal3_blog = true;
+                    if ($journal_blog_keyword = $this->model_journal3_blog->rewritePost($value)) {
+                        $url .= '/' . $journal_blog_keyword;
+                        unset($data[$key]);
+                    }
+                } elseif ($key == 'journal_blog_category_id') {
+                    $is_journal3_blog = true;
+                    if ($journal_blog_keyword = $this->model_journal3_blog->rewriteCategory($value)) {
+                        $url .= '/' . $journal_blog_keyword;
+                        unset($data[$key]);
+                    }
+                } elseif (isset($data['route']) && $data['route'] == 'journal3/blog') {
+                    if (!isset($data['journal_blog_post_id']) && !isset($data['journal_blog_category_id'])) {
+                        $is_journal3_blog = true;
+                    }
+                // End Journal Theme Modification
+            ]]></add>
+        </operation>
+
+        <operation>
+            <search><![CDATA[if ($url) {]]></search>
+            <add position="before"><![CDATA[
+                // Journal Theme Modification
+                if (defined('JOURNAL3_ACTIVE')) {
+                    if ($is_journal3_blog && $this->model_journal3_blog->getBlogKeyword()) {
+                        $url = '/' . $this->model_journal3_blog->getBlogKeyword() . $url;
+                    }
+                }
+                // End Journal Theme Modification
+            ]]></add>
+        </operation>
+    </file>
+
+    <!-- blog sitemaps -->
+
+    <file path="catalog/controller/extension/feed/google_sitemap.php">
+        <operation>
+            <search><![CDATA[$output .= '</urlset>';]]></search>
+            <add position="before"><![CDATA[
+            if (defined('JOURNAL3_ACTIVE')) {
+                $output .= $this->journal3->loadController('journal3/blog/google_sitemap');
+            }
+            ]]></add>
+        </operation>
+    </file>
+
+    <!-- account reorder product classes -->
+
+    <file path="catalog/controller/account/order.php">
+        <operation>
+            <search><![CDATA[$data['products'][] = array(]]></search>
+            <add position="after"><![CDATA[
+                'classes'        => array(
+					defined('JOURNAL3_ACTIVE') ? $this->journal3->productExcludeButton($product_info, $product_info['price'], $product_info['special']) : null,
+				),
+            ]]></add>
+        </operation>
+    </file>
+
+    <!-- opencart fix for non-numeric page parameter -->
+
+    <file path="catalog/controller/product/{catalog,category,manufacturer,product,search,special}.php">
+        <operation>
+            <search><![CDATA[$page = $this->request->get['page'];]]></search>
+            <add position="replace"><![CDATA[$page = max(1, (int)$this->request->get['page']); // Journal 3 fix]]></add>
+        </operation>
+    </file>
+
+    <!-- allow newsletter subscribe and contact form messages in maintenance mode -->
+
+    <file path="catalog/controller/startup/maintenance.php">
+        <operation>
+            <search><![CDATA[$ignore = array(]]></search>
+            <add position="after"><![CDATA[
+                'journal3/newsletter/newsletter',
+                'journal3/form/send',
+            ]]></add>
+        </operation>
+    </file>
+
+    <!--
+
+        Include Journal Newsletter subscribers when sending emails
+
+    -->
+
+    <file path="admin/controller/marketing/contact.php">
+        <operation error="skip">
+            <search><![CDATA[$this->load->model('sale/customer');]]></search>
+            <add position="after"><![CDATA[$this->load->model('journal3/newsletter');]]></add>
+        </operation>
+
+        <operation error="skip">
+            <search index="0"><![CDATA[$email_total = $this->model_sale_customer->getTotalCustomers($customer_data);]]></search>
+            <add position="replace"><![CDATA[$email_total = $this->model_journal3_newsletter->getTotalSubscribers();]]></add>
+        </operation>
+
+        <operation error="skip">
+            <search index="0"><![CDATA[$results = $this->model_sale_customer->getCustomers($customer_data);]]></search>
+            <add position="replace"><![CDATA[$results = $this->model_journal3_newsletter->getSubscribers($customer_data);]]></add>
+        </operation>
+    </file>
+
+    <file path="admin/controller/marketing/contact.php">
+        <operation error="skip">
+            <search><![CDATA[$this->load->model('customer/customer');]]></search>
+            <add position="after"><![CDATA[$this->load->model('journal3/newsletter');]]></add>
+        </operation>
+
+        <operation error="skip">
+            <search index="0"><![CDATA[$email_total = $this->model_customer_customer->getTotalCustomers($customer_data);]]></search>
+            <add position="replace"><![CDATA[$email_total = $this->model_journal3_newsletter->getTotalSubscribers();]]></add>
+        </operation>
+
+        <operation error="skip">
+            <search index="0"><![CDATA[$results = $this->model_customer_customer->getCustomers($customer_data);]]></search>
+            <add position="replace"><![CDATA[$results = $this->model_journal3_newsletter->getSubscribers($customer_data);]]></add>
+        </operation>
+    </file>
+
+</modification>

@@ -1,0 +1,116 @@
+{
+  "MobileWrapperTitleFont": {
+    "type": "Font",
+    "selector": ".mobile-wrapper-header > span"
+  },
+  "MobileWrapperTitleBackground": {
+    "type": "Background",
+    "selector": ".mobile-wrapper-header"
+  },
+  "MobileWrapperTitleShadow": {
+    "type": "Shadow",
+    "selector": ".mobile-wrapper-header"
+  },
+  "MobileWrapperTitleBorder": {
+    "type": "Border",
+    "selector": ".mobile-wrapper-header"
+  },
+  "MobileWrapperCloseIcon": {
+    "type": "Icon",
+    "selector": ".mobile-wrapper-header > a::before"
+  },
+  "MobileWrapperCloseIconHover": {
+    "type": "Color",
+    "selector": ".mobile-wrapper-header > a:hover::before",
+    "property": "color"
+  },
+  "MobileWrapperCloseIconBackground": {
+    "type": "Background",
+    "selector": ".mobile-wrapper-header > a"
+  },
+  "MobileWrapperCloseIconBackgroundHover": {
+    "type": "Background",
+    "selector": ".mobile-wrapper-header > a:hover"
+  },
+  "MobileWrapperCloseIconBorder": {
+    "type": "Border",
+    "selector": ".mobile-wrapper-header > a"
+  },
+  "MobileWrapperCloseIconBorderRadius": {
+    "type": "BorderRadius",
+    "selector": ".mobile-wrapper-header > a"
+  },
+
+  "MobileWrapperTitleHeight": {
+    "type": "InputNumber",
+    "value": "45",
+    "rules":{
+      "@":{
+        ".mobile-wrapper-header": "height:%spx",
+        ".mobile-wrapper-header > a": "width:%spx",
+        ".mobile-cart-content-wrapper":"padding-bottom:%spx",
+        ".mobile-filter-wrapper":"padding-bottom:%spx",
+        ".mobile-main-menu-wrapper":"padding-bottom:%spx",
+        ".mobile-filter-container-open .journal-loading-overlay":"top:%spx"
+      }
+    }
+  },
+
+  "MobileWrapperContentWidthMobile": {
+    "type": "InputNumber",
+    "selector": "&.mobile-header-active .mobile-container",
+    "value": "85",
+    "property": "width:%s%"
+  },
+
+  "MobileWrapperContentWidthDesktop": {
+    "type": "InputNumber",
+    "selector": "&.desktop-header-active .mobile-main-menu-container",
+    "value": "300",
+    "property": "width:%spx"
+  },
+
+  "MobileWrapperMenuContentBackground": {
+    "type": "Background",
+    "selector": ".mobile-main-menu-container"
+  },
+
+  "MobileWrapperFilterContentBackground": {
+    "type": "Background",
+    "selector": ".mobile-filter-container"
+  },
+  "MobileWrapperFilterPadding": {
+    "type": "Padding",
+    "selector": "..mobile-filter-wrapper .module-filter"
+  },
+
+  "MobileWrapperMenuPadding": {
+    "type": "Padding",
+    "selector": ".mobile-main-menu-wrapper .main-menu"
+  },
+
+  "MobileWrapperCartPadding": {
+    "type": "Padding",
+    "selector": ".mobile-cart-content-wrapper .cart-products table"
+  },
+
+  "MobileWrapperCartContentBackground": {
+    "type": "Background",
+    "selector": ".mobile-cart-content-container"
+  },
+
+  "MobileWrapperMenuShadow": {
+    "type": "Shadow",
+    "selector": ".mobile-main-menu-container"
+  },
+
+  "MobileWrapperCartShadow": {
+    "type": "Shadow",
+    "selector": ".mobile-cart-content-container"
+  },
+
+  "MobileWrapperBackdrop": {
+    "type": "Background",
+    "selector": "&.mobile-overlay .site-wrapper::before"
+  }
+}

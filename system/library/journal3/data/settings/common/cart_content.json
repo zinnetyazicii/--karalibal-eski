@@ -1,0 +1,250 @@
+{
+  "CartContentWidth": {
+    "type": "InputNumber",
+    "selector": "#cart-content",
+    "value": "350",
+    "property": "min-width:%spx"
+  },
+  "CartContentBackground": {
+    "type": "Background",
+    "selector": "div.cart-content ul"
+  },
+  "CartContentPadding": {
+    "type": "Padding",
+    "selector": "div.cart-content .cart-products"
+  },
+  "CartContentBorder": {
+    "type": "Divider",
+    "selector": "div.cart-content .cart-products tbody > tr > td",
+    "value": {
+      "style": "none"
+    },
+    "important": true
+  },
+
+  "CartContentEmptyFont": {
+    "type": "Font",
+    "selector": ".cart-empty"
+  },
+
+  "ContentBorderRadius": {
+    "type": "BorderRadius",
+    "selector": "div.cart-content ul"
+  },
+  "ContentShadow": {
+    "type": "Shadow",
+    "selector": "div.cart-content ul"
+  },
+  "ContentTriangle": {
+    "include": "triangle",
+    "selector_prefix": "#cart-content"
+  },
+
+  "CartContentProductsHeight": {
+    "type": "InputNumber",
+    "value": "275",
+    "selector": "div.cart-content .cart-products",
+    "property": "max-height:%spx; overflow-y:auto;"
+  },
+
+  "CartContentTotalsPadding": {
+    "type": "Padding",
+    "selector": "div.cart-content .cart-totals tbody td",
+    "important": true
+  },
+  "CartContentTotalsShadow": {
+    "type": "Shadow",
+    "selector":"div.cart-content .cart-totals"
+  },
+  "CartContentProductImageBorder": {
+    "type": "Border",
+    "selector": "div.cart-content img"
+  },
+  "CartContentProductImageBorderRadius": {
+    "type": "BorderRadius",
+    "selector": "div.cart-content img"
+  },
+  "CartContentImageShadow": {
+    "type": "Shadow",
+    "selector": "div.cart-content img"
+  },
+  "CartContentFont": {
+    "type": "Font",
+    "selector": ".cart-content td"
+  },
+  "CartContentQtyFont": {
+    "type": "Font",
+    "selector": "div.cart-content .td-qty"
+  },
+  "CartContentPriceFont": {
+    "type": "Font",
+    "selector": "div.cart-content .td-total"
+  },
+  "CartContentProductLinkFont": {
+    "type": "Font",
+    "selector": "div.cart-content .td-name a"
+  },
+  "CartContentProductLinkFontHover": {
+    "type": "Color",
+    "property": "color",
+    "selector": ".no-touchevents div.cart-content .td-name a:hover"
+  },
+  "CartContentProductOptions": {
+    "type": "Font",
+    "selector": "div.cart-content .td-name span"
+  },
+  "CartContentProductOptionsValue": {
+    "type": "Font",
+    "selector": "div.cart-content .td-name small"
+  },
+  "CartContentProductButtonColor": {
+    "type": "Color",
+    "selector": "div.cart-content .cart-products tbody .td-remove button",
+    "property": "color"
+  },
+  "CartContentProductButtonColorHover": {
+    "type": "Color",
+    "selector": "div.cart-content .cart-products tbody .td-remove button:hover",
+    "property": "color"
+  },
+
+  "CartContentTableAlign": {
+    "type": "Radio",
+    "value": "center",
+    "rules": {
+      "top": {
+        "div.cart-content .cart-products tbody > tr > td": "vertical-align:top"
+      },
+      "center": {
+        "div.cart-content .cart-products tbody > tr > td": "vertical-align:middle"
+      }
+    }
+  },
+
+
+  "CartContentTotalsBG": {
+    "type": "Background",
+    "selector": "div.cart-content .cart-totals tbody td"
+  },
+  "CartContentTotalsTitleFont": {
+    "type": "Font",
+    "selector": "div.cart-content .cart-totals td"
+  },
+  "CartContentTotalsValueFont": {
+    "type": "Font",
+    "selector": "div.cart-content .cart-totals .td-total-text"
+  },
+  "CartTotalsTopBorder": {
+    "type": "Divider",
+    "selector": "div.cart-content .cart-totals"
+  },
+  "CartTotalsBorder": {
+    "type": "Divider",
+    "selector": "div.cart-content .cart-totals tbody td",
+    "value": {
+      "style": "none"
+    },
+    "important": true
+  },
+  "CartButtonsBorder": {
+    "type": "Divider",
+    "selector": "div.cart-content .cart-buttons"
+  },
+  "CartContentButtonsBG": {
+    "type": "Background",
+    "selector": "div.cart-content .cart-buttons"
+  },
+
+
+  "CartViewButtonVisibility": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        "div.cart-content .btn-cart": "display: inline-flex"
+      },
+      "false": {
+        "div.cart-content .btn-cart": "display: none"
+      }
+    }
+  },
+  "CartViewButtonIcon": {
+    "type": "Icon",
+    "selector": "div.cart-content .btn.btn-cart::before"
+  },
+  "CartViewButtonIconHover": {
+    "type": "Color",
+    "selector": "div.cart-content .btn.btn-cart:hover::before",
+    "property": "color"
+  },
+  "CartViewButton": {
+    "type":"Variable",
+    "variable": "button",
+    "selector_prefix": "div.cart-content .btn-cart&"
+  },
+
+  "CartCheckoutButtonVisibility": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        "div.cart-content .btn-checkout": "display: inline-flex"
+      },
+      "false": {
+        "div.cart-content .btn-checkout": "display: none"
+      }
+    }
+  },
+  "CartCheckoutButtonIcon": {
+    "type": "Icon",
+    "selector": "div.cart-content .btn.btn-checkout::after"
+  },
+  "CartCheckoutButtonIconHover": {
+    "type": "Color",
+    "selector": "div.cart-content .btn.btn-checkout:hover::after",
+    "property": "color"
+  },
+  "CartCheckoutButton": {
+    "type":"Variable",
+    "variable": "button",
+    "selector_prefix": "div.cart-content .btn-checkout&"
+  },
+  "CartContentCartPadding": {
+    "type": "Padding",
+    "selector": "div.cart-content .cart-buttons .btn-cart",
+    "important": true
+  },
+  "CartContentCartMargin": {
+    "type": "Margin",
+    "selector": "div.cart-content .cart-buttons .btn-cart"
+  },
+  "CartContentCartRadius": {
+    "type": "BorderRadius",
+    "selector": "div.cart-content .cart-buttons .btn-cart",
+    "important": true
+  },
+  "CartContentCheckoutPadding": {
+    "type": "Padding",
+    "selector": "div.cart-content .cart-buttons .btn-checkout",
+    "important": true
+  },
+  "CartContentCheckoutMargin": {
+    "type": "Margin",
+    "selector": "div.cart-content .cart-buttons .btn-checkout"
+  },
+  "CartContentCheckoutRadius": {
+    "type": "BorderRadius",
+    "selector": "div.cart-content .cart-buttons .btn-checkout",
+    "important": true
+  },
+  "CartContentButtonsWidth": {
+    "type": "Radio",
+    "value": "auto",
+    "rules": {
+      "auto": {
+        "div.cart-content .cart-buttons .btn": "width:auto"
+      },
+      "full": {
+        "div.cart-content .cart-buttons .btn": "width:100%"
+      }
+    }
+  }
+}

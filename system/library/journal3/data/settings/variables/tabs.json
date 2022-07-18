@@ -1,0 +1,9 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "NEW_TABS"
+  },
+  "value": {
+    "include": "tabs"
+  }
+}

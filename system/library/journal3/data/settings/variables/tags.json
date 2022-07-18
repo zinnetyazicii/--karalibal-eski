@@ -1,0 +1,9 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "NEW_TAGS"
+  },
+  "value": {
+    "include": "tags"
+  }
+}

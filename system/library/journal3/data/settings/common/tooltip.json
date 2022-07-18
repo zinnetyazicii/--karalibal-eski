@@ -1,0 +1,30 @@
+{
+  "TooltipText": {
+    "type": "Font",
+    "selector": ".tooltip-inner"
+  },
+  "TooltipBackground": {
+    "type": "Color",
+    "rules": {
+      "@": {
+        ".tooltip-inner": "background:%s",
+        "&.tooltip.top .tooltip-arrow": "border-top-color:%s",
+        "&.tooltip.right .tooltip-arrow": "border-right-color:%s",
+        "&.tooltip.bottom .tooltip-arrow": "border-bottom-color:%s",
+        "&.tooltip.left .tooltip-arrow": "border-left-color:%s"
+      }
+    }
+  },
+  "TooltipRadius": {
+    "type": "BorderRadius",
+    "selector": ".tooltip-inner"
+  },
+  "TooltipPadding": {
+    "type": "Padding",
+    "selector": ".tooltip-inner"
+  },
+  "TooltipShadow": {
+    "type": "Shadow",
+    "selector": ".tooltip-inner"
+  }
+}

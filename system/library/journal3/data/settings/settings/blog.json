@@ -1,0 +1,126 @@
+{
+  "blogStatus": {
+    "type": "Toggle",
+    "php": true
+  },
+  "blogFeedStatus": {
+    "type": "Toggle",
+    "php": true
+  },
+  "blogFeedText": {
+    "type": "InputLang",
+    "value": "RSS Feed",
+    "php": true
+  },
+  "blogPageTitle": {
+    "type": "InputLang",
+    "value": "Blog",
+    "php": true
+  },
+  "blogPageKeyword": {
+    "type": "InputLang",
+    "value": "blog",
+    "php": true
+  },
+  "blogAuthorName": {
+    "type": "Radio",
+    "value": "firstname",
+    "php": true
+  },
+  "blogPostsSort": {
+    "type": "Radio",
+    "value": "latest",
+    "php": true
+  },
+  "blogPostsPerPage": {
+    "type": "Input",
+    "value": "6",
+    "php": true
+  },
+  "blogPostsDescriptionLimit": {
+    "type": "Input",
+    "value": "250",
+    "php": true
+  },
+  "blogPostComments": {
+    "type": "Toggle",
+    "php": true
+  },
+  "blogPostApproveComments": {
+    "type": "Toggle",
+    "value": "false",
+    "php": true
+  },
+  "blogPageMetaTitle": {
+    "type": "InputLang",
+    "php": true
+  },
+  "blogPageMetaKeyword": {
+    "type": "InputLang",
+    "php": true
+  },
+  "blogPageMetaDescription": {
+    "type": "InputLang",
+    "php": true
+  },
+  "blogReadMoreButtonText": {
+    "type": "InputLang",
+    "value": "Read More",
+    "php": true
+  },
+  "blogPostedByText": {
+    "type": "InputLang",
+    "value": "Posted By",
+    "php": true
+  },
+  "blogCommentsText": {
+    "type": "InputLang",
+    "value": "Comment(s)",
+    "php": true
+  },
+  "blogViewsText": {
+    "type": "InputLang",
+    "value": "View(s)",
+    "php": true
+  },
+  "blogReplyText": {
+    "type": "InputLang",
+    "value": "Reply",
+    "php": true
+  },
+  "blogLeaveCommentText": {
+    "type": "InputLang",
+    "value": "Leave a Comment",
+    "php": true
+  },
+  "blogLeaveReplyText": {
+    "type": "InputLang",
+    "value": "Leave a Reply",
+    "php": true
+  },
+  "blogCommentSubmitText": {
+    "type": "InputLang",
+    "value": "Comment submitted",
+    "php": true
+  },
+  "blogCommentApprovalText": {
+    "type": "InputLang",
+    "value": "Comment awaiting approval",
+    "php": true
+  },
+  "blogDateFormat": {
+    "type": "InputLang",
+    "value": "d \\<\\i\\>M\\<\\/\\i\\>",
+    "php": true
+  },
+  "blogDateFormatIntl": {
+    "type": "InputLang",
+    "value": "dd <'i'>MMM</'i'>",
+    "php": true
+  },
+  "blogNoResults": {
+    "type": "InputLang",
+    "value": "There are no blog posts to list.",
+    "php": true
+  }
+}

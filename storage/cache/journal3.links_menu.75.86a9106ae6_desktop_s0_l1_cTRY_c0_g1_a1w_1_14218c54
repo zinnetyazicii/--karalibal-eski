@@ -1,0 +1,184 @@
+<?php $val = array (
+  'css' => '.links-menu-75 .module-body{display:block;justify-content:flex-start;align-items:flex-start;;-webkit-overflow-scrolling:touch;;column-count:initial;column-rule-style:solid}.links-menu-75 .menu-item{border-width:1px 0 0 0;justify-content:flex-start;;flex-grow:0;width:auto}.links-menu-75 .menu-item a .links-text{white-space:normal;color:rgba(105, 105, 115, 1)}.links-menu-75 .menu-item
+a{justify-content:flex-start;;padding-bottom:12px}.links-menu-75 .menu-item a::before{content:\'\\f105\' !important;font-family:icomoon !important;margin-right:7px}.links-menu-75 .count-badge{display:none}.phone footer .links-menu-75 .module-title::before{display:none}.phone footer .links-menu-75 .module-title+.module-body>li{display:flex}div.links-menu-75 .title.module-title{font-size:24px;line-height:1.1;margin-bottom:15px;white-space:normal;overflow:visible;text-overflow:initial;font-size:12px}div.links-menu-75 .title.module-title::after{display:none}div.links-menu-75 .title.module-title.page-title>span::after{display:none}div.links-menu-75 .module-body{display:block;justify-content:flex-start;;-webkit-overflow-scrolling:touch;;column-count:initial;column-gap:20px;column-rule-style:none}div.links-menu-75 .menu-item{border-width:1px 0 0 0;flex-grow:0;justify-content:flex-start;width:auto}div.links-menu-75 .menu-item a .links-text{white-space:normal;font-size:10px}div.links-menu-75 .menu-item
+a{justify-content:flex-start;width:auto}div.links-menu-75 .count-badge{display:none}.phone footer  div.links-menu-75 .module-title::before{display:none}.phone footer  div.links-menu-75 .module-title+.module-body>li{display:flex}',
+  'fonts' => 
+  array (
+  ),
+  'settings' => 
+  array (
+    'schedule' => 
+    array (
+      'from' => '',
+      'to' => '',
+      'between' => true,
+    ),
+    'title' => 'Müşteri İlişkileri',
+    'status' => true,
+    'id' => 'links-menu-6276577dafb99',
+    'module_id' => 75,
+    'classes' => 
+    array (
+      0 => 'links-menu',
+      1 => 'links-menu-75',
+    ),
+    'items' => 
+    array (
+      1 => 
+      array (
+        'title' => 'İletişim',
+        'link' => 
+        array (
+          'type' => 'page',
+          'id' => '',
+          'href' => 'http://localhost/index.php?route=information/contact',
+          'name' => '',
+          'total' => NULL,
+          'attrs' => 
+          array (
+          ),
+          'classes' => 
+          array (
+          ),
+        ),
+        'label' => '',
+        'classes' => 
+        array (
+          0 => 'menu-item',
+          1 => 'links-menu-item',
+          2 => 'links-menu-item-1',
+          'multi-level' => false,
+          'dropdown' => false,
+          'drop-menu' => false,
+        ),
+        'items' => 
+        array (
+        ),
+      ),
+      2 => 
+      array (
+        'title' => 'Sertifika ve Belgeler',
+        'link' => 
+        array (
+          'type' => 'information',
+          'id' => '5',
+          'href' => 'http://localhost/index.php?route=information/information&amp;information_id=5',
+          'name' => 'Şartlar ve Koşullar',
+          'total' => NULL,
+          'attrs' => 
+          array (
+          ),
+          'classes' => 
+          array (
+          ),
+        ),
+        'label' => '',
+        'classes' => 
+        array (
+          0 => 'menu-item',
+          1 => 'links-menu-item',
+          2 => 'links-menu-item-2',
+          'multi-level' => false,
+          'dropdown' => false,
+          'drop-menu' => false,
+        ),
+        'items' => 
+        array (
+        ),
+      ),
+      3 => 
+      array (
+        'title' => 'Güvenlik Koşulları',
+        'link' => 
+        array (
+          'type' => 'information',
+          'id' => '3',
+          'href' => 'http://localhost/index.php?route=information/information&amp;information_id=3',
+          'name' => 'Güvenlik Koşulları',
+          'total' => NULL,
+          'attrs' => 
+          array (
+          ),
+          'classes' => 
+          array (
+          ),
+        ),
+        'label' => '',
+        'classes' => 
+        array (
+          0 => 'menu-item',
+          1 => 'links-menu-item',
+          2 => 'links-menu-item-3',
+          'multi-level' => false,
+          'dropdown' => false,
+          'drop-menu' => false,
+        ),
+        'items' => 
+        array (
+        ),
+      ),
+      4 => 
+      array (
+        'title' => 'İade',
+        'link' => 
+        array (
+          'type' => 'page',
+          'id' => '',
+          'href' => 'http://localhost/index.php?route=account/return/add',
+          'name' => '',
+          'total' => NULL,
+          'attrs' => 
+          array (
+          ),
+          'classes' => 
+          array (
+          ),
+        ),
+        'label' => '',
+        'classes' => 
+        array (
+          0 => 'menu-item',
+          1 => 'links-menu-item',
+          2 => 'links-menu-item-4',
+          'multi-level' => false,
+          'dropdown' => false,
+          'drop-menu' => false,
+        ),
+        'items' => 
+        array (
+        ),
+      ),
+      5 => 
+      array (
+        'title' => 'Site Haritası',
+        'link' => 
+        array (
+          'type' => 'page',
+          'id' => '',
+          'href' => 'http://localhost/index.php?route=information/sitemap',
+          'name' => '',
+          'total' => NULL,
+          'attrs' => 
+          array (
+          ),
+          'classes' => 
+          array (
+          ),
+        ),
+        'label' => '',
+        'classes' => 
+        array (
+          0 => 'menu-item',
+          1 => 'links-menu-item',
+          2 => 'links-menu-item-5',
+          'multi-level' => false,
+          'dropdown' => false,
+          'drop-menu' => false,
+        ),
+        'items' => 
+        array (
+        ),
+      ),
+    ),
+  ),
+);

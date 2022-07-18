@@ -1,0 +1,133 @@
+{
+  "Font": {
+    "type": "Font",
+    "selector": ".btn, .btn:visited"
+  },
+  "FontHover": {
+    "type": "Font",
+    "selector": ".btn:hover",
+    "important": true
+  },
+  "FontActiveColor": {
+    "type": "Color",
+    "selector": ".btn:active, .btn:hover:active, .btn:focus:active",
+    "property": "color",
+    "important": true
+  },
+  "FontFocusColor": {
+    "type": "Color",
+    "selector": ".btn:focus",
+    "property": "color",
+    "important": true
+  },
+  "BG": {
+    "type": "Background",
+    "selector": ".btn"
+  },
+  "BGHover": {
+    "type": "Background",
+    "selector": ".btn:hover",
+    "important": true
+  },
+  "BGActive": {
+    "type": "Background",
+    "selector": ".btn:active, .btn:hover:active, .btn:focus:active",
+    "important": true
+  },
+  "BGFocus": {
+    "type": "Background",
+    "selector": ".btn:focus"
+  },
+  "Border": {
+    "type": "Border",
+    "selector": ".btn"
+  },
+  "BorderHover": {
+    "type": "Color",
+    "selector": ".btn:hover, .btn:active:hover",
+    "property": "border-color"
+  },
+  "BorderActive": {
+    "type": "Color",
+    "selector": ".btn:active, .btn:hover:active, .btn:focus:active",
+    "property": "border-color",
+    "important": true
+  },
+  "BorderFocus": {
+    "type": "Color",
+    "selector": ".btn:focus",
+    "property": "border-color"
+  },
+  "Padding": {
+    "type": "Padding",
+    "selector": ".btn"
+  },
+  "Shadow": {
+    "type": "Shadow",
+    "selector": ".btn"
+  },
+  "ShadowHover": {
+    "type": "Shadow",
+    "selector": ".btn:hover",
+    "desktop":true
+  },
+  "ShadowActive": {
+    "type": "Shadow",
+    "selector": ".btn:active, .btn:hover:active, .btn:focus:active"
+  },
+  "ShadowFocus": {
+    "type": "Shadow",
+    "selector": ".btn:focus"
+  },
+  "BorderRadius": {
+    "type": "BorderRadius",
+    "selector": ".btn",
+    "important": true
+  },
+  "Size": {
+    "type": "InputPair",
+    "selector": ".btn",
+    "properties": {
+      "first": "min-width:%spx",
+      "second": "min-height:%spx"
+    }
+  },
+  "MaxSize": {
+    "type": "InputPair",
+    "selector": ".btn",
+    "properties": {
+      "first": "max-width:%spx",
+      "second": "max-height:%spx"
+    }
+  },
+  "ButtonLoadingIcon": {
+    "type": "Icon",
+    "selector": ".btn.btn.disabled::after",
+    "value": {
+      "size":"20"
+    }
+  },
+  "ButtonLoadingType": {
+    "type": "Radio",
+    "value": "",
+    "rules": {
+      "spin": {
+        ".btn.btn.disabled::after": "animation: fa-spin infinite linear;"
+      },
+      "flip": {
+        ".btn.btn.disabled::after": "animation: fa-rotate infinite linear;"
+      }
+    }
+  },
+
+  "ButtonLoadingSpeed": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".btn.btn.disabled::after": "animation-duration: %sms"
+      }
+    }
+  }
+}
+
+

@@ -1,0 +1,9 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "POST_LIST"
+  },
+  "value": {
+    "include": "post_list"
+  }
+}

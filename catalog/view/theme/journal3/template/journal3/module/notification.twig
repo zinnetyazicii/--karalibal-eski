@@ -1,0 +1,11 @@
+<div class="notification-wrapper notification-wrapper-bottom">
+  <div class="{{ j3.classes(classes) }}" data-options='{{ options|json_encode }}'>
+    <button class="btn notification-close">{{ notificationCloseText }}</button>
+    <div class="notification-content">
+      <div>
+        <div class="notification-title">{{ title }}</div>
+        <div class="notification-text">{{ text }}</div>
+      </div>
+    </div>
+  </div>
+</div>

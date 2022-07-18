@@ -1,0 +1,409 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "New Filter "
+  },
+  "status": {
+    "type": "Status"
+  },
+  "schedule": {
+    "type": "Range",
+    "php": true
+  },
+  "title": {
+    "type": "InputLang",
+    "value": "Filter",
+    "php": true
+  },
+  "moduleTitle": {
+    "type": "Variable",
+    "variable": "title",
+    "selector_prefix": ".module-filter-%s .title.module-title"
+  },
+  "imageDimensions": {
+    "type": "ImageDimensions",
+    "value": {
+      "width": "30",
+      "height": "30"
+    },
+    "php": true
+  },
+  "input": {
+    "type": "Radio",
+    "value": "checkbox",
+    "php": true
+  },
+  "collapsed": {
+    "type": "Toggle",
+    "value": "false",
+    "php": true
+  },
+  "options": {
+    "type": "Toggle",
+    "value": "true",
+    "php": true
+  },
+  "attributes": {
+    "type": "Toggle",
+    "value": "true",
+    "php": true
+  },
+  "filters": {
+    "type": "Toggle",
+    "value": "true",
+    "php": true
+  },
+  "filtersCategoryCheck": {
+    "type": "Toggle",
+    "value": "false",
+    "php": true
+  },
+  "resetButtonStyle": {
+    "type": "Variable",
+    "variable": "button",
+    "selector_prefix": ".reset-filter&"
+  },
+  "resetText": {
+    "type": "InputLang",
+    "value": "Clear",
+    "php": true
+  },
+  "resetIcon": {
+    "type": "Icon",
+    "selector": ".reset-filter::before",
+    "value": {
+      "icon": {
+        "name": "close2",
+        "code": "e5cd"
+      }
+    }
+  },
+  "resetIconHover": {
+    "type": "Color",
+    "selector": ".reset-filter:hover::before",
+    "property": "color"
+  },
+  "resetButtonOffset": {
+    "type": "InputPair",
+    "selector": ".module-title button.reset-filter.btn",
+    "properties": {
+      "first": "transform: translate3d(%spx, -50%, 0)",
+      "second": "margin-top:%spx"
+    }
+  },
+  "mobileButtonStyle": {
+    "type": "Variable",
+    "variable": "button",
+    "selector_prefix": ".mobile-filter-trigger&"
+  },
+  "mobileText": {
+    "type": "InputLang",
+    "value": "Filter Products",
+    "php": true,
+    "js": true
+  },
+  "mobileIcon": {
+    "type": "Icon",
+    "selector": ".mobile-filter-trigger::before",
+    "value": {
+      "icon": {
+        "name": "iconmonstr-control-panel-9",
+        "code": "e908"
+      }
+    }
+  },
+  "mobileIconHover": {
+    "type": "Color",
+    "selector": ".mobile-filter-trigger:hover::before",
+    "property": "color"
+  },
+  "mobileButtonOffset": {
+    "type": "InputPair",
+    "selector": ".mobile-filter-trigger",
+    "properties": {
+      "first": "margin-left:%spx",
+      "second": "margin-top:%spx"
+    }
+  },
+  "mobileButtonBorderRadius": {
+    "type": "BorderRadius",
+    "selector": ".mobile-filter-trigger.btn",
+    "important": true
+  },
+  "mobileButtonPadding": {
+    "type": "Padding",
+    "selector": ".mobile-filter-trigger.btn",
+    "important": true
+  },
+  "filterMobileWrapperStyle": {
+    "type": "Variable",
+    "variable": "mobile_wrapper",
+    "selector_prefix": ".mobile-filter-container-open"
+  },
+  "mobileButtonAlign": {
+    "type": "Radio",
+    "value": "center",
+    "rules": {
+      "left": {
+        ".mobile-filter-trigger": "left:20px; right:auto; transform: none"
+      },
+      "center": {
+        ".mobile-filter-trigger": "left:50%; right:auto; transform: translate3d(-50%,0,0)"
+      },
+      "right": {
+        ".mobile-filter-trigger": "right:20px; left:auto; transform: none"
+      }
+    },
+    "rtlRules": {
+      "left": {
+        ".mobile-filter-trigger": "right:20px; left:auto; transform: none"
+      },
+      "center": {
+        ".mobile-filter-trigger": "left:50%; right:auto; transform: translate3d(-50%,0,0)"
+      },
+      "right": {
+        ".mobile-filter-trigger": "left:20px; right:auto; transform: none"
+      }
+    }
+  },
+  "filterAccordion": {
+    "type": "Variable",
+    "variable": "accordion",
+    "selector_prefix": ".module-filter-%s"
+  },
+  "filterCountBadge": {
+    "type": "Variable",
+    "variable": "count_badge",
+    "selector_prefix": ".module-filter-%s"
+  },
+  "filterCountBadgeOffset": {
+    "type": "InputPair",
+    "selector": ".module-filter-%s .count-badge",
+    "properties": {
+      "first": "transform: translateX(%spx)",
+      "second": "margin-top:%spx"
+    },
+    "rtlProperties":{
+      "first": "transform: translateX(calc(0px - (%spx)))",
+      "second": "margin-top:%spx"
+    }
+  },
+  "filterCountBadgeVisibility": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".module-filter-%s .count-badge": "display: inline-flex"
+      },
+      "false": {
+        ".module-filter-%s .count-badge": "display: none"
+      }
+    }
+  },
+  "currencyFont": {
+    "type": "Font",
+    "selector": ".module-filter-%s .currency-symbol"
+  },
+
+  "priceInput": {
+    "type": "Variable",
+    "variable": "form_input",
+    "selector_prefix": ".module-filter-%s .extra-controls input"
+  },
+  "pricePadding": {
+    "type": "Padding",
+    "selector": ".module-filter-%s .filter-price"
+  },
+  "sectionHeight": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".module-filter-%s .panel-body": "max-height:%spx; overflow-y:auto"
+      }
+    }
+  },
+  "itemFont": {
+    "type": "Font",
+    "selector": ".module-filter-%s label .links-text"
+  },
+  "itemFontHover": {
+    "type": "Font",
+    "selector": ".module-filter-%s label:hover .links-text"
+  },
+  "itemFontActive": {
+    "type": "Font",
+    "selector": ".module-filter-%s label input:checked + .links-text, .module-filter-%s label input:checked + img + .links-text"
+  },
+  "imageBorder": {
+    "type": "Border",
+    "selector": ".module-filter-%s label img"
+  },
+  "imageBorderHover": {
+    "type": "Color",
+    "selector": ".module-filter-%s label:hover img",
+    "property": "border-color"
+  },
+  "imageBorderActive": {
+    "type": "Color",
+    "selector": ".module-filter-%s label input:checked + img",
+    "property": "border-color"
+  },
+  "imageShadow": {
+    "type": "Shadow",
+    "selector": ".module-filter-%s label img"
+  },
+  "imageShadowHover": {
+    "type": "Shadow",
+    "selector": ".module-filter-%s label:hover img",
+    "property": "border-color"
+  },
+  "imageShadowActive": {
+    "type": "Shadow",
+    "selector": ".module-filter-%s label input:checked + img",
+    "property": "border-color"
+  },
+  "imageBorderRadius": {
+    "type": "BorderRadius",
+    "selector": ".module-filter-%s label img"
+  },
+  "itemPadding": {
+    "type": "Padding",
+    "selector": ".module-filter-%s .panel-body > div > label"
+  },
+  "itemDivider": {
+    "type": "Divider",
+    "selector": ".module-filter-%s .panel-body > div > label + label"
+  },
+  "imageOnlyBorder": {
+    "type": "Border",
+    "selector": ".module-filter-%s .image-only label img"
+  },
+  "imageOnlyBorderHover": {
+    "type": "Color",
+    "selector": ".module-filter-%s .image-only label:hover img",
+    "property": "border-color"
+  },
+  "imageOnlyBorderActive": {
+    "type": "Color",
+    "selector": ".module-filter-%s .image-only label input:checked + img",
+    "property": "border-color"
+  },
+  "imageOnlyShadow": {
+    "type": "Shadow",
+    "selector": ".module-filter-%s .image-only label img"
+  },
+  "imageOnlyShadowHover": {
+    "type": "Shadow",
+    "selector": ".module-filter-%s .image-only label:hover img",
+    "property": "border-color"
+  },
+  "imageOnlyShadowActive": {
+    "type": "Shadow",
+    "selector": ".module-filter-%s .image-only label input:checked + img",
+    "property": "border-color"
+  },
+  "imageOnlyBorderRadius": {
+    "type": "BorderRadius",
+    "selector": ".module-filter-%s .image-only label img"
+  },
+  "imageOnlySpacing": {
+    "type": "InputNumber",
+    "value": "10",
+    "rules": {
+      "@": {
+        ".module-filter-%s .image-only .panel-body > div > label": "padding:calc(%spx / 2)"
+      }
+    }
+  },
+  "imageOnlyWidth": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".module-filter-%s .image-only .panel-body > div > label": "width:calc(100% / %s)"
+      }
+    }
+  },
+  "imageOnlySectionPadding": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".module-filter-%s .image-only .panel-body > div": "padding:%spx"
+      }
+    }
+  },
+  "imageOnlyTooltip": {
+    "type": "Variable",
+    "variable": "tooltip",
+    "selector_prefix": ".filter-tooltip-%s"
+  },
+
+
+
+  "priceLineHeight": {
+    "type": "InputSlider",
+    "value": "5",
+    "rules": {
+      "@": {
+        ".module-filter-%s .irs-line": "transform: scaleY(.%s);",
+        ".module-filter-%s .irs-bar": "transform: scaleY(.%s);"
+      }
+    }
+  },
+  "priceLineBackground": {
+    "type": "Background",
+    "selector": ".module-filter-%s .irs-line"
+  },
+  "priceLineForeground": {
+    "type": "Background",
+    "selector": ".module-filter-%s .irs-bar"
+  },
+  "priceLineBorderRadius": {
+    "type": "BorderRadius",
+    "selector": ".module-filter-%s .irs-line, .module-filter-%s .irs-bar"
+  },
+  "priceThumbBackground": {
+    "type": "Background",
+    "selector": ".module-filter-%s .irs-slider"
+  },
+  "priceThumbBackgroundHover": {
+    "type": "Background",
+    "selector": ".module-filter-%s .irs-slider:hover"
+  },
+  "priceThumbBorder": {
+    "type": "Border",
+    "selector": ".module-filter-%s .irs-slider"
+  },
+  "priceThumbBorderHover": {
+    "type": "Color",
+    "selector": ".module-filter-%s .irs-slider:hover",
+    "property": "border-color"
+  },
+  "priceThumbBorderRadius": {
+    "type": "BorderRadius",
+    "selector": ".module-filter-%s .irs-slider"
+  },
+  "priceThumbShadow": {
+    "type": "Shadow",
+    "selector": ".module-filter-%s .irs-slider"
+  },
+  "priceThumbShadowHover": {
+    "type": "Shadow",
+    "selector": ".module-filter-%s .irs-slider:hover"
+  },
+  "priceSize": {
+    "type": "InputNumber",
+    "value": "15",
+    "rules":{
+      "@":{
+        ".module-filter-%s .irs-slider": "width:%spx; height:%spx"
+      }
+    }
+  },
+  "priceOffset": {
+    "type": "InputNumber",
+    "rules":{
+      "@":{
+        ".module-filter-%s .irs-slider": "transform: translateY(%spx)"
+      }
+    }
+  }
+}

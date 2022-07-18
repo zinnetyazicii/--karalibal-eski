@@ -1,0 +1,229 @@
+<?php $val = array (
+  'css' => '.icons-menu-228 a::before{color:rgba(139, 145, 152, 1);font-size:20px}.desktop .icons-menu-228 a:hover::before{color:rgba(255,255,255,1)}.icons-menu-228>ul{margin:-8px}.icons-menu-228 .links-text{white-space:normal;overflow:visible;text-overflow:ellipsis;display:none}.icons-menu-228>ul>.icons-menu-item{padding:calc(15px / 2)}.icons-menu-228
+ul{justify-content:flex-end}.icons-menu-228 .module-title{text-align:right}.icons-menu-228 .module-title::after{left:100%;right:auto;transform:translate3d(-100%,0,0)}@media (max-width: 980px){.icons-menu-228
+ul{justify-content:center}.icons-menu-228 .module-title{text-align:center}.icons-menu-228 .module-title::after{left:50%;right:auto;transform:translate3d(-50%,0,0)}}.icons-menu-228 .icons-menu-item-1.icon-menu-icon>a::before{content:\'\\f1f0\' !important;font-family:icomoon !important}.icons-menu-228 .icons-menu-item-2.icon-menu-icon>a::before{content:\'\\f1f1\' !important;font-family:icomoon !important}.icons-menu-228 .icons-menu-item-3.icon-menu-icon>a::before{content:\'\\f1f3\' !important;font-family:icomoon !important}.icons-menu-228 .icons-menu-item-4.icon-menu-icon>a::before{content:\'\\f1f2\' !important;font-family:icomoon !important}.icons-menu-228 .icons-menu-item-5.icon-menu-icon>a::before{content:\'\\f1f4\' !important;font-family:icomoon !important}.icons-menu-228 .icons-menu-item-6.icon-menu-icon>a::before{content:\'\\f1f5\' !important;font-family:icomoon !important}',
+  'fonts' => 
+  array (
+  ),
+  'settings' => 
+  array (
+    'schedule' => 
+    array (
+      'from' => '',
+      'to' => '',
+      'between' => true,
+    ),
+    'title' => '',
+    'tooltipStatus' => true,
+    'tooltipPosition' => 'top',
+    'imageDimensions' => 
+    array (
+      'width' => NULL,
+      'height' => NULL,
+      'resize' => 'fill',
+    ),
+    'status' => true,
+    'id' => 'icons-menu-6276577db8bc5',
+    'module_id' => 228,
+    'classes' => 
+    array (
+      0 => 'icons-menu',
+      1 => 'icons-menu-228',
+    ),
+    'items' => 
+    array (
+      1 => 
+      array (
+        'title' => 'Visa',
+        'link' => 
+        array (
+          'type' => 'custom',
+          'id' => '',
+          'href' => '#',
+          'name' => '',
+          'total' => NULL,
+          'attrs' => 
+          array (
+          ),
+          'classes' => 
+          array (
+          ),
+        ),
+        'type' => 'icon',
+        'classes' => 
+        array (
+          0 => 'menu-item',
+          1 => 'icons-menu-item',
+          2 => 'icons-menu-item-1',
+          'multi-level' => false,
+          'dropdown' => false,
+          'drop-menu' => false,
+          3 => 'icon-menu-icon',
+        ),
+        'items' => 
+        array (
+        ),
+      ),
+      2 => 
+      array (
+        'title' => 'Mastercard',
+        'link' => 
+        array (
+          'type' => 'custom',
+          'id' => '',
+          'href' => '#',
+          'name' => '',
+          'total' => NULL,
+          'attrs' => 
+          array (
+          ),
+          'classes' => 
+          array (
+          ),
+        ),
+        'type' => 'icon',
+        'classes' => 
+        array (
+          0 => 'menu-item',
+          1 => 'icons-menu-item',
+          2 => 'icons-menu-item-2',
+          'multi-level' => false,
+          'dropdown' => false,
+          'drop-menu' => false,
+          3 => 'icon-menu-icon',
+        ),
+        'items' => 
+        array (
+        ),
+      ),
+      3 => 
+      array (
+        'title' => 'Amex',
+        'link' => 
+        array (
+          'type' => 'custom',
+          'id' => '',
+          'href' => '#',
+          'name' => '',
+          'total' => NULL,
+          'attrs' => 
+          array (
+          ),
+          'classes' => 
+          array (
+          ),
+        ),
+        'type' => 'icon',
+        'classes' => 
+        array (
+          0 => 'menu-item',
+          1 => 'icons-menu-item',
+          2 => 'icons-menu-item-3',
+          'multi-level' => false,
+          'dropdown' => false,
+          'drop-menu' => false,
+          3 => 'icon-menu-icon',
+        ),
+        'items' => 
+        array (
+        ),
+      ),
+      4 => 
+      array (
+        'title' => 'Discover',
+        'link' => 
+        array (
+          'type' => 'custom',
+          'id' => '',
+          'href' => '#',
+          'name' => '',
+          'total' => NULL,
+          'attrs' => 
+          array (
+          ),
+          'classes' => 
+          array (
+          ),
+        ),
+        'type' => 'icon',
+        'classes' => 
+        array (
+          0 => 'menu-item',
+          1 => 'icons-menu-item',
+          2 => 'icons-menu-item-4',
+          'multi-level' => false,
+          'dropdown' => false,
+          'drop-menu' => false,
+          3 => 'icon-menu-icon',
+        ),
+        'items' => 
+        array (
+        ),
+      ),
+      5 => 
+      array (
+        'title' => 'Paypal',
+        'link' => 
+        array (
+          'type' => 'custom',
+          'id' => '',
+          'href' => '#',
+          'name' => '',
+          'total' => NULL,
+          'attrs' => 
+          array (
+          ),
+          'classes' => 
+          array (
+          ),
+        ),
+        'type' => 'icon',
+        'classes' => 
+        array (
+          0 => 'menu-item',
+          1 => 'icons-menu-item',
+          2 => 'icons-menu-item-5',
+          'multi-level' => false,
+          'dropdown' => false,
+          'drop-menu' => false,
+          3 => 'icon-menu-icon',
+        ),
+        'items' => 
+        array (
+        ),
+      ),
+      6 => 
+      array (
+        'title' => 'Stripe',
+        'link' => 
+        array (
+          'type' => 'custom',
+          'id' => '',
+          'href' => '#',
+          'name' => '',
+          'total' => NULL,
+          'attrs' => 
+          array (
+          ),
+          'classes' => 
+          array (
+          ),
+        ),
+        'type' => 'icon',
+        'classes' => 
+        array (
+          0 => 'menu-item',
+          1 => 'icons-menu-item',
+          2 => 'icons-menu-item-6',
+          'multi-level' => false,
+          'dropdown' => false,
+          'drop-menu' => false,
+          3 => 'icon-menu-icon',
+        ),
+        'items' => 
+        array (
+        ),
+      ),
+    ),
+  ),
+);

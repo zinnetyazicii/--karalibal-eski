@@ -1,0 +1,151 @@
+{
+  "contactMaxWidth": {
+    "type": "InputNumber",
+    "rules":{
+      "@":{
+        ".route-information-contact .site-wrapper > .container": "max-width:%spx"
+      }
+    }
+  },
+  "contactLocationTitle": {
+    "type": "Variable",
+    "variable": "title",
+    "selector_prefix": ".route-information-contact .location-title"
+  },
+
+  "contactLocationTitleVisibility": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".route-information-contact .location-title": "display: block"
+      },
+      "false": {
+        ".route-information-contact .location-title": "display: none"
+      }
+    }
+  },
+  "contactLocationImage": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".route-information-contact .store-image": "display: block"
+      },
+      "false": {
+        ".route-information-contact .store-image": "display: none"
+      }
+    }
+  },
+  "contactLocationAddress": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".route-information-contact .store-address": "display: block"
+      },
+      "false": {
+        ".route-information-contact .store-address": "display: none"
+      }
+    }
+  },
+  "contactLocationPhone": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".route-information-contact .store-tel": "display: block"
+      },
+      "false": {
+        ".route-information-contact .store-tel": "display: none"
+      }
+    }
+  },
+  "contactLocationFax": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".route-information-contact .store-fax": "display: block"
+      },
+      "false": {
+        ".route-information-contact .store-fax": "display: none"
+      }
+    }
+  },
+  "contactLocationHours": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".route-information-contact .store-info": "display: block"
+      },
+      "false": {
+        ".route-information-contact .store-info": "display: none"
+      }
+    }
+  },
+
+  "contactLocationFont": {
+    "type": "Font",
+    "selector": ".route-information-contact .store-data"
+  },
+  "contactLocationStrongFont": {
+    "type": "Font",
+    "selector": ".route-information-contact .store-data strong"
+  },
+  "contactLocationFontMap": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".route-information-contact .store-address a": "display: inline-flex"
+      },
+      "false": {
+        ".route-information-contact .store-address a": "display: none"
+      }
+    }
+  },
+  "contactLocationMapStyle": {
+    "type": "Variable",
+    "variable": "button",
+    "selector_prefix": ".route-information-contact .store-address"
+  },
+  "contactStoresTitle": {
+    "type": "Variable",
+    "variable": "title",
+    "selector_prefix": ".route-information-contact .stores-title"
+  },
+  "contactStoresTitleVisibility": {
+    "type": "Toggle",
+    "rules": {
+      "false": {
+        ".route-information-contact .stores-title": "display: none"
+      }
+    }
+  },
+  "contactOtherStoresVisibility": {
+    "type": "Toggle",
+    "rules": {
+      "false": {
+        ".route-information-contact .other-stores": "display: none",
+        ".route-information-contact .stores-title": "display: none !important"
+      }
+    }
+  },
+  "contactStoresAccordion": {
+    "type": "Variable",
+    "variable": "accordion",
+    "selector_prefix": ".route-information-contact #content"
+  },
+
+  "contactFormStatus": {
+    "type": "Toggle",
+    "php": true
+  },
+
+  "contactFormStyle": {
+    "type": "Variable",
+    "variable": "form",
+    "selector_prefix": ".route-information-contact form"
+  },
+
+  "contactPageButtons": {
+    "type": "Variable",
+    "variable": "page_buttons",
+    "selector_prefix": ".route-information-contact form"
+  }
+}

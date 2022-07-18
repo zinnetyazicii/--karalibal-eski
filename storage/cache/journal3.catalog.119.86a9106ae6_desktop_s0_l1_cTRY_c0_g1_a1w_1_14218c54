@@ -1,0 +1,157 @@
+<?php $val = array (
+  'css' => '.module-catalog-119 .module-item.swiper-slide{margin-right:25px;width:calc((100% - 2 * 25px) / 3 - 0.01px)}.module-catalog-119 .module-item:not(.swiper-slide){padding:12.5px;width:calc(100% / 3 - 0.01px)}.one-column #content .module-catalog-119 .module-item.swiper-slide{margin-right:0px;width:calc((100% - 3 * 0px) / 4 - 0.01px)}.one-column #content .module-catalog-119 .module-item:not(.swiper-slide){padding:0px;width:calc(100% / 4 - 0.01px)}.two-column #content .module-catalog-119 .module-item.swiper-slide{margin-right:0px;width:calc((100% - 2 * 0px) / 3 - 0.01px)}.two-column #content .module-catalog-119 .module-item:not(.swiper-slide){padding:0px;width:calc(100% / 3 - 0.01px)}.side-column .module-catalog-119 .module-item.swiper-slide{margin-right:0px;width:calc((100% - 0 * 0px) / 1 - 0.01px)}.side-column .module-catalog-119 .module-item:not(.swiper-slide){padding:0px;width:calc(100% / 1 - 0.01px)}.module-catalog-119 .catalog-title{margin-bottom:7px;display:flex;font-family:\'Ubuntu\';font-weight:700;font-size:15px;color:rgba(51, 51, 51, 1);text-transform:uppercase;width:auto;margin-left:0;margin-right:auto;justify-content:flex-start;white-space:normal;overflow:visible;text-overflow:initial}.module-catalog-119 .catalog-title:hover{color:rgba(239, 80, 66, 1)}.module-catalog-119
+.subitems{align-items:flex-start}.module-catalog-119 .subitem > a
+span{font-size:13px;color:rgba(105, 105, 115, 1)}.module-catalog-119 .subitem > a:hover
+span{color:rgba(8, 39, 77, 1);text-decoration:underline}.module-catalog-119 .subitem.view-more a
+span{font-size:12px;color:rgba(105, 105, 115, 1);font-weight:700;text-decoration:underline}.module-catalog-119 .subitem.view-more a:hover
+span{color:rgba(87, 154, 193, 1)}.module-catalog-119 .subitem>a{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding-bottom:7px}.module-catalog-119 .catalog-image{margin-right:10px;margin-bottom:10px}.module-catalog-119 .item-assets{flex-direction:row}.module-catalog-119 .item-assets>a{max-width:40%;order:0}.module-catalog-119 .item-assets
+.subitems{width:60%}.module-catalog-119 .item-assets .catalog-image{display:block}@media (max-width: 1024px){.module-catalog-119 .module-item.swiper-slide{margin-right:25px;width:calc((100% - 1 * 25px) / 2 - 0.01px)}.module-catalog-119 .module-item:not(.swiper-slide){padding:12.5px;width:calc(100% / 2 - 0.01px)}}',
+  'fonts' => 
+  array (
+    'fonts' => 
+    array (
+      'Ubuntu' => 
+      array (
+        700 => '700',
+      ),
+    ),
+    'subsets' => 
+    array (
+      'latin-ext' => 'latin-ext',
+    ),
+  ),
+  'settings' => 
+  array (
+    'schedule' => 
+    array (
+      'from' => '',
+      'to' => '',
+      'between' => true,
+    ),
+    'title' => 'ÜRÜNLER',
+    'images' => false,
+    'imageDimensions' => 
+    array (
+      'width' => 150,
+      'height' => 150,
+      'resize' => 'fill',
+    ),
+    'itemsPerRow' => 
+    array (
+      'c0' => 
+      array (
+        0 => 
+        array (
+          'items' => 3,
+          'spacing' => 25,
+        ),
+        1024 => 
+        array (
+          'spacing' => 25,
+          'items' => 2,
+        ),
+      ),
+      'c1' => 
+      array (
+        0 => 
+        array (
+          'items' => 4,
+          'spacing' => 0,
+        ),
+      ),
+      'c2' => 
+      array (
+        0 => 
+        array (
+          'items' => 3,
+          'spacing' => 0,
+        ),
+      ),
+      'sc' => 
+      array (
+        0 => 
+        array (
+          'items' => 1,
+          'spacing' => 0,
+        ),
+      ),
+    ),
+    'carousel' => false,
+    'viewMoreText' => 'See all products',
+    'status' => true,
+    'id' => 'catalog-6276577d4b9e5',
+    'module_id' => 119,
+    'classes' => 
+    array (
+      0 => 'module',
+      1 => 'module-catalog',
+      2 => 'module-catalog-119',
+      'carousel-mode' => false,
+      'image-on-hover' => true,
+    ),
+    'carouselOptions' => 
+    array (
+      'speed' => 0,
+      'autoplay' => false,
+      'pauseOnHover' => false,
+      'loop' => false,
+    ),
+    'items' => 
+    array (
+      1 => 
+      array (
+        'limit' => '4',
+        'id' => '119-1',
+        'classes' => 
+        array (
+          0 => 'module-item',
+          1 => 'module-item-1',
+          'swiper-slide' => false,
+        ),
+        'items' => 
+        array (
+        ),
+        'image' => '',
+        'name' => 'Bal',
+        'href' => 'http://localhost/index.php?route=product/category&amp;path=222',
+        'total' => '0',
+      ),
+      2 => 
+      array (
+        'limit' => '4',
+        'id' => '119-2',
+        'classes' => 
+        array (
+          0 => 'module-item',
+          1 => 'module-item-2',
+          'swiper-slide' => false,
+        ),
+        'items' => 
+        array (
+        ),
+        'image' => '',
+        'name' => 'Propolis',
+        'href' => 'http://localhost/index.php?route=product/category&amp;path=224',
+        'total' => '0',
+      ),
+      3 => 
+      array (
+        'limit' => '4',
+        'id' => '119-3',
+        'classes' => 
+        array (
+          0 => 'module-item',
+          1 => 'module-item-3',
+          'swiper-slide' => false,
+        ),
+        'items' => 
+        array (
+        ),
+        'image' => '',
+        'name' => 'Polen',
+        'href' => 'http://localhost/index.php?route=product/category&amp;path=223',
+        'total' => '0',
+      ),
+    ),
+  ),
+);

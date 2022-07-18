@@ -1,0 +1,17 @@
+{
+  "name": {
+    "type": "Input"
+  },
+  "email": {
+    "type": "Input"
+  },
+  "website": {
+    "type": "Input"
+  },
+  "comment": {
+    "type": "Input"
+  },
+  "status": {
+    "type": "Toggle"
+  }
+}

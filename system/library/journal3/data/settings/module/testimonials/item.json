@@ -1,0 +1,384 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "New Testimonial"
+  },
+  "status": {
+    "type": "Status"
+  },
+
+  "itemBoxStyles": {
+    "include": "common_hover",
+    "selector_prefix": ".module-testimonials-%s .module-item-%s .block-body"
+  },
+  "header": {
+    "type": "Radio",
+    "value": "none",
+    "php": true
+  },
+  "image": {
+    "type": "Image"
+  },
+  "imagePosition": {
+    "type": "Radio",
+    "value": "",
+    "rules": {
+      "left": {
+        ".module-testimonials-%s .module-item-%s .block-header img": "float:left",
+        ".module-testimonials-%s .module-item-%s .block-header i": "float:left",
+        ".module-testimonials-%s .module-item-%s .block-body": "display:block"
+      },
+      "right": {
+        ".module-testimonials-%s .module-item-%s .block-header img": "float:right",
+        ".module-testimonials-%s .module-item-%s .block-header i": "float:right",
+        ".module-testimonials-%s .module-item-%s .block-body": "display:block"
+      }
+    },
+    "rtlRules": {
+      "left": {
+        ".module-testimonials-%s .module-item-%s .block-header img": "float:right",
+        ".module-testimonials-%s .module-item-%s .block-header i": "float:right",
+        ".module-testimonials-%s .module-item-%s .block-body": "display:block"
+      },
+      "right": {
+        ".module-testimonials-%s .module-item-%s .block-header img": "float:left",
+        ".module-testimonials-%s .module-item-%s .block-header i": "float:left",
+        ".module-testimonials-%s .module-item-%s .block-body": "display:block"
+      }
+    }
+  },
+  "imageAlign": {
+    "type": "Radio",
+    "value": "",
+    "rules": {
+      "left": {
+        ".module-testimonials-%s .module-item-%s .block-header": "text-align:left"
+      },
+      "center": {
+        ".module-testimonials-%s .module-item-%s .block-header": "text-align:center"
+      },
+      "right": {
+        ".module-testimonials-%s .module-item-%s .block-header": "text-align:right"
+      }
+    }
+  },
+  "imageMargin": {
+    "type": "Margin",
+    "selector": ".module-testimonials-%s .module-item-%s .block-header img"
+  },
+  "imageBorder": {
+    "type": "Border",
+    "selector": ".module-testimonials-%s .module-item-%s .block-header img"
+  },
+  "imageBorderHover": {
+    "type": "Color",
+    "selector": ".module-testimonials-%s .module-item-%s .block-body:hover .block-header img",
+    "property": "border-color"
+  },
+  "imageBorderRadius": {
+    "type": "BorderRadius",
+    "selector": ".module-testimonials-%s .module-item-%s .block-header img"
+  },
+  "imageShadow": {
+    "type": "Shadow",
+    "selector": ".module-testimonials-%s .module-item-%s .block-header img"
+  },
+  "imageShadowHover": {
+    "type": "Shadow",
+    "selector": ".module-testimonials-%s .module-item-%s .block-body:hover .block-header img"
+  },
+  "icon": {
+    "type": "Icon",
+    "selector": ".module-testimonials-%s .module-item-%s .block-header i::before"
+  },
+  "iconHover": {
+    "type": "Color",
+    "selector": ".module-testimonials-%s .module-item-%s .block-body:hover .block-header i::before",
+    "property": "color"
+  },
+  "iconSize": {
+    "type": "InputPair",
+    "selector": ".module-testimonials-%s .module-item-%s .block-header i",
+    "properties": {
+      "first": "width:%spx",
+      "second": "height:%spx"
+    }
+  },
+  "iconBG": {
+    "type": "Background",
+    "selector": ".module-testimonials-%s .module-item-%s .block-header i"
+  },
+  "iconBGHover": {
+    "type": "Background",
+    "selector": ".module-testimonials-%s .module-item-%s .block-body:hover .block-header i"
+  },
+  "iconMargin": {
+    "type": "Margin",
+    "selector": ".module-testimonials-%s .module-item-%s .block-header i"
+  },
+  "iconBorder": {
+    "type": "Border",
+    "selector": ".module-testimonials-%s .module-item-%s .block-header i"
+  },
+  "iconBorderHover": {
+    "type": "Color",
+    "selector": ".module-testimonials-%s .module-item-%s .block-header i",
+    "property": "border-color"
+  },
+  "iconBorderRadius": {
+    "type": "BorderRadius",
+    "selector": ".module-testimonials-%s .module-item-%s .block-header i"
+  },
+  "iconShadow": {
+    "type": "Shadow",
+    "selector": ".module-testimonials-%s .module-item-%s .block-header i"
+  },
+  "iconShadowHover": {
+    "type": "Shadow",
+    "selector": ".module-testimonials-%s .module-item-%s .block-body:hover .block-header i"
+  },
+  "contentType": {
+    "type": "Radio",
+    "value": "html",
+    "php": true
+  },
+  "content": {
+    "type": "InputLang",
+    "value": "code"
+  },
+  "contentWidgetHeight": {
+    "type": "Input",
+    "selector": ".module-testimonials-%s .module-item-%s .block-content:not(.block-html):not(.block-text)",
+    "property": "height: %spx"
+  },
+  "contentPadding": {
+    "type": "Padding",
+    "selector": ".module-testimonials-%s .module-item-%s .block-content"
+  },
+  "contentBG": {
+    "type": "Background",
+    "selector": ".module-testimonials-%s .module-item-%s .block-content"
+  },
+  "contentBGHover": {
+    "type": "Background",
+    "selector": ".module-testimonials-%s .module-item-%s .block-body:hover .block-content"
+  },
+  "contentBorder": {
+    "type": "Border",
+    "selector": ".module-testimonials-%s .module-item-%s .block-content"
+  },
+  "contentBorderHover2": {
+    "type": "Color",
+    "selector": ".module-testimonials-%s .module-item-%s .block-body:hover .block-content",
+    "property": "border-color"
+  },
+  "contentShadow": {
+    "type": "Shadow",
+    "selector": ".module-testimonials-%s .module-item-%s .block-content"
+  },
+  "contentShadowHover": {
+    "type": "Shadow",
+    "selector": ".module-testimonials-%s .module-item-%s .block-body:hover .block-content"
+  },
+  "contentBorderRadius": {
+    "type": "BorderRadius",
+    "selector": ".module-testimonials-%s .module-item-%s .block-content"
+  },
+  "contentTypography": {
+    "type": "Variable",
+    "variable": "typography",
+    "selector_prefix": ".module-testimonials-%s .module-item-%s .block-content"
+  },
+
+
+  "expandButton": {
+    "type": "Toggle",
+    "value": "false",
+    "rules": {
+      "false": {
+        ".module-testimonials-%s .module-item-%s .block-content": "max-height:100% !important; overflow:visible !important"
+      }
+    },
+    "php": true
+  },
+  "expandHeight": {
+    "type": "InputNumber",
+    "value": "75",
+    "rules": {
+      "@": {
+        ".module-testimonials-%s .module-item-%s .block-content": "max-height:%spx; overflow:hidden"
+      }
+    }
+  },
+  "expandButtonStyle": {
+    "type": "Variable",
+    "variable": "button",
+    "selector_prefix": ".module-testimonials-%s .module-item-%s .block-expand&"
+  },
+  "expandButtonText": {
+    "type": "InputLang",
+    "value": "Show More",
+    "selector": ".module-testimonials-%s .module-item-%s .block-expand::after",
+    "property": "content:'%s'"
+  },
+  "expandButtonTextLess": {
+    "type": "InputLang",
+    "value": "Show Less",
+    "selector": ".module-testimonials-%s .module-item-%s .block-expanded + .block-expand-overlay .block-expand::after",
+    "property": "content:'%s'"
+  },
+  "expandIcon": {
+    "type": "Icon",
+    "selector": ".module-testimonials-%s .module-item-%s .block-expand::before",
+    "value": {
+      "icon": {
+        "name": "chevron-down",
+        "code": "f078"
+      }
+    }
+  },
+  "expandIconHover": {
+    "type": "Color",
+    "selector": ".module-testimonials-%s .module-item-%s .block-expand:hover::before",
+    "property": "color",
+    "desktop": true
+  },
+  "expandIconUp": {
+    "type": "Icon",
+    "selector": ".module-testimonials-%s .module-item-%s .block-expanded + .block-expand-overlay .block-expand::before",
+    "value": {
+      "icon": {
+        "name": "chevron-up",
+        "code": "f077"
+      }
+    }
+  },
+  "expandIconHoverUp": {
+    "type": "Color",
+    "selector": ".module-testimonials-%s .module-item-%s .block-expanded + .block-expand-overlay .block-expand:hover::before",
+    "property": "color",
+    "desktop": true
+  },
+  "expandOverlayColor": {
+    "type": "Color",
+    "rules": {
+      "@": {
+        ".module-testimonials-%s .module-item-%s .block-expand-overlay": "background: linear-gradient(to bottom, transparent, %s)",
+        ".safari .module-testimonials-%s .module-item-%s .block-expand-overlay": "background: linear-gradient(to bottom, rgba(255,255,255,0), %s)",
+        ".iphone .module-testimonials-%s .module-item-%s .block-expand-overlay": "background: linear-gradient(to bottom, rgba(255,255,255,0), %s)",
+        ".ipad .module-testimonials-%s .module-item-%s .block-expand-overlay": "background: linear-gradient(to bottom, rgba(255,255,255,0), %s)"
+      }
+    }
+  },
+
+
+
+  "footer": {
+    "type": "Radio",
+    "value": "none",
+    "php": true,
+    "rules": {
+      "button": {
+        ".module-testimonials-%s .module-item-%s .block-footer": "margin-top:auto"
+      }
+    }
+  },
+  "footerText": {
+    "type": "InputLang",
+    "php": true
+  },
+  "footerTextFont": {
+    "type": "Font",
+    "selector": ".module-testimonials-%s .module-item-%s .block-footer"
+  },
+  "footerTextFontHover": {
+    "type": "Font",
+    "selector": ".module-testimonials-%s .module-item-%s .block-body:hover .block-footer"
+  },
+  "footerBoxStyles": {
+    "include": "common",
+    "selector_prefix": ".module-testimonials-%s .module-item-%s .block-footer"
+  },
+  "footerButton": {
+    "type": "InputLang",
+    "php": true
+  },
+  "footerButtonLink": {
+    "type": "Link",
+    "php": true
+  },
+  "footerButtonWidth": {
+    "type": "Radio",
+    "value": "auto",
+    "selector": ".module-testimonials-%s .module-item-%s .block-footer .btn",
+    "property": "width:%s"
+  },
+  "footerTextAlign": {
+    "type": "Radio",
+    "value": "center",
+    "rules": {
+      "left": {
+        ".module-testimonials-%s .module-item-%s .block-footer": "text-align:left"
+      },
+      "center": {
+        ".module-testimonials-%s .module-item-%s .block-footer": "text-align:center"
+      },
+      "right": {
+        ".module-testimonials-%s .module-item-%s .block-footer": "text-align:right"
+      }
+    },
+    "rtlRules": {
+      "left": {
+        ".module-testimonials-%s .module-item-%s .block-footer": "text-align:right"
+      },
+      "center": {
+        ".module-testimonials-%s .module-item-%s .block-footer": "text-align:center"
+      },
+      "right": {
+        ".module-testimonials-%s .module-item-%s .block-footer": "text-align:left"
+      }
+    }
+  },
+  "tabType": {
+    "type": "Radio",
+    "value": "content"
+  },
+  "footerButtonStyle": {
+    "type": "Variable",
+    "variable": "button",
+    "selector_prefix": ".module-testimonials-%s .module-item-%s .block-footer"
+  },
+  "buttonIcon": {
+    "type": "Icon",
+    "selector": ".module-testimonials-%s .module-item-%s .block-footer .btn::before"
+  },
+  "buttonIconHover": {
+    "type": "Color",
+    "selector": ".module-testimonials-%s .module-item-%s .block-footer .btn:hover::before",
+    "property": "color"
+  },
+  "buttonIconRight": {
+    "type": "Icon",
+    "selector": ".module-testimonials-%s .module-item-%s .block-footer .btn::after"
+  },
+  "buttonIconHoverRight": {
+    "type": "Color",
+    "selector": ".module-testimonials-%s .module-item-%s .block-footer .btn:hover::after",
+    "property": "color"
+  },
+  "itemTypographyStyles": {
+    "type": "Variable",
+    "variable": "typography",
+    "selector_prefix": ".module-testimonials-%s .module-item-%s .block-content"
+  },
+  "itemFormStyles": {
+    "type": "Variable",
+    "variable": "form",
+    "selector_prefix": ".module-testimonials-%s .module-item-%s .block-content"
+  },
+  "itemTableStyles": {
+    "type": "Variable",
+    "variable": "table",
+    "selector_prefix": ".module-testimonials-%s .module-item-%s .block-content"
+  }
+}

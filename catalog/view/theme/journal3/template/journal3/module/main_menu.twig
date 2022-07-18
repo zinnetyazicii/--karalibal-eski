@@ -1,0 +1,101 @@
+{% macro renderMenu(j3, item, display) %}
+  {% import _self as self %}
+  {% set cid = j3.uniqueId('collapse-') %}
+  <li class="{{ j3.classes(item.classes) }}">
+    {% if item.items %}
+      {% if item.link.href %}
+        <a href="{{ item.link.href }}" {{ j3.linkAttrs(item.link) }} {% if display == 'dropdown' %} class="dropdown-toggle" data-toggle="dropdown" {% else %} class="collapse-toggle"{% endif %}>
+          {{ j3.countBadge(item.title, item.link.total, item.link.classes) }}
+          <span class="open-menu collapsed" data-toggle="collapse" data-target="#{{ cid }}"><i class="fa fa-plus"></i></span>
+        </a>
+      {% else %}
+        <a {% if display == 'dropdown' %} class="dropdown-toggle" data-toggle="dropdown" {% else %} class="collapse-toggle"{% endif %}>
+          {{ j3.countBadge(item.title, item.link.total, item.link.classes) }}
+          <span class="open-menu collapsed" data-toggle="collapse" data-target="#{{ cid }}"><i class="fa fa-plus"></i></span>
+        </a>
+      {% endif %}
+     <div class="{{ display == 'dropdown' ? 'dropdown-menu j-dropdown': 'collapse' }}" id="{{ cid }}">
+       <ul class="j-menu">
+         {% for subitem in item.items %}
+           {{ self.renderMenu(j3, subitem, display) }}
+         {% endfor %}
+       </ul>
+     </div>
+    {% else %}
+      {% if item.link.href %}
+        <a href="{{ item.link.href }}" {{ j3.linkAttrs(item.link) }}>{{ j3.countBadge(item.title, item.link.total, item.link.classes) }}</a>
+      {% else %}
+        <a>{{ j3.countBadge(item.title, item.link.total, item.link.classes) }}</a>
+      {% endif %}
+    {% endif %}
+  </li>
+{% endmacro %}
+{% import _self as self %}
+{% if items %}
+  {% set isMobile = j3.document.hasClass('mobile-header-active') %}
+  {% if first %}
+  <div class="menu-trigger menu-item main-menu-item"><ul class="j-menu"><li><a>{{ j3.settings.get('menuTriggerText') }}</a></li></ul></div>
+  {% endif %}
+  <div id="{{ id }}" class="{{ j3.classes(classes) }}">
+    <ul class="j-menu">{% for item in items %}
+      {% set cid = j3.uniqueId('collapse-') %}
+      <li class="{{ j3.classes(item.classes) }} {% if isMobile and item.isOpen %}open{% endif %}" {% if item.isOpen %}data-is-open{% endif %}>
+        {% if item.items %}
+          {% if item.link.href %}
+            <a href="{{ item.link.href }}" {{ j3.linkAttrs(item.link) }} {% if display == 'dropdown' %} class="dropdown-toggle" data-toggle="dropdown" {% else %} class="collapse-toggle"{% endif %}>
+              {{ j3.countBadge(item.title, item.link.total, item.link.classes) }}
+              <span class="open-menu collapsed" data-toggle="collapse" data-target="#{{ cid }}" {% if isMobile and item.isOpen %}aria-expanded="true"{% endif %}><i class="fa fa-plus"></i></span>
+              {% if item.label %}
+                <span class="menu-label">{{ item.label }}</span>
+              {% endif %}
+            </a>
+          {% else %}
+            <a {% if display == 'dropdown' %} class="dropdown-toggle" data-toggle="dropdown" {% else %} class="collapse-toggle"{% endif %}>
+              {{ j3.countBadge(item.title, item.link.total, item.link.classes) }}
+              <span class="open-menu collapsed" data-toggle="collapse" data-target="#{{ cid }}" {% if isMobile and item.isOpen %}aria-expanded="true"{% endif %}><i class="fa fa-plus"></i></span>
+              {% if item.label %}
+                <span class="menu-label">{{ item.label }}</span>
+              {% endif %}
+            </a>
+          {% endif %}
+          {% if item.type == 'multilevel' %}
+            <div class="{{ display == 'dropdown' ? 'dropdown-menu j-dropdown': 'collapse' }} {% if isMobile and item.isOpen %}in{% endif %}" id="{{ cid }}">
+              <ul class="j-menu">
+                {% for subitem in item.items %}
+                  {{ self.renderMenu(j3, subitem, display) }}
+                {% endfor %}
+              </ul>
+            </div>
+          {% endif %}
+          {% if item.type == 'megamenu' %}
+            <div class="{{ display == 'dropdown' ? 'dropdown-menu j-dropdown': 'collapse' }} {% if isMobile and item.isOpen %}in{% endif %}" id="{{ cid }}">
+              <div class="mega-menu-content">{{ item.items }}</div>
+            </div>
+          {% endif %}
+          {% if item.type == 'flyout' %}
+            <div class="{{ display == 'dropdown' ? 'dropdown-menu j-dropdown': 'collapse' }} {% if isMobile and item.isOpen %}in{% endif %}" id="{{ cid }}">
+              {{ item.items }}
+            </div>
+          {% endif %}
+        {% else %}
+          {% if item.link.href %}
+            <a href="{{ item.link.href }}" {{ j3.linkAttrs(item.link) }}>
+              {{ j3.countBadge(item.title, item.link.total, item.link.classes) }}
+              {% if item.label %}
+                <span class="menu-label">{{ item.label }}</span>
+              {% endif %}
+            </a>
+          {% else %}
+            <a>
+              {{ j3.countBadge(item.title, item.link.total, item.link.classes) }}
+              {% if item.label %}
+                <span class="menu-label">{{ item.label }}</span>
+              {% endif %}
+            </a>
+          {% endif %}
+        {% endif %}
+      </li>
+    {% endfor %}
+    </ul>
+  </div>
+{% endif %}

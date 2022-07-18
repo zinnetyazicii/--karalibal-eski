@@ -1,0 +1,28 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "New Section"
+  },
+  "status": {
+    "type": "Status"
+  },
+  "type": {
+    "type": "Radio",
+    "value": "category"
+  },
+  "subtype": {
+    "type": "Radio",
+    "value": "category"
+  },
+  "category": {
+    "type": "Catalog"
+  },
+  "manufacturer": {
+    "type": "Catalog"
+  },
+  "limit": {
+    "type": "Input",
+    "value": "4",
+    "php": true
+  }
+}

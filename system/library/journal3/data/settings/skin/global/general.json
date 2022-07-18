@@ -1,0 +1,638 @@
+{
+  "responsiveLayout": {
+    "type": "Toggle",
+    "php": true
+  },
+  "globalPage": {
+    "type": "Variable",
+    "php": true,
+    "variable": "page"
+  },
+  "globalDropdown": {
+    "type": "Variable",
+    "variable": "dropdown",
+    "selector_prefix":".dropdown"
+  },
+  "globalLegend": {
+    "type": "Variable",
+    "variable": "title",
+    "selector_prefix": "legend"
+  },
+  "globalTitle": {
+    "type": "Variable",
+    "variable": "title",
+    "selector_prefix": ".title"
+  },
+  "globalCarousel": {
+    "type": "Variable",
+    "variable": "carousel"
+  },
+  "globalPageTitle": {
+    "type": "Variable",
+    "variable": "title",
+    "selector_prefix": "html:not(.popup) .page-title"
+  },
+  "gridDimensions": {
+    "type": "Toggle",
+    "rules": {
+      "false": {
+        ".grid-col::before": "display: none !important"
+      }
+    }
+  },
+  "pageTitlePosition": {
+    "type": "Radio",
+    "value": "default",
+    "php": true
+  },
+  "titleBeforeBreadcrumbs": {
+    "type": "Toggle",
+    "value": "false",
+    "php": true
+  },
+  "globalMenuLabel": {
+    "type": "Variable",
+    "variable": "menu_label"
+  },
+  "globalModuleTitle": {
+    "type": "Variable",
+    "variable": "title",
+    "selector_prefix": ".title.module-title"
+  },
+  "globalSideColumnTitle": {
+    "type": "Variable",
+    "variable": "title",
+    "selector_prefix": ".side-column .title.module-title"
+  },
+  "globalButton": {
+    "type": "Variable",
+    "variable": "button"
+  },
+  "primaryButton": {
+    "type": "Variable",
+    "variable": "button",
+    "selector_prefix": ".btn-primary&"
+  },
+  "secondaryButton": {
+    "type": "Variable",
+    "variable": "button",
+    "selector_prefix": ".btn-secondary&"
+  },
+  "successButton": {
+    "type": "Variable",
+    "variable": "button",
+    "selector_prefix": ".btn-success&"
+  },
+  "dangerButton": {
+    "type": "Variable",
+    "variable": "button",
+    "selector_prefix": ".btn-danger&"
+  },
+  "defaultButton": {
+    "type": "Variable",
+    "variable": "button",
+    "selector_prefix": ".btn-default&"
+  },
+  "warningButton": {
+    "type": "Variable",
+    "variable": "button",
+    "selector_prefix": ".btn-warning&"
+  },
+  "infoButton": {
+    "type": "Variable",
+    "variable": "button",
+    "selector_prefix": ".btn-info&"
+  },
+  "lightButton": {
+    "type": "Variable",
+    "variable": "button",
+    "selector_prefix": ".btn-light&"
+  },
+  "darkButton": {
+    "type": "Variable",
+    "variable": "button",
+    "selector_prefix": ".btn-dark&"
+  },
+
+
+  "globalButtons": {
+    "type": "Variable",
+    "variable": "page_buttons"
+  },
+  "globalTags": {
+    "type": "Variable",
+    "variable": "tags"
+  },
+  "globalTabs": {
+    "type": "Variable",
+    "variable": "tabs"
+  },
+  "globalAlerts": {
+    "type": "Variable",
+    "variable": "alerts"
+  },
+  "globalBreadcrumbs": {
+    "type": "Variable",
+    "variable": "breadcrumbs"
+  },
+  "globalAccordion": {
+    "type": "Variable",
+    "variable": "accordion"
+  },
+  "globalTypography": {
+    "type": "Variable",
+    "variable": "typography",
+    "selector_prefix": "body"
+  },
+  "globalCountBadge": {
+    "type": "Variable",
+    "variable": "count_badge"
+  },
+  "globalLabel": {
+    "type": "Variable",
+    "variable": "label",
+    "selector_prefix":".product-label"
+  },
+  "globalTooltip": {
+    "type": "Variable",
+    "variable": "tooltip"
+  },
+  "globalTable": {
+    "type": "Variable",
+    "variable": "table"
+  },
+  "globalForms": {
+    "type": "Variable",
+    "variable": "form"
+  },
+  "globalStepper": {
+    "type": "Variable",
+    "variable": "stepper"
+  },
+  "globalPagination": {
+    "type": "Variable",
+    "variable": "pagination"
+  },
+  "globalStars": {
+    "type": "Variable",
+    "variable": "stars"
+  },
+  "globalPopup": {
+    "type": "Variable",
+    "variable": "popup"
+  },
+  "scrollTop": {
+    "type": "Toggle",
+    "value": "false",
+    "js": true,
+    "php": true
+  },
+  "scrollTopRadius": {
+    "type": "BorderRadius",
+    "selector": ".scroll-top i::before"
+  },
+  "scrollTopIcon": {
+    "type": "Icon",
+    "selector": ".scroll-top i::before"
+  },
+  "scrollTopBackground": {
+    "type": "Background",
+    "selector": ".scroll-top i::before"
+  },
+  "scrollTopBackgroundHover": {
+    "type": "Background",
+    "selector": ".scroll-top:hover i::before"
+  },
+  "scrollTopPadding": {
+    "type": "Padding",
+    "selector": ".scroll-top i::before"
+  },
+  "scrollTopIconHover": {
+    "type": "Color",
+    "selector": ".scroll-top:hover i::before",
+    "property": "color"
+  },
+  "scrollTopAlign": {
+    "type": "Radio",
+    "value": "right",
+    "rules": {
+      "left": {
+        ".scroll-top": "left:10px; right:auto; transform: translateX(0);"
+      },
+      "center": {
+        ".scroll-top": "left:50%; right:auto; transform: translateX(-50%);"
+      },
+      "right": {
+        ".scroll-top": "left:auto; right:10px; transform: translateX(0);"
+      }
+    },
+    "rtlRules": {
+      "left": {
+        ".scroll-top": "right:10px; left:auto; transform: translateX(0);"
+      },
+      "center": {
+        ".scroll-top": "right:50%; left:auto; transform: translateX(50%);"
+      },
+      "right": {
+        ".scroll-top": "right:auto; left:10px; transform: translateX(0);"
+      }
+    }
+  },
+  "scrollTopOffset": {
+    "type": "InputPair",
+    "selector": ".scroll-top",
+    "properties": {
+      "first": "margin-left:%spx; margin-right:%spx",
+      "second": "margin-bottom:%spx"
+    }
+  },
+  "scrollToTop": {
+    "type": "Toggle",
+    "value": "true",
+    "js": true,
+    "php": true
+  },
+  "loadingIcon": {
+    "type": "Icon",
+    "selector": ".journal-loading > i::before, .ias-spinner > i::before, .lg-outer .lg-item::after, .btn.disabled::after",
+    "value": {
+      "icon": {
+        "name": "iconmonstr-loading-1",
+        "code": "e92f"
+      },
+      "size": "28"
+    }
+  },
+
+  "loadingType": {
+    "type": "Radio",
+    "value": "spin",
+    "rules": {
+      "spin": {
+        ".journal-loading > .fa-spin, .lg-outer .lg-item::after, .btn.disabled::after": "animation: fa-spin infinite linear;"
+      },
+      "flip": {
+        ".journal-loading > .fa-spin, .lg-outer .lg-item::after, .btn.disabled::after": "animation: fa-rotate infinite linear;"
+      }
+    }
+  },
+
+  "loadingSpeed": {
+    "type": "InputNumber",
+    "value": "1500",
+    "rules": {
+      "@": {
+        ".journal-loading > .fa-spin, .lg-outer .lg-item::after, .btn.disabled::after": "animation-duration: %sms"
+      }
+    }
+  },
+
+  "globalCartIcon": {
+    "type": "Icon",
+    "selector": ".btn-cart::before, .fa-shopping-cart::before",
+    "value": {
+      "icon": {
+        "name": "iconmonstr-shopping-cart-6",
+        "code": "ea9b"
+      }
+    }
+  },
+  "globalWishlistIcon": {
+    "type": "Icon",
+    "selector": ".btn-wishlist::before",
+    "value": {
+      "icon": {
+        "name": "heart2",
+        "code": "eb67"
+      }
+    }
+  },
+  "globalCompareIcon": {
+    "type": "Icon",
+    "selector": ".btn-compare::before, .compare-btn::before",
+    "value": {
+      "icon": {
+        "name": "iconmonstr-compare",
+        "code": "eab6"
+      }
+    }
+  },
+  "globalUpdateIcon": {
+    "type": "Icon",
+    "selector": ".fa-refresh::before",
+    "value": {
+      "icon": {
+        "name": "refresh",
+        "code": "f021"
+      }
+    }
+  },
+  "globalRemoveIcon": {
+    "type": "Icon",
+    "selector": ".fa-times-circle::before, .fa-times::before, .reset-filter::before, .notification-close::before, .popup-close::before, .hn-close::before",
+    "value": {
+      "icon": {
+        "name": "times-circle",
+        "code": "f057"
+      }
+    }
+  },
+
+  "authorIcon": {
+    "type": "Icon",
+    "selector": ".p-author::before",
+    "value": {
+      "icon": {
+        "name": "iconmonstr-user-1",
+        "code": "eadc"
+      }
+    }
+  },
+  "dateIcon": {
+    "type": "Icon",
+    "selector": ".p-date::before",
+    "value": {
+      "icon": {
+        "name": "calendar-o",
+        "code": "f133"
+      }
+    }
+  },
+  "timeIcon": {
+    "type": "Icon",
+    "selector": ".p-time::before",
+    "value": {
+      "icon": {
+        "name": "clock",
+        "code": "eb29"
+      }
+    }
+  },
+  "commentIcon": {
+    "type": "Icon",
+    "selector": ".p-comment::before",
+    "value": {
+      "icon": {
+        "name": "commenting",
+        "code": "f27a"
+      }
+    }
+  },
+  "viewIcon": {
+    "type": "Icon",
+    "selector": ".p-view::before",
+    "value": {
+      "icon": {
+        "name": "eye",
+        "code": "f06e"
+      }
+    }
+  },
+  "categoryIcon": {
+    "type": "Icon",
+    "selector": ".p-category::before",
+    "value": {
+      "icon": {
+        "name": "list-alt",
+        "code": "f022"
+      }
+    }
+  },
+  "websiteIcon": {
+    "type": "Icon",
+    "selector": ".user-site::before",
+    "value": {
+      "icon": {
+        "name": "laptop_windows",
+        "code": "e321"
+      },
+      "offsetX": "-1"
+    }
+  },
+
+  "scrollBarWidth": {
+    "type": "InputNumber",
+    "rules":{
+      "@":{
+        ".desktop ::-webkit-scrollbar": "width:%spx"
+      }
+    },
+    "php": true
+  },
+  "scrollBarBackground": {
+    "type": "Background",
+    "selector": ".desktop ::-webkit-scrollbar-track"
+  },
+  "scrollBarBackground": {
+    "type": "Background",
+    "selector": ".desktop ::-webkit-scrollbar-track"
+  },
+  "scrollBarThumbBackground": {
+    "type": "Background",
+    "selector": ".desktop ::-webkit-scrollbar-thumb"
+  },
+  "scrollBarThumbBackgroundHover": {
+    "type": "Background",
+    "selector": ".desktop ::-webkit-scrollbar-thumb:hover"
+  },
+  "scrollBarBorder": {
+    "type": "Border",
+    "selector": ".desktop ::-webkit-scrollbar-thumb"
+  },
+  "scrollBarBorderHover": {
+    "type": "Color",
+    "selector": ".desktop ::-webkit-scrollbar-thumb:hover",
+    "property": "border-color"
+  },
+  "scrollBarBorderRadius": {
+    "type": "BorderRadius",
+    "selector": ".desktop ::-webkit-scrollbar-thumb"
+  },
+
+  "globalExpandHeight": {
+    "type": "InputNumber",
+    "value": "70",
+    "rules": {
+      "@": {
+        ".expand-content": "max-height:%spx"
+      }
+    }
+  },
+  "globalExpandCharactersLimit": {
+    "type": "Input",
+    "value": "200",
+    "php": true
+  },
+  "globalExpandButtonStyle": {
+    "type": "Variable",
+    "variable": "button",
+    "selector_prefix": ".block-expand&"
+  },
+  "globalExpandButtonText": {
+    "type": "InputLang",
+    "value": "Show More",
+    "selector": ".block-expand::after",
+    "property": "content:'%s'"
+  },
+  "globalExpandButtonTextLess": {
+    "type": "InputLang",
+    "value": "Show Less",
+    "selector": ".block-expanded .block-expand::after",
+    "property": "content:'%s'"
+  },
+  "globalExpandIcon": {
+    "type": "Icon",
+    "selector": ".block-expand::before",
+    "value": {
+      "icon": {
+        "name": "chevron-down",
+        "code": "f078"
+      }
+    }
+  },
+  "globalExpandIconHover": {
+    "type": "Color",
+    "selector": ".block-expand:hover::before",
+    "property": "color",
+    "desktop": true
+  },
+  "globalExpandIconUp": {
+    "type": "Icon",
+    "selector": ".block-expanded .block-expand::before",
+    "value": {
+      "icon": {
+        "name": "chevron-up",
+        "code": "f077"
+      }
+    }
+  },
+  "globalExpandIconHoverUp": {
+    "type": "Color",
+    "selector": ".block-expanded .block-expand:hover::before",
+    "property": "color",
+    "desktop": true
+  },
+  "globalExpandOverlayColor": {
+    "type": "Color",
+    "rules": {
+      "@": {
+        ".block-expand-overlay": "background: linear-gradient(to bottom, transparent, %s)",
+        ".safari .block-expand-overlay": "background: linear-gradient(to bottom, rgba(255,255,255,0), %s)",
+        ".iphone .block-expand-overlay": "background: linear-gradient(to bottom, rgba(255,255,255,0), %s)",
+        ".ipad .block-expand-overlay": "background: linear-gradient(to bottom, rgba(255,255,255,0), %s)"
+      }
+    }
+  },
+
+  "oldBrowserStatus": {
+    "type": "Toggle",
+    "php": true
+  },
+  "oldBrowserTitle": {
+    "type": "InputLang",
+    "value": "Your browser is out of date!",
+    "php": true
+  },
+  "oldBrowserText": {
+    "type": "InputLang",
+    "value": "Outdated browsers have security issues and don't follow new web standards. Please update your browser to fully experience this website.",
+    "php": true
+  },
+  "oldBrowserColor": {
+    "type": "Color",
+    "selector": ".old-browser",
+    "property": "color"
+  },
+  "oldBrowserBackground": {
+    "type": "Background",
+    "selector": ".old-browser",
+    "value": {
+      "background-color":"rgba(255,255,0,1)"
+    }
+  },
+
+  "loaderStatus": {
+    "type": "Toggle",
+    "value": "off",
+    "php": true
+  },
+  "loaderText": {
+    "type": "InputLang",
+    "value": "Loading",
+    "php": true
+  },
+  "loaderFont": {
+    "type": "Font",
+    "selector": ".j-loader"
+  },
+  "loaderMargin": {
+    "type": "Margin",
+    "selector": ".j-loader span"
+  },
+  "loaderIcon": {
+    "type": "Icon",
+    "selector": ".j-loader .journal-loading > i::before"
+  },
+  "loaderBackground": {
+    "type": "Background",
+    "selector": ".j-loader"
+  },
+
+  "defaultPopupClose": {
+    "type": "Font",
+    "selector": ".modal .modal-header .close"
+  },
+  "defaultPopupCloseHover": {
+    "type": "Font",
+    "selector": ".modal .modal-header .close:hover"
+  },
+  "defaultPopupCloseOffset": {
+    "type": "InputPair",
+    "selector": ".modal .modal-header .close",
+    "properties": {
+      "first": "left:%spx",
+      "second": "top:%spx"
+    },
+    "rtlProperties": {
+      "first": "right:%spx",
+      "second": "top:%spx"
+    }
+  },
+  "defaultPopupTitleFont": {
+    "type": "Font",
+    "selector": ".modal-header .modal-title"
+  },
+  "defaultPopupFont": {
+    "type": "Font",
+    "selector": ".modal"
+  },
+  "defaultPopupDivider": {
+    "type": "Divider",
+    "selector": ".modal-header"
+  },
+  "defaultPopupBorderRadius": {
+    "type": "BorderRadius",
+    "selector": ".modal .modal-content"
+  },
+  "defaultPopupBorder": {
+    "type": "Border",
+    "selector": ".modal .modal-content"
+  },
+  "defaultPopupBackground": {
+    "type": "Background",
+    "selector": ".modal .modal-content"
+  },
+  "defaultPopupTitleBackground": {
+    "type": "Background",
+    "selector": ".modal .modal-header"
+  },
+  "defaultPopupShadow": {
+    "type": "Shadow",
+    "selector": ".modal .modal-content"
+  },
+  "addToCartAction": {
+    "type": "Select",
+    "value": "",
+    "php": true
+  }
+}

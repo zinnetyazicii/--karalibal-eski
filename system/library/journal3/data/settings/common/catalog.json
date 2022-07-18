@@ -1,0 +1,246 @@
+{
+  "ItemsBox": {
+    "include": "common_hover",
+    "selector_prefix": ".item-content"
+  },
+  "TitleBox": {
+    "include": "common_hover",
+    "selector_prefix": ".catalog-title"
+  },
+  "TitleMargin": {
+    "type": "InputNumber",
+    "rules":{
+      "@":{
+        ".catalog-title": "margin-bottom:%spx"
+      }
+    }
+  },
+  "TitleVisibility": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".catalog-title": "display: flex"
+      },
+      "false": {
+        ".catalog-title": "display: none"
+      }
+    }
+  },
+  "TitleFont": {
+    "type": "Font",
+    "selector": ".catalog-title"
+  },
+  "TitleFontHover": {
+    "type": "Font",
+    "selector": ".catalog-title:hover"
+  },
+  "TitleWidth": {
+    "type": "Radio",
+    "value": "auto",
+    "rules": {
+      "auto": {
+        ".catalog-title": "width:auto"
+      },
+      "full": {
+        ".catalog-title": "width:100%"
+      }
+    }
+  },
+  "TitleMinHeight": {
+    "type": "InputNumber",
+    "rules":{
+      "@":{
+        ".catalog-title": "min-height:%spx"
+      }
+    }
+  },
+  "TitleAlign": {
+    "type": "Radio",
+    "value": "start",
+    "rules": {
+      "start": {
+        ".catalog-title": "margin-left:0; margin-right:auto; justify-content:flex-start"
+      },
+      "center": {
+        ".catalog-title": "margin-left:auto; margin-right:auto; justify-content:center"
+      },
+      "end": {
+        ".catalog-title": "margin-left:auto; margin-right:0; justify-content:flex-end"
+      }
+    },
+    "rtlRules": {
+      "start": {
+        ".catalog-title": "margin-left:auto; margin-right:0; justify-content:flex-start"
+      },
+      "center": {
+        ".catalog-title": "margin-left:auto; margin-right:auto; justify-content:center"
+      },
+      "end": {
+        ".catalog-title": "margin-left:0; margin-right:auto; justify-content:flex-end"
+      }
+    }
+  },
+
+  "TitleTruncate": {
+    "type": "Toggle",
+    "value": "false",
+    "rules": {
+      "true": {
+        ".catalog-title": "white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width:100%; justify-content:flex-start"
+      },
+      "false": {
+        ".catalog-title": "white-space: normal; overflow: visible; text-overflow: initial"
+      }
+    }
+  },
+
+  "LinksAlign": {
+    "type": "Radio",
+    "value": "start",
+    "rules": {
+      "start": {
+        ".subitems": "align-items:flex-start"
+      },
+      "center": {
+        ".subitems": "align-items:center"
+      },
+      "end": {
+        ".subitems": "align-items:flex-end"
+      }
+    }
+  },
+  "LinksBox": {
+    "include": "common",
+    "selector_prefix": ".subitems"
+  },
+  "ItemLinkFont": {
+    "type": "Font",
+    "selector": ".subitem > a span"
+  },
+  "ItemLinkFontHover": {
+    "type": "Font",
+    "selector": ".subitem > a:hover span"
+  },
+  "ItemViewMoreFont": {
+    "type": "Font",
+    "selector": ".subitem.view-more a span"
+  },
+  "ItemViewMoreFontHover": {
+    "type": "Font",
+    "selector": ".subitem.view-more a:hover span"
+  },
+  "ViewMoreSpace": {
+    "type": "Margin",
+    "selector": ".subitem.view-more a"
+  },
+  "ViewIcon": {
+    "type": "Icon",
+    "selector": ".subitem.view-more a::before"
+  },
+  "ViewIconHover": {
+    "type": "Color",
+    "selector": ".subitem.view-more a:hover::before",
+    "property": "color"
+  },
+
+  "TextTruncate": {
+    "type": "Toggle",
+    "value": "false",
+    "rules": {
+      "true": {
+        ".subitem > a": "white-space: nowrap; overflow: hidden; text-overflow: ellipsis"
+      },
+      "false": {
+        ".subitem > a": "white-space: normal; overflow: visible; text-overflow: initial"
+      }
+    }
+  },
+  "ItemIcon": {
+    "type": "Icon",
+    "selector": ".subitem > a::before"
+  },
+  "ItemIconHover": {
+    "type": "Color",
+    "selector": ".subitem > a:hover::before",
+    "property": "color"
+  },
+  "ItemLinkSpace": {
+    "type": "InputNumber",
+    "value": "4",
+    "rules":{
+      "@":{
+        ".subitem > a": "padding-bottom:%spx"
+      }
+    }
+  },
+  "Title": {
+    "type": "Variable",
+    "variable": "title",
+    "selector_prefix": ".module-title&"
+  },
+  "ImageBorder": {
+    "type": "Border",
+    "selector": ".catalog-image img"
+  },
+  "ImageBorderRadius": {
+    "type": "BorderRadius",
+    "selector": ".catalog-image img"
+  },
+  "ImageMargin": {
+    "type": "Margin",
+    "selector": ".catalog-image"
+  },
+  "ImageShadow": {
+    "type": "Shadow",
+    "selector": ".catalog-image img"
+  },
+  "ImagePosition": {
+    "type": "Radio",
+    "value": "top",
+    "rules": {
+      "left": {
+        ".item-assets": "flex-direction:row",
+        ".item-assets > a":"max-width: 40%; order:0",
+        ".item-assets .subitems": "width:60%",
+        ".item-assets .catalog-image":"display:block"
+      },
+      "top": {
+        ".item-assets": "flex-direction:column",
+        ".item-assets > a":"max-width: 100%; order:0",
+        ".item-assets .subitems": "width:100%",
+        ".item-assets .catalog-image":"display:block"
+      },
+      "bottom": {
+        ".item-assets": "flex-direction:column",
+        ".item-assets > a":"max-width: 100%; order:2",
+        ".item-assets .subitems": "width:100%",
+        ".item-assets .catalog-image":"display:block"
+      },
+      "right": {
+        ".item-assets": "flex-direction:row",
+        ".item-assets > a":"max-width: 40%; order:5",
+        ".item-assets .subitems": "width:60%",
+        ".item-assets .catalog-image":"display:block"
+      },
+      "none":{
+        ".item-assets .catalog-image":"display:none"
+      }
+    }
+  },
+  "Grayscale": {
+    "type": "Radio",
+    "value": "",
+    "rules": {
+      "none": {
+        ".catalog-image img": "filter: grayscale(0)"
+      },
+      "always": {
+        ".catalog-image img": "filter: grayscale(1)"
+      },
+      "hover": {
+        ".catalog-image img": "filter: grayscale(1)",
+        ".item-content:hover .catalog-image img": "filter: grayscale(0)"
+      }
+    }
+  }
+}

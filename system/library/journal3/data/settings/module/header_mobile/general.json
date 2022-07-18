@@ -1,0 +1,148 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "New Mobile Header"
+  },
+  "headerMobileMainMenu": {
+    "type": "Module",
+    "php": true
+  },
+  "headerMobileTopMenu": {
+    "type": "Module",
+    "php": true
+  },
+  "headerMobileBorder": {
+    "type": "Border",
+    "selector": ".mobile-header-active .mobile-bar"
+  },
+  "headerMobileBG": {
+    "type": "Background",
+    "selector": ".mobile-header-active .mobile-bar"
+  },
+  "headerMobileShadow": {
+    "type": "Shadow",
+    "selector": ".mobile-header-active .mobile-bar"
+  },
+  "headerMobileCustomLabel1": {
+    "type": "InputLang",
+    "rules": {
+      "@": {
+        ".mobile-header-active .mobile-custom-menu-1 .links-text::after": "content:'%s'"
+      }
+    }
+  },
+  "headerMobileCustomLabel2": {
+    "type": "InputLang",
+    "rules": {
+      "@": {
+        ".mobile-header-active .mobile-custom-menu-2 .links-text::after": "content:'%s'"
+      }
+    }
+  },
+  "headerMobileCustomLabel1Offset": {
+    "type": "InputPair",
+    "selector": ".mobile-header-active .mobile-custom-menu-1 .links-text",
+    "properties": {
+      "first": "margin-left:%spx",
+      "second": "margin-top:%spx"
+    },
+    "rtlProperties": {
+      "first": "margin-left:calc(0px - (%spx))",
+      "second": "margin-top:%spx"
+    }
+  },
+  "headerMobileCustomLabel2Offset": {
+    "type": "InputPair",
+    "selector": ".mobile-header-active .mobile-custom-menu-2 .links-text",
+    "properties": {
+      "first": "margin-left:%spx",
+      "second": "margin-top:%spx"
+    },
+    "rtlProperties": {
+      "first": "margin-left:calc(0px - (%spx))",
+      "second": "margin-top:%spx"
+    }
+  },
+  "headerMobileCustomLabel2Font": {
+    "type": "Font",
+    "selector": ".mobile-header-active .mobile-custom-menu-2 .links-text::after"
+  },
+  "headerMobileCustomLabel1Font": {
+    "type": "Font",
+    "selector": ".mobile-header-active .mobile-custom-menu-1 .links-text::after"
+  },
+  "headerMobileCustomLabel3Font": {
+    "type": "Font",
+    "selector": ".mobile-header-active .mobile-custom-menu-2 .links-text::after"
+  },
+  "headerMobileHeight": {
+    "type": "InputNumber",
+    "value": "50",
+    "rules": {
+      "@": {
+        ".mobile-header-active .mobile-1 .mobile-bar": "height: %spx",
+        ".mobile-header-active .mobile-2 .mobile-bar": "height: %spx",
+        ".mobile-header-active .mobile-3 .mobile-logo-wrapper": "height: %spx"
+      }
+    },
+    "php": true,
+    "js": true
+  },
+  "headerMobileStickyStatus": {
+    "type": "Toggle",
+    "value": "true",
+    "js": true,
+    "php": true
+  },
+  "headerMobileStickyShadow": {
+    "type": "Shadow",
+    "selector": ".mobile-header-active .mobile-bar-sticky"
+  },
+  "headerMobileStickyBackground": {
+    "type": "Background",
+    "selector": ".mobile-header-active .mobile-bar-sticky"
+  },
+  "headerMobilePadding": {
+    "type": "InputNumber",
+    "rules":{
+      "@":{
+        ".mobile-top-bar, .mobile-bar-group": "padding:0 %spx"
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,9 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "PRODUCT_LIST"
+  },
+  "value": {
+    "include": "product_list"
+  }
+}

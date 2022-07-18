@@ -1,0 +1,33 @@
+{% macro renderLinksMenu(j3, item, display) %}
+  {% import _self as self %}
+  <li class="{{ j3.classes(item.classes) }}">
+    {% if item.link.href %}
+      <a href="{{ item.link.href }}" {{ j3.linkAttrs(item.link) }}>
+        {{ j3.countBadge(item.title, item.link.total, item.link.classes) }}
+        {% if item.label %}
+          <span class="menu-label">{{ item.label }}</span>
+        {% endif %}
+      </a>
+    {% else %}
+      <a>
+        {{ j3.countBadge(item.title, item.link.total, item.link.classes) }}
+        {% if item.label %}
+          <span class="menu-label">{{ item.label }}</span>
+        {% endif %}
+      </a>
+    {% endif %}
+  </li>
+{% endmacro %}
+{% import _self as self %}
+{% if items %}
+  <div class="{{ j3.classes(classes) }}">
+    {% if title %}
+      <h3 class="title module-title">{{ title }}</h3>
+    {% endif %}
+    <ul class="module-body">
+      {% for item in items %}
+        {{ self.renderLinksMenu(j3, item) }}
+      {% endfor %}
+    </ul>
+  </div>
+{% endif %}

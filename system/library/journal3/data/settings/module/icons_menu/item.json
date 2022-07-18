@@ -1,0 +1,78 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "New Item"
+  },
+  "status": {
+    "type": "Status"
+  },
+  "title": {
+    "type": "InputLang",
+    "php": true
+  },
+  "link": {
+    "type": "Link",
+    "php": true
+  },
+  "type": {
+    "type": "Radio",
+    "value": "icon",
+    "php": true
+  },
+  "icon": {
+    "type": "Icon",
+    "selector": ".icons-menu-%s .icons-menu-item-%s.icon-menu-icon > a::before"
+  },
+  "iconHover": {
+    "type": "Color",
+    "selector": ".desktop .icons-menu-%s .icons-menu-item-%s.icon-menu-icon > a:hover::before",
+    "property": "color"
+  },
+  "iconActive": {
+    "type": "Color",
+    "selector": ".icons-menu-%s .icons-menu-item-%s.icon-menu-icon > a:active::before",
+    "property": "color",
+    "important": true
+  },
+  "iconFont": {
+    "type": "Font",
+    "selector": ".icons-menu-%s .icons-menu-item-%s.icon-menu-icon .links-text"
+  },
+  "iconFontHover": {
+    "type": "Font",
+    "selector": ".icons-menu-%s .icons-menu-item-%s.icon-menu-icon a:hover .links-text"
+  },
+  "iconBG": {
+    "type": "Background",
+    "selector": ".icons-menu-%s .icons-menu-item-%s.icon-menu-icon > a"
+  },
+  "iconBGHover": {
+    "type": "Background",
+    "selector": ".desktop .icons-menu-%s .icons-menu-item-%s.icon-menu-icon > a:hover"
+  },
+  "iconBGActive": {
+    "type": "Background",
+    "selector": ".icons-menu-%s .icons-menu-item-%s.icon-menu-icon > a:active",
+    "important": true
+  },
+  "iconMenuCountBadge": {
+    "type":"Variable",
+    "variable": "count_badge",
+    "selector_prefix": ".icons-menu-%s .icons-menu-item-%s.icon-menu-icon"
+  },
+  "iconMenuCountBadgeOffset": {
+    "type": "InputPair",
+    "selector": ".icons-menu-%s .icons-menu-item-%s.icon-menu-icon .count-badge",
+    "properties": {
+      "first": "transform: translateX(%spx)",
+      "second": "margin-top:%spx"
+    },
+    "rtlProperties":{
+      "first": "transform: translateX(calc(0px - (%spx)))",
+      "second": "margin-top:%spx"
+    }
+  },
+  "image": {
+    "type": "ImageLang"
+  }
+}

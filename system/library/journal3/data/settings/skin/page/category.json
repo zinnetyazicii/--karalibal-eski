@@ -1,0 +1,255 @@
+{
+  "categoryPageDescStatus": {
+    "type": "Toggle",
+    "php": true
+  },
+  "categoryPageTitle": {
+    "type": "Variable",
+    "variable": "title",
+    "selector_prefix": ".route-product-category .page-title"
+  },
+
+  "categoryPageTitleVisibility": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".route-product-category .page-title": "display: block"
+      },
+      "false": {
+        ".route-product-category .page-title": "display: none"
+      }
+    }
+  },
+
+  "refineTitle": {
+    "type": "Toggle",
+    "value": "false",
+    "php": true
+  },
+
+  "refineTitleText": {
+    "type": "InputLang",
+    "php": true
+  },
+
+  "refineTitleStyle": {
+    "type": "Variable",
+    "variable": "title",
+    "selector_prefix": ".refine-title"
+  },
+
+  "categoryPageCategoryDescriptionStatus": {
+    "type": "Status",
+    "php": true
+  },
+
+  "categoryPageCategoryDescriptionPosition": {
+    "type": "Radio",
+    "value": "top",
+    "rules": {
+      "top": {
+        ".route-product-category .category-description": "order:0"
+      },
+      "bottom": {
+        ".route-product-category .category-description": "order:10"
+      }
+    }
+  },
+
+  "categoryPageTypography": {
+    "type": "Variable",
+    "variable": "typography",
+    "selector_prefix": ".category-description"
+  },
+
+  "categoryImageFloat": {
+    "type": "Radio",
+    "value": "left",
+    "rules": {
+      "left": {
+        ".category-image": "float:left"
+      },
+      "center": {
+        ".category-image": "float:none"
+      },
+      "right": {
+        ".category-image": "float:right"
+      }
+    },
+    "rtlRules": {
+      "left": {
+        ".category-image": "float:right"
+      },
+      "center": {
+        ".category-image": "float:none"
+      },
+      "right": {
+        ".category-image": "float:left"
+      }
+    }
+  },
+
+  "categoryDescriptionDisplay": {
+    "type": "Radio",
+    "value": "default",
+    "rules": {
+      "default": {
+        ".category-text": "position:static; bottom:auto"
+      },
+      "over": {
+        ".category-text": "position:absolute; bottom:0;"
+      }
+    }
+  },
+  "categoryDescriptionText": {
+    "include": "common",
+    "selector_prefix": ".category-text"
+  },
+  "categoryPageDescription": {
+    "include": "common",
+    "selector_prefix": ".category-description"
+  },
+  "categoryPageCategoryImageStatus": {
+    "type": "Status",
+    "php": true
+  },
+  "categoryPageCategoryImage": {
+    "include": "common",
+    "selector_prefix": ".category-description > img"
+  },
+
+  "subcategoriesStatus": {
+    "type": "Status",
+    "php": true
+  },
+  "subcategoriesDisplay": {
+    "type": "Radio",
+    "value": "carousel",
+    "php": true
+  },
+  "subcategoriesItemsPerRow": {
+    "type": "ItemsPerRow",
+    "selector": ".refine-categories .refine-item",
+    "php": true
+  },
+  "subcategoriesContainerGutter": {
+    "type": "Margin",
+    "selector": ".refine-items"
+  },
+  "subcategoriesCarouselPadding": {
+    "type": "Padding",
+    "selector": ".refine-categories .swiper-container"
+  },
+  "subcategoriesPadding": {
+    "type": "Padding",
+    "selector": ".refine-categories:not(.refine-carousel)"
+  },
+  "subcategoriesMargin": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".refine-categories": "margin-bottom:%spx"
+      }
+    }
+  },
+  "subcategoriesLinksSpacing": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".refine-links .refine-item + .refine-item": "margin-left:%spx"
+      }
+    },
+    "rtlRules": {
+      "@": {
+        ".refine-links .refine-item + .refine-item": "margin-right:%spx"
+      }
+    }
+  },
+  "subcategoriesBackground": {
+    "type": "Background",
+    "selector": ".refine-categories"
+  },
+  "subcategoriesCarousel": {
+    "type": "Toggle",
+    "php": true
+  },
+  "subcategoriesCarouselStyle": {
+    "type": "Variable",
+    "variable": "carousel",
+    "selector_prefix": ".refine-categories"
+  },
+  "subcategoriesItemBoxStyles": {
+    "include": "common_hover",
+    "selector_prefix": ".refine-item a"
+  },
+  "subcategoriesImageStatus": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".refine-item a img": "display:block;"
+      },
+      "false": {
+        ".refine-item a img": "display:none;"
+      }
+    }
+  },
+  "subcategoriesImage": {
+    "include": "common_hover",
+    "selector_prefix": ".refine-item a img"
+  },
+  "subcategoriesNameTruncate": {
+    "type": "Toggle",
+    "value": "false",
+    "rules": {
+      "true": {
+        ".refine-name": "white-space: nowrap; overflow: hidden; text-overflow: ellipsis"
+      },
+      "false": {
+        ".refine-name": "white-space: normal; overflow: visible; text-overflow: initial"
+      }
+    }
+  },
+  "subcategoriesNameFont": {
+    "type": "Font",
+    "selector": ".refine-item .refine-name",
+    "value": {
+      "text-align": "center"
+    }
+  },
+  "subcategoriesNameFontHover": {
+    "type": "Font",
+    "selector": ".refine-item a:hover .refine-name"
+  },
+  "subcategoriesNamePadding": {
+    "type": "Padding",
+    "selector": ".refine-name"
+  },
+  "categoryCountBadgeVisibility": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".refine-name .count-badge": "display: inline-flex"
+      },
+      "false": {
+        ".refine-name .count-badge": "display: none"
+      }
+    }
+  },
+  "categoryCountBadgeOffset": {
+    "type": "InputPair",
+    "selector": ".refine-name .count-badge",
+    "properties": {
+      "first": "transform: translateX(%spx)",
+      "second": "margin-top:%spx"
+    },
+    "rtlProperties": {
+      "first": "transform: translateX(calc(0px - (%spx)))",
+      "second": "margin-top:%spx"
+    }
+  },
+  "categoryCountBadge": {
+    "type": "Variable",
+    "variable": "count_badge",
+    "selector_prefix": ".refine-name"
+  }
+}

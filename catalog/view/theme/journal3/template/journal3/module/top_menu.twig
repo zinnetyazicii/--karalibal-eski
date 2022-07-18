@@ -1,0 +1,35 @@
+{% macro renderTopMenu(j3, item) %}
+  {% import _self as self %}
+  <li class="{{ j3.classes(item.classes) }}">
+    {% if item.items %}
+      {% if item.link.href %}
+        <a href="{{ item.link.href }}" {{ j3.linkAttrs(item.link) }} class="dropdown-toggle" data-toggle="dropdown">{{ j3.countBadge(item.title, item.link.total, item.link.classes) }}</a>
+      {% else %}
+        <a class="dropdown-toggle" data-toggle="dropdown">{{ j3.countBadge(item.title, item.link.total, item.link.classes) }}</a>
+      {% endif %}
+      <div class="dropdown-menu j-dropdown">
+        <ul class="j-menu">
+          {% for subitem in item.items %}
+            {{ self.renderTopMenu(j3, subitem) }}
+          {% endfor %}
+        </ul>
+      </div>
+    {% else %}
+      {% if item.link.href %}
+        <a href="{{ item.link.href }}" {{ j3.linkAttrs(item.link) }}>{{ j3.countBadge(item.title, item.link.total, item.link.classes) }}</a>
+      {% else %}
+        <a>{{ j3.countBadge(item.title, item.link.total, item.link.classes) }}</a>
+      {% endif %}
+    {% endif %}
+  </li>
+{% endmacro %}
+{% import _self as self %}
+{% if items %}
+  <div class="{{ j3.classes(classes) }}">
+    <ul class="j-menu">
+      {% for item in items %}
+        {{ self.renderTopMenu(j3, item) }}
+      {% endfor %}
+    </ul>
+  </div>
+{% endif %}

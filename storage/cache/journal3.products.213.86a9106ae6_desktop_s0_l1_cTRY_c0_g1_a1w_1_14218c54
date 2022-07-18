@@ -1,0 +1,387 @@
+<?php $val = array (
+  'css' => '.module-products-213 .title.module-title{font-size:24px;line-height:1.1;margin-bottom:15px;white-space:normal;overflow:visible;text-overflow:initial}.module-products-213 .title.module-title::after{display:none}.module-products-213 .title.module-title.page-title>span::after{display:none}.module-products-213 .swiper-container{overflow:hidden}.module-products-213 .swiper-buttons{display:none;top:50%;width:calc(100% - (-15px * 2));margin-top:-10px}.module-products-213:hover .swiper-buttons{display:block}.module-products-213 .swiper-button-prev{left:0;right:auto;transform:translate(0, -50%)}.module-products-213 .swiper-button-next{left:auto;right:0;transform:translate(0, -50%)}.module-products-213 .swiper-buttons
+div{width:35px;height:35px;background:rgba(44, 54, 64, 1);border-width:4px;border-style:solid;border-color:rgba(255, 255, 255, 1);border-radius:50%}.module-products-213 .swiper-button-disabled{opacity:0}.module-products-213 .swiper-buttons div::before{content:\'\\e408\' !important;font-family:icomoon !important;color:rgba(255, 255, 255, 1)}.module-products-213 .swiper-buttons .swiper-button-next::before{content:\'\\e409\' !important;font-family:icomoon !important;color:rgba(255, 255, 255, 1)}.module-products-213 .swiper-buttons div:not(.swiper-button-disabled):hover{background:rgba(239, 80, 66, 1)}.module-products-213 .swiper-pagination{display:block;margin-bottom:-10px;left:50%;right:auto;transform:translateX(-50%)}.module-products-213
+.swiper{padding-bottom:20px}.module-products-213 .swiper-pagination-bullet{width:8px;height:8px;background-color:rgba(226, 226, 226, 1)}.module-products-213 .swiper-pagination>span+span{margin-left:8px}.desktop .module-products-213 .swiper-pagination-bullet:hover{background-color:rgba(143, 157, 166, 1)}.module-products-213 .swiper-pagination-bullet.swiper-pagination-bullet-active{background-color:rgba(239, 80, 66, 1)}.module-products-213 .swiper-pagination>span{border-radius:50px}.module-products-213 .nav-tabs > li > a, .module-products-213 .nav-tabs > li.active > a, .module-products-213 .nav-tabs > li.active > a:hover, .module-products-213 .nav-tabs>li.active>a:focus{font-family:\'Headland One\';font-weight:700;font-size:15px;color:rgba(139, 145, 152, 1);text-transform:uppercase}.desktop .module-products-213 .nav-tabs > li:hover > a, .module-products-213 .nav-tabs>li.active>a{color:rgba(239, 80, 66, 1)}.module-products-213 .nav-tabs > li.active > a, .module-products-213 .nav-tabs > li.active > a:hover, .module-products-213 .nav-tabs>li.active>a:focus{color:rgba(51, 51, 51, 1)}.module-products-213 .nav-tabs>li{border-width:0;border-bottom-width:2px;border-style:solid;border-color:rgba(0, 0, 0, 0);flex-grow:0}.module-products-213 .nav-tabs>li.active{border-color:rgba(239, 80, 66, 1)}.module-products-213 .nav-tabs>li.active::after{display:none;border-top-width:10px}.module-products-213 .nav-tabs>li>a{justify-content:center;white-space:nowrap;padding:0px;padding-bottom:10px}.module-products-213 .nav-tabs>li>a::before{font-size:18px}.module-products-213 .nav-tabs{display:flex;justify-content:flex-start;flex-wrap:nowrap;overflow-x:auto;overflow-y:hidden;min-width:50px}.module-products-213 .nav-tabs>li:not(:last-child){margin-right:20px}.module-products-213 .mobile .nav-tabs{overflow-x:scroll}.module-products-213 .nav-tabs::-webkit-scrollbar{-webkit-appearance:none;height:1px;height:2px;width:2px}.module-products-213 .nav-tabs::-webkit-scrollbar-track{background-color:white;background-color:rgba(238, 238, 238, 1)}.module-products-213 .nav-tabs::-webkit-scrollbar-thumb{background-color:#999;background-color:rgba(239, 80, 66, 1)}.module-products-213 .tab-container::before{display:none}.module-products-213 .tab-content{padding-top:20px}.module-products-213 .tab-container{display:block}.module-products-213 .tab-container .nav-tabs{flex-direction:row}.module-products-213 .product-layout.swiper-slide{margin-right:20px;width:calc((100% - 3 * 20px) / 4 - 0.01px)}.module-products-213 .product-layout:not(.swiper-slide){padding:10px;width:calc(100% / 4 - 0.01px)}.one-column #content .module-products-213 .product-layout.swiper-slide{margin-right:0px;width:calc((100% - 0 * 0px) / 1 - 0.01px)}.one-column #content .module-products-213 .product-layout:not(.swiper-slide){padding:0px;width:calc(100% / 1 - 0.01px)}.two-column #content .module-products-213 .product-layout.swiper-slide{margin-right:0px;width:calc((100% - 0 * 0px) / 1 - 0.01px)}.two-column #content .module-products-213 .product-layout:not(.swiper-slide){padding:0px;width:calc(100% / 1 - 0.01px)}.side-column .module-products-213 .product-layout.swiper-slide{margin-right:0px;width:calc((100% - 0 * 0px) / 1 - 0.01px)}.side-column .module-products-213 .product-layout:not(.swiper-slide){padding:0px;width:calc(100% / 1 - 0.01px)}.module-products-213:not(.carousel-mode) .module-body .module-item>div{margin:-7px}.module-products-213 .product-grid .product-thumb .product-labels{display:none;visibility:visible;opacity:1}.module-products-213 .product-grid .product-thumb .quickview-button{display:flex;left:50%;top:0;bottom:auto;right:auto;transform:translate3d(-50%, 0, 1px)}.module-products-213 .product-grid .product-thumb .btn-quickview{visibility:hidden;opacity:0;transform:scale(.88);width:30px;height:30px}.module-products-213 .product-grid .product-thumb:hover .btn-quickview{visibility:visible;opacity:1;transform:scale(1)}.module-products-213 .product-grid .product-thumb .btn-quickview .btn-text{display:none}.module-products-213 .product-grid .product-thumb .btn-quickview::before{display:inline-block;content:\'\\ebef\' !important;font-family:icomoon !important;font-size:14px;left:1px}.module-products-213 .product-grid .product-thumb .image
+.btn{background:rgba(44, 54, 64, 1)}.module-products-213 .product-grid .product-thumb .image .btn:hover{background:rgba(58, 71, 84, 1) !important}.module-products-213 .product-grid .product-thumb .image .btn.btn.disabled::after{font-size:20px}.module-products-213 .product-grid .product-thumb
+.countdown{display:none;visibility:visible;opacity:1;transform:translate3d(-50%, 0, 1px) scale(1)}.module-products-213 .product-grid.product-list .product-layout
+.image{float:left;height:100%}.module-products-213 .product-grid .product-thumb
+.stats{display:flex;justify-content:space-between;color:rgba(105, 105, 115, 1);padding-top:2px;padding-bottom:3px}.module-products-213 .product-grid .stat-1 .stats-label{display:none}.module-products-213 .product-grid .stat-2 .stats-label{display:none}.module-products-213 .product-grid.product-grid .product-thumb
+.rating{position:absolute;visibility:visible;opacity:1;top:0}.module-products-213 .product-grid.product-grid .product-thumb .rating-stars{position:absolute;visibility:visible;opacity:1;transform:translateY(-50%)}.module-products-213 .product-grid .product-thumb
+.rating{justify-content:flex-start;display:flex}.module-products-213 .product-grid .product-thumb .rating.no-rating{display:none}.module-products-213 .product-grid .product-thumb .rating .fa-stack{font-size:13px;width:1.2em}.module-products-213 .product-grid .product-thumb .rating .fa-star, .module-products-213 .product-grid .product-thumb .rating .fa-star+.fa-star-o{color:rgba(254, 208, 117, 1)}.module-products-213 .product-grid .product-thumb .rating-stars{padding-bottom:10px;margin-left:10px}.module-products-213 .product-grid .product-thumb .rating.no-rating
+span{opacity:0.5}.module-products-213 .product-grid .product-thumb
+.name{display:flex;width:100%;margin-left:0;margin-right:0;justify-content:flex-start;margin-left:0;margin-right:auto;margin-top:8px}.module-products-213 .product-grid .product-thumb .name
+a{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-family:\'Ubuntu\';font-weight:700;font-size:15px;color:rgba(51, 51, 51, 1);text-align:left;text-align:left}.module-products-213 .product-grid .product-thumb
+.description{display:none;padding:12px;padding-top:10px;padding-bottom:10px;border-width:0;border-top-width:1px;border-bottom-width:1px;border-style:solid}.module-products-213 .product-grid .product-thumb
+.price{display:block;font-size:12px;color:rgba(105, 105, 115, 1);text-align:left;width:auto;margin-left:auto;margin-right:auto;margin-left:0;margin-right:auto;text-align:left;justify-content:flex-start}.module-products-213 .product-grid .product-thumb .price-tax{display:none;font-size:12px;text-align:left}.module-products-213 .product-grid .product-thumb .price-new{color:rgba(239, 80, 66, 1);margin:0
+7px 0 0;order:1}.module-products-213 .product-grid .product-thumb .price-old{font-size:11px;color:rgba(139, 145, 152, 1);text-decoration:line-through;margin:0;order:2}.module-products-213 .product-grid .product-thumb .price>div{align-items:center;flex-direction:row}.module-products-213 .product-grid .product-thumb .buttons-wrapper{display:block}.module-products-213 .product-grid .product-thumb .button-group{justify-content:center}.module-products-213 .product-grid.product-grid .product-thumb .button-group{background:rgba(58, 71, 84, 1)}.module-products-213 .product-grid .product-thumb .cart-group{display:inline-flex}.module-products-213 .product-grid .product-thumb .btn-cart{width:30px;height:30px}.module-products-213 .product-grid .product-thumb .btn-wishlist{width:30px;height:30px;display:inline-flex}.module-products-213 .product-grid .product-thumb .btn-compare{width:30px;height:30px;display:inline-flex}.module-products-213 .product-grid .product-thumb .btn-cart .btn-text{display:none}.module-products-213 .product-grid .product-thumb .btn-cart::before{display:inline-block;font-size:13px;color:rgba(230, 230, 230, 1);left:2px;margin-right:2px}.module-products-213 .product-grid.product-grid .product-thumb .btn-cart{flex:initial}.module-products-213 .product-grid.product-grid .product-thumb .cart-group{flex:initial}.module-products-213 .product-grid .product-thumb .btn-cart.btn, .module-products-213 .product-grid .product-thumb .btn-cart.btn:visited{font-size:13px;color:rgba(139, 145, 152, 1);text-transform:none;letter-spacing:0}.module-products-213 .product-grid .product-thumb .btn-cart.btn:hover{color:rgba(239, 80, 66, 1) !important;background:none !important}.module-products-213 .product-grid .product-thumb .btn-cart.btn:active, .module-products-213 .product-grid .product-thumb .btn-cart.btn:hover:active, .module-products-213 .product-grid .product-thumb .btn-cart.btn:focus:active{color:rgba(239, 80, 66, 1) !important;background:none !important;box-shadow:none}.module-products-213 .product-grid .product-thumb .btn-cart.btn:focus{color:rgba(239, 80, 66, 1) !important;background:none;box-shadow:none}.module-products-213 .product-grid .product-thumb .btn-cart.btn{background:none;padding:0px;box-shadow:none;border-radius:0px !important;padding:0px
+!important;border-radius:0px !important}.desktop .module-products-213 .product-grid .product-thumb .btn-cart.btn:hover{box-shadow:none}.module-products-213 .product-grid .product-thumb .btn-cart.btn.btn.disabled::after{font-size:20px}.module-products-213 .product-grid .product-thumb
+.stepper{display:none;margin-right:5px;height:30px}.module-products-213 .product-grid .button-group-bottom .wish-group.wish-group-bottom{margin:-10px;margin-top:10px}.module-products-213 .product-grid .button-group-bottom .wish-group-bottom{border-width:0;border-top-width:1px;border-style:solid}.module-products-213 .product-grid .product-thumb .btn-wishlist::before{display:inline-block;font-size:13px;color:rgba(230, 230, 230, 1)}.module-products-213 .product-grid .product-thumb .btn-wishlist .btn-text{display:none}.module-products-213 .product-grid .product-thumb .btn-wishlist.btn, .module-products-213 .product-grid .product-thumb .btn-wishlist.btn:visited{font-size:13px;color:rgba(139, 145, 152, 1);text-transform:none;letter-spacing:0}.module-products-213 .product-grid .product-thumb .btn-wishlist.btn:hover{color:rgba(239, 80, 66, 1) !important;background:none !important}.module-products-213 .product-grid .product-thumb .btn-wishlist.btn:active, .module-products-213 .product-grid .product-thumb .btn-wishlist.btn:hover:active, .module-products-213 .product-grid .product-thumb .btn-wishlist.btn:focus:active{color:rgba(239, 80, 66, 1) !important;background:none !important;box-shadow:none}.module-products-213 .product-grid .product-thumb .btn-wishlist.btn:focus{color:rgba(239, 80, 66, 1) !important;background:none;box-shadow:none}.module-products-213 .product-grid .product-thumb .btn-wishlist.btn{background:none;padding:0px;box-shadow:none;border-radius:0px !important}.desktop .module-products-213 .product-grid .product-thumb .btn-wishlist.btn:hover{box-shadow:none}.module-products-213 .product-grid .product-thumb .btn-wishlist.btn.btn.disabled::after{font-size:20px}.module-products-213 .product-grid .product-thumb .btn-compare::before{display:inline-block;font-size:13px;color:rgba(230, 230, 230, 1)}.module-products-213 .product-grid .product-thumb .btn-compare .btn-text{display:none}.module-products-213 .product-grid .product-thumb .btn-compare.btn, .module-products-213 .product-grid .product-thumb .btn-compare.btn:visited{font-size:13px;color:rgba(139, 145, 152, 1);text-transform:none;letter-spacing:0}.module-products-213 .product-grid .product-thumb .btn-compare.btn:hover{color:rgba(239, 80, 66, 1) !important;background:none !important}.module-products-213 .product-grid .product-thumb .btn-compare.btn:active, .module-products-213 .product-grid .product-thumb .btn-compare.btn:hover:active, .module-products-213 .product-grid .product-thumb .btn-compare.btn:focus:active{color:rgba(239, 80, 66, 1) !important;background:none !important;box-shadow:none}.module-products-213 .product-grid .product-thumb .btn-compare.btn:focus{color:rgba(239, 80, 66, 1) !important;background:none;box-shadow:none}.module-products-213 .product-grid .product-thumb .btn-compare.btn{background:none;padding:0px;box-shadow:none;border-radius:0px !important}.desktop .module-products-213 .product-grid .product-thumb .btn-compare.btn:hover{box-shadow:none}.module-products-213 .product-grid .product-thumb .btn-compare.btn.btn.disabled::after{font-size:20px}.module-products-213 .product-grid .product-thumb .extra-group{display:none}.module-products-213 .product-grid .product-thumb .extra-group .btn:first-child{display:inline-flex}.module-products-213 .product-grid .product-thumb .extra-group .btn-extra+.btn{display:inline-flex}.module-products-213 .product-grid .product-thumb .extra-group .btn:first-child::before{display:inline-block}.module-products-213 .product-grid .product-thumb .extra-group .btn:first-child .btn-text{display:inline-block;padding:0
+.4em}.module-products-213 .product-grid .product-thumb .extra-group .btn+.btn::before{display:inline-block}.module-products-213 .product-grid .product-thumb .extra-group .btn + .btn .btn-text{display:inline-block;padding:0
+.4em}.module-products-213 .product-grid .product-layout .extra-group>div{justify-content:flex-start}.module-products-213 .product-grid .product-thumb .extra-group>div{padding-top:4px;margin-top:5px;border-width:0;border-top-width:1px;border-style:solid;border-color:rgba(226, 226, 226, 1)}.module-products-213 .product-grid .product-thumb .extra-group .btn.btn, .module-products-213 .product-grid .product-thumb .extra-group .btn.btn:visited{font-size:13px;color:rgba(139, 145, 152, 1);text-transform:none;letter-spacing:0}.module-products-213 .product-grid .product-thumb .extra-group .btn.btn:hover{color:rgba(239, 80, 66, 1) !important;background:none !important}.module-products-213 .product-grid .product-thumb .extra-group .btn.btn:active, .module-products-213 .product-grid .product-thumb .extra-group .btn.btn:hover:active, .module-products-213 .product-grid .product-thumb .extra-group .btn.btn:focus:active{color:rgba(239, 80, 66, 1) !important;background:none !important;box-shadow:none}.module-products-213 .product-grid .product-thumb .extra-group .btn.btn:focus{color:rgba(239, 80, 66, 1) !important;background:none;box-shadow:none}.module-products-213 .product-grid .product-thumb .extra-group
+.btn.btn{background:none;padding:0px;box-shadow:none;border-radius:0px !important}.desktop .module-products-213 .product-grid .product-thumb .extra-group .btn.btn:hover{box-shadow:none}.module-products-213 .product-grid .product-thumb .extra-group .btn.btn.btn.disabled::after{font-size:20px}.module-products-213 .product-grid .product-thumb .extra-group .btn + .btn.btn, .module-products-213 .product-grid .product-thumb .extra-group .btn+.btn.btn:visited{font-size:13px;color:rgba(139, 145, 152, 1);text-transform:none;letter-spacing:0}.module-products-213 .product-grid .product-thumb .extra-group .btn+.btn.btn:hover{color:rgba(239, 80, 66, 1) !important;background:none !important}.module-products-213 .product-grid .product-thumb .extra-group .btn + .btn.btn:active, .module-products-213 .product-grid .product-thumb .extra-group .btn + .btn.btn:hover:active, .module-products-213 .product-grid .product-thumb .extra-group .btn+.btn.btn:focus:active{color:rgba(239, 80, 66, 1) !important;background:none !important;box-shadow:none}.module-products-213 .product-grid .product-thumb .extra-group .btn+.btn.btn:focus{color:rgba(239, 80, 66, 1) !important;background:none;box-shadow:none}.module-products-213 .product-grid .product-thumb .extra-group .btn+.btn.btn{background:none;padding:0px;box-shadow:none;border-radius:0px !important}.desktop .module-products-213 .product-grid .product-thumb .extra-group .btn+.btn.btn:hover{box-shadow:none}.module-products-213 .product-grid .product-thumb .extra-group .btn+.btn.btn.btn.disabled::after{font-size:20px}.module-products-213 .product-grid.product-grid .product-thumb .extra-group{position:static;margin-top:auto}.module-products-213 .product-grid.product-grid .product-thumb .extra-group>div{position:static;transform:none;opacity:1}.module-products-213 .product-grid.product-grid .product-thumb .buttons-wrapper{position:absolute;overflow:hidden;width:100%;left:50%;transform:translate3d(-50%,-100%,1px)}.module-products-213 .product-grid.product-grid .product-thumb .buttons-wrapper .button-group{position:relative;opacity:0;visibility:hidden;transform:translate3d(0,15px,1px)}.module-products-213 .product-grid.product-grid .product-thumb:hover .buttons-wrapper .button-group{opacity:1;visibility:visible;transform:translate3d(0,0,1px)}.module-products-213 .product-grid.product-grid .wish-group{position:static;width:auto;top:auto;visibility:visible;opacity:1;transform:translate3d(0,0,0);justify-content:flex-start}.module-products-213 .product-grid .product-thumb .btn-quickview.btn{border-radius:0px !important;padding:10px
+!important}.module-products-213 .product-list .product-thumb{border-width:0;border-bottom-width:1px;border-style:solid;border-color:rgba(226, 226, 226, 1);padding-bottom:25px}.module-products-213 .product-list:not(.product-grid) .product-layout:not(.swiper-slide)+.product-layout:not(.swiper-slide){margin-top:25px}.module-products-213 .product-list .product-thumb:hover .product-img>div{transform:scale(1.12)}.module-products-213 .product-list .product-thumb .product-labels{visibility:visible;opacity:1}.module-products-213 .product-list .product-thumb .quickview-button{display:flex;left:50%;top:50%;bottom:auto;right:auto;transform:translate3d(-50%, -50%, 1px)}.module-products-213 .product-list .product-thumb .btn-quickview{visibility:hidden;opacity:0;transform:scale(.88);width:40px;height:40px}.module-products-213 .product-list .product-thumb:hover .btn-quickview{visibility:visible;opacity:1;transform:scale(1)}.module-products-213 .product-list .product-thumb .btn-quickview .btn-text{display:none}.module-products-213 .product-list .product-thumb .btn-quickview::before{display:inline-block;content:\'\\ebef\' !important;font-family:icomoon !important;font-size:17px}.module-products-213 .product-list .product-thumb
+.countdown{display:flex;visibility:visible;opacity:1;transform:translate3d(-50%, 0, 1px) scale(1);bottom:10px}.module-products-213 .product-list.product-list .product-layout
+.image{float:left;height:100%}.module-products-213 .product-list .product-thumb
+.caption{padding-left:20px}.module-products-213 .product-list .product-thumb
+.stats{display:flex;justify-content:flex-start;margin-bottom:10px}.module-products-213 .product-list .stat-1 .stats-label{display:inline-block}.module-products-213 .product-list .stat-2 .stats-label{display:inline-block}.module-products-213 .product-list.product-grid .product-thumb
+.rating{position:static;visibility:visible;opacity:1}.module-products-213 .product-list .product-thumb
+.rating{justify-content:flex-end;margin-bottom:5px;display:flex}.module-products-213 .product-list .product-thumb .rating.no-rating{display:none}.module-products-213 .product-list .product-thumb .rating .fa-stack{font-size:13px;width:1.2em}.module-products-213 .product-list .product-thumb .rating .fa-star, .module-products-213 .product-list .product-thumb .rating .fa-star+.fa-star-o{color:rgba(254, 208, 117, 1)}.module-products-213 .product-list .product-thumb .rating-stars{margin-top:-18px}.module-products-213 .product-list .product-thumb .rating.no-rating
+span{opacity:.3}.module-products-213 .product-list .product-thumb
+.name{display:flex;width:auto;margin-left:auto;margin-right:auto;justify-content:flex-start;margin-left:0;margin-right:auto;margin-bottom:5px}.module-products-213 .product-list .product-thumb .name
+a{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-family:\'Ubuntu\';font-weight:400;font-size:24px;color:rgba(51, 51, 51, 1);text-transform:none;text-align:left}.module-products-213 .product-list .product-thumb
+.description{display:block;font-size:14px;color:rgba(105, 105, 115, 1);line-height:1.5;margin-top:5px;margin-bottom:10px}.module-products-213 .product-list .product-thumb
+.price{display:block;font-family:\'Headland One\';font-weight:700;font-size:24px;text-align:left;width:auto;margin-left:auto;margin-right:auto;margin-left:0;margin-right:auto;text-align:left;justify-content:flex-start;margin-bottom:10px}.module-products-213 .product-list .product-thumb .price-tax{display:block;font-size:12px;color:rgba(105, 105, 115, 1)}.module-products-213 .product-list .product-thumb .price-new{color:rgba(239, 80, 66, 1);margin:0
+7px 0 0;order:1}.module-products-213 .product-list .product-thumb .price-old{font-size:16px;color:rgba(105, 105, 115, 1);text-decoration:line-through;margin:0;order:2}.module-products-213 .product-list .product-thumb .price>div{align-items:center;flex-direction:row}.module-products-213 .product-list .product-thumb .buttons-wrapper{display:block}.module-products-213 .product-list .product-thumb .button-group{justify-content:flex-start}.module-products-213 .product-list.product-list .product-thumb .buttons-wrapper{margin-top:5px}.module-products-213 .product-list .product-thumb .cart-group{display:inline-flex}.module-products-213 .product-list .product-thumb .btn-cart{height:38px;margin-right:5px}.module-products-213 .product-list .product-thumb .btn-wishlist{width:38px;height:38px;display:inline-flex}.module-products-213 .product-list .product-thumb .btn-compare{width:38px;height:38px;display:none;margin-left:5px}.module-products-213 .product-list .product-thumb .btn-cart::before{display:inline-block;font-size:16px}.module-products-213 .product-list .product-thumb .btn-cart .btn-text{display:inline-block;padding:0
+.4em}.module-products-213 .product-list.product-grid .product-thumb .btn-cart{flex:initial}.module-products-213 .product-list.product-grid .product-thumb .cart-group{flex:initial}.module-products-213 .product-list .product-thumb
+.stepper{display:inline-flex;width:50px;height:36px;border-style:solid;border-color:rgba(143, 157, 166, 1);border-radius:3px;margin-right:5px;height:38px}.module-products-213 .product-list .product-thumb .stepper input.form-control{background:rgba(255, 255, 255, 1) !important;border-width:0px !important}.module-products-213 .product-list .product-thumb .stepper span
+i{color:rgba(105, 105, 115, 1);background-color:rgba(238, 238, 238, 1)}.module-products-213 .product-list .product-thumb .btn-wishlist::before{display:inline-block;font-size:16px}.module-products-213 .product-list .product-thumb .btn-wishlist .btn-text{display:none}.module-products-213 .product-list .product-thumb .btn-wishlist.btn, .module-products-213 .product-list .product-thumb .btn-wishlist.btn:visited{font-size:11px;color:rgba(105, 105, 115, 1);font-weight:400;text-transform:uppercase}.module-products-213 .product-list .product-thumb .btn-wishlist.btn:hover{color:rgba(255, 255, 255, 1) !important;background:rgba(8, 39, 77, 1) !important}.module-products-213 .product-list .product-thumb .btn-wishlist.btn:active, .module-products-213 .product-list .product-thumb .btn-wishlist.btn:hover:active, .module-products-213 .product-list .product-thumb .btn-wishlist.btn:focus:active{color:rgba(255, 255, 255, 1) !important;background:rgba(13, 47, 88, 1) !important;border-color:rgba(87, 154, 193, 1) !important;box-shadow:inset 0 0 5px rgba(0, 0, 0, 0.1)}.module-products-213 .product-list .product-thumb .btn-wishlist.btn:focus{color:rgba(255, 255, 255, 1) !important;background:rgba(13, 47, 88, 1);box-shadow:inset 0 0 5px rgba(0, 0, 0, 0.1)}.module-products-213 .product-list .product-thumb .btn-wishlist.btn{background:none;border-width:1px;border-style:solid;border-color:rgba(105, 105, 115, 1);padding:12px;padding-right:15px;padding-left:15px}.module-products-213 .product-list .product-thumb .btn-wishlist.btn:hover, .module-products-213 .product-list .product-thumb .btn-wishlist.btn:active:hover{border-color:rgba(8, 39, 77, 1)}.desktop .module-products-213 .product-list .product-thumb .btn-wishlist.btn:hover{box-shadow:0 10px 40px rgba(0, 0, 0, 0.15)}.module-products-213 .product-list .product-thumb .btn-wishlist.btn.btn.disabled::after{font-size:15px}.module-products-213 .product-list .product-thumb .btn-compare::before{display:inline-block;font-size:16px}.module-products-213 .product-list .product-thumb .btn-compare .btn-text{display:none}.module-products-213 .product-list .product-thumb .btn-compare.btn, .module-products-213 .product-list .product-thumb .btn-compare.btn:visited{font-size:11px;color:rgba(105, 105, 115, 1);font-weight:400;text-transform:uppercase}.module-products-213 .product-list .product-thumb .btn-compare.btn:hover{color:rgba(255, 255, 255, 1) !important;background:rgba(8, 39, 77, 1) !important}.module-products-213 .product-list .product-thumb .btn-compare.btn:active, .module-products-213 .product-list .product-thumb .btn-compare.btn:hover:active, .module-products-213 .product-list .product-thumb .btn-compare.btn:focus:active{color:rgba(255, 255, 255, 1) !important;background:rgba(13, 47, 88, 1) !important;border-color:rgba(87, 154, 193, 1) !important;box-shadow:inset 0 0 5px rgba(0, 0, 0, 0.1)}.module-products-213 .product-list .product-thumb .btn-compare.btn:focus{color:rgba(255, 255, 255, 1) !important;background:rgba(13, 47, 88, 1);box-shadow:inset 0 0 5px rgba(0, 0, 0, 0.1)}.module-products-213 .product-list .product-thumb .btn-compare.btn{background:none;border-width:1px;border-style:solid;border-color:rgba(105, 105, 115, 1);padding:12px;padding-right:15px;padding-left:15px}.module-products-213 .product-list .product-thumb .btn-compare.btn:hover, .module-products-213 .product-list .product-thumb .btn-compare.btn:active:hover{border-color:rgba(8, 39, 77, 1)}.desktop .module-products-213 .product-list .product-thumb .btn-compare.btn:hover{box-shadow:0 10px 40px rgba(0, 0, 0, 0.15)}.module-products-213 .product-list .product-thumb .btn-compare.btn.btn.disabled::after{font-size:15px}.module-products-213 .product-list .product-thumb .extra-group{display:block}.module-products-213 .product-list .product-thumb .extra-group .btn:first-child{display:inline-flex}.module-products-213 .product-list .product-thumb .extra-group .btn-extra+.btn{display:inline-flex}.module-products-213 .product-list .product-thumb .extra-group .btn:first-child::before{display:inline-block;font-size:16px;color:rgba(80, 173, 85, 1)}.module-products-213 .product-list .product-thumb .extra-group .btn:first-child .btn-text{display:inline-block;padding:0
+.4em}.module-products-213 .product-list .product-thumb .extra-group .btn+.btn::before{display:inline-block;font-size:16px}.module-products-213 .product-list .product-thumb .extra-group .btn + .btn .btn-text{display:inline-block;padding:0
+.4em}.module-products-213 .product-list .product-thumb .extra-group .btn+.btn.btn{margin-left:5px;background:none;padding:0px;box-shadow:none;border-radius:0px !important}.module-products-213 .product-list .product-layout .extra-group>div{justify-content:flex-start}.module-products-213 .product-list .product-thumb .extra-group>div{margin-top:10px}.module-products-213 .product-list .product-thumb .extra-group .btn.btn, .module-products-213 .product-list .product-thumb .extra-group .btn.btn:visited{font-size:13px;color:rgba(139, 145, 152, 1);text-transform:none;letter-spacing:0}.module-products-213 .product-list .product-thumb .extra-group .btn.btn:hover{color:rgba(239, 80, 66, 1) !important;background:none !important}.module-products-213 .product-list .product-thumb .extra-group .btn.btn:active, .module-products-213 .product-list .product-thumb .extra-group .btn.btn:hover:active, .module-products-213 .product-list .product-thumb .extra-group .btn.btn:focus:active{color:rgba(239, 80, 66, 1) !important;background:none !important;box-shadow:none}.module-products-213 .product-list .product-thumb .extra-group .btn.btn:focus{color:rgba(239, 80, 66, 1) !important;background:none;box-shadow:none}.module-products-213 .product-list .product-thumb .extra-group
+.btn.btn{background:none;padding:0px;box-shadow:none;border-radius:0px !important}.desktop .module-products-213 .product-list .product-thumb .extra-group .btn.btn:hover{box-shadow:none}.module-products-213 .product-list .product-thumb .extra-group .btn.btn.btn.disabled::after{font-size:20px}.module-products-213 .product-list .product-thumb .extra-group .btn + .btn.btn, .module-products-213 .product-list .product-thumb .extra-group .btn+.btn.btn:visited{font-size:13px;color:rgba(139, 145, 152, 1);text-transform:none;letter-spacing:0}.module-products-213 .product-list .product-thumb .extra-group .btn+.btn.btn:hover{color:rgba(239, 80, 66, 1) !important;background:none !important}.module-products-213 .product-list .product-thumb .extra-group .btn + .btn.btn:active, .module-products-213 .product-list .product-thumb .extra-group .btn + .btn.btn:hover:active, .module-products-213 .product-list .product-thumb .extra-group .btn+.btn.btn:focus:active{color:rgba(239, 80, 66, 1) !important;background:none !important;box-shadow:none}.module-products-213 .product-list .product-thumb .extra-group .btn+.btn.btn:focus{color:rgba(239, 80, 66, 1) !important;background:none;box-shadow:none}.desktop .module-products-213 .product-list .product-thumb .extra-group .btn+.btn.btn:hover{box-shadow:none}.module-products-213 .product-list .product-thumb .extra-group .btn+.btn.btn.btn.disabled::after{font-size:20px}.module-products-213 .product-list.product-grid .product-thumb .extra-group{position:static;margin-top:initial}.module-products-213 .product-list.product-grid .product-thumb .extra-group>div{position:static;transform:none;opacity:1}.module-products-213 .product-list.product-grid .product-thumb .buttons-wrapper{position:static;width:auto;overflow:visible;order:initial;margin-top:auto;transform:none}.module-products-213 .product-list.product-grid .product-thumb .buttons-wrapper .button-group{position:static;opacity:1;visibility:visible;transform:none}.module-products-213 .product-list.product-grid .product-thumb:hover .buttons-wrapper .button-group{transform:none}.module-products-213 .product-list.product-grid .wish-group{justify-content:flex-start}.module-products-213 .product-list .product-thumb .btn-quickview.btn{border-radius:50px !important}@media (max-width: 1024px){.module-products-213 .swiper-buttons{display:none !important}.module-products-213 .product-layout.swiper-slide{margin-right:10px;width:calc((100% - 1 * 10px) / 2 - 0.01px)}.module-products-213 .product-layout:not(.swiper-slide){padding:5px;width:calc(100% / 2 - 0.01px)}.module-products-213 .product-grid .product-thumb .btn-quickview{visibility:visible;opacity:1}.module-products-213 .product-grid .product-thumb
+.rating{justify-content:center}.module-products-213 .product-grid .product-thumb .rating-stars{margin-left:0px}.module-products-213 .product-grid.product-grid .product-thumb .extra-group{margin-top:auto}.module-products-213 .product-grid.product-grid .product-thumb .buttons-wrapper{position:static;width:auto;overflow:visible;order:-5;margin-top:0;transform:none}.module-products-213 .product-grid.product-grid .product-thumb .buttons-wrapper .button-group{position:static;opacity:1;visibility:visible;transform:none}}@media (max-width: 769px){.module-products-213 .product-list .product-thumb
+.rating{justify-content:flex-start}.module-products-213 .product-list .product-thumb .rating-stars{margin-top:0px}}@media (max-width: 760px){.module-products-213 .swiper-container{overflow:visible}.module-products-213 .product-grid .product-thumb .name
+a{font-size:13px}.module-products-213 .product-grid.product-grid .product-thumb .button-group{padding:8px}.module-products-213 .product-grid .product-thumb .btn-wishlist{margin-right:8px;margin-left:8px}.module-products-213 .product-list.product-list .product-layout
+.image{float:none;height:auto}.module-products-213 .product-list .product-thumb
+.caption{padding-top:20px;padding-left:0px}}',
+  'fonts' => 
+  array (
+    'fonts' => 
+    array (
+      'Headland One' => 
+      array (
+        700 => '700',
+      ),
+      'Ubuntu' => 
+      array (
+        700 => '700',
+        400 => '400',
+      ),
+    ),
+    'subsets' => 
+    array (
+      'latin-ext' => 'latin-ext',
+    ),
+  ),
+  'settings' => 
+  array (
+    'schedule' => 
+    array (
+      'from' => '',
+      'to' => '',
+      'between' => true,
+    ),
+    'display' => 'grid',
+    'sectionsDisplay' => 'blocks',
+    'sectionsDisplayTablet' => '',
+    'sectionsDisplayPhone' => '',
+    'carousel' => false,
+    'itemsPerRow' => 
+    array (
+      'c0' => 
+      array (
+        0 => 
+        array (
+          'items' => 4,
+          'spacing' => 20,
+        ),
+        1024 => 
+        array (
+          'items' => 2,
+          'spacing' => 10,
+        ),
+      ),
+      'c1' => 
+      array (
+        0 => 
+        array (
+          'items' => 1,
+          'spacing' => 0,
+        ),
+      ),
+      'c2' => 
+      array (
+        0 => 
+        array (
+          'items' => 1,
+          'spacing' => 0,
+        ),
+      ),
+      'sc' => 
+      array (
+        0 => 
+        array (
+          'items' => 1,
+          'spacing' => 0,
+        ),
+      ),
+    ),
+    'default' => 'd2133b98-c1c5-4884-bd44-0c1445352ae0',
+    'imageDimensions' => 
+    array (
+      'width' => NULL,
+      'height' => NULL,
+      'resize' => 'fit',
+    ),
+    'moduleProductGridSecondImageStatus' => false,
+    'moduleProductGridQuickviewDisplay' => 'icon',
+    'moduleProductGridQuickviewTooltipStatus' => true,
+    'moduleProductGridQuickviewTooltipPosition' => 'top',
+    'moduleProductGridRatingPosition' => 'image',
+    'moduleProductGridRatingVisibility' => true,
+    'moduleProductGridNamePosition' => 'default',
+    'moduleProductGridCartDisplay' => 'icon',
+    'moduleProductGridCartTooltipStatus' => true,
+    'moduleProductGridCartTooltipPosition' => 'top',
+    'moduleProductGridWishlistDisplay' => 'icon',
+    'moduleProductGridWishlistTooltipStatus' => true,
+    'moduleProductGridWishlistTooltipPosition' => 'top',
+    'moduleProductGridCompareDisplay' => 'icon',
+    'moduleProductGridCompareTooltipStatus' => true,
+    'moduleProductGridCompareTooltipPosition' => 'top',
+    'moduleProductGridExtraButtonDisplay1' => 'both',
+    'moduleProductGridExtraButtonDisplay2' => 'both',
+    'moduleProductGridExtraButtonTooltipStatus' => true,
+    'moduleProductGridExtraButtonTooltipPosition' => 'top',
+    'moduleProductGridExtraPosition' => 'bottom',
+    'moduleProductGridButtonsPosition' => 'hover',
+    'moduleProductListSecondImageStatus' => true,
+    'moduleProductListQuickviewDisplay' => 'icon',
+    'moduleProductListQuickviewTooltipStatus' => true,
+    'moduleProductListQuickviewTooltipPosition' => 'top',
+    'moduleProductListRatingPosition' => 'top',
+    'moduleProductListRatingVisibility' => true,
+    'moduleProductListNamePosition' => 'default',
+    'moduleProductListCartDisplay' => 'both',
+    'moduleProductListCartTooltipStatus' => true,
+    'moduleProductListCartTooltipPosition' => 'top',
+    'moduleProductListWishlistDisplay' => 'icon',
+    'moduleProductListWishlistTooltipStatus' => true,
+    'moduleProductListWishlistTooltipPosition' => 'top',
+    'moduleProductListCompareDisplay' => 'icon',
+    'moduleProductListCompareTooltipStatus' => false,
+    'moduleProductListCompareTooltipPosition' => 'top',
+    'moduleProductListExtraButtonDisplay1' => 'both',
+    'moduleProductListExtraButtonDisplay2' => 'both',
+    'moduleProductListExtraButtonTooltipStatus' => true,
+    'moduleProductListExtraButtonTooltipPosition' => 'top',
+    'moduleProductListExtraPosition' => 'bottom',
+    'moduleProductListButtonsPosition' => 'bottom',
+    'moduleProductDescriptionLimit' => '150',
+    'moduleProductStat1' => 'none',
+    'moduleProductStat2' => 'none',
+    'status' => true,
+    'id' => 'products-6276577d758d3',
+    'module_id' => 213,
+    'classes' => 
+    array (
+      0 => 'module',
+      1 => 'module-products',
+      2 => 'module-products-213',
+      3 => 'module-products-grid',
+      'carousel-mode' => false,
+      'isotope' => false,
+    ),
+    'image_width' => 250,
+    'image_height' => 250,
+    'image_resize' => 'fit',
+    'carouselOptions' => 
+    array (
+      'speed' => 500,
+      'autoplay' => false,
+      'pauseOnHover' => true,
+      'loop' => false,
+    ),
+    'text_tax' => 'Vergiler Hariç:',
+    'button_cart' => 'Sepete Ekle',
+    'button_wishlist' => 'Alışveriş Listeme Ekle',
+    'button_compare' => 'Karşılaştırma listesine ekle',
+    'default_index' => 1,
+    'items' => 
+    array (
+      1 => 
+      array (
+        'title' => '',
+        'tabType' => 'content',
+        'link' => 
+        array (
+          'type' => '',
+          'id' => '',
+          'href' => '',
+          'name' => '',
+          'total' => NULL,
+          'attrs' => 
+          array (
+          ),
+          'classes' => 
+          array (
+          ),
+        ),
+        'filter' => 
+        array (
+          'sort' => 'sales',
+          'order' => 'DESC',
+          'start' => 0,
+          'limit' => 8,
+          'preset' => 'bestseller',
+          'bestseller' => true,
+        ),
+        'id' => '213-1',
+        'classes' => 
+        array (
+          0 => 'module-item',
+          1 => 'module-item-1',
+          'tab-pane' => false,
+          'panel' => false,
+          'swiper-slide' => false,
+        ),
+        'tab_classes' => 
+        array (
+          0 => 'tab-1',
+        ),
+        'panel_classes' => 
+        array (
+          0 => 'panel-collapse',
+          1 => 'collapse',
+        ),
+        'products' => 
+        array (
+          384 => 
+          array (
+            'product_id' => '384',
+            'name' => 'Karali Altın Süzme Erzurum Balı 850 Gr',
+            'description' => '&lt;p style=&quot;margin-bottom: 1rem; color: rgb(33, 37, 41); font-family: Montserrat, sans-serif; font-size: 16px;&quot;&gt;&lt;span style=&quot;font-weight: bolder;&quot;&gt;Çiçek Balı Faydaları;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin-bottom: 1rem; color: rgb(33, 37, 41); font-family: Montserrat, sans-serif; font-size: 16px;&quot;&gt;&amp;nbsp; &amp;nbsp; Aşağıda sıraladıklarımız çiçek balının en çok bilinen faydaları hakkında bilgiler içermektedir. Üretimde bir çok farklı çiçek balı vardır, bunlardan bazıları, Arı kovanı balı, yayla balı, petek balı, kekik balı ve Anzer balı olarak farklı şekillerde bulunur. Her ürünün kendine öz kalitesi ve faydası bulunmaktadır. Satışta olan ürünümüzün sizlere faydalı olacağını düşündüğümüz faydaları aşağıdaki gibidir.&lt;/p&gt;&lt;p style=&quot;margin-bottom: 1rem; color: rgb(33, 37, 41); font-family: Montserrat, sans-serif; font-size: 16px;&quot;&gt;• Vücut direncini arttırır,&lt;/p&gt;&lt;p style=&quot;margin-bottom: 1rem; color: rgb(33, 37, 41); font-family: Montserrat, sans-serif; font-size: 16px;&quot;&gt;• Bağışıklık sistemini güçlendirir,&lt;/p&gt;&lt;p style=&quot;margin-bottom: 1rem; color: rgb(33, 37, 41); font-family: Montserrat, sans-serif; font-size: 16px;&quot;&gt;• Sindirim sistemini düzenler ve korur,&lt;/p&gt;&lt;p style=&quot;margin-bottom: 1rem; color: rgb(33, 37, 41); font-family: Montserrat, sans-serif; font-size: 16px;&quot;&gt;• Kilo vermeyi hızlandırır&lt;/p&gt;&lt;p style=&quot;margin-bottom: 1rem; color: rgb(33, 37, 41); font-family: Montserrat, sans-serif; font-size: 16px;&quot;&gt;• Kan şekerini düzenler&lt;/p&gt;&lt;p style=&quot;margin-bottom: 1rem; color: rgb(33, 37, 41); font-family: Montserrat, sans-serif; font-size: 16px;&quot;&gt;• Uykusuzluğu giderir&lt;/p&gt;&lt;p style=&quot;margin-bottom: 1rem; color: rgb(33, 37, 41); font-family: Montserrat, sans-serif; font-size: 16px;&quot;&gt;• Öksürüğü azaltır&lt;/p&gt;&lt;p style=&quot;margin-bottom: 1rem; color: rgb(33, 37, 41); font-family: Montserrat, sans-serif; font-size: 16px;&quot;&gt;• Metabolizmayı hızlandırır,&lt;/p&gt;&lt;p style=&quot;margin-bottom: 1rem; color: rgb(33, 37, 41); font-family: Montserrat, sans-serif; font-size: 16px;&quot;&gt;• Mideyi kuvvetlendirir,&lt;/p&gt;&lt;p style=&quot;margin-bottom: 1rem; color: rgb(33, 37, 41); font-family: Montserrat, sans-serif; font-size: 16px;&quot;&gt;Yukarıda sayılanlardan çok daha fazla faydası olduğu bilinmektedir ve ilerleyen teknoloji sayesinde daha birçok faydası keşfedilecektir.&lt;/p&gt;&lt;p style=&quot;margin-bottom: 1rem; color: rgb(33, 37, 41); font-family: Montserrat, sans-serif; font-size: 16px;&quot;&gt;Şifa olsun…&lt;/p&gt;',
+            'meta_title' => 'Karali Altın Süzme Erzurum Balı 850 Gr',
+            'meta_description' => 'Aşağıda sıraladıklarımız çiçek balının en çok bilinen faydaları hakkında bilgiler içermektedir. Üretimde bir çok farklı çiçek balı vardır, bunlardan bazıları, Arı kovanı balı, yayla balı, petek balı, kekik balı ve Anzer balı olarak farklı şekillerde bulun',
+            'meta_keyword' => 'bal,çiçek balı,altın,süzme,erzurum',
+            'tag' => 'bal,çiçek balı,altın,süzme,erzurum',
+            'model' => '1',
+            'sku' => '',
+            'upc' => '869220410339',
+            'ean' => '',
+            'jan' => '',
+            'isbn' => '',
+            'mpn' => '',
+            'location' => '',
+            'quantity' => '997',
+            'stock_status' => 'Stokta Var',
+            'image' => 'catalog/bal/karalibalcom/Karali Altın Süzme Erzurum Balı 850 Gr.jpg',
+            'manufacturer_id' => NULL,
+            'manufacturer' => NULL,
+            'price' => '130.0000',
+            'special' => NULL,
+            'reward' => NULL,
+            'points' => '10',
+            'tax_class_id' => '0',
+            'date_available' => '2022-03-08',
+            'weight' => '850.00000000',
+            'weight_class_id' => '2',
+            'length' => '0.00000000',
+            'width' => '0.00000000',
+            'height' => '0.00000000',
+            'length_class_id' => '1',
+            'subtract' => '0',
+            'rating' => 0.0,
+            'reviews' => 0,
+            'minimum' => '1',
+            'sort_order' => '1',
+            'status' => '1',
+            'date_added' => '2022-03-08 13:07:40',
+            'date_modified' => '2022-04-07 08:42:13',
+            'viewed' => '242',
+          ),
+          385 => 
+          array (
+            'product_id' => '385',
+            'name' => 'Karali Altın Süzme Erzurum Balı 460 Gr',
+            'description' => '&lt;p style=&quot;margin-bottom: 1rem; color: rgb(33, 37, 41); font-family: Montserrat, sans-serif; font-size: 16px;&quot;&gt;&lt;span style=&quot;font-weight: bolder;&quot;&gt;Çiçek Balı Faydaları;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin-bottom: 1rem; color: rgb(33, 37, 41); font-family: Montserrat, sans-serif; font-size: 16px;&quot;&gt;&amp;nbsp; &amp;nbsp; Aşağıda sıraladıklarımız çiçek balının en çok bilinen faydaları hakkında bilgiler içermektedir. Üretimde bir çok farklı çiçek balı vardır, bunlardan bazıları, Arı kovanı balı, yayla balı, petek balı, kekik balı ve Anzer balı olarak farklı şekillerde bulunur. Her ürünün kendine öz kalitesi ve faydası bulunmaktadır. Satışta olan ürünümüzün sizlere faydalı olacağını düşündüğümüz faydaları aşağıdaki gibidir.&lt;/p&gt;&lt;p style=&quot;margin-bottom: 1rem; color: rgb(33, 37, 41); font-family: Montserrat, sans-serif; font-size: 16px;&quot;&gt;• Vücut direncini arttırır,&lt;/p&gt;&lt;p style=&quot;margin-bottom: 1rem; color: rgb(33, 37, 41); font-family: Montserrat, sans-serif; font-size: 16px;&quot;&gt;• Bağışıklık sistemini güçlendirir,&lt;/p&gt;&lt;p style=&quot;margin-bottom: 1rem; color: rgb(33, 37, 41); font-family: Montserrat, sans-serif; font-size: 16px;&quot;&gt;• Sindirim sistemini düzenler ve korur,&lt;/p&gt;&lt;p style=&quot;margin-bottom: 1rem; color: rgb(33, 37, 41); font-family: Montserrat, sans-serif; font-size: 16px;&quot;&gt;• Kilo vermeyi hızlandırır&lt;/p&gt;&lt;p style=&quot;margin-bottom: 1rem; color: rgb(33, 37, 41); font-family: Montserrat, sans-serif; font-size: 16px;&quot;&gt;• Kan şekerini düzenler&lt;/p&gt;&lt;p style=&quot;margin-bottom: 1rem; color: rgb(33, 37, 41); font-family: Montserrat, sans-serif; font-size: 16px;&quot;&gt;• Uykusuzluğu giderir&lt;/p&gt;&lt;p style=&quot;margin-bottom: 1rem; color: rgb(33, 37, 41); font-family: Montserrat, sans-serif; font-size: 16px;&quot;&gt;• Öksürüğü azaltır&lt;/p&gt;&lt;p style=&quot;margin-bottom: 1rem; color: rgb(33, 37, 41); font-family: Montserrat, sans-serif; font-size: 16px;&quot;&gt;• Metabolizmayı hızlandırır,&lt;/p&gt;&lt;p style=&quot;margin-bottom: 1rem; color: rgb(33, 37, 41); font-family: Montserrat, sans-serif; font-size: 16px;&quot;&gt;• Mideyi kuvvetlendirir,&lt;/p&gt;&lt;p style=&quot;margin-bottom: 1rem; color: rgb(33, 37, 41); font-family: Montserrat, sans-serif; font-size: 16px;&quot;&gt;Yukarıda sayılanlardan çok daha fazla faydası olduğu bilinmektedir ve ilerleyen teknoloji sayesinde daha birçok faydası keşfedilecektir.&lt;/p&gt;&lt;p style=&quot;margin-bottom: 1rem; color: rgb(33, 37, 41); font-family: Montserrat, sans-serif; font-size: 16px;&quot;&gt;Şifa olsun…&lt;/p&gt;',
+            'meta_title' => 'Karali Altın Süzme Erzurum Balı 460 Gr',
+            'meta_description' => 'Aşağıda sıraladıklarımız çiçek balının en çok bilinen faydaları hakkında bilgiler içermektedir. Üretimde bir çok farklı çiçek balı vardır, bunlardan bazıları, Arı kovanı balı, yayla balı, petek balı, kekik balı ve Anzer balı olarak farklı şekillerde bulun',
+            'meta_keyword' => 'bal,çiçek balı,altın,süzme,erzurum',
+            'tag' => 'bal,çiçek balı,altın,süzme,erzurum',
+            'model' => '2',
+            'sku' => '',
+            'upc' => ' 86922041093',
+            'ean' => '',
+            'jan' => '',
+            'isbn' => '',
+            'mpn' => '',
+            'location' => '',
+            'quantity' => '999',
+            'stock_status' => 'Stokta Var',
+            'image' => 'catalog/bal/karalibalcom/Karali Altın Süzme Erzurum Balı 460 Gr.jpg',
+            'manufacturer_id' => NULL,
+            'manufacturer' => NULL,
+            'price' => '73.0000',
+            'special' => NULL,
+            'reward' => NULL,
+            'points' => '0',
+            'tax_class_id' => '0',
+            'date_available' => '2022-03-09',
+            'weight' => '460.00000000',
+            'weight_class_id' => '2',
+            'length' => '0.00000000',
+            'width' => '0.00000000',
+            'height' => '0.00000000',
+            'length_class_id' => '1',
+            'subtract' => '0',
+            'rating' => 0.0,
+            'reviews' => 0,
+            'minimum' => '1',
+            'sort_order' => '1',
+            'status' => '1',
+            'date_added' => '2022-03-09 15:49:45',
+            'date_modified' => '2022-04-07 08:34:24',
+            'viewed' => '69',
+          ),
+          397 => 
+          array (
+            'product_id' => '397',
+            'name' => 'Karali Altın Süzme Erzurum Balı 230 Gr',
+            'description' => '&lt;p style=&quot;margin-bottom: 1rem; color: rgb(33, 37, 41); font-family: Montserrat, sans-serif; font-size: 16px;&quot;&gt;&lt;span style=&quot;font-weight: bolder;&quot;&gt;Çiçek Balı Faydaları;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin-bottom: 1rem; color: rgb(33, 37, 41); font-family: Montserrat, sans-serif; font-size: 16px;&quot;&gt;&amp;nbsp; &amp;nbsp; Aşağıda sıraladıklarımız çiçek balının en çok bilinen faydaları hakkında bilgiler içermektedir. Üretimde bir çok farklı çiçek balı vardır, bunlardan bazıları, Arı kovanı balı, yayla balı, petek balı, kekik balı ve Anzer balı olarak farklı şekillerde bulunur. Her ürünün kendine öz kalitesi ve faydası bulunmaktadır. Satışta olan ürünümüzün sizlere faydalı olacağını düşündüğümüz faydaları aşağıdaki gibidir.&lt;/p&gt;&lt;p style=&quot;margin-bottom: 1rem; color: rgb(33, 37, 41); font-family: Montserrat, sans-serif; font-size: 16px;&quot;&gt;• Vücut direncini arttırır,&lt;/p&gt;&lt;p style=&quot;margin-bottom: 1rem; color: rgb(33, 37, 41); font-family: Montserrat, sans-serif; font-size: 16px;&quot;&gt;• Bağışıklık sistemini güçlendirir,&lt;/p&gt;&lt;p style=&quot;margin-bottom: 1rem; color: rgb(33, 37, 41); font-family: Montserrat, sans-serif; font-size: 16px;&quot;&gt;• Sindirim sistemini düzenler ve korur,&lt;/p&gt;&lt;p style=&quot;margin-bottom: 1rem; color: rgb(33, 37, 41); font-family: Montserrat, sans-serif; font-size: 16px;&quot;&gt;• Kilo vermeyi hızlandırır&lt;/p&gt;&lt;p style=&quot;margin-bottom: 1rem; color: rgb(33, 37, 41); font-family: Montserrat, sans-serif; font-size: 16px;&quot;&gt;• Kan şekerini düzenler&lt;/p&gt;&lt;p style=&quot;margin-bottom: 1rem; color: rgb(33, 37, 41); font-family: Montserrat, sans-serif; font-size: 16px;&quot;&gt;• Uykusuzluğu giderir&lt;/p&gt;&lt;p style=&quot;margin-bottom: 1rem; color: rgb(33, 37, 41); font-family: Montserrat, sans-serif; font-size: 16px;&quot;&gt;• Öksürüğü azaltır&lt;/p&gt;&lt;p style=&quot;margin-bottom: 1rem; color: rgb(33, 37, 41); font-family: Montserrat, sans-serif; font-size: 16px;&quot;&gt;• Metabolizmayı hızlandırır,&lt;/p&gt;&lt;p style=&quot;margin-bottom: 1rem; color: rgb(33, 37, 41); font-family: Montserrat, sans-serif; font-size: 16px;&quot;&gt;• Mideyi kuvvetlendirir,&lt;/p&gt;&lt;p style=&quot;margin-bottom: 1rem; color: rgb(33, 37, 41); font-family: Montserrat, sans-serif; font-size: 16px;&quot;&gt;Yukarıda sayılanlardan çok daha fazla faydası olduğu bilinmektedir ve ilerleyen teknoloji sayesinde daha birçok faydası keşfedilecektir.&lt;/p&gt;&lt;p style=&quot;margin-bottom: 1rem; color: rgb(33, 37, 41); font-family: Montserrat, sans-serif; font-size: 16px;&quot;&gt;Şifa olsun…&lt;/p&gt;',
+            'meta_title' => 'Karali Altın Süzme Erzurum Balı 230 Gr',
+            'meta_description' => 'Aşağıda sıraladıklarımız çiçek balının en çok bilinen faydaları hakkında bilgiler içermektedir. Üretimde bir çok farklı çiçek balı vardır, bunlardan bazıları, Arı kovanı balı, yayla balı, petek balı, kekik balı ve Anzer balı olarak farklı şekillerde bulun',
+            'meta_keyword' => 'bal,çiçek balı,altın,süzme,erzurum',
+            'tag' => 'bal,çiçek balı,altın,süzme,erzurum',
+            'model' => '14',
+            'sku' => '',
+            'upc' => ' 86922041101',
+            'ean' => '',
+            'jan' => '',
+            'isbn' => '',
+            'mpn' => '',
+            'location' => '',
+            'quantity' => '999',
+            'stock_status' => 'Stokta Var',
+            'image' => 'catalog/bal/karalibalcom/Karali Altın Süzme Erzurum Balı 230 Gr.jpg',
+            'manufacturer_id' => NULL,
+            'manufacturer' => NULL,
+            'price' => '37.0000',
+            'special' => NULL,
+            'reward' => NULL,
+            'points' => '0',
+            'tax_class_id' => '0',
+            'date_available' => '2022-04-05',
+            'weight' => '230.00000000',
+            'weight_class_id' => '2',
+            'length' => '0.00000000',
+            'width' => '0.00000000',
+            'height' => '0.00000000',
+            'length_class_id' => '1',
+            'subtract' => '0',
+            'rating' => 0.0,
+            'reviews' => 0,
+            'minimum' => '1',
+            'sort_order' => '1',
+            'status' => '1',
+            'date_added' => '2022-04-05 09:58:10',
+            'date_modified' => '2022-04-08 08:14:58',
+            'viewed' => '74',
+          ),
+        ),
+        'items' => 
+        array (
+        ),
+      ),
+    ),
+  ),
+);

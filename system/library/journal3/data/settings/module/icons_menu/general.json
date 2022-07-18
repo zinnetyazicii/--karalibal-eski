@@ -1,0 +1,231 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "New Icons Menu "
+  },
+  "status": {
+    "type": "Status"
+  },
+  "schedule": {
+    "type": "Range",
+    "php": true
+  },
+  "title": {
+    "type": "InputLang",
+    "php": true
+  },
+  "moduleTitle": {
+    "type": "Variable",
+    "variable": "title",
+    "selector_prefix": ".icons-menu-%s .title.module-title"
+  },
+  "iconBG": {
+    "type": "Background",
+    "selector": ".icons-menu-%s a"
+  },
+  "iconBGHover": {
+    "type": "Background",
+    "selector": ".icons-menu-%s a:hover",
+    "desktop":true
+  },
+  "iconBGActive": {
+    "type": "Background",
+    "selector": ".icons-menu-%s a:active"
+  },
+
+  "iconColor": {
+    "type": "Color",
+    "selector": ".icons-menu-%s a::before",
+    "property": "color"
+  },
+  "iconBorderRadius": {
+    "type": "BorderRadius",
+    "selector": ".icons-menu-%s .menu-item a"
+  },
+  "iconColorHover": {
+    "type": "Color",
+    "selector": ".icons-menu-%s a:hover::before",
+    "property": "color",
+    "desktop":true
+  },
+  "iconColorActive": {
+    "type": "Color",
+    "selector": ".icons-menu-%s a:active::before",
+    "property": "color"
+  },
+  "containerBG": {
+    "type": "Background",
+    "selector": ".icons-menu-%s ul"
+  },
+  "containerMargin": {
+    "type": "Margin",
+    "selector": ".icons-menu-%s > ul"
+  },
+  "containerPadding": {
+    "type": "Padding",
+    "selector": ".icons-menu-%s > ul"
+  },
+  "iconFont": {
+    "type": "Font",
+    "selector": ".icons-menu-%s > ul > .menu-item > a .links-text"
+  },
+  "iconFontHover": {
+    "type": "Font",
+    "selector": ".icons-menu-%s > ul > .menu-item > a:hover .links-text",
+    "desktop":true
+  },
+  "iconFontTruncate": {
+    "type": "Toggle",
+    "value": "false",
+    "rules": {
+      "true": {
+        ".icons-menu-%s .links-text": "white-space: nowrap; overflow: hidden; text-overflow: ellipsis"
+      },
+      "false": {
+        ".icons-menu-%s .links-text": "white-space: normal; overflow: visible; text-overflow: ellipsis"
+      }
+    },
+    "important": true
+  },
+  "itemSize": {
+    "type": "InputNumber",
+    "rules":{
+      "@":{
+        ".icons-menu-%s a::before": "font-size:%spx"
+      }
+    }
+  },
+  "iconSize": {
+    "type": "InputNumber",
+    "rules":{
+      "@":{
+        ".icons-menu-%s a": "width:%spx; height:%spx"
+      }
+    }
+  },
+  "iconSpacing": {
+    "type": "InputNumber",
+    "rules":{
+      "@":{
+        ".icons-menu-%s > ul > .icons-menu-item": "padding:calc(%spx / 2)"
+      }
+    }
+  },
+  "iconBorder": {
+    "type": "Border",
+    "selector": ".icons-menu-%s a"
+  },
+  "iconBorderHover": {
+    "type": "Color",
+    "selector": ".icons-menu-%s a:hover",
+    "property": "border-color",
+    "desktop":true
+  },
+  "iconBorderActive": {
+    "type": "Color",
+    "selector": ".icons-menu-%s a:active",
+    "property": "border-color"
+  },
+
+  "tooltipStatus": {
+    "type": "Toggle",
+    "value": "false",
+    "rules": {
+      "true": {
+        ".icons-menu-%s .links-text": "display:none"
+      }
+    },
+    "php": true
+  },
+  "tooltipPosition": {
+    "type": "Radio",
+    "value": "top",
+    "php": true
+  },
+  "tooltip": {
+    "type":"Variable",
+    "variable": "tooltip",
+    "selector_prefix": ".icons-menu-tooltip-%s"
+  },
+  "iconsMenuCountBadgeOffset": {
+    "type": "InputPair",
+    "selector": ".icons-menu-%s .count-badge",
+    "properties": {
+      "first": "transform: translateX(%spx)",
+      "second": "margin-top:%spx"
+    },
+    "rtlProperties":{
+      "first": "transform: translateX(calc(0px - (%spx)))",
+      "second": "margin-top:%spx"
+    }
+  },
+  "iconsMenuCountBadge": {
+    "type":"Variable",
+    "variable": "count_badge",
+    "selector_prefix": ".icons-menu-%s"
+  },
+  "iconShadow": {
+    "type": "Shadow",
+    "selector": ".icons-menu-%s a"
+  },
+  "iconShadowHover": {
+    "type": "Shadow",
+    "selector": ".icons-menu-%s a:hover",
+    "desktop":true
+  },
+  "iconShadowActive": {
+    "type": "Shadow",
+    "selector": ".icons-menu-%s a:active"
+  },
+  "iconsAlign": {
+    "type": "Radio",
+    "value": "center",
+    "rules": {
+      "left": {
+        ".icons-menu-%s ul": "justify-content:flex-start",
+        ".icons-menu-%s .module-title": "text-align:left",
+        ".icons-menu-%s .module-title::after":"left:0; right:auto; transform: none"
+      },
+      "center": {
+        ".icons-menu-%s ul": "justify-content:center",
+        ".icons-menu-%s .module-title": "text-align:center",
+        ".icons-menu-%s .module-title::after":"left: 50%; right:auto; transform: translate3d(-50%,0,0)"
+      },
+      "right": {
+        ".icons-menu-%s ul": "justify-content:flex-end",
+        ".icons-menu-%s .module-title": "text-align:right",
+        ".icons-menu-%s .module-title::after":"left:100%; right:auto; transform:translate3d(-100%,0,0)"
+      }
+    },
+    "rtlRules": {
+      "left": {
+        ".icons-menu-%s ul": "justify-content:flex-start",
+        ".icons-menu-%s .module-title": "text-align:right",
+        ".icons-menu-%s .module-title::after":"left:auto; right:0; transform:none"
+      },
+      "center": {
+        ".icons-menu-%s ul": "justify-content:center",
+        ".icons-menu-%s .module-title": "text-align:center",
+        ".icons-menu-%s .module-title::after":"right: 50%; left:auto; transform: translate3d(50%,0,0)"
+      },
+      "right": {
+        ".icons-menu-%s ul": "justify-content:flex-end",
+        ".icons-menu-%s .module-title": "text-align:left",
+        ".icons-menu-%s .module-title::after":"left:auto; right:100%; transform:translate3d(100%,0,0)"
+      }
+    }
+  },
+  "itemsRow": {
+    "type": "InputNumber",
+    "rules":{
+      "@":{
+        ".icons-menu-%s li a": "width:100%",
+        ".icons-menu-%s li": "width: calc(100% / %s)"
+      }
+    }
+  },
+  "imageDimensions": {
+    "type": "ImageDimensions",
+    "php": true
+  }
+}

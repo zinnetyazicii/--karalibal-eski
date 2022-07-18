@@ -1,0 +1,306 @@
+{
+  "slide_transitions": [
+    {
+      "type": "2d",
+      "id": 1,
+      "name": "2D - Sliding from right"
+    },
+    {
+      "type": "2d",
+      "id": 2,
+      "name": "2D - Sliding from left"
+    },
+    {
+      "type": "2d",
+      "id": 3,
+      "name": "2D - Sliding from bottom"
+    },
+    {
+      "type": "2d",
+      "id": 4,
+      "name": "2D - Sliding from top"
+    },
+    {
+      "type": "2d",
+      "id": 5,
+      "name": "2D - Crossfading"
+    },
+    {
+      "type": "2d",
+      "id": 6,
+      "name": "2D - Fading tiles forward"
+    },
+    {
+      "type": "2d",
+      "id": 73,
+      "name": "2D - Carousel"
+    },
+    {
+      "type": "2d",
+      "id": 74,
+      "name": "2D - Carousel rows"
+    },
+    {
+      "type": "2d",
+      "id": 75,
+      "name": "2D - Carousel cols"
+    },
+    {
+      "type": "2d",
+      "id": 76,
+      "name": "2D - Carousel tiles horizontal"
+    },
+    {
+      "type": "2d",
+      "id": 82,
+      "name": "2D - Turning tile from left"
+    },
+    {
+      "type": "2d",
+      "id": 83,
+      "name": "2D - Turning tile from right"
+    },
+    {
+      "type": "2d",
+      "id": 84,
+      "name": "2D - Turning tile from top"
+    },
+    {
+      "type": "2d",
+      "id": 85,
+      "name": "2D - Turning tile from bottom"
+    },
+    {
+      "type": "2d",
+      "id": 103,
+      "name": "2D - Scaling tile in"
+    },
+    {
+      "type": "2d",
+      "id": 104,
+      "name": "2D - Scaling tile from out"
+    },
+    {
+      "type": "3d",
+      "id": 1,
+      "name": "3D - Spinning tile to right (180°)"
+    },
+    {
+      "type": "3d",
+      "id": 2,
+      "name": "3D - Spinning tile to left (180°)"
+    },
+    {
+      "type": "3d",
+      "id": 3,
+      "name": "3D - Spinning tile to bottom (180°)"
+    },
+    {
+      "type": "3d",
+      "id": 4,
+      "name": "3D - Spinning tile to top (180°)"
+    },
+    {
+      "type": "3d",
+      "id": 45,
+      "name": "3D - Turning cuboid to right (90°)"
+    },
+    {
+      "type": "3d",
+      "id": 46,
+      "name": "3D - Turning cuboid to left (90°)"
+    },
+    {
+      "type": "3d",
+      "id": 47,
+      "name": "3D - Turning cuboid to bottom (90°)"
+    },
+    {
+      "type": "3d",
+      "id": 48,
+      "name": "3D - Turning cuboid to top (90°)"
+    },
+    {
+      "type": "3d",
+      "id": 49,
+      "name": "3D - Scaling and turning cuboid to right (90°)"
+    },
+    {
+      "type": "3d",
+      "id": 50,
+      "name": "3D - Scaling and turning cuboid to left (90°)"
+    },
+    {
+      "type": "3d",
+      "id": 67,
+      "name": "3D - Scaling and horizontal turning drunk rows to left (90°)"
+    },
+    {
+      "type": "3d",
+      "id": 68,
+      "name": "3D - Turning columns to bottom (90°)"
+    },
+    {
+      "type": "3d",
+      "id": 69,
+      "name": "3D - Turning columns to top (90°)"
+    },
+    {
+      "type": "3d",
+      "id": 79,
+      "name": "3D - Spinning cuboid to right (180°, large depth)"
+    },
+    {
+      "type": "3d",
+      "id": 82,
+      "name": "3D - Spinning cuboid to top (180°, large depth)"
+    },
+    {
+      "type": "3d",
+      "id": 101,
+      "name": "3D - Horizontally rotating and fading cube"
+    },
+    {
+      "type": "3d",
+      "id": 102,
+      "name": "3D - Vertically rotating and fading cube"
+    },
+    {
+      "type": "3d",
+      "id": 103,
+      "name": "3D - Horizontally rotating and fading cuboids"
+    },
+    {
+      "type": "3d",
+      "id": 104,
+      "name": "3D - Vertically rotating and fading cuboids"
+    }
+  ],
+  "layer_transitions": {},
+  "easings": [
+    {
+      "label": "None",
+      "value": "linear"
+    },
+    {
+      "label": "easeInSine",
+      "value": "easeInSine"
+    },
+    {
+      "label": "easeOutSine",
+      "value": "easeOutSine"
+    },
+    {
+      "label": "easeInOutSine",
+      "value": "easeInOutSine"
+    },
+    {
+      "label": "easeInQuad",
+      "value": "easeInQuad"
+    },
+    {
+      "label": "easeOutQuad",
+      "value": "easeOutQuad"
+    },
+    {
+      "label": "easeInOutQuad",
+      "value": "easeInOutQuad"
+    },
+    {
+      "label": "easeInCubic",
+      "value": "easeInCubic"
+    },
+    {
+      "label": "easeOutCubic",
+      "value": "easeOutCubic"
+    },
+    {
+      "label": "easeInOutCubic",
+      "value": "easeInOutCubic"
+    },
+    {
+      "label": "easeInQuart",
+      "value": "easeInQuart"
+    },
+    {
+      "label": "easeOutQuart",
+      "value": "easeOutQuart"
+    },
+    {
+      "label": "easeInOutQuart",
+      "value": "easeInOutQuart"
+    },
+    {
+      "label": "easeInQuint",
+      "value": "easeInQuint"
+    },
+    {
+      "label": "easeOutQuint",
+      "value": "easeOutQuint"
+    },
+    {
+      "label": "easeInOutQuint",
+      "value": "easeInOutQuint"
+    },
+    {
+      "label": "easeInExpo",
+      "value": "easeInExpo"
+    },
+    {
+      "label": "easeOutExpo",
+      "value": "easeOutExpo"
+    },
+    {
+      "label": "easeInOutExpo",
+      "value": "easeInOutExpo"
+    },
+    {
+      "label": "easeInCirc",
+      "value": "easeInCirc"
+    },
+    {
+      "label": "easeOutCirc",
+      "value": "easeOutCirc"
+    },
+    {
+      "label": "easeInOutCirc",
+      "value": "easeInOutCirc"
+    },
+    {
+      "label": "easeInBack",
+      "value": "easeInBack"
+    },
+    {
+      "label": "easeOutBack",
+      "value": "easeOutBack"
+    },
+    {
+      "label": "easeInOutBack",
+      "value": "easeInOutBack"
+    },
+    {
+      "label": "easeInElastic",
+      "value": "easeInElastic"
+    },
+    {
+      "label": "easeOutElastic",
+      "value": "easeOutElastic"
+    },
+    {
+      "label": "easeInOutElastic",
+      "value": "easeInOutElastic"
+    },
+    {
+      "label": "easeInBounce",
+      "value": "easeInBounce"
+    },
+    {
+      "label": "easeOutBounce",
+      "value": "easeOutBounce"
+    },
+    {
+      "label": "easeInOutBounce",
+      "value": "easeInOutBounce"
+    }
+  ]
+}

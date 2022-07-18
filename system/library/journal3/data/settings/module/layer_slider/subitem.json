@@ -1,0 +1,272 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "New Layer"
+  },
+  "status": {
+    "type": "Toggle"
+  },
+  "type": {
+    "type": "Radio",
+    "value": "image",
+    "php": true
+  },
+
+
+
+  "text": {
+    "type": "InputLang",
+    "php": true
+  },
+  "icon": {
+    "type": "Icon",
+    "selector": ".ls-layer-%s-%s-%s::before"
+  },
+  "font": {
+    "type": "Font",
+    "selector": ".hotspot-popover-%s-%s-%s, .ls-layer-%s-%s-%s"
+  },
+  "fontHover": {
+    "type": "Font",
+    "selector": ".desktop .ls-layer-%s-%s-%s.ls-layer-text:hover"
+  },
+  "bg": {
+    "type": "Background",
+    "selector": ".ls-layer-%s-%s-%s.ls-layer-text"
+  },
+  "bgHover": {
+    "type": "Background",
+    "selector": ".desktop .ls-layer-%s-%s-%s.ls-layer-text:hover"
+  },
+  "textBorder": {
+    "type": "Border",
+    "selector": ".ls-layer-%s-%s-%s.ls-layer-text",
+    "important": true
+  },
+  "textBorderHover": {
+    "type": "Color",
+    "selector": ".ls-layer-%s-%s-%s.ls-layer-text:hover",
+    "property": "border-color",
+    "important": true
+  },
+  "textShadow": {
+    "type": "Shadow",
+    "selector": ".ls-layer-%s-%s-%s.ls-layer-text"
+  },
+  "textShadowHover": {
+    "type": "Shadow",
+    "selector": ".ls-layer-%s-%s-%s.ls-layer-text:hover"
+  },
+  "textBorderRadius": {
+    "type": "BorderRadius",
+    "selector": ".ls-layer-%s-%s-%s.ls-layer-text",
+    "important": true
+  },
+  "textPadding": {
+    "type": "Padding",
+    "selector": ".ls-layer-%s-%s-%s.ls-layer-text"
+  },
+  "multiline": {
+    "type": "Toggle",
+    "value": "false",
+    "rules": {
+      "true": {
+        ".ls-layer-%s-%s-%s.ls-layer-text": "white-space:normal !important"
+      }
+    }
+  },
+
+
+  "image": {
+    "type": "ImageLang"
+  },
+  "alt": {
+    "type": "InputLang",
+    "php": true
+  },
+  "imageBorder": {
+    "type": "Border",
+    "selector": "img.ls-layer-%s-%s-%s.ls-layer-image",
+    "important": true
+  },
+  "imageBorderHover": {
+    "type": "Color",
+    "selector": ".desktop img.ls-layer-%s-%s-%s.ls-layer-image:hover",
+    "property": "border-color",
+    "important": true
+  },
+  "imageBorderRadius": {
+    "type": "BorderRadius",
+    "selector": "img.ls-layer-%s-%s-%s.ls-layer-image",
+    "important": true
+  },
+  "imageShadow": {
+    "type": "Shadow",
+    "selector": "img.ls-layer-%s-%s-%s.ls-layer-image",
+    "important": true
+  },
+  "imageShadowHover": {
+    "type": "Shadow",
+    "selector": "img.ls-layer-%s-%s-%s.ls-layer-image:hover",
+    "important": true
+  },
+
+
+  "buttonStyle": {
+    "type": "Variable",
+    "variable": "button",
+    "selector_prefix": ".ls-layer-%s-%s-%s.ls-layer-button&"
+  },
+
+
+  "hotspotBackground": {
+    "type": "Background",
+    "selector": ".ls-layer-%s-%s-%s.ls-layer-hotspot"
+  },
+  "hotspotBorder": {
+    "type": "Border",
+    "selector": ".ls-layer-%s-%s-%s.ls-layer-hotspot"
+  },
+  "hotspotBorderHover": {
+    "type": "Color",
+    "selector": ".desktop .ls-layer-%s-%s-%s.ls-layer-hotspot:hover",
+    "property": "border-color",
+    "important": true
+  },
+  "hotspotBorderRadius": {
+    "type": "BorderRadius",
+    "selector": ".ls-layer-%s-%s-%s.ls-layer-hotspot",
+    "important": true
+  },
+  "hotspotShadow": {
+    "type": "Shadow",
+    "selector": ".ls-layer-%s-%s-%s.ls-layer-hotspot"
+  },
+  "hotspotShadowHover": {
+    "type": "Shadow",
+    "selector": ".ls-layer-%s-%s-%s.ls-layer-hotspot:hover"
+  },
+
+  "hotspotPosition": {
+    "type": "Radio",
+    "value": "top"
+  },
+
+  "videoType": {
+    "type": "Radio",
+    "value": "html5",
+    "php": true
+  },
+  "videoHtml5Url": {
+    "type": "Input"
+  },
+  "videoYoutubeUrl": {
+    "type": "Input"
+  },
+  "videoVimeoUrl": {
+    "type": "Input"
+  },
+  "videoBorder": {
+    "type": "Border",
+    "selector": ".ls-layer-%s-%s-%s.tp-videolayer"
+  },
+  "videoBorderHover": {
+    "type": "Color",
+    "selector": ".ls-layer-%s-%s-%s.tp-videolayer:hover",
+    "property": "border-color"
+  },
+  "videoBorderRadius": {
+    "type": "BorderRadius",
+    "selector": ".ls-layer-%s-%s-%s.tp-videolayer"
+  },
+  "videoShadow": {
+    "type": "Shadow",
+    "selector": ".ls-layer-%s-%s-%s.ls-layer-video"
+  },
+  "videoShadowHover": {
+    "type": "Shadow",
+    "selector": ".ls-layer-%s-%s-%s.ls-layer-video:hover"
+  },
+
+
+
+  "transition": {
+    "type": "Transition",
+    "value": "Fade In"
+  },
+  "speed": {
+    "type": "Input"
+  },
+  "delay": {
+    "type": "Input"
+  },
+  "positionX": {
+    "type": "Radio",
+    "value": "50%"
+  },
+  "positionY": {
+    "type": "Radio",
+    "value": "50%"
+  },
+  "offset": {
+    "type": "InputPair"
+  },
+  "size": {
+    "type": "InputPair"
+  },
+  "link": {
+    "type": "Link",
+    "php": true
+  },
+
+  "fadeIn": {
+    "type": "Toggle"
+  },
+  "offsetIn": {
+    "type": "InputPair"
+  },
+  "rotateIn": {
+    "type": "InputPair"
+  },
+  "scaleIn": {
+    "type": "InputPair"
+  },
+  "sizeIn": {
+    "type": "InputPair"
+  },
+  "durationIn": {
+    "type": "Input"
+  },
+  "startAtIn": {
+    "type": "Input"
+  },
+  "easingIn": {
+    "type": "Select",
+    "value": "linear"
+  },
+  "fadeOut": {
+    "type": "Toggle"
+  },
+  "offsetOut": {
+    "type": "InputPair"
+  },
+  "rotateOut": {
+    "type": "InputPair"
+  },
+  "scaleOut": {
+    "type": "InputPair"
+  },
+  "sizeOut": {
+    "type": "InputPair"
+  },
+  "durationOut": {
+    "type": "Input"
+  },
+  "startAtOut": {
+    "type": "Input"
+  },
+  "easingOut": {
+    "type": "Select",
+    "value": "linear"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "headerTopMenu": {
+    "type": "Module",
+    "php": true
+  },
+  "menu": {
+    "type": "Variable",
+    "variable": "menu",
+    "selector_prefix": ".top-menu"
+  },
+  "dropdown": {
+    "type": "Variable",
+    "variable": "dropdown",
+    "selector_prefix": ".top-menu .dropdown"
+  },
+  "last": {
+    "type": "Toggle",
+    "value": "false",
+    "rules": {
+      "true": {
+        ".top-bar > div:first-child": "width:50%",
+        ".top-bar > div:first-child > ul > li:last-child": "position:absolute; right:0; transform: translateX(50%)"
+      }
+    },
+    "rtlRules": {
+      "true": {
+        ".top-bar > div:first-child": "width:50%",
+        ".top-bar > div:first-child > ul > li:last-child": "position:absolute; left:0; transform: translateX(-50%)"
+      }
+    }
+  }
+}

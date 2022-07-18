@@ -1,0 +1,32 @@
+{
+  "filterScrollTop": {
+    "type": "Toggle",
+    "value": "false",
+    "js": true
+  },
+  "filterAttributeValuesSeparator": {
+    "type": "Input",
+    "php": true
+  },
+  "filterUrlValuesSeparator": {
+    "type": "Input",
+    "value": ",",
+    "php": true,
+    "js": true
+  },
+  "filterCheckQuantity": {
+    "type": "Toggle",
+    "value": "false",
+    "php": true
+  },
+  "filterCheckOptionsQuantity": {
+    "type": "Toggle",
+    "value": "false",
+    "php": true
+  },
+  "filterTaxClassId": {
+    "type": "Select",
+    "value": "",
+    "php": true
+  }
+}

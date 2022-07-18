@@ -1,0 +1,80 @@
+{
+  "stickyStatus": {
+    "type": "Toggle",
+    "value": "false",
+    "php": true,
+    "js": true
+  },
+  "stickyFullHomePadding": {
+    "type": "Toggle",
+    "value": "false",
+    "js": true,
+    "php": true
+  },
+  "stickyPadding": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".desktop-header-active .is-sticky .header .desktop-main-menu-wrapper": "padding-left:%spx; padding-right:%spx"
+      }
+    }
+  },
+  "stickyFullwidth": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".desktop-header-active .is-sticky .header .desktop-main-menu-wrapper::before": "width:100vw; margin-left:-50vw; left:50%;"
+      },
+      "false": {
+        ".desktop-header-active .is-sticky .header .desktop-main-menu-wrapper::before": "width:100%; margin:0; left:0;"
+      }
+    },
+    "js": true
+  },
+  "stickyAt": {
+    "type": "InputNumber",
+    "php": true,
+    "js": true
+  },
+  "stickyHeight": {
+    "type": "InputNumber",
+    "value": "40",
+    "js": true,
+    "rules": {
+      "@": {
+        ".desktop-header-active .is-sticky .header .desktop-main-menu-wrapper": "height:%spx"
+      }
+    }
+  },
+  "stickyHeaderBG": {
+    "type": "Background",
+    "selector": ".desktop-header-active .is-sticky .header .desktop-main-menu-wrapper::before"
+  },
+  "stickyHeaderShadow": {
+    "type": "Shadow",
+    "selector": ".desktop-header-active .is-sticky .header .desktop-main-menu-wrapper::before"
+  },
+
+  "compactStickyBackground": {
+    "type": "Background",
+    "selector": ".sticky-compact header",
+    "important": true
+  },
+  "stickyFullwidthBorder": {
+    "type": "Border",
+    "selector": ".desktop-header-active .sticky-compact header"
+  },
+  "compactStickyShadow": {
+    "type": "Shadow",
+    "selector": ".sticky-compact header",
+    "important": true
+  },
+  "compactHeight": {
+    "type": "InputNumber",
+    "rules":{
+      "@":{
+        ".desktop-header-active .sticky-compact .mid-bar": "height:%spx"
+      }
+    }
+  }
+}

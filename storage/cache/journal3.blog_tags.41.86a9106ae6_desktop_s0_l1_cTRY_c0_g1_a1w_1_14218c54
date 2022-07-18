@@ -1,0 +1,75 @@
+<?php $val = array (
+  'css' => '.module-blog_tags-41 .module-title{font-family:\'Ubuntu\';font-weight:400;font-size:13px;text-transform:uppercase;white-space:normal;overflow:visible;text-overflow:initial}.module-blog_tags-41 .tags
+a{flex-grow:0;text-align:initial}',
+  'fonts' => 
+  array (
+    'fonts' => 
+    array (
+      'Ubuntu' => 
+      array (
+        400 => '400',
+      ),
+    ),
+    'subsets' => 
+    array (
+      'latin-ext' => 'latin-ext',
+    ),
+  ),
+  'settings' => 
+  array (
+    'schedule' => 
+    array (
+      'from' => '',
+      'to' => '',
+      'between' => true,
+    ),
+    'title' => 'Etiketlere göre filtrele',
+    'status' => true,
+    'id' => 'blog_tags-62765a545298e',
+    'module_id' => 41,
+    'classes' => 
+    array (
+      0 => 'module',
+      1 => 'module-blog_tags',
+      2 => 'module-blog_tags-41',
+    ),
+    'items' => 
+    array (
+      0 => 
+      array (
+        'name' => 'sifa-kaynagi-polen',
+        'href' => 'http://localhost/index.php?route=journal3/blog&amp;journal_blog_tag=sifa-kaynagi-polen',
+      ),
+      1 => 
+      array (
+        'name' => 'kestane',
+        'href' => 'http://localhost/index.php?route=journal3/blog&amp;journal_blog_tag=kestane',
+      ),
+      2 => 
+      array (
+        'name' => 'bali',
+        'href' => 'http://localhost/index.php?route=journal3/blog&amp;journal_blog_tag=bali',
+      ),
+      3 => 
+      array (
+        'name' => 'bal',
+        'href' => 'http://localhost/index.php?route=journal3/blog&amp;journal_blog_tag=bal',
+      ),
+      4 => 
+      array (
+        'name' => 'mucize',
+        'href' => 'http://localhost/index.php?route=journal3/blog&amp;journal_blog_tag=mucize',
+      ),
+      5 => 
+      array (
+        'name' => 'yararları',
+        'href' => 'http://localhost/index.php?route=journal3/blog&amp;journal_blog_tag=yararları',
+      ),
+      6 => 
+      array (
+        'name' => 'doğal',
+        'href' => 'http://localhost/index.php?route=journal3/blog&amp;journal_blog_tag=doğal',
+      ),
+    ),
+  ),
+);

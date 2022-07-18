@@ -1,0 +1,30 @@
+<?php $val = array (
+  'css' => '.module-blog_comments-47
+img{margin-right:7px;border-radius:50%}.module-blog_comments-47 .module-item{padding-top:8px;margin-bottom:8px}.module-blog_comments-47 .side-subtitle{font-size:12px;color:rgba(139, 145, 152, 1)}.module-blog_comments-47 .side-title{color:rgba(58, 71, 84, 1);line-height:1.2}.module-blog_comments-47 .side-title:hover{color:rgba(239, 80, 66, 1)}.module-blog_comments-47 .module-body>div+div{border-style:solid;border-color:rgba(226, 226, 226, 1)}.module-blog_comments-47 .side-details{white-space:normal;overflow:visible;text-overflow:initial}',
+  'fonts' => 
+  array (
+  ),
+  'settings' => 
+  array (
+    'schedule' => 
+    array (
+      'from' => '',
+      'to' => '',
+      'between' => true,
+    ),
+    'title' => 'Son Yorumlar',
+    'imageSize' => '40',
+    'status' => true,
+    'id' => 'blog_comments-62765a59ed68a',
+    'module_id' => 47,
+    'classes' => 
+    array (
+      0 => 'module',
+      1 => 'module-blog_comments',
+      2 => 'module-blog_comments-47',
+    ),
+    'items' => 
+    array (
+    ),
+  ),
+);

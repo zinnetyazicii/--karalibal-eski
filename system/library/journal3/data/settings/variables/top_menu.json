@@ -1,0 +1,9 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "TOP_MENU"
+  },
+  "value": {
+    "include": "top_menu"
+  }
+}

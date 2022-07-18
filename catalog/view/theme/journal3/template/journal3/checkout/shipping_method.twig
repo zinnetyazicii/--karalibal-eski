@@ -1,0 +1,20 @@
+<div class="section-shipping" v-if="shipping_required">
+  <div class="title section-title">{{ j3.settings.get('sectionTitleShippingMethod') }}</div>
+  <div class="section-body">
+    <div v-if="Object.keys(shipping_methods).length === 0" class="alert alert-warning"><i class="fa fa-exclamation-circle"></i>{{ error_warning }}</div>
+    <div v-for="shipping_method in shipping_methods">
+      <div class="shippings">
+        <div class="ship-wrapper">
+          <p v-html="shipping_method.title"></p>
+          <div class="radio" v-for="quote in shipping_method.quote">
+            <label>
+              <input v-bind:value="quote.code" type="radio" name="shipping_method" v-model="order_data.shipping_code" v-on:change="forceLoadingOverlay"/>
+              <span class="shipping-quote-title" v-html="quote.title + (quote.text ? ' - ' + quote.text : '')"></span>
+              <span class="shipping-quote-desc" v-if="quote.desc" v-html="quote.desc"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

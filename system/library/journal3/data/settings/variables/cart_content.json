@@ -1,0 +1,9 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "CART_CONTENT"
+  },
+  "value": {
+    "include": "cart_content"
+  }
+}

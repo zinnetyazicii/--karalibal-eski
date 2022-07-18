@@ -1,0 +1,9 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "NEW_TITLE"
+  },
+  "value": {
+    "include": "title"
+  }
+}

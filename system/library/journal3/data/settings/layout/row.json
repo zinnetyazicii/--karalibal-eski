@@ -1,0 +1,214 @@
+{
+  "status": {
+    "type": "Status"
+  },
+  "background": {
+    "type": "Background",
+    "selector": ".grid-row-%s-%s"
+  },
+  "videoBgStatus": {
+    "type": "Toggle",
+    "value": "false",
+    "php": true
+  },
+  "videoBg": {
+    "type": "Input",
+    "php": true
+  },
+  "videoInline": {
+    "type": "Toggle",
+    "value": "false",
+    "php": true
+  },
+
+  "overlayStatus": {
+    "type": "Toggle",
+    "value": "false",
+    "rules": {
+      "true": {
+        ".grid-row-%s-%s::before": "content:''"
+      }
+    }
+  },
+
+  "overlayVisibility": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".grid-row-%s-%s::before": "display: block"
+      },
+      "false": {
+        ".grid-row-%s-%s::before": "display: none"
+      }
+    }
+  },
+  "overlayBackground": {
+    "type": "Background",
+    "selector": ".grid-row-%s-%s::before"
+  },
+  "rowOverlayBlend": {
+    "type": "Select",
+    "selector": ".grid-row-%s-%s::before",
+    "property": "mix-blend-mode"
+  },
+  "overlayBorder": {
+    "type": "Border",
+    "selector": ".grid-row-%s-%s::before"
+  },
+  "overlayHeight": {
+    "type": "InputNumber",
+    "rules":{
+      "@":{
+        ".grid-row-%s-%s::before": "height:%s%"
+      }
+    }
+  },
+  "overlayAlign": {
+    "type": "Radio",
+    "value": "center",
+    "rules": {
+      "left": {
+        ".grid-row-%s-%s::before": "left: -50%; width:100%"
+      },
+      "center": {
+        ".grid-row-%s-%s::before": "left: 0; width:100vw"
+      },
+      "right": {
+        ".grid-row-%s-%s::before": "left: 50%; width:100vw"
+      }
+    }
+  },
+  "overlayRotate": {
+    "type": "InputNumber",
+    "rules":{
+      "@":{
+        ".grid-row-%s-%s::before": "transform: translate3d(0,0,0) rotate(%sdeg) skew(%sdeg);"
+      }
+    }
+  },
+  "overlayTop": {
+    "type": "InputNumber",
+    "rules":{
+      "@":{
+        ".grid-row-%s-%s::before": "top:%svw"
+      }
+    }
+  },
+
+  "padding": {
+    "type": "Padding",
+    "selector": ".grid-row-%s-%s"
+  },
+  "border": {
+    "type": "Border",
+    "selector": ".grid-row-%s-%s"
+  },
+  "shadow": {
+    "type": "Shadow",
+    "selector": ".grid-row-%s-%s"
+  },
+  "width": {
+    "type": "InputNumber",
+    "rules":{
+      "@":{
+        ".grid-row-%s-%s > .grid-cols": "max-width:%spx"
+      }
+    }
+  },
+  "fullwidth": {
+    "type": "Toggle",
+    "value": "false",
+    "rules": {
+      "true": {
+        ".grid-row-%s-%s > .grid-cols": "max-width:100% !important"
+      }
+    }
+  },
+  "marginTop": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".grid-row-%s-%s": "margin-top:%spx"
+      }
+    }
+  },
+  "margin": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".grid-row-%s-%s": "margin-bottom:%spx"
+      }
+    }
+  },
+  "waveStatus": {
+    "type": "Toggle",
+    "value": "false",
+    "php": true
+  },
+  "waveVisibility": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".grid-row-%s-%s .wave-top": "display: block"
+      },
+      "false": {
+        ".grid-row-%s-%s .wave-top": "display: none"
+      }
+    }
+  },
+  "waveFill": {
+    "type": "Color",
+    "selector": ".grid-row-%s-%s .wave path",
+    "property": "fill"
+  },
+  "waveOffset": {
+    "type": "InputNumber",
+    "rules":{
+      "@":{
+        ".grid-row-%s-%s .wave-top": "transform: translateY(calc(-63% + %s%))"
+      }
+    }
+  },
+  "waveDirection": {
+    "type": "InputSlider",
+    "value": "5",
+    "php": true
+  },
+
+  "wave2Status": {
+    "type": "Toggle",
+    "value": "false",
+    "php": true
+  },
+  "wave2Visibility": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".grid-row-%s-%s .wave-bottom": "display: block"
+      },
+      "false": {
+        ".grid-row-%s-%s .wave-bottom": "display: none"
+      }
+    }
+  },
+  "wave2Fill": {
+    "type": "Color",
+    "selector": ".grid-row-%s-%s .wave-bottom path",
+    "property": "fill"
+  },
+  "wave2Offset": {
+    "type": "InputNumber",
+    "rules":{
+      "@":{
+        ".grid-row-%s-%s .wave-bottom": "transform: translateY(calc(63% + %s%)) scaleY(-1)"
+      }
+    }
+  },
+  "wave2Direction": {
+    "type": "InputSlider",
+    "value": "5",
+    "php": true
+  }
+}
+
+

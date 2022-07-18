@@ -1,0 +1,51 @@
+{% macro renderBanner(j3, context) %}
+  {% import _self as self %}
+  {% set index = 0 %}
+  {% for item in context.items %}
+    <div class="{{ j3.classes(item.classes) }}">
+      <a {% if item.link.href %}href="{{ item.link.href }}"{% endif %} {{ j3.linkAttrs(item.link) }}>
+        {% if j3.settings.get('performanceLazyLoadImagesStatus') and context.lazyLoad %}
+          <img src="{{ context.dummy_image }}" data-src="{{ item.image }}" {% if item.image2x %}data-srcset="{{ item.image }} 1x, {{ item.image2x }} 2x" {% endif %} alt="{{ item.alt }}" width="{{ context.imageDimensions.width }}" height="{{ context.imageDimensions.height }}" class="lazyload"/>
+        {% else %}
+          <img src="{{ item.image }}" {% if item.image2x %}srcset="{{ item.image }} 1x, {{ item.image2x }} 2x" {% endif %} alt="{{ item.alt }}" width="{{ context.imageDimensions.width }}" height="{{ context.imageDimensions.height }}"/>
+        {% endif %}
+        {% if item.title %}
+        <div class="banner-text banner-caption"><span>{{ item.title }}</span></div>
+        {% endif %}
+        {% if item.title2 %}
+        <div class="banner-text banner-caption-2"><span>{{ item.title2 }}</span></div>
+        {% endif %}
+      </a>
+      {% if item.title3 %}
+      <div class="banner-caption-3"><span>{{ item.title3 }}</span></div>
+      {% endif %}
+    </div>
+  {% endfor %}
+{% endmacro %}
+{% import _self as self %}
+<div id="{{ id }}" class="{{ j3.classes(classes) }}">
+  {% if title %}
+    <h3 class="title module-title">{{ title }}</h3>
+  {% endif %}
+  <div class="module-body">
+    {# grid #}
+    {% if not carousel %}
+      {{ self.renderBanner(j3, _context) }}
+    {% endif %}
+    {# grid + carousel #}
+    {% if carousel %}
+      <div class="swiper" data-items-per-row='{{ itemsPerRow|json_encode(constant('JSON_FORCE_OBJECT')) }}' data-options='{{ carouselOptions|json_encode }}'>
+        <div class="swiper-container" {% if j3.isRTL() %}dir="rtl"{% endif %}>
+          <div class="swiper-wrapper">
+            {{ self.renderBanner(j3, _context) }}
+          </div>
+        </div>
+        <div class="swiper-buttons">
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    {% endif %}
+  </div>
+</div>

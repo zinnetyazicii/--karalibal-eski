@@ -1,0 +1,9 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "NEW_INFO_BLOCK"
+  },
+  "value": {
+    "include": "info_block"
+  }
+}

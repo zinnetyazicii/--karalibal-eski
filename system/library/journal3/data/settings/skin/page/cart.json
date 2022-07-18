@@ -1,0 +1,338 @@
+{
+  "cartPageTableStyle": {
+    "type": "Variable",
+    "variable": "table",
+    "selector_prefix": ".route-checkout-cart .cart-table"
+  },
+
+  "cartPageStepperStyle": {
+    "type": "Variable",
+    "variable": "stepper",
+    "selector_prefix": ".route-checkout-cart .td-qty"
+  },
+
+  "cartPageUpdateButtonStyle": {
+    "type": "Variable",
+    "variable": "button",
+    "selector_prefix": ".route-checkout-cart .td-qty .btn-update&"
+  },
+
+  "cartPageRemoveButtonStyle": {
+    "type": "Variable",
+    "variable": "button",
+    "selector_prefix": ".route-checkout-cart .td-qty .btn-remove&"
+  },
+
+  "cartPageTotalTableStyle": {
+    "type": "Variable",
+    "variable": "table",
+    "selector_prefix": ".route-checkout-cart .cart-total"
+  },
+
+  "cartPageBottomPosition": {
+    "type": "Radio",
+    "value": "top",
+    "rules": {
+      "bottom": {
+        ".route-checkout-cart .cart-page": "display:block"
+      },
+      "side": {
+        ".route-checkout-cart .cart-page": "display:flex"
+      }
+    }
+  },
+
+  "cartPageBottomWidth": {
+    "type": "InputNumber",
+    "rules":{
+      "@":{
+        ".route-checkout-cart .cart-bottom": "max-width:%spx"
+      }
+    }
+  },
+
+  "cartPageBottomBoxStyles": {
+    "include": "common",
+    "selector_prefix": ".cart-bottom"
+  },
+
+  "cartTotalPosition": {
+    "type": "Radio",
+    "value": "default",
+    "rules": {
+      "default": {
+        ".panels-total": "flex-direction:column"
+      },
+      "side": {
+        ".panels-total": "flex-direction:row"
+      }
+    }
+  },
+
+  "cartTotalsBoxStyles": {
+    "include": "common",
+    "selector_prefix": ".panels-total .cart-total"
+  },
+
+  "cartTotalsBackground": {
+    "type": "Background",
+    "selector": ".panels-total .cart-total"
+  },
+
+  "cartTableMaxWidth": {
+    "type": "InputNumber",
+    "value": "300",
+    "rules":{
+      "@":{
+        ".panels-total .cart-total table": "max-width:%spx"
+      }
+    }
+  },
+
+  "cartTableAlign": {
+    "type": "Radio",
+    "value": "start",
+    "rules": {
+      "start": {
+        ".panels-total .cart-total": "align-items:flex-start"
+      },
+      "center": {
+        ".panels-total .cart-total": "align-items:center"
+      },
+      "end": {
+        ".panels-total .cart-total": "align-items:flex-end"
+      }
+    }
+  },
+
+  "cartPageConfirmPageButtonsStyle": {
+    "type": "Variable",
+    "variable": "page_buttons",
+    "selector_prefix": ".route-checkout-cart"
+  },
+
+  "cartPageImageVisibility": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".cart-table .td-image": "display: table-cell"
+      },
+      "false": {
+        ".cart-table .td-image": "display: none"
+      }
+    }
+  },
+
+  "cartPageQuantityVisibility": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".cart-table .td-qty .stepper, .cart-section .stepper, .cart-table .td-qty .btn-update.btn, .cart-section .td-qty .btn-primary.btn": "display: inline-flex"
+      },
+      "false": {
+        ".cart-table .td-qty .stepper, .cart-section .stepper, .cart-table .td-qty .btn-update.btn, .cart-section .td-qty .btn-primary.btn": "display: none"
+      }
+    }
+  },
+  "cartPageNameVisibility": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".cart-table .td-name": "display: table-cell"
+      },
+      "false": {
+        ".cart-table .td-name": "display: none"
+      }
+    }
+  },
+
+  "cartPageModelVisibility": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".cart-table .td-model": "display: table-cell",
+        ".route-account-order-info .table-responsive .table-order thead > tr > td:nth-child(2)":"display:table-cell",
+        ".route-account-order-info .table-responsive .table-order tbody > tr > td:nth-child(2)":"display:table-cell",
+        ".route-account-order-info .table-responsive .table-order tfoot > tr > td:last-child":"display:table-cell"
+      },
+      "false": {
+        ".cart-table .td-model": "display: none",
+        ".route-account-order-info .table-responsive .table-order thead > tr > td:nth-child(2)":"display:none",
+        ".route-account-order-info .table-responsive .table-order tbody > tr > td:nth-child(2)":"display:none",
+        ".route-account-order-info .table-responsive .table-order tfoot > tr > td:last-child":"display:none"
+      }
+    }
+  },
+
+  "cartPageUnitVisibility": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".cart-table .td-price": "display: table-cell"
+      },
+      "false": {
+        ".cart-table .td-price": "display: none"
+      }
+    }
+  },
+
+  "cartPanelsStatus": {
+    "type": "Toggle",
+    "php": true
+  },
+  "cartPanelsBoxStyles": {
+    "include": "common",
+    "selector_prefix": ".route-checkout-cart .cart-panels"
+  },
+  "cartPagePanelsTitle": {
+    "type": "Variable",
+    "variable": "title",
+    "selector_prefix": ".route-checkout-cart .cart-panels .title"
+  },
+  "cartPagePanelsTitleMargin": {
+    "type": "Margin",
+    "selector": ".route-checkout-cart .cart-panels .title"
+  },
+  "cartPagePanelsAccordion": {
+    "type": "Variable",
+    "variable": "accordion",
+    "selector_prefix": ".route-checkout-cart .cart-panels"
+  },
+  "cartPagePanelsForm": {
+    "type": "Variable",
+    "variable": "form",
+    "selector_prefix": ".route-checkout-cart .cart-panels"
+  },
+  "cartPagePanelsPageButtons": {
+    "type": "Variable",
+    "variable": "page_buttons",
+    "selector_prefix": ".route-checkout-cart .cart-panels"
+  },
+  "cartPagePanelsFont": {
+    "type": "Font",
+    "selector": ".route-checkout-cart .cart-panels"
+  },
+  "cartPagePanelsTitleVisibility": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".route-checkout-cart .cart-panels .title": "display: block"
+      },
+      "false": {
+        ".route-checkout-cart .cart-panels .title": "display: none"
+      }
+    }
+  },
+  "cartPagePanelsTextVisibility": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".route-checkout-cart .cart-panels > p": "display: block"
+      },
+      "false": {
+        ".route-checkout-cart .cart-panels > p": "display: none"
+      }
+    }
+  },
+  "cartPagePanel0Visibility": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".route-checkout-cart .cart-panels .panel-reward": "display: block"
+      },
+      "false": {
+        ".route-checkout-cart .cart-panels .panel-reward": "display: none"
+      }
+    }
+  },
+  "cartPagePanel1Visibility": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".route-checkout-cart .cart-panels .panel-coupon": "display: block"
+      },
+      "false": {
+        ".route-checkout-cart .cart-panels .panel-coupon": "display: none"
+      }
+    }
+  },
+  "cartPagePanel2Visibility": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".route-checkout-cart .cart-panels .panel-shipping": "display: block"
+      },
+      "false": {
+        ".route-checkout-cart .cart-panels .panel-shipping": "display: none"
+      }
+    }
+  },
+  "cartPagePanel3Visibility": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".route-checkout-cart .cart-panels .panel-voucher": "display: block"
+      },
+      "false": {
+        ".route-checkout-cart .cart-panels .panel-voucher": "display: none"
+      }
+    }
+  },
+  "cartPagePanel0Open": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".route-checkout-cart .cart-panels .panel-reward .collapse": "display: none",
+        ".route-checkout-cart .cart-panels .panel-reward .collapse.in": "display: block",
+        ".route-checkout-cart .cart-panels .panel-reward .panel-heading":"pointer-events:auto"
+      },
+      "false": {
+        ".route-checkout-cart .cart-panels .panel-reward .collapse": "display: block",
+        ".route-checkout-cart .cart-panels .panel-reward .panel-heading":"pointer-events:none"
+      }
+    }
+  },
+  "cartPagePanel1Open": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".route-checkout-cart .cart-panels .panel-coupon .collapse": "display: none",
+        ".route-checkout-cart .cart-panels .panel-coupon .collapse.in": "display: block",
+        ".route-checkout-cart .cart-panels .panel-coupon .panel-heading":"pointer-events:auto"
+      },
+      "false": {
+        ".route-checkout-cart .cart-panels .panel-coupon .collapse": "display: block",
+        ".route-checkout-cart .cart-panels .panel-coupon .panel-heading":"pointer-events:none"
+      }
+    }
+  },
+  "cartPagePanel2Open": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".route-checkout-cart .cart-panels .panel-shipping .collapse": "display: none",
+        ".route-checkout-cart .cart-panels .panel-shipping .collapse.in": "display: block",
+        ".route-checkout-cart .cart-panels .panel-shipping .panel-heading":"pointer-events:auto"
+      },
+      "false": {
+        ".route-checkout-cart .cart-panels .panel-shipping .collapse": "display: block",
+        ".route-checkout-cart .cart-panels .panel-shipping .panel-heading":"pointer-events:none"
+      }
+    }
+  },
+  "cartPagePanel3Open": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".route-checkout-cart .cart-panels .panel-voucher .collapse": "display: none",
+        ".route-checkout-cart .cart-panels .panel-voucher .collapse.in": "display: block",
+        ".route-checkout-cart .cart-panels .panel-voucher .panel-heading":"pointer-events:auto"
+      },
+      "false": {
+        ".route-checkout-cart .cart-panels .panel-voucher .collapse": "display: block",
+        ".route-checkout-cart .cart-panels .panel-voucher .panel-heading":"pointer-events:none"
+      }
+    }
+  }
+
+}

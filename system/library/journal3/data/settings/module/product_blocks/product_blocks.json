@@ -1,0 +1,50 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "New Product Blocks"
+  },
+  "status": {
+    "type": "Status"
+  },
+  "type": {
+    "type": "Radio",
+    "value": "custom",
+    "php": true
+  },
+  "filter": {
+    "type": "ProductFilter"
+  },
+  "position": {
+    "type": "Radio",
+    "value": "default",
+    "php": true,
+    "device": true
+  },
+  "positionTablet": {
+    "type": "Radio",
+    "value": "",
+    "php": true
+  },
+  "positionPhone": {
+    "type": "Radio",
+    "value": "",
+    "php": true
+  },
+  "sort": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".product-blocks-%s": "order:%s"
+      }
+    }
+  },
+  "box": {
+    "include": "common",
+    "selector_prefix": "#content .product-blocks-%s"
+  },
+  "blockType": {
+    "type": "Radio",
+    "value": "grid",
+    "php": true
+  }
+}

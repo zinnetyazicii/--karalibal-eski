@@ -1,0 +1,48 @@
+{
+  "Size": {
+    "type": "Input",
+    "selector": ".rating .fa-stack",
+    "property": "font-size:%spx"
+  },
+  "Fill": {
+    "type": "Color",
+    "selector": ".rating .fa-star, .rating .fa-star + .fa-star-o",
+    "property": "color"
+  },
+  "Outline": {
+    "type": "Color",
+    "selector": ".rating .fa-star-o:only-child",
+    "property": "color"
+  },
+
+  "Distance": {
+    "type": "InputSlider",
+    "value": "1",
+    "rules": {
+      "@": {
+        ".rating .fa-stack": "width:1.%sem"
+      }
+    }
+  },
+
+  "Background": {
+    "type": "Background",
+    "selector": ".rating-stars"
+  },
+  "Padding": {
+    "type": "Padding",
+    "selector": ".rating-stars"
+  },
+  "Border": {
+    "type": "Border",
+    "selector": ".rating-stars"
+  },
+  "BorderRadius": {
+    "type": "BorderRadius",
+    "selector": ".rating-stars"
+  },
+  "Shadow": {
+    "type": "Shadow",
+    "selector": ".rating-stars"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "Font": {
+    "type": "Font"
+  },
+  "Background": {
+    "type": "Background"
+  },
+  "Size": {
+    "type": "InputPair",
+    "properties": {
+      "first": "width:%spx",
+      "second": "height:%spx"
+    }
+  },
+  "Offset": {
+    "type": "InputPair",
+    "properties": {
+      "first": "transform: translateX(%spx)",
+      "second": "transform: translateY(%spx)"
+    }
+  },
+  "Padding": {
+    "type": "Padding"
+  },
+  "Margin": {
+    "type": "Margin"
+  },
+  "Border": {
+    "type": "Border"
+  },
+  "BorderRadius": {
+    "type": "BorderRadius"
+  },
+  "Shadow": {
+    "type": "Shadow"
+  },
+  "Display": {
+    "type": "Radio",
+    "value": "",
+    "property": "display:%s"
+  }
+}

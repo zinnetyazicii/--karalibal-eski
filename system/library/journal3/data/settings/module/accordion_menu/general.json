@@ -1,0 +1,93 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "New Accordion Menu"
+  },
+  "status": {
+    "type": "Status"
+  },
+  "schedule": {
+    "type": "Range",
+    "php": true
+  },
+  "title": {
+    "type": "InputLang",
+    "php": true
+  },
+  "moduleTitle": {
+    "type": "Variable",
+    "variable": "title",
+    "selector_prefix": ".accordion-menu-%s .title"
+  },
+  "icon": {
+    "type": "Icon",
+    "selector": ".accordion-menu-%s > .j-menu > li > a::before"
+  },
+  "iconHover": {
+    "type": "Color",
+    "selector": ".accordion-menu-%s > .j-menu > li:hover > a::before",
+    "property": "color"
+  },
+  "subIcon": {
+    "type": "Icon",
+    "selector": ".accordion-menu-%s.accordion-menu > .j-menu > li.accordion-menu-item li > a::before"
+  },
+  "subIconHover": {
+    "type": "Color",
+    "selector": ".accordion-menu-%s.accordion-menu > .j-menu > li.accordion-menu-item li:hover > a::before",
+    "property": "color"
+  },
+  "subIconWidth": {
+    "type": "InputNumber",
+    "rules":{
+      "@":{
+        ".accordion-menu-%s.accordion-menu > .j-menu > li.accordion-menu-item li > a::before": "min-width:%spx"
+      }
+    }
+  },
+  "menu": {
+    "type": "Variable",
+    "variable": "accordion_menu",
+    "selector_prefix": ".accordion-menu-%s"
+  },
+  "border": {
+    "type": "Border",
+    "selector": ".accordion-menu-%s > .j-menu"
+  },
+  "padding": {
+    "type": "Padding",
+    "selector": ".accordion-menu-%s > .j-menu"
+  },
+  "background": {
+    "type": "Background",
+    "selector": ".accordion-menu-%s > .j-menu"
+  },
+  "borderRadius": {
+    "type": "BorderRadius",
+    "selector": ".accordion-menu-%s > .j-menu"
+  },
+  "iconWidth": {
+    "type": "InputNumber",
+    "rules":{
+      "@":{
+        ".accordion-menu-%s > .j-menu > li.accordion-menu-item > a::before": "min-width:%spx"
+      }
+    }
+  },
+  "iconSize": {
+    "type": "InputNumber",
+    "rules":{
+      "@":{
+        ".accordion-menu-%s > .j-menu > li.accordion-menu-item > a::before": "font-size:%spx !important"
+      }
+    }
+  },
+  "iconMargin": {
+    "type": "Margin",
+    "selector":".accordion-menu-%s > .j-menu > li.accordion-menu-item > a::before"
+  },
+  "moduleShadow": {
+    "type": "Shadow",
+    "selector": ".accordion-menu-%s > .j-menu"
+  }
+}

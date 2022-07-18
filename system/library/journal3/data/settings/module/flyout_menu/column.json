@@ -1,0 +1,81 @@
+{
+  "status": {
+    "type": "Status"
+  },
+  "width": {
+    "type": "Select",
+    "value": "100",
+    "selector": ".flyout-menu-%s .flyout-menu-item-%s.mega-menu .grid-row-%s .grid-col-%s",
+    "property": "width: %s%"
+  },
+  "background": {
+    "type": "Background",
+    "selector": ".flyout-menu-%s .flyout-menu-item-%s.mega-menu .grid-row-%s .grid-col-%s"
+  },
+  "border": {
+    "type": "Border",
+    "selector": ".flyout-menu-%s .flyout-menu-item-%s.mega-menu .grid-row-%s .grid-col-%s"
+  },
+  "padding": {
+    "type": "Padding",
+    "selector": ".flyout-menu-%s .flyout-menu-item-%s.mega-menu .grid-row-%s .grid-col-%s"
+  },
+  "autoHeight": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".flyout-menu-%s .flyout-menu-item-%s.mega-menu .grid-row-%s .grid-col-%s .grid-item": "height: auto"
+      },
+      "false": {
+        ".flyout-menu-%s .flyout-menu-item-%s.mega-menu .grid-row-%s .grid-col-%s .grid-item": "height: 100%"
+      }
+    }
+  },
+  "alignH": {
+    "type": "Radio",
+    "value": "",
+    "rules": {
+      "start": {
+        ".flyout-menu-%s .flyout-menu-item-%s.mega-menu .grid-row-%s .grid-col-%s .grid-item": "display:flex; justify-content:flex-start"
+      },
+      "center": {
+        ".flyout-menu-%s .flyout-menu-item-%s.mega-menu .grid-row-%s .grid-col-%s .grid-item": "display:flex; justify-content:center"
+      },
+      "end": {
+        ".flyout-menu-%s .flyout-menu-item-%s.mega-menu .grid-row-%s .grid-col-%s .grid-item": "display:flex; justify-content:flex-end"
+      }
+    }
+  },
+
+  "align": {
+    "type": "Radio",
+    "value": "top",
+    "rules": {
+      "top": {
+        ".flyout-menu-%s .flyout-menu-item-%s.mega-menu .grid-row-%s .grid-col-%s .grid-items": "justify-content: flex-start"
+      },
+      "middle": {
+        ".flyout-menu-%s .flyout-menu-item-%s.mega-menu .grid-row-%s .grid-col-%s .grid-items": "justify-content: center"
+      },
+      "bottom": {
+        ".flyout-menu-%s .flyout-menu-item-%s.mega-menu .grid-row-%s .grid-col-%s .grid-items": "justify-content: flex-end"
+      }
+    }
+  },
+  "marginTop": {
+    "type": "InputNumber",
+    "rules":{
+      "@":{
+        ".flyout-menu-%s .flyout-menu-item-%s.mega-menu .grid-row-%s .grid-col-%s": "margin-top:%spx"
+      }
+    }
+  },
+  "margin": {
+    "type": "InputNumber",
+    "rules":{
+      "@":{
+        ".flyout-menu-%s .flyout-menu-item-%s.mega-menu .grid-row-%s .grid-col-%s": "margin-bottom:%spx"
+      }
+    }
+  }
+}

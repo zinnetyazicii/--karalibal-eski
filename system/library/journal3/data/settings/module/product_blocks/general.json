@@ -1,0 +1,367 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "New Blocks"
+  },
+  "status": {
+    "type": "Status"
+  },
+  "schedule": {
+    "type": "Range",
+    "php": true
+  },
+  "display": {
+    "type": "Radio",
+    "value": "grid",
+    "php": true
+  },
+  "carousel": {
+    "type": "Toggle",
+    "value": "false",
+    "php": true
+  },
+  "carouselStyle": {
+    "type": "Variable",
+    "variable": "carousel",
+    "selector_prefix": ".module-product_blocks-%s"
+  },
+  "itemsPerRow": {
+    "type": "ItemsPerRow",
+    "selector": ".module-product_blocks-%s.blocks-grid .module-item",
+    "php": true,
+    "value": {
+      "c0": {
+        "items": "1"
+      },
+      "c1": {
+        "items": "1"
+      },
+      "c2": {
+        "items": "1"
+      }
+    }
+  },
+  "default": {
+    "type": "Select",
+    "value": "",
+    "php": true
+  },
+  "title": {
+    "type": "InputLang",
+    "php": true
+  },
+  "moduleTitle": {
+    "type": "Variable",
+    "variable": "title",
+    "selector_prefix": ".module-product_blocks-%s .title.module-title"
+  },
+  "itemTitle": {
+    "type": "Variable",
+    "variable": "title",
+    "selector_prefix": ".module-product_blocks-%s .title.block-title"
+  },
+  "containerGutter": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".module-product_blocks-%s.blocks-grid:not(.carousel-mode) .module-body": "margin:%spx"
+      }
+    }
+  },
+  "itemsBoxStyles": {
+    "include": "common_hover",
+    "selector_prefix": ".module-product_blocks-%s .block-body"
+  },
+  "containerMargin": {
+    "type": "Margin",
+    "selector": ".module-product_blocks-%s.blocks-grid .module-body"
+  },
+  "moduleBackground_removed": {
+    "type": "Background",
+    "selector": ".module-product_blocks-%s"
+  },
+  "imageDimensions": {
+    "type": "ImageDimensions",
+    "php": true
+  },
+  "accordionStyle": {
+    "type": "Variable",
+    "variable": "accordion",
+    "selector_prefix": ".module-product_blocks-%s"
+  },
+  "tabsStyle": {
+    "type": "Variable",
+    "variable": "tabs",
+    "selector_prefix": ".module-product_blocks-%s"
+  },
+  "typographyStyle": {
+    "type": "Variable",
+    "variable": "typography",
+    "selector_prefix": ".module-product_blocks-%s .block-content"
+  },
+  "itemsContentWidth": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".module-product_blocks-%s .block-body": "max-width:%spx; margin:0 auto"
+      }
+    }
+  },
+  "blocksTitleAlign": {
+    "type": "Radio",
+    "value": "",
+    "rules": {
+      "left": {
+        ".module-product_blocks-%s .title.block-title": "text-align:left",
+        ".module-product_blocks-%s .title.block-title::after": "margin-left:0; margin-right:auto; transform: none"
+      },
+      "center": {
+        ".module-product_blocks-%s .title.block-title": "text-align:center",
+        ".module-product_blocks-%s .title.block-title::after": "left: 50%; right:initial; transform: translate3d(-50%,0,0);"
+      },
+      "right": {
+        ".module-product_blocks-%s .title.block-title": "text-align:right",
+        ".module-product_blocks-%s .title.block-title::after": "margin-left:auto; margin-right:0; transform:none"
+      }
+    },
+    "rtlRules": {
+      "left": {
+        ".module-product_blocks-%s .title.block-title": "text-align:left",
+        ".module-product_blocks-%s .title.block-title::after": "margin-left:auto; margin-right:0; transform: none"
+      },
+      "center": {
+        ".module-product_blocks-%s .title.block-title": "text-align:center",
+        ".module-product_blocks-%s .title.block-title::after": "left: 50%; right:initial; transform: translate3d(-50%,0,0);"
+      },
+      "right": {
+        ".module-product_blocks-%s .title.block-title": "text-align:right",
+        ".module-product_blocks-%s .title.block-title::after": "margin-left:0; margin-right:auto; transform:none"
+      }
+    }
+  },
+  "titleMargin": {
+    "type": "Margin",
+    "selector": ".module-product_blocks-%s .title.block-title"
+  },
+  "titlePosition": {
+    "type": "Radio",
+    "value": "before",
+    "rules": {
+      "before": {
+        ".module-product_blocks-%s .block-title": "order:-2"
+      },
+      "after": {
+        ".module-product_blocks-%s .block-title": "order:initial"
+      }
+    }
+  },
+  "imagePosition": {
+    "type": "Radio",
+    "value": "top",
+    "rules": {
+      "top": {
+        ".module-product_blocks-%s .block-header": "display: flex; float:none; order:-1",
+        ".module-product_blocks-%s .block-header img": "display: flex",
+        ".module-product_blocks-%s .block-wrapper": "display: flex",
+        ".module-product_blocks-%s .block-header i": "float:none; display: flex",
+        ".module-product_blocks-%s .block-body": "display:flex; flex-direction: column"
+      },
+      "side": {
+        ".module-product_blocks-%s .block-header": "display: flex; float:none; order:-1",
+        ".module-product_blocks-%s .block-header img": "display: flex",
+        ".module-product_blocks-%s .block-wrapper": "display: flex",
+        ".module-product_blocks-%s .block-header i": "float:none; display: flex",
+        ".module-product_blocks-%s .block-body": "display:flex; flex-direction: row"
+      },
+      "side2": {
+        ".module-product_blocks-%s .block-header": "display: flex; float:none; order:2",
+        ".module-product_blocks-%s .block-header img": "display: flex",
+        ".module-product_blocks-%s .block-wrapper": "display: flex",
+        ".module-product_blocks-%s .block-header i": "float:none; display: flex",
+        ".module-product_blocks-%s .block-body": "display:flex; flex-direction: row"
+      },
+      "left": {
+        ".module-product_blocks-%s .block-header": "display: block; float:left; ",
+        ".module-product_blocks-%s .block-header img": "display: flex",
+        ".module-product_blocks-%s .block-wrapper": "display: block",
+        ".module-product_blocks-%s .block-header i": "float:left; display: flex",
+        ".module-product_blocks-%s .block-body": "display:block"
+      },
+      "right": {
+        ".module-product_blocks-%s .block-header": "display: block; float:right; ",
+        ".module-product_blocks-%s .block-header img": "display: flex",
+        ".module-product_blocks-%s .block-wrapper": "display: block",
+        ".module-product_blocks-%s .block-header i": "float:left; display: flex",
+        ".module-product_blocks-%s .block-body": "display:block"
+      }
+    },
+    "rtlRules": {
+      "top": {
+        ".module-product_blocks-%s .block-header": "display: flex; float:none; order:-1",
+        ".module-product_blocks-%s .block-header img": "display: flex",
+        ".module-product_blocks-%s .block-wrapper": "display: flex",
+        ".module-product_blocks-%s .block-header i": "float:none; display: flex",
+        ".module-product_blocks-%s .block-body": "display:flex; flex-direction: column"
+      },
+      "side": {
+        ".module-product_blocks-%s .block-header": "display: flex; float:none; order:-1",
+        ".module-product_blocks-%s .block-header img": "float:none; display: flex",
+        ".module-product_blocks-%s .block-header i": "display: flex",
+        ".module-product_blocks-%s .block-wrapper": "display: flex",
+        ".module-product_blocks-%s .block-body": "display:flex; flex-direction: row"
+      },
+      "side2": {
+        ".module-product_blocks-%s .block-header": "display: flex; float:none; order:2",
+        ".module-product_blocks-%s .block-header img": "float:none; display: flex;",
+        ".module-product_blocks-%s .block-header i": "display: flex",
+        ".module-product_blocks-%s .block-wrapper": "display: flex",
+        ".module-product_blocks-%s .block-body": "display:flex; flex-direction: row"
+      },
+      "left": {
+        ".module-product_blocks-%s .block-header": "display: block; float:right;",
+        ".module-product_blocks-%s .block-header img": "display: flex",
+        ".module-product_blocks-%s .block-wrapper": "display: block",
+        ".module-product_blocks-%s .block-header i": "float:right; display: flex",
+        ".module-product_blocks-%s .block-body": "display:block"
+      },
+      "right": {
+        ".module-product_blocks-%s .block-header": "display: block; float:left;",
+        ".module-product_blocks-%s .block-header img": "display: flex",
+        ".module-product_blocks-%s .block-wrapper": "display: block",
+        ".module-product_blocks-%s .block-header i": "float:right; display: flex",
+        ".module-product_blocks-%s .block-body": "display:block"
+      }
+    }
+  },
+  "contentAlign": {
+    "type": "Radio",
+    "value": "",
+    "rules": {
+      "left": {
+        ".module-product_blocks-%s .block-wrapper": "text-align:left"
+      },
+      "center": {
+        ".module-product_blocks-%s .block-wrapper": "text-align:center"
+      },
+      "right": {
+        ".module-product_blocks-%s .block-wrapper": "text-align:right"
+      }
+    },
+    "rtlRules": {
+      "left": {
+        ".module-product_blocks-%s .block-wrapper": "text-align:right"
+      },
+      "center": {
+        ".module-product_blocks-%s .block-wrapper": "text-align:center"
+      },
+      "right": {
+        ".module-product_blocks-%s .block-wrapper": "text-align:left"
+      }
+    }
+  },
+  "contentAlignV": {
+    "type": "Radio",
+    "value": "",
+    "rules": {
+      "left": {
+        ".module-product_blocks-%s .block-wrapper": "justify-content:flex-start"
+      },
+      "center": {
+        ".module-product_blocks-%s .block-wrapper": "justify-content:center"
+      },
+      "right": {
+        ".module-product_blocks-%s .block-wrapper": "justify-content:flex-end"
+      }
+    }
+  },
+  "imageAlign": {
+    "type": "Radio",
+    "value": "left",
+    "rules": {
+      "left": {
+        ".module-product_blocks-%s .block-header": "justify-content:flex-start; align-items:flex-start"
+      },
+      "center": {
+        ".module-product_blocks-%s .block-header": "justify-content:center; align-items:center"
+      },
+      "right": {
+        ".module-product_blocks-%s .block-header": "justify-content:flex-end; align-items:flex-end"
+      }
+    }
+  },
+  "imageMargin": {
+    "type": "Margin",
+    "selector": ".module-product_blocks-%s .block-header"
+  },
+  "imageBorder": {
+    "type": "Border",
+    "selector": ".module-product_blocks-%s .block-header img"
+  },
+  "imageBorderHover": {
+    "type": "Color",
+    "selector": ".module-product_blocks-%s .block-body:hover .block-header img",
+    "property": "border-color"
+  },
+  "imageBorderRadius": {
+    "type": "BorderRadius",
+    "selector": ".module-product_blocks-%s .block-header img"
+  },
+  "imageShadow": {
+    "type": "Shadow",
+    "selector": ".module-product_blocks-%s .block-header img"
+  },
+  "imageShadowHover": {
+    "type": "Shadow",
+    "selector": ".module-product_blocks-%s .block-body .block-header img:hover"
+  },
+  "icon": {
+    "type": "Icon",
+    "selector": ".module-product_blocks-%s .block-header i::before"
+  },
+  "iconHover": {
+    "type": "Color",
+    "selector": ".module-product_blocks-%s .block-body:hover .block-header i::before",
+    "property": "color"
+  },
+  "iconSize": {
+    "type": "InputPair",
+    "selector": ".module-product_blocks-%s .block-header i",
+    "properties": {
+      "first": "width:%spx",
+      "second": "height:%spx"
+    }
+  },
+  "iconBG": {
+    "type": "Background",
+    "selector": ".module-product_blocks-%s .block-header i"
+  },
+  "iconBGHover": {
+    "type": "Background",
+    "selector": ".module-product_blocks-%s .block-body:hover .block-header i"
+  },
+  "iconMargin": {
+    "type": "Margin",
+    "selector": ".module-product_blocks-%s .block-header i"
+  },
+  "iconBorder": {
+    "type": "Border",
+    "selector": ".module-product_blocks-%s .block-header i"
+  },
+  "iconBorderHover": {
+    "type": "Color",
+    "selector": ".module-product_blocks-%s .block-header i",
+    "property": "border-color"
+  },
+  "iconBorderRadius": {
+    "type": "BorderRadius",
+    "selector": ".module-product_blocks-%s .block-header i"
+  },
+  "iconShadow": {
+    "type": "Shadow",
+    "selector": ".module-product_blocks-%s .block-header i"
+  },
+  "iconShadowHover": {
+    "type": "Shadow",
+    "selector": ".module-product_blocks-%s .block-body:hover .block-header i"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "NEW_BUTTON_CONTAINER"
+  },
+  "value": {
+    "include": "box"
+  }
+}

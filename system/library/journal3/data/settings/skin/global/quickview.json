@@ -1,0 +1,162 @@
+{
+
+  "quickviewStatus": {
+    "type": "Toggle",
+    "value": "true",
+    "php": true
+  },
+  "quickviewPopupStyle": {
+    "type": "Variable",
+    "variable": "popup",
+    "selector_prefix": ".popup-quickview&"
+  },
+  "quickviewPopupWidth": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".popup-quickview .popup-container": "width:%spx"
+      }
+    },
+    "value": "700"
+  },
+  "quickviewPopupHeight": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".popup-quickview .popup-inner-body": "height:%spx"
+      }
+    },
+    "value": "600"
+  },
+
+  "quickviewPadding": {
+    "type": "Padding",
+    "selector": ".popup-quickview.popup .site-wrapper",
+    "important": true
+  },
+  "quickviewBackground": {
+    "type": "Background",
+    "selector": ".popup-quickview.popup-body, .popup-quickview.popup",
+    "important": true
+  },
+
+  "quickviewPageStyle": {
+    "type": "Variable",
+    "variable": "quickview",
+    "selector_prefix": ".route-product-product.popup-quickview"
+  },
+  "quickviewText": {
+    "type": "InputLang",
+    "value": "Quickview",
+    "js": true,
+    "php": true
+  },
+  "quickviewDescription": {
+    "type": "Toggle",
+    "value": "true",
+    "php": true
+  },
+  "quickviewDescriptionPosition": {
+    "type": "Radio",
+    "value": "image",
+    "php": true
+  },
+  "quickviewDescriptionBottom": {
+    "type": "Toggle",
+    "value": "false",
+    "rules": {
+      "true": {
+        ".popup-quickview .product-right .description": "order: 100"
+      },
+      "false": {
+        ".popup-quickview .product-right .description": "order: -1"
+      }
+    }
+  },
+  "quickviewExtraText": {
+    "type": "InputLang",
+    "value": "More Details",
+    "php": true
+  },
+  "quickviewDescriptionBox": {
+    "include": "common",
+    "selector_prefix": ".popup-quickview .description"
+  },
+
+  "quickviewExpandButton": {
+    "type": "Toggle",
+    "value": "true",
+    "rules": {
+      "true": {
+        ".popup-quickview .expand-content": "overflow:hidden"
+      },
+      "false": {
+        ".popup-quickview .expand-content": "max-height:100%; overflow:visible"
+      }
+    },
+    "php": true
+  },
+  "quickviewExpandHeight": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".popup-quickview .expand-content": "max-height:%spx"
+      }
+    }
+  },
+  "quickviewExpandButtonStyle": {
+    "type": "Variable",
+    "variable": "button",
+    "selector_prefix": ".popup-quickview .block-expand&"
+  },
+  "quickviewExpandButtonText": {
+    "type": "InputLang",
+    "selector": ".popup-quickview .block-expand::after",
+    "property": "content:'%s'"
+  },
+  "quickviewExpandButtonTextLess": {
+    "type": "InputLang",
+    "selector": ".popup-quickview .block-expanded + .block-expand-overlay .block-expand::after",
+    "value": "Show Less",
+    "property": "content:'%s'"
+  },
+  "quickviewExpandIcon": {
+    "type": "Icon",
+    "selector": ".popup-quickview .block-expand::before"
+  },
+  "quickviewExpandIconHover": {
+    "type": "Color",
+    "selector": ".popup-quickview .block-expand:hover::before",
+    "property": "color",
+    "desktop": true
+  },
+  "quickviewExpandIconUp": {
+    "type": "Icon",
+    "selector": ".popup-quickview .block-expanded + .block-expand-overlay .block-expand::before"
+  },
+  "quickviewExpandIconHoverUp": {
+    "type": "Color",
+    "selector": ".popup-quickview .block-expanded + .block-expand-overlay .block-expand:hover::before",
+    "property": "color",
+    "desktop": true
+  },
+  "quickviewExpandOverlayColor": {
+    "type": "Color",
+    "rules": {
+      "@": {
+        ".popup-quickview .block-expand-overlay": "background: linear-gradient(to bottom, transparent, %s)",
+        ".safari.popup-quickview .block-expand-overlay": "background: linear-gradient(to bottom, rgba(255,255,255,0), %s)",
+        ".iphone.popup-quickview .block-expand-overlay": "background: linear-gradient(to bottom, rgba(255,255,255,0), %s)",
+        ".ipad.popup-quickview .block-expand-overlay": "background: linear-gradient(to bottom, rgba(255,255,255,0), %s)"
+      }
+    }
+  },
+  "quickviewDescriptionOrder": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".popup-quickview .product-right .description": "order:%s"
+      }
+    }
+  }
+}

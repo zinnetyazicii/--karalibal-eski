@@ -1,0 +1,9 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "CATEGORY_STYLE"
+  },
+  "value": {
+    "include": "category"
+  }
+}

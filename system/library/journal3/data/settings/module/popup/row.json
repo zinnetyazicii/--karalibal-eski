@@ -1,0 +1,109 @@
+{
+  "status": {
+    "type": "Status"
+  },
+  "background": {
+    "type": "Background",
+    "selector": ".module-popup-%s .grid-row-%s"
+  },
+  "padding": {
+    "type": "Padding",
+    "selector": ".module-popup-%s .grid-row-%s"
+  },
+  "border": {
+    "type": "Border",
+    "selector": ".module-popup-%s .grid-row-%s"
+  },
+  "shadow": {
+    "type": "Shadow",
+    "selector": ".module-popup-%s .grid-row-%s"
+  },
+  "marginTop": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".module-popup-%s .grid-row-%s": "margin-top:%spx"
+      }
+    }
+  },
+  "margin": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".module-popup-%s .grid-row-%s": "margin-bottom:%spx"
+      }
+    }
+  },
+  "overlayStatus": {
+    "type": "Toggle",
+    "value": "false",
+    "rules": {
+      "true": {
+        ".module-popup-%s .grid-row-%s::before": "content:''"
+      }
+    }
+  },
+  "overlayVisibility": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".module-popup-%s .grid-row-%s::before": "display: block"
+      },
+      "false": {
+        ".module-popup-%s .grid-row-%s::before": "display: none"
+      }
+    }
+  },
+  "overlayBackground": {
+    "type": "Background",
+    "selector": ".module-popup-%s .grid-row-%s::before"
+  },
+  "rowOverlayBlend": {
+    "type": "Select",
+    "selector": ".module-popup-%s .grid-row-%s::before",
+    "property": "mix-blend-mode"
+  },
+  "overlayBorder": {
+    "type": "Border",
+    "selector": ".module-popup-%s .grid-row-%s::before"
+  },
+  "overlayHeight": {
+    "type": "InputNumber",
+    "rules":{
+      "@":{
+        ".module-popup-%s .grid-row-%s::before": "height:%s%"
+      }
+    }
+  },
+  "overlayAlign": {
+    "type": "Radio",
+    "value": "center",
+    "rules": {
+      "left": {
+        ".module-popup-%s .grid-row-%s::before": "left: -50%; width:100%"
+      },
+      "center": {
+        ".module-popup-%s .grid-row-%s::before": "left: 0; width:100vw"
+      },
+      "right": {
+        ".module-popup-%s .grid-row-%s::before": "left: 50%; width:100vw"
+      }
+    }
+  },
+  "overlayRotate": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".module-popup-%s .grid-row-%s::before": "transform: translate3d(0,0,0) rotate(%sdeg) skew(%sdeg);"
+      }
+    }
+  },
+  "overlayTop": {
+    "type": "InputNumber",
+    "rules":{
+      "@":{
+        ".module-popup-%s .grid-row-%s::before": "top:%svw"
+      }
+    }
+  }
+}

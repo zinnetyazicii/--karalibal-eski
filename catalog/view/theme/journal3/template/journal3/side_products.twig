@@ -1,0 +1,83 @@
+{% for product in products %}
+  {% set classes = j3.classes({
+    'out-of-stock': not product.quantity,
+    'has-zero-price': not product.price_value,
+  }) %}
+  <div class="product-layout {{ j3.classes(product.classes) }} {{ classes }}">
+    <div class="side-product">
+      <div class="image">
+        <a href="{{ product.href }}" class="product-img">
+          {% if j3.settings.get('performanceLazyLoadImagesStatus') %}
+            <img src="{{ dummy_image }}" data-src="{{ product.thumb }}" {% if product.thumb2x %}data-srcset="{{ product.thumb }} 1x, {{ product.thumb2x }} 2x" {% endif %} width="{{ image_width }}" height="{{ image_height }}" alt="{{ product.name }}" title="{{ product.name }}" class="img-first lazyload"/>
+          {% else %}
+            <img src="{{ product.thumb }}" {% if product.thumb2x %}srcset="{{ product.thumb }} 1x, {{ product.thumb2x }} 2x" {% endif %} width="{{ image_width }}" height="{{ image_height }}" alt="{{ product.name }}" title="{{ product.name }}" class="img-first"/>
+          {% endif %}
+        </a>
+
+        {% if j3.settings.get('quickviewStatus') %}
+          <div class="quickview-button">
+            <a class="btn btn-quickview" {% if j3.settings.getIn('SideProductQuickviewTooltipStatus', _context) %}data-toggle="tooltip" data-tooltip-class="{{ 'module-side_products-' ~ module_id }} quickview-tooltip" data-placement="{{ j3.settings.getIn('SideProductQuickviewTooltipPosition', _context) }}" title="{{ j3.settings.get('quickviewText') }}"{% endif %} onclick="quickview('{{ product.product_id }}')"><span class="btn-text">{{ j3.settings.get('quickviewText') }}</span></a>
+          </div>
+        {% endif %}
+      </div>
+
+      <div class="caption">
+        <div class="name"><a href="{{ product.href }}">{{ product.name }}</a></div>
+
+        {% if product.price %}
+          <div class="price">
+            {% if product.special %}
+              <span class="price-new">{{ product.special }}</span> <span class="price-old">{{ product.price }}</span>
+            {% else %}
+              <span class="price-normal">{{ product.price }}</span>
+            {% endif %}
+          </div>
+          {% if product.tax %}
+            <div class="price-tax">{{ text_tax }}{{ product.tax }}</div>
+          {% endif %}
+        {% endif %}
+
+        {% if product.rating %}
+          <div class="rating">
+            <div class="rating-stars">
+              {% for i in 1..5 %}
+                {% if product.rating < i %}
+                  <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
+                {% else %}
+                  <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i><i class="fa fa-star-o fa-stack-2x"></i></span>
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+        {% else %}
+          <div class="rating no-rating">
+            <div class="rating-stars">
+              {% for i in 1..5 %}
+                {% if product.rating < i %}
+                  <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
+                {% else %}
+                  <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i><i class="fa fa-star-o fa-stack-2x"></i></span>
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+        {% endif %}
+
+        {% if j3.settings.get('catalogCartStatus') or j3.settings.get('catalogWishlistStatus') or j3.settings.get('catalogCompareStatus') %}
+          <div class="button-group">
+            {% if j3.settings.get('catalogCartStatus') %}
+              <a class="btn btn-cart" {% if j3.settings.getIn('SideProductCartTooltipStatus', _context) %} data-toggle="tooltip" data-tooltip-class="{{ 'module-side_products-' ~ module_id }} cart-tooltip" data-placement="{{ j3.settings.getIn('SideProductCartTooltipPosition', _context) }}" title="{{ button_cart }}" {% endif %} onclick="cart.add('{{ product.product_id }}', $(this).closest('.product-thumb').find('.button-group input[name=\'quantity\']').val());" data-loading-text="<span class='btn-text'>{{ button_cart }}</span>"><span class="btn-text">{{ button_cart }}</span></a>
+            {% endif %}
+            {% if j3.settings.get('catalogWishlistStatus') %}
+              <a class="btn btn-wishlist" {% if j3.settings.getIn('SideProductWishlistTooltipStatus', _context) %} data-toggle="tooltip" data-tooltip-class="{{ 'module-side_products-' ~ module_id }} wishlist-tooltip" data-placement="{{ j3.settings.getIn('SideProductWishlistTooltipPosition', _context) }}" title="{{ button_wishlist }}" {% endif %} onclick="wishlist.add('{{ product.product_id }}')"><span class="btn-text">{{ button_wishlist }}</span></a>
+            {% endif %}
+            {% if j3.settings.get('catalogCompareStatus') %}
+              <a class="btn btn-compare" {% if j3.settings.getIn('SideProductCompareTooltipStatus', _context) %} data-toggle="tooltip" data-tooltip-class="{{ 'module-side_products-' ~ module_id }} compare-tooltip" data-placement="{{ j3.settings.getIn('SideProductCompareTooltipPosition', _context) }}" title="{{ button_compare }}" {% endif %} onclick="compare.add('{{ product.product_id }}')"><span class="btn-text">{{ button_compare }}</span></a>
+            {% endif %}
+          </div>
+        {% endif %}
+
+      </div>
+    </div>
+  </div>
+{% endfor %}

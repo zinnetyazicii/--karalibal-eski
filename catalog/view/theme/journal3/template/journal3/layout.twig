@@ -1,0 +1,36 @@
+{% if rows %}
+  <div class="{{ j3.classes(grid_classes) }}">
+    {% for grid_row in rows %}
+      <div class="{{ j3.classes(grid_row.classes) }}">
+        {% if grid_row.waveStatus %}
+          <svg viewBox="0 0 100 20" class="wave wave-top" preserveAspectRatio="none">
+            <path fill="white" d="M 0 30 V 10 Q 25 {{ grid_row.waveDirection }} 55 10 T 100 10 V 30 Z"></path>
+          </svg>
+        {% endif %}
+        <div class="grid-cols">
+          {% for grid_column in grid_row.columns %}
+            <div class="{{ j3.classes(grid_column.classes) }}">
+              <div class="grid-items">
+                {% for grid_item in grid_column.items %}
+                  <div class="{{ j3.classes(grid_item.classes) }}">
+                    {{ grid_item.item }}
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+        {% if grid_row.wave2Status %}
+          <svg viewBox="0 0 100 20" class="wave wave-bottom" preserveAspectRatio="none">
+            <path fill="white" d="M 0 30 V 10 Q 25 {{ grid_row.wave2Direction }} 55 10 T 100 10 V 30 Z"></path>
+          </svg>
+        {% endif %}
+        {% if grid_row.videoBgStatus and grid_row.videoBg %}
+          <div class="video-row">
+            <video autoplay loop muted playsinline data-src="{{ grid_row.videoBg }}" class="video-bg lazyload"></video>
+          </div>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+{% endif %}

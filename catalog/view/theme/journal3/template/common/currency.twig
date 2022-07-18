@@ -1,0 +1,54 @@
+{% if j3.settings.get('catalogCurrencyStatus') %}
+{% if currencies|length > 1 %}
+  {% set current_currency = null %}
+  {% for currency in currencies %}
+    {% if currency.code == code %}
+      {% set current_currency = currency %}
+    {% endif %}
+  {% endfor %}
+  <div id="currency" class="currency">
+    <form action="{{ action }}" method="post" enctype="multipart/form-data" id="form-currency">
+      <div class="dropdown drop-menu">
+        <button type="button" class="dropdown-toggle" data-toggle="dropdown">
+          <span class="currency-symbol-title">
+            {% if current_currency.symbol_left %}
+              <span class="symbol">{{ current_currency.symbol_left }}</span>
+              <span class="currency-title">{{ current_currency.title }}</span>
+              <span class="currency-code">{{ current_currency.code }}</span>
+            {% else %}
+              <span class="symbol">{{ current_currency.symbol_right }}</span>
+              <span class="currency-title">{{ current_currency.title }}</span>
+              <span class="currency-code">{{ current_currency.code }}</span>
+            {% endif %}
+          </span>
+        </button>
+        <div class="dropdown-menu j-dropdown">
+          <ul class="j-menu">
+            {% for currency in currencies %}
+              {% if currency.symbol_left %}
+                <li>
+                  <a class="currency-select" data-name="{{ currency.code }}">
+                    <span class="currency-symbol">{{ currency.symbol_left }}</span>
+                    <span class="currency-title-dropdown">{{ currency.title }}</span>
+                    <span class="currency-code-dropdown">{{ currency.code }}</span>
+                  </a>
+                </li>
+              {% else %}
+                <li>
+                  <a class="currency-select" data-name="{{ currency.code }}">
+                    <span class="currency-symbol">{{ currency.symbol_right }}</span>
+                    <span class="currency-title-dropdown">{{ currency.title }}</span>
+                    <span class="currency-code-dropdown">{{ currency.code }}</span>
+                  </a>
+                </li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      <input type="hidden" name="code" value=""/>
+      <input type="hidden" name="redirect" value="{{ redirect }}"/>
+    </form>
+  </div>
+{% endif %}
+{% endif %}

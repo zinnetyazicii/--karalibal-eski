@@ -1,0 +1,55 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "New Exclude Button"
+  },
+  "status": {
+    "type": "Status"
+  },
+  "type": {
+    "type": "Radio",
+    "value": "custom",
+    "php": true
+  },
+  "filter": {
+    "type": "ProductFilter",
+    "value": "all"
+  },
+  "excludeCart": {
+    "type": "Toggle",
+    "value": "false",
+    "php": true,
+    "rules": {
+      "@": {
+        ".hide-cart.product-layout .cart-group": "display:none !important",
+        ".hide-cart.product-layout .side-product .btn-cart": "display:none !important",
+        ".hide-cart.product-info .cart-group .stepper": "display:none !important",
+        ".hide-cart.product-info .cart-group #button-cart": "display:none !important",
+        ".popup-quickview .product-info.hide-cart .stepper-group": "display:none !important",
+        ".route-account-wishlist .hide-cart .td-action button": "display:none !important"
+      }
+    }
+  },
+  "excludeWishlist": {
+    "type": "Toggle",
+    "value": "false",
+    "php": true,
+    "rules": {
+      "@": {
+        ".hide-wishlist.product-layout .btn-wishlist": "display:none !important",
+        ".hide-wishlist.product-info .btn-wishlist": "display:none !important"
+      }
+    }
+  },
+  "excludeCompare": {
+    "type": "Toggle",
+    "value": "false",
+    "php": true,
+    "rules": {
+      "@": {
+        ".hide-compare.product-layout .btn-compare": "display:none !important",
+        ".hide-compare.product-info .btn-compare": "display:none !important"
+      }
+    }
+  }
+}

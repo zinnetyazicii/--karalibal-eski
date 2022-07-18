@@ -1,0 +1,58 @@
+{
+  "maintenanceHeader": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".maintenance-page header": "display: block !important"
+      },
+      "false": {
+        ".maintenance-page header": "display: none !important"
+      }
+    }
+  },
+  "maintenanceFooter": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".maintenance-page footer": "display: block !important"
+      },
+      "false": {
+        ".maintenance-page footer": "display: none !important"
+      }
+    }
+  },
+  "maintenanceFont": {
+    "type": "Font",
+    "selector": "#common-maintenance"
+  },
+  "maintenanceBackground": {
+    "type": "Background",
+    "selector": "#common-maintenance"
+  },
+  "maintenancePadding": {
+    "type": "Padding",
+    "selector": "#common-maintenance",
+    "value": {
+      "padding":"40"
+    }
+  },
+  "maintenanceMetaTitle": {
+    "type": "InputLang",
+    "value": "Maintenance",
+    "php": true
+  },
+  "maintenanceContent": {
+    "type": "InputLang",
+    "value": "We are currently performing some scheduled maintenance. Please check back soon.",
+    "php": true
+  },
+  "maintenanceTypography": {
+    "type": "Variable",
+    "variable": "typography",
+    "selector_prefix": "#common-maintenance"
+  },
+  "maintenanceGridModule": {
+    "type": "Module",
+    "php": true
+  }
+}

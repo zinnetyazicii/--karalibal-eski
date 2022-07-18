@@ -1,0 +1,35 @@
+{
+  "Font": {
+    "type": "Font",
+    "selector": ".countdown"
+  },
+  "Days": {
+    "type": "Font",
+    "selector": ".countdown div span"
+  },
+  "Background": {
+    "type": "Background",
+    "selector": ".countdown"
+  },
+  "Shadow": {
+    "type": "Shadow",
+    "selector": ".countdown"
+  },
+  "Border": {
+    "type": "Border",
+    "selector": ".countdown"
+  },
+  "BorderRadius": {
+    "type": "BorderRadius",
+    "selector": ".countdown"
+  },
+  "Divider": {
+    "type": "Divider",
+    "selector": ".countdown > div"
+  },
+  "Width": {
+    "type": "Input",
+    "property": "width:%s%",
+    "selector": ".countdown"
+  }
+}

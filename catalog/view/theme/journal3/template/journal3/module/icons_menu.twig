@@ -1,0 +1,28 @@
+{% if items %}
+  <div class="{{ j3.classes(classes) }}">
+    {% if title %}
+      <h3 class="title module-title">{{ title }}</h3>
+    {% endif %}
+    <ul>
+      {% for item in items %}
+        <li class="{{ j3.classes(item.classes) }}">
+          {% if item.link.href %}
+            <a {% if tooltipStatus %}data-toggle="tooltip" data-tooltip-class="icons-menu-tooltip-{{ module_id }}" data-placement="{{ tooltipPosition }}" title="{{ item.title }}"{% endif %} href="{{ item.link.href }}" {{ j3.linkAttrs(item.link) }}>
+              {% if item.type == 'image' %}
+                <img src="{{ item.image }}" {% if item.image2x %} srcset="{{ item.image }} 1x, {{ item.image2x }} 2x" {% endif %} width="{{ imageDimensions.width }}" height="{{ imageDimensions.height }}" alt="{{ item.title }}" class="info-block-img"/>
+              {% endif %}
+              {{ j3.countBadge(item.title, item.link.total, item.link.classes) }}
+            </a>
+          {% else %}
+            <a>
+              {% if item.type == 'image' %}
+                <img src="{{ item.image }}" {% if item.image2x %} srcset="{{ item.image }} 1x, {{ item.image2x }} 2x" {% endif %} width="{{ imageDimensions.width }}" height="{{ imageDimensions.height }}" alt="{{ item.title }}" class="info-block-img"/>
+              {% endif %}
+              {{ j3.countBadge(item.title, item.link.total, item.link.classes) }}
+            </a>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endif %}

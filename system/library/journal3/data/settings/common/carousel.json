@@ -1,0 +1,364 @@
+{
+  "Speed": {
+    "type": "Input",
+    "value": "400",
+    "js": true
+  },
+  "AutoPlay": {
+    "type": "Toggle",
+    "js": true
+  },
+  "PauseOnHover": {
+    "type": "Toggle",
+    "js": true
+  },
+  "Delay": {
+    "type": "Input",
+    "value": "4000",
+    "js": true
+  },
+  "Loop": {
+    "type": "Toggle",
+    "value": "false",
+    "js": true
+  },
+
+  "Overflow": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".swiper-container": "overflow: hidden"
+      },
+      "false": {
+        ".swiper-container": "overflow: visible"
+      }
+    }
+  },
+
+  "ArrowsStatus": {
+    "type": "Radio",
+    "value": "hover",
+    "rules": {
+      "hover": {
+        ".swiper-buttons": "display:none",
+        "&:hover .swiper-buttons": "display:block"
+      },
+      "always": {
+        ".swiper-buttons": "display:block"
+      },
+      "none": {
+        ".swiper-buttons": "display:none !important"
+      }
+    }
+  },
+
+  "CarouselArrowPosition": {
+    "type": "Radio",
+    "value": "side",
+    "rules": {
+      "top": {
+        ".swiper-buttons": "top:0",
+        ".swiper-button-prev": "left:auto; right:0; transform: translate(-100%, -100%)",
+        ".swiper-button-next": "transform: translate(0, -100%)"
+      },
+      "side": {
+        ".swiper-buttons": "top:50%",
+        ".swiper-button-prev": "left:0; right:auto; transform: translate(0, -50%)",
+        ".swiper-button-next": "left:auto; right:0; transform: translate(0, -50%)"
+      }
+    },
+    "rtlRules": {
+      "top": {
+        ".swiper-buttons": "top:0",
+        ".swiper-button-prev": "left:0; right:auto; transform: translate(100%, -100%)",
+        ".swiper-button-next": "left:0; right:auto; transform: translate(0, -100%)"
+      },
+      "side": {
+        ".swiper-buttons": "top:50%",
+        ".swiper-button-prev": "left:auto; right:0; transform: translate(0, -50%)",
+        ".swiper-button-next": "left:0; right:auto; transform: translate(0, -50%)"
+      }
+    }
+  },
+  "CarouselArrowSideSize": {
+    "type": "InputPair",
+    "selector": ".swiper-buttons div",
+    "properties": {
+      "first": "width:%spx",
+      "second": "height:%spx",
+      "value": {
+        "first":"30",
+        "second":"30"
+      }
+    }
+  },
+  "CarouselArrowSideOffset": {
+    "type": "InputPair",
+    "selector": ".swiper-buttons",
+    "properties": {
+      "first": "width:calc(100% - (%spx * 2))",
+      "second": "margin-top:%spx"
+    }
+  },
+  "CarouselArrowSideDisabled": {
+    "type": "InputNumber",
+    "value": "0.5",
+    "rules":{
+      "@":{
+        ".swiper-button-disabled": "opacity:%s"
+      }
+    }
+  },
+  "CarouselArrowSideIcon": {
+    "type": "Icon",
+    "selector": ".swiper-buttons div::before",
+    "value": {
+      "icon": {
+        "name": "arrow_back",
+        "code": "e5c4"
+      }
+    }
+  },
+  "CarouselArrowSideIconHover": {
+    "type": "Color",
+    "selector": ".swiper-buttons div:not(.swiper-button-disabled):hover::before",
+    "property": "color",
+    "desktop":true
+  },
+  "CarouselArrowSideIconActive": {
+    "type": "Color",
+    "selector": ".swiper-buttons div:not(.swiper-button-disabled):active::before",
+    "property": "color"
+  },
+
+  "CarouselArrowSideIconNext": {
+    "type": "Icon",
+    "selector": ".swiper-buttons .swiper-button-next::before",
+    "value": {
+      "icon": {
+        "name": "arrow_forward",
+        "code": "e5c8"
+      }
+    }
+  },
+  "CarouselArrowSideIconNextHover": {
+    "type": "Color",
+    "selector": ".swiper-buttons .swiper-button-next:not(.swiper-button-disabled):hover::before",
+    "property": "color",
+    "desktop":true
+  },
+  "CarouselArrowSideIconNextActive": {
+    "type": "Color",
+    "selector": ".swiper-buttons .swiper-button-next:not(.swiper-button-disabled):active::before",
+    "property": "color"
+  },
+
+  "CarouselArrowSideBackground": {
+    "type": "Background",
+    "selector": ".swiper-buttons div"
+  },
+  "CarouselArrowSideBackgroundHover": {
+    "type": "Background",
+    "selector": ".swiper-buttons div:not(.swiper-button-disabled):hover"
+  },
+  "CarouselArrowSideBackgroundActive": {
+    "type": "Background",
+    "selector": ".swiper-buttons div:not(.swiper-button-disabled):active"
+  },
+
+  "CarouselArrowSideBorder": {
+    "type": "Border",
+    "selector": ".swiper-buttons div"
+  },
+  "CarouselArrowSideBorderHover": {
+    "type": "Color",
+    "selector": ".swiper-buttons div:not(.swiper-button-disabled):hover",
+    "property": "border-color",
+    "desktop":true
+  },
+  "CarouselArrowSideBorderActive": {
+    "type": "Color",
+    "selector": ".swiper-buttons div:not(.swiper-button-disabled):active",
+    "property": "border-color"
+  },
+  "CarouselArrowSideBorderRadius": {
+    "type": "BorderRadius",
+    "selector": ".swiper-buttons div"
+  },
+  "CarouselArrowSideShadow": {
+    "type": "Shadow",
+    "selector": ".swiper-buttons div"
+  },
+  "CarouselArrowSideShadowHover": {
+    "type": "Shadow",
+    "selector": ".swiper-buttons div:not(.swiper-button-disabled):hover",
+    "desktop":true
+  },
+  "CarouselArrowSideShadowActive": {
+    "type": "Shadow",
+    "selector": ".swiper-buttons div:not(.swiper-button-disabled):active"
+  },
+
+
+
+  "BulletsStatus": {
+    "type": "Radio",
+    "value": "hover",
+    "rules": {
+      "hover": {
+        ".swiper-pagination": "display:none",
+        "&:hover .swiper-pagination": "display:block"
+      },
+      "always": {
+        ".swiper-pagination": "display:block"
+      },
+      "none": {
+        ".swiper-pagination": "display:none !important",
+        ".swiper": "padding-bottom:0;"
+      }
+    }
+  },
+
+  "CarouselBulletsPadding": {
+    "type": "InputNumber",
+    "rules":{
+      "@":{
+        ".swiper": "padding-bottom:%spx"
+      }
+    }
+  },
+
+  "CarouselBulletPadding": {
+    "type": "InputNumber",
+    "rules":{
+      "@":{
+        ".swiper-pagination": "padding:%spx"
+      }
+    }
+  },
+
+  "CarouselBulletsOffset": {
+    "type": "InputPair",
+    "selector": ".swiper-pagination",
+    "properties": {
+      "first": "margin-left:%spx; margin-right:%spx",
+      "second": "margin-bottom:%spx"
+    },
+    "rtlProperties": {
+      "first": "margin-right:%spx; margin-left:%spx",
+      "second": "margin-bottom:%spx"
+    }
+  },
+
+  "CarouselBulletBackground": {
+    "type": "Background",
+    "selector": ".swiper-pagination"
+  },
+
+  "CarouselBulletsBorderRadius": {
+    "type": "BorderRadius",
+    "selector": ".swiper-pagination"
+  },
+  "CarouselBulletAlign": {
+    "type": "Radio",
+    "value": "center",
+    "rules": {
+      "left": {
+        ".swiper-pagination": "left:0; right:auto; transform: translateX(0);"
+      },
+      "center": {
+        ".swiper-pagination": "left:50%; right:auto; transform: translateX(-50%);"
+      },
+      "right": {
+        ".swiper-pagination": "left:auto; right:0; transform: translateX(0);"
+      }
+    },
+    "rtlRules": {
+      "left": {
+        ".swiper-pagination": "right:0; left:auto; transform: translateX(0);"
+      },
+      "center": {
+        ".swiper-pagination": "right:50%; left:auto; transform: translateX(50%);"
+      },
+      "right": {
+        ".swiper-pagination": "right:auto; left:0; transform: translateX(0);"
+      }
+    }
+  },
+  "CarouselBulletsSize": {
+    "type": "InputPair",
+    "selector": ".swiper-pagination-bullet",
+    "properties": {
+      "first": "width:%spx",
+      "second": "height:%spx"
+    },
+    "value": {
+      "first":"10",
+      "second":"10"
+    }
+  },
+  "CarouselBulletSpacing": {
+    "type": "InputNumber",
+    "value": "5",
+    "rules":{
+      "@":{
+        ".swiper-pagination > span + span": "margin-left:%spx"
+      }
+    },
+    "rtlRules":{
+      "@":{
+        ".swiper-pagination > span + span": "margin-right:%spx"
+      }
+    }
+  },
+  "CarouselBulletColor": {
+    "type": "Color",
+    "selector": ".swiper-pagination-bullet",
+    "property": "background-color"
+  },
+  "CarouselBulletColorHover": {
+    "type": "Color",
+    "selector": ".swiper-pagination-bullet:hover",
+    "property": "background-color",
+    "desktop":true
+  },
+  "CarouselBulletColorActive": {
+    "type": "Color",
+    "selector": ".swiper-pagination-bullet.swiper-pagination-bullet-active",
+    "property": "background-color"
+  },
+  "CarouselBulletBorder": {
+    "type": "Border",
+    "selector": ".swiper-pagination-bullet"
+  },
+  "CarouselBulletBorderHover": {
+    "type": "Color",
+    "selector": ".swiper-pagination-bullet:hover",
+    "property": "border-color",
+    "desktop":true
+  },
+  "CarouselBulletBorderActive": {
+    "type": "Color",
+    "selector": ".swiper-pagination-bullet.swiper-pagination-bullet-active",
+    "property": "border-color"
+  },
+  "CarouselBulletBorderRadius": {
+    "type": "BorderRadius",
+    "selector": ".swiper-pagination > span"
+  },
+  "CarouselBulletShadow": {
+    "type": "Shadow",
+    "selector": ".swiper-pagination-bullet"
+  },
+  "CarouselBulletShadowHover": {
+    "type": "Shadow",
+    "selector": ".swiper-pagination-bullet:hover",
+    "property": "border-color",
+    "desktop":true
+  },
+  "CarouselBulletShadowActive": {
+    "type": "Shadow",
+    "selector": ".swiper-pagination-bullet.swiper-pagination-bullet-active",
+    "property": "border-color"
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "Font": {
+    "type": "Font",
+    "selector": ""
+  },
+  "Container": {
+    "include": "common"
+  },
+  "Subtitle": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".subtitle": "display: inline-block"
+      },
+      "false": {
+        ".subtitle": "display: none"
+      }
+    }
+  },
+  "Divider": {
+    "type": "Toggle",
+    "value": "false",
+    "rules": {
+      "true": {
+        ".title-divider": "display: block"
+      },
+      "false": {
+        ".title-divider": "display: none"
+      }
+    }
+  },
+  "DividerWidth": {
+    "type": "InputNumber",
+    "value": "50",
+    "rules":{
+      "@":{
+        ".title-divider": "max-width:%spx"
+      }
+    }
+  },
+  "DividerHeight": {
+    "type": "InputNumber",
+    "value": "5",
+    "rules":{
+      "@":{
+        ".title-divider": "height:%spx"
+      }
+    }
+  },
+  "DividerIcon": {
+    "type": "Icon",
+    "selector": ".title-divider::before"
+  },
+  "DividerBorder": {
+    "type": "Border",
+    "selector": ".title-divider"
+  },
+  "DividerBorderRadius": {
+    "type": "BorderRadius",
+    "selector": ".title-divider"
+  },
+  "DividerBackground": {
+    "type": "Background",
+    "selector": ".title-divider"
+  },
+  "DividerMargin": {
+    "type": "Margin",
+    "selector": ".title-divider",
+    "value": {
+      "margin-top":"10",
+      "margin-bottom":"10"
+    }
+  },
+  "Align": {
+    "type": "Radio",
+    "value": "center",
+    "rules": {
+      "left": {
+        ".title-wrapper": "text-align:left",
+        ".title-divider": "margin-left:0; margin-right:auto"
+      },
+      "center": {
+        ".title-wrapper": "text-align:center",
+        ".title-divider": "margin-left:auto; margin-right:auto"
+      },
+      "right": {
+        ".title-wrapper": "text-align:right",
+        ".title-divider": "margin-left:auto; margin-right:0"
+      }
+    },
+    "rtlRules": {
+      "left": {
+        ".title-wrapper": "text-align:right",
+        ".title-divider": "margin-left:auto; margin-right:0"
+      },
+      "center": {
+        ".title-wrapper": "text-align:center",
+        ".title-divider": "margin-left:auto; margin-right:auto"
+      },
+      "right": {
+        ".title-wrapper": "text-align:left",
+        ".title-divider": "margin-left:0; margin-right:auto"
+      }
+    }
+  },
+  "TitleContainer": {
+    "include": "common",
+    "selector_prefix": "h3"
+  },
+
+  "SubtitleContainer": {
+    "include": "common",
+    "selector_prefix": ".subtitle"
+  },
+
+  "SubtitleWidth": {
+    "type": "InputNumber",
+    "rules":{
+      "@":{
+        ".subtitle": "max-width:%spx"
+      }
+    }
+  }
+}

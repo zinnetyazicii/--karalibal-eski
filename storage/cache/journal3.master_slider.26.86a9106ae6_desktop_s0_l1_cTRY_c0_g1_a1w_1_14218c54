@@ -1,0 +1,642 @@
+<?php $val = array (
+  'css' => '.module-master_slider-26 .ms-view{overflow:hidden}.module-master_slider-26 .static-text-1{top:0;left:0;right:auto;bottom:auto;transform:none}.module-master_slider-26 .static-text-1
+span{transform:scale(calc(100 / 100));transform-origin:center}.module-master_slider-26 .static-text-2{top:auto;left:0;right:auto;bottom:0;transform:translate3d(0, 0, 0)}.module-master_slider-26 .static-text-2
+span{transform:scale(calc(100 / 100));transform-origin:center}.module-master_slider>img{width:100%}.desktop .module-master_slider-26 .ms-nav-next{opacity:0}.desktop .module-master_slider-26 .ms-nav-prev{opacity:0}.desktop .module-master_slider-26 .ms-container:hover .ms-nav-next{opacity:1}.desktop .module-master_slider-26 .ms-container:hover .ms-nav-prev{opacity:1}.module-master_slider-26 .ms-nav-next{display:flex;left:auto;right:0;top:50%;bottom:auto;transform:translateY(-100%)}.module-master_slider-26 .ms-nav-prev{display:flex;left:auto;right:0;top:50%;bottom:auto;transform:translateY(0)}.module-master_slider-26 .ms-nav-next::before, .module-master_slider-26 .ms-nav-prev::before{content:\'\\e9b1\' !important;font-family:icomoon !important}.desktop .module-master_slider-26 .ms-nav-next:hover::before, .desktop .module-master_slider-26 .ms-nav-prev:hover::before{color:rgba(255, 255, 255, 1)}.module-master_slider-26 .ms-nav-next, .module-master_slider-26 .ms-nav-prev{width:40px;height:40px}.module-master_slider-26 .ms-nav-next:hover, .module-master_slider-26 .ms-nav-prev:hover{background:rgba(87, 154, 193, 1)}.module-master_slider-26 .ms-bullets{display:block;top:50%;bottom:auto;left:0;right:auto;transform:translateY(-50%);;margin-left:30px;margin-right:30px}.module-master_slider-26 .ms-bullets .ms-bullets-count{flex-direction:column}.module-master_slider-26 .ms-bullets .ms-bullet{margin:calc(10px / 2) !important;background:rgba(255, 255, 255, 1);border-radius:10px}.module-master_slider-26 .ms-bullet{width:5px;height:15px}.desktop .module-master_slider-26 .ms-bullets .ms-bullet:hover, .module-master_slider-26 .ms-bullets .ms-bullet-selected{background:rgba(239, 80, 66, 1)}.module-master_slider-26 .ms-thumb-list{display:block;padding:10px
+0;top:auto !important;bottom:0 !important;order:2}.module-master_slider-26 .ms-thumb-list .ms-thumb-frame{margin-right:10px !important;opacity: .75}.module-master_slider-26 .ms-thumb-frame{border-width:0px}.module-master_slider-26 .ms-timerbar{display:block;top:0 !important;bottom:auto !important}.module-master_slider-26 .master-slider .ms-time-bar{background-color:rgba(239, 80, 66, 1) !important;height:1px !important}@media (max-width: 1024px){.module-master_slider-26 .ms-nav-next{display:none}.module-master_slider-26 .ms-nav-prev{display:none}.module-master_slider-26 .ms-bullets{margin-left:15px;margin-right:15px;margin-top:15px;margin-bottom:15px}}@media (max-width: 760px){.module-master_slider-26 .ms-bullets{top:auto;bottom:0;left:0;right:auto;transform:none}.module-master_slider-26 .ms-bullets .ms-bullets-count{flex-direction:row}.module-master_slider-26 .ms-bullet{width:15px;height:3px}}.module-master_slider-26 .module-item-1 .module-subitem-1.ms-layer-hotspot .ms-point-center{width:20px;height:20px}.module-master_slider-26 .module-item-1 .module-subitem-1{display:block;visibility:visible !important}.module-master_slider-26 .module-item-1 .module-subitem-1.ms-layer-button{transform:scale(calc(100 / 100));transform-origin:center}.module-master_slider-26 .module-item-1 .module-subitem-1.ms-caption{font-family:\'Ubuntu\';font-weight:400;font-size:80px;color:rgba(51, 51, 51, 1);line-height:1.1}.module-master_slider-26 .module-item-1 .module-subitem-1.ms-layer-text::before{color:rgba(124, 52, 0, 1)}.module-master_slider-26 .module-item-1 .module-subitem-1.ms-layer-video{width:400px;height:225px}.module-master_slider-26 .module-item-1 .module-subitem-2.ms-layer-hotspot .ms-point-center{width:20px;height:20px}.module-master_slider-26 .module-item-1 .module-subitem-2{display:block;visibility:visible !important}.module-master_slider-26 .module-item-1 .module-subitem-2.ms-layer-button{transform:scale(calc(100 / 100));transform-origin:center}.module-master_slider-26 .module-item-1 .module-subitem-2.ms-layer-video{width:400px;height:225px}.module-master_slider-26 .module-item-1 .module-subitem-3.ms-layer-hotspot .ms-point-center{width:20px;height:20px}.module-master_slider-26 .module-item-1 .module-subitem-3{display:block;visibility:visible !important}.module-master_slider-26 .module-item-1 .module-subitem-3.ms-layer-button{transform:scale(calc(100 / 100));transform-origin:center}.module-master_slider-26 .module-item-1 .module-subitem-3.ms-layer-video{width:400px;height:225px}.module-master_slider-26 .module-item-1 .ms-btn-container .module-subitem-3.ms-layer-button{margin-left:auto !important}.module-master_slider-26 .module-item-2 .module-subitem-1.ms-layer-hotspot .ms-point-center{width:20px;height:20px}.module-master_slider-26 .module-item-2 .module-subitem-1{display:block;visibility:visible !important}.module-master_slider-26 .module-item-2 .module-subitem-1.ms-layer-button{transform:scale(calc(100 / 100));transform-origin:center}.module-master_slider-26 .module-item-2 .module-subitem-1.ms-caption{font-family:\'Ubuntu\';font-weight:400;font-size:80px;color:rgba(51, 51, 51, 1);line-height:1.1;color:rgba(144, 55, 0, 1)}.module-master_slider-26 .module-item-2 .module-subitem-1.ms-layer-text::before{color:rgba(137, 67, 0, 1)}.module-master_slider-26 .module-item-2 .module-subitem-1.ms-layer-video{width:400px;height:225px}.module-master_slider-26 .module-item-2 .module-subitem-2.ms-layer-hotspot .ms-point-center{width:20px;height:20px}.module-master_slider-26 .module-item-2 .module-subitem-2{display:block;visibility:visible !important}.module-master_slider-26 .module-item-2 .module-subitem-2.ms-layer-button{transform:scale(calc(100 / 100));transform-origin:center}.module-master_slider-26 .module-item-2 .module-subitem-2.ms-layer-video{width:400px;height:225px}.module-master_slider-26 .module-item-2 .module-subitem-3.ms-layer-hotspot .ms-point-center{width:20px;height:20px}.module-master_slider-26 .module-item-2 .module-subitem-3{display:block;visibility:visible !important}.module-master_slider-26 .module-item-2 .module-subitem-3.ms-layer-button{transform:scale(calc(100 / 100));transform-origin:center}.module-master_slider-26 .module-item-2 .module-subitem-3.ms-layer-video{width:400px;height:225px}.module-master_slider-26 .module-item-3 .module-subitem-1.ms-layer-hotspot .ms-point-center{width:20px;height:20px}.module-master_slider-26 .module-item-3 .module-subitem-1{display:block;visibility:visible !important}.module-master_slider-26 .module-item-3 .module-subitem-1.ms-layer-button{transform:scale(calc(100 / 100));transform-origin:center}.module-master_slider-26 .module-item-3 .module-subitem-1.ms-caption{font-family:\'Ubuntu\';font-weight:400;font-size:80px;color:rgba(51, 51, 51, 1);line-height:1.1}.module-master_slider-26 .module-item-3 .module-subitem-1.ms-layer-text::before{color:rgba(136, 62, 0, 1)}.module-master_slider-26 .module-item-3 .module-subitem-1.ms-layer-video{width:400px;height:225px}',
+  'fonts' => 
+  array (
+    'fonts' => 
+    array (
+      'Ubuntu' => 
+      array (
+        400 => '400',
+      ),
+    ),
+    'subsets' => 
+    array (
+      'latin-ext' => 'latin-ext',
+    ),
+  ),
+  'settings' => 
+  array (
+    'schedule' => 
+    array (
+      'from' => '',
+      'to' => '',
+      'between' => true,
+    ),
+    'shuffle' => false,
+    'imageDimensions' => 
+    array (
+      'width' => 940,
+      'height' => 246,
+      'resize' => 'fill',
+    ),
+    'sliderDimensions' => 
+    array (
+      'width' => NULL,
+      'height' => NULL,
+      'resize' => 'fill',
+    ),
+    'parallaxMode' => true,
+    'parallax' => '35',
+    'layout' => 'fillwidth',
+    'layoutTablet' => '',
+    'layoutPhone' => '',
+    'bottomOffset' => '',
+    'bottomOffsetTablet' => '',
+    'bottomOffsetPhone' => '',
+    'staticTextType' => 'text',
+    'staticText' => '',
+    'staticTextLink' => 
+    array (
+      'type' => '',
+      'id' => '',
+      'href' => '',
+      'name' => '',
+      'total' => NULL,
+      'attrs' => 
+      array (
+      ),
+      'classes' => 
+      array (
+      ),
+    ),
+    'static2TextType' => 'text',
+    'static2Text' => '',
+    'static2TextLink' => 
+    array (
+      'type' => '',
+      'id' => '',
+      'href' => '',
+      'name' => '',
+      'total' => NULL,
+      'attrs' => 
+      array (
+      ),
+      'classes' => 
+      array (
+      ),
+    ),
+    'delay' => '2500',
+    'thumbnails' => false,
+    'thumbnailsDimensions' => 
+    array (
+      'width' => 50,
+      'height' => 50,
+      'resize' => 'fill',
+    ),
+    'lazyLoad' => true,
+    'status' => true,
+    'id' => 'master_slider-6276578cd18d2',
+    'module_id' => 26,
+    'classes' => 
+    array (
+      0 => 'module',
+      1 => 'module-master_slider',
+      2 => 'module-master_slider-26',
+      'fullscreen-slider' => false,
+    ),
+    'width' => 940,
+    'height' => 246,
+    'options' => 
+    array (
+      'width' => 940,
+      'height' => 246,
+      'layout' => 'fillwidth',
+      'smoothHeight' => false,
+      'centerControls' => false,
+      'parallaxMode' => 'swipe',
+      'instantStartLayers' => true,
+      'loop' => true,
+      'dir' => 'h',
+      'autoHeight' => true,
+      'rtl' => false,
+      'startOnAppear' => false,
+      'autoplay' => true,
+      'overPause' => true,
+      'shuffle' => false,
+      'view' => 'mask',
+      'speed' => '15',
+      'swipe' => true,
+      'mouse' => true,
+      'controls' => 
+      array (
+        'arrows' => 
+        array (
+          'autohide' => false,
+        ),
+        'timebar' => 
+        array (
+          'autohide' => false,
+          'inset' => true,
+          'align' => 'top',
+        ),
+      ),
+    ),
+    'first_image' => 'http://localhost/image/cache/placeholder-940x246w.png',
+    'first_alt' => '',
+    'items' => 
+    array (
+      1 => 
+      array (
+        'type' => 'image',
+        'alt' => '',
+        'videoType' => 'html5',
+        'link' => 
+        array (
+          'type' => 'page',
+          'id' => '',
+          'href' => 'http://localhost/index.php?route=product/catalog',
+          'name' => '',
+          'total' => NULL,
+          'attrs' => 
+          array (
+          ),
+          'classes' => 
+          array (
+          ),
+        ),
+        'id' => '26-1',
+        'classes' => 
+        array (
+          0 => 'module-item',
+          1 => 'module-item-1',
+          2 => 'ms-slide',
+        ),
+        'delay' => 2.5,
+        'image' => 'http://localhost/image/cache/placeholder-940x246w.png',
+        'image2x' => 'http://localhost/image/cache/placeholder-1880x492w.png',
+        'thumb' => false,
+        'items' => 
+        array (
+          1 => 
+          array (
+            'type' => 'text',
+            'text' => '',
+            'alt' => '',
+            'videoType' => 'html5',
+            'link' => 
+            array (
+              'type' => '',
+              'id' => '',
+              'href' => '',
+              'name' => '',
+              'total' => NULL,
+              'attrs' => 
+              array (
+              ),
+              'classes' => 
+              array (
+              ),
+            ),
+            'imageDimensions' => 
+            array (
+              'width' => NULL,
+              'height' => NULL,
+              'resize' => 'fill',
+            ),
+            'id' => '26-1-1',
+            'classes' => 
+            array (
+              0 => 'module-subitem',
+              1 => 'module-subitem-1',
+              2 => 'ms-layer',
+              3 => 'ms-layer-text',
+              'btn' => false,
+              'no-show-effect' => false,
+              'ms-caption' => true,
+            ),
+            'data' => 
+            array (
+              0 => 'data-resize="true"',
+              1 => 'data-origin="ml"',
+              2 => 'data-parallax="0"',
+              3 => 'data-type="text"',
+              4 => 'data-position="normal"',
+              5 => 'data-offset-x="40"',
+              6 => 'data-offset-y="-50"',
+              7 => 'data-effect="bottom(400)"',
+              8 => 'data-delay="100"',
+              9 => 'data-duration="700"',
+              10 => 'data-ease="easeOutQuart"',
+              11 => 'data-hide-effect="fade"',
+              12 => 'data-hide-delay="0"',
+              13 => 'data-hide-duration="0"',
+            ),
+          ),
+          2 => 
+          array (
+            'type' => 'image',
+            'text' => '',
+            'alt' => '',
+            'videoType' => 'html5',
+            'link' => 
+            array (
+              'type' => '',
+              'id' => '',
+              'href' => '',
+              'name' => '',
+              'total' => NULL,
+              'attrs' => 
+              array (
+              ),
+              'classes' => 
+              array (
+              ),
+            ),
+            'imageDimensions' => 
+            array (
+              'width' => 300,
+              'height' => NULL,
+              'resize' => 'fill',
+            ),
+            'id' => '26-1-2',
+            'classes' => 
+            array (
+              0 => 'module-subitem',
+              1 => 'module-subitem-2',
+              2 => 'ms-layer',
+              3 => 'ms-layer-image',
+              'btn' => false,
+              'no-show-effect' => false,
+              'ms-caption' => false,
+            ),
+            'data' => 
+            array (
+              0 => 'data-resize="true"',
+              1 => 'data-origin="tl"',
+              2 => 'data-parallax="0"',
+              3 => 'data-type="image"',
+              4 => 'data-position="normal"',
+              5 => 'data-offset-x="50"',
+              6 => 'data-offset-y="-150"',
+              7 => 'data-effect="top(300)"',
+              8 => 'data-delay=""',
+              9 => 'data-duration="800"',
+              10 => 'data-ease="easeOutQuart"',
+              11 => 'data-hide-effect="fade"',
+              12 => 'data-hide-delay="0"',
+              13 => 'data-hide-duration="0"',
+            ),
+            'width' => 300,
+            'height' => NULL,
+            'image' => 'http://localhost/image/cache/catalog/journal3/bg/p4-300x258fill.png',
+          ),
+          3 => 
+          array (
+            'type' => 'image',
+            'text' => '',
+            'alt' => '',
+            'videoType' => 'html5',
+            'link' => 
+            array (
+              'type' => '',
+              'id' => '',
+              'href' => '',
+              'name' => '',
+              'total' => NULL,
+              'attrs' => 
+              array (
+              ),
+              'classes' => 
+              array (
+              ),
+            ),
+            'imageDimensions' => 
+            array (
+              'width' => 400,
+              'height' => NULL,
+              'resize' => 'fill',
+            ),
+            'id' => '26-1-3',
+            'classes' => 
+            array (
+              0 => 'module-subitem',
+              1 => 'module-subitem-3',
+              2 => 'ms-layer',
+              3 => 'ms-layer-image',
+              'btn' => false,
+              'no-show-effect' => false,
+              'ms-caption' => false,
+            ),
+            'data' => 
+            array (
+              0 => 'data-resize="true"',
+              1 => 'data-origin="br"',
+              2 => 'data-parallax="0"',
+              3 => 'data-type="image"',
+              4 => 'data-position="normal"',
+              5 => 'data-offset-x="75"',
+              6 => 'data-offset-y="-100"',
+              7 => 'data-effect="bottom(400)"',
+              8 => 'data-delay=""',
+              9 => 'data-duration="800"',
+              10 => 'data-ease="easeOutQuart"',
+              11 => 'data-hide-effect="fade"',
+              12 => 'data-hide-delay="0"',
+              13 => 'data-hide-duration="0"',
+            ),
+            'width' => 400,
+            'height' => NULL,
+            'image' => 'http://localhost/image/cache/catalog/journal3/bg/p5-400x352fill.png',
+          ),
+        ),
+      ),
+      2 => 
+      array (
+        'type' => 'image',
+        'alt' => '',
+        'videoType' => 'html5',
+        'link' => 
+        array (
+          'type' => '',
+          'id' => '',
+          'href' => '',
+          'name' => '',
+          'total' => NULL,
+          'attrs' => 
+          array (
+          ),
+          'classes' => 
+          array (
+          ),
+        ),
+        'id' => '26-2',
+        'classes' => 
+        array (
+          0 => 'module-item',
+          1 => 'module-item-2',
+          2 => 'ms-slide',
+        ),
+        'delay' => 2.5,
+        'image' => 'http://localhost/image/cache/placeholder-940x246w.png',
+        'image2x' => 'http://localhost/image/cache/placeholder-1880x492w.png',
+        'thumb' => false,
+        'items' => 
+        array (
+          1 => 
+          array (
+            'type' => 'text',
+            'text' => '',
+            'alt' => '',
+            'videoType' => 'html5',
+            'link' => 
+            array (
+              'type' => '',
+              'id' => '',
+              'href' => '',
+              'name' => '',
+              'total' => NULL,
+              'attrs' => 
+              array (
+              ),
+              'classes' => 
+              array (
+              ),
+            ),
+            'imageDimensions' => 
+            array (
+              'width' => NULL,
+              'height' => NULL,
+              'resize' => 'fill',
+            ),
+            'id' => '26-2-1',
+            'classes' => 
+            array (
+              0 => 'module-subitem',
+              1 => 'module-subitem-1',
+              2 => 'ms-layer',
+              3 => 'ms-layer-text',
+              'btn' => false,
+              'no-show-effect' => false,
+              'ms-caption' => true,
+            ),
+            'data' => 
+            array (
+              0 => 'data-resize="true"',
+              1 => 'data-origin="ml"',
+              2 => 'data-parallax="0"',
+              3 => 'data-type="text"',
+              4 => 'data-position="normal"',
+              5 => 'data-offset-x="40"',
+              6 => 'data-offset-y="-50"',
+              7 => 'data-effect="bottom(400)"',
+              8 => 'data-delay="100"',
+              9 => 'data-duration="700"',
+              10 => 'data-ease="easeOutQuart"',
+              11 => 'data-hide-effect="fade"',
+              12 => 'data-hide-delay="0"',
+              13 => 'data-hide-duration="0"',
+            ),
+          ),
+          2 => 
+          array (
+            'type' => 'image',
+            'text' => '',
+            'alt' => '',
+            'videoType' => 'html5',
+            'link' => 
+            array (
+              'type' => '',
+              'id' => '',
+              'href' => '',
+              'name' => '',
+              'total' => NULL,
+              'attrs' => 
+              array (
+              ),
+              'classes' => 
+              array (
+              ),
+            ),
+            'imageDimensions' => 
+            array (
+              'width' => 400,
+              'height' => NULL,
+              'resize' => 'fill',
+            ),
+            'id' => '26-2-2',
+            'classes' => 
+            array (
+              0 => 'module-subitem',
+              1 => 'module-subitem-2',
+              2 => 'ms-layer',
+              3 => 'ms-layer-image',
+              'btn' => false,
+              'no-show-effect' => false,
+              'ms-caption' => false,
+            ),
+            'data' => 
+            array (
+              0 => 'data-resize="true"',
+              1 => 'data-origin="tl"',
+              2 => 'data-parallax="0"',
+              3 => 'data-type="image"',
+              4 => 'data-position="normal"',
+              5 => 'data-offset-y="-200"',
+              6 => 'data-effect="top(300)"',
+              7 => 'data-delay=""',
+              8 => 'data-duration="800"',
+              9 => 'data-ease="easeOutQuart"',
+              10 => 'data-hide-effect="fade"',
+              11 => 'data-hide-delay="0"',
+              12 => 'data-hide-duration="0"',
+            ),
+            'width' => 400,
+            'height' => NULL,
+            'image' => 'http://localhost/image/cache/catalog/journal3/bg/Plant-400x419fill.png',
+          ),
+          3 => 
+          array (
+            'type' => 'image',
+            'text' => '',
+            'alt' => '',
+            'videoType' => 'html5',
+            'link' => 
+            array (
+              'type' => '',
+              'id' => '',
+              'href' => '',
+              'name' => '',
+              'total' => NULL,
+              'attrs' => 
+              array (
+              ),
+              'classes' => 
+              array (
+              ),
+            ),
+            'imageDimensions' => 
+            array (
+              'width' => 350,
+              'height' => NULL,
+              'resize' => 'fill',
+            ),
+            'id' => '26-2-3',
+            'classes' => 
+            array (
+              0 => 'module-subitem',
+              1 => 'module-subitem-3',
+              2 => 'ms-layer',
+              3 => 'ms-layer-image',
+              'btn' => false,
+              'no-show-effect' => false,
+              'ms-caption' => false,
+            ),
+            'data' => 
+            array (
+              0 => 'data-resize="true"',
+              1 => 'data-origin="bc"',
+              2 => 'data-parallax="0"',
+              3 => 'data-type="image"',
+              4 => 'data-position="normal"',
+              5 => 'data-offset-x="200"',
+              6 => 'data-offset-y="-200"',
+              7 => 'data-effect="bottom(400)"',
+              8 => 'data-delay=""',
+              9 => 'data-duration="800"',
+              10 => 'data-ease="easeOutQuart"',
+              11 => 'data-hide-effect="fade"',
+              12 => 'data-hide-delay="0"',
+              13 => 'data-hide-duration="0"',
+            ),
+            'width' => 350,
+            'height' => NULL,
+            'image' => 'http://localhost/image/cache/catalog/journal3/bg/Plant2-350x409fill.png',
+          ),
+        ),
+      ),
+      3 => 
+      array (
+        'type' => 'image',
+        'alt' => '',
+        'videoType' => 'html5',
+        'link' => 
+        array (
+          'type' => '',
+          'id' => '',
+          'href' => '',
+          'name' => '',
+          'total' => NULL,
+          'attrs' => 
+          array (
+          ),
+          'classes' => 
+          array (
+          ),
+        ),
+        'id' => '26-3',
+        'classes' => 
+        array (
+          0 => 'module-item',
+          1 => 'module-item-3',
+          2 => 'ms-slide',
+        ),
+        'delay' => 2.5,
+        'image' => 'http://localhost/image/cache/placeholder-940x246w.png',
+        'image2x' => 'http://localhost/image/cache/placeholder-1880x492w.png',
+        'thumb' => false,
+        'items' => 
+        array (
+          1 => 
+          array (
+            'type' => 'text',
+            'text' => '',
+            'alt' => '',
+            'videoType' => 'html5',
+            'link' => 
+            array (
+              'type' => '',
+              'id' => '',
+              'href' => '',
+              'name' => '',
+              'total' => NULL,
+              'attrs' => 
+              array (
+              ),
+              'classes' => 
+              array (
+              ),
+            ),
+            'imageDimensions' => 
+            array (
+              'width' => NULL,
+              'height' => NULL,
+              'resize' => 'fill',
+            ),
+            'id' => '26-3-1',
+            'classes' => 
+            array (
+              0 => 'module-subitem',
+              1 => 'module-subitem-1',
+              2 => 'ms-layer',
+              3 => 'ms-layer-text',
+              'btn' => false,
+              'no-show-effect' => false,
+              'ms-caption' => true,
+            ),
+            'data' => 
+            array (
+              0 => 'data-resize="true"',
+              1 => 'data-origin="ml"',
+              2 => 'data-parallax="0"',
+              3 => 'data-type="text"',
+              4 => 'data-position="normal"',
+              5 => 'data-offset-x="40"',
+              6 => 'data-offset-y="-50"',
+              7 => 'data-effect="bottom(400)"',
+              8 => 'data-delay=""',
+              9 => 'data-duration="800"',
+              10 => 'data-ease="easeOutQuart"',
+              11 => 'data-hide-effect="fade"',
+              12 => 'data-hide-delay="0"',
+              13 => 'data-hide-duration="0"',
+            ),
+          ),
+        ),
+      ),
+    ),
+    'first_image2x' => 'http://localhost/image/cache/placeholder-1880x492w.png',
+  ),
+);

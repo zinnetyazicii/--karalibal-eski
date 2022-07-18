@@ -1,0 +1,75 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "New Slider"
+  },
+  "status": {
+    "type": "Status"
+  },
+  "schedule": {
+    "type": "Range",
+    "php": true
+  },
+  "imageDimensions": {
+    "type": "ImageDimensions",
+    "php": true
+  },
+  "gridDimensions": {
+    "type": "InputPair"
+  },
+  "autoHeight": {
+    "type": "Toggle"
+  },
+  "transition": {
+    "type": "Select",
+    "value": "Fade",
+    "php": true
+  },
+  "transitionSpeed": {
+    "type": "Input",
+    "value": "1000",
+    "php": true
+  },
+  "transitionDelay": {
+    "type": "Input",
+    "value": "4000",
+    "php": true
+  },
+  "autoplay": {
+    "type": "Toggle"
+  },
+  "pauseOnHover": {
+    "type": "Toggle"
+  },
+  "arrows": {
+    "type": "Toggle"
+  },
+  "bullets": {
+    "type": "Toggle"
+  },
+  "thumbnails": {
+    "type": "Toggle",
+    "value": "false",
+    "php": true
+  },
+  "thumbnailsLimit": {
+    "type": "Input",
+    "value": "5"
+  },
+  "thumbnailsDimensions": {
+    "type": "ImageDimensions",
+    "value": {
+      "width": "75",
+      "height": "75",
+      "resize": "fill"
+    },
+    "php": true
+  },
+  "touch": {
+    "type": "Toggle"
+  },
+  "timer": {
+    "type": "Toggle",
+    "value": "false"
+  }
+}

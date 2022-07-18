@@ -1,0 +1,80 @@
+{{ header }}
+<ul class="breadcrumb">
+  {% for breadcrumb in breadcrumbs %}
+  <li><a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a></li>
+  {% endfor %}
+</ul>
+{% if j3.settings.get('pageTitlePosition') == 'top' %}
+  <h1 class="title page-title"><span>{{ heading_title }}</span></h1>
+{% endif %}
+{{ j3.loadController('journal3/layout', 'top') }}
+<div id="account-account" class="container">
+  {% if success %}
+  <div class="alert alert-success alert-dismissible"><i class="fa fa-check-circle"></i> {{ success }}</div>
+  {% endif %}
+  <div class="row">{{ column_left }}
+    {% if column_left and column_right %}
+    {% set class = 'col-sm-6' %}
+    {% elseif column_left or column_right %}
+    {% set class = 'col-sm-9' %}
+    {% else %}
+    {% set class = 'col-sm-12' %}
+    {% endif %}
+    <div id="content" class="account-page {{ class }}">
+      {% if j3.settings.get('pageTitlePosition') == 'default' %}
+        <h1 class="title page-title">{{ heading_title }}</h1>
+      {% endif %}
+      {{ content_top }}
+      <div class="my-account">
+        <h2 class="title">{{ text_my_account }}</h2>
+        <ul class="list-unstyled account-list">
+          <li class="edit-info"><a href="{{ edit }}">{{ text_edit }}</a></li>
+          <li class="edit-pass"><a href="{{ password }}">{{ text_password }}</a></li>
+          <li class="edit-address"><a href="{{ address }}">{{ text_address }}</a></li>
+          <li class="edit-wishlist"><a href="{{ wishlist }}">{{ text_wishlist }}</a></li>
+        </ul>
+      </div>
+      {% if credit_cards %}
+        <div class="my-cards">
+          <h2 class="title">{{ text_credit_card }}</h2>
+          <ul class="list-unstyled account-list">
+            {% for credit_card in credit_cards %}
+              <li><a href="{{ credit_card.href }}">{{ credit_card.name }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endif %}
+      <div class="my-orders">
+        <h2 class="title">{{ text_my_orders }}</h2>
+        <ul class="list-unstyled account-list">
+          <li class="edit-order"><a href="{{ order }}">{{ text_order }}</a></li>
+          <li class="edit-downloads"><a href="{{ download }}">{{ text_download }}</a></li>
+          {% if reward %}
+            <li class="edit-rewards"><a href="{{ reward }}">{{ text_reward }}</a></li>
+          {% endif %}
+          <li class="edit-returns"><a href="{{ return }}">{{ text_return }}</a></li>
+          <li class="edit-transactions"><a href="{{ transaction }}">{{ text_transaction }}</a></li>
+          <li class="edit-recurring"><a href="{{ recurring }}">{{ text_recurring }}</a></li>
+        </ul>
+      </div>
+      <div class="my-affiliates">
+        <h2 class="title">{{ text_my_affiliate }}</h2>
+        <ul class="list-unstyled account-list">
+          {% if not tracking %}
+            <li class="affiliate-add"><a href="{{ affiliate }}">{{ text_affiliate_add }}</a></li>
+          {% else %}
+            <li class="affiliate-edit"><a href="{{ affiliate }}">{{ text_affiliate_edit }}</a></li>
+            <li class="affiliate-track"><a href="{{ tracking }}">{{ text_tracking }}</a></li>
+          {% endif %}
+        </ul>
+      </div>
+      <div class="my-newsletter">
+        <h2 class="title">{{ text_my_newsletter }}</h2>
+        <ul class="list-unstyled account-list">
+          <li><a href="{{ newsletter }}">{{ text_newsletter }}</a></li>
+        </ul>
+      </div>
+      {{ content_bottom }}</div>
+    {{ column_right }}</div>
+</div>
+{{ footer }}

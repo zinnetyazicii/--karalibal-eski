@@ -1,0 +1,48 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "New Blog Tags "
+  },
+  "status": {
+    "type": "Status"
+  },
+  "schedule": {
+    "type": "Range",
+    "php": true
+  },
+  "title": {
+    "type": "InputLang",
+    "php": true
+  },
+  "moduleTitle": {
+    "type": "Variable",
+    "variable": "title",
+    "selector_prefix": ".module-blog_tags-%s .title.module-title"
+  },
+  "limit": {
+    "type": "Input",
+    "value": "10"
+  },
+  "tagsStyle": {
+    "type": "Variable",
+    "variable": "tags",
+    "selector_prefix": ".module-blog_tags-%s"
+  },
+  "titleStyle": {
+    "type": "Variable",
+    "variable": "title",
+    "selector_prefix": ".module-blog_tags-%s .module-title"
+  },
+  "display": {
+    "type": "Radio",
+    "value": "default",
+    "rules": {
+      "default": {
+        ".module-blog_tags-%s .tags a": "flex-grow: 0;  text-align: initial"
+      },
+      "stretch": {
+        ".module-blog_tags-%s .tags a": "flex-grow: 1;  text-align: center"
+      }
+    }
+  }
+}

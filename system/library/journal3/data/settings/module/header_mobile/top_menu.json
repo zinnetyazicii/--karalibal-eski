@@ -1,0 +1,12 @@
+{
+  "mobileTopMenuItem": {
+    "type": "Variable",
+    "variable": "menu",
+    "selector_prefix": ".mobile-header-active .top-menu"
+  },
+  "mobileDropdownItem": {
+    "type": "Variable",
+    "variable": "dropdown",
+    "selector_prefix": ".mobile-header-active .top-menu"
+  }
+}

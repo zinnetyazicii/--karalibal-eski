@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <atom:link href="{{ feed_link }}" rel="self" type="application/rss+xml"/>
+    <title>{{ title }}</title>
+    <link>{{ blog_link }}</link>
+    <description>{{ meta_description }}</description>
+
+    {% for post in posts %}
+      <item>
+        <title>{{ post.name }}</title>
+        {% if post.author %}
+          <author>{{ post.author }}</author>
+        {% endif %}
+        <pubDate>{{ post.date }}</pubDate>
+        <link>{{ post.href }}</link>
+        <guid>{{ post.href }}</guid>
+        <description>
+          <![CDATA[
+          {% if post.thumb %}
+            <p><img src="{{ post.thumb }}" alt="{{ post.name }}"/></p>
+          {% endif %}
+          {{ post.description }}
+          <a href="{{ post.href }}">Read More</a>
+          ]]>
+        </description>
+      </item>
+    {% endfor %}
+
+  </channel>
+</rss>

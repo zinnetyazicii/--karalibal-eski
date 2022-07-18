@@ -1,0 +1,32 @@
+<div class="{{ j3.classes(classes) }}">
+  <div class="module-body">
+    {% for item in items %}
+      <div class="{{ j3.classes(item.classes) }}">
+        {% if item.link.href %}
+          <a href="{{ item.link.href }}" class="info-block" {{ j3.linkAttrs(item.link) }}>
+            {% if item.type == 'image' %}
+              <img src="{{ item.image }}" {% if item.image2x %} srcset="{{ item.image }} 1x, {{ item.image2x }} 2x" {% endif %} width="{{ imageDimensions.width }}" height="{{ imageDimensions.height }}" alt="{{ item.title }}" class="info-block-img"/>
+            {% endif %}
+            <div class="info-block-content">
+              <div class="info-block-title">{{ item.title }}</div>
+              <div class="info-block-text">{{ item.content }}</div>
+            </div>
+            {% if item.link.total is not null %}
+              <span class="count-badge">{{ item.link.total }}</span>
+            {% endif %}
+          </a>
+        {% else %}
+          <div class="info-block">
+            {% if item.type == 'image' %}
+              <img src="{{ item.image }}" {% if item.image2x %} srcset="{{ item.image }} 1x, {{ item.image2x }} 2x" {% endif %} width="{{ imageDimensions.width }}" height="{{ imageDimensions.height }}" alt="{{ item.title }}" class="info-block-img"/>
+            {% endif %}
+            <div class="info-block-content">
+              <div class="info-block-title">{{ item.title }}</div>
+              <div class="info-block-text">{{ item.content }}</div>
+            </div>
+          </div>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+</div>

@@ -1,0 +1,62 @@
+<div class="{{ j3.classes(classes) }}" style="background-image:url('{{ first_image }}')">
+  <img src="{{ first_image }}" alt="{{ first_alt }}">
+  {#<img src="{{ first_image }}" alt="{{ first_alt }}" class="img-2">#}
+
+  <div class="master-slider ms-skin-minimal" data-options='{{ options|json_encode(constant('JSON_FORCE_OBJECT')) }}' {% if parallaxMode %}data-parallax="{{ parallax }}"{% endif %}>
+    {% for item in items %}
+      <div class="{{ j3.classes(item.classes) }}">
+        <img src="{{ item.image }}" {% if item.image2x %} srcset="{{ item.image }} 1x, {{ item.image2x }} 2x" {% endif %} alt="{{ item.alt }}" width="{{ options.width }}" height="{{ options.height }}"/>
+
+        {% if thumbnails and item.thumb %}
+          <img src="{{ item.thumb }}" alt="{{ item.alt }}" class="ms-thumb"/>
+        {% endif %}
+
+        {% if item.link.href %}
+          <a href="{{ item.link.href }}"></a>
+        {% endif %}
+
+        {% if item.type == 'video' %}
+          {% if item.videoType == 'html5' %}
+            <video data-autopause="true">
+              {% for type, src in item.videoSrc %}
+                <source src="{{ src }}" type="video/{{ type }}"/>
+              {% endfor %}
+            </video>
+          {% elseif item.videoType == 'youtube' %}
+            <a href="https://www.youtube.com/embed/{{ item.videoSrc }}?hd=1&wmode=opaque&controls=1&showinfo=0&autoplay=1" data-type="video"></a>
+          {% elseif item.videoType == 'vimeo' %}
+            <a href="https://player.vimeo.com/video/{{ item.videoSrc }}" data-type="video"></a>
+          {% endif %}
+        {% endif %}
+
+        {% for subitem in item.items %}
+          {% if subitem.type == 'text' %}
+            <div class="{{ j3.classes(subitem.classes) }}" {{ subitem.data|join(' ') }}>{{ subitem.text }}</div>
+          {% elseif subitem.type == 'hotspot' %}
+            <div class="{{ j3.classes(subitem.classes) }}" {{ subitem.data|join(' ') }}><div class="product-tt">{{ subitem.text }}</div></div>
+          {% elseif subitem.type == 'shape' %}
+            <img class="{{ j3.classes(subitem.classes) }}" {{ subitem.data|join(' ') }} src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="{{ subitem.alt }}"/>
+          {% elseif subitem.type == 'button' %}
+            <a class="{{ j3.classes(subitem.classes) }}" {{ subitem.data|join(' ') }} {% if subitem.link.href %}href="{{ subitem.link.href }}"{% endif %}><span>{{ subitem.text }}</span></a>
+          {% elseif subitem.type == 'image' %}
+            <img class="{{ j3.classes(subitem.classes) }}" {{ subitem.data|join(' ') }} src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="{{ subitem.image }}" alt="{{ subitem.alt }}"/>
+          {% elseif subitem.type == 'video' %}
+            <div class="{{ j3.classes(subitem.classes) }}" {{ subitem.data|join(' ') }}>
+              {% if subitem.videoType == 'html5' %}
+                <video controls>
+                  {% for type, src in subitem.videoSrc %}
+                    <source src="{{ src }}" type="video/{{ type }}"/>
+                  {% endfor %}
+                </video>
+              {% elseif subitem.videoType == 'youtube' %}
+                <iframe src="https://www.youtube.com/embed/{{ subitem.videoSrc }}?hd=1&wmode=opaque&controls=1&showinfo=0"></iframe>
+              {% elseif subitem.videoType == 'vimeo' %}
+                <iframe src="https://player.vimeo.com/video/{{ subitem.videoSrc }}"></iframe>
+              {% endif %}
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    {% endfor %}
+  </div>
+</div>

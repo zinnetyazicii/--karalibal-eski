@@ -1,0 +1,1198 @@
+2022-03-08 9:40:17 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: if (is_file($file)) {
+LINE: 13
+----------------------------------------------------------------
+MOD: Journal Theme
+
+FILE: system/library/cache/file.php
+CODE: unlink($file);
+LINE: 16
+LINE: 67
+
+FILE: system/engine/router.php
+CODE: while
+LINE: 121
+
+FILE: catalog/controller/startup/startup.php
+CODE: $this->registry->set('url', new Url($this->config->get('config_url'), $this->config->get('config_ssl')));
+LINE: 59
+
+FILE: (sub modification) catalog/controller/startup/startup.php
+CODE: $languages = $this->model_localisation_language->getLanguages();
+LINE: 71
+
+FILE: (sub modification) system/engine/router.php
+CODE: self::$IS_JOURNAL = $config->get('config_template') === 'journal2' || $config->get('theme_default_directory') === 'journal2';
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/controller/event/theme.php
+CODE: if (is_file(DIR_TEMPLATE . $theme . '/template/' . $view . '.tpl')) {
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: admin/controller/setting/setting.php
+CODE: $theme = basename($this->request->get['theme']);
+LINE: 1002
+
+FILE: catalog/controller/common/maintenance.php
+CODE: $data['header'] = $this->load->controller('common/header');
+LINE: 24
+CODE: $data['footer'] = $this->load->controller('common/footer');
+LINE: 25
+
+FILE: system/engine/event.php
+CODE: public function register($trigger, Action $action, $priority = 0) {
+LINE: 41
+
+FILE: system/library/template.php
+CODE: public function render
+LINE: 57
+
+FILE: (sub modification) catalog/controller/event/theme.php
+CODE: if ($template) {
+NOT FOUND - OPERATIONS ABORTED!
+
+FILE: (sub modification) system/library/template/twig.php
+CODE: $loader = new \Twig\Loader\ArrayLoader
+LINE: 51
+
+FILE: system/library/cache.php
+CODE: public function delete($key) {
+LINE: 69
+
+FILE: admin/controller/common/header.php
+CODE: public function index() {
+LINE: 5
+
+FILE: admin/controller/common/column_left.php
+CODE: // Catalog
+LINE: 26
+
+FILE: admin/controller/error/permission.php
+CODE: $data['breadcrumbs'] = array();
+LINE: 17
+
+FILE: admin/controller/error/not_found.php
+CODE: $data['breadcrumbs'] = array();
+LINE: 17
+
+FILE: system/library/response.php
+CODE: if ($this->output) {
+LINE: 119
+
+FILE: catalog/model/tool/image.php
+CODE: public function resize($filename, $width, $height) {
+LINE: 2
+CODE: (int)$height
+LINE: 10
+CODE: $image->resize($width, $height);
+LINE: 33
+
+FILE: (sub modification) catalog/model/tool/image.php
+CODE: if ($this->request->server['HTTPS']) {
+LINE: 47
+
+FILE: (sub modification) catalog/model/tool/image.php
+CODE: $image->save(DIR_IMAGE . $image_new);
+LINE: 41
+CODE: copy(DIR_IMAGE . $image_old, DIR_IMAGE . $image_new);
+LINE: 50
+
+FILE: (sub modification) catalog/model/tool/image.php
+CODE: $image_new = str_replace(' ', '%20', $image_new);
+LINE: 61
+
+FILE: catalog/controller/common/footer.php
+CODE: public function index() {
+LINE: 19
+
+FILE: catalog/controller/common/column_left.php
+CODE: public function index() {
+LINE: 7
+
+FILE: catalog/controller/common/column_right.php
+CODE: public function index() {
+LINE: 7
+
+FILE: catalog/controller/common/content_top.php
+CODE: public function index() {
+LINE: 7
+
+FILE: catalog/controller/common/content_bottom.php
+CODE: public function index() {
+LINE: 7
+
+FILE: catalog/controller/common/cart.php
+CODE: foreach ($this->cart->getProducts() as $product) {
+LINE: 62
+
+FILE: catalog/controller/checkout/cart.php
+CODE: $json['total'] = sprintf($this->language->get('text_items'), $this->cart->countProducts() + (isset($this->session->data['vouchers']) ? count($this->session->data['vouchers']) : 0), $this->currency->format($total, $this->session->data['currency']));
+LINE: 387
+LINE: 501
+
+FILE: catalog/controller/account/wishlist.php
+CODE: $json['success'] = sprintf($this->language->get('text_success'), $this->url->link('product/product', 'product_id=' . (int)$this->request->post['product_id']), $product_info['name'], $this->url->link('account/wishlist'));
+LINE: 143
+CODE: $json['success'] = sprintf($this->language->get('text_login'), $this->url->link('account/login', '', true), $this->url->link('account/register', '', true), $this->url->link('product/product', 'product_id=' . (int)$this->request->post['product_id']), $product_info['name'], $this->url->link('account/wishlist'));
+LINE: 161
+
+FILE: catalog/controller/product/compare.php
+CODE: $json['success'] = sprintf($this->language->get('text_success'), $this->url->link('product/product', 'product_id=' . $this->request->post['product_id']), $product_info['name'], $this->url->link('product/compare'));
+LINE: 173
+
+FILE: (sub modification) catalog/controller/product/compare.php
+CODE: $image = false;
+LINE: 60
+
+FILE: (sub modification) catalog/controller/checkout/cart.php
+CODE: $json['success'] = sprintf($this->language->get('text_success'), $this->url->link('product/product', 'product_id=' . $this->request->post['product_id']), $product_info['name'], $this->url->link('checkout/cart'));
+LINE: 329
+CODE: $json['redirect'] = str_replace('&amp;', '&', $this->url->link('product/product', 'product_id=' . $this->request->post['product_id']));
+LINE: 403
+
+FILE: catalog/controller/product/catalog.php
+CODE: $results = $this->model_catalog_product->getProduct
+LINE: 112
+
+FILE: catalog/controller/product/category.php
+CODE: $results = $this->model_catalog_product->getProduct
+LINE: 174
+
+FILE: catalog/controller/product/manufacturer.php
+CODE: $results = $this->model_catalog_product->getProduct
+LINE: 163
+
+FILE: catalog/controller/product/search.php
+CODE: $results = $this->model_catalog_product->getProduct
+LINE: 200
+
+FILE: catalog/controller/product/special.php
+CODE: $results = $this->model_catalog_product->getProduct
+LINE: 92
+
+FILE: (sub modification) catalog/controller/product/catalog.php
+CODE: $data['products'][] = array(
+LINE: 162
+
+FILE: (sub modification) catalog/controller/product/category.php
+CODE: $data['products'][] = array(
+LINE: 226
+
+FILE: (sub modification) catalog/controller/product/manufacturer.php
+CODE: $data['products'][] = array(
+LINE: 215
+
+FILE: (sub modification) catalog/controller/product/search.php
+CODE: $data['products'][] = array(
+LINE: 252
+
+FILE: (sub modification) catalog/controller/product/special.php
+CODE: $data['products'][] = array(
+LINE: 144
+
+FILE: (sub modification) catalog/controller/product/catalog.php
+CODE: $data['products'][] = array(
+LINE: 178
+
+FILE: (sub modification) catalog/controller/product/category.php
+CODE: $data['products'][] = array(
+LINE: 242
+
+FILE: (sub modification) catalog/controller/product/manufacturer.php
+CODE: $data['products'][] = array(
+LINE: 231
+
+FILE: (sub modification) catalog/controller/product/search.php
+CODE: $data['products'][] = array(
+LINE: 268
+
+FILE: (sub modification) catalog/controller/product/special.php
+CODE: $data['products'][] = array(
+LINE: 160
+
+FILE: (sub modification) catalog/controller/product/compare.php
+CODE: $data['products'][$product_id] = array(
+LINE: 102
+
+FILE: (sub modification) catalog/controller/product/category.php
+CODE: $data['thumb'] = $this->model_tool_image->resize($category_info['image'], $this->config->get($this->config->get('config_theme') . '_image_category_width'), $this->config->get($this->config->get('config_theme') . '_image_category_height'));
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: (sub modification) catalog/controller/product/category.php
+CODE: $data['thumb'] = $this->model_tool_image->resize($category_info['image'], $this->config->get('theme_' . $this->config->get('config_theme') . '_image_category_width'), $this->config->get('theme_' . $this->config->get('config_theme') . '_image_category_height'));
+LINE: 107
+
+FILE: (sub modification) catalog/controller/product/category.php
+CODE: $image = $this->model_tool_image->resize($result['image'], $this->config->get($this->config->get('config_theme') . '_image_product_width'), $this->config->get($this->config->get('config_theme') . '_image_product_height'));
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: (sub modification) catalog/controller/product/manufacturer.php
+CODE: $image = $this->model_tool_image->resize($result['image'], $this->config->get($this->config->get('config_theme') . '_image_product_width'), $this->config->get($this->config->get('config_theme') . '_image_product_height'));
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: (sub modification) catalog/controller/product/search.php
+CODE: $image = $this->model_tool_image->resize($result['image'], $this->config->get($this->config->get('config_theme') . '_image_product_width'), $this->config->get($this->config->get('config_theme') . '_image_product_height'));
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: (sub modification) catalog/controller/product/special.php
+CODE: $image = $this->model_tool_image->resize($result['image'], $this->config->get($this->config->get('config_theme') . '_image_product_width'), $this->config->get($this->config->get('config_theme') . '_image_product_height'));
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: (sub modification) catalog/controller/product/category.php
+CODE: $image = $this->model_tool_image->resize($result['image'], $this->config->get('theme_' . $this->config->get('config_theme') . '_image_product_width'), $this->config->get('theme_' . $this->config->get('config_theme') . '_image_product_height'));
+LINE: 183
+
+FILE: (sub modification) catalog/controller/product/manufacturer.php
+CODE: $image = $this->model_tool_image->resize($result['image'], $this->config->get('theme_' . $this->config->get('config_theme') . '_image_product_width'), $this->config->get('theme_' . $this->config->get('config_theme') . '_image_product_height'));
+LINE: 167
+
+FILE: (sub modification) catalog/controller/product/search.php
+CODE: $image = $this->model_tool_image->resize($result['image'], $this->config->get('theme_' . $this->config->get('config_theme') . '_image_product_width'), $this->config->get('theme_' . $this->config->get('config_theme') . '_image_product_height'));
+LINE: 204
+
+FILE: (sub modification) catalog/controller/product/special.php
+CODE: $image = $this->model_tool_image->resize($result['image'], $this->config->get('theme_' . $this->config->get('config_theme') . '_image_product_width'), $this->config->get('theme_' . $this->config->get('config_theme') . '_image_product_height'));
+LINE: 96
+
+FILE: (sub modification) catalog/controller/product/category.php
+CODE: $results = $this->model_catalog_category->getCategories($category_id);
+LINE: 140
+CODE: $this->load->model('tool/image');
+LINE: 12
+CODE: 'name' => $result['name'] . ($this->config->get('config_product_count') ? ' (' . $this->model_catalog_product->getTotalProducts($filter_data) . ')' : ''),
+LINE: 164
+
+FILE: (sub modification) catalog/controller/product/catalog.php
+CODE: $data['text_compare'] = sprintf($this->language->get('text_compare'), (isset($this->session->data['compare']) ? count($this->session->data['compare']) : 0));
+LINE: 49
+
+FILE: (sub modification) catalog/controller/product/category.php
+CODE: $data['text_compare'] = sprintf($this->language->get('text_compare'), (isset($this->session->data['compare']) ? count($this->session->data['compare']) : 0));
+LINE: 101
+
+FILE: (sub modification) catalog/controller/product/manufacturer.php
+CODE: $data['text_compare'] = sprintf($this->language->get('text_compare'), (isset($this->session->data['compare']) ? count($this->session->data['compare']) : 0));
+LINE: 135
+
+FILE: (sub modification) catalog/controller/product/search.php
+CODE: $data['text_compare'] = sprintf($this->language->get('text_compare'), (isset($this->session->data['compare']) ? count($this->session->data['compare']) : 0));
+LINE: 131
+
+FILE: (sub modification) catalog/controller/product/special.php
+CODE: $data['text_compare'] = sprintf($this->language->get('text_compare'), (isset($this->session->data['compare']) ? count($this->session->data['compare']) : 0));
+LINE: 65
+
+FILE: (sub modification) catalog/controller/product/compare.php
+CODE: $json['total'] = sprintf($this->language->get('text_compare'), (isset($this->session->data['compare']) ? count($this->session->data['compare']) : 0));
+LINE: 184
+
+FILE: catalog/controller/product/product.php
+CODE: public function index() {
+LINE: 17
+
+FILE: (sub modification) catalog/controller/product/product.php
+CODE: $results = $this->model_catalog_product->getProductImages
+LINE: 315
+
+FILE: (sub modification) catalog/controller/product/product.php
+CODE: if ($product_info) {
+LINE: 291
+
+FILE: (sub modification) catalog/controller/product/product.php
+CODE: $data['review_status'] = $this->config->get('config_review_status');
+LINE: 503
+
+FILE: (sub modification) catalog/controller/product/product.php
+CODE: 'image'                   => $this->model_tool_image->resize($option_value['image'], 50, 50),
+LINE: 474
+
+FILE: (sub modification) catalog/controller/product/manufacturer.php
+CODE: $this->load->model('tool/image');
+LINE: 66
+CODE: $data['categories'][$key]['manufacturer'][] = array(
+LINE: 39
+
+FILE: (sub modification) catalog/controller/account/wishlist.php
+CODE: $image = false;
+LINE: 64
+
+FILE: (sub modification) catalog/controller/account/wishlist.php
+CODE: 'stock'      => $stock,
+LINE: 100
+
+FILE: catalog/controller/checkout/checkout.php
+CODE: $data['breadcrumbs'] = array();
+LINE: 44
+
+FILE: (sub modification) catalog/controller/checkout/cart.php
+CODE: unset($this->session->data['shipping_method']);
+LINE: 338
+LINE: 436
+LINE: 468
+
+FILE: (sub modification) system/engine/loader.php
+CODE: $output = $action->execute($this->registry, array(&$data));
+LINE: 47
+
+FILE: (sub modification) system/library/response.php
+CODE: echo $output;
+LINE: 133
+
+FILE: system/library/db.php
+CODE: class DB {
+LINE: 17
+CODE: return $this->adaptor->query($sql
+LINE: 74
+
+FILE: (sub modification) system/library/cache.php
+CODE: return $this->adaptor->get($key);
+LINE: 40
+
+FILE: (sub modification) system/library/response.php
+CODE: echo $output;
+LINE: 166
+
+FILE: catalog/controller/common/search.php
+CODE: public function index() {
+LINE: 45
+
+FILE: catalog/controller/common/header.php
+CODE: $categories = $this->model_catalog_category->getCategories(0);
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/controller/common/menu.php
+CODE: $categories = $this->model_catalog_category->getCategories(0);
+LINE: 12
+
+FILE: (sub modification) catalog/controller/common/footer.php
+CODE: foreach ($this->model_catalog_information->getInformations() as $result) {
+LINE: 26
+
+FILE: (sub modification) catalog/controller/product/product.php
+CODE: $results = $this->model_catalog_product->getProductRelated($this->request->get['product_id']);
+LINE: 535
+
+FILE: (sub modification) catalog/controller/product/catalog.php
+CODE: $sort = 'p.sort_order';
+LINE: 15
+CODE: $order = 'ASC';
+LINE: 27
+
+FILE: (sub modification) catalog/controller/product/category.php
+CODE: $sort = 'p.sort_order';
+LINE: 23
+CODE: $order = 'ASC';
+LINE: 35
+
+FILE: (sub modification) catalog/controller/product/manufacturer.php
+CODE: $sort = 'p.sort_order';
+LINE: 80
+CODE: $order = 'ASC';
+LINE: 92
+
+FILE: (sub modification) catalog/controller/product/search.php
+CODE: $sort = 'p.sort_order';
+LINE: 46
+CODE: $order = 'ASC';
+LINE: 58
+
+FILE: (sub modification) catalog/controller/product/catalog.php
+CODE: $product_total = $this->model_catalog_product->getTotalProducts($filter_data);
+LINE: 114
+CODE: $results = $this->model_catalog_product->getProducts($filter_data);
+LINE: 132
+CODE: $data['sorts'] = array();
+LINE: 245
+CODE: sort($limits);
+LINE: 322
+CODE: $pagination = new Pagination();
+LINE: 351
+
+FILE: (sub modification) catalog/controller/product/category.php
+CODE: $product_total = $this->model_catalog_product->getTotalProducts($filter_data);
+LINE: 199
+CODE: $results = $this->model_catalog_product->getProducts($filter_data);
+LINE: 217
+CODE: $data['sorts'] = array();
+LINE: 340
+CODE: sort($limits);
+LINE: 421
+CODE: $pagination = new Pagination();
+LINE: 454
+
+FILE: (sub modification) catalog/controller/product/manufacturer.php
+CODE: $product_total = $this->model_catalog_product->getTotalProducts($filter_data);
+LINE: 173
+CODE: $results = $this->model_catalog_product->getProducts($filter_data);
+LINE: 191
+CODE: $data['sorts'] = array();
+LINE: 310
+CODE: sort($limits);
+LINE: 387
+CODE: $pagination = new Pagination();
+LINE: 416
+
+FILE: (sub modification) catalog/controller/product/search.php
+CODE: $product_total = $this->model_catalog_product->getTotalProducts($filter_data);
+LINE: 202
+CODE: $results = $this->model_catalog_product->getProducts($filter_data);
+LINE: 220
+CODE: $data['sorts'] = array();
+LINE: 359
+CODE: sort($limits);
+LINE: 456
+CODE: $pagination = new Pagination();
+LINE: 505
+
+FILE: (sub modification) catalog/controller/product/special.php
+CODE: $product_total = $this->model_catalog_product->getTotalProductSpecials();
+LINE: 82
+CODE: $results = $this->model_catalog_product->getProductSpecials($filter_data);
+LINE: 105
+CODE: $data['sorts'] = array();
+LINE: 224
+CODE: foreach($limits as $value) {
+LINE: 303
+CODE: $pagination = new Pagination();
+LINE: 330
+
+FILE: system/library/pagination.php
+CODE: '">' . $this->text_prev . '
+LINE: 54
+LINE: 56
+CODE: '">' . $this->text_next . '
+LINE: 93
+
+FILE: (sub modification) catalog/controller/product/product.php
+CODE: $this->model_catalog_product->updateViewed($this->request->get['product_id']);
+LINE: 608
+
+FILE: (sub modification) catalog/controller/product/product.php
+CODE: $data['stock'] = $this->language->get('text_instock');
+LINE: 380
+
+FILE: catalog/controller/account/register.php
+CODE: $data['action'] = $this->url->link('account/register', '', true);
+LINE: 120
+CODE: return !$this->error;
+LINE: 356
+
+FILE: catalog/controller/account/edit.php
+CODE: $data['back'] = $this->url->link('account/account', '', true);
+LINE: 181
+CODE: return !$this->error;
+LINE: 274
+
+FILE: catalog/controller/account/address.php
+CODE: $data['back'] = $this->url->link('account/address', '', true);
+LINE: 447
+CODE: return !$this->error;
+LINE: 546
+LINE: 597
+
+FILE: catalog/controller/account/login.php
+CODE: $this->response->redirect
+LINE: 51
+LINE: 68
+LINE: 115
+LINE: 129
+CODE: return !$this->error;
+LINE: 242
+
+FILE: (sub modification) catalog/controller/account/register.php
+CODE: $this->response->redirect
+LINE: 18
+LINE: 54
+CODE: return !$this->error;
+LINE: 392
+
+FILE: catalog/controller/startup/seo_url.php
+CODE: if ($query->num_rows) {
+LINE: 44
+CODE: if ($url[0] == 'product_id') {
+LINE: 58
+CODE: if (!isset($this->request->get['route'])) {
+LINE: 97
+CODE: public function rewrite($link) {
+LINE: 119
+CODE: $key == 'path'
+LINE: 158
+CODE: if ($url) {
+LINE: 187
+
+FILE: catalog/controller/extension/feed/google_sitemap.php
+CODE: $output .= '</urlset>';
+LINE: 63
+
+FILE: catalog/controller/account/order.php
+CODE: $data['products'][] = array(
+LINE: 279
+
+FILE: (sub modification) catalog/controller/product/catalog.php
+CODE: $page = $this->request->get['page'];
+LINE: 37
+
+FILE: (sub modification) catalog/controller/product/category.php
+CODE: $page = $this->request->get['page'];
+NOT FOUND - OPERATIONS ABORTED!
+
+FILE: (sub modification) catalog/controller/product/manufacturer.php
+CODE: $page = $this->request->get['page'];
+NOT FOUND - OPERATIONS ABORTED!
+
+FILE: (sub modification) catalog/controller/product/product.php
+CODE: $page = $this->request->get['page'];
+NOT FOUND - OPERATIONS ABORTED!
+
+FILE: (sub modification) catalog/controller/product/search.php
+CODE: $page = $this->request->get['page'];
+NOT FOUND - OPERATIONS ABORTED!
+
+FILE: (sub modification) catalog/controller/product/special.php
+CODE: $page = $this->request->get['page'];
+NOT FOUND - OPERATIONS ABORTED!
+
+FILE: catalog/controller/startup/maintenance.php
+CODE: $ignore = array(
+LINE: 15
+
+FILE: admin/controller/marketing/contact.php
+CODE: $this->load->model('sale/customer');
+NOT FOUND - OPERATION SKIPPED!
+CODE: $email_total = $this->model_sale_customer->getTotalCustomers($customer_data);
+NOT FOUND - OPERATION SKIPPED!
+CODE: $results = $this->model_sale_customer->getCustomers($customer_data);
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: (sub modification) admin/controller/marketing/contact.php
+CODE: $this->load->model('customer/customer');
+LINE: 62
+CODE: $email_total = $this->model_customer_customer->getTotalCustomers($customer_data);
+LINE: 95
+CODE: $results = $this->model_customer_customer->getCustomers($customer_data);
+LINE: 97
+----------------------------------------------------------------
+2022-03-08 9:45:08 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: if (is_file($file)) {
+LINE: 13
+----------------------------------------------------------------
+MOD: Journal Theme
+
+FILE: system/library/cache/file.php
+CODE: unlink($file);
+LINE: 16
+LINE: 67
+
+FILE: system/engine/router.php
+CODE: while
+LINE: 121
+
+FILE: catalog/controller/startup/startup.php
+CODE: $this->registry->set('url', new Url($this->config->get('config_url'), $this->config->get('config_ssl')));
+LINE: 59
+
+FILE: (sub modification) catalog/controller/startup/startup.php
+CODE: $languages = $this->model_localisation_language->getLanguages();
+LINE: 71
+
+FILE: (sub modification) system/engine/router.php
+CODE: self::$IS_JOURNAL = $config->get('config_template') === 'journal2' || $config->get('theme_default_directory') === 'journal2';
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/controller/event/theme.php
+CODE: if (is_file(DIR_TEMPLATE . $theme . '/template/' . $view . '.tpl')) {
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: admin/controller/setting/setting.php
+CODE: $theme = basename($this->request->get['theme']);
+LINE: 1002
+
+FILE: catalog/controller/common/maintenance.php
+CODE: $data['header'] = $this->load->controller('common/header');
+LINE: 24
+CODE: $data['footer'] = $this->load->controller('common/footer');
+LINE: 25
+
+FILE: system/engine/event.php
+CODE: public function register($trigger, Action $action, $priority = 0) {
+LINE: 41
+
+FILE: system/library/template.php
+CODE: public function render
+LINE: 57
+
+FILE: (sub modification) catalog/controller/event/theme.php
+CODE: if ($template) {
+NOT FOUND - OPERATIONS ABORTED!
+
+FILE: (sub modification) system/library/template/twig.php
+CODE: $loader = new \Twig\Loader\ArrayLoader
+LINE: 51
+
+FILE: system/library/cache.php
+CODE: public function delete($key) {
+LINE: 69
+
+FILE: admin/controller/common/header.php
+CODE: public function index() {
+LINE: 5
+
+FILE: admin/controller/common/column_left.php
+CODE: // Catalog
+LINE: 26
+
+FILE: admin/controller/error/permission.php
+CODE: $data['breadcrumbs'] = array();
+LINE: 17
+
+FILE: admin/controller/error/not_found.php
+CODE: $data['breadcrumbs'] = array();
+LINE: 17
+
+FILE: system/library/response.php
+CODE: if ($this->output) {
+LINE: 119
+
+FILE: catalog/model/tool/image.php
+CODE: public function resize($filename, $width, $height) {
+LINE: 2
+CODE: (int)$height
+LINE: 10
+CODE: $image->resize($width, $height);
+LINE: 33
+
+FILE: (sub modification) catalog/model/tool/image.php
+CODE: if ($this->request->server['HTTPS']) {
+LINE: 47
+
+FILE: (sub modification) catalog/model/tool/image.php
+CODE: $image->save(DIR_IMAGE . $image_new);
+LINE: 41
+CODE: copy(DIR_IMAGE . $image_old, DIR_IMAGE . $image_new);
+LINE: 50
+
+FILE: (sub modification) catalog/model/tool/image.php
+CODE: $image_new = str_replace(' ', '%20', $image_new);
+LINE: 61
+
+FILE: catalog/controller/common/footer.php
+CODE: public function index() {
+LINE: 19
+
+FILE: catalog/controller/common/column_left.php
+CODE: public function index() {
+LINE: 7
+
+FILE: catalog/controller/common/column_right.php
+CODE: public function index() {
+LINE: 7
+
+FILE: catalog/controller/common/content_top.php
+CODE: public function index() {
+LINE: 7
+
+FILE: catalog/controller/common/content_bottom.php
+CODE: public function index() {
+LINE: 7
+
+FILE: catalog/controller/common/cart.php
+CODE: foreach ($this->cart->getProducts() as $product) {
+LINE: 62
+
+FILE: catalog/controller/checkout/cart.php
+CODE: $json['total'] = sprintf($this->language->get('text_items'), $this->cart->countProducts() + (isset($this->session->data['vouchers']) ? count($this->session->data['vouchers']) : 0), $this->currency->format($total, $this->session->data['currency']));
+LINE: 387
+LINE: 501
+
+FILE: catalog/controller/account/wishlist.php
+CODE: $json['success'] = sprintf($this->language->get('text_success'), $this->url->link('product/product', 'product_id=' . (int)$this->request->post['product_id']), $product_info['name'], $this->url->link('account/wishlist'));
+LINE: 143
+CODE: $json['success'] = sprintf($this->language->get('text_login'), $this->url->link('account/login', '', true), $this->url->link('account/register', '', true), $this->url->link('product/product', 'product_id=' . (int)$this->request->post['product_id']), $product_info['name'], $this->url->link('account/wishlist'));
+LINE: 161
+
+FILE: catalog/controller/product/compare.php
+CODE: $json['success'] = sprintf($this->language->get('text_success'), $this->url->link('product/product', 'product_id=' . $this->request->post['product_id']), $product_info['name'], $this->url->link('product/compare'));
+LINE: 173
+
+FILE: (sub modification) catalog/controller/product/compare.php
+CODE: $image = false;
+LINE: 60
+
+FILE: (sub modification) catalog/controller/checkout/cart.php
+CODE: $json['success'] = sprintf($this->language->get('text_success'), $this->url->link('product/product', 'product_id=' . $this->request->post['product_id']), $product_info['name'], $this->url->link('checkout/cart'));
+LINE: 329
+CODE: $json['redirect'] = str_replace('&amp;', '&', $this->url->link('product/product', 'product_id=' . $this->request->post['product_id']));
+LINE: 403
+
+FILE: catalog/controller/product/catalog.php
+CODE: $results = $this->model_catalog_product->getProduct
+LINE: 112
+
+FILE: catalog/controller/product/category.php
+CODE: $results = $this->model_catalog_product->getProduct
+LINE: 174
+
+FILE: catalog/controller/product/manufacturer.php
+CODE: $results = $this->model_catalog_product->getProduct
+LINE: 163
+
+FILE: catalog/controller/product/search.php
+CODE: $results = $this->model_catalog_product->getProduct
+LINE: 200
+
+FILE: catalog/controller/product/special.php
+CODE: $results = $this->model_catalog_product->getProduct
+LINE: 92
+
+FILE: (sub modification) catalog/controller/product/catalog.php
+CODE: $data['products'][] = array(
+LINE: 162
+
+FILE: (sub modification) catalog/controller/product/category.php
+CODE: $data['products'][] = array(
+LINE: 226
+
+FILE: (sub modification) catalog/controller/product/manufacturer.php
+CODE: $data['products'][] = array(
+LINE: 215
+
+FILE: (sub modification) catalog/controller/product/search.php
+CODE: $data['products'][] = array(
+LINE: 252
+
+FILE: (sub modification) catalog/controller/product/special.php
+CODE: $data['products'][] = array(
+LINE: 144
+
+FILE: (sub modification) catalog/controller/product/catalog.php
+CODE: $data['products'][] = array(
+LINE: 178
+
+FILE: (sub modification) catalog/controller/product/category.php
+CODE: $data['products'][] = array(
+LINE: 242
+
+FILE: (sub modification) catalog/controller/product/manufacturer.php
+CODE: $data['products'][] = array(
+LINE: 231
+
+FILE: (sub modification) catalog/controller/product/search.php
+CODE: $data['products'][] = array(
+LINE: 268
+
+FILE: (sub modification) catalog/controller/product/special.php
+CODE: $data['products'][] = array(
+LINE: 160
+
+FILE: (sub modification) catalog/controller/product/compare.php
+CODE: $data['products'][$product_id] = array(
+LINE: 102
+
+FILE: (sub modification) catalog/controller/product/category.php
+CODE: $data['thumb'] = $this->model_tool_image->resize($category_info['image'], $this->config->get($this->config->get('config_theme') . '_image_category_width'), $this->config->get($this->config->get('config_theme') . '_image_category_height'));
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: (sub modification) catalog/controller/product/category.php
+CODE: $data['thumb'] = $this->model_tool_image->resize($category_info['image'], $this->config->get('theme_' . $this->config->get('config_theme') . '_image_category_width'), $this->config->get('theme_' . $this->config->get('config_theme') . '_image_category_height'));
+LINE: 107
+
+FILE: (sub modification) catalog/controller/product/category.php
+CODE: $image = $this->model_tool_image->resize($result['image'], $this->config->get($this->config->get('config_theme') . '_image_product_width'), $this->config->get($this->config->get('config_theme') . '_image_product_height'));
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: (sub modification) catalog/controller/product/manufacturer.php
+CODE: $image = $this->model_tool_image->resize($result['image'], $this->config->get($this->config->get('config_theme') . '_image_product_width'), $this->config->get($this->config->get('config_theme') . '_image_product_height'));
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: (sub modification) catalog/controller/product/search.php
+CODE: $image = $this->model_tool_image->resize($result['image'], $this->config->get($this->config->get('config_theme') . '_image_product_width'), $this->config->get($this->config->get('config_theme') . '_image_product_height'));
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: (sub modification) catalog/controller/product/special.php
+CODE: $image = $this->model_tool_image->resize($result['image'], $this->config->get($this->config->get('config_theme') . '_image_product_width'), $this->config->get($this->config->get('config_theme') . '_image_product_height'));
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: (sub modification) catalog/controller/product/category.php
+CODE: $image = $this->model_tool_image->resize($result['image'], $this->config->get('theme_' . $this->config->get('config_theme') . '_image_product_width'), $this->config->get('theme_' . $this->config->get('config_theme') . '_image_product_height'));
+LINE: 183
+
+FILE: (sub modification) catalog/controller/product/manufacturer.php
+CODE: $image = $this->model_tool_image->resize($result['image'], $this->config->get('theme_' . $this->config->get('config_theme') . '_image_product_width'), $this->config->get('theme_' . $this->config->get('config_theme') . '_image_product_height'));
+LINE: 167
+
+FILE: (sub modification) catalog/controller/product/search.php
+CODE: $image = $this->model_tool_image->resize($result['image'], $this->config->get('theme_' . $this->config->get('config_theme') . '_image_product_width'), $this->config->get('theme_' . $this->config->get('config_theme') . '_image_product_height'));
+LINE: 204
+
+FILE: (sub modification) catalog/controller/product/special.php
+CODE: $image = $this->model_tool_image->resize($result['image'], $this->config->get('theme_' . $this->config->get('config_theme') . '_image_product_width'), $this->config->get('theme_' . $this->config->get('config_theme') . '_image_product_height'));
+LINE: 96
+
+FILE: (sub modification) catalog/controller/product/category.php
+CODE: $results = $this->model_catalog_category->getCategories($category_id);
+LINE: 140
+CODE: $this->load->model('tool/image');
+LINE: 12
+CODE: 'name' => $result['name'] . ($this->config->get('config_product_count') ? ' (' . $this->model_catalog_product->getTotalProducts($filter_data) . ')' : ''),
+LINE: 164
+
+FILE: (sub modification) catalog/controller/product/catalog.php
+CODE: $data['text_compare'] = sprintf($this->language->get('text_compare'), (isset($this->session->data['compare']) ? count($this->session->data['compare']) : 0));
+LINE: 49
+
+FILE: (sub modification) catalog/controller/product/category.php
+CODE: $data['text_compare'] = sprintf($this->language->get('text_compare'), (isset($this->session->data['compare']) ? count($this->session->data['compare']) : 0));
+LINE: 101
+
+FILE: (sub modification) catalog/controller/product/manufacturer.php
+CODE: $data['text_compare'] = sprintf($this->language->get('text_compare'), (isset($this->session->data['compare']) ? count($this->session->data['compare']) : 0));
+LINE: 135
+
+FILE: (sub modification) catalog/controller/product/search.php
+CODE: $data['text_compare'] = sprintf($this->language->get('text_compare'), (isset($this->session->data['compare']) ? count($this->session->data['compare']) : 0));
+LINE: 131
+
+FILE: (sub modification) catalog/controller/product/special.php
+CODE: $data['text_compare'] = sprintf($this->language->get('text_compare'), (isset($this->session->data['compare']) ? count($this->session->data['compare']) : 0));
+LINE: 65
+
+FILE: (sub modification) catalog/controller/product/compare.php
+CODE: $json['total'] = sprintf($this->language->get('text_compare'), (isset($this->session->data['compare']) ? count($this->session->data['compare']) : 0));
+LINE: 184
+
+FILE: catalog/controller/product/product.php
+CODE: public function index() {
+LINE: 17
+
+FILE: (sub modification) catalog/controller/product/product.php
+CODE: $results = $this->model_catalog_product->getProductImages
+LINE: 315
+
+FILE: (sub modification) catalog/controller/product/product.php
+CODE: if ($product_info) {
+LINE: 291
+
+FILE: (sub modification) catalog/controller/product/product.php
+CODE: $data['review_status'] = $this->config->get('config_review_status');
+LINE: 503
+
+FILE: (sub modification) catalog/controller/product/product.php
+CODE: 'image'                   => $this->model_tool_image->resize($option_value['image'], 50, 50),
+LINE: 474
+
+FILE: (sub modification) catalog/controller/product/manufacturer.php
+CODE: $this->load->model('tool/image');
+LINE: 66
+CODE: $data['categories'][$key]['manufacturer'][] = array(
+LINE: 39
+
+FILE: (sub modification) catalog/controller/account/wishlist.php
+CODE: $image = false;
+LINE: 64
+
+FILE: (sub modification) catalog/controller/account/wishlist.php
+CODE: 'stock'      => $stock,
+LINE: 100
+
+FILE: catalog/controller/checkout/checkout.php
+CODE: $data['breadcrumbs'] = array();
+LINE: 44
+
+FILE: (sub modification) catalog/controller/checkout/cart.php
+CODE: unset($this->session->data['shipping_method']);
+LINE: 338
+LINE: 436
+LINE: 468
+
+FILE: (sub modification) system/engine/loader.php
+CODE: $output = $action->execute($this->registry, array(&$data));
+LINE: 47
+
+FILE: (sub modification) system/library/response.php
+CODE: echo $output;
+LINE: 133
+
+FILE: system/library/db.php
+CODE: class DB {
+LINE: 17
+CODE: return $this->adaptor->query($sql
+LINE: 74
+
+FILE: (sub modification) system/library/cache.php
+CODE: return $this->adaptor->get($key);
+LINE: 40
+
+FILE: (sub modification) system/library/response.php
+CODE: echo $output;
+LINE: 166
+
+FILE: catalog/controller/common/search.php
+CODE: public function index() {
+LINE: 45
+
+FILE: catalog/controller/common/header.php
+CODE: $categories = $this->model_catalog_category->getCategories(0);
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/controller/common/menu.php
+CODE: $categories = $this->model_catalog_category->getCategories(0);
+LINE: 12
+
+FILE: (sub modification) catalog/controller/common/footer.php
+CODE: foreach ($this->model_catalog_information->getInformations() as $result) {
+LINE: 26
+
+FILE: (sub modification) catalog/controller/product/product.php
+CODE: $results = $this->model_catalog_product->getProductRelated($this->request->get['product_id']);
+LINE: 535
+
+FILE: (sub modification) catalog/controller/product/catalog.php
+CODE: $sort = 'p.sort_order';
+LINE: 15
+CODE: $order = 'ASC';
+LINE: 27
+
+FILE: (sub modification) catalog/controller/product/category.php
+CODE: $sort = 'p.sort_order';
+LINE: 23
+CODE: $order = 'ASC';
+LINE: 35
+
+FILE: (sub modification) catalog/controller/product/manufacturer.php
+CODE: $sort = 'p.sort_order';
+LINE: 80
+CODE: $order = 'ASC';
+LINE: 92
+
+FILE: (sub modification) catalog/controller/product/search.php
+CODE: $sort = 'p.sort_order';
+LINE: 46
+CODE: $order = 'ASC';
+LINE: 58
+
+FILE: (sub modification) catalog/controller/product/catalog.php
+CODE: $product_total = $this->model_catalog_product->getTotalProducts($filter_data);
+LINE: 114
+CODE: $results = $this->model_catalog_product->getProducts($filter_data);
+LINE: 132
+CODE: $data['sorts'] = array();
+LINE: 245
+CODE: sort($limits);
+LINE: 322
+CODE: $pagination = new Pagination();
+LINE: 351
+
+FILE: (sub modification) catalog/controller/product/category.php
+CODE: $product_total = $this->model_catalog_product->getTotalProducts($filter_data);
+LINE: 199
+CODE: $results = $this->model_catalog_product->getProducts($filter_data);
+LINE: 217
+CODE: $data['sorts'] = array();
+LINE: 340
+CODE: sort($limits);
+LINE: 421
+CODE: $pagination = new Pagination();
+LINE: 454
+
+FILE: (sub modification) catalog/controller/product/manufacturer.php
+CODE: $product_total = $this->model_catalog_product->getTotalProducts($filter_data);
+LINE: 173
+CODE: $results = $this->model_catalog_product->getProducts($filter_data);
+LINE: 191
+CODE: $data['sorts'] = array();
+LINE: 310
+CODE: sort($limits);
+LINE: 387
+CODE: $pagination = new Pagination();
+LINE: 416
+
+FILE: (sub modification) catalog/controller/product/search.php
+CODE: $product_total = $this->model_catalog_product->getTotalProducts($filter_data);
+LINE: 202
+CODE: $results = $this->model_catalog_product->getProducts($filter_data);
+LINE: 220
+CODE: $data['sorts'] = array();
+LINE: 359
+CODE: sort($limits);
+LINE: 456
+CODE: $pagination = new Pagination();
+LINE: 505
+
+FILE: (sub modification) catalog/controller/product/special.php
+CODE: $product_total = $this->model_catalog_product->getTotalProductSpecials();
+LINE: 82
+CODE: $results = $this->model_catalog_product->getProductSpecials($filter_data);
+LINE: 105
+CODE: $data['sorts'] = array();
+LINE: 224
+CODE: foreach($limits as $value) {
+LINE: 303
+CODE: $pagination = new Pagination();
+LINE: 330
+
+FILE: system/library/pagination.php
+CODE: '">' . $this->text_prev . '
+LINE: 54
+LINE: 56
+CODE: '">' . $this->text_next . '
+LINE: 93
+
+FILE: (sub modification) catalog/controller/product/product.php
+CODE: $this->model_catalog_product->updateViewed($this->request->get['product_id']);
+LINE: 608
+
+FILE: (sub modification) catalog/controller/product/product.php
+CODE: $data['stock'] = $this->language->get('text_instock');
+LINE: 380
+
+FILE: catalog/controller/account/register.php
+CODE: $data['action'] = $this->url->link('account/register', '', true);
+LINE: 120
+CODE: return !$this->error;
+LINE: 356
+
+FILE: catalog/controller/account/edit.php
+CODE: $data['back'] = $this->url->link('account/account', '', true);
+LINE: 181
+CODE: return !$this->error;
+LINE: 274
+
+FILE: catalog/controller/account/address.php
+CODE: $data['back'] = $this->url->link('account/address', '', true);
+LINE: 447
+CODE: return !$this->error;
+LINE: 546
+LINE: 597
+
+FILE: catalog/controller/account/login.php
+CODE: $this->response->redirect
+LINE: 51
+LINE: 68
+LINE: 115
+LINE: 129
+CODE: return !$this->error;
+LINE: 242
+
+FILE: (sub modification) catalog/controller/account/register.php
+CODE: $this->response->redirect
+LINE: 18
+LINE: 54
+CODE: return !$this->error;
+LINE: 392
+
+FILE: catalog/controller/startup/seo_url.php
+CODE: if ($query->num_rows) {
+LINE: 44
+CODE: if ($url[0] == 'product_id') {
+LINE: 58
+CODE: if (!isset($this->request->get['route'])) {
+LINE: 97
+CODE: public function rewrite($link) {
+LINE: 119
+CODE: $key == 'path'
+LINE: 158
+CODE: if ($url) {
+LINE: 187
+
+FILE: catalog/controller/extension/feed/google_sitemap.php
+CODE: $output .= '</urlset>';
+LINE: 63
+
+FILE: catalog/controller/account/order.php
+CODE: $data['products'][] = array(
+LINE: 279
+
+FILE: (sub modification) catalog/controller/product/catalog.php
+CODE: $page = $this->request->get['page'];
+LINE: 37
+
+FILE: (sub modification) catalog/controller/product/category.php
+CODE: $page = $this->request->get['page'];
+NOT FOUND - OPERATIONS ABORTED!
+
+FILE: (sub modification) catalog/controller/product/manufacturer.php
+CODE: $page = $this->request->get['page'];
+NOT FOUND - OPERATIONS ABORTED!
+
+FILE: (sub modification) catalog/controller/product/product.php
+CODE: $page = $this->request->get['page'];
+NOT FOUND - OPERATIONS ABORTED!
+
+FILE: (sub modification) catalog/controller/product/search.php
+CODE: $page = $this->request->get['page'];
+NOT FOUND - OPERATIONS ABORTED!
+
+FILE: (sub modification) catalog/controller/product/special.php
+CODE: $page = $this->request->get['page'];
+NOT FOUND - OPERATIONS ABORTED!
+
+FILE: catalog/controller/startup/maintenance.php
+CODE: $ignore = array(
+LINE: 15
+
+FILE: admin/controller/marketing/contact.php
+CODE: $this->load->model('sale/customer');
+NOT FOUND - OPERATION SKIPPED!
+CODE: $email_total = $this->model_sale_customer->getTotalCustomers($customer_data);
+NOT FOUND - OPERATION SKIPPED!
+CODE: $results = $this->model_sale_customer->getCustomers($customer_data);
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: (sub modification) admin/controller/marketing/contact.php
+CODE: $this->load->model('customer/customer');
+LINE: 62
+CODE: $email_total = $this->model_customer_customer->getTotalCustomers($customer_data);
+LINE: 95
+CODE: $results = $this->model_customer_customer->getCustomers($customer_data);
+LINE: 97
+----------------------------------------------------------------

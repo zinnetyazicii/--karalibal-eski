@@ -1,0 +1,215 @@
+<?php $val = array (
+  'css' => '.module-blog_posts-40 .title.module-title{font-size:30px;text-align:center}.module-blog_posts-40 .title.module-title::after{content:\'\';display:block;position:relative;margin-top:20px;left:50%;right:initial;transform:translate3d(-50%,0,0)}.module-blog_posts-40 .title.module-title.page-title>span::after{content:\'\';display:block;position:relative;margin-top:20px;left:50%;right:initial;transform:translate3d(-50%,0,0)}.module-blog_posts-40 .title.module-title::after, .module-blog_posts-40 .title.module-title.page-title>span::after{width:50px;height:1px;background:rgba(239, 80, 66, 1)}.module-blog_posts-40 .swiper-container{overflow:hidden;padding-top:20px}.module-blog_posts-40 .swiper-buttons{display:none;top:50%;width:calc(100% - (-15px * 2));margin-top:-10px}.module-blog_posts-40:hover .swiper-buttons{display:block}.module-blog_posts-40 .swiper-button-prev{left:0;right:auto;transform:translate(0, -50%)}.module-blog_posts-40 .swiper-button-next{left:auto;right:0;transform:translate(0, -50%)}.module-blog_posts-40 .swiper-buttons
+div{width:35px;height:35px;background:rgba(44, 54, 64, 1);border-width:4px;border-style:solid;border-color:rgba(255, 255, 255, 1);border-radius:50%}.module-blog_posts-40 .swiper-button-disabled{opacity:0}.module-blog_posts-40 .swiper-buttons div::before{content:\'\\e408\' !important;font-family:icomoon !important;color:rgba(255, 255, 255, 1)}.module-blog_posts-40 .swiper-buttons .swiper-button-next::before{content:\'\\e409\' !important;font-family:icomoon !important;color:rgba(255, 255, 255, 1)}.module-blog_posts-40 .swiper-buttons div:not(.swiper-button-disabled):hover{background:rgba(239, 80, 66, 1)}.module-blog_posts-40 .swiper-pagination{display:block;margin-bottom:-10px;left:50%;right:auto;transform:translateX(-50%)}.module-blog_posts-40
+.swiper{padding-bottom:20px}.module-blog_posts-40 .swiper-pagination-bullet{width:8px;height:8px;background-color:rgba(226, 226, 226, 1)}.module-blog_posts-40 .swiper-pagination>span+span{margin-left:8px}.desktop .module-blog_posts-40 .swiper-pagination-bullet:hover{background-color:rgba(143, 157, 166, 1)}.module-blog_posts-40 .swiper-pagination-bullet.swiper-pagination-bullet-active{background-color:rgba(239, 80, 66, 1)}.module-blog_posts-40 .swiper-pagination>span{border-radius:50px}.module-blog_posts-40 .nav-tabs > li > a, .module-blog_posts-40 .nav-tabs > li.active > a, .module-blog_posts-40 .nav-tabs > li.active > a:hover, .module-blog_posts-40 .nav-tabs>li.active>a:focus{font-family:\'Headland One\';font-weight:700;font-size:15px;color:rgba(139, 145, 152, 1);text-transform:uppercase}.desktop .module-blog_posts-40 .nav-tabs > li:hover > a, .module-blog_posts-40 .nav-tabs>li.active>a{color:rgba(239, 80, 66, 1)}.module-blog_posts-40 .nav-tabs > li.active > a, .module-blog_posts-40 .nav-tabs > li.active > a:hover, .module-blog_posts-40 .nav-tabs>li.active>a:focus{color:rgba(51, 51, 51, 1)}.module-blog_posts-40 .nav-tabs>li{border-width:0;border-bottom-width:2px;border-style:solid;border-color:rgba(0, 0, 0, 0);flex-grow:0}.module-blog_posts-40 .nav-tabs>li.active{border-color:rgba(239, 80, 66, 1)}.module-blog_posts-40 .nav-tabs>li.active::after{display:none;border-top-width:10px}.module-blog_posts-40 .nav-tabs>li>a{justify-content:center;white-space:nowrap;padding:0px;padding-bottom:10px}.module-blog_posts-40 .nav-tabs>li>a::before{font-size:18px}.module-blog_posts-40 .nav-tabs{display:flex;justify-content:flex-start;flex-wrap:nowrap;overflow-x:auto;overflow-y:hidden;min-width:50px}.module-blog_posts-40 .nav-tabs>li:not(:last-child){margin-right:20px}.module-blog_posts-40 .mobile .nav-tabs{overflow-x:scroll}.module-blog_posts-40 .nav-tabs::-webkit-scrollbar{-webkit-appearance:none;height:1px;height:2px;width:2px}.module-blog_posts-40 .nav-tabs::-webkit-scrollbar-track{background-color:white;background-color:rgba(238, 238, 238, 1)}.module-blog_posts-40 .nav-tabs::-webkit-scrollbar-thumb{background-color:#999;background-color:rgba(239, 80, 66, 1)}.module-blog_posts-40 .tab-container::before{display:none}.module-blog_posts-40 .tab-content{padding-top:20px}.module-blog_posts-40 .tab-container{display:block}.module-blog_posts-40 .tab-container .nav-tabs{flex-direction:row}.module-blog_posts-40.module-blog_posts-grid .post-layout.swiper-slide{margin-right:25px;width:calc((100% - 2 * 25px) / 3 - 0.01px)}.module-blog_posts-40.module-blog_posts-grid .post-layout:not(.swiper-slide){padding:12.5px;width:calc(100% / 3 - 0.01px)}.one-column #content .module-blog_posts-40.module-blog_posts-grid .post-layout.swiper-slide{margin-right:20px;width:calc((100% - 2 * 20px) / 3 - 0.01px)}.one-column #content .module-blog_posts-40.module-blog_posts-grid .post-layout:not(.swiper-slide){padding:10px;width:calc(100% / 3 - 0.01px)}.two-column #content .module-blog_posts-40.module-blog_posts-grid .post-layout.swiper-slide{margin-right:20px;width:calc((100% - 1 * 20px) / 2 - 0.01px)}.two-column #content .module-blog_posts-40.module-blog_posts-grid .post-layout:not(.swiper-slide){padding:10px;width:calc(100% / 2 - 0.01px)}.side-column .module-blog_posts-40.module-blog_posts-grid .post-layout.swiper-slide{margin-right:20px;width:calc((100% - 0 * 20px) / 1 - 0.01px)}.side-column .module-blog_posts-40.module-blog_posts-grid .post-layout:not(.swiper-slide){padding:10px;width:calc(100% / 1 - 0.01px)}.module-blog_posts-40:not(.carousel-mode) .module-body>.module-item>.post-grid{margin:-10px}.module-blog_posts-40.module-blog_posts-grid .post-thumb:hover .image
+img{transform:scale(1.15)}.module-blog_posts-40.module-blog_posts-grid .post-thumb
+.caption{position:relative;bottom:auto;width:auto}.module-blog_posts-40.module-blog_posts-grid .post-thumb
+.name{display:flex;width:auto;margin-left:auto;margin-right:auto;justify-content:flex-start;margin-left:0;margin-right:auto;margin-top:15px;margin-bottom:10px}.module-blog_posts-40.module-blog_posts-grid .post-thumb .name
+a{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:14px;color:rgba(58, 71, 84, 1);font-weight:700}.module-blog_posts-40.module-blog_posts-grid .post-thumb
+.description{display:block;font-size:12px;color:rgba(139, 145, 152, 1)}.module-blog_posts-40.module-blog_posts-grid .post-thumb .button-group{display:flex;justify-content:flex-start;padding-top:20px}.module-blog_posts-40.module-blog_posts-grid .post-thumb .btn-read-more::before{display:inline-block}.module-blog_posts-40.module-blog_posts-grid .post-thumb .btn-read-more::after{display:inline-block;content:\'\\e9b1\' !important;font-family:icomoon !important}.module-blog_posts-40.module-blog_posts-grid .post-thumb .btn-read-more .btn-text{display:inline-block;padding:0
+.4em}.module-blog_posts-40.module-blog_posts-grid .post-thumb .btn-read-more.btn, .module-blog_posts-40.module-blog_posts-grid .post-thumb .btn-read-more.btn:visited{font-size:11px;color:rgba(105, 105, 115, 1);font-weight:400;text-transform:uppercase}.module-blog_posts-40.module-blog_posts-grid .post-thumb .btn-read-more.btn:hover{color:rgba(255, 255, 255, 1) !important;background:rgba(8, 39, 77, 1) !important}.module-blog_posts-40.module-blog_posts-grid .post-thumb .btn-read-more.btn:active, .module-blog_posts-40.module-blog_posts-grid .post-thumb .btn-read-more.btn:hover:active, .module-blog_posts-40.module-blog_posts-grid .post-thumb .btn-read-more.btn:focus:active{color:rgba(255, 255, 255, 1) !important;background:rgba(13, 47, 88, 1) !important;border-color:rgba(87, 154, 193, 1) !important;box-shadow:inset 0 0 5px rgba(0, 0, 0, 0.1)}.module-blog_posts-40.module-blog_posts-grid .post-thumb .btn-read-more.btn:focus{color:rgba(255, 255, 255, 1) !important;background:rgba(13, 47, 88, 1);box-shadow:inset 0 0 5px rgba(0, 0, 0, 0.1)}.module-blog_posts-40.module-blog_posts-grid .post-thumb .btn-read-more.btn{background:none;border-width:1px;border-style:solid;border-color:rgba(105, 105, 115, 1);padding:12px;padding-right:15px;padding-left:15px}.module-blog_posts-40.module-blog_posts-grid .post-thumb .btn-read-more.btn:hover, .module-blog_posts-40.module-blog_posts-grid .post-thumb .btn-read-more.btn:active:hover{border-color:rgba(8, 39, 77, 1)}.desktop .module-blog_posts-40.module-blog_posts-grid .post-thumb .btn-read-more.btn:hover{box-shadow:0 10px 40px rgba(0, 0, 0, 0.15)}.module-blog_posts-40.module-blog_posts-grid .post-thumb .btn-read-more.btn.btn.disabled::after{font-size:15px}.module-blog_posts-40.module-blog_posts-grid .post-thumb .post-stats{display:flex;color:rgba(230, 230, 230, 1);justify-content:flex-start;position:absolute;transform:translateY(-100%);width:100%;background:rgba(44, 54, 64, 0.5);padding:7px;padding-left:12px}.module-blog_posts-40.module-blog_posts-grid .post-thumb .post-stats .p-author{display:flex}.module-blog_posts-40.module-blog_posts-grid .post-thumb
+.image{display:block}.module-blog_posts-40.module-blog_posts-grid .post-thumb .p-date{display:flex}.module-blog_posts-40.module-blog_posts-grid .post-thumb .post-stats .p-comment{display:flex}.module-blog_posts-40.module-blog_posts-grid .post-thumb .post-stats .p-view{display:flex}@media (max-width: 1024px){.module-blog_posts-40 .swiper-buttons{display:none !important}}@media (max-width: 980px){.module-blog_posts-40.module-blog_posts-grid .post-layout.swiper-slide{margin-right:25px;width:calc((100% - 1 * 25px) / 2 - 0.01px)}.module-blog_posts-40.module-blog_posts-grid .post-layout:not(.swiper-slide){padding:12.5px;width:calc(100% / 2 - 0.01px)}}@media (max-width: 760px){.module-blog_posts-40 .title.module-title{font-size:26px}.module-blog_posts-40 .swiper-container{overflow:visible}}@media (max-width: 470px){.module-blog_posts-40.module-blog_posts-grid .post-layout.swiper-slide{margin-right:10px;width:calc((100% - 0 * 10px) / 1 - 0.01px)}.module-blog_posts-40.module-blog_posts-grid .post-layout:not(.swiper-slide){padding:5px;width:calc(100% / 1 - 0.01px)}}',
+  'fonts' => 
+  array (
+    'fonts' => 
+    array (
+      'Headland One' => 
+      array (
+        700 => '700',
+      ),
+    ),
+    'subsets' => 
+    array (
+      'latin-ext' => 'latin-ext',
+    ),
+  ),
+  'settings' => 
+  array (
+    'schedule' => 
+    array (
+      'from' => '',
+      'to' => '',
+      'between' => true,
+    ),
+    'display' => 'grid',
+    'sectionsDisplay' => 'blocks',
+    'sectionsDisplayTablet' => '',
+    'sectionsDisplayPhone' => '',
+    'carousel' => true,
+    'itemsPerRow' => 
+    array (
+      'c0' => 
+      array (
+        0 => 
+        array (
+          'items' => 3,
+          'spacing' => 25,
+        ),
+        980 => 
+        array (
+          'items' => 2,
+          'spacing' => 25,
+        ),
+        470 => 
+        array (
+          'items' => 1,
+          'spacing' => 10,
+        ),
+      ),
+      'c1' => 
+      array (
+        0 => 
+        array (
+          'items' => 3,
+          'spacing' => 20,
+        ),
+      ),
+      'c2' => 
+      array (
+        0 => 
+        array (
+          'items' => 2,
+          'spacing' => 20,
+        ),
+      ),
+      'sc' => 
+      array (
+        0 => 
+        array (
+          'items' => 1,
+          'spacing' => 20,
+        ),
+      ),
+    ),
+    'default' => '586e6edc-2082-438a-b422-3478f02b0a4e',
+    'imageDimensions' => 
+    array (
+      'width' => NULL,
+      'height' => NULL,
+      'resize' => 'crop',
+    ),
+    'modulePostGridButtonDisplay' => 'both',
+    'modulePostGridButtonTooltipStatus' => true,
+    'modulePostGridButtonTooltipPosition' => 'top',
+    'status' => true,
+    'id' => 'blog_posts-6276578d0c8e1',
+    'module_id' => 40,
+    'classes' => 
+    array (
+      0 => 'module',
+      1 => 'module-blog_posts',
+      2 => 'module-blog_posts-40',
+      3 => 'module-blog_posts-grid',
+      'carousel-mode' => true,
+      'isotope' => false,
+    ),
+    'image_width' => 500,
+    'image_height' => 300,
+    'image_resize' => 'crop',
+    'carouselOptions' => 
+    array (
+      'speed' => 500,
+      'autoplay' => false,
+      'pauseOnHover' => true,
+      'loop' => false,
+    ),
+    'text_tax' => 'Vergiler Hariç:',
+    'button_cart' => 'Sepete Ekle',
+    'button_wishlist' => 'Alışveriş Listeme Ekle',
+    'button_compare' => 'Karşılaştırma listesine ekle',
+    'default_index' => 1,
+    'items' => 
+    array (
+      1 => 
+      array (
+        'title' => 'Karali Bal Blog',
+        'filter' => 
+        array (
+          'sort' => 'newest',
+          'order' => 'ASC',
+          'start' => 0,
+          'limit' => 3,
+          'preset' => 'latest',
+        ),
+        'id' => '40-1',
+        'classes' => 
+        array (
+          0 => 'module-item',
+          1 => 'module-item-1',
+          'tab-pane' => false,
+          'panel' => false,
+          'swiper-slide' => true,
+        ),
+        'tab_classes' => 
+        array (
+          0 => 'tab-1',
+        ),
+        'panel_classes' => 
+        array (
+          0 => 'panel-collapse',
+          1 => 'collapse',
+        ),
+        'posts' => 
+        array (
+          12 => 
+          array (
+            'classes' => 
+            array (
+              'swiper-slide' => true,
+              'isotope-item' => false,
+            ),
+            'post_id' => '12',
+            'thumb' => 'http://localhost/image/cache/placeholder-500x300w.png',
+            'thumb2x' => 'http://localhost/image/cache/placeholder-1000x600w.png',
+            'author' => 'karalibal',
+            'name' => 'Doğanın Mucizesi: BAL',
+            'comments' => '0',
+            'views' => '1690',
+            'date' => '02 <i>Ağu</i>',
+            'description' => 'Bal, bitkilerin çiçeklerinde olan nektarların bal arıları (Apis Mellifera) tarafından toplandıktan sonra vücutlarında bileşimlerinin değiştirilmesi ve petek gözlerinde depo edilip olgunlaşması sonucunda meydana gelen tatlı bir üründür.    Balın tarihi insanlık tarihi kadar eskiye dayanır. Günümüzden..',
+            'href' => 'http://localhost/index.php?route=journal3/blog/post&amp;journal_blog_post_id=12',
+          ),
+          11 => 
+          array (
+            'classes' => 
+            array (
+              'swiper-slide' => true,
+              'isotope-item' => false,
+            ),
+            'post_id' => '11',
+            'thumb' => 'http://localhost/image/cache/placeholder-500x300w.png',
+            'thumb2x' => 'http://localhost/image/cache/placeholder-1000x600w.png',
+            'author' => 'karalibal',
+            'name' => 'Şifa Kaynağı: Polen',
+            'comments' => '0',
+            'views' => '1029',
+            'date' => '02 <i>Ağu</i>',
+            'description' => '    Tarihte bilinen en eski besin takviyelerinden birisi olan polen arıların doğanın mucizesi balın üretimi için çiçeklere yaptıkları ziyaretlerde ayaklarına yapışan erkek çiçek tozlarıdır.  Çiçeklerden polen taşıdıkları süreç içerisinde arıların kanatlarına onlarca besin yapışır ve onlar bu besinle..',
+            'href' => 'http://localhost/index.php?route=journal3/blog/post&amp;journal_blog_post_id=11',
+          ),
+          10 => 
+          array (
+            'classes' => 
+            array (
+              'swiper-slide' => true,
+              'isotope-item' => false,
+            ),
+            'post_id' => '10',
+            'thumb' => 'http://localhost/image/cache/placeholder-500x300w.png',
+            'thumb2x' => 'http://localhost/image/cache/placeholder-1000x600w.png',
+            'author' => 'karalibal',
+            'name' => 'Kestane Balı',
+            'comments' => '0',
+            'views' => '2202',
+            'date' => '02 <i>Ağu</i>',
+            'description' => 'KESTANE BALIKestane balı, arıların kestane ağacının belirli bir döneminde bu ağacın çiçeklerinden topladıkları özlerden elde edilen bir bal türüdür. Kestane ağaçlarının çiçeklenmeye başladığı haziran ayında elde edilmekte olan bu bal, diğer birçok çiçek balına göre daha az üretilebildiğinden değerli..',
+            'href' => 'http://localhost/index.php?route=journal3/blog/post&amp;journal_blog_post_id=10',
+          ),
+        ),
+        'items' => 
+        array (
+        ),
+      ),
+    ),
+  ),
+);

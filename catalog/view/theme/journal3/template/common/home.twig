@@ -1,0 +1,20 @@
+{{ header }}
+{{ j3.loadController('journal3/layout', 'top') }}
+{% if content_top or content_bottom or column_left or column_right %}
+<div id="common-home" class="container">
+  <div class="row">{{ column_left }}
+    {% if column_left and column_right %}
+    {% set class = 'col-sm-6' %}
+    {% elseif column_left or column_right %}
+    {% set class = 'col-sm-9' %}
+    {% else %}
+    {% set class = 'col-sm-12' %}
+    {% endif %}
+    {% if content_top or content_bottom %}
+    <div id="content" class="{{ class }}">{{ content_top }}{{ content_bottom }}</div>
+    {% endif %}
+    {{ column_right }}</div>
+</div>
+{% endif %}
+{{ j3.loadController('journal3/seo/rich_snippets') }}
+{{ footer }}

@@ -1,0 +1,39 @@
+{
+  "infoBlocksAlign": {
+    "type": "Radio",
+    "value": "end",
+    "rules": {
+      "start": {
+        ".info-blocks-wrapper": "justify-content:flex-start"
+      },
+      "center": {
+        ".info-blocks-wrapper": "justify-content:center"
+      },
+      "end": {
+        ".info-blocks-wrapper": "justify-content:flex-end"
+      }
+    }
+  },
+  "infoBlocksSpacing": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        "header .info-blocks": "margin-right: %spx"
+      }
+    },
+    "rtlRules": {
+      "@": {
+        "header .info-blocks": "margin-left: %spx"
+      }
+    }
+  },
+  "infoBlocksStyle": {
+    "type": "Variable",
+    "variable": "info_block",
+    "selector_prefix": ".info-blocks-wrapper .module-info_blocks"
+  },
+  "infoBlocksModule": {
+    "type": "Module",
+    "php": true
+  }
+}

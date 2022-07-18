@@ -1,0 +1,12 @@
+{% if items %}
+  <div class="{{ j3.classes(classes) }}">
+    {% if title %}
+      <h3 class="title module-title">{{ title }}</h3>
+    {% endif %}
+    <div class="module-body">
+      {% for item in items %}
+        <a href="{{ item.href }}" class="{{ j3.classes(item.classes) }}"><span>{{ item.name }}</span></a>
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}

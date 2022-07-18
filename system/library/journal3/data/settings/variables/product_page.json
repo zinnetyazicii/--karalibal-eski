@@ -1,0 +1,9 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "PRODUCT_PAGE"
+  },
+  "value": {
+    "include": "product_page"
+  }
+}

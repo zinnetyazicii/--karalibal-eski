@@ -1,0 +1,39 @@
+{
+  "Status": {
+    "type": "Toggle",
+    "value": "true",
+    "rules": {
+      "true": {
+        "&::before": "display: block"
+      },
+      "false": {
+        "&::before": "display: none"
+      }
+    }
+  },
+
+  "Color": {
+    "type": "Color",
+    "selector": "&::before",
+    "property": "border-bottom-color"
+  },
+
+  "Offset": {
+    "type": "InputPair",
+    "selector": "&::before",
+    "properties": {
+      "first": "margin-left:%spx",
+      "second": "top: %spx"
+    },
+    "rtlProperties": {
+      "first": "margin-right:%spx",
+      "second": "top: %spx"
+    }
+  },
+  "Margin": {
+    "type": "InputNumber",
+    "selector": "&::before",
+    "property": "margin-top:%spx",
+    "value": "-10"
+  }
+}

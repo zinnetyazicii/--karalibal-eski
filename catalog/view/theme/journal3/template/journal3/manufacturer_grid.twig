@@ -1,0 +1,19 @@
+{% for manufacturer in manufacturers %}
+  <div class="manufacturer-layout {{ j3.classes(manufacturer.classes) }}">
+    <div class="manufacturer-thumb">
+      <div class="image">
+        <a href="{{ manufacturer.href }}">
+          {% if j3.settings.get('performanceLazyLoadImagesStatus') %}
+            <img src="{{ dummy_image }}" data-src="{{ manufacturer.thumb }}" {% if manufacturer.thumb2x %}data-srcset="{{ manufacturer.thumb }} 1x, {{ manufacturer.thumb2x }} 2x" {% endif %} width="{{ image_width }}" height="{{ image_height }}" alt="{{ manufacturer.name }}" title="{{ manufacturer.name }}" class="lazyload"/>
+          {% else %}
+            <img src="{{ manufacturer.thumb }}" {% if manufacturer.thumb2x %} srcset="{{ manufacturer.thumb }} 1x, {{ manufacturer.thumb2x }} 2x" {% endif %} width="{{ image_width }}" height="{{ image_height }}" alt="{{ manufacturer.name }}" title="{{ manufacturer.name }}"/>
+          {% endif %}
+        </a>
+      </div>
+
+      <div class="caption">
+        <div class="name"><a href="{{ manufacturer.href }}">{{ manufacturer.name }}</a></div>
+      </div>
+    </div>
+  </div>
+{% endfor %}

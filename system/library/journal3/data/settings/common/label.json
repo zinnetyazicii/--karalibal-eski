@@ -1,0 +1,41 @@
+{
+  "LabelFont": {
+    "type": "Font",
+    "selector":"b"
+  },
+  "LabelBackground": {
+    "type": "Background",
+    "selector":"b",
+    "value": {
+      "background-size":"contain",
+      "background-repeat":"no-repeat"
+    }
+  },
+  "LabelBorder": {
+    "type": "Border",
+    "selector":"b"
+  },
+  "LabelBorderRadius": {
+    "type": "BorderRadius",
+    "selector":"b"
+  },
+  "LabelPadding": {
+    "type": "Padding",
+    "selector":"b"
+  },
+  "LabelMargin": {
+    "type": "Margin"
+  },
+  "LabelShadow": {
+    "type": "Shadow",
+    "selector":"b"
+  },
+  "LabelSize": {
+    "type": "InputPair",
+    "selector": "&.product-label-default b",
+    "properties": {
+      "first": "min-width:%spx",
+      "second": "min-height:%spx"
+    }
+  }
+}

@@ -1,0 +1,173 @@
+<?php $val = array (
+  'css' => '.module-blocks-318 .swiper-container{overflow:hidden}.module-blocks-318 .swiper-buttons{display:none;top:50%;width:calc(100% - (-15px * 2));margin-top:-10px}.module-blocks-318:hover .swiper-buttons{display:block}.module-blocks-318 .swiper-button-prev{left:0;right:auto;transform:translate(0, -50%)}.module-blocks-318 .swiper-button-next{left:auto;right:0;transform:translate(0, -50%)}.module-blocks-318 .swiper-buttons
+div{width:35px;height:35px;background:rgba(44, 54, 64, 1);border-width:4px;border-style:solid;border-color:rgba(255, 255, 255, 1);border-radius:50%}.module-blocks-318 .swiper-button-disabled{opacity:0}.module-blocks-318 .swiper-buttons div::before{content:\'\\e408\' !important;font-family:icomoon !important;color:rgba(255, 255, 255, 1)}.module-blocks-318 .swiper-buttons .swiper-button-next::before{content:\'\\e409\' !important;font-family:icomoon !important;color:rgba(255, 255, 255, 1)}.module-blocks-318 .swiper-buttons div:not(.swiper-button-disabled):hover{background:rgba(239, 80, 66, 1)}.module-blocks-318 .swiper-pagination{display:block;margin-bottom:-10px;left:50%;right:auto;transform:translateX(-50%)}.module-blocks-318
+.swiper{padding-bottom:20px}.module-blocks-318 .swiper-pagination-bullet{width:8px;height:8px;background-color:rgba(226, 226, 226, 1)}.module-blocks-318 .swiper-pagination>span+span{margin-left:8px}.desktop .module-blocks-318 .swiper-pagination-bullet:hover{background-color:rgba(143, 157, 166, 1)}.module-blocks-318 .swiper-pagination-bullet.swiper-pagination-bullet-active{background-color:rgba(239, 80, 66, 1)}.module-blocks-318 .swiper-pagination>span{border-radius:50px}.module-blocks-318.blocks-grid .module-item.swiper-slide{margin-right:0px;width:calc((100% - 0 * 0px) / 1 - 0.01px)}.module-blocks-318.blocks-grid .module-item:not(.swiper-slide){padding:0px;width:calc(100% / 1 - 0.01px)}.one-column #content .module-blocks-318.blocks-grid .module-item.swiper-slide{margin-right:0px;width:calc((100% - 0 * 0px) / 1 - 0.01px)}.one-column #content .module-blocks-318.blocks-grid .module-item:not(.swiper-slide){padding:0px;width:calc(100% / 1 - 0.01px)}.two-column #content .module-blocks-318.blocks-grid .module-item.swiper-slide{margin-right:0px;width:calc((100% - 0 * 0px) / 1 - 0.01px)}.two-column #content .module-blocks-318.blocks-grid .module-item:not(.swiper-slide){padding:0px;width:calc(100% / 1 - 0.01px)}.side-column .module-blocks-318.blocks-grid .module-item.swiper-slide{margin-right:0px;width:calc((100% - 0 * 0px) / 1 - 0.01px)}.side-column .module-blocks-318.blocks-grid .module-item:not(.swiper-slide){padding:0px;width:calc(100% / 1 - 0.01px)}.module-blocks-318 .title.block-title{font-size:24px;line-height:1.1;margin-bottom:15px;white-space:normal;overflow:visible;text-overflow:initial}.module-blocks-318 .title.block-title::after{display:none}.module-blocks-318 .title.block-title.page-title>span::after{display:none}.module-blocks-318 .block-body{background:rgba(238, 238, 238, 1);display:flex;flex-direction:column}.module-blocks-318 .nav-tabs > li > a, .module-blocks-318 .nav-tabs > li.active > a, .module-blocks-318 .nav-tabs > li.active > a:hover, .module-blocks-318 .nav-tabs>li.active>a:focus{font-family:\'Headland One\';font-weight:700;font-size:15px;color:rgba(139, 145, 152, 1);text-transform:uppercase}.desktop .module-blocks-318 .nav-tabs > li:hover > a, .module-blocks-318 .nav-tabs>li.active>a{color:rgba(239, 80, 66, 1)}.module-blocks-318 .nav-tabs > li.active > a, .module-blocks-318 .nav-tabs > li.active > a:hover, .module-blocks-318 .nav-tabs>li.active>a:focus{color:rgba(51, 51, 51, 1)}.module-blocks-318 .nav-tabs>li{border-width:0;border-bottom-width:2px;border-style:solid;border-color:rgba(0, 0, 0, 0);flex-grow:0}.module-blocks-318 .nav-tabs>li.active{border-color:rgba(239, 80, 66, 1)}.module-blocks-318 .nav-tabs>li.active::after{display:none;border-top-width:10px}.module-blocks-318 .nav-tabs>li>a{justify-content:center;white-space:nowrap;padding:0px;padding-bottom:10px}.module-blocks-318 .nav-tabs>li>a::before{font-size:18px}.module-blocks-318 .nav-tabs{display:flex;justify-content:flex-start;flex-wrap:nowrap;overflow-x:auto;overflow-y:hidden;min-width:50px}.module-blocks-318 .nav-tabs>li:not(:last-child){margin-right:20px}.module-blocks-318 .mobile .nav-tabs{overflow-x:scroll}.module-blocks-318 .nav-tabs::-webkit-scrollbar{-webkit-appearance:none;height:1px;height:2px;width:2px}.module-blocks-318 .nav-tabs::-webkit-scrollbar-track{background-color:white;background-color:rgba(238, 238, 238, 1)}.module-blocks-318 .nav-tabs::-webkit-scrollbar-thumb{background-color:#999;background-color:rgba(239, 80, 66, 1)}.module-blocks-318 .tab-container::before{display:none}.module-blocks-318 .tab-content{padding-top:20px}.module-blocks-318 .tab-container{display:block}.module-blocks-318 .tab-container .nav-tabs{flex-direction:row}.module-blocks-318 .block-title{order:-2}.module-blocks-318 .block-header{display:flex;float:none;order:-1;justify-content:flex-start;align-items:flex-start}.module-blocks-318 .block-header
+img{display:flex}.module-blocks-318 .block-wrapper{display:flex}.module-blocks-318 .block-header
+i{float:none;display:flex}@media (max-width: 1024px){.module-blocks-318 .swiper-buttons{display:none !important}}@media (max-width: 760px){.module-blocks-318 .swiper-container{overflow:visible}}.module-blocks-318 .module-item-1 .module-title{font-size:15px}.module-blocks-318 .module-item-1 .block-header{display:flex;float:none;order:-1;justify-content:center;align-items:center;margin-bottom:10px}.module-blocks-318 .module-item-1 .block-header
+img{display:flex}.module-blocks-318 .module-item-1 .block-wrapper{display:flex}.module-blocks-318 .module-item-1 .block-header
+i{float:none;display:flex}.module-blocks-318 .module-item-1 .block-body{display:flex;flex-direction:column}.module-blocks-318 .module-item-1 .block-content{text-align:left;column-count:initial;column-gap:20px;column-rule-width:1px;column-rule-style:solid}.module-blocks-318 .module-item-1 .expand-content{max-height:100%;overflow:visible}.module-blocks-318 .module-item-1 .block-footer{margin-top:auto;padding-top:10px;margin-top:10px;border-width:0;border-top-width:1px;border-style:solid;border-color:rgba(226, 226, 226, 1);text-align:center}.module-blocks-318 .module-item-1 .block-footer
+.btn{width:auto;transform:scale(calc(100 / 100));transform-origin:center}.module-blocks-318 .module-item-1 .block-footer .btn::after{content:\'\\e5c8\' !important;font-family:icomoon !important;margin-left:5px}',
+  'fonts' => 
+  array (
+    'fonts' => 
+    array (
+      'Headland One' => 
+      array (
+        700 => '700',
+      ),
+    ),
+    'subsets' => 
+    array (
+      'latin-ext' => 'latin-ext',
+    ),
+  ),
+  'settings' => 
+  array (
+    'schedule' => 
+    array (
+      'from' => '',
+      'to' => '',
+      'between' => true,
+    ),
+    'display' => 'grid',
+    'displayTablet' => '',
+    'displayPhone' => '',
+    'carousel' => false,
+    'itemsPerRow' => 
+    array (
+      'c0' => 
+      array (
+        0 => 
+        array (
+          'items' => 1,
+          'spacing' => 0,
+        ),
+      ),
+      'c1' => 
+      array (
+        0 => 
+        array (
+          'items' => 1,
+          'spacing' => 0,
+        ),
+      ),
+      'c2' => 
+      array (
+        0 => 
+        array (
+          'items' => 1,
+          'spacing' => 0,
+        ),
+      ),
+      'sc' => 
+      array (
+        0 => 
+        array (
+          'items' => 1,
+          'spacing' => 0,
+        ),
+      ),
+    ),
+    'default' => '',
+    'title' => '',
+    'imageDimensions' => 
+    array (
+      'width' => 200,
+      'height' => 120,
+      'resize' => 'fill',
+    ),
+    'lazyLoad' => false,
+    'status' => true,
+    'id' => 'blocks-6276577d6404a',
+    'module_id' => 318,
+    'classes' => 
+    array (
+      0 => 'module',
+      1 => 'module-blocks',
+      2 => 'module-blocks-318',
+      3 => 'blocks-grid',
+      'carousel-mode' => false,
+    ),
+    'carouselOptions' => 
+    array (
+      'speed' => 500,
+      'autoplay' => false,
+      'pauseOnHover' => true,
+      'loop' => false,
+    ),
+    'default_index' => 0,
+    'items' => 
+    array (
+      1 => 
+      array (
+        'link' => 
+        array (
+          'type' => '',
+          'id' => '',
+          'href' => '',
+          'name' => '',
+          'total' => NULL,
+          'attrs' => 
+          array (
+          ),
+          'classes' => 
+          array (
+          ),
+        ),
+        'header' => 'image',
+        'text' => '',
+        'alt' => 'Karali bal',
+        'contentType' => 'html',
+        'shortDescriptionLimit' => '150',
+        'dynamic' => 'journal3/blocks_example',
+        'expandButton' => false,
+        'footer' => 'button',
+        'footerText' => '',
+        'footerButton' => 'Şimdi Al',
+        'footerButtonLink' => 
+        array (
+          'type' => 'category',
+          'id' => '222',
+          'href' => 'http://localhost/index.php?route=product/category&amp;path=222',
+          'name' => 'Bal',
+          'total' => NULL,
+          'attrs' => 
+          array (
+          ),
+          'classes' => 
+          array (
+          ),
+        ),
+        'id' => '318-1',
+        'classes' => 
+        array (
+          0 => 'module-item',
+          1 => 'module-item-1',
+          'tab-pane' => false,
+          'active' => false,
+          'panel' => false,
+          'panel-active' => false,
+          'swiper-slide' => false,
+        ),
+        'tab_classes' => 
+        array (
+          0 => 'tab-1',
+          'active' => false,
+        ),
+        'panel_classes' => 
+        array (
+          0 => 'panel-collapse',
+          1 => 'collapse',
+          'in' => false,
+        ),
+        'image' => 'http://localhost/image/cache/catalog/karali%20bal%201000-200x120.png',
+        'image2x' => 'http://localhost/image/cache/catalog/karali%20bal%201000-400x240.png',
+        'title' => '',
+        'content' => '<p style="text-align: justify; margin-left: 25px;"><span style="font-family: &quot;Times New Roman&quot;;">Sektörde 30 yıllık tecrübesiyle alanında her türlü ihtiyaca “öncelikle kalite” ilkesine bağlı kalarak cevap veren Karali Çay, bal, polen ve propolis ürünlerde de siz değerli müşterilerimize hizmet vermekteyiz.</span></p>',
+        'items' => 
+        array (
+        ),
+      ),
+    ),
+  ),
+);

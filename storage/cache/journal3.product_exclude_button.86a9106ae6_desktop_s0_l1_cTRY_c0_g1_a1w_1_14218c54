@@ -1,0 +1,17 @@
+<?php $val = array (
+  'data' => 
+  array (
+  ),
+  'all' => 
+  array (
+  ),
+  'special' => 
+  array (
+  ),
+  'outofstock' => 
+  array (
+  ),
+  'custom' => 
+  array (
+  ),
+);

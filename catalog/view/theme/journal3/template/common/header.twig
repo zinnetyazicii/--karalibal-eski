@@ -1,0 +1,161 @@
+{% if j3 is not defined %}
+  <style>
+    body {
+      display: none !important;
+    }
+  </style>
+  <script>
+    window.location = 'index.php?route=journal3/startup/error';
+  </script>
+{% endif %}
+<!DOCTYPE html>
+<html dir="{{ direction }}" lang="{{ lang }}" class="{{ j3.document.getClasses() | join(' ') }}" data-jb="{{ j3.constant('JOURNAL3_BUILD') }}" data-jv="{{ j3.constant('JOURNAL3_VERSION') }}" data-ov="{{ constant('VERSION') }}">
+<head typeof="og:website">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>{{ title }}</title>
+<base href="{{ base }}" />
+<link rel="preload" href="{{ j3.document.staticUrl('catalog/view/theme/journal3/icons/fonts/icomoon.woff2?v1') }}" as="font" crossorigin>
+{% if j3.document.hasFonts() %}
+<link rel="preconnect" href="https://fonts.googleapis.com/" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+{% endif %}
+{% if description %}
+<meta name="description" content="{{ description }}" />
+{% endif %}
+{% if keywords %}
+<meta name="keywords" content="{{ keywords }}" />
+{% endif %}
+{% if not j3.document.isPopup() %}
+{% for key, tag in j3.loadController('journal3/seo/meta_tags') %}
+<meta {{ tag.type }}="{{ key }}" content="{{ tag.content }}"/>
+{% endfor %}
+{% endif %}
+{% if j3.constant('SENTRY_JS_DSN') %}
+{{ j3.constant('SENTRY_JS_DSN') }}
+{% endif %}
+<script>window['Journal'] = {{ j3.document.getJs() | json_encode }};</script>
+{% if not j3.document.isPopup() %}
+<script>{{ j3.loadController('journal3/mql') }}</script>
+{% endif %}
+{% if j3.document.hasFonts() %}
+{% if j3.settings.get('performanceAsyncFontsStatus') %}
+<script>WebFontConfig = { google: { families: {{ j3.document.getFonts(true) }} } };</script>
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" async></script>
+{% else %}
+<link href="https://fonts.googleapis.com/css?family={{ j3.document.getFonts(false) }}" type="text/css" rel="stylesheet"/>
+{% endif %}
+{% endif %}
+{% for style in j3.document.getStyles(styles) %}
+{% if style.content %}
+<style>{{ style.content }}</style>
+{% else %}
+<link href="{{ j3.document.staticUrl(style.href, false) }}" type="text/css" rel="{{ style.rel }}" media="all" />
+{% endif %}
+{% endfor %}
+{% for link in links %}
+<link href="{{ link.href }}" rel="{{ link.rel }}" />
+{% endfor %}
+{% for analytic in analytics %}
+{{ analytic }}
+{% endfor %}
+<style>
+{{ j3.document.getCss() }}
+</style>
+{% if j3.settings.get('customCSS') %}
+<style>{{ j3.settings.get('customCSS') }}</style>
+{% endif %}
+{% for script in j3.document.getScripts('header', scripts) %}
+<script src="{{ j3.document.staticUrl(script, false) }}" {% if j3.settings.get('performanceJSDefer') %} defer {% endif %}></script>
+{% endfor %}
+{% if j3.settings.get('customCodeHeader') %}
+{{ j3.settings.get('customCodeHeader') }}
+{% endif %}
+</head>
+<body class="{{ class }}">
+
+{% if j3.settings.get('oldBrowserStatus') %}
+<div class="old-browser">
+  <div class="ob-content">
+    <h2 class="ob-title">{{ j3.settings.get('oldBrowserTitle') }}</h2>
+    <span class="ob-text">{{ j3.settings.get('oldBrowserText') }}</span>
+    <div class="ob-links">
+      <a href="https://www.google.com/chrome/" target="_blank" rel="nofollow">
+        <img src="{{ j3.settings.get('oldBrowserChrome') }}" alt="Chrome" />
+        <span class="ob-name">Chrome</span>
+      </a>
+      <a href="https://www.mozilla.org/firefox/new/" target="_blank" rel="nofollow">
+        <img src="{{ j3.settings.get('oldBrowserFirefox') }}" alt="Firefox" />
+        <span class="ob-name">Firefox</span>
+      </a>
+      <a href="https://www.microsoft.com/en-us/windows/microsoft-edge" target="_blank" rel="nofollow">
+        <img src="{{ j3.settings.get('oldBrowserEdge') }}" alt="edge" />
+        <span class="ob-name">Microsoft Edge</span>
+      </a>
+      <a href="https://www.opera.com/" target="_blank" rel="nofollow">
+        <img src="{{ j3.settings.get('oldBrowserOpera') }}" alt="opera" />
+        <span class="ob-name">Opera</span>
+      </a>
+      <a href="https://www.apple.com/lae/safari/" target="_blank" rel="nofollow">
+        <img src="{{ j3.settings.get('oldBrowserSafari') }}" alt="safari" />
+        <span class="ob-name">Safari on Mac</span>
+      </a>
+    </div>
+  </div>
+</div>
+{% endif %}
+
+{% if not j3.document.isPopup() %}
+<div class="mobile-container mobile-main-menu-container">
+  <div class="mobile-wrapper-header">
+    <span>{{ j3.settings.get('headerMobileMenuTitle') }}</span>
+    {% if j3.settings.get('mobileLangPosition') == 'menu' %}
+      <div class="language-currency top-menu">
+        <div class="mobile-currency-wrapper">
+            {{ j3.document.hasClass('mobile-header-active') ? currency : '' }}
+        </div>
+        <div class="mobile-language-wrapper">
+            {{ j3.document.hasClass('mobile-header-active') ? language : '' }}
+        </div>
+      </div>
+    {% endif %}
+    <a class="x"></a>
+  </div>
+  <div class="mobile-main-menu-wrapper">
+    {{ j3.document.isPhone() or (j3.document.isTablet() and j3.settings.get('mobileHeaderOn') == 'tablet') ? j3.settings.get('mobile_main_menu') : '' }}
+  </div>
+</div>
+
+<div class="mobile-container mobile-filter-container">
+  <div class="mobile-wrapper-header"></div>
+  <div class="mobile-filter-wrapper"></div>
+</div>
+
+<div class="mobile-container mobile-cart-content-container">
+  <div class="mobile-wrapper-header">
+    <span>{{ j3.settings.get('headerMobileCartTitle') }}</span>
+    <a class="x"></a>
+  </div>
+  <div class="mobile-cart-content-wrapper cart-content"></div>
+</div>
+{% endif %}
+
+{{ j3.loadController('journal3/layout', 'popup') }}
+
+<div class="site-wrapper">
+
+  {{ j3.loadController('journal3/layout', 'header_notice') }}
+
+  {% if not j3.document.isPopup() %}
+  <header class="header-{{ j3.settings.get('headerType') }}">
+    {% if not j3.document.hasClass('mobile-header-active') and j3.settings.get('headerType') %}
+      {% include 'journal3/template/journal3/headers/desktop/' ~ j3.settings.get('headerType') ~ '.twig' %}
+    {% endif %}
+    {% if j3.settings.get('mobileHeaderType') %}
+      {% include 'journal3/template/journal3/headers/mobile/header_mobile_' ~ j3.settings.get('mobileHeaderType') ~ '.twig' %}
+    {% endif %}
+  </header>
+  {% endif %}
+
+  {{ j3.loadController('journal3/layout', 'fullscreen_slider') }}

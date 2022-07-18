@@ -1,0 +1,29 @@
+{% for category in categories %}
+  <div class="category-layout {{ j3.classes(category.classes) }}">
+    <div class="category-thumb">
+      {% if images %}
+      <div class="image">
+        <a href="{{ category.href }}">
+          {% if j3.settings.get('performanceLazyLoadImagesStatus') %}
+            <img src="{{ dummy_image }}" data-src="{{ category.thumb }}" {% if category.thumb2x %}data-srcset="{{ category.thumb }} 1x, {{ category.thumb2x }} 2x" {% endif %} width="{{ image_width }}" height="{{ image_height }}" alt="{{ category.name }}" title="{{ category.name }}" class="img-responsive lazyload"/>
+          {% else %}
+            <img src="{{ category.thumb }}" {% if category.thumb2x %}srcset="{{ category.thumb }} 1x, {{ category.thumb2x }} 2x" {% endif %} width="{{ image_width }}" height="{{ image_height }}" alt="{{ category.name }}" title="{{ category.name }}" class="img-responsive"/>
+          {% endif %}
+        </a>
+      </div>
+      {% endif %}
+
+      <div class="caption">
+        <div class="name"><a href="{{ category.href }}">{{ category.name }}</a></div>
+
+        <div class="description">{{ category.description }}</div>
+
+        <div class="button-group">
+          <a class="btn btn-view-more" href="{{ category.href }}" {% if (j3.settings.getIn('CategoryButtonDisplay', _context) == "icon") and (j3.settings.getIn('CategoryButtonTooltipStatus', _context)) %} data-toggle="tooltip" data-tooltip-class="{{ module_id ? 'module-categories-' ~ module_id ~ ' module-categories-grid' : 'category-grid' }} view-more-tooltip" data-placement="{{ j3.settings.getIn('CategoryButtonTooltipPosition', _context) }}" title="{{ viewMoreText }}" {% endif %}>
+            <span class="btn-text">{{ viewMoreText }}</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endfor %}

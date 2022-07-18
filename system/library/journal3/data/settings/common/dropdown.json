@@ -1,0 +1,88 @@
+{
+  "Align": {
+    "type": "Radio",
+    "value": "",
+    "rules": {
+      "left": {
+        "&.drop-menu > .j-dropdown": "left:0; right:auto; transform: translate3d(0, -10px, 0)",
+        "&.drop-menu.animating > .j-dropdown": "left:0; right:auto; transform: none",
+        "&.drop-menu > .j-dropdown::before": "left:10px; right:auto; transform: translateX(0);"
+      },
+      "center": {
+        "&.drop-menu > .j-dropdown": "left:50%; right:auto; transform: translate3d(-50%, -10px, 0)",
+        "&.drop-menu.animating > .j-dropdown": "left:50%; right:auto; transform: translate3d(-50%, 0, 0)",
+        "&.drop-menu > .j-dropdown::before": "left:50%; right:auto; transform: translateX(-50%);"
+      },
+      "right": {
+        "&.drop-menu > .j-dropdown": "left:auto; right:0; transform: translate3d(0, -10px, 0)",
+        "&.drop-menu.animating > .j-dropdown": "left:auto; right:0; transform: translate3d(0, 0, 0)",
+        "&.drop-menu > .j-dropdown::before": "left:calc(100% - 10px); right:0; transform: translateX(-100%);"
+      }
+    },
+    "rtlRules": {
+      "left": {
+        "&.drop-menu > .j-dropdown": "right:0; left:auto; transform: translate3d(0, -10px, 0)",
+        "&.drop-menu.animating > .j-dropdown": "right:0; left:auto; transform: none",
+        "&.drop-menu > .j-dropdown::before": "right:10px; left:auto; transform: translateX(0);"
+      },
+      "center": {
+        "&.drop-menu > .j-dropdown": "right:50%; left:auto; transform: translate3d(50%, -10px, 0)",
+        "&.drop-menu.animating > .j-dropdown": "right:50%; left:auto; transform: translateX(50%)",
+        "&.drop-menu > .j-dropdown::before": "right:50%; left:auto; transform: translateX(50%)"
+      },
+      "right": {
+        "&.drop-menu > .j-dropdown": "right:auto; left:0; transform: translate3d(0, -10px, 0)",
+        "&.drop-menu.animating > .j-dropdown": "right:auto; left:0; transform: translate3d(0, 0, 0)",
+        "&.drop-menu > .j-dropdown::before": "right:calc(100% - 10px); left:0; transform: translateX(100%);"
+      }
+    }
+  },
+
+  "MenuStyle": {
+    "type": "Variable",
+    "variable": "menu",
+    "selector_prefix": "&.dropdown"
+  },
+
+  "DropPadding": {
+    "type": "Padding",
+    "selector": "&.dropdown:not(.mega-menu) .j-dropdown > .j-menu"
+  },
+
+  "DropBackground": {
+    "type": "Background",
+    "selector": "&.dropdown:not(.mega-menu) .j-dropdown > .j-menu"
+  },
+
+  "Width": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        "&.dropdown:not(.mega-menu) .j-dropdown": "min-width:%spx"
+      }
+    }
+  },
+  "Height": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        "&.dropdown:not(.mega-menu) .j-menu > li": "min-height:%spx",
+        "&.dropdown:not(.mega-menu) .j-menu > li > a": "min-height:%spx"
+      }
+    }
+  },
+  "Shadow": {
+    "type": "Shadow",
+    "selector": "&.dropdown:not(.mega-menu) .j-menu"
+  },
+  
+  "BorderRadius": {
+    "type": "BorderRadius",
+    "selector": "&.dropdown:not(.mega-menu) .j-menu"
+  },
+
+  "MenuTriangle": {
+    "include": "triangle",
+    "selector_prefix": "&.dropdown .j-dropdown"
+  }
+}

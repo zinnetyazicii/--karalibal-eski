@@ -1,0 +1,40 @@
+{% for post in posts %}
+  <div class="post-layout {{ j3.classes(post.classes) }}">
+    <div class="post-thumb">
+      <div class="image">
+        {% if j3.settings.get('datePosition') == 'image' %}
+        <span class="p-date p-date-image">{{ post.date }}</span>
+        {% endif %}
+        <a href="{{ post.href }}">
+          {% if j3.settings.get('performanceLazyLoadImagesStatus') %}
+            <img src="{{ dummy_image }}" data-src="{{ post.thumb }}" {% if post.thumb2x %}data-srcset="{{ post.thumb }} 1x, {{ post.thumb2x }} 2x" {% endif %} width="{{ image_width }}" height="{{ image_height }}" alt="{{ post.name }}" title="{{ post.name }}" class="img-responsive lazyload"/>
+          {% else %}
+            <img src="{{ post.thumb }}" {% if post.thumb2x %}srcset="{{ post.thumb }} 1x, {{ post.thumb2x }} 2x" {% endif %} width="{{ image_width }}" height="{{ image_height }}" alt="{{ post.name }}" title="{{ post.name }}" class="img-responsive"/>
+          {% endif %}
+        </a>
+      </div>
+
+      <div class="caption">
+
+        <div class="post-stats">
+          <span class="p-author">{{ post.author }}</span>
+          {% if j3.settings.get('datePosition') == 'default' %}
+          <span class="p-date p-date-default">{{ post.date }}</span>
+          {% endif %}
+          <span class="p-comment">{{ post.comments }}</span>
+          <span class="p-view">{{ post.views }}</span>
+        </div>
+
+        <div class="name"><a href="{{ post.href }}">{{ post.name }}</a></div>
+
+        <div class="description">{{ post.description }}</div>
+
+        <div class="button-group">
+          <a class="btn btn-read-more" href="{{ post.href }}" {% if (j3.settings.getIn('PostGridButtonDisplay', _context) == "icon") and (j3.settings.getIn('PostGridButtonTooltipStatus', _context)) %}  data-toggle="tooltip" data-tooltip-class="{{ module_id ? 'module-blog_posts-' ~ module_id ~ ' module-blog_posts-grid' : 'post-grid' }} read-more-tooltip" data-placement="{{ j3.settings.getIn('PostGridButtonTooltipPosition', _context) }}" title="{{ j3.settings.get('blogReadMoreButtonText') }}" {% endif %}>
+            <span class="btn-text">{{ j3.settings.get('blogReadMoreButtonText') }}</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endfor %}

@@ -1,0 +1,399 @@
+<?php $val = array (
+  'settings' => 
+  array (
+    'column_left' => 
+    array (
+      'rows' => 
+      array (
+      ),
+      'grid_classes' => 
+      array (
+        0 => 'grid-rows',
+      ),
+    ),
+    'column_right' => 
+    array (
+      'rows' => 
+      array (
+      ),
+      'grid_classes' => 
+      array (
+        0 => 'grid-rows',
+      ),
+    ),
+    'content_top' => 
+    array (
+      'rows' => 
+      array (
+      ),
+      'grid_classes' => 
+      array (
+        0 => 'grid-rows',
+      ),
+    ),
+    'content_bottom' => 
+    array (
+      'rows' => 
+      array (
+      ),
+      'grid_classes' => 
+      array (
+        0 => 'grid-rows',
+      ),
+    ),
+    'top' => 
+    array (
+      'rows' => 
+      array (
+        1 => 
+        array (
+          'videoBgStatus' => false,
+          'videoBg' => '',
+          'videoInline' => false,
+          'waveStatus' => false,
+          'waveDirection' => '5',
+          'wave2Status' => false,
+          'wave2Direction' => '5',
+          'classes' => 
+          array (
+            0 => 'grid-row',
+            1 => 'grid-row-top-1',
+          ),
+          'columns' => 
+          array (
+            1 => 
+            array (
+              'classes' => 
+              array (
+                0 => 'grid-col',
+                1 => 'grid-col-top-1-1',
+              ),
+              'items' => 
+              array (
+                1 => 
+                array (
+                  'classes' => 
+                  array (
+                    0 => 'grid-item',
+                    1 => 'grid-item-top-1-1-1',
+                  ),
+                  'item' => 
+                  array (
+                  ),
+                ),
+              ),
+            ),
+            2 => 
+            array (
+              'classes' => 
+              array (
+                0 => 'grid-col',
+                1 => 'grid-col-top-1-2',
+              ),
+              'items' => 
+              array (
+                1 => 
+                array (
+                  'classes' => 
+                  array (
+                    0 => 'grid-item',
+                    1 => 'grid-item-top-1-2-1',
+                  ),
+                  'item' => 
+                  array (
+                    'id' => '307',
+                    'name' => 'Ankara Şubesi İletişim',
+                    'type' => 'info_blocks',
+                  ),
+                ),
+              ),
+            ),
+            3 => 
+            array (
+              'classes' => 
+              array (
+                0 => 'grid-col',
+                1 => 'grid-col-top-1-3',
+              ),
+              'items' => 
+              array (
+                1 => 
+                array (
+                  'classes' => 
+                  array (
+                    0 => 'grid-item',
+                    1 => 'grid-item-top-1-3-1',
+                  ),
+                  'item' => 
+                  array (
+                    'id' => '308',
+                    'name' => 'İzmir Şubesi İletişim',
+                    'type' => 'info_blocks',
+                  ),
+                ),
+              ),
+            ),
+            4 => 
+            array (
+              'classes' => 
+              array (
+                0 => 'grid-col',
+                1 => 'grid-col-top-1-4',
+              ),
+              'items' => 
+              array (
+                1 => 
+                array (
+                  'classes' => 
+                  array (
+                    0 => 'grid-item',
+                    1 => 'grid-item-top-1-4-1',
+                  ),
+                  'item' => 
+                  array (
+                    'id' => '311',
+                    'name' => 'İstanbul Şubesi İletişim',
+                    'type' => 'info_blocks',
+                  ),
+                ),
+              ),
+            ),
+            5 => 
+            array (
+              'classes' => 
+              array (
+                0 => 'grid-col',
+                1 => 'grid-col-top-1-5',
+              ),
+              'items' => 
+              array (
+                1 => 
+                array (
+                  'classes' => 
+                  array (
+                    0 => 'grid-item',
+                    1 => 'grid-item-top-1-5-1',
+                  ),
+                  'item' => 
+                  array (
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ),
+        2 => 
+        array (
+          'videoBgStatus' => false,
+          'videoBg' => '',
+          'videoInline' => false,
+          'waveStatus' => false,
+          'waveDirection' => '5',
+          'wave2Status' => false,
+          'wave2Direction' => '5',
+          'classes' => 
+          array (
+            0 => 'grid-row',
+            1 => 'grid-row-top-2',
+          ),
+          'columns' => 
+          array (
+            1 => 
+            array (
+              'classes' => 
+              array (
+                0 => 'grid-col',
+                1 => 'grid-col-top-2-1',
+              ),
+              'items' => 
+              array (
+                1 => 
+                array (
+                  'classes' => 
+                  array (
+                    0 => 'grid-item',
+                    1 => 'grid-item-top-2-1-1',
+                  ),
+                  'item' => 
+                  array (
+                  ),
+                ),
+              ),
+            ),
+            2 => 
+            array (
+              'classes' => 
+              array (
+                0 => 'grid-col',
+                1 => 'grid-col-top-2-2',
+              ),
+              'items' => 
+              array (
+                1 => 
+                array (
+                  'classes' => 
+                  array (
+                    0 => 'grid-item',
+                    1 => 'grid-item-top-2-2-1',
+                  ),
+                  'item' => 
+                  array (
+                    'id' => '310',
+                    'name' => 'Mersin Şubesi İletişim',
+                    'type' => 'info_blocks',
+                  ),
+                ),
+              ),
+            ),
+            3 => 
+            array (
+              'classes' => 
+              array (
+                0 => 'grid-col',
+                1 => 'grid-col-top-2-3',
+              ),
+              'items' => 
+              array (
+                1 => 
+                array (
+                  'classes' => 
+                  array (
+                    0 => 'grid-item',
+                    1 => 'grid-item-top-2-3-1',
+                  ),
+                  'item' => 
+                  array (
+                    'id' => '312',
+                    'name' => 'Rize Şubesi İletişim',
+                    'type' => 'info_blocks',
+                  ),
+                ),
+              ),
+            ),
+            4 => 
+            array (
+              'classes' => 
+              array (
+                0 => 'grid-col',
+                1 => 'grid-col-top-2-4',
+              ),
+              'items' => 
+              array (
+                1 => 
+                array (
+                  'classes' => 
+                  array (
+                    0 => 'grid-item',
+                    1 => 'grid-item-top-2-4-1',
+                  ),
+                  'item' => 
+                  array (
+                    'id' => '309',
+                    'name' => 'Bursa Şubesi İletişim',
+                    'type' => 'info_blocks',
+                  ),
+                ),
+              ),
+            ),
+            5 => 
+            array (
+              'classes' => 
+              array (
+                0 => 'grid-col',
+                1 => 'grid-col-top-2-5',
+              ),
+              'items' => 
+              array (
+                1 => 
+                array (
+                  'classes' => 
+                  array (
+                    0 => 'grid-item',
+                    1 => 'grid-item-top-2-5-1',
+                  ),
+                  'item' => 
+                  array (
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ),
+      ),
+      'grid_classes' => 
+      array (
+        0 => 'grid-rows',
+      ),
+    ),
+    'bottom' => 
+    array (
+      'rows' => 
+      array (
+      ),
+      'grid_classes' => 
+      array (
+        0 => 'grid-rows',
+      ),
+    ),
+    'header_top' => 
+    array (
+      'rows' => 
+      array (
+      ),
+      'grid_classes' => 
+      array (
+        0 => 'grid-rows',
+      ),
+    ),
+    'footer_top' => 
+    array (
+      'rows' => 
+      array (
+      ),
+      'grid_classes' => 
+      array (
+        0 => 'grid-rows',
+      ),
+    ),
+    'footer_bottom' => 
+    array (
+      'rows' => 
+      array (
+      ),
+      'grid_classes' => 
+      array (
+        0 => 'grid-rows',
+      ),
+    ),
+  ),
+  'php' => 
+  array (
+    'pageStyleBoxedLayout' => 'fullwidth',
+    'pageStyleContentWidth' => '1280',
+    'pageStyleContainerWidth' => '',
+    'pageStyleColumnLeftTabletStatus' => false,
+    'pageStyleColumnRightTabletStatus' => false,
+    'pageStyleColumnsWidth' => '240',
+    'headerDesktop' => '',
+    'headerMobile' => '',
+    'footerMenu' => '',
+    'footerMenuPhone' => '',
+  ),
+  'js' => 
+  array (
+  ),
+  'fonts' => 
+  array (
+  ),
+  'css' => '.layout-22 .boxed-layout .site-wrapper{overflow:hidden}.layout-22.boxed-layout
+.header{padding:0
+20px}.layout-22.boxed-layout
+.breadcrumb{padding-left:20px;padding-right:20px}.layout-22 .wrapper, .layout-22 .mega-menu-content, .layout-22 .site-wrapper > .container, .layout-22 .grid-cols, .layout-22.desktop-header-active .is-sticky .header .desktop-main-menu-wrapper, .layout-22.desktop-header-active .is-sticky .sticky-fullwidth-bg, .layout-22.boxed-layout .site-wrapper, .layout-22 .breadcrumb, .layout-22 .title-wrapper, .layout-22 .page-title > span, .layout-22.desktop-header-active .header .top-bar, .layout-22.desktop-header-active .header .mid-bar, .layout-22 .desktop-main-menu-wrapper{max-width:1280px;max-width:100%}.layout-22 .desktop-main-menu-wrapper .main-menu>.j-menu>.first-dropdown::before{transform:translateX(calc(0px - (100vw - 1280px) / 2));transform:translateX(calc(0px - (100vw - 100%) / 2))}.layout-22html[dir=\'rtl\'] .desktop-main-menu-wrapper .main-menu>.j-menu>.first-dropdown::before{transform:none;right:calc(0px - (100vw - 1280px) / 2);transform:none;right:calc(0px - (100vw - 100vw) / 2)}.layout-22 .desktop-main-menu-wrapper .main-menu>.j-menu>.first-dropdown.mega-custom::before{transform:translateX(calc(0px - (200vw - 1280px) / 2));transform:translateX(calc(0px - (200vw - 100%) / 2))}.layout-22html[dir=\'rtl\'] .desktop-main-menu-wrapper .main-menu>.j-menu>.first-dropdown.mega-custom::before{transform:none;right:calc(0px - (200vw - 1280px) / 2);transform:none;right:calc(0px - (200vw - 100vw) / 2)}.layout-22
+body{background:rgba(255, 255, 255, 1)}.layout-22
+#content{padding-top:40px;padding-right:50px;padding-bottom:40px;padding-left:50px}.layout-22.column-left
+#content{padding-left:20px}.layout-22.column-right
+#content{padding-right:20px}.layout-22 .side-column{max-width:240px;padding:20px;padding-top:40px;padding-left:0px}.layout-22.one-column
+#content{max-width:calc(100% - 240px)}.layout-22.two-column
+#content{max-width:calc(100% - 240px * 2)}.layout-22 #column-right{padding:20px;padding-top:40px;padding-right:0px}.layout-22 .page-title{display:block}@media (max-width: 1300px){.layout-22
+#content{padding:20px}.layout-22 .side-column{padding-left:20px}.layout-22 #column-right{padding-right:20px}}.grid-row-top-1::before{display:block;left:0;width:100vw}.grid-row-top-1{padding-top:30px;padding-right:70px;padding-bottom:30px;padding-left:70px}.grid-row-top-1 .wave-top{display:block}.grid-row-top-1 .wave-bottom{display:block}.grid-col-top-1-1{width:20%}.grid-col-top-1-1 .grid-item{height:auto}.grid-col-top-1-1 .grid-items{justify-content:flex-start}.grid-item-top-1-1-1{width:100%}.grid-col-top-1-2{width:20%}.grid-col-top-1-2 .grid-item{height:auto}.grid-col-top-1-2 .grid-items{justify-content:flex-start}.grid-item-top-1-2-1{width:100%}.grid-col-top-1-3{width:20%}.grid-col-top-1-3 .grid-item{height:auto}.grid-col-top-1-3 .grid-items{justify-content:flex-start}.grid-item-top-1-3-1{width:100%}.grid-col-top-1-4{width:20%}.grid-col-top-1-4 .grid-item{height:auto}.grid-col-top-1-4 .grid-items{justify-content:flex-start}.grid-item-top-1-4-1{width:100%}.grid-col-top-1-5{width:20%}.grid-col-top-1-5 .grid-item{height:auto}.grid-col-top-1-5 .grid-items{justify-content:flex-start}.grid-item-top-1-5-1{width:100%}.grid-row-top-2::before{display:block;left:0;width:100vw}.grid-row-top-2{padding-right:70px;padding-left:70px}.grid-row-top-2 .wave-top{display:block}.grid-row-top-2 .wave-bottom{display:block}.grid-col-top-2-1{width:20%}.grid-col-top-2-1 .grid-item{height:auto}.grid-col-top-2-1 .grid-items{justify-content:flex-start}.grid-item-top-2-1-1{width:100%}.grid-col-top-2-2{width:20%}.grid-col-top-2-2 .grid-item{height:auto}.grid-col-top-2-2 .grid-items{justify-content:flex-start}.grid-item-top-2-2-1{width:100%}.grid-col-top-2-3{width:20%}.grid-col-top-2-3 .grid-item{height:auto}.grid-col-top-2-3 .grid-items{justify-content:flex-start}.grid-item-top-2-3-1{width:100%}.grid-col-top-2-4{width:20%}.grid-col-top-2-4 .grid-item{height:auto}.grid-col-top-2-4 .grid-items{justify-content:flex-start}.grid-item-top-2-4-1{width:100%}.grid-col-top-2-5{width:20%}.grid-col-top-2-5 .grid-item{height:auto}.grid-col-top-2-5 .grid-items{justify-content:flex-start}.grid-item-top-2-5-1{width:100%}',
+);

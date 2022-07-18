@@ -1,0 +1,51 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "New Item"
+  },
+  "status": {
+    "type": "Status"
+  },
+  "title": {
+    "type": "InputLang",
+    "php": true
+  },
+  "icon": {
+    "type": "Icon",
+    "selector": ".accordion-menu-%s .j-menu .accordion-menu-item-%s > a::before"
+  },
+  "iconHover": {
+    "type": "Color",
+    "selector": ".accordion-menu-%s .j-menu .accordion-menu-item-%s:hover > a::before",
+    "property": "color"
+  },
+  "itemFont": {
+    "type": "Font",
+    "selector": ".accordion-menu-%s .j-menu .accordion-menu-item-%s > a",
+    "important": true
+  },
+  "itemFontHover": {
+    "type": "Font",
+    "selector": ".accordion-menu-%s .j-menu .accordion-menu-item-%s:hover > a",
+    "important": true,
+    "desktop":true
+  },
+  "itemBackground": {
+    "type": "Background",
+    "selector": ".accordion-menu-%s .j-menu .accordion-menu-item-%s > a",
+    "important": true
+  },
+  "itemBackgroundHover": {
+    "type": "Background",
+    "selector": ".accordion-menu-%s .j-menu .accordion-menu-item-%s:hover > a",
+    "important": true,
+    "desktop":true
+  },
+  "link": {
+    "type": "Link",
+    "php": true
+  },
+  "subcategories": {
+    "type": "Toggle"
+  }
+}

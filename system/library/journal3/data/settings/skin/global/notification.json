@@ -1,0 +1,26 @@
+{
+  "notificationStatus": {
+    "type": "Toggle",
+    "php":  true
+  },
+  "notificationHideAfter": {
+    "type": "InputNumber",
+    "value": "2000",
+    "js": true
+  },
+  "cartNotificationStyle": {
+    "type": "Variable",
+    "variable": "notification",
+    "selector_prefix": ".notification-cart"
+  },
+  "wishlistNotificationStyle": {
+    "type": "Variable",
+    "variable": "notification",
+    "selector_prefix": ".notification-wishlist"
+  },
+  "compareNotificationStyle": {
+    "type": "Variable",
+    "variable": "notification",
+    "selector_prefix": ".notification-compare"
+  }
+}

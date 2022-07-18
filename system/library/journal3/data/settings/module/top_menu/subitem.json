@@ -1,0 +1,37 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "New SubItem"
+  },
+  "status": {
+    "type": "Status"
+  },
+  "title": {
+    "type": "InputLang",
+    "php": true
+  },
+  "link": {
+    "type": "Link",
+    "php": true
+  },
+  "icon": {
+    "type": "Icon",
+    "selector": ".top-menu-%s .j-menu .j-menu li.top-menu-item-%s > a::before"
+  },
+  "iconHover": {
+    "type": "Color",
+    "selector": ".top-menu-%s li.top-menu-item-%s:hover > a::before",
+    "property": "color",
+    "desktop":true
+  },
+  "font": {
+    "type": "Font",
+    "selector": ".top-menu-%s li.top-menu-item-%s > a .links-text"
+  },
+  "fontHover": {
+    "type": "Font",
+    "selector": ".top-menu-%s li.top-menu-item-%s:hover > a .links-text",
+    "important": true,
+    "desktop":true
+  }
+}

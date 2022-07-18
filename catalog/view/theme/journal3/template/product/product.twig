@@ -1,0 +1,853 @@
+{% set stylePrefix = j3.document.isPopup('quickview') ? 'quickviewPageStyle' : 'productPageStyle' %}
+{% set optionPrice = j3.settings.get(stylePrefix ~ 'OptionPrice') %}
+{% set direction = j3.settings.get(stylePrefix ~ 'AdditionalImagesPosition') == 'left' or j3.settings.get(stylePrefix ~ 'AdditionalImagesPosition') == 'right' ? 'vertical' : 'horizontal' %}
+{% set carousel = direction == 'vertical' or j3.settings.get(stylePrefix ~ 'AdditionalImagesCarousel') %}
+{% set carouselOptions = {
+  slidesPerView: 'auto',
+  spaceBetween: j3.settings.get(stylePrefix ~ 'AdditionalImagesSpacing')|default(0),
+  direction: direction
+} %}
+{% set galleryOptions = {
+  thumbWidth: j3.settings.get('image_dimensions_popup_thumb.width'),
+  thumbConHeight: j3.settings.get('image_dimensions_popup_thumb.height'),
+  addClass: 'lg-product-images',
+  mode: j3.settings.get(stylePrefix ~ 'GalleryMode'),
+  download: j3.settings.get(stylePrefix ~ 'GalleryDownload'),
+  fullScreen: j3.settings.get(stylePrefix ~ 'GalleryFullScreen')
+} %}
+{% set quickviewExpand = not j3.settings.get('quickviewExpandButton') or (j3.settings.get('globalExpandCharactersLimit') > 0 and description and description|length <= j3.settings.get('globalExpandCharactersLimit')) ? 'no-expand': '' %}
+{% if j3.isDescriptionEmpty(description) %}
+{% set description = '' %}
+{% endif %}
+{{ header }}
+{% if not j3.document.isPopup() %}
+<ul class="breadcrumb">
+  {% for breadcrumb in breadcrumbs %}
+  <li><a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a></li>
+  {% endfor %}
+</ul>
+{% if j3.settings.get('pageTitlePosition') == 'top' %}
+  <h1 class="title page-title"><span>{{ heading_title }}</span></h1>
+{% endif %}
+{{ j3.loadController('journal3/layout', 'top') }}
+<div id="product-product" class="container">
+  <div class="row">{{ column_left }}
+    <div id="content" class="{{ class }}">
+      {% endif %}
+      {{ content_top }}
+      {% if not j3.document.isPopup('options') %}
+        {% if j3.settings.get('pageTitlePosition') == 'default' or j3.document.isPopup('quickview') %}
+          <h1 class="title page-title">{{ heading_title }}</h1>
+        {% endif %}
+      {% endif %}
+      {% set classes = j3.classes({
+        'out-of-stock': product_quantity <= 0,
+        'has-countdown': date_end,
+        'has-zero-price': not product_price_value,
+        'has-extra-button': product_extra_buttons,
+      }) ~ ' ' ~ product_exclude_classes %}
+      <div class="product-info {{ classes }}">
+        {% if not j3.document.isPopup('options') %}
+        <div class="product-left">
+          <div class="product-image direction-{{ direction }} position-{{ j3.settings.get(stylePrefix ~ 'AdditionalImagesPosition') }}">
+            <div class="swiper main-image" data-options='{{ j3.carousel(j3.document.getJs(), stylePrefix ~ 'ImageCarouselStyle')|json_encode(constant('JSON_FORCE_OBJECT')) }}' {% if images|length > 1 and j3.settings.get(stylePrefix ~ 'AdditionalImagesStatus') and carousel and direction == 'vertical' %}style="width: calc(100% - {{ j3.settings.get('image_dimensions_additional.width') }}px)"{% endif %}>
+              <div class="swiper-container" {% if j3.isRTL() %}dir="rtl"{% endif %}>
+                <div class="swiper-wrapper">
+                  {% set gallery = [] %}
+                  {% for image in images %}
+                    {% set gallery = gallery|merge([{src: image.popup, thumb: image.galleryThumb, subHtml: heading_title}]) %}
+                    <div class="swiper-slide" {% if not j3.document.isPopup() and j3.settings.get(stylePrefix ~ 'GalleryStatus') %} data-gallery=".lightgallery-product-images" data-index="{{ loop.index0 }}" {% endif %}>
+                      <img src="{{ image.image }}" {% if image.image2x %}srcset="{{ image.image }} 1x, {{ image.image2x }} 2x"{% endif %} data-largeimg="{{ image.popup }}" alt="{{ heading_title }}" title="{{ heading_title }}" width="{{ j3.settings.get('image_dimensions_thumb.width') }}" height="{{ j3.settings.get('image_dimensions_thumb.height') }}" {% if not loop.first %}loading="lazy"{% endif %}/>
+                    </div>
+                  {% endfor %}
+                </div>
+              </div>
+              <div class="swiper-controls">
+                <div class="swiper-buttons">
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+              {% if product_labels %}
+                <div class="product-labels">
+                  {% for id, label in product_labels %}
+                    <span class="product-label product-label-{{ id }} product-label-{{ label.display }}"><b>{{ label.label }}</b></span>
+                  {% endfor %}
+                </div>
+              {% endif %}
+            </div>
+            {% if images|length > 1 and j3.settings.get(stylePrefix ~ 'AdditionalImagesStatus') %}
+              {% if carousel %}
+                <div class="swiper additional-images" data-options='{{ carouselOptions|json_encode(constant('JSON_FORCE_OBJECT')) }}' {% if direction == 'vertical' %}style="width: {{ j3.settings.get('image_dimensions_additional.width') }}px"{% endif %}>
+                  <div class="swiper-container" {% if j3.isRTL() %}dir="rtl"{% endif %}>
+                    <div class="swiper-wrapper">
+                      {% for image in images %}
+                        <div class="swiper-slide additional-image" data-index="{{ loop.index0 }}">
+                          <img src="{{ image.thumb }}" {% if image.thumb2x %}srcset="{{ image.thumb }} 1x, {{ image.thumb2x }} 2x"{% endif %} alt="{{ heading_title }}" title="{{ heading_title }}" width="{{ j3.settings.get('image_dimensions_additional.width') }}" height="{{ j3.settings.get('image_dimensions_additional.height') }}" {% if not loop.first %}loading="lazy"{% endif %}/>
+                        </div>
+                      {% endfor %}
+                    </div>
+                  </div>
+                  <div class="swiper-buttons">
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                </div>
+              {% else %}
+                <div class="additional-images">
+                  {% for image in images %}
+                    <div class="additional-image" data-index="{{ loop.index0 }}">
+                      <img src="{{ image.thumb }}" alt="{{ heading_title }}" title="{{ heading_title }}" width="{{ j3.settings.get('image_dimensions_additional.width') }}" height="{{ j3.settings.get('image_dimensions_additional.height') }}"/>
+                    </div>
+                  {% endfor %}
+                </div>
+              {% endif %}
+            {% endif %}
+          </div>
+          {% if not j3.document.isPopup() and j3.settings.get(stylePrefix ~ 'GalleryStatus') %}
+          <div class="lightgallery lightgallery-product-images" data-images='{{ gallery|json_encode|e }}' data-options='{{ galleryOptions|json_encode(constant('JSON_FORCE_OBJECT')) }}'></div>
+          {% endif %}
+          {% if not j3.document.isPopup('options') %}
+            {% if product_blocks.image %}
+            <div class="product-blocks blocks-image">
+              {{ product_blocks.image|join }}
+            </div>
+            {% endif %}
+          {% endif %}
+          {% if description and j3.document.isPopup('quickview') and j3.settings.get('quickviewDescription') and (j3.settings.get('quickviewDescriptionPosition') == 'image') %}
+            <div class="description {{ quickviewExpand }}">
+              <div class="expand-block">
+                <div class="expand-content">
+                  {{ description }}
+                </div>
+                {% if j3.settings.get('quickviewExpandButton') %}
+                  <div class="block-expand-overlay"><a class="block-expand btn"></a></div>
+                {% endif %}
+              </div>
+            </div>
+          {% endif %}
+          {% if tags and not j3.document.isPopup() and (j3.settings.get(stylePrefix ~ 'TagsPosition') == 'image') %}
+            <div class="tags">
+              <span class="tags-title">{{ text_tags }}</span>
+              {% for tag in tags %}
+                <a href="{{ tag.href }}">{{ tag.tag }}</a>
+                {% if not loop.last %}<b>,</b>{% endif %}
+              {% endfor %}
+            </div>
+          {% endif %}
+        </div>
+        {% endif %}
+        <div class="product-right">
+          <div id="product" class="product-details">
+          {% if not j3.document.isPopup('options') %}
+          <div class="title page-title">{{ heading_title }}</div>
+          {% if product_blocks.top %}
+          <div class="product-blocks blocks-top">
+          {{ product_blocks.top|join }}
+          </div>
+          {% endif %}
+          {% endif %}
+
+          {% if description and j3.document.isPopup('quickview') and j3.settings.get('quickviewDescription') and (j3.settings.get('quickviewDescriptionPosition') == 'top') %}
+            <div class="description {{ quickviewExpand }}">
+              <div class="expand-block">
+                <div class="expand-content">
+                  {{ description }}
+                </div>
+                {% if j3.settings.get('quickviewExpandButton') %}
+                  <div class="block-expand-overlay"><a class="block-expand btn"></a></div>
+                {% endif %}
+              </div>
+            </div>
+          {% endif %}
+
+          {% if not j3.document.isPopup('options') and j3.settings.get(stylePrefix ~ 'Stats') and (j3.settings.get(stylePrefix ~ 'StatsPosition') == 'default') %}
+            <div class="product-stats">
+              <ul class="list-unstyled">
+                {% if j3.settings.get(stylePrefix ~ 'ProductStock')%}
+                  <li class="product-stock {% if product_quantity > 0 %}in-stock{% else %}out-of-stock{% endif %}"><b>{{ j3.settings.get(stylePrefix ~ 'ProductStockText') }}:</b> <span>{{ stock }}</span></li>
+                {% endif %}
+                {% if manufacturer and j3.settings.get(stylePrefix ~ 'ProductManufacturer') and (j3.settings.get(stylePrefix ~ 'ProductManufacturerDisplay') == 'list') %}
+                  <li class="product-manufacturer"><b>{{ j3.settings.get(stylePrefix ~ 'ProductManufacturerText') }}:</b> <a href="{{ manufacturers }}">{{ manufacturer }}</a></li>
+                {% endif %}
+                {% if j3.settings.get(stylePrefix ~ 'ProductReward') and reward %}
+                  <li class="product-reward"><b>{{ j3.settings.get(stylePrefix ~ 'ProductRewardText') }}:</b> <span>{{ reward }}</span></li>
+                {% endif %}
+                {% if j3.settings.get(stylePrefix ~ 'ProductModel') and model %}
+                  <li class="product-model"><b>{{ j3.settings.get(stylePrefix ~ 'ProductModelText') }}:</b> <span>{{ model }}</span></li>
+                {% endif %}
+                {% if j3.settings.get(stylePrefix ~ 'ProductWeight') and product_weight %}
+                  <li class="product-weight"><b>{{ j3.settings.get(stylePrefix ~ 'ProductWeightText') }}:</b> <span>{{ product_weight }}</span></li>
+                {% endif %}
+                {% if j3.settings.get(stylePrefix ~ 'ProductDimension') and product_dimension %}
+                  <li class="product-dimension"><b>{{ j3.settings.get(stylePrefix ~ 'ProductDimensionText') }}:</b> <span>{{ product_length }} x {{ product_width }} x {{ product_height }}</span></li>
+                {% endif %}
+                {% if j3.settings.get(stylePrefix ~ 'ProductSKU') and product_sku %}
+                  <li class="product-sku"><b>{{ j3.settings.get(stylePrefix ~ 'ProductSKUText') }}:</b> <span> {{ product_sku }}</span></li>
+                {% endif %}
+                {% if j3.settings.get(stylePrefix ~ 'ProductUPC') and product_upc %}
+                  <li class="product-upc"><b>{{ j3.settings.get(stylePrefix ~ 'ProductUPCText') }}:</b> <span>{{ product_upc }}</span></li>
+                {% endif %}
+                {% if j3.settings.get(stylePrefix ~ 'ProductEAN') and product_ean %}
+                  <li class="product-ean"><b>{{ j3.settings.get(stylePrefix ~ 'ProductEANText') }}:</b> <span>{{ product_ean }}</span></li>
+                {% endif %}
+                {% if j3.settings.get(stylePrefix ~ 'ProductJAN') and product_jan %}
+                  <li class="product-jan"><b>{{ j3.settings.get(stylePrefix ~ 'ProductJANText') }}:</b> <span>{{ product_jan }}</span></li>
+                {% endif %}
+                {% if j3.settings.get(stylePrefix ~ 'ProductISBN') and product_isbn %}
+                  <li class="product-isbn"><b>{{ j3.settings.get(stylePrefix ~ 'ProductISBNText') }}:</b> <span>{{ product_isbn }}</span></li>
+                {% endif %}
+                {% if j3.settings.get(stylePrefix ~ 'ProductMPN') and product_mpn %}
+                  <li class="product-mpn"><b>{{ j3.settings.get(stylePrefix ~ 'ProductMPNText') }}:</b> <span>{{ product_mpn }}</span></li>
+                {% endif %}
+                {% if j3.settings.get(stylePrefix ~ 'ProductLocation') and product_location %}
+                  <li class="product-location"><b>{{ j3.settings.get(stylePrefix ~ 'ProductLocationText') }}:</b> <span>{{ product_location }}</span></li>
+                {% endif %}
+              </ul>
+              {% if manufacturer and j3.settings.get(stylePrefix ~ 'ProductManufacturer') and (j3.settings.get(stylePrefix ~ 'ProductManufacturerDisplay') == 'image') %}
+                <div class="brand-image product-manufacturer">
+                  <a href="{{ manufacturers }}">
+                    {% if manufacturer_image %}
+                      <img src="{{ manufacturer_image }}" {% if manufacturer_image2x %}srcset="{{ manufacturer_image }} 1x, {{ manufacturer_image2x }} 2x"{% endif %} alt="{{ manufacturer }}" width="{{ j3.settings.get('image_dimensions_manufacturer_logo.width') }}" height="{{ j3.settings.get('image_dimensions_manufacturer_logo.height') }}"/>
+                    {% endif %}
+                    <span>{{ manufacturer }}</span>
+                  </a>
+                </div>
+              {% endif %}
+              {% if j3.settings.get(stylePrefix ~ 'CustomStats')%}
+                <div class="custom-stats">
+                  {% if j3.settings.get(stylePrefix ~ 'ProductSold')%}
+                    <div class="product-sold"><b>{{ j3.settings.getWithValue(stylePrefix ~ 'SoldText', products_sold) }}</b></div>
+                  {% endif %}
+                  {% if j3.settings.get(stylePrefix ~ 'ProductViews')%}
+                    <div class="product-views"><b>{{ j3.settings.getWithValue(stylePrefix ~ 'ViewsText', product_views) }}</b></div>
+                  {% endif %}
+                </div>
+              {% endif %}
+            </div>
+          {% endif %}
+
+          {% if review_status and not j3.document.isPopup() %}
+            <div class="rating rating-page">
+              <div class="rating-stars">
+                {% for i in 1..5 %}
+                  {% if rating < i %}
+                    <span class="fa fa-stack">
+                      <i class="fa fa-star-o fa-stack-1x"></i>
+                    </span>{% else %}
+                    <span class="fa fa-stack">
+                      <i class="fa fa-star fa-stack-1x"></i>
+                      <i class="fa fa-star-o fa-stack-1x"></i>
+                    </span>
+                  {% endif %}
+                {% endfor %}
+              </div>
+              <div class="review-links">
+                <a>{{ reviews }}</a>
+                <b>{{ j3.settings.get(stylePrefix ~ 'RatingSeparator') }}</b>
+                <a>{{ text_write }}</a>
+              </div>
+            </div>
+          {% endif %}
+
+          {% if date_end and j3.settings.get(j3.document.isPopup() ? 'quickviewCountdown' : 'countdownStatus') %}
+            <div class="countdown-wrapper">
+              {% if j3.settings.get(stylePrefix ~ 'CountdownText') %}
+              <h5 class="countdown-title title">{{ j3.settings.get(stylePrefix ~ 'CountdownText') }}</h5>
+              {% endif %}
+              <div class="countdown" data-date="{{ date_end }}">
+                <div><i class="fa fa-spinner fa-spin"></i><span>{{ j3.settings.get('countdownDay') }}</span></div>
+                <div><i class="fa fa-spinner fa-spin"></i><span>{{ j3.settings.get('countdownHour') }}</span></div>
+                <div><i class="fa fa-spinner fa-spin"></i><span>{{ j3.settings.get('countdownMin') }}</span></div>
+                <div><i class="fa fa-spinner fa-spin"></i><span>{{ j3.settings.get('countdownSec') }}</span></div>
+              </div>
+            </div>
+          {% endif %}
+
+          {% if price and not j3.document.isPopup('options') %}
+          <div class="product-price-group">
+           <div class="price-wrapper">
+             <div class="price-group">
+               {% if not special %}
+                 <div class="product-price">{{ price }}</div>
+               {% else %}
+                 <div class="product-price-new">{{ special }}</div>
+                 <div class="product-price-old">{{ price }}</div>
+               {% endif %}
+             </div>
+             {% if tax %}
+               <div class="product-tax">{{ text_tax }} {{ tax }}</div>
+             {% endif %}
+             {% if points %}
+               <div class="product-points">{{ text_points }} {{ points }}</div>
+             {% endif %}
+
+             {% if discounts %}
+               <div class="discounts">
+                 {% for discount in discounts %}
+                   <div class="product-discount">{{ discount.quantity }}{{ text_discount }}{{ discount.price }}</div>
+                 {% endfor %}
+               </div>
+             {% endif %}
+           </div>
+            {% if not j3.document.isPopup('options') and j3.settings.get(stylePrefix ~ 'Stats') and (j3.settings.get(stylePrefix ~ 'StatsPosition') == 'price') %}
+              <div class="product-stats">
+                <ul class="list-unstyled">
+                  {% if j3.settings.get(stylePrefix ~ 'ProductStock')%}
+                    <li class="product-stock {% if product_quantity > 0 %}in-stock{% else %}out-of-stock{% endif %}"><b>{{ j3.settings.get(stylePrefix ~ 'ProductStockText') }}:</b> <span>{{ stock }}</span></li>
+                  {% endif %}
+                  {% if manufacturer and j3.settings.get(stylePrefix ~ 'ProductManufacturer') and (j3.settings.get(stylePrefix ~ 'ProductManufacturerDisplay') == 'list') %}
+                    <li class="product-manufacturer"><b>{{ j3.settings.get(stylePrefix ~ 'ProductManufacturerText') }}:</b> <a href="{{ manufacturers }}">{{ manufacturer }}</a></li>
+                  {% endif %}
+                  {% if j3.settings.get(stylePrefix ~ 'ProductReward') and reward %}
+                    <li class="product-reward"><b>{{ j3.settings.get(stylePrefix ~ 'ProductRewardText') }}:</b> <span>{{ reward }}</span></li>
+                  {% endif %}
+                  {% if j3.settings.get(stylePrefix ~ 'ProductModel') and model %}
+                    <li class="product-model"><b>{{ j3.settings.get(stylePrefix ~ 'ProductModelText') }}:</b> <span>{{ model }}</span></li>
+                  {% endif %}
+                  {% if j3.settings.get(stylePrefix ~ 'ProductWeight') and product_weight %}
+                    <li class="product-weight"><b>{{ j3.settings.get(stylePrefix ~ 'ProductWeightText') }}:</b> <span>{{ product_weight }}</span></li>
+                  {% endif %}
+                  {% if j3.settings.get(stylePrefix ~ 'ProductDimension') and product_dimension %}
+                    <li class="product-dimension"><b>{{ j3.settings.get(stylePrefix ~ 'ProductDimensionText') }}:</b> <span>{{ product_length }} x {{ product_width }} x {{ product_height }}</span></li>
+                  {% endif %}
+                  {% if j3.settings.get(stylePrefix ~ 'ProductSKU') and product_sku %}
+                    <li class="product-sku"><b>{{ j3.settings.get(stylePrefix ~ 'ProductSKUText') }}:</b> <span> {{ product_sku }}</span></li>
+                  {% endif %}
+                  {% if j3.settings.get(stylePrefix ~ 'ProductUPC') and product_upc %}
+                    <li class="product-upc"><b>{{ j3.settings.get(stylePrefix ~ 'ProductUPCText') }}:</b> <span>{{ product_upc }}</span></li>
+                  {% endif %}
+                  {% if j3.settings.get(stylePrefix ~ 'ProductEAN') and product_ean %}
+                    <li class="product-ean"><b>{{ j3.settings.get(stylePrefix ~ 'ProductEANText') }}:</b> <span>{{ product_ean }}</span></li>
+                  {% endif %}
+                  {% if j3.settings.get(stylePrefix ~ 'ProductJAN') and product_jan %}
+                    <li class="product-jan"><b>{{ j3.settings.get(stylePrefix ~ 'ProductJANText') }}:</b> <span>{{ product_jan }}</span></li>
+                  {% endif %}
+                  {% if j3.settings.get(stylePrefix ~ 'ProductISBN') and product_isbn %}
+                    <li class="product-isbn"><b>{{ j3.settings.get(stylePrefix ~ 'ProductISBNText') }}:</b> <span>{{ product_isbn }}</span></li>
+                  {% endif %}
+                  {% if j3.settings.get(stylePrefix ~ 'ProductMPN') and product_mpn %}
+                    <li class="product-mpn"><b>{{ j3.settings.get(stylePrefix ~ 'ProductMPNText') }}:</b> <span>{{ product_mpn }}</span></li>
+                  {% endif %}
+                  {% if j3.settings.get(stylePrefix ~ 'ProductLocation') and product_location %}
+                    <li class="product-location"><b>{{ j3.settings.get(stylePrefix ~ 'ProductLocationText') }}:</b> <span>{{ product_location }}</span></li>
+                  {% endif %}
+                </ul>
+                {% if manufacturer and j3.settings.get(stylePrefix ~ 'ProductManufacturer') and (j3.settings.get(stylePrefix ~ 'ProductManufacturerDisplay') == 'image') %}
+                  <div class="brand-image product-manufacturer">
+                    <a href="{{ manufacturers }}">
+                      {% if manufacturer_image %}
+                        <img src="{{ manufacturer_image }}" {% if manufacturer_image2x %}srcset="{{ manufacturer_image }} 1x, {{ manufacturer_image2x }} 2x"{% endif %} alt="{{ manufacturer }}" width="{{ j3.settings.get('image_dimensions_manufacturer_logo.width') }}" height="{{ j3.settings.get('image_dimensions_manufacturer_logo.height') }}"/>
+                      {% endif %}
+                      <span>{{ manufacturer }}</span>
+                    </a>
+                  </div>
+                {% endif %}
+                {% if j3.settings.get(stylePrefix ~ 'CustomStats')%}
+                  <div class="custom-stats">
+                    {% if j3.settings.get(stylePrefix ~ 'ProductSold')%}
+                      <div class="product-sold"><b>{{ j3.settings.getWithValue(stylePrefix ~ 'SoldText', products_sold) }}</b></div>
+                    {% endif %}
+                    {% if j3.settings.get(stylePrefix ~ 'ProductViews')%}
+                      <div class="product-views"><b>{{ j3.settings.getWithValue(stylePrefix ~ 'ViewsText', product_views) }}</b></div>
+                    {% endif %}
+                  </div>
+                {% endif %}
+              </div>
+            {% endif %}
+          </div>
+          {% endif %}
+
+          {% if options %}
+          <div class="product-options">
+            <h3 class="options-title title">{{ text_option }}</h3>
+            {% for option in options %}
+            {% if option.type == 'select' %}
+            <div class="form-group{% if option.required %} required {% endif %} product-option-{{ option.type }} {% if j3.settings.get(stylePrefix ~ 'OptionsPushSelect') %}push-option{% endif %}">
+              <label class="control-label" for="input-option{{ option.product_option_id }}">{{ option.name }}</label>
+              <select name="option[{{ option.product_option_id }}]" id="input-option{{ option.product_option_id }}" class="form-control">
+                <option value="">{{ text_select }}</option>
+                {% for option_value in option.product_option_value %}
+                <option value="{{ option_value.product_option_value_id }}">{{ option_value.name }}
+                {% if option_value.price and optionPrice %}
+                ({{ option_value.price_prefix }}{{ option_value.price }})
+                {% endif %} </option>
+                {% endfor %}
+              </select>
+            </div>
+            {% endif %}
+            {% if option.type == 'radio' %}
+            <div class="form-group{% if option.required %} required {% endif %} product-option-{{ option.type }} {% if j3.settings.get(stylePrefix ~ 'OptionsPushRadio') %}push-option{% endif %}">
+              <label class="control-label">{{ option.name }}</label>
+              <div id="input-option{{ option.product_option_id }}"> {% for option_value in option.product_option_value %}
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="option[{{ option.product_option_id }}]" value="{{ option_value.product_option_value_id }}" />
+                    {% if option_value.image %} <img width="{{ j3.settings.get('image_dimensions_options.width') }}" height="{{ j3.settings.get('image_dimensions_options.height') }}" src="{{ option_value.image }}" alt="{{ option_value.name }} {% if option_value.price and optionPrice %} {{ option_value.price_prefix }} {{ option_value.price }} {% endif %}" data-toggle="tooltip" data-tooltip-class="push-tooltip" data-placement="{{ j3.settings.get(stylePrefix ~ 'PushTooltipPosition') }}" title="{{ option_value.name }} {% if option_value.price and optionPrice %} ({{ option_value.price_prefix }}{{ option_value.price }}) {% endif %}"/> {% endif %}
+                    <span class="option-value">
+                      {{ option_value.name }}
+                      {% if option_value.price and optionPrice %}
+                        <span class="option-price">
+                          ({{ option_value.price_prefix }}{{ option_value.price }})
+                        </span>
+                      {% endif %}
+                    </span>
+                  </label>
+                </div>
+                {% endfor %} </div>
+            </div>
+            {% endif %}
+            {% if option.type == 'checkbox' %}
+            <div class="form-group{% if option.required %} required {% endif %} product-option-{{ option.type }} {% if j3.settings.get(stylePrefix ~ 'OptionsPushCheckbox') %}push-option{% endif %}">
+              <label class="control-label">{{ option.name }}</label>
+              <div id="input-option{{ option.product_option_id }}"> {% for option_value in option.product_option_value %}
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" name="option[{{ option.product_option_id }}][]" value="{{ option_value.product_option_value_id }}" />
+                    {% if option_value.image %} <img width="{{ j3.settings.get('image_dimensions_options.width') }}" height="{{ j3.settings.get('image_dimensions_options.height') }}" src="{{ option_value.image }}" alt="{{ option_value.name }} {% if option_value.price and optionPrice %} {{ option_value.price_prefix }} {{ option_value.price }} {% endif %}" data-toggle="tooltip" data-tooltip-class="push-tooltip" data-placement="{{ j3.settings.get(stylePrefix ~ 'PushTooltipPosition') }}" title="{{ option_value.name }} {% if option_value.price and optionPrice %} ({{ option_value.price_prefix }}{{ option_value.price }}) {% endif %}"/> {% endif %}
+                    <span class="option-value">
+                      {{ option_value.name }}
+                      {% if option_value.price and optionPrice %}
+                        <span class="option-price">({{ option_value.price_prefix }}{{ option_value.price }})</span>
+                      {% endif %}
+                    </span>
+                  </label>
+                </div>
+                {% endfor %} </div>
+            </div>
+            {% endif %}
+            {% if option.type == 'text' %}
+            <div class="form-group{% if option.required %} required {% endif %} product-option-{{ option.type }}">
+              <label class="control-label" for="input-option{{ option.product_option_id }}">{{ option.name }}</label>
+              <input type="text" name="option[{{ option.product_option_id }}]" value="{{ option.value }}" placeholder="{{ option.name }}" id="input-option{{ option.product_option_id }}" class="form-control" />
+            </div>
+            {% endif %}
+            {% if option.type == 'textarea' %}
+            <div class="form-group{% if option.required %} required {% endif %} product-option-{{ option.type }}">
+              <label class="control-label" for="input-option{{ option.product_option_id }}">{{ option.name }}</label>
+              <textarea name="option[{{ option.product_option_id }}]" rows="5" placeholder="{{ option.name }}" id="input-option{{ option.product_option_id }}" class="form-control">{{ option.value }}</textarea>
+            </div>
+            {% endif %}
+            {% if option.type == 'file' %}
+            <div class="form-group{% if option.required %} required {% endif %} product-option-{{ option.type }}">
+              <label class="control-label">{{ option.name }}</label>
+              <button type="button" id="button-upload{{ option.product_option_id }}" data-loading-text="{{ text_loading }}" class="btn btn-default btn-block"><i class="fa fa-upload"></i> {{ button_upload }}</button>
+              <input type="hidden" name="option[{{ option.product_option_id }}]" value="" id="input-option{{ option.product_option_id }}" />
+            </div>
+            {% endif %}
+            {% if option.type == 'date' %}
+            <div class="form-group{% if option.required %} required {% endif %} product-option-{{ option.type }}">
+              <label class="control-label" for="input-option{{ option.product_option_id }}">{{ option.name }}</label>
+              <div class="input-group date" data-picker-class="product-options pp-date-time-picker">
+                <input type="text" name="option[{{ option.product_option_id }}]" value="{{ option.value }}" data-date-format="YYYY-MM-DD" id="input-option{{ option.product_option_id }}" class="form-control" />
+                <span class="input-group-btn">
+                <button class="btn btn-default" type="button"><i class="fa fa-calendar"></i></button>
+                </span></div>
+            </div>
+            {% endif %}
+            {% if option.type == 'datetime' %}
+            <div class="form-group{% if option.required %} required {% endif %} product-option-{{ option.type }}">
+              <label class="control-label" for="input-option{{ option.product_option_id }}">{{ option.name }}</label>
+              <div class="input-group datetime" data-picker-class="product-options pp-date-time-picker">
+                <input type="text" name="option[{{ option.product_option_id }}]" value="{{ option.value }}" data-date-format="YYYY-MM-DD HH:mm" id="input-option{{ option.product_option_id }}" class="form-control" />
+                <span class="input-group-btn">
+                <button type="button" class="btn btn-default"><i class="fa fa-calendar"></i></button>
+                </span></div>
+            </div>
+            {% endif %}
+            {% if option.type == 'time' %}
+            <div class="form-group{% if option.required %} required {% endif %} product-option-{{ option.type }}">
+              <label class="control-label" for="input-option{{ option.product_option_id }}">{{ option.name }}</label>
+              <div class="input-group time" data-picker-class="product-options pp-date-time-picker">
+                <input type="text" name="option[{{ option.product_option_id }}]" value="{{ option.value }}" data-date-format="HH:mm" id="input-option{{ option.product_option_id }}" class="form-control" />
+                <span class="input-group-btn">
+                <button type="button" class="btn btn-default"><i class="fa fa-calendar"></i></button>
+                </span></div>
+            </div>
+            {% endif %}
+            {% endfor %}
+          </div>
+          {% endif %}
+
+          {% if recurrings %}
+            <h3 class="title recurring-title">{{ text_payment_recurring }}</h3>
+            <div class="form-group required">
+              <select name="recurring_id" class="form-control">
+                <option value="">{{ text_select }}</option>
+                {% for recurring in recurrings %}
+                <option value="{{ recurring.recurring_id }}">{{ recurring.name }}</option>
+                {% endfor %}
+              </select>
+              <div class="help-block" id="recurring-description"></div>
+            </div>
+          {% endif %}
+
+          {% if j3.settings.get('catalogCartStatus') or j3.settings.get('catalogWishlistStatus') or j3.settings.get('catalogCompareStatus') or (product_extra_buttons and not j3.document.isPopup()) %}
+          <div class="button-group-page">
+            <div class="buttons-wrapper">
+              <div class="stepper-group cart-group">
+                {% if j3.settings.get('catalogCartStatus') %}
+                <div class="stepper">
+                  <label class="control-label" for="product-quantity">{{ entry_qty }}</label>
+                  <input id="product-quantity" type="text" name="quantity" value="{{ journal3_product_quantity > 0 ? journal3_product_quantity : minimum }}" data-minimum="{{ minimum }}" class="form-control"/>
+                  <input id="product-id" type="hidden" name="product_id" value="{{ product_id }}" />
+                  <span>
+                  <i class="fa fa-angle-up"></i>
+                  <i class="fa fa-angle-down"></i>
+                </span>
+                </div>
+                <a id="button-cart" data-loading-text="<span class='btn-text'>{{ button_cart }}</span>" class="btn btn-cart" {% if (j3.settings.get(stylePrefix ~ 'CartDisplay') == "icon") and (j3.settings.get(stylePrefix ~ 'CartTooltipStatus')) %} data-toggle="tooltip" data-tooltip-class="pp-cart-tooltip" data-placement="{{ j3.settings.get(stylePrefix ~ 'CartTooltipPosition') }}" title="{{ button_cart }}" {% endif %}><span class="btn-text">{{ button_cart }}</span></a>
+                {% endif %}
+                {% if product_extra_buttons and not j3.document.isPopup() %}
+                  <div class="extra-group">
+                    {% for id, extra_button in product_extra_buttons %}
+                      <a class="btn btn-extra btn-extra-{{ id }} btn-{{ loop.index }}-extra" {% if (j3.settings.get(stylePrefix ~ 'Extra' ~ loop.index ~ 'ButtonDisplay') == "icon") and (j3.settings.get(stylePrefix ~ 'ExtraTooltipStatus')) %} data-toggle="tooltip" data-tooltip-class="extra-tooltip pp-extra-tooltip" data-placement="{{ j3.settings.get(stylePrefix ~ 'ExtraTooltipPosition') }}" title="{{ extra_button.label }}" {% endif %} {% if extra_button.action == 'quickbuy' %}data-quick-buy{% endif %} {% if extra_button.action == 'link' and extra_button.link.href %}href="{{ extra_button.link.href }}" {{ j3.linkAttrs(extra_button.link) }} data-product_id="{{ product_id }}"{% endif %} data-loading-text="<span class='btn-text'>{{ extra_button.label }}</span>"><span class="btn-text">{{ extra_button.label }}</span></a>
+                    {% endfor %}
+                  </div>
+                {% endif %}
+              </div>
+
+              {% if j3.settings.get('catalogWishlistStatus') or j3.settings.get('catalogCompareStatus') or j3.document.isPopup('quickview') %}
+              <div class="wishlist-compare">
+                {% if not j3.document.isPopup('options') %}
+                  {% if j3.settings.get('catalogWishlistStatus') %}
+                  <a class="btn btn-wishlist" {% if (j3.settings.get(stylePrefix ~ 'WishlistDisplay') == "icon") and (j3.settings.get(stylePrefix ~ 'WishlistTooltipStatus')) %} data-toggle="tooltip" data-tooltip-class="pp-wishlist-tooltip" data-placement="{{ j3.settings.get(stylePrefix ~ 'WishlistTooltipPosition') }}" title="{{ button_wishlist }}" {% endif %} onclick="parent.wishlist.add({{ product_id }});"><span class="btn-text">{{ button_wishlist }}</span></a>
+                  {% endif %}
+
+                  {% if j3.settings.get('catalogCompareStatus') %}
+                  <a class="btn btn-compare" {% if (j3.settings.get(stylePrefix ~ 'CompareDisplay') == "icon") and (j3.settings.get(stylePrefix ~ 'CompareTooltipStatus')) %} data-toggle="tooltip" data-tooltip-class="pp-compare-tooltip" data-placement="{{ j3.settings.get(stylePrefix ~ 'CompareTooltipPosition') }}" title="{{ button_compare }}" {% endif %} onclick="parent.compare.add({{ product_id }});"><span class="btn-text">{{ button_compare }}</span></a>
+                  {% endif %}
+                {% endif %}
+                {% if j3.document.isPopup('quickview') %}
+                  <a class="btn btn-more-details" href="{{ view_more_url }}" target="_top" {% if (j3.settings.get(stylePrefix ~ 'MoreDetailsDisplay') == "icon") and (j3.settings.get(stylePrefix ~ 'MoreDetailsTooltipStatus')) %} data-toggle="tooltip" data-tooltip-class="more-details-tooltip" data-placement="{{ j3.settings.get(stylePrefix ~ 'MoreDetailsTooltipPosition') }}" title="{{ j3.settings.get('quickviewExtraText') }}" {% endif %}><span class="btn-text">{{ j3.settings.get('quickviewExtraText') }}</span></a>
+                {% endif %}
+              </div>
+              {% endif %}
+            </div>
+          </div>
+          {% endif %}
+
+          {% if minimum > 1 %}
+            <div class="minimum alert alert-info"><i class="fa fa-info-circle"></i> {{ text_minimum }}</div>
+          {% endif %}
+
+          {% if not j3.document.isPopup('options') %}
+            {% if product_blocks.details %}
+                {{ product_blocks.details|join }}
+            {% endif %}
+          {% endif %}
+          </div>
+          {% if not j3.document.isPopup('options') %}
+          {% if product_blocks.bottom %}
+          <div class="product-blocks blocks-bottom">
+            {{ product_blocks.bottom|join }}
+          </div>
+          {% endif %}
+          {% endif %}
+          {% if tags and not j3.document.isPopup() and (j3.settings.get(stylePrefix ~ 'TagsPosition') == 'details') %}
+            <div class="tags">
+              <span class="tags-title">{{ text_tags }}</span>
+              {% for tag in tags %}
+                <a href="{{ tag.href }}">{{ tag.tag }}</a>
+                {% if not loop.last %}<b>,</b>{% endif %}
+              {% endfor %}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+      {% if description and j3.document.isPopup('quickview') and j3.settings.get('quickviewDescription') and (j3.settings.get('quickviewDescriptionPosition') == 'default') %}
+        <div class="description {{ quickviewExpand }}">
+          <div class="expand-block">
+            <div class="expand-content">
+              {{ description }}
+            </div>
+            {% if j3.settings.get('quickviewExpandButton') %}
+              <div class="block-expand-overlay"><a class="block-expand btn"></a></div>
+            {% endif %}
+          </div>
+        </div>
+      {% endif %}
+      {% if not j3.document.isPopup('options') %}
+        {% if product_blocks.default %}
+        <div class="product-blocks blocks-default">
+          {{ product_blocks.default|join }}
+        </div>
+        {% endif %}
+      {% endif %}
+      {% if tags and not j3.document.isPopup() and (j3.settings.get(stylePrefix ~ 'TagsPosition') == 'default') %}
+        <div class="tags">
+          <span class="tags-title">{{ text_tags }}</span>
+          {% for tag in tags %}
+            <a href="{{ tag.href }}">{{ tag.tag }}</a>
+            {% if not loop.last %}<b>,</b>{% endif %}
+          {% endfor %}
+        </div>
+      {% endif %}
+      {% if not j3.document.isPopup() %}
+      {{ content_bottom }}</div>
+    {{ column_right }}</div>
+</div>
+{% endif %}
+<script type="text/javascript"><!--
+$('select[name=\'recurring_id\'], input[name="quantity"]').change(function(){
+	$.ajax({
+		url: 'index.php?route=product/product/getRecurringDescription',
+		type: 'post',
+		data: $('input[name=\'product_id\'], input[name=\'quantity\'], select[name=\'recurring_id\']'),
+		dataType: 'json',
+		beforeSend: function() {
+			$('#recurring-description').html('');
+		},
+		success: function(json) {
+			$('.alert-dismissible, .text-danger').remove();
+
+			if (json['success']) {
+				$('#recurring-description').html(json['success']);
+			}
+		}
+	});
+});
+//--></script>
+<script type="text/javascript"><!--
+$('#button-cart, [data-quick-buy]').on('click', function () {
+  var $btn = $(this);
+  $.ajax({
+    url: 'index.php?route=checkout/cart/add',
+    type: 'post',
+    data: $(
+      '#product .button-group-page input[type=\'text\'], #product .button-group-page input[type=\'hidden\'], #product .button-group-page input[type=\'radio\']:checked, #product .button-group-page input[type=\'checkbox\']:checked, #product .button-group-page select, #product .button-group-page textarea, ' +
+      '#product .product-options input[type=\'text\'], #product .product-options input[type=\'hidden\'], #product .product-options input[type=\'radio\']:checked, #product .product-options input[type=\'checkbox\']:checked, #product .product-options select, #product .product-options textarea, ' +
+      '#product select[name="recurring_id"]'
+    ),
+    dataType: 'json',
+    beforeSend: function () {
+      $('#button-cart').button('loading');
+    },
+    complete: function () {
+      $('#button-cart').button('reset');
+    },
+    success: function (json) {
+      $('.alert-dismissible, .text-danger').remove();
+      $('.form-group').removeClass('has-error');
+
+      if (json['error']) {
+        if (json['error']['option']) {
+          for (i in json['error']['option']) {
+            var element = $('#input-option' + i.replace('_', '-'));
+
+            if (element.parent().hasClass('input-group')) {
+              element.parent().after('<div class="text-danger">' + json['error']['option'][i] + '</div>');
+            } else {
+              element.after('<div class="text-danger">' + json['error']['option'][i] + '</div>');
+            }
+          }
+        }
+
+        if (json['error']['recurring']) {
+          $('select[name=\'recurring_id\']').after('<div class="text-danger">' + json['error']['recurring'] + '</div>');
+        }
+
+        // Highlight any found errors
+        $('.text-danger').parent().addClass('has-error');
+
+        try {
+          $('html, body').animate({ scrollTop: $('.form-group.has-error').offset().top - 50 }, 'slow');
+        } catch (e) {
+        }
+      }
+
+      if (json['success']) {
+        if ($('html').hasClass('popup-options')) {
+          parent.$(".popup-options .popup-close").trigger('click');
+        }
+
+        if (json['notification']) {
+          parent.show_notification(json['notification']);
+        } else {
+          parent.$('#content').parent().before('<div class="alert alert-success alert-dismissible"><i class="fa fa-check-circle"></i> ' + json['success'] + ' <button type="button" class="close" data-dismiss="alert">&times;</button></div>');
+        }
+
+        parent.$('#cart-total').html(json['total']);
+        parent.$('#cart-items,.cart-badge').html(json['items_count']);
+
+        if (json['items_count']) {
+          parent.$('#cart-items,.cart-badge').removeClass('count-zero');
+        } else {
+          parent.$('#cart-items,.cart-badge').addClass('count-zero');
+        }
+
+        if (Journal['scrollToTop']) {
+          parent.$('html, body').animate({ scrollTop: 0 }, 'slow');
+        }
+
+        parent.$('.cart-content ul').load('index.php?route=common/cart/info ul li');
+
+        if (window.location.href.indexOf('quick_buy=true') !== -1) {
+          parent.location.href = Journal['checkoutUrl'];
+        }
+
+        if ($btn.data('quick-buy') !== undefined) {
+          location = Journal['checkoutUrl'];
+        }
+
+        if (parent.window['_QuickCheckout']) {
+          parent.window['_QuickCheckout'].save();
+        }
+
+        if (json['redirect']) {
+          parent.location.href = json['redirect'];
+        }
+      }
+    },
+    error: function (xhr, ajaxOptions, thrownError) {
+      alert(thrownError + '\r\n' + xhr.statusText + '\r\n' + xhr.responseText);
+    }
+  });
+});
+//--></script>
+<script type="text/javascript"><!--
+$('.date').datetimepicker({
+	language: '{{ datepicker }}',
+	pickTime: false
+});
+
+$('.datetime').datetimepicker({
+	language: '{{ datepicker }}',
+	pickDate: true,
+	pickTime: true
+});
+
+$('.time').datetimepicker({
+	language: '{{ datepicker }}',
+	pickDate: false
+});
+
+$('button[id^=\'button-upload\']').on('click', function() {
+	var node = this;
+
+	$('#form-upload').remove();
+
+	$('body').prepend('<form enctype="multipart/form-data" id="form-upload" style="display: none;"><input type="file" name="file" /></form>');
+
+	$('#form-upload input[name=\'file\']').trigger('click');
+
+	if (typeof timer != 'undefined') {
+    	clearInterval(timer);
+	}
+
+	timer = setInterval(function() {
+		if ($('#form-upload input[name=\'file\']').val() != '') {
+			clearInterval(timer);
+
+			$.ajax({
+				url: 'index.php?route=tool/upload',
+				type: 'post',
+				dataType: 'json',
+				data: new FormData($('#form-upload')[0]),
+				cache: false,
+				contentType: false,
+				processData: false,
+				beforeSend: function() {
+					$(node).button('loading');
+				},
+				complete: function() {
+					$(node).button('reset');
+				},
+				success: function(json) {
+					$('.text-danger').remove();
+
+					if (json['error']) {
+						$(node).parent().find('input').after('<div class="text-danger">' + json['error'] + '</div>');
+					}
+
+					if (json['success']) {
+						alert(json['success']);
+
+						$(node).parent().find('input').val(json['code']);
+					}
+				},
+				error: function(xhr, ajaxOptions, thrownError) {
+					alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+				}
+			});
+		}
+	}, 500);
+});
+//--></script>
+<script type="text/javascript"><!--
+$(function () {
+  $('#review').delegate('.pagination a', 'click', function(e) {
+    e.preventDefault();
+
+    $('#review').fadeOut('slow');
+
+    $('#review').load(this.href);
+
+    $('#review').fadeIn('slow');
+  });
+
+  $('#review').load('index.php?route=product/product/review&product_id={{ product_id }}');
+
+  $('#button-review').on('click', function() {
+    $.ajax({
+      url: 'index.php?route=product/product/write&product_id={{ product_id }}',
+      type: 'post',
+      dataType: 'json',
+      data: $("#form-review").serialize(),
+      beforeSend: function() {
+        $('#button-review').button('loading');
+      },
+      complete: function() {
+        $('#button-review').button('reset');
+      },
+      success: function(json) {
+        $('.alert-dismissible').remove();
+
+        if (json['error']) {
+          $('#review').after('<div class="alert alert-danger alert-dismissible"><i class="fa fa-exclamation-circle"></i> ' + json['error'] + '</div>');
+        }
+
+        if (json['success']) {
+          $('#review').after('<div class="alert alert-success alert-dismissible"><i class="fa fa-check-circle"></i> ' + json['success'] + '</div>');
+
+          $('input[name=\'name\']').val('');
+          $('textarea[name=\'text\']').val('');
+          $('input[name=\'rating\']:checked').prop('checked', false);
+        }
+      }
+    });
+  });
+});
+
+$(document).ready(function() {
+	$('.thumbnails').magnificPopup({
+		type:'image',
+		delegate: 'a',
+		gallery: {
+			enabled: true
+		}
+	});
+});
+
+$(document).ready(function () {
+  $('.review-links a').on('click', function () {
+    var $review = $('#review');
+    if ($review.length) {
+      $('a[href="#' + $review.closest('.module-item').attr('id') + '"]').trigger('click');
+      $('a[href="#' + $review.closest('.tab-pane').attr('id') + '"]').trigger('click');
+      $('a[href="#' + $review.closest('.panel-collapse').attr('id') + '"]').trigger('click');
+      $review.closest('.expand-block').find('.block-expand.btn').trigger('click');
+
+      $([document.documentElement, document.body]).animate({
+        scrollTop: $review.offset().top - 100
+      }, 200);
+    }
+  });
+});
+//--></script>
+{% if not j3.document.isPopup() %}
+{{ j3.loadController('journal3/seo/rich_snippets', breadcrumbs) }}
+{% endif %}
+{{ footer }}

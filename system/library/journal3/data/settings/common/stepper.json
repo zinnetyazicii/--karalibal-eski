@@ -1,0 +1,65 @@
+{
+  "QtyInput": {
+    "type": "Variable",
+    "variable": "form_input",
+    "selector_prefix": ".stepper input.form-control"
+  },
+  "QtyInputWidth": {
+    "type": "InputNumber",
+    "selector": ".stepper",
+    "property": "width:%spx",
+    "value": "50"
+  },
+  "QtyInputHeight": {
+    "type": "InputNumber",
+    "selector": ".stepper",
+    "property": "height:%spx"
+  },
+  "QtyDivider": {
+    "type": "Divider",
+    "selector": ".stepper"
+  },
+  "QtyBorderRadius": {
+    "type": "BorderRadius",
+    "selector": ".stepper"
+  },
+  "QtyBtnWidth": {
+    "type": "InputNumber",
+    "rules":{
+      "@":{
+        ".stepper span": "width:%s%"
+      }
+    }
+  },
+  "QtyBtnColor": {
+    "type": "Color",
+    "property": "color:%s",
+    "selector": ".stepper span i"
+  },
+  "QtyBtnColorHover": {
+    "type": "Color",
+    "property": "color:%s",
+    "selector": ".stepper span i:hover"
+  },
+  "QtyBtnColorActive": {
+    "type": "Color",
+    "property": "color:%s",
+    "selector": ".stepper span i:active"
+  },
+
+  "QtyBtnBG": {
+    "type": "Color",
+    "property": "background-color:%s",
+    "selector": ".stepper span i"
+  },
+  "QtyBtnBGHover": {
+    "type": "Color",
+    "property": "background-color:%s",
+    "selector": ".stepper span i:hover"
+  },
+  "QtyBtnBGActive": {
+    "type": "Color",
+    "property": "background-color:%s",
+    "selector": ".stepper span i:active"
+  }
+}

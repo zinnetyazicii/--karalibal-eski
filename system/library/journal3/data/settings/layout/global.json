@@ -1,0 +1,26 @@
+{
+  "popup": {
+    "type": "Module",
+    "php": true
+  },
+  "notification": {
+    "type": "Module",
+    "php": true
+  },
+  "header_notice": {
+    "type": "Module",
+    "php": true
+  },
+  "bottom_menu": {
+    "type": "Module",
+    "php": true
+  },
+  "fullscreen_slider": {
+    "type": "Module",
+    "php": true
+  },
+  "background_slider": {
+    "type": "Module",
+    "php": true
+  }
+}

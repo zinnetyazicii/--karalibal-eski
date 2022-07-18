@@ -1,0 +1,125 @@
+{{ header }}
+<ul class="breadcrumb">
+  {% for breadcrumb in breadcrumbs %}
+    <li><a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a></li>
+  {% endfor %}
+</ul>
+{% if j3.settings.get('pageTitlePosition') == 'top' %}
+  <h1 class="title page-title"><span>{{ heading_title }}</span></h1>
+{% endif %}
+{{ j3.loadController('journal3/layout', 'top') }}
+<div class="container">
+  <div class="row">{{ column_left }}
+    <div id="content">
+      {% if j3.settings.get('pageTitlePosition') == 'default' %}
+        <h1 class="title page-title">{{ heading_title }}</h1>
+      {% endif %}
+      {% if j3.settings.get('categoryPageDescStatus') %}
+      {% if thumb or description %}
+        <div class="category-description">
+          {% if thumb and j3.settings.get('categoryPageCategoryImageStatus') %}
+          <img src="{{ thumb }}" {% if thumb2x %}srcset="{{ thumb }} 1x, {{ thumb2x }} 2x"{% endif %} alt="{{ heading_title }}" title="{{ heading_title }}" class="category-image" width="{{ j3.settings.get('image_dimensions_category.width') }}" height="{{ j3.settings.get('image_dimensions_category.height') }}"/>
+          {% endif %}
+          {% if description and j3.settings.get('categoryPageCategoryDescriptionStatus') %}
+            <div class="category-text">{{ description }}</div>
+          {% endif %}
+        </div>
+      {% endif %}
+      {% endif %}
+      {{ content_top }}
+      {% if j3.settings.get('subcategoriesStatus') %}
+        {% if categories %}
+          <div class="refine-categories refine-{{ j3.settings.get('subcategoriesDisplay') }}">
+            {% if j3.settings.get('refineTitle') %}
+              <h3 class="refine-title title">{{ j3.settings.get('refineTitleText') }}</h3>
+            {% endif %}
+            {% if j3.settings.get('subcategoriesDisplay') == 'carousel' %}
+            <div class="swiper" data-items-per-row='{{ j3.settings.get('subcategoriesItemsPerRow')|json_encode(constant('JSON_FORCE_OBJECT')) }}' data-options='{{ j3.carousel(j3.document.getJs(), 'subcategoriesCarouselStyle')|json_encode(constant('JSON_FORCE_OBJECT')) }}'>
+              <div class="swiper-container" {% if j3.isRTL() %}dir="rtl"{% endif %}>
+                <div class="swiper-wrapper">
+                  {% else %}
+                  <div class="refine-items">
+                    {% endif %}
+                    {% for category in categories %}
+                      <div class="refine-item {% if j3.settings.get('subcategoriesDisplay') == 'carousel' %}swiper-slide{% endif %}">
+                        <a href="{{ category.href }}">
+                          {% if j3.settings.get('subcategoriesDisplay') != 'links' %}
+                            <img src="{{ category.image }}" {% if category.image2x %}data-srcset="{{ category.image }} 1x, {{ category.image2x }} 2x"{% endif %} alt="{{ category.alt }}" width="{{ j3.settings.get('image_dimensions_subcategory.width') }}" height="{{ j3.settings.get('image_dimensions_subcategory.height') }}"/>
+                          {% endif %}
+                          <span class="refine-name">{{ category.name }}</span>
+                        </a>
+                      </div>
+                    {% endfor %}
+                    {% if j3.settings.get('subcategoriesDisplay') != 'carousel' %}
+                  </div>
+                  {% else %}
+                </div>
+              </div>
+              <div class="swiper-buttons">
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+            {% endif %}
+          </div>
+        {% endif %}
+      {% endif %}
+      <div class="main-products-wrapper">
+      {% if products %}
+        {% if j3.settings.get('sortBarStatus') %}
+        <div class="products-filter">
+          <div class="grid-list">
+            <button id="btn-grid-view" class="view-btn {% if j3.settings.get('globalProductView') == 'grid' %}active{% endif %}" data-toggle="tooltip" title="{{ button_grid }}" data-view="grid"></button>
+            <button id="btn-list-view" class="view-btn {% if j3.settings.get('globalProductView') == 'list' %}active{% endif %}" data-toggle="tooltip" title="{{ button_list }}" data-view="list"></button>
+            <a href="{{ compare }}" id="compare-total" class="compare-btn">{{ text_compare }}</a>
+          </div>
+          <div class="select-group">
+            <div class="input-group input-group-sm sort-by">
+              <label class="input-group-addon" for="input-sort">{{ text_sort }}</label>
+              <select id="input-sort" class="form-control" onchange="location = this.value;">
+                {% for sorts in sorts %}
+                  {% if sorts.value == '%s-%s'|format(sort, order) %}
+                    <option value="{{ sorts.href }}" selected="selected">{{ sorts.text }}</option>
+                  {% else %}
+                    <option value="{{ sorts.href }}">{{ sorts.text }}</option>
+                  {% endif %}
+                {% endfor %}
+              </select>
+            </div>
+            <div class="input-group input-group-sm per-page">
+              <label class="input-group-addon" for="input-limit">{{ text_limit }}</label>
+              <select id="input-limit" class="form-control" onchange="location = this.value;">
+                {% for limits in limits %}
+                  {% if limits.value == limit %}
+                    <option value="{{ limits.href }}" selected="selected">{{ limits.text }}</option>
+                  {% else %}
+                    <option value="{{ limits.href }}">{{ limits.text }}</option>
+                  {% endif %}
+                {% endfor %}
+              </select>
+            </div>
+          </div>
+        </div>
+        {% endif %}
+        <div class="main-products product-{{ j3.settings.get('globalProductView') }}">
+          {% set display = j3.settings.get('globalProductView') %}
+          {% include "journal3/template/journal3/product_card.twig" %}
+        </div>
+        <div class="row pagination-results">
+          <div class="col-sm-6 text-left">{{ pagination }}</div>
+          <div class="col-sm-6 text-right">{{ results }}</div>
+        </div>
+      {% endif %}
+      {% if not categories and not products %}
+        <p>{{ text_empty }}</p>
+        <div class="buttons">
+          <div class="pull-right"><a href="{{ continue }}" class="btn btn-primary">{{ button_continue }}</a></div>
+        </div>
+      {% endif %}
+      </div>
+      {{ content_bottom }}</div>
+    {{ column_right }}</div>
+</div>
+{{ j3.loadController('journal3/seo/rich_snippets', breadcrumbs) }}
+{{ footer }}

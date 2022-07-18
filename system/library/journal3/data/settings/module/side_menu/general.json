@@ -1,0 +1,146 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "Side Menu"
+  },
+  "status": {
+    "type": "Status"
+  },
+  "Visibility": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".side-menu-%s": "display: block"
+      },
+      "false": {
+        ".side-menu-%s": "display: none"
+      }
+    }
+  },
+  "width": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".side-menu-%s > ul > li > a": "width: %spx"
+      }
+    }
+  },
+  "offset": {
+    "type": "InputNumber",
+    "value": "200",
+    "rules": {
+      "@": {
+        ".side-menu-%s": "top: %spx"
+      }
+    }
+  },
+  "position": {
+    "type": "Radio",
+    "value": "right",
+    "rules": {
+      "right": {
+        ".side-menu-%s": "left:initial; right:0"
+      },
+      "left": {
+        ".side-menu-%s": "left:0; right:initial"
+      }
+    },
+    "rtlRules": {
+      "right": {
+        ".side-menu-%s": "left:0; right:initial"
+      },
+      "left": {
+        ".side-menu-%s": "left:initial; right:0"
+      }
+    }
+  },
+  "iconSize": {
+    "type": "InputNumber",
+    "rules":{
+      "@":{
+        ".side-menu-%s li > a::before": "font-size:%spx"
+      }
+    }
+  },
+  "divider": {
+    "type": "Divider",
+    "selector": ".side-menu-%s > ul > li + li"
+  },
+  "icons": {
+    "type": "Color",
+    "selector": ".side-menu-%s > ul > li > a::before",
+    "property": "color"
+  },
+  "iconsHover": {
+    "type": "Color",
+    "selector": ".side-menu-%s > ul > li > a:hover::before",
+    "property": "color"
+  },
+  "iconsActive": {
+    "type": "Color",
+    "selector": ".side-menu-%s > ul > li > a:active::before",
+    "property": "color"
+  },
+  "font": {
+    "type": "Font",
+    "selector": ".side-menu-%s > ul > li > a"
+  },
+  "fontHover": {
+    "type": "Font",
+    "selector": ".side-menu-%s > ul > li > a:hover"
+  },
+  "fontActive": {
+    "type": "Font",
+    "selector": ".side-menu-%s > ul > li > a:active"
+  },
+  "background": {
+    "type": "Background",
+    "selector": ".side-menu-%s"
+  },
+  "backgroundHover": {
+    "type": "Background",
+    "selector": ".side-menu-%s > ul > li > a:hover"
+  },
+  "backgroundActive": {
+    "type": "Background",
+    "selector": ".side-menu-%s > ul > li > a:active"
+  },
+  "Shadow": {
+    "type": "Shadow",
+    "selector": ".side-menu-%s"
+  },
+  "BorderRadius": {
+    "type": "BorderRadius",
+    "selector": ".side-menu-%s"
+  },
+  "countBadge": {
+    "type": "Variable",
+    "variable": "count_badge",
+    "selector_prefix": ".j-menu li"
+  },
+
+  "countBadgeOffset": {
+    "type": "InputPair",
+    "selector": ".side-menu-%s > ul > li > a .count-badge",
+    "properties": {
+      "first": "transform: translateX(%spx)",
+      "second": "margin-top:%spx"
+    },
+    "rtlProperties":{
+      "first": "transform: translateX(calc(0px - (%spx)))",
+      "second": "margin-top:%spx"
+    }
+  },
+
+  "countBadgeVisibility": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".side-menu-%s > ul > li > a .count-badge": "display: inline-flex"
+      },
+      "false": {
+        ".side-menu-%s > ul > li > a .count-badge": "display: none"
+      }
+    }
+  }
+}

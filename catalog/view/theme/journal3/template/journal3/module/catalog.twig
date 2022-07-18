@@ -1,0 +1,58 @@
+{% macro renderCatalog(j3, context) %}
+  {% import _self as self %}
+  {% for item in context.items %}
+    <div class="{{ j3.classes(item.classes) }}">
+      <div class="item-content">
+        <a href="{{ item.href }}" class="catalog-title">{{ item.name }}</a>
+        <div class="item-assets image-left">
+          {% if item.image %}
+            <a href="{{ item.href }}" class="catalog-image">
+              {% if j3.settings.get('performanceLazyLoadImagesStatus') %}
+                <img src="{{ context.dummy_image }}" data-src="{{ item.image }}" data-image="{{ item.image }}" {% if item.image2x %}data-srcset="{{ item.image }} 1x, {{ item.image2x }} 2x"{% endif %} alt="{{ item.name }}" width="{{ context.imageDimensions.width }}" height="{{ context.imageDimensions.height }}" class="lazyload"/>
+              {% else %}
+                <img src="{{ item.image }}" data-image="{{ item.image }}" {% if item.image2x %}srcset="{{ item.image }} 1x, {{ item.image2x }} 2x" data-image2x="{{ item.image2x }}"{% endif %} alt="{{ item.name }}" width="{{ context.imageDimensions.width }}" height="{{ context.imageDimensions.height }}"/>
+              {% endif %}
+            </a>
+          {% endif %}
+          <div class="subitems">
+            {% for sub_item in item.items %}
+              <div class="subitem" data-image="{{ sub_item.image }}" {% if item.image2x %}data-image2x="{{ sub_item.image }} 1x, {{ sub_item.image2x }} 2x"{% endif %}>
+                <a href="{{ sub_item.href }}"><span>{{ sub_item.name }}</span></a>
+              </div>
+            {% endfor %}
+            {% if item.total > item.items|length %}
+              <div class="subitem view-more">
+                <a href="{{ item.href }}"><span>{{ context.viewMoreText }}</span></a>
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+{% endmacro %}
+{% import _self as self %}
+<div class="{{ j3.classes(classes) }}">
+  {% if title %}
+    <h3 class="title module-title">{{ title }}</h3>
+  {% endif %}
+  <div class="module-body">
+    {% if carousel %}
+      <div class="swiper" data-items-per-row='{{ itemsPerRow|json_encode(constant('JSON_FORCE_OBJECT')) }}' data-options='{{ carouselOptions|json_encode }}'>
+        <div class="swiper-container" {% if j3.isRTL() %}dir="rtl"{% endif %}>
+          <div class="swiper-wrapper">
+            {{ self.renderCatalog(j3, _context) }}
+          </div>
+        </div>
+        <div class="swiper-buttons">
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    {% else %}
+      {{ self.renderCatalog(j3, _context) }}
+    {% endif %}
+  </div>
+</div>
+

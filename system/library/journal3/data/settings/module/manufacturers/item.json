@@ -1,0 +1,24 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "New Section"
+  },
+  "status": {
+    "type": "Status"
+  },
+  "title": {
+    "type": "InputLang",
+    "php": true
+  },
+  "type": {
+    "type": "Radio",
+    "value": "top"
+  },
+  "limit": {
+    "type": "Input",
+    "value": "5"
+  },
+  "manufacturers": {
+    "type": "Input"
+  }
+}

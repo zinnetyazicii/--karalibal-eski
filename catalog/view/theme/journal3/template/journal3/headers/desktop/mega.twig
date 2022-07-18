@@ -1,0 +1,67 @@
+<div class="header header-mega header-lg">
+  <div class="top-bar navbar-nav">
+    {{ j3.settings.get('desktop_top_menu') }}
+    {% if j3.settings.get('langPosition') == 'top' %}
+      <div class="language-currency top-menu">
+        <div class="desktop-language-wrapper">
+          {{ language }}
+        </div>
+        <div class="desktop-currency-wrapper">
+          {{ currency }}
+        </div>
+      </div>
+    {% endif %}
+    <div class="third-menu">{{ j3.settings.get('desktop_top_menu_3') }}</div>
+    {% if j3.settings.get('secondaryMenuPosition') == 'top' %}
+      <div class="top-menu secondary-menu">{{ j3.settings.get('desktop_top_menu_2') }}</div>
+    {% endif %}
+  </div>
+  <div class="mid-bar navbar-nav">
+    <div class="desktop-logo-wrapper">
+      <div id="logo">
+        {% if j3.settings.get('logo_src') %}
+          <a href="{{ home }}">
+            <img src="{{ j3.settings.get('logo_src') }}" {% if j3.settings.get('logo2x_src') %}srcset="{{ j3.settings.get('logo_src') }} 1x, {{ j3.settings.get('logo2x_src') }} 2x"{% endif %} width="{{ j3.settings.get('logo_width') }}" height="{{ j3.settings.get('logo_height') }}" alt="{{ name }}" title="{{ name }}"/>
+          </a>
+        {% else %}
+          <h1><a href="{{ home }}">{{ name }}</a></h1>
+        {% endif %}
+      </div>
+    </div>
+    {% if j3.settings.get('headerMainMenu2Position') == 'top' %}
+      {{ j3.settings.get('desktop_main_menu_2') }}
+    {% endif %}
+    {% if j3.settings.get('secondaryMenuPosition') == 'cart' %}
+      <div class="top-menu secondary-menu">{{ j3.settings.get('desktop_top_menu_2') }}</div>
+    {% endif %}
+    {% if j3.settings.get('langPosition') == 'search' %}
+      <div class="language-currency top-menu">
+        <div class="desktop-language-wrapper">
+          {{ language }}
+        </div>
+        <div class="desktop-currency-wrapper">
+          {{ currency }}
+        </div>
+      </div>
+    {% endif %}
+    {% if j3.settings.get('cartPosition') == 'top' %}
+      <div class="desktop-cart-wrapper default-cart-wrapper">
+        {{ cart }}
+      </div>
+    {% endif %}
+  </div>
+  <div class="desktop-main-menu-wrapper menu-{{ j3.settings.get('headerMenuLayout') }} {% if j3.settings.get('desktop_main_menu_2') %}has-menu-2{% endif %} navbar-nav">
+    {{ j3.document.hasClass('mobile-header-active') ? '' : j3.settings.get('desktop_main_menu') }}
+    <div class="desktop-search-wrapper full-search default-search-wrapper">
+      {{ search }}
+    </div>
+    {% if j3.settings.get('headerMainMenu2Position') == 'menu' %}
+      {{ j3.settings.get('desktop_main_menu_2') }}
+    {% endif %}
+    {% if j3.settings.get('cartPosition') == 'menu' %}
+    <div class="desktop-cart-wrapper default-cart-wrapper">
+        {{ cart }}
+    </div>
+    {% endif %}
+  </div>
+</div>

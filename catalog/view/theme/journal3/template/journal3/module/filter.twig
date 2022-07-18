@@ -1,0 +1,100 @@
+<div class="{{ j3.classes(classes) }}">
+  <h3 class="title module-title">
+    <span>{{ title }}</span>
+    <button class="reset-filter btn">{{ resetText }}</button>
+    <a class="x"></a>
+  </h3>
+  <div class="module-body">
+    <div class="panel-group">
+      {% for item in items %}
+        {% set item_input = item.input ? item.input : input %}
+        <div class="{{ j3.classes(item.classes) }}">
+          <div class="panel-heading">
+            <div class="panel-title">
+              <a href="#{{ id }}-collapse-{{ loop.index }}" class="accordion-toggle {% if item.collapsed %}collapsed{% endif %}" data-toggle="collapse" aria-expanded="{% if item.collapsed %}false{% else %}true{% endif %}" data-filter="{{ item.key }}">
+                {{ item.title }}
+                <i class="fa fa-caret-down"></i>
+              </a>
+            </div>
+          </div>
+          <div class="{{ j3.classes(item.panel_classes) }}" id="{{ id }}-collapse-{{ loop.index }}">
+            <div class="panel-body">
+              {% if item.type == 'p' %}
+                <div class="filter-price" id="filter-{{ id }}-{{ loop.index }}">
+                  <div class="range-slider">
+                    <input type="text" class="js-range-slider" value=""/>
+                  </div>
+                  <div class="extra-controls">
+                    {% if currency_left %}
+                      <span class="currency-symbol currency-left">{{ currency_left }}</span>
+                    {% endif %}
+
+                    <input type="text" class="filter-price-min" name="min" data-min="{{ item.price_range.min }}" value="{{ item.current_price_range.min }}"/>
+
+                    {% if currency_right %}
+                      <span class="currency-symbol currency-right">{{ currency_right }}</span>
+                    {% endif %}
+
+                    {% if currency_left %}
+                      <span class="currency-symbol currency-left">{{ currency_left }}</span>
+                    {% endif %}
+
+                    <input type="text" class="filter-price-max" name="max" data-max="{{ item.price_range.max }}" value="{{ item.current_price_range.max }}"/>
+
+                    {% if currency_right %}
+                      <span class="currency-symbol currency-right">{{ currency_right }}</span>
+                    {% endif %}
+                  </div>
+                </div>
+              {% elseif item.type == 'r' %}
+                <div class="filter-rating" id="filter-{{ id }}-{{ loop.index }}">
+                  {% for subitem in item.items %}
+                    <label>
+                      <input type="{{ item.input }}" data-filter-trigger name="{{ item.key }}" value="{{ subitem.id }}" {% if subitem.checked %}checked{% endif %}>
+                      <span class="links-text rating-stars">
+                        {% for i in 1..5 %}
+                          {% if subitem.id < i %}
+                            <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
+                          {% else %}
+                            <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i><i class="fa fa-star-o fa-stack-2x"></i></span>
+                          {% endif %}
+                        {% endfor %}
+                      </span>
+                      <span class="count-badge">{{ subitem.total }}</span>
+                    </label>
+                  {% endfor %}
+                </div>
+              {% else %}
+                {% if (item_input == 'checkbox') or (item_input == 'radio') %}
+                <div class="filter-{{ item_input }}">
+                  {% for subitem in item.items %}
+                      <label>
+                        <input type="{{ item_input }}" data-filter-trigger name="{{ item.key }}" value="{{ subitem.id }}" {% if subitem.checked %}checked{% endif %}>
+                        {% if subitem.image %}
+                          <img src="{{ subitem.image }}" {% if subitem.image2x %} srcset="{{ subitem.image }} 1x, {{ subitem.image2x }} 2x" {% endif %} width="{{ image_width }}" height="{{ image_height }}" alt="{{ subitem.value }}" title="{{ subitem.value }}" class="img-responsive" {% if item.image_only %}data-toggle="tooltip" data-tooltip-class="filter-tooltip-{{ module_id }}" data-placement="top"{% endif %}/>
+                        {% endif %}
+                        <span class="links-text">{{ subitem.value }}</span>
+                        <span class="count-badge">{{ subitem.total }}</span>
+                      </label>
+                  {% endfor %}
+                </div>
+                {% elseif item_input == 'select' %}
+                  <div class="{{ item_input }}">
+                    <label>
+                      <select name="{{ item.key }}" data-filter-trigger>
+                        <option value=""></option>
+                        {% for subitem in item.items %}
+                          <option value="{{ subitem.id }}" {% if subitem.checked %}selected{% endif %}>{{ subitem.total ? subitem.value ~ ' (' ~ subitem.total ~ ')' : subitem.value }}</option>
+                        {% endfor %}
+                      </select>
+                    </label>
+                  </div>
+                {% endif %}
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

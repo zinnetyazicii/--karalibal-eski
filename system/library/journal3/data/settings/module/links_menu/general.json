@@ -1,0 +1,345 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "New Links Menu"
+  },
+  "status": {
+    "type": "Status"
+  },
+  "schedule": {
+    "type": "Range",
+    "php": true
+  },
+
+  "title": {
+    "type": "InputLang",
+    "php": true
+  },
+  "linksMenuStyle": {
+    "type": "Variable",
+    "variable": "links_menu",
+    "selector_prefix": ".links-menu-%s"
+  },
+  "moduleTitle": {
+    "type": "Variable",
+    "variable": "title",
+    "selector_prefix": "div.links-menu-%s .title.module-title"
+  },
+
+  "titleFont": {
+    "type": "Font",
+    "selector": "div.links-menu-%s .title.module-title"
+  },
+  "titleAlign": {
+    "type": "Radio",
+    "value": "",
+    "rules": {
+      "left": {
+        "div.links-menu-%s .title.module-title":"text-align:left",
+        "div.links-menu-%s .title.module-title::after": "margin-left:0; margin-right:auto; transform: none"
+      },
+      "center": {
+        "div.links-menu-%s .title.module-title":"text-align:center",
+        "div.links-menu-%s .title.module-title::after": "left: 50%; right:initial; transform: translate3d(-50%,0,0);"
+      },
+      "right": {
+        "div.links-menu-%s .title.module-title":"text-align:right",
+        "div.links-menu-%s .title.module-title::after": "margin-left:auto; margin-right:0; transform:none"
+      }
+    },
+    "rtlRules": {
+      "left": {
+        "div.links-menu-%s .title.module-title":"text-align:left",
+        "div.links-menu-%s .title.module-title::after": "margin-left:auto; margin-right:0; transform: none"
+      },
+      "center": {
+        "div.links-menu-%s .title.module-title":"text-align:center",
+        "div.links-menu-%s .title.module-title::after": "left: 50%; right:initial; transform: translate3d(-50%,0,0);"
+      },
+      "right": {
+        "div.links-menu-%s .title.module-title":"text-align:right",
+        "div.links-menu-%s .title.module-title::after": "margin-left:0; margin-right:auto; transform:none"
+      }
+    }
+  },
+  "titleDivider": {
+    "type": "Toggle",
+    "value": "",
+    "rules": {
+      "true": {
+        "div.links-menu-%s .title.module-title::after": "display: block"
+      },
+      "false": {
+        "div.links-menu-%s .title.module-title::after": "display: none"
+      }
+    }
+  },
+
+  "Background": {
+    "type": "Background",
+    "selector": "div.links-menu-%s .module-body"
+  },
+  "Padding": {
+    "type": "Padding",
+    "selector": "div.links-menu-%s .module-body"
+  },
+  "Direction": {
+    "type": "Radio",
+    "value": "vertical",
+    "rules": {
+      "vertical": {
+        "div.links-menu-%s .module-body": "display:block",
+        "div.links-menu-%s .menu-item": "border-width: 1px 0 0 0",
+        "div.links-menu-%s .menu-item a .links-text":"white-space:normal"
+      },
+      "horizontal": {
+        "div.links-menu-%s .module-body": "display:flex; flex-direction:row",
+        "div.links-menu-%s .menu-item": "border-width: 0 0 0 1px",
+        "div.links-menu-%s .menu-item a .links-text":"white-space:nowrap"
+      }
+    },
+    "rtlRules": {
+      "vertical": {
+        "div.links-menu-%s .module-body": "display:block; flex-direction:column;",
+        "div.links-menu-%s .menu-item": "border-width: 1px 0 0 0",
+        "div.links-menu-%s .menu-item a .links-text":"white-space:normal"
+      },
+      "horizontal": {
+        "div.links-menu-%s .module-body": "display:flex; flex-direction:row",
+        "div.links-menu-%s .menu-item": "border-width: 0 1px 0 0",
+        "div.links-menu-%s .menu-item a .links-text":"white-space:nowrap"
+      }
+    }
+  },
+
+  "layout": {
+    "type": "Radio",
+    "value": "",
+    "rules": {
+      "start": {
+        "div.links-menu-%s .menu-item": "flex-grow:0",
+        "div.links-menu-%s .module-body": "justify-content: flex-start;"
+      },
+      "stretch": {
+        "div.links-menu-%s .menu-item": "flex-grow:1",
+        "div.links-menu-%s .menu-item a": "justify-content: center; display:flex;"
+      },
+      "center": {
+        "div.links-menu-%s .menu-item": "flex-grow:0",
+        "div.links-menu-%s .module-body": "justify-content: center;"
+      },
+      "end": {
+        "div.links-menu-%s .menu-item": "flex-grow:0",
+        "div.links-menu-%s .module-body": "justify-content: flex-end;"
+      }
+    }
+  },
+  "align": {
+    "type": "Radio",
+    "value": "",
+    "rules": {
+      "start": {
+        "div.links-menu-%s .menu-item": "justify-content:flex-start",
+        "div.links-menu-%s .menu-item a": "justify-content:flex-start"
+      },
+      "center": {
+        "div.links-menu-%s .menu-item": "justify-content:center",
+        "div.links-menu-%s .menu-item a": "justify-content:center"
+      },
+      "end": {
+        "div.links-menu-%s .menu-item": "justify-content:flex-end",
+        "div.links-menu-%s .menu-item a": "justify-content:flex-end"
+      }
+    }
+  },
+  "itemWidth": {
+    "type": "Radio",
+    "value": "",
+    "rules": {
+      "auto": {
+        "div.links-menu-%s .menu-item": "width:auto",
+        "div.links-menu-%s .menu-item a": "width:auto"
+      },
+      "full": {
+        "div.links-menu-%s .menu-item": "width:100%",
+        "div.links-menu-%s .menu-item a": "width:100%"
+      }
+    }
+  },
+  "itemBackground": {
+    "type": "Background",
+    "selector": "div.links-menu-%s .menu-item"
+  },
+  "itemBackgroundHover": {
+    "type": "Background",
+    "selector": "div.links-menu-%s .menu-item:hover"
+  },
+  "itemPadding": {
+    "type": "Padding",
+    "selector": "div.links-menu-%s .menu-item a"
+  },
+  "itemFont": {
+    "type": "Font",
+    "selector": "div.links-menu-%s .menu-item a .links-text"
+  },
+  "itemFontHover": {
+    "type": "Font",
+    "selector": "div.links-menu-%s .menu-item a:hover .links-text"
+  },
+  "itemIcon": {
+    "type": "Icon",
+    "selector": "div.links-menu-%s .menu-item a::before"
+  },
+  "itemIconHover": {
+    "type": "Color",
+    "selector": "div.links-menu-%s .menu-item a:hover::before",
+    "property": "color"
+  },
+  "itemDivider": {
+    "type": "Divider",
+    "selector": "div.links-menu-%s .menu-item"
+  },
+  "itemDividerHover": {
+    "type": "Color",
+    "rules": {
+      "@": {
+        "div.links-menu-%s .menu-item:hover": "border-color:%s",
+        "div.links-menu-%s .menu-item:hover + .menu-item": "border-color:%s"
+      }
+    }
+  },
+  "Scroll": {
+    "type": "Toggle",
+    "value": "",
+    "rules": {
+      "true": {
+        "div.links-menu-%s .module-body": "flex-wrap: nowrap; overflow-x: auto; overflow-y: hidden",
+        "div.links-menu-%s .menu-item":"white-space:nowrap",
+        ".mobile.touchevents div.links-menu-%s .module-body": "overflow-x: scroll",
+        "div.links-menu-%s .module-body::-webkit-scrollbar": "-webkit-appearance: none; height: 1px",
+        "div.links-menu-%s .module-body::-webkit-scrollbar-track": "background-color: white",
+        "div.links-menu-%s .module-body::-webkit-scrollbar-thumb": "background-color: #999"
+      }
+    }
+  },
+  "ScrollColor": {
+    "type": "Color",
+    "selector": "div.links-menu-%s .module-body::-webkit-scrollbar-thumb",
+    "property": "background-color"
+  },
+  "TrackColor": {
+    "type": "Color",
+    "selector": "div.links-menu-%s .module-body::-webkit-scrollbar-track",
+    "property": "background-color"
+  },
+  "ScrollTouch": {
+    "type": "Toggle",
+    "value": "",
+    "rules": {
+      "true": {
+        "div.links-menu-%s .module-body": "-webkit-overflow-scrolling:touch;"
+      }
+    }
+  },
+  "countBadge": {
+    "type": "Variable",
+    "variable": "count_badge",
+    "selector_prefix": "div.links-menu-%s"
+  },
+
+  "countBadgeOffset": {
+    "type": "InputPair",
+    "selector": "div.links-menu-%s .count-badge",
+    "properties": {
+      "first": "transform: translateX(%spx)",
+      "second": "margin-top:%spx"
+    },
+    "rtlProperties":{
+      "first": "transform: translateX(calc(0px - (%spx)))",
+      "second": "margin-top:%spx"
+    }
+  },
+
+  "countBadgeVisibility": {
+    "type": "Toggle",
+    "value": "",
+    "rules": {
+      "true": {
+        "div.links-menu-%s .count-badge": "display: inline-flex"
+      },
+      "false": {
+        "div.links-menu-%s .count-badge": "display: none"
+      }
+    }
+  },
+  "linksColumns": {
+    "type": "Radio",
+    "value": "",
+    "selector": "div.links-menu-%s .module-body",
+    "property": "column-count:%s"
+  },
+  "linksColumnGap": {
+    "type": "InputNumber",
+    "selector": "div.links-menu-%s .module-body",
+    "property": "column-gap:%spx"
+  },
+  "linksColumnDividerColor": {
+    "type": "Color",
+    "selector": "div.links-menu-%s .module-body",
+    "property": "column-rule-color"
+  },
+  "linksColumnDividerWidth": {
+    "type": "InputNumber",
+    "selector": "div.links-menu-%s .module-body",
+    "property": "column-rule-width:%spx"
+  },
+  "linksColumnDividerStyle": {
+    "type": "Select",
+    "selector": "div.links-menu-%s .module-body",
+    "property": "column-rule-style",
+    "value": ""
+  },
+  "linksPlusButtonMobileStatus": {
+    "type": "Toggle",
+    "value": "false",
+    "phone":true,
+    "parent_selector":"footer",
+    "rules": {
+      "true": {
+        "div.links-menu-%s .module-title::before": "display: block;",
+        "div.links-menu-%s .module-title.closed + .module-body > li":"display:none",
+        "div.links-menu-%s .module-title.closed":"margin:0"
+      },
+      "false": {
+        "div.links-menu-%s .module-title::before": "display: none",
+        "div.links-menu-%s .module-title + .module-body > li":"display:flex"
+      }
+    }
+  },
+  "linksPlusMobileOpen": {
+    "type": "Icon",
+    "selector": "div.links-menu-%s .module-title::before",
+    "phone":true,
+    "parent_selector":"footer"
+  },
+  "linksPlusMobileClose": {
+    "type": "Icon",
+    "selector": "div.links-menu-%s .module-title.closed::before",
+    "phone":true,
+    "parent_selector":"footer"
+  },
+  "linksPlusMobileCloseOffset": {
+    "type": "InputPair",
+    "selector": "div.links-menu-%s .module-title::before",
+    "phone":true,
+    "parent_selector":"footer",
+    "properties": {
+      "first": "margin-right:calc(0px - (%spx))",
+      "second": "margin-top:%spx"
+    },
+    "rtlProperties": {
+      "first": "margin-left:calc(0px - (%spx))",
+      "second": "margin-top:%spx"
+    }
+  }
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>{{ title }}</title>
+</head>
+<body style="font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #000000;">
+<div style="width: 680px;">
+  {% if logo %}
+  <a href="{{ store_url }}" title="{{ store_name }}"><img src="{{ logo }}" alt="{{ store_name }}" style="margin-bottom: 20px; border: none;"/></a>
+  {% endif %}
+  <p style="margin-top: 0px; margin-bottom: 20px;">{{ data.sentEmailTitle }}</p>
+  <table style="border-collapse: collapse; width: 100%; border-top: 1px solid #DDDDDD; border-left: 1px solid #DDDDDD; margin-bottom: 20px;">
+    <thead>
+    <tr>
+      <td style="font-size: 12px; border-right: 1px solid #DDDDDD; border-bottom: 1px solid #DDDDDD; background-color: #EFEFEF; font-weight: bold; text-align: left; padding: 7px; color: #222222;">{{ data.sentEmailField }}</td>
+      <td style="font-size: 12px; border-right: 1px solid #DDDDDD; border-bottom: 1px solid #DDDDDD; background-color: #EFEFEF; font-weight: bold; text-align: left; padding: 7px; color: #222222;">{{ data.sentEmailValue }}</td>
+    </tr>
+    </thead>
+    <tbody>
+    {% for item in data.items %}
+      <tr>
+        <td style="font-size: 12px;	border-right: 1px solid #DDDDDD; border-bottom: 1px solid #DDDDDD; text-align: right; padding: 7px;"><b>{{ item.label }}:</b></td>
+        <td style="font-size: 12px;	border-right: 1px solid #DDDDDD; border-bottom: 1px solid #DDDDDD; text-align: left; padding: 7px;">
+          {% if item.type == 'file' %}
+            <a href="{{ item.url }}">{{ item.value }}</a>
+          {% else %}
+            {{ item.value is iterable ? item.value|join(', ') : item.value }}
+          {% endif %}
+        </td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  {% if data.title %}
+  <p style="margin-top: 10px; margin-bottom: 20px;">{{ data.sentEmailUsingModule }} <b>{{ data.title }}</b></p>
+  {% endif %}
+  {% if data.url %}
+  <p style="margin-top: 10px; margin-bottom: 20px;">{{ data.sentEmailFrom }} <a href="{{ data.url }}">{{ data.url }}</a></p>
+  {% endif %}
+  {% if data.ip %}
+    <p style="margin-top: 10px; margin-bottom: 20px;">{{ data.sentEmailIPAddress }} <b>{{ data.ip }}</b></p>
+  {% endif %}
+</div>
+</body>
+</html>

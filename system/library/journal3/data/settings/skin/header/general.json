@@ -1,0 +1,32 @@
+{
+  "headerDesktop": {
+    "type": "Module",
+    "php": true
+  },
+  "headerMobile": {
+    "type": "Module",
+    "php": true
+  },
+  "mobileHeaderOn": {
+    "type": "Radio",
+    "value": "tablet",
+    "php": true,
+    "js": true
+  },
+  "logo": {
+    "type": "ImageLang",
+    "php": true
+  },
+  "logo2x": {
+    "type": "ImageLang",
+    "php": true
+  },
+  "logoMobile2x": {
+    "type": "ImageLang",
+    "php": true
+  },
+  "logoSocialShare": {
+    "type": "ImageLang",
+    "php": true
+  }
+}

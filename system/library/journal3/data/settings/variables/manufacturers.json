@@ -1,0 +1,9 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "BRANDS_STYLE"
+  },
+  "value": {
+    "include": "manufacturers"
+  }
+}

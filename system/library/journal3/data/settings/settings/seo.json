@@ -1,0 +1,38 @@
+{
+  "seoOpenGraphTagsStatus": {
+    "type": "Toggle",
+    "php": true
+  },
+  "seoOpenGraphTagsAppId": {
+    "type": "Input",
+    "php": true
+  },
+  "seoOpenGraphTagsImageDimensions": {
+    "type": "ImageDimensions",
+    "value": {
+      "width": "600",
+      "height": "315"
+    },
+    "php": true
+  },
+  "seoTwitterCardsStatus": {
+    "type": "Toggle",
+    "php": true
+  },
+  "seoTwitterCardsTwitterUser": {
+    "type": "Input",
+    "php": true
+  },
+  "seoTwitterCardsImageDimensions": {
+    "type": "ImageDimensions",
+    "value": {
+      "width": "200",
+      "height": "200"
+    },
+    "php": true
+  },
+  "seoGoogleRichSnippetsStatus": {
+    "type": "Toggle",
+    "php": true
+  }
+}

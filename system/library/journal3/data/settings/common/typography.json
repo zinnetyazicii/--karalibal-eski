@@ -1,0 +1,318 @@
+{
+  "Font": {
+    "type": "Font"
+  },
+  "Headings": {
+    "type": "Font",
+    "selector":"h1, h2, h3, h4, h5, h6"
+  },
+  "FontRendering": {
+    "type": "Select",
+    "value": "",
+    "property": "-webkit-font-smoothing"
+  },
+  "Link": {
+    "include": "common",
+    "selector_prefix": "a"
+  },
+  "LinkFocus": {
+    "include": "common",
+    "selector_prefix": "a:focus"
+  },
+  "LinkHover": {
+    "include": "common",
+    "selector_prefix": "a:hover"
+  },
+  "LinkActive": {
+    "include": "common",
+    "selector_prefix": "a:active"
+  },
+  "LinkVisited": {
+    "include": "common",
+    "selector_prefix": "a:visited"
+  },
+
+  "P": {
+    "include": "common",
+    "selector_prefix": "p"
+  },
+
+  "Span": {
+    "include": "common",
+    "selector_prefix": "span"
+  },
+  "S": {
+    "include": "common",
+    "selector_prefix": "s"
+  },
+  "Small": {
+    "include": "common",
+    "selector_prefix": "small"
+  },
+  "Cl1": {
+    "include": "common",
+    "selector_prefix": ".class-1"
+  },
+  "Cl2": {
+    "include": "common",
+    "selector_prefix": ".class-2"
+  },
+  "B": {
+    "include": "common",
+    "selector_prefix": "b"
+  },
+  "Strong": {
+    "include": "common",
+    "selector_prefix": "strong"
+  },
+  "I": {
+    "include": "common",
+    "selector_prefix": "i"
+  },
+  "EM": {
+    "include": "common",
+    "selector_prefix": "em"
+  },
+  "FontTag": {
+    "include": "common",
+    "selector_prefix": "font"
+  },
+  "OL": {
+    "include": "common",
+    "selector_prefix": "ol"
+  },
+  "olSpacing": {
+    "type": "InputNumber",
+    "property": "margin-bottom:%spx",
+    "selector":"ol li"
+  },
+  "UL": {
+    "include": "common",
+    "selector_prefix": "ul"
+  },
+  "ulSpacing": {
+    "type": "InputNumber",
+    "property": "margin-bottom:%spx",
+    "selector":"li"
+  },
+
+  "ListStyle": {
+    "type": "Radio",
+    "value": "",
+    "rules": {
+      "default": {
+        "li": "list-style:initial"
+      },
+      "none": {
+        "li": "list-style:none"
+      }
+    }
+  },
+
+  "H1": {
+    "include": "common",
+    "selector_prefix": "h1"
+  },
+  "H2": {
+    "include": "common",
+    "selector_prefix": "h2"
+  },
+  "H3": {
+    "include": "common",
+    "selector_prefix": "h3"
+  },
+  "H4": {
+    "include": "common",
+    "selector_prefix": "h4"
+  },
+  "H5": {
+    "include": "common",
+    "selector_prefix": "h5"
+  },
+  "H6": {
+    "include": "common",
+    "selector_prefix": "h6"
+  },
+  "Div": {
+    "include": "common",
+    "selector_prefix": "div"
+  },
+  "Blockquote": {
+    "include": "common",
+    "selector_prefix": "blockquote"
+  },
+  "BlockquoteFloat": {
+    "type": "Radio",
+    "value": "none",
+    "rules": {
+      "left": {
+        "blockquote": "float:left"
+      },
+      "none": {
+        "blockquote": "float:none"
+      },
+      "right": {
+        "blockquote": "float:right"
+      }
+    },
+    "rtlRules": {
+      "left": {
+        "blockquote": "float:right"
+      },
+      "none": {
+        "blockquote": "float:none"
+      },
+      "right": {
+        "blockquote": "float:left"
+      }
+    }
+  },
+  "BlockquoteIconAlign": {
+    "type": "Radio",
+    "value": "center",
+    "rules": {
+      "left": {
+        "blockquote::before": "margin-left:initial; margin-right:auto"
+      },
+      "center": {
+        "blockquote::before": "margin-left:auto; margin-right:auto"
+      },
+      "right": {
+        "blockquote::before": "margin-left:auto; margin-right:initial"
+      }
+    },
+    "rtlRules": {
+      "left": {
+        "blockquote::before": "margin-left:auto; margin-right:initial"
+      },
+      "center": {
+        "blockquote::before": "margin-left:auto; margin-right:auto"
+      },
+      "right": {
+        "blockquote::before": "margin-left:initial; margin-right:auto"
+      }
+    }
+  },
+  "BlockquoteIconFloat": {
+    "type": "Radio",
+    "value": "left",
+    "rules": {
+      "left": {
+        "blockquote::before": "float:left",
+        "blockquote": "display:block"
+      },
+      "none": {
+        "blockquote::before": "float:none",
+        "blockquote": "display:flex; flex-direction:column"
+      },
+      "right": {
+        "blockquote::before": "float:right",
+        "blockquote": "display:block"
+      }
+    },
+    "rtlRules": {
+      "left": {
+        "blockquote::before": "float:right",
+        "blockquote": "display:block"
+      },
+      "none": {
+        "blockquote::before": "float:none",
+        "blockquote": "display:flex; flex-direction:column"
+      },
+      "right": {
+        "blockquote::before": "float:left",
+        "blockquote": "display:block"
+      }
+    }
+  },
+  "BlockquoteIcon": {
+    "type": "Icon",
+    "selector": "blockquote::before",
+    "value": {
+      "icon": {
+        "name": "iconmonstr-quote-7",
+        "code": "e98f"
+      }
+    }
+  },
+  "BlockquoteMaxWidth": {
+    "type": "InputNumber",
+    "value": "500",
+    "rules":{
+      "@":{
+        "blockquote": "max-width:%spx"
+      }
+    }
+  },
+  "HRBox": {
+    "include": "common",
+    "selector_prefix": "hr"
+  },
+  "HRIcon": {
+    "type": "Icon",
+    "selector": "hr::before"
+  },
+  "HRIconBox": {
+    "include": "common",
+    "selector_prefix": "hr::before"
+  },
+  "HROverflow": {
+    "type": "Radio",
+    "value": "v",
+    "rules": {
+      "v": {
+        "hr": "overflow:visible"
+      },
+      "h": {
+        "hr": "overflow:hidden"
+      }
+    }
+  },
+  "DropCapFontStyle": {
+    "type": "Font",
+    "selector": ".drop-cap",
+    "important": true
+  },
+  "DropCap": {
+    "include": "common",
+    "selector_prefix": ".drop-cap",
+    "important": true
+  },
+  "AmpIcon": {
+    "type": "Icon",
+    "selector": ".amp::before"
+  },
+  "Amp": {
+    "include": "common",
+    "selector_prefix": ".amp",
+    "important": true
+  },
+  "VideoWidth": {
+    "type": "InputNumber",
+    "selector": ".video-responsive",
+    "property": "max-width:%spx"
+  },
+  "VideoBox": {
+    "include": "common",
+    "selector_prefix": ".video-responsive"
+  },
+  "VideoFloat": {
+    "type": "Radio",
+    "value": "none",
+    "rules": {
+      "none": {
+        ".video-responsive": "float:none"
+      },
+      "left": {
+        ".video-responsive": "float:left"
+      },
+      "right": {
+        ".video-responsive": "float:right"
+      }
+    }
+  },
+  "TableStyle": {
+    "type": "Variable",
+    "variable": "table"
+  }
+}

@@ -1,0 +1,672 @@
+{
+  "scaleHover": {
+    "type": "Toggle",
+    "value": "false",
+    "rules": {
+      "true": {
+        "a img": "transform: scale(1)",
+        "a:hover img": "transform: scale(1.15)"
+      },
+      "false": {
+        "a img": "transform: scale(1);"
+      }
+    }
+  },
+  "grayscale": {
+    "type": "Radio",
+    "value": "",
+    "rules": {
+      "none": {
+        ".module-item > a img": "filter: grayscale(0)"
+      },
+      "always": {
+        ".module-item > a img": "filter: grayscale(1)"
+      },
+      "hover": {
+        ".module-item > a img": "filter: grayscale(1)",
+        ".module-item > a:hover img": "filter: grayscale(0)"
+      }
+    }
+  },
+  "background": {
+    "type": "Background",
+    "selector": ".module-item > a"
+  },
+  "bannerMargin": {
+    "type": "Margin",
+    "selector": ".module-item"
+  },
+  "imageBorder": {
+    "type": "Border",
+    "selector": ".module-item > a"
+  },
+  "imageBorderHover": {
+    "type": "Color",
+    "selector": ".module-item:hover > a",
+    "property": "border-color",
+    "desktop": true
+  },
+  "imageBorderRadius": {
+    "type": "BorderRadius",
+    "selector": ".module-item > a"
+  },
+  "imageShadow": {
+    "type": "Shadow",
+    "selector": ".module-item > a"
+  },
+  "imageShadowHover": {
+    "type": "Shadow",
+    "selector": ".module-item:hover > a",
+    "desktop": true
+  },
+  "hoverBackground": {
+    "type": "Background",
+    "selector": ".module-item > a::before"
+  },
+  "overlayBlend": {
+    "type": "Select",
+    "value": "normal",
+    "selector": ".module-item > a::before",
+    "property": "mix-blend-mode"
+  },
+  "overlayDisplay": {
+    "type": "Radio",
+    "value": "hover",
+    "rules": {
+      "hover": {
+        "a::before": "opacity:0",
+        "a:hover::before": "opacity:1"
+      },
+      "always": {
+        "a::before": "opacity:1"
+      }
+    }
+  },
+  "hoverIcon": {
+    "type": "Icon",
+    "selector": ".module-item > a::after"
+  },
+  "iconDisplay": {
+    "type": "Radio",
+    "value": "hover",
+    "rules": {
+      "hover": {
+        "a::after": "opacity:0",
+        "a:hover::after": "opacity:1"
+      },
+      "always": {
+        "a::after": "opacity:1"
+      }
+    }
+  },
+  "iconPosition": {
+    "type": "Radio",
+    "value": "center",
+    "rules": {
+      "tl": {
+        ".module-item > a::after": "top:0; left:0; right:auto; bottom: auto; transform: translate3d(0, 0, 0)"
+      },
+      "tc": {
+        ".module-item > a::after": "top:0; left:50%; right:auto; bottom: auto; transform: translate3d(-50%, 0, 0)"
+      },
+      "tr": {
+        ".module-item > a::after": "top:0; left:auto; right:0; bottom: auto; transform: translate3d(0, 0, 0)"
+      },
+      "cl": {
+        ".module-item > a::after": "top:50%; left:0; right:auto; bottom: auto; transform: translate3d(0, -50%, 0)"
+      },
+      "center": {
+        ".module-item > a::after": "top:50%; left:50%; right:auto; bottom: auto; transform: translate3d(-50%, -50%, 0)"
+      },
+      "cr": {
+        ".module-item > a::after": "top:50%; left:auto; right:0; bottom: auto; transform: translate3d(0, -50%, 0)"
+      },
+      "bl": {
+        ".module-item > a::after": "top:auto; left:0; right:auto; bottom: 0; transform: translate3d(0, 0, 0)"
+      },
+      "bc": {
+        ".module-item > a::after": "top:auto; left:50%; right:auto; bottom: 0; transform: translate3d(-50%, 0, 0)"
+      },
+      "br": {
+        ".module-item > a::after": "top:auto; left:auto; right:0; bottom: 0; transform: translate3d(0, 0, 0)"
+      }
+    }
+  },
+  "iconMargin": {
+    "type": "Margin",
+    "selector": "a::after"
+  },
+  "iconMarginHover": {
+    "type": "Margin",
+    "selector": "a:hover::after"
+  },
+
+  "titleDisplay": {
+    "type": "Radio",
+    "value": "hover",
+    "rules": {
+      "hover": {
+        ".banner-caption": "visibility:hidden; opacity:0; display:block",
+        "a:hover .banner-caption": "visibility:visible; opacity:1"
+      },
+      "always": {
+        "a .banner-caption": "visibility:visible; opacity:1; display:block"
+      },
+      "never": {
+        "a .banner-caption": "display:none"
+      }
+    }
+  },
+  "titleWidth": {
+    "type": "Radio",
+    "value": "full",
+    "rules": {
+      "auto": {
+        "a .banner-caption": "width:auto"
+      },
+      "full": {
+        "a .banner-caption": "width:100%"
+      }
+    }
+  },
+  "titleIcon": {
+    "type": "Icon",
+    "selector": ".banner-caption span::after"
+  },
+  "titleIconHover": {
+    "type": "Color",
+    "selector": ".banner-caption:hover span::after",
+    "property": "color",
+    "desktop": true
+  },
+  "titlePosition": {
+    "type": "Radio",
+    "value": "center",
+    "rules": {
+      "tl": {
+        ".banner-caption": "top:0; left:0; right:auto; bottom: auto; transform: translate3d(0, 0, 0)"
+      },
+      "tc": {
+        ".banner-caption": "top:0; left:50%; right:auto; bottom: auto; transform: translate3d(-50%, 0, 0)"
+      },
+      "tr": {
+        ".banner-caption": "top:0; left:auto; right:0; bottom: auto; transform: translate3d(0, 0, 0)"
+      },
+      "cl": {
+        ".banner-caption": "top:50%; left:0; right:auto; bottom: auto; transform: translate3d(0, -50%, 0)"
+      },
+      "center": {
+        ".banner-caption": "top:50%; left:50%; right:auto; bottom: auto; transform: translate3d(-50%, -50%, 0)"
+      },
+      "cr": {
+        ".banner-caption": "top:50%; left:auto; right:0; bottom: auto; transform: translate3d(0, -50%, 0)"
+      },
+      "bl": {
+        ".banner-caption": "top:auto; left:0; right:auto; bottom: 0; transform: translate3d(0, 0, 0)"
+      },
+      "bc": {
+        ".banner-caption": "top:auto; left:50%; right:auto; bottom: 0; transform: translate3d(-50%, 0, 0)"
+      },
+      "br": {
+        ".banner-caption": "top:auto; left:auto; right:0; bottom: 0; transform: translate3d(0, 0, 0)"
+      }
+    }
+  },
+  "titleScale": {
+    "type": "InputSlider",
+    "value": "100",
+    "rules": {
+      "@": {
+        ".banner-caption span": "transform:scale(calc(%s / 100))"
+      }
+    }
+  },
+  "titleScaleHover": {
+    "type": "InputSlider",
+    "value": "100",
+    "rules": {
+      "@": {
+        ".module-banners-%s:hover .banner-caption span": "transform:scale(calc(%s / 100))"
+      }
+    }
+  },
+  "titleScaleOrigin": {
+    "type": "Radio",
+    "value": "center",
+    "rules": {
+      "tl": {
+        ".banner-caption span": "transform-origin: top left"
+      },
+      "tr": {
+        ".banner-caption span": "transform-origin: top right"
+      },
+      "cl": {
+        ".banner-caption span": "transform-origin: left center"
+      },
+      "center": {
+        ".banner-caption span": "transform-origin: center"
+      },
+      "cr": {
+        ".banner-caption span": "transform-origin: right center"
+      },
+      "bl": {
+        ".banner-caption span": "transform-origin: bottom left"
+      },
+      "br": {
+        ".banner-caption span": "transform-origin: bottom right"
+      }
+    }
+  },
+  "bannerTitleWidth": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".banner-caption span": "max-width:%s%"
+      }
+    }
+  },
+  "bannerText1Truncate": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".banner-caption span": "white-space: normal;"
+      },
+      "false": {
+        ".banner-caption span": "white-space: nowrap;"
+      }
+    }
+  },
+  "bannerTitleContainer": {
+    "type": "Variable",
+    "variable": "container",
+    "selector_prefix": ".banner-caption span"
+  },
+  "titleFont": {
+    "type": "Font",
+    "selector": ".banner-caption span"
+  },
+  "titleFontHover": {
+    "type": "Font",
+    "selector": ".banner-caption:hover span",
+    "desktop": true
+  },
+  "titleBackground": {
+    "type": "Background",
+    "selector": ".banner-caption span"
+  },
+  "titleBackgroundHover": {
+    "type": "Background",
+    "selector": "a:hover .banner-caption span",
+    "desktop": true
+  },
+  "titleMargin": {
+    "type": "Margin",
+    "selector": ".banner-caption span"
+  },
+  "titleMarginHover": {
+    "type": "Margin",
+    "selector": "a:hover .banner-caption span"
+  },
+  "titleBorder": {
+    "type": "Border",
+    "selector": ".banner-caption span"
+  },
+  "titleBorderRadius": {
+    "type": "BorderRadius",
+    "selector": ".banner-caption span"
+  },
+  "titlePadding": {
+    "type": "Padding",
+    "selector": ".banner-caption span"
+  },
+  "bannerTitleSDisplay": {
+    "type": "Radio",
+    "value": "inline",
+    "rules": {
+      "inline": {
+        ".banner-caption span s": "display:inline-block"
+      },
+      "block": {
+        ".banner-caption span s": "display:block"
+      },
+      "none": {
+        ".banner-caption span s": "display:none"
+      }
+    }
+  },
+  "titleSFont": {
+    "type": "Font",
+    "selector": ".banner-caption span s"
+  },
+  "titleSFontHover": {
+    "type": "Font",
+    "selector": ".banner-caption:hover span s",
+    "desktop": true
+  },
+  "titleSBackground": {
+    "type": "Background",
+    "selector": ".banner-caption span s"
+  },
+  "titleSBackgroundHover": {
+    "type": "Background",
+    "selector": "a:hover .banner-caption span s",
+    "desktop": true
+  },
+  "titleSMargin": {
+    "type": "Margin",
+    "selector": ".banner-caption span s"
+  },
+  "titleSMarginHover": {
+    "type": "Margin",
+    "selector": "a:hover .banner-caption span s"
+  },
+  "titleSBorder": {
+    "type": "Border",
+    "selector": ".banner-caption span s"
+  },
+  "titleSBorderRadius": {
+    "type": "BorderRadius",
+    "selector": ".banner-caption span s"
+  },
+  "titleSPadding": {
+    "type": "Padding",
+    "selector": ".banner-caption span s"
+  },
+
+  "title2Display": {
+    "type": "Radio",
+    "value": "hover",
+    "rules": {
+      "hover": {
+        ".banner-caption-2": "visibility:hidden; opacity:0; display:block",
+        "a:hover .banner-caption-2": "visibility:visible; opacity:1"
+      },
+      "always": {
+        "a .banner-caption-2": "visibility:visible; opacity:1; display:block"
+      },
+      "never": {
+        "a .banner-caption-2": "display:none"
+      }
+    }
+  },
+  "title2Width": {
+    "type": "Radio",
+    "value": "full",
+    "rules": {
+      "auto": {
+        "a .banner-caption-2": "width:auto"
+      },
+      "full": {
+        "a .banner-caption-2": "width:100%"
+      }
+    }
+  },
+  "title2Icon": {
+    "type": "Icon",
+    "selector": ".banner-caption-2 span::after"
+  },
+  "title2IconHover": {
+    "type": "Color",
+    "selector": ".banner-caption-2:hover span::after",
+    "property": "color",
+    "desktop": true
+  },
+  "title2Position": {
+    "type": "Radio",
+    "value": "bc",
+    "rules": {
+      "tl": {
+        ".banner-caption-2": "top:0; left:0; right:auto; bottom: auto; transform: translate3d(0, 0, 0)"
+      },
+      "tc": {
+        ".banner-caption-2": "top:0; left:50%; right:auto; bottom: auto; transform: translate3d(-50%, 0, 0)"
+      },
+      "tr": {
+        ".banner-caption-2": "top:0; left:auto; right:0; bottom: auto; transform: translate3d(0, 0, 0)"
+      },
+      "cl": {
+        ".banner-caption-2": "top:50%; left:0; right:auto; bottom: auto; transform: translate3d(0, -50%, 0)"
+      },
+      "center": {
+        ".banner-caption-2": "top:50%; left:50%; right:auto; bottom: auto; transform: translate3d(-50%, -50%, 0)"
+      },
+      "cr": {
+        ".banner-caption-2": "top:50%; left:auto; right:0; bottom: auto; transform: translate3d(0, -50%, 0)"
+      },
+      "bl": {
+        ".banner-caption-2": "top:auto; left:0; right:auto; bottom: 0; transform: translate3d(0, 0, 0)"
+      },
+      "bc": {
+        ".banner-caption-2": "top:auto; left:50%; right:auto; bottom: 0; transform: translate3d(-50%, 0, 0)"
+      },
+      "br": {
+        ".banner-caption-2": "top:auto; left:auto; right:0; bottom: 0; transform: translate3d(0, 0, 0)"
+      }
+    }
+  },
+  "title2Scale": {
+    "type": "InputSlider",
+    "value": "100",
+    "rules": {
+      "@": {
+        ".banner-caption-2 span": "transform:scale(calc(%s / 100))"
+      }
+    }
+  },
+  "title2ScaleHover": {
+    "type": "InputSlider",
+    "value": "100",
+    "rules": {
+      "@": {
+        ".module-banners-%s:hover .banner-caption-2 span": "transform:scale(calc(%s / 100))"
+      }
+    }
+  },
+  "title2ScaleOrigin": {
+    "type": "Radio",
+    "value": "center",
+    "rules": {
+      "tl": {
+        ".banner-caption-2 span": "transform-origin: top left"
+      },
+      "tr": {
+        ".banner-caption-2 span": "transform-origin: top right"
+      },
+      "cl": {
+        ".banner-caption-2 span": "transform-origin: left center"
+      },
+      "center": {
+        ".banner-caption-2 span": "transform-origin: center"
+      },
+      "cr": {
+        ".banner-caption-2 span": "transform-origin: right center"
+      },
+      "bl": {
+        ".banner-caption-2 span": "transform-origin: bottom left"
+      },
+      "br": {
+        ".banner-caption-2 span": "transform-origin: bottom right"
+      }
+    }
+  },
+
+
+  "bannerTitle2Width": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".banner-caption-2 span": "max-width:%s%"
+      }
+    }
+  },
+  "bannerText2Truncate": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".banner-caption-2 span": "white-space: normal;"
+      },
+      "false": {
+        ".banner-caption-2 span": "white-space: nowrap;"
+      }
+    }
+  },
+  "bannerTitle2Container": {
+    "type": "Variable",
+    "variable": "container",
+    "selector_prefix": ".banner-caption-2 span"
+  },
+  "title2Font": {
+    "type": "Font",
+    "selector": ".banner-caption-2 span"
+  },
+  "title2FontHover": {
+    "type": "Font",
+    "selector": ".banner-caption-2:hover span",
+    "desktop": true
+  },
+  "title2Background": {
+    "type": "Background",
+    "selector": ".banner-caption-2 span"
+  },
+  "title2BackgroundHover": {
+    "type": "Background",
+    "selector": "a:hover .banner-caption-2 span",
+    "desktop": true
+  },
+  "title2Margin": {
+    "type": "Margin",
+    "selector": ".banner-caption-2 span"
+  },
+  "title2MarginHover": {
+    "type": "Margin",
+    "selector": "a:hover .banner-caption-2 span"
+  },
+  "title2Padding": {
+    "type": "Padding",
+    "selector": ".banner-caption-2 span"
+  },
+  "title2Border": {
+    "type": "Border",
+    "selector": ".banner-caption-2 span"
+  },
+  "title2BorderRadius": {
+    "type": "BorderRadius",
+    "selector": ".banner-caption-2 span"
+  },
+
+  "bannerTitle2SDisplay": {
+    "type": "Radio",
+    "value": "inline",
+    "rules": {
+      "inline": {
+        ".banner-caption-2 span s": "display:inline-block"
+      },
+      "block": {
+        ".banner-caption-2 span s": "display:block"
+      },
+      "none": {
+        ".banner-caption-2 span s": "display:none"
+      }
+    }
+  },
+  "titleS2Font": {
+    "type": "Font",
+    "selector": ".banner-caption-2 span s"
+  },
+  "titleS2FontHover": {
+    "type": "Font",
+    "selector": ".banner-caption-2:hover span s",
+    "desktop": true
+  },
+  "titleS2Background": {
+    "type": "Background",
+    "selector": ".banner-caption-2 span s"
+  },
+  "titleS2BackgroundHover": {
+    "type": "Background",
+    "selector": "a:hover .banner-caption-2 span s",
+    "desktop": true
+  },
+  "titleS2Margin": {
+    "type": "Margin",
+    "selector": ".banner-caption-2 span s"
+  },
+  "titleS2MarginHover": {
+    "type": "Margin",
+    "selector": "a:hover .banner-caption-2 span s"
+  },
+  "titleS2Border": {
+    "type": "Border",
+    "selector": ".banner-caption-2 span s"
+  },
+  "titleS2BorderRadius": {
+    "type": "BorderRadius",
+    "selector": ".banner-caption-2 span s"
+  },
+  "titleS2Padding": {
+    "type": "Padding",
+    "selector": ".banner-caption-2 span s"
+  },
+
+  "title3Icon": {
+    "type": "Icon",
+    "selector": ".banner-caption-3 span::after"
+  },
+  "title3IconHover": {
+    "type": "Color",
+    "selector": ".banner-caption-3:hover span::after",
+    "property": "color",
+    "desktop": true
+  },
+  "bannerText3Truncate": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".banner-caption-3 span": "white-space: normal;"
+      },
+      "false": {
+        ".banner-caption-3 span": "white-space: nowrap;"
+      }
+    }
+  },
+  "bannerTitle3Container": {
+    "type": "Variable",
+    "variable": "container",
+    "selector_prefix": ".banner-caption-3"
+  },
+  "title3Font": {
+    "type": "Font",
+    "selector": ".banner-caption-3 span"
+  },
+  "title3FontHover": {
+    "type": "Font",
+    "selector": ".banner-caption-3:hover span",
+    "desktop": true
+  },
+  "title3Background": {
+    "type": "Background",
+    "selector": ".banner-caption-3 span"
+  },
+  "title3BackgroundHover": {
+    "type": "Background",
+    "selector": "a:hover .banner-caption-3 span",
+    "desktop": true
+  },
+  "title3Margin": {
+    "type": "Margin",
+    "selector": ".banner-caption-3 span"
+  },
+  "title3Padding": {
+    "type": "Padding",
+    "selector": ".banner-caption-3 span"
+  },
+  "title3Border": {
+    "type": "Border",
+    "selector": ".banner-caption-3 span"
+  },
+  "title3BorderRadius": {
+    "type": "BorderRadius",
+    "selector": ".banner-caption-3 span"
+  }
+
+}

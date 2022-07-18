@@ -1,0 +1,145 @@
+<?php $val = array (
+  'css' => '.top-menu-287 .j-menu li.top-menu-item-1>a::before{content:\'\\ebda\' !important;font-family:icomoon !important;left:-2px}.top-menu-287>ul>.top-menu-item-1>a{text-align:left}.top-menu-287>ul>.top-menu-item-1>a>.links-text{display:block}.top-menu-287 > ul > .top-menu-item-1 > a .count-badge{position:relative}.top-menu-287 .j-menu .j-menu li.top-menu-item-2>a::before{content:\'\\e990\' !important;font-family:icomoon !important}.top-menu-287 .j-menu .j-menu li.top-menu-item-3>a::before{content:\'\\ebdd\' !important;font-family:icomoon !important}.top-menu-287 .j-menu li.top-menu-item-5>a::before{content:\'\\eaa7\' !important;font-family:icomoon !important;font-size:20px}.top-menu-287>ul>.top-menu-item-5>a{text-align:center}.top-menu-287>ul>.top-menu-item-5>a>.links-text{display:none}.top-menu-287 > ul > .top-menu-item-5 > a .count-badge{position:absolute;top:auto;right:auto}',
+  'fonts' => 
+  array (
+  ),
+  'settings' => 
+  array (
+    'scheduledStatus' => 
+    array (
+      'from' => '',
+      'to' => '',
+      'between' => true,
+    ),
+    'status' => true,
+    'id' => 'top-menu-6276577da264e',
+    'module_id' => 287,
+    'classes' => 
+    array (
+      0 => 'top-menu',
+      1 => 'top-menu-287',
+    ),
+    'items' => 
+    array (
+      1 => 
+      array (
+        'title' => 'Ziyaretçi Hesabı',
+        'link' => 
+        array (
+          'type' => 'page',
+          'id' => '',
+          'href' => 'http://localhost/index.php?route=account/login',
+          'name' => '',
+          'total' => NULL,
+          'attrs' => 
+          array (
+          ),
+          'classes' => 
+          array (
+          ),
+        ),
+        'classes' => 
+        array (
+          0 => 'menu-item',
+          1 => 'top-menu-item',
+          2 => 'top-menu-item-1',
+          'multi-level' => false,
+          'dropdown' => true,
+          'drop-menu' => true,
+          'icon-only' => false,
+        ),
+        'items' => 
+        array (
+          2 => 
+          array (
+            'title' => 'Giriş Yap',
+            'link' => 
+            array (
+              'type' => 'login_popup',
+              'id' => '',
+              'href' => 'javascript:open_login_popup()',
+              'name' => '',
+              'total' => NULL,
+              'attrs' => 
+              array (
+              ),
+              'classes' => 
+              array (
+              ),
+            ),
+            'classes' => 
+            array (
+              0 => 'menu-item',
+              1 => 'top-menu-item-2',
+              'dropdown' => false,
+              'icon-only' => NULL,
+            ),
+            'items' => 
+            array (
+            ),
+          ),
+          3 => 
+          array (
+            'title' => 'Kayıt Ol',
+            'link' => 
+            array (
+              'type' => 'register_popup',
+              'id' => '',
+              'href' => 'javascript:open_register_popup()',
+              'name' => '',
+              'total' => NULL,
+              'attrs' => 
+              array (
+              ),
+              'classes' => 
+              array (
+              ),
+            ),
+            'classes' => 
+            array (
+              0 => 'menu-item',
+              1 => 'top-menu-item-3',
+              'dropdown' => false,
+              'icon-only' => NULL,
+            ),
+            'items' => 
+            array (
+            ),
+          ),
+        ),
+      ),
+      5 => 
+      array (
+        'title' => '',
+        'link' => 
+        array (
+          'type' => 'page',
+          'id' => '',
+          'href' => 'http://localhost/index.php?route=account/wishlist',
+          'name' => '',
+          'total' => '{{ $wishlist }}',
+          'attrs' => 
+          array (
+          ),
+          'classes' => 
+          array (
+            0 => 'wishlist-badge',
+          ),
+        ),
+        'classes' => 
+        array (
+          0 => 'menu-item',
+          1 => 'top-menu-item',
+          2 => 'top-menu-item-5',
+          'multi-level' => false,
+          'dropdown' => false,
+          'drop-menu' => false,
+          'icon-only' => true,
+        ),
+        'items' => 
+        array (
+        ),
+      ),
+    ),
+  ),
+);

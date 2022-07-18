@@ -1,0 +1,67 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "New Slide"
+  },
+  "status": {
+    "type": "Status"
+  },
+  "type": {
+    "type": "Radio",
+    "value": "image",
+    "php": true
+  },
+  "background": {
+    "type": "Background",
+    "selector": ".module-master_slider-%s .module-item-%s"
+  },
+  "image": {
+    "type": "ImageLang"
+  },
+  "alt": {
+    "type": "InputLang",
+    "php": true
+  },
+  "videoType": {
+    "type": "Radio",
+    "value": "html5",
+    "php": true
+  },
+  "videoHtml5Url": {
+    "type": "InputLang",
+    "device": true
+  },
+  "videoHtml5UrlTablet": {
+    "type": "InputLang"
+  },
+  "videoHtml5UrlPhone": {
+    "type": "InputLang"
+  },
+  "videoYoutubeUrl": {
+    "type": "InputLang"
+  },
+  "videoVimeoUrl": {
+    "type": "InputLang"
+  },
+  "link": {
+    "type": "Link",
+    "php": true
+  },
+  "delay": {
+    "type": "Input",
+    "value": ""
+  },
+  "overlay": {
+    "type": "Background",
+    "selector": ".module-master_slider-%s .module-item-%s::before"
+  },
+  "overlayHover": {
+    "type": "Background",
+    "selector": ".module-master_slider-%s .module-item-%s:hover::before"
+  },
+  "overlayBlend": {
+    "type": "Select",
+    "selector": ".module-master_slider-%s .module-item-%s::before",
+    "property": "mix-blend-mode"
+  }
+}

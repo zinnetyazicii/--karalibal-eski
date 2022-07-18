@@ -1,0 +1,529 @@
+{
+  "productDescriptionLimit": {
+    "type": "Input",
+    "value": "150",
+    "php": true
+  },
+  "productLimit": {
+    "type": "Input",
+    "value": "15",
+    "php": true
+  },
+  "productSort": {
+    "type": "Select",
+    "value": "p.sort_order",
+    "php": true
+  },
+  "productOrder": {
+    "type": "Select",
+    "value": "ASC",
+    "php": true
+  },
+  "sortBarStatus": {
+    "type": "Status",
+    "php": true
+  },
+  "sortBarBox": {
+    "include": "box",
+    "selector_prefix": ".products-filter"
+  },
+  "gridVisibility": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".grid-list button": "display: inline-block"
+      },
+      "false": {
+        ".grid-list button": "display: none"
+      }
+    }
+  },
+  "gridIcon": {
+    "type": "Icon",
+    "selector": "#btn-grid-view::before",
+    "value": {
+      "icon": {
+        "name": "grid",
+        "code": "399c"
+      }
+    }
+  },
+  "gridIconHover2": {
+    "type": "Color",
+    "selector": "#btn-grid-view:hover::before",
+    "property": "color",
+    "desktop": true
+  },
+  "listIcon": {
+    "type": "Icon",
+    "selector": "#btn-list-view::before",
+    "value": {
+      "icon": {
+        "name": "format_list_bulleted",
+        "code": "e241",
+        "size": "17"
+      }
+    }
+  },
+  "listIconHover2": {
+    "type": "Color",
+    "selector": "#btn-list-view:hover::before",
+    "property": "color",
+    "desktop": true
+  },
+  "gridBackground": {
+    "type": "Background",
+    "selector": ".grid-list .view-btn"
+  },
+  "gridBackgroundHover": {
+    "type": "Background",
+    "selector": ".grid-list .view-btn:hover",
+    "desktop": true
+  },
+  "listBackground": {
+    "type": "Background",
+    "selector": "#btn-list-view"
+  },
+  "listBackgroundHover": {
+    "type": "Background",
+    "selector": "#btn-list-view:hover",
+    "desktop": true
+  },
+  "buttonSize": {
+    "type": "InputPair",
+    "selector": ".grid-list .view-btn",
+    "properties": {
+      "first": "width:%spx",
+      "second": "height:%spx"
+    }
+  },
+  "buttonBorderRadius": {
+    "type": "BorderRadius",
+    "selector": ".grid-list .view-btn"
+  },
+  "spaceBetween": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".grid-list > * + *": "margin-left:%spx"
+      }
+    },
+    "rtlRules": {
+      "@": {
+        ".grid-list > * + *": "margin-right:%spx"
+      }
+    }
+  },
+  "compareVisibility": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".grid-list .compare-btn": "display: inline-flex"
+      },
+      "false": {
+        ".grid-list .compare-btn": "display: none"
+      }
+    }
+  },
+  "comparePadding": {
+    "type": "Padding",
+    "selector": ".grid-list .compare-btn",
+    "value": {
+      "padding-left": "10"
+    }
+  },
+  "compareIconOnly": {
+    "type": "Toggle",
+    "value": "false",
+    "rules": {
+      "true": {
+        ".grid-list .links-text": "display: none",
+        ".grid-list .compare-btn::before": "margin-right:0"
+      },
+      "false": {
+        ".grid-list .links-text": "display: inline-flex",
+        ".grid-list .compare-btn::before": "margin-right:5px"
+      }
+    }
+  },
+  "compareLinkFont": {
+    "type": "Font",
+    "selector": ".grid-list .compare-btn"
+  },
+  "compareLinkFontHover": {
+    "type": "Font",
+    "selector": ".grid-list .compare-btn:hover",
+    "desktop": true
+  },
+  "compareIcon": {
+    "type": "Icon",
+    "selector": ".grid-list .compare-btn::before"
+  },
+  "compareIconHover2": {
+    "type": "Color",
+    "selector": ".grid-list .compare-btn:hover::before",
+    "property": "color",
+    "desktop": true
+  },
+  "countBadgeVisibility": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".grid-list .count-badge": "display: inline-flex"
+      },
+      "false": {
+        ".grid-list .count-badge": "display: none"
+      }
+    }
+  },
+  "countBadgeOffset": {
+    "type": "InputPair",
+    "selector": ".grid-list .count-badge",
+    "properties": {
+      "first": "transform: translateX(%spx)",
+      "second": "margin-top:%spx"
+    },
+    "rtlProperties": {
+      "first": "transform: translateX(calc(0px - (%spx)))",
+      "second": "margin-top:%spx"
+    }
+  },
+  "countBadge": {
+    "type": "Variable",
+    "variable": "count_badge",
+    "selector_prefix": ".grid-list .compare-btn"
+  },
+  "sortVisibility": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".products-filter .select-group .input-group.sort-by": "display: inline-flex"
+      },
+      "false": {
+        ".products-filter .select-group .input-group.sort-by": "display: none"
+      }
+    }
+  },
+  "showVisibility": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".products-filter .select-group .input-group.per-page": "display: inline-flex",
+        ".sort-by": "margin:0 10px"
+      },
+      "false": {
+        ".products-filter .select-group .input-group.per-page": "display: none",
+        ".sort-by": "margin:0"
+      }
+    }
+  },
+  "labelFont": {
+    "type": "Font",
+    "selector": ".products-filter .input-group-addon"
+  },
+  "labelBackground": {
+    "type": "Background",
+    "selector": ".products-filter .input-group-addon"
+  },
+  "labelBorder": {
+    "type": "Border",
+    "selector": ".products-filter .select-group .input-group .input-group-addon"
+  },
+  "labelBorderRadius": {
+    "type": "BorderRadius",
+    "selector": ".products-filter .select-group .input-group .input-group-addon"
+  },
+  "labelSpacing": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".products-filter .select-group .input-group .input-group-addon": "margin-right:%spx"
+      }
+    },
+    "rtlRules": {
+      "@": {
+        ".products-filter .select-group .input-group .input-group-addon": "margin-left:%spx"
+      }
+    }
+  },
+  "inputStyle": {
+    "type": "Variable",
+    "variable": "form_input",
+    "selector_prefix": ".products-filter .form-control"
+  },
+  "globalPagePaginationStyle": {
+    "type": "Variable",
+    "variable": "pagination",
+    "selector_prefix": ".route-product-category"
+  },
+  "infiniteScrollStatus": {
+    "type": "Toggle",
+    "value": "true",
+    "js": true,
+    "php": true,
+    "rules": {
+      "true": {
+        ".main-products + .pagination-results": "display:none"
+      }
+    }
+  },
+  "infiniteScrollOffset": {
+    "type": "InputNumber",
+    "value": "2",
+    "js": true
+  },
+  "infiniteScrollLoadPrev": {
+    "type": "InputLang",
+    "value": "Load Previous Products",
+    "js": true
+  },
+  "infiniteScrollLoadNext": {
+    "type": "InputLang",
+    "value": "Load Next Products",
+    "js": true
+  },
+  "infiniteScrollLoading": {
+    "type": "InputLang",
+    "value": "Loading...",
+    "js": true
+  },
+  "infiniteScrollNoneLeft": {
+    "type": "InputLang",
+    "value": "You have reached the end of the list.",
+    "js": true
+  },
+  "infiniteFont": {
+    "type": "Font",
+    "selector": ".ias-noneleft"
+  },
+  "infiniteBox": {
+    "include": "box",
+    "selector_prefix": ".ias-noneleft"
+  },
+  "infiniteLoader": {
+    "include": "box",
+    "selector_prefix": ".ias-spinner"
+  },
+  "infiniteButtonMargin": {
+    "type": "Margin",
+    "selector": ".ias-trigger-next .btn"
+  },
+  "infiniteButtonMarginPrev": {
+    "type": "Margin",
+    "selector": ".ias-trigger-prev .btn"
+  },
+  "infiniteButtonStyle": {
+    "type": "Variable",
+    "variable": "button",
+    "selector_prefix": ".ias-trigger"
+  },
+  "infiniteButtonWidth": {
+    "type": "Radio",
+    "value": "full",
+    "rules": {
+      "full": {
+        ".ias-trigger a": "display:flex"
+      },
+      "auto": {
+        ".ias-trigger a": "display:inline-flex"
+      }
+    }
+  },
+  "infiniteListMargin": {
+    "type": "Margin",
+    "selector": ".product-list .ias-noneleft"
+  },
+  "infiniteButtonIcon": {
+    "type": "Icon",
+    "selector": ".ias-trigger .btn::before"
+  },
+  "infiniteButtonIconHover": {
+    "type": "Icon",
+    "selector": ".ias-trigger .btn:hover::before",
+    "desktop": true
+  },
+  "globalProductView": {
+    "type": "Radio",
+    "value": "grid",
+    "php": true,
+    "device": true
+  },
+  "globalProductViewTablet": {
+    "type": "Radio",
+    "value": "",
+    "php": true
+  },
+  "globalProductViewPhone": {
+    "type": "Radio",
+    "value": "",
+    "php": true
+  },
+  "globalItemsPerRow": {
+    "type": "ItemsPerRow",
+    "selector": ".main-products.product-grid .product-layout"
+  },
+  "globalProductGridGutter": {
+    "type": "Margin",
+    "selector": ".main-products.product-grid"
+  },
+  "globalHideZeroPrice": {
+    "type": "Toggle",
+    "value": "false",
+    "rules": {
+      "true": {
+        ".has-zero-price .price": "display:none !important",
+        ".has-zero-price .product-price-group": "display:none !important"
+      }
+    }
+  },
+  "globalCartZeroPrice": {
+    "type": "Toggle",
+    "value": "false",
+    "rules": {
+      "true": {
+        ".has-zero-price.product-info .stepper": "display: none !important",
+        ".has-zero-price #button-cart": "display: none !important",
+        ".has-zero-price .product-thumb .cart-group": "display: none !important",
+        ".has-zero-price .side-product .btn-cart": "display: none !important",
+        ".has-zero-price .compare-buttons .btn-cart": "display: none !important"
+      }
+    }
+  },
+  "globalProductGridPadding": {
+    "type": "Padding",
+    "selector": ".main-products"
+  },
+  "globalProductGridBorder": {
+    "type": "Border",
+    "selector": ".main-products"
+  },
+  "globalProductGridBackground": {
+    "type": "Background",
+    "selector": ".main-products"
+  },
+  "globalProductGrid": {
+    "type": "Variable",
+    "variable": "product_grid",
+    "selector_prefix": ".main-products.product-grid"
+  },
+  "globalProductList": {
+    "type": "Variable",
+    "variable": "product_list",
+    "selector_prefix": ".main-products.product-list"
+  },
+  "globalProductStat1": {
+    "type": "Select",
+    "value": "none",
+    "php": true
+  },
+  "globalProductStat2": {
+    "type": "Select",
+    "value": "none",
+    "php": true
+  },
+  "allProductsPageTitle": {
+    "type": "InputLang",
+    "php": true,
+    "value": "All Products"
+  },
+  "allProductsPageMetaTitle": {
+    "type": "InputLang",
+    "php": true,
+    "value": ""
+  },
+  "allProductsPageMetaDescription": {
+    "type": "InputLang",
+    "php": true,
+    "value": ""
+  },
+  "allProductsPageMetaKeywords": {
+    "type": "InputLang",
+    "php": true,
+    "value": ""
+  },
+  "globalOptionsPopupStatus": {
+    "type": "Toggle",
+    "value": "true",
+    "php": true
+  },
+  "globalOptionsPopupStyle": {
+    "type": "Variable",
+    "variable": "popup",
+    "selector_prefix": ".popup-options&"
+  },
+  "globalOptionsPopupWidth": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".popup-options .popup-container": "width:%spx"
+      }
+    },
+    "value": "400"
+  },
+  "globalOptionsPopupHeight": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".popup-options .popup-inner-body": "height:%spx"
+      }
+    },
+    "value": "300"
+  },
+
+
+  "globalOptionsButtonStyle": {
+    "type": "Variable",
+    "variable": "button",
+    "selector_prefix": ".popup-options #button-cart"
+  },
+  "globalOptionsButtonIcon": {
+    "type": "Icon",
+    "selector": ".popup-options #button-cart::before"
+  },
+  "globalOptionsButtonIconHover": {
+    "type": "Icon",
+    "selector": ".popup-options #button-cart:hover::before",
+    "desktop":true
+  },
+  "globalOptionsButtonMargin": {
+    "type": "Margin",
+    "selector": ".popup-options #button-cart"
+  },
+  "globalOptionsStepperStyle": {
+    "type": "Variable",
+    "variable": "stepper",
+    "selector_prefix": ".popup-options .product-info .product-details .button-group-page"
+  },
+  "globalOptionsStepperBox": {
+    "include": "common",
+    "selector_prefix": ".popup-options .product-info .product-details .button-group-page"
+  },
+
+
+
+  "globalProductQuickviewTooltip": {
+    "type": "Variable",
+    "variable": "tooltip",
+    "selector_prefix": ".quickview-tooltip"
+  },
+  "globalProductCartTooltip": {
+    "type": "Variable",
+    "variable": "tooltip",
+    "selector_prefix": ".cart-tooltip"
+  },
+  "globalProductWishlistTooltip": {
+    "type": "Variable",
+    "variable": "tooltip",
+    "selector_prefix": ".wishlist-tooltip"
+  },
+  "globalProductCompareTooltip": {
+    "type": "Variable",
+    "variable": "tooltip",
+    "selector_prefix": ".compare-tooltip"
+  },
+  "globalProductExtraTooltip": {
+    "type": "Variable",
+    "variable": "tooltip",
+    "selector_prefix": ".extra-tooltip"
+  }
+}

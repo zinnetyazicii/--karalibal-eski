@@ -1,0 +1,114 @@
+{
+  "pageStyle": {
+    "type": "Variable",
+    "variable": "page",
+    "selector_prefix": ".layout-%s"
+  },
+  "breadcrumbsStyle": {
+    "type": "Variable",
+    "variable": "breadcrumbs",
+    "selector_prefix": ".layout-%s"
+  },
+  "formStyle": {
+    "type": "Variable",
+    "variable": "form",
+    "selector_prefix": ".layout-%s"
+  },
+  "typographyStyle": {
+    "type": "Variable",
+    "variable": "typography",
+    "selector_prefix": ".layout-%s"
+  },
+  "tableStyle": {
+    "type": "Variable",
+    "variable": "table",
+    "selector_prefix": ".layout-%s"
+  },
+  "pageButtonStyle": {
+    "type": "Variable",
+    "variable": "page_buttons",
+    "selector_prefix": ".layout-%s"
+  },
+  "titleStyle": {
+    "type": "Variable",
+    "variable": "title",
+    "selector_prefix": ".layout-%s .title.page-title"
+  },
+  "breadcrumbsStatus": {
+    "type": "Toggle",
+    "value": "",
+    "rules": {
+      "true": {
+        ".layout-%s .breadcrumb": "display: block !important"
+      },
+      "false": {
+        ".layout-%s .breadcrumb": "display: none !important"
+      }
+    }
+  },
+  "contentStatus": {
+    "type": "Toggle",
+    "value": "",
+    "rules": {
+      "true": {
+        ".layout-%s .site-wrapper > .container": "display: block !important"
+      },
+      "false": {
+        ".layout-%s .site-wrapper > .container": "display: none !important"
+      }
+    }
+  },
+  "titleStatus": {
+    "type": "Toggle",
+    "value": "",
+    "rules": {
+      "true": {
+        ".layout-%s .page-title": "display: block !important"
+      },
+      "false": {
+        ".layout-%s .page-title": "display: none !important"
+      }
+    }
+  },
+  "headerStatus": {
+    "type": "Toggle",
+    "value": "",
+    "rules": {
+      "true": {
+        "header": "display: block !important"
+      },
+      "false": {
+        "header": "display: none !important",
+        "body": "padding:0 !important"
+      }
+    }
+  },
+  "footerStatus": {
+    "type": "Toggle",
+    "value": "",
+    "rules": {
+      "true": {
+        ".layout-%s footer": "display: block !important"
+      },
+      "false": {
+        ".layout-%s footer": "display: none !important"
+      }
+    }
+  },
+  "headerDesktop": {
+    "type": "Module",
+    "php": true
+  },
+  "headerMobile": {
+    "type": "Module",
+    "php": true
+  },
+  "footerMenu": {
+    "type": "Module",
+    "php": true
+  },
+  "footerMenuPhone": {
+    "type": "Module",
+    "php": true
+  }
+}

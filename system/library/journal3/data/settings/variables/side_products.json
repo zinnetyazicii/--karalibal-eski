@@ -1,0 +1,9 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "SIDE_PRODUCTS"
+  },
+  "value": {
+    "include": "side_products"
+  }
+}

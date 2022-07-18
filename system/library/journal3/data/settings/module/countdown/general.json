@@ -1,0 +1,22 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "New Countdown Module"
+  },
+  "status": {
+    "type": "Status"
+  },
+  "schedule": {
+    "type": "Range",
+    "php": true
+  },
+  "date": {
+    "type": "Input",
+    "value": ""
+  },
+  "countdownStyle": {
+    "type": "Variable",
+    "variable": "countdown",
+    "selector_prefix": ".module-countdown-%s"
+  }
+}

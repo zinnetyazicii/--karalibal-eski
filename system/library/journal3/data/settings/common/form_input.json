@@ -1,0 +1,72 @@
+{
+  "Font": {
+    "type": "Font",
+    "important": true
+  },
+  "FontHover": {
+    "type": "Font",
+    "selector": "&:hover",
+    "important": true
+  },
+  "FontFocus": {
+    "type": "Font",
+    "selector": "&:focus",
+    "important": true
+  },
+  "Background": {
+    "type": "Background",
+    "important": true
+  },
+  "BackgroundHover": {
+    "type": "Background",
+    "selector": "&:hover",
+    "important": true
+  },
+  "BackgroundFocus": {
+    "type": "Background",
+    "selector": "&:focus",
+    "important": true
+  },
+  "Padding": {
+    "type": "Padding",
+    "important": true
+  },
+  "Border": {
+    "type": "Border",
+    "important": true
+  },
+  "BorderHover": {
+    "type": "Color",
+    "selector": "&:hover",
+    "property": "border-color",
+    "important": true
+  },
+  "BorderFocus": {
+    "type": "Color",
+    "selector": "&:focus, &:active",
+    "property": "border-color",
+    "important": true
+  },
+  "BorderRadius": {
+    "type": "BorderRadius",
+    "important": true
+  },
+  "Shadow": {
+    "type": "Shadow",
+    "selector": ""
+  },
+  "ShadowHover": {
+    "type": "Shadow",
+    "selector": "&:hover"
+  },
+  "ShadowFocus": {
+    "type": "Shadow",
+    "selector": "&:focus"
+  },
+  "PlaceholderColor": {
+    "type": "Color",
+    "selector": "&::placeholder",
+    "property": "color",
+    "important": true
+  }
+}

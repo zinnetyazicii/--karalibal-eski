@@ -1,0 +1,161 @@
+<?php $val = array (
+  'css' => '.module-blocks-184.blocks-grid .module-item.swiper-slide{margin-right:0px;width:calc((100% - 0 * 0px) / 1 - 0.01px)}.module-blocks-184.blocks-grid .module-item:not(.swiper-slide){padding:0px;width:calc(100% / 1 - 0.01px)}.one-column #content .module-blocks-184.blocks-grid .module-item.swiper-slide{margin-right:0px;width:calc((100% - 0 * 0px) / 1 - 0.01px)}.one-column #content .module-blocks-184.blocks-grid .module-item:not(.swiper-slide){padding:0px;width:calc(100% / 1 - 0.01px)}.two-column #content .module-blocks-184.blocks-grid .module-item.swiper-slide{margin-right:0px;width:calc((100% - 0 * 0px) / 1 - 0.01px)}.two-column #content .module-blocks-184.blocks-grid .module-item:not(.swiper-slide){padding:0px;width:calc(100% / 1 - 0.01px)}.side-column .module-blocks-184.blocks-grid .module-item.swiper-slide{margin-right:0px;width:calc((100% - 0 * 0px) / 1 - 0.01px)}.side-column .module-blocks-184.blocks-grid .module-item:not(.swiper-slide){padding:0px;width:calc(100% / 1 - 0.01px)}.module-blocks-184 .block-title{order:-2}.module-blocks-184 .block-header{display:flex;float:none;order:-1;justify-content:flex-start;align-items:flex-start}.module-blocks-184 .block-header
+img{display:flex}.module-blocks-184 .block-wrapper{display:flex}.module-blocks-184 .block-header
+i{float:none;display:flex}.module-blocks-184 .block-body{display:flex;flex-direction:column}.module-blocks-184 .module-item-1 .block-header{display:flex;float:none;order:-1;justify-content:flex-start;align-items:flex-start}.module-blocks-184 .module-item-1 .block-header
+img{display:flex}.module-blocks-184 .module-item-1 .block-wrapper{display:flex}.module-blocks-184 .module-item-1 .block-header
+i{float:none;display:flex}.module-blocks-184 .module-item-1 .block-body{display:flex;flex-direction:column}.module-blocks-184 .module-item-1 .block-content{text-align:left;column-count:initial;column-gap:20px;column-rule-width:1px;column-rule-style:solid}.module-blocks-184 .module-item-1 .expand-content{max-height:100%;overflow:visible}.module-blocks-184 .module-item-1 .block-footer
+.btn{width:auto;transform:scale(calc(100 / 100));transform-origin:center}.module-blocks-184 .module-item-1 .block-footer{text-align:center}',
+  'fonts' => 
+  array (
+  ),
+  'settings' => 
+  array (
+    'schedule' => 
+    array (
+      'from' => '',
+      'to' => '',
+      'between' => true,
+    ),
+    'display' => 'grid',
+    'displayTablet' => '',
+    'displayPhone' => '',
+    'carousel' => false,
+    'itemsPerRow' => 
+    array (
+      'c0' => 
+      array (
+        0 => 
+        array (
+          'items' => 1,
+          'spacing' => 0,
+        ),
+      ),
+      'c1' => 
+      array (
+        0 => 
+        array (
+          'items' => 1,
+          'spacing' => 0,
+        ),
+      ),
+      'c2' => 
+      array (
+        0 => 
+        array (
+          'items' => 1,
+          'spacing' => 0,
+        ),
+      ),
+      'sc' => 
+      array (
+        0 => 
+        array (
+          'items' => 1,
+          'spacing' => 0,
+        ),
+      ),
+    ),
+    'default' => '',
+    'title' => '',
+    'imageDimensions' => 
+    array (
+      'width' => NULL,
+      'height' => NULL,
+      'resize' => 'crop',
+    ),
+    'lazyLoad' => false,
+    'status' => true,
+    'id' => 'blocks-62765a5a3d61a',
+    'module_id' => 184,
+    'classes' => 
+    array (
+      0 => 'module',
+      1 => 'module-blocks',
+      2 => 'module-blocks-184',
+      3 => 'blocks-grid',
+      'carousel-mode' => false,
+    ),
+    'carouselOptions' => 
+    array (
+      'speed' => 0,
+      'autoplay' => false,
+      'pauseOnHover' => false,
+      'loop' => false,
+    ),
+    'default_index' => 0,
+    'items' => 
+    array (
+      1 => 
+      array (
+        'link' => 
+        array (
+          'type' => '',
+          'id' => '',
+          'href' => '',
+          'name' => '',
+          'total' => NULL,
+          'attrs' => 
+          array (
+          ),
+          'classes' => 
+          array (
+          ),
+        ),
+        'header' => 'none',
+        'text' => '',
+        'alt' => '',
+        'contentType' => 'text',
+        'shortDescriptionLimit' => '150',
+        'dynamic' => 'journal3/blocks_example',
+        'expandButton' => false,
+        'footer' => 'none',
+        'footerText' => '',
+        'footerButton' => '',
+        'footerButtonLink' => 
+        array (
+          'type' => '',
+          'id' => '',
+          'href' => '',
+          'name' => '',
+          'total' => NULL,
+          'attrs' => 
+          array (
+          ),
+          'classes' => 
+          array (
+          ),
+        ),
+        'id' => '184-1',
+        'classes' => 
+        array (
+          0 => 'module-item',
+          1 => 'module-item-1',
+          'tab-pane' => false,
+          'active' => false,
+          'panel' => false,
+          'panel-active' => false,
+          'swiper-slide' => false,
+        ),
+        'tab_classes' => 
+        array (
+          0 => 'tab-1',
+          'active' => false,
+        ),
+        'panel_classes' => 
+        array (
+          0 => 'panel-collapse',
+          1 => 'collapse',
+          'in' => false,
+        ),
+        'image' => 'http://localhost/image/cache/placeholder-1000x1000.png',
+        'image2x' => 'http://localhost/image/cache/placeholder-1000x1000.png',
+        'title' => '',
+        'content' => '<script type=\'text/javascript\' src=\'//platform-api.sharethis.com/js/sharethis.js#property=5b5a260bf5aa6d001130d052&product=inline-reaction-buttons\' async=\'async\'></script>
+<div class="sharethis-inline-reaction-buttons"></div>',
+        'items' => 
+        array (
+        ),
+      ),
+    ),
+  ),
+);

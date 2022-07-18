@@ -1,0 +1,27 @@
+{
+  "MegaMenuBackground": {
+    "type": "Background",
+    "selector": ".mega-menu-content"
+  },
+  "MegaMenuBorder": {
+    "type": "Border",
+    "selector": ".mega-menu-content",
+    "desktop":true
+  },
+  "MegaMenuShadow": {
+    "type": "Shadow",
+    "selector": ".j-dropdown > .mega-menu-content"
+  },
+  "MegaMenuPadding": {
+    "type": "Padding",
+    "selector": ".mega-menu-content"
+  },
+  "MegaMenuHeight": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".j-dropdown > .mega-menu-content": "max-height:%spx !important; overflow-y:auto;"
+      }
+    }
+  }
+}

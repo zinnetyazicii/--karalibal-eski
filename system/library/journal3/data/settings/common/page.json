@@ -1,0 +1,192 @@
+{
+  "BoxedLayout": {
+    "type": "Radio",
+    "value": "fullwidth",
+    "rules": {
+      "@": {
+        ".boxed-layout .site-wrapper": "overflow:hidden"
+      }
+    },
+    "php": true
+  },
+
+  "BoxedHeaderPadding": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        "&.boxed-layout .header": "padding:0 %spx",
+        "&.boxed-layout .breadcrumb": "padding-left:%spx; padding-right:%spx"
+      }
+    }
+  },
+
+  "BoxedBodySpacing": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        "&.boxed-layout body": "margin-top:%spx"
+      }
+    }
+  },
+
+  "BoxedContainerShadow": {
+    "type": "Shadow",
+    "selector": "&.boxed-layout .site-wrapper"
+  },
+
+  "BoxedBorder": {
+    "type": "Border",
+    "selector": "&.boxed-layout .site-wrapper"
+  },
+
+  "ContentWidth": {
+    "type": "InputNumber",
+    "php": true,
+    "rules": {
+      "@": {
+        ".wrapper, .mega-menu-content, .site-wrapper > .container, .grid-cols, &.desktop-header-active .is-sticky .header .desktop-main-menu-wrapper, &.desktop-header-active .is-sticky .sticky-fullwidth-bg, &.boxed-layout .site-wrapper, .breadcrumb, .title-wrapper, .page-title > span, &.desktop-header-active .header .top-bar, &.desktop-header-active .header .mid-bar, .desktop-main-menu-wrapper": "max-width: %spx",
+        ".desktop-main-menu-wrapper .main-menu > .j-menu > .first-dropdown::before":"transform: translateX(calc(0px - (100vw - %spx) / 2))",
+        "&html[dir='rtl'] .desktop-main-menu-wrapper .main-menu > .j-menu > .first-dropdown::before":"transform: none; right:calc(0px - (100vw - %spx) / 2)",
+        ".desktop-main-menu-wrapper .main-menu > .j-menu > .first-dropdown.mega-custom::before":"transform: translateX(calc(0px - (200vw - %spx) / 2))",
+        "&html[dir='rtl'] .desktop-main-menu-wrapper .main-menu > .j-menu > .first-dropdown.mega-custom::before":"transform: none; right:calc(0px - (200vw - %spx) / 2)"
+      }
+    }
+  },
+
+  "SiteLayout": {
+    "type": "Radio",
+    "value": "custom",
+    "rules": {
+      "full": {
+        ".wrapper, .mega-menu-content, .site-wrapper > .container, .grid-cols, &.desktop-header-active .is-sticky .header .desktop-main-menu-wrapper, &.desktop-header-active .is-sticky .sticky-fullwidth-bg, &.boxed-layout .site-wrapper, .breadcrumb, .title-wrapper, .page-title > span, &.desktop-header-active .header .top-bar, &.desktop-header-active .header .mid-bar, .desktop-main-menu-wrapper": "max-width: 100%",
+        ".desktop-main-menu-wrapper .main-menu > .j-menu > .first-dropdown::before":"transform: translateX(calc(0px - (100vw - 100%) / 2))",
+        "&html[dir='rtl'] .desktop-main-menu-wrapper .main-menu > .j-menu > .first-dropdown::before":"transform: none; right:calc(0px - (100vw - 100vw) / 2)",
+        ".desktop-main-menu-wrapper .main-menu > .j-menu > .first-dropdown.mega-custom::before":"transform: translateX(calc(0px - (200vw - 100%) / 2))",
+        "&html[dir='rtl'] .desktop-main-menu-wrapper .main-menu > .j-menu > .first-dropdown.mega-custom::before":"transform: none; right:calc(0px - (200vw - 100vw) / 2)"
+      }
+    }
+  },
+
+  "ContainerWidth": {
+    "type": "InputNumber",
+    "php": true,
+    "rules": {
+      "@": {
+        ".site-wrapper > .container, .site-wrapper > h1.page-title > span": "max-width:%spx"
+      }
+    }
+  },
+
+  "BodyBackground": {
+    "type": "Background",
+    "selector": "body"
+  },
+
+  "ContainerBackground": {
+    "type": "Background",
+    "selector": ".site-wrapper > .container > .row, .footer-reveal .top-row, .footer-reveal .site-wrapper::before"
+  },
+
+  "ContainerPadding": {
+    "type": "Padding",
+    "selector": ".site-wrapper > .container > .row"
+  },
+
+  "ContentPadding": {
+    "type": "Padding",
+    "selector": "#content"
+  },
+
+  "ContentSidePadding": {
+    "type": "InputNumber",
+    "rules":{
+      "@":{
+        "&.column-left #content": "padding-left:%spx",
+        "&.column-right #content": "padding-right:%spx"
+      }
+    },
+    "rtlRules":{
+      "@":{
+        "&.column-left #content": "padding-right:%spx",
+        "&.column-right #content": "padding-left:%spx"
+      }
+    }
+  },
+
+  "ContentBackground": {
+    "type": "Background",
+    "selector": "#content"
+  },
+
+  "ColumnLeftTabletStatus": {
+    "type": "Toggle",
+    "value": "",
+    "php": true,
+    "js": true
+  },
+
+  "ColumnRightTabletStatus": {
+    "type": "Toggle",
+    "value": "",
+    "php": true,
+    "js": true
+  },
+
+  "ColumnsWidth": {
+    "type": "InputNumber",
+    "php": true,
+    "rules": {
+      "@": {
+        ".side-column": "max-width: %spx",
+        "&.one-column #content":"max-width: calc(100% - %spx)",
+        "&.two-column #content":"max-width: calc(100% - %spx * 2)"
+      }
+    }
+  },
+
+  "ColumnLeftBackground": {
+    "type": "Background",
+    "selector": ".side-column"
+  },
+
+  "ColumnLeftPadding": {
+    "type": "Padding",
+    "selector": ".side-column"
+  },
+
+  "ColumnLeftBorder": {
+    "type": "Border",
+    "selector": "#column-left"
+  },
+
+  "ColumnRightBorder": {
+    "type": "Border",
+    "selector": "#column-right"
+  },
+
+  "ColumnRightBackground": {
+    "type": "Background",
+    "selector": "#column-right"
+  },
+
+  "ColumnRightPadding": {
+    "type": "Padding",
+    "selector": "#column-right"
+  },
+  "PageTitleVisibility": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".page-title": "display: block"
+      },
+      "false": {
+        ".page-title": "display: none"
+      }
+    }
+  },
+  "PageTitleStyle": {
+    "type": "Variable",
+    "variable": "title",
+    "selector_prefix": ".page-title"
+  }
+}

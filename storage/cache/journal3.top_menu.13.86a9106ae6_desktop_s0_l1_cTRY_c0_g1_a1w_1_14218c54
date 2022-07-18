@@ -1,0 +1,88 @@
+<?php $val = array (
+  'css' => '.top-menu-13 .j-menu li.top-menu-item-1>a::before{content:\'\\ead9\' !important;font-family:icomoon !important}.top-menu-13>ul>.top-menu-item-1>a{text-align:left}.top-menu-13>ul>.top-menu-item-1>a>.links-text{display:block}.top-menu-13 > ul > .top-menu-item-1 > a .count-badge{position:relative}.top-menu-13 .j-menu li.top-menu-item-2>a::before{content:\'\\e90d\' !important;font-family:icomoon !important}.top-menu-13>ul>.top-menu-item-2>a{text-align:left}.top-menu-13>ul>.top-menu-item-2>a>.links-text{display:block}.top-menu-13 > ul > .top-menu-item-2 > a .count-badge{position:relative}',
+  'fonts' => 
+  array (
+  ),
+  'settings' => 
+  array (
+    'scheduledStatus' => 
+    array (
+      'from' => '',
+      'to' => '',
+      'between' => true,
+    ),
+    'status' => true,
+    'id' => 'top-menu-6276577da6dbb',
+    'module_id' => 13,
+    'classes' => 
+    array (
+      0 => 'top-menu',
+      1 => 'top-menu-13',
+    ),
+    'items' => 
+    array (
+      1 => 
+      array (
+        'title' => 'Giriş',
+        'link' => 
+        array (
+          'type' => 'login_popup',
+          'id' => '',
+          'href' => 'javascript:open_login_popup()',
+          'name' => '',
+          'total' => NULL,
+          'attrs' => 
+          array (
+          ),
+          'classes' => 
+          array (
+          ),
+        ),
+        'classes' => 
+        array (
+          0 => 'menu-item',
+          1 => 'top-menu-item',
+          2 => 'top-menu-item-1',
+          'multi-level' => false,
+          'dropdown' => false,
+          'drop-menu' => false,
+          'icon-only' => false,
+        ),
+        'items' => 
+        array (
+        ),
+      ),
+      2 => 
+      array (
+        'title' => 'Kayıt Ol',
+        'link' => 
+        array (
+          'type' => 'register_popup',
+          'id' => '',
+          'href' => 'javascript:open_register_popup()',
+          'name' => '',
+          'total' => NULL,
+          'attrs' => 
+          array (
+          ),
+          'classes' => 
+          array (
+          ),
+        ),
+        'classes' => 
+        array (
+          0 => 'menu-item',
+          1 => 'top-menu-item',
+          2 => 'top-menu-item-2',
+          'multi-level' => false,
+          'dropdown' => false,
+          'drop-menu' => false,
+          'icon-only' => false,
+        ),
+        'items' => 
+        array (
+        ),
+      ),
+    ),
+  ),
+);

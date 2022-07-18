@@ -1,0 +1,41 @@
+<div class="checkout-section section-cvr" v-if="coupon_status || voucher_status || (reward_status && customer_id)">
+  <div class="title section-title">{{ j3.settings.get('sectionTitleCouponVoucherReward') }}</div>
+
+  <div class="section-body">
+    <div class="form-group form-coupon" v-if="coupon_status">
+      <label class="control-label" for="input-coupon">{{ entry_coupon }}</label>
+      <div class="input-group">
+        <input type="text" v-model="coupon" placeholder="{{ entry_coupon }}" id="input-coupon" class="form-control"/>
+        <span class="input-group-btn">
+              <button type="button" v-on:click="applyCoupon()" data-loading-text="{{ text_loading }}" class="btn btn-primary"><span>{{ button_submit }}</span></button>
+            </span>
+      </div>
+      <span class="text-success" v-if="coupon_message" v-html="coupon_message"></span>
+      <span class="text-danger" v-if="error && error.coupon" v-html="error.coupon"></span>
+    </div>
+
+    <div class="form-group form-voucher" v-if="voucher_status">
+      <label class="control-label" for="input-voucher">{{ entry_voucher }}</label>
+      <div class="input-group">
+        <input type="text" v-model="voucher" placeholder="{{ entry_voucher }}" id="input-voucher" class="form-control"/>
+        <span class="input-group-btn">
+              <button type="button" v-on:click="applyVoucher()" data-loading-text="{{ text_loading }}" class="btn btn-primary"><span>{{ button_submit }}</span></button>
+            </span>
+      </div>
+      <span class="text-success" v-if="voucher_message" v-html="voucher_message"></span>
+      <span class="text-danger" v-if="error && error.voucher" v-html="error.voucher"></span>
+    </div>
+
+    <div class="form-group form-reward" v-if="reward_status && customer_id">
+      <label class="control-label" for="input-reward">{{ entry_reward }}</label>
+      <div class="input-group">
+        <input type="text" v-model="reward" placeholder="{{ entry_reward }}" id="input-reward" class="form-control"/>
+        <span class="input-group-btn">
+              <button type="button" v-on:click="applyReward()" data-loading-text="{{ text_loading }}" class="btn btn-primary"><span>{{ button_submit }}</span></button>
+            </span>
+      </div>
+      <span class="text-success" v-if="reward_message" v-html="reward_message"></span>
+      <span class="text-danger" v-if="error && error.reward" v-html="error.reward"></span>
+    </div>
+  </div>
+</div>

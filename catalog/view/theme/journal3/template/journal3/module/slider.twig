@@ -1,0 +1,40 @@
+{% macro renderLayer(j3, subitem) %}
+  {% if subitem.type == 'image' %}
+    <img src="{{ subitem.image }}" alt="{{ subitem.alt }}"/>
+  {% elseif subitem.type == 'text' %}
+    <span class="text">{{ subitem.text }}</span>
+  {% elseif subitem.type == 'button' %}
+    <span>{{ subitem.text }}</span>
+  {% elseif subitem.type == 'hotspot' %}
+  {% elseif subitem.type == 'video' %}
+  {% endif %}
+{% endmacro %}
+<div class="{{ j3.classes(classes) }}" style="">
+  {% set first = items|first %}
+  <div class="revolution rev_slider_wrapper rev_hide_navigation" style="background-image: url('{{ first.image }}')" data-options='{{ options|json_encode(constant('JSON_FORCE_OBJECT')) }}'>
+    <img src="{{ first.image }}" alt="{{ first.alt }}">
+    <div class="rev_slider" data-version="5.4.7.2">
+      <ul>
+        {% for item in items %}
+          <li class="{{ j3.classes(item.classes) }}" {{ item.data|join(' ') }}>
+            <img class="rev-slidebg" src="{{ item.image }}" alt="{{ item.alt }}"/>
+            {% if item.type == 'video' %}
+              <div class="rs-background-video-layer" {{ item.video_data|join(' ') }}></div>
+            {% endif %}
+            {% for subitem in item.items %}
+              {% if subitem.link.href %}
+                <a class="{{ j3.classes(subitem.classes) }}" style="{{ subitem.style|join(' ') }}" {{ subitem.data|join(' ') }} {% if subitem.type == 'hotspot' %}data-popover-class="hotspot-popover-{{ subitem.id }}"{% endif %} href="{{ subitem.link.href }}">
+                  {{ _self.renderLayer(j3, subitem) }}
+                </a>
+              {% else %}
+                <div class="{{ j3.classes(subitem.classes) }}" style="{{ subitem.style|join(' ') }}" {{ subitem.data|join(' ') }} {% if subitem.type == 'hotspot' %}data-popover-class="hotspot-popover-{{ subitem.id }}"{% endif %}>
+                  {{ _self.renderLayer(j3, subitem) }}
+                </div>
+              {% endif %}
+            {% endfor %}
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>

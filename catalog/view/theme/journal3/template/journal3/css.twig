@@ -1,0 +1,114 @@
+<style>
+  /*No top bar not over*/
+  {% if data.stickyStatus and not data.stickyFullHomePadding and not data.topBarStatus and data.headerType in ['slim', 'compact'] %}
+  .desktop body{
+    padding-top: {{ data.headerCompactHeight}}px
+  }
+  .desktop header{
+    width: 100%;
+    top: 0;
+    position: fixed;
+  }
+  .desktop.popup-open header.header-compact {
+    padding-right: 17px;
+  }
+  .desktop.popup-open.webkit header.header-compact {
+    padding-right: {{ data.scrollBarWidth}}px;
+  }
+  {% endif %}
+
+  /*No top bar over*/
+  {% if data.stickyStatus and data.stickyFullHomePadding and not data.topBarStatus and data.headerType in ['slim', 'compact'] %}
+  .desktop:not(.route-common-home) body{
+    padding-top: {{ data.headerCompactHeight}}px
+  }
+  .desktop header{
+    width: 100%;
+    top: 0;
+    position: fixed;
+  }
+  .desktop.popup-open header.header-compact {
+    padding-right: 17px;
+  }
+  .desktop.popup-open.webkit header.header-compact {
+    padding-right: {{ data.scrollBarWidth}}px;
+  }
+  {% endif %}
+
+
+  /*Top bar not over*/
+  {% if data.stickyStatus and not data.stickyFullHomePadding and data.topBarStatus and data.headerType in ['slim', 'compact'] %}
+  .desktop header{
+    position: -webkit-sticky;
+    position: sticky;
+    top: -{{ data.headerTopBarHeight}}px;
+  }
+  .popup-open .sticky-compact, .mobile-overlay .sticky-compact{
+    padding-top:{{ data.headerCompactHeight + data.headerTopBarHeight}}px;
+  }
+  .popup-open .sticky-compact header, .mobile-overlay .sticky-compact header {
+    position: fixed;
+    width: calc(100% - 12px);
+  }
+  {% endif %}
+
+  /*Top bar over*/
+  {% if data.stickyStatus and data.stickyFullHomePadding and data.topBarStatus and data.headerType in ['slim', 'compact'] %}
+  .desktop header{
+    position: -webkit-sticky;
+    position: sticky;
+    top: -{{ data.headerTopBarHeight}}px;
+  }
+
+  /*Home*/
+  .desktop.route-common-home header{
+    margin-bottom: -{{ data.headerCompactHeight}}px;
+  }
+  .popup-open .sticky-compact, .mobile-overlay .sticky-compact{
+    padding-top:{{ data.headerCompactHeight + data.headerTopBarHeight}}px;
+  }
+  .popup-open.route-common-home .sticky-compact, .mobile-overlay.route-common-home .sticky-compact{
+    padding-top:{{data.headerTopBarHeight}}px;
+  }
+  .popup-open .sticky-compact header, .mobile-overlay .sticky-compact header {
+    position: fixed;
+    width: calc(100% - 12px);
+  }
+  {% endif %}
+
+  /*Title before breadcrumbs*/
+
+  {% if data.titleBeforeBreadcrumbs and data.pageTitlePosition == 'top' %}
+    header{
+      order:-5
+    }
+    .breadcrumb{
+      order:0
+    }
+    .page-title{
+      order:-1
+    }
+  {% endif %}
+
+  {% if data.headerMiniSearchDisplay == 'page' %}
+  .mini-search .tt-menu{
+    padding-left:{{data.headerMiniSearchDropdownPadding}}px;
+    padding-right:{{data.headerMiniSearchDropdownPadding}}px;
+  }
+  {% endif %}
+
+  /*Shipping payment visibility*/
+  {% if data.sectionShippingVisibility != 'true' and data.sectionPaymentVisibility != 'true' %}
+  .quick-checkout-wrapper .shipping-payment{
+    display: none;
+  }
+  {% endif %}
+
+  /*Site overlay offset*/
+  @media only screen and (max-width: {{data.globalPageContentWidth}}px){
+    .desktop-main-menu-wrapper .main-menu>.j-menu>.first-dropdown::before{
+      transform: none !important;
+    }
+  }
+</style>
+

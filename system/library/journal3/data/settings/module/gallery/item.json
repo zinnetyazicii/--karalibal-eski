@@ -1,0 +1,44 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "New Gallery Item"
+  },
+  "status": {
+    "type": "Status"
+  },
+  "title": {
+    "type": "InputLang",
+    "php": true,
+    "selector":".module-gallery-%s .module-item-%s > a > span::before",
+    "property": "content:'%s'"
+  },
+  "type": {
+    "type": "Radio",
+    "value": "image",
+    "php": true
+  },
+  "image": {
+    "type": "Image"
+  },
+  "videoType": {
+    "type": "Radio",
+    "value": "html5",
+    "php": true
+  },
+  "videoHtml5Url": {
+    "type": "Input"
+  },
+  "videoYoutubeUrl": {
+    "type": "Input"
+  },
+  "videoVimeoUrl": {
+    "type": "Input"
+  },
+  "videoImage": {
+    "type": "Image"
+  },
+  "link": {
+    "type": "Link",
+    "php": true
+  }
+}

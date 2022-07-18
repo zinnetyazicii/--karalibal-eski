@@ -1,0 +1,139 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "New Title Module "
+  },
+  "status": {
+    "type": "Status"
+  },
+  "schedule": {
+    "type": "Range",
+    "php": true
+  },
+  "type": {
+    "type": "Radio",
+    "value": "custom",
+    "php": true
+  },
+  "title": {
+    "type": "InputLang",
+    "php": true
+  },
+  "subtitle": {
+    "type": "InputLang",
+    "php": true
+  },
+  "style": {
+    "type": "Variable",
+    "variable": "title_module",
+    "selector_prefix": ".module-title-%s"
+  },
+  "font": {
+    "type": "Font",
+    "selector": ".module-title-%s .title-wrapper h3"
+  },
+  "font2": {
+    "type": "Font",
+    "selector": ".module-title-%s .title-wrapper .subtitle"
+  },
+  "bg": {
+    "type": "Background",
+    "selector": ".module-title-%s"
+  },
+  "pad": {
+    "type": "Padding",
+    "selector": ".module-title-%s"
+  },
+  "mar": {
+    "type": "Margin",
+    "selector": ".module-title-%s"
+  },
+  "accentTitle": {
+    "type": "InputLang",
+    "rules": {
+      "@": {
+        ".module-title-%s .title-wrapper::before": "content:'%s'"
+      }
+    }
+  },
+  "accentTitleFont": {
+    "type": "Font",
+    "selector": ".module-title-%s .title-wrapper::before"
+  },
+  "accentTitleMargin": {
+    "type": "Margin",
+    "selector": ".module-title-%s .title-wrapper::before"
+  },
+  "accentTitleOffset": {
+    "type": "InputPair",
+    "selector": ".module-title-%s .title-wrapper::before",
+    "properties": {
+      "first": "margin-left: %spx",
+      "second": "margin-top: %spx"
+    }
+  },
+  "accentTitleOpacity": {
+    "type": "InputNumber",
+    "value": ".05",
+    "rules": {
+      "@": {
+        ".module-title-%s .title-wrapper::before": "opacity:%s"
+      }
+    }
+  },
+  "accentTitleVisibility": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".module-title-%s .title-wrapper::before": "display: block"
+      },
+      "false": {
+        ".module-title-%s .title-wrapper::before": "display: none"
+      }
+    }
+  },
+  "dividerVisibility": {
+    "type": "Toggle",
+    "value": "",
+    "rules": {
+      "true": {
+        ".module-title-%s .title-divider": "display: block"
+      },
+      "false": {
+        ".module-title-%s .title-divider": "display: none"
+      }
+    }
+  },
+  "align": {
+    "type": "Radio",
+    "value": "",
+    "rules": {
+      "left": {
+        ".module-title-%s .title-wrapper": "text-align:left",
+        ".module-title-%s .title-divider": "margin-left:0; margin-right:auto"
+      },
+      "center": {
+        ".module-title-%s .title-wrapper": "text-align:center",
+        ".module-title-%s .title-divider": "margin-left:auto; margin-right:auto"
+      },
+      "right": {
+        ".module-title-%s .title-wrapper": "text-align:right",
+        ".module-title-%s .title-divider": "margin-left:auto; margin-right:0"
+      }
+    },
+    "rtlRules": {
+      "left": {
+        ".module-title-%s .title-wrapper": "text-align:right",
+        ".module-title-%s .title-divider": "margin-left:auto; margin-right:0"
+      },
+      "center": {
+        ".module-title-%s .title-wrapper": "text-align:center",
+        ".module-title-%s .title-divider": "margin-left:auto; margin-right:auto"
+      },
+      "right": {
+        ".module-title-%s .title-wrapper": "text-align:left",
+        ".module-title-%s .title-divider": "margin-left:0; margin-right:auto"
+      }
+    }
+  }
+}

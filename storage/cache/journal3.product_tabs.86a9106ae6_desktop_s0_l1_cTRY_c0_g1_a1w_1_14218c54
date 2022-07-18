@@ -1,0 +1,113 @@
+<?php $val = array (
+  'data' => 
+  array (
+    299 => 
+    array (
+      'php' => 
+      array (
+        'type' => 'custom',
+        'schedule' => 
+        array (
+          'from' => '',
+          'to' => '',
+          'between' => true,
+        ),
+        'position' => 'default',
+        'positionTablet' => '',
+        'positionPhone' => '',
+      ),
+      'js' => 
+      array (
+      ),
+      'fonts' => 
+      array (
+      ),
+      'css' => NULL,
+    ),
+    300 => 
+    array (
+      'php' => 
+      array (
+        'type' => 'custom',
+        'schedule' => 
+        array (
+          'from' => '',
+          'to' => '',
+          'between' => true,
+        ),
+        'position' => 'default',
+        'positionTablet' => '',
+        'positionPhone' => '',
+      ),
+      'js' => 
+      array (
+      ),
+      'fonts' => 
+      array (
+      ),
+      'css' => NULL,
+    ),
+    313 => 
+    array (
+      'php' => 
+      array (
+        'type' => 'custom',
+        'schedule' => 
+        array (
+          'from' => '',
+          'to' => '',
+          'between' => true,
+        ),
+        'position' => 'default',
+        'positionTablet' => '',
+        'positionPhone' => '',
+      ),
+      'js' => 
+      array (
+      ),
+      'fonts' => 
+      array (
+      ),
+      'css' => NULL,
+    ),
+    314 => 
+    array (
+      'php' => 
+      array (
+        'type' => 'custom',
+        'schedule' => 
+        array (
+          'from' => '',
+          'to' => '',
+          'between' => true,
+        ),
+        'position' => 'top',
+        'positionTablet' => '',
+        'positionPhone' => '',
+      ),
+      'js' => 
+      array (
+      ),
+      'fonts' => 
+      array (
+      ),
+      'css' => NULL,
+    ),
+  ),
+  'all' => 
+  array (
+    299 => 299,
+    300 => 300,
+    313 => 313,
+    314 => 314,
+  ),
+  'special' => 
+  array (
+  ),
+  'outofstock' => 
+  array (
+  ),
+  'custom' => 
+  array (
+  ),
+);

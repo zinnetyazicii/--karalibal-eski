@@ -1,0 +1,15 @@
+{% if items %}
+  <div class="{{ j3.classes(classes) }}">
+    <ul>
+      {% for item in items %}
+        <li class="{{ j3.classes(item.classes) }}">
+          {% if item.link.href %}
+            <a href="{{ item.link.href }}" {{ j3.linkAttrs(item.link) }}>{{ j3.countBadge(item.title, item.link.total, item.link.classes) }}</a>
+          {% else %}
+            <a>{{ j3.countBadge(item.title, item.link.total, item.link.classes) }}</a>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endif %}

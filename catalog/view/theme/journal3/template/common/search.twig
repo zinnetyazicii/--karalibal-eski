@@ -1,0 +1,32 @@
+{% macro renderSearchCategories(j3, categories, category_id, index) %}
+  {% import _self as self %}
+  {% for category in categories %}
+    {% set classes = {'selected': category.category_id == category_id} %}
+    <li data-category_id="{{ category.category_id }}" class="{{ j3.classes(classes) }} category-level-{{ index }}"><a>{{ category.title }}</a></li>
+    {{ self.renderSearchCategories(j3, category.items, category_id, index + 1) }}
+  {% endfor %}
+{% endmacro %}
+{% import _self as self %}
+{% if j3.settings.get('catalogSearchStatus') %}
+<div id="search" class="dropdown">
+  <button class="dropdown-toggle search-trigger" data-toggle="dropdown"></button>
+  <div class="dropdown-menu j-dropdown">
+    <div class="header-search">
+      {% if j3.settings.get('searchStyleSearchCategoriesSelectorStatus') and categories %}
+        <div class="search-categories dropdown drop-menu">
+          <div class="search-categories-button dropdown-toggle" data-toggle="dropdown">{{ category_id ? category : j3.settings.get('searchStyleSearchCategories') }}</div>
+
+          <div class="dropdown-menu j-dropdown">
+              <ul class="j-menu">
+                <li data-category_id="0" class="category-level-1"><a>{{ j3.settings.get('searchStyleSearchCategories') }}</a></li>
+                {{ self.renderSearchCategories(j3, categories, category_id, 1) }}
+              </ul>
+          </div>
+        </div>
+      {% endif %}
+      <input type="text" name="search" value="{{ search }}" placeholder="{{ j3.settings.get('searchStyleSearchPlaceholder') }}" class="search-input" data-category_id="{{ category_id }}"/>
+      <button type="button" class="search-button" data-search-url="{{ search_url }}"></button>
+    </div>
+  </div>
+</div>
+{% endif %}

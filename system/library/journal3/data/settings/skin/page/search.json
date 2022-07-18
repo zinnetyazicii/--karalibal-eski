@@ -1,0 +1,54 @@
+{
+  "searchPageCriteriaTitleVisibility": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".route-product-search #content .search-criteria-title": "display: block"
+      },
+      "false": {
+        ".route-product-search #content .search-criteria-title": "display: none"
+      }
+    }
+  },
+  "searchPageTitleStyle": {
+    "type": "Variable",
+    "variable": "title",
+    "selector_prefix": ".route-product-search .search-criteria-title"
+  },
+  "searchPageForm": {
+    "type": "Variable",
+    "variable": "form",
+    "selector_prefix": ".route-product-search .search-form"
+  },
+  "searchPageContinueButtons": {
+    "type": "Variable",
+    "variable": "page_buttons",
+    "selector_prefix": ".route-product-search #content .main-products-wrapper"
+  },
+  "searchPageButtons": {
+    "type": "Variable",
+    "variable": "page_buttons",
+    "selector_prefix": ".route-product-search #content"
+  },
+
+  "searchPageCategories": {
+    "type": "Toggle",
+    "php": true
+  },
+  "searchPageProductsStyle": {
+    "type": "Variable",
+    "variable": "title",
+    "selector_prefix": ".route-product-search #content .search-products-title"
+  },
+  "searchPageProductsTitleVisibility": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".route-product-search #content .search-products-title": "display: block"
+      },
+      "false": {
+        ".route-product-search #content .search-products-title": "display: none"
+      }
+    }
+  }
+}

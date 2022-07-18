@@ -1,0 +1,21 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "New SubItem"
+  },
+  "status": {
+    "type": "Status"
+  },
+  "title": {
+    "type": "InputLang",
+    "php": true
+  },
+  "link": {
+    "type": "Link",
+    "php": true
+  },
+  "icon": {
+    "type": "Icon",
+    "selector": "div.links-menu-%s .link-%s .sublink-%s > a::before"
+  }
+}

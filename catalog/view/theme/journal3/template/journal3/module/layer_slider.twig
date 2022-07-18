@@ -1,0 +1,44 @@
+<div class="{{ j3.classes(classes) }}">
+  {% set first = items|first %}
+  <div class="layerslider" style="background-image: url('{{ first.image }}'); {% if type == 'fullwidth' %}max-height: {{ height }}px{% endif %}" data-options='{{ options|json_encode(constant('JSON_FORCE_OBJECT')) }}'>
+    <img src="{{ first.image }}" alt="{{ first.alt }}">
+    {% for item in items %}
+      <div class="{{ j3.classes(item.classes) }} ls-slide ls-slide-{{ item.id }}" data-ls="{{ item.data|join('; ') }}">
+        <img class="ls-bg" src="{{ item.image }}" alt="{{ item.alt }}" {% if item.background %}style="{{ item.background|join('; ') }}"{% endif %}/>
+        <img class="ls-tn" src="{{ item.thumb }}" alt="{{ item.alt }}"/>
+
+        {% if item.link.href %}
+          <a href="{{ item.link.href }}" class="ls-link ls-link-on-top"></a>
+        {% endif %}
+
+        {% if item.video %}
+          <div class="ls-layer ls-layer-video" style="width: 100%; height: 100%">
+            <video src="{{ item.video }}" muted></video>
+          </div>
+        {% endif %}
+
+        {% for subitem in item.items %}
+          {% if subitem.type == 'image' %}
+            <img class="{{ j3.classes(subitem.classes) }} ls-layer-{{ subitem.id }}" style="{{ subitem.style|join('; ') }}" data-ls="{{ subitem.data|join('; ') }}" src="{{ subitem.image }}" alt="{{ subitem.alt }}"/>
+          {% elseif subitem.type == 'text' %}
+            <div class="{{ j3.classes(subitem.classes) }} ls-layer-{{ subitem.id }}" style="{{ subitem.style|join('; ') }}" data-ls="{{ subitem.data|join('; ') }}">{{ subitem.text }}</div>
+          {% elseif subitem.type == 'button' %}
+            <a class="{{ j3.classes(subitem.classes) }} ls-layer-{{ subitem.id }}" style="{{ subitem.style|join('; ') }}" data-ls="{{ subitem.data|join('; ') }}">{{ subitem.text }}</a>
+          {% elseif subitem.type == 'hotspot' %}
+            <div class="{{ j3.classes(subitem.classes) }} ls-layer-{{ subitem.id }}" style="{{ subitem.style|join('; ') }}" data-ls="{{ subitem.data|join('; ') }}" {{ subitem.hotspot|join(' ') }} data-popover-class="hotspot-popover-{{ subitem.id }}"></div>
+          {% elseif subitem.type == 'video' %}
+            <div class="{{ j3.classes(subitem.classes) }} ls-layer-{{ subitem.id }}" style="{{ subitem.style|join('; ') }}" data-ls="{{ subitem.data|join('; ') }}">
+              {% if subitem.videoType == 'html5' %}
+                <video src="{{ subitem.src }}" width="{{ subitem.videoWidth }}" height="{{ subitem.videoHeight }}" controls></video>
+              {% elseif subitem.videoType == 'youtube' %}
+                <iframe src="//www.youtube.com/embed/{{ subitem.src }}" width="{{ subitem.videoWidth }}" height="{{ subitem.videoHeight }}" frameborder="0" allowfullscreen></iframe>
+              {% else %}
+                <iframe src="//player.vimeo.com/video/{{ subitem.src }}" width="{{ subitem.videoWidth }}" height="{{ subitem.videoHeight }}" frameborder="0" allowfullscreen></iframe>
+              {% endif %}
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    {% endfor %}
+  </div>
+</div>

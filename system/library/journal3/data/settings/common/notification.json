@@ -1,0 +1,297 @@
+{
+  "Position": {
+    "type": "Radio",
+    "value": "tr",
+    "php": true
+  },
+  "Width": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        "&.notification": "max-width:%spx"
+      }
+    }
+  },
+  "Margin": {
+    "type": "Margin",
+    "selector": "&.notification"
+  },
+  "Padding": {
+    "type": "Padding",
+    "selector": "&.notification",
+    "value": {
+      "padding": "10"
+    }
+  },
+  "BG": {
+    "type": "Background",
+    "selector": "&.notification"
+  },
+  "Border": {
+    "type": "Border",
+    "selector": "&.notification"
+  },
+  "BorderRadius": {
+    "type": "BorderRadius",
+    "selector": "&.notification"
+  },
+  "Shadow": {
+    "type": "Shadow",
+    "selector": "&.notification"
+  },
+  "CloseStatus": {
+    "type": "Toggle",
+    "value": "true",
+    "rules": {
+      "true": {
+        ".notification-close": "display: block"
+      },
+      "false": {
+        ".notification-close": "display: none"
+      }
+    }
+  },
+  "CloseIcon": {
+    "type": "Icon",
+    "selector": ".notification-close::before",
+    "value": {
+      "icon": {
+        "name": "close2",
+        "code": "e5cd"
+      }
+    }
+  },
+  "CloseBorderRadius": {
+    "type": "BorderRadius",
+    "selector": ".btn.notification-close",
+    "important": true
+  },
+  "CloseIconHover": {
+    "type": "Color",
+    "selector": ".notification-close:hover::before",
+    "property": "color"
+  },
+  "CloseSize": {
+    "type": "InputPair",
+    "selector": ".notification-close",
+    "properties": {
+      "first": "width:%spx",
+      "second": "height:%spx",
+      "value": {
+        "first": "25",
+        "second": "25"
+      }
+    }
+  },
+  "CloseOffset": {
+    "type": "InputPair",
+    "selector": ".notification-close",
+    "properties": {
+      "first": "margin-right:%spx",
+      "second": "margin-top:%spx"
+    },
+    "rtlProperties": {
+      "first": "margin-left:%spx",
+      "second": "margin-top:%spx"
+    }
+  },
+  "CloseStyle": {
+    "type": "Variable",
+    "variable": "button",
+    "selector_prefix": ".notification-close&"
+  },
+
+
+  "ImageStatus": {
+    "type": "Toggle",
+    "value": "true",
+    "rules": {
+      "true": {
+        "img": "display: block"
+      },
+      "false": {
+        "img": "display: none"
+      }
+    }
+  },
+  "ImageMargin": {
+    "type": "Margin",
+    "selector": "img"
+  },
+  "ImageBorder": {
+    "type": "Border",
+    "selector": "img"
+  },
+  "ImageRadius": {
+    "type": "BorderRadius",
+    "selector": "img"
+  },
+  "ImageShadow": {
+    "type": "Shadow",
+    "selector": "img"
+  },
+  "TextFont": {
+    "type": "Font",
+    "selector": "&.notification"
+  },
+  "NameFont": {
+    "type": "Font",
+    "selector": ".notification-title"
+  },
+  "LinkFont": {
+    "type": "Font",
+    "selector": ".notification-text a"
+  },
+  "LinkFontHover": {
+    "type": "Font",
+    "selector": ".notification-text a:hover"
+  },
+
+  "ButtonsStatus": {
+    "type": "Toggle",
+    "value": "true",
+    "rules": {
+      "true": {
+        ".notification-buttons": "display: flex"
+      },
+      "false": {
+        ".notification-buttons": "display: none"
+      }
+    }
+  },
+  "ButtonsBackground": {
+    "type": "Background",
+    "selector": ".notification-buttons"
+  },
+  "ButtonsPadding": {
+    "type": "Padding",
+    "selector": ".notification-buttons"
+  },
+
+  "ButtonsBorder": {
+    "type": "Border",
+    "selector": ".notification-buttons"
+  },
+
+  "ButtonsMargin": {
+    "type": "Margin",
+    "selector": ".notification-buttons"
+  },
+
+  "CartStyle": {
+    "type": "Variable",
+    "variable": "button",
+    "selector_prefix": ".notification-view-cart&"
+  },
+
+  "CartVisibility": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".notification-view-cart": "display: inline-flex"
+      },
+      "false": {
+        ".notification-view-cart": "display: none"
+      }
+    }
+  },
+
+  "CartIcon": {
+    "type": "Icon",
+    "selector": ".notification-view-cart::before"
+  },
+
+  "CartIconHover": {
+    "type": "Color",
+    "selector": ".notification-view-cart:hover::before",
+    "property": "color"
+  },
+
+  "CartIconRight": {
+    "type": "Icon",
+    "selector": ".notification-view-cart::after"
+  },
+
+  "CartIconHoverRight": {
+    "type": "Color",
+    "selector": ".notification-view-cart:hover::after",
+    "property": "color"
+  },
+
+  "CartWidth": {
+    "type": "Radio",
+    "value": "full",
+    "rules": {
+      "full": {
+        ".notification-view-cart": "flex-grow:1"
+      },
+      "auto": {
+        ".notification-view-cart": "flex-grow:0"
+      }
+    }
+  },
+
+  "CartMargin": {
+    "type": "Margin",
+    "selector": ".notification-view-cart"
+  },
+
+  "CheckoutStyle": {
+    "type": "Variable",
+    "variable": "button",
+    "selector_prefix": ".notification-checkout&"
+  },
+
+  "CheckoutVisibility": {
+    "type": "Toggle",
+    "value": "true",
+    "rules": {
+      "true": {
+        ".notification-checkout": "display: inline-flex"
+      },
+      "false": {
+        ".notification-checkout": "display: none"
+      }
+    }
+  },
+
+  "CheckoutIcon": {
+    "type": "Icon",
+    "selector": ".notification-checkout::before"
+  },
+
+  "CheckoutIconHover": {
+    "type": "Color",
+    "selector": ".notification-checkout:hover::before",
+    "property": "color"
+  },
+
+  "CheckoutIconRight": {
+    "type": "Icon",
+    "selector": ".notification-checkout::after"
+  },
+
+  "CheckoutIconHoverRight": {
+    "type": "Color",
+    "selector": ".notification-checkout:hover::after",
+    "property": "color"
+  },
+
+  "CheckoutWidth": {
+    "type": "Radio",
+    "value": "full",
+    "rules": {
+      "full": {
+        ".notification-checkout": "flex-grow:1"
+      },
+      "auto": {
+        ".notification-checkout": "flex-grow:0"
+      }
+    }
+  },
+
+  "CheckoutMargin": {
+    "type": "Margin",
+    "selector": ".notification-checkout"
+  }
+}

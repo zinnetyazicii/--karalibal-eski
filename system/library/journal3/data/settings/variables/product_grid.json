@@ -1,0 +1,9 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "PRODUCT_GRID_CARD"
+  },
+  "value": {
+    "include": "product_grid"
+  }
+}

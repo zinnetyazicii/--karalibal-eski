@@ -1,0 +1,116 @@
+<?php $val = array (
+  'css' => '.module-banners-158 .module-item.swiper-slide{margin-right:0px;width:calc((100% - 0 * 0px) / 1 - 0.01px)}.module-banners-158 .module-item:not(.swiper-slide){padding:0px;width:calc(100% / 1 - 0.01px)}.one-column #content .module-banners-158 .module-item.swiper-slide{margin-right:0px;width:calc((100% - 0 * 0px) / 1 - 0.01px)}.one-column #content .module-banners-158 .module-item:not(.swiper-slide){padding:0px;width:calc(100% / 1 - 0.01px)}.two-column #content .module-banners-158 .module-item.swiper-slide{margin-right:0px;width:calc((100% - 0 * 0px) / 1 - 0.01px)}.two-column #content .module-banners-158 .module-item:not(.swiper-slide){padding:0px;width:calc(100% / 1 - 0.01px)}.side-column .module-banners-158 .module-item.swiper-slide{margin-right:0px;width:calc((100% - 0 * 0px) / 1 - 0.01px)}.side-column .module-banners-158 .module-item:not(.swiper-slide){padding:0px;width:calc(100% / 1 - 0.01px)}.module-banners-158 a
+img{transform:scale(1)}.module-banners-158 a::before{opacity:0}.desktop .module-banners-158 a:hover::before{opacity:1}.module-banners-158 a::after{opacity:0}.desktop .module-banners-158 a:hover::after{opacity:1}.module-banners-158 .module-item>a::after{top:50%;left:50%;right:auto;bottom:auto;transform:translate3d(-50%, -50%, 0)}.module-banners-158 .banner-caption{visibility:hidden;opacity:0;display:block;top:50%;left:50%;right:auto;bottom:auto;transform:translate3d(-50%, -50%, 0)}.desktop .module-banners-158 a:hover .banner-caption{visibility:visible;opacity:1}.module-banners-158 a .banner-caption{width:100%}.module-banners-158 .banner-caption
+span{transform:scale(calc(100 / 100));transform-origin:center;font-weight:700;text-align:center;text-transform:uppercase;padding:12px}.module-banners-158 .banner-caption-2{visibility:hidden;opacity:0;display:block;top:auto;left:50%;right:auto;bottom:0;transform:translate3d(-50%, 0, 0)}.desktop .module-banners-158 a:hover .banner-caption-2{visibility:visible;opacity:1}.module-banners-158 a .banner-caption-2{width:100%}.module-banners-158 .banner-caption-2
+span{transform:scale(calc(100 / 100));transform-origin:center;padding:10px}',
+  'fonts' => 
+  array (
+  ),
+  'settings' => 
+  array (
+    'schedule' => 
+    array (
+      'from' => '',
+      'to' => '',
+      'between' => true,
+    ),
+    'title' => '',
+    'carousel' => false,
+    'itemsPerRow' => 
+    array (
+      'c0' => 
+      array (
+        0 => 
+        array (
+          'items' => 1,
+          'spacing' => 0,
+        ),
+      ),
+      'c1' => 
+      array (
+        0 => 
+        array (
+          'items' => 1,
+          'spacing' => 0,
+        ),
+      ),
+      'c2' => 
+      array (
+        0 => 
+        array (
+          'items' => 1,
+          'spacing' => 0,
+        ),
+      ),
+      'sc' => 
+      array (
+        0 => 
+        array (
+          'items' => 1,
+          'spacing' => 0,
+        ),
+      ),
+    ),
+    'imageDimensions' => 
+    array (
+      'width' => 385,
+      'height' => 425,
+      'resize' => 'fill',
+    ),
+    'lazyLoad' => false,
+    'status' => true,
+    'id' => 'banners-62765a5a32456',
+    'module_id' => 158,
+    'classes' => 
+    array (
+      0 => 'module',
+      1 => 'module-banners',
+      2 => 'module-banners-158',
+      'carousel-mode' => false,
+    ),
+    'carouselOptions' => 
+    array (
+      'speed' => 0,
+      'autoplay' => false,
+      'pauseOnHover' => false,
+      'loop' => false,
+    ),
+    'items' => 
+    array (
+      1 => 
+      array (
+        'title' => '',
+        'title2' => '',
+        'title3' => '',
+        'alt' => '',
+        'link' => 
+        array (
+          'type' => 'page',
+          'id' => '',
+          'href' => 'http://localhost/index.php?route=product/special',
+          'name' => '',
+          'total' => NULL,
+          'attrs' => 
+          array (
+          ),
+          'classes' => 
+          array (
+          ),
+        ),
+        'id' => '158-1',
+        'classes' => 
+        array (
+          0 => 'module-item',
+          1 => 'module-item-1',
+          'swiper-slide' => false,
+        ),
+        'image' => 'http://localhost/image/cache/catalog/journal3/banners/22-385x425h.jpg',
+        'image2x' => 'http://localhost/image/cache/catalog/journal3/banners/22-770x850h.jpg',
+        'text' => NULL,
+        'items' => 
+        array (
+        ),
+      ),
+    ),
+  ),
+);

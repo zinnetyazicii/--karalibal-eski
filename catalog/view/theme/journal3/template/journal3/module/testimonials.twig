@@ -1,0 +1,97 @@
+{% macro renderTestimonialsItem(item, context) %}
+  {% import _self as self %}
+  <div class="block-body">
+    {% if item.header == 'image' %}
+      <div class="block-header"><img src="{{ item.image }}" alt="" class="block-image" width="{{ context.imageDimensions.width }}" height="{{ context.imageDimensions.height }}"/></div>
+    {% elseif item.header == 'icon' %}
+      <div class="block-header"><i class="icon icon-block"></i></div>
+    {% endif %}
+    <div class="block-content block-{{ item.contentType }}">{{ item.content }}</div>
+    {% if item.footerText %}
+      <div class="block-footer">{{ item.footerText }}</div>
+    {% endif %}
+    {% if item.expandButton %}
+      <div class="block-expand-overlay"><a class="block-expand btn"></a></div>
+    {% endif %}
+  </div>
+{% endmacro %}
+{% import _self as self %}
+<div class="{{ j3.classes(classes) }}">
+  {% if title %}
+    <h3 class="title module-title">{{ title }}</h3>
+  {% endif %}
+  <div class="module-body">
+  {# grid #}
+  {% if display == 'grid' and not carousel %}
+    {% for item in items %}
+      <div class="{{ j3.classes(item.classes) }}">
+        {{ self.renderTestimonialsItem(item, _context) }}
+      </div>
+    {% endfor %}
+  {% endif %}
+  {# grid + carousel #}
+  {% if display == 'grid' and carousel %}
+    <div class="swiper" data-items-per-row='{{ itemsPerRow|json_encode(constant('JSON_FORCE_OBJECT')) }}' data-options='{{ carouselOptions|json_encode(constant('JSON_FORCE_OBJECT')) }}'>
+      <div class="swiper-container" {% if j3.isRTL() %}dir="rtl"{% endif %}>
+        <div class="swiper-wrapper">
+          {% for item in items %}
+            <div class="{{ j3.classes(item.classes) }}">
+              {{ self.renderTestimonialsItem(item, _context) }}
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="swiper-buttons">
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  {% endif %}
+  {# tabs #}
+  {% if display == 'tabs' %}
+    <div class="tabs-container">
+      <ul class="nav nav-tabs">
+        {% for item in items %}
+          <li class="{{ j3.classes(item.tab_classes) }}">
+            {% if item.link.href %}
+              <a href="{{ item.link.href }}">{{ item.title }}</a>
+            {% else %}
+              <a href="#{{ id }}-tab-{{ loop.index }}" data-toggle="tab">{{ item.title }}</a>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+      <div class="tab-content">
+        {% for item in items %}
+          <div class="{{ j3.classes(item.classes) }}" id="{{ id }}-tab-{{ loop.index }}">
+            {{ self.renderTestimonialsItem(item, _context) }}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  {% endif %}
+  {# accordion #}
+  {% if display == 'accordion' %}
+    <div class="panel-group" id="{{ id }}-collapse">
+      {% for item in items %}
+        <div class="{{ j3.classes(item.classes) }}">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a href="#{{ id }}-collapse-{{ loop.index }}" class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#{{ id }}-collapse" aria-expanded="false">
+                {{ item.title }}
+                <i class="fa fa-caret-down"></i>
+              </a>
+            </h4>
+          </div>
+          <div class="{{ j3.classes(item.panel_classes) }}" id="{{ id }}-collapse-{{ loop.index }}">
+            <div class="panel-body">
+              {{ self.renderTestimonialsItem(item, _context) }}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+  </div>
+</div>

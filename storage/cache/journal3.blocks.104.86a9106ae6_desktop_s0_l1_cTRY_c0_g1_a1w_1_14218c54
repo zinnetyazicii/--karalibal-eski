@@ -1,0 +1,160 @@
+<?php $val = array (
+  'css' => '.module-blocks-104.blocks-grid .module-item.swiper-slide{margin-right:0px;width:calc((100% - 0 * 0px) / 1 - 0.01px)}.module-blocks-104.blocks-grid .module-item:not(.swiper-slide){padding:0px;width:calc(100% / 1 - 0.01px)}.one-column #content .module-blocks-104.blocks-grid .module-item.swiper-slide{margin-right:0px;width:calc((100% - 0 * 0px) / 1 - 0.01px)}.one-column #content .module-blocks-104.blocks-grid .module-item:not(.swiper-slide){padding:0px;width:calc(100% / 1 - 0.01px)}.two-column #content .module-blocks-104.blocks-grid .module-item.swiper-slide{margin-right:0px;width:calc((100% - 0 * 0px) / 1 - 0.01px)}.two-column #content .module-blocks-104.blocks-grid .module-item:not(.swiper-slide){padding:0px;width:calc(100% / 1 - 0.01px)}.side-column .module-blocks-104.blocks-grid .module-item.swiper-slide{margin-right:0px;width:calc((100% - 0 * 0px) / 1 - 0.01px)}.side-column .module-blocks-104.blocks-grid .module-item:not(.swiper-slide){padding:0px;width:calc(100% / 1 - 0.01px)}.module-blocks-104 .block-title{order:-2}.module-blocks-104 .block-header{display:flex;float:none;order:-1;justify-content:flex-start;align-items:flex-start}.module-blocks-104 .block-header
+img{display:flex}.module-blocks-104 .block-wrapper{display:flex}.module-blocks-104 .block-header
+i{float:none;display:flex}.module-blocks-104 .block-body{display:flex;flex-direction:column}.module-blocks-104 .module-item-1 .block-header{display:flex;float:none;order:-1;justify-content:flex-start;align-items:flex-start}.module-blocks-104 .module-item-1 .block-header
+img{display:flex}.module-blocks-104 .module-item-1 .block-wrapper{display:flex}.module-blocks-104 .module-item-1 .block-header
+i{float:none;display:flex}.module-blocks-104 .module-item-1 .block-body{display:flex;flex-direction:column}.module-blocks-104 .module-item-1 .block-content:not(.block-html):not(.block-text){height:350px}.module-blocks-104 .module-item-1 .block-content{text-align:left;column-count:initial;column-gap:20px;column-rule-width:1px;column-rule-style:solid}.module-blocks-104 .module-item-1 .expand-content{max-height:100%;overflow:visible}.module-blocks-104 .module-item-1 .block-footer
+.btn{width:auto;transform:scale(calc(100 / 100));transform-origin:center}.module-blocks-104 .module-item-1 .block-footer{text-align:center}',
+  'fonts' => 
+  array (
+  ),
+  'settings' => 
+  array (
+    'schedule' => 
+    array (
+      'from' => '',
+      'to' => '',
+      'between' => true,
+    ),
+    'display' => 'grid',
+    'displayTablet' => '',
+    'displayPhone' => '',
+    'carousel' => false,
+    'itemsPerRow' => 
+    array (
+      'c0' => 
+      array (
+        0 => 
+        array (
+          'items' => 1,
+          'spacing' => 0,
+        ),
+      ),
+      'c1' => 
+      array (
+        0 => 
+        array (
+          'items' => 1,
+          'spacing' => 0,
+        ),
+      ),
+      'c2' => 
+      array (
+        0 => 
+        array (
+          'items' => 1,
+          'spacing' => 0,
+        ),
+      ),
+      'sc' => 
+      array (
+        0 => 
+        array (
+          'items' => 1,
+          'spacing' => 0,
+        ),
+      ),
+    ),
+    'default' => '',
+    'title' => '',
+    'imageDimensions' => 
+    array (
+      'width' => NULL,
+      'height' => NULL,
+      'resize' => 'fill',
+    ),
+    'lazyLoad' => false,
+    'status' => true,
+    'id' => 'blocks-627663e0522c2',
+    'module_id' => 104,
+    'classes' => 
+    array (
+      0 => 'module',
+      1 => 'module-blocks',
+      2 => 'module-blocks-104',
+      3 => 'blocks-grid',
+      'carousel-mode' => false,
+    ),
+    'carouselOptions' => 
+    array (
+      'speed' => 0,
+      'autoplay' => false,
+      'pauseOnHover' => false,
+      'loop' => false,
+    ),
+    'default_index' => 0,
+    'items' => 
+    array (
+      1 => 
+      array (
+        'link' => 
+        array (
+          'type' => '',
+          'id' => '',
+          'href' => '',
+          'name' => '',
+          'total' => NULL,
+          'attrs' => 
+          array (
+          ),
+          'classes' => 
+          array (
+          ),
+        ),
+        'header' => 'none',
+        'text' => '',
+        'alt' => '',
+        'contentType' => 'map',
+        'shortDescriptionLimit' => '150',
+        'dynamic' => 'journal3/blocks_example',
+        'expandButton' => false,
+        'footer' => 'none',
+        'footerText' => '',
+        'footerButton' => '',
+        'footerButtonLink' => 
+        array (
+          'type' => '',
+          'id' => '',
+          'href' => '',
+          'name' => '',
+          'total' => NULL,
+          'attrs' => 
+          array (
+          ),
+          'classes' => 
+          array (
+          ),
+        ),
+        'id' => '104-1',
+        'classes' => 
+        array (
+          0 => 'module-item',
+          1 => 'module-item-1',
+          'tab-pane' => false,
+          'active' => false,
+          'panel' => false,
+          'panel-active' => false,
+          'swiper-slide' => false,
+        ),
+        'tab_classes' => 
+        array (
+          0 => 'tab-1',
+          'active' => false,
+        ),
+        'panel_classes' => 
+        array (
+          0 => 'panel-collapse',
+          1 => 'collapse',
+          'in' => false,
+        ),
+        'image' => 'http://localhost/image/cache/placeholder-1000x1000.png',
+        'image2x' => 'http://localhost/image/cache/placeholder-1000x1000.png',
+        'title' => '',
+        'content' => '<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12036.431314220297!2d28.92435!3d41.044771!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x45b91281247aa86!2skarali.com!5e0!3m2!1str!2str!4v1647341195436!5m2!1str!2str" width="600" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>',
+        'items' => 
+        array (
+        ),
+      ),
+    ),
+  ),
+);

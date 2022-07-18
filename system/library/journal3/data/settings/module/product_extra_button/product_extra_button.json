@@ -1,0 +1,65 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "New Extra Button"
+  },
+  "status": {
+    "type": "Status"
+  },
+  "type": {
+    "type": "Radio",
+    "value": "custom",
+    "php": true
+  },
+  "label": {
+    "type": "InputLang",
+    "value": "Extra Button",
+    "php": true
+  },
+  "filter": {
+    "type": "ProductFilter",
+    "value": "all"
+  },
+  "action": {
+    "type": "Radio",
+    "value": "link",
+    "php": true
+  },
+  "link": {
+    "type": "Link",
+    "php": true
+  },
+  "button": {
+    "type": "Variable",
+    "variable": "button",
+    "selector_prefix": ".product-grid .btn-extra-%s&"
+  },
+  "buttonList": {
+    "type": "Variable",
+    "variable": "button",
+    "selector_prefix": ".product-list .btn-extra-%s&"
+  },
+  "buttonPage": {
+    "type": "Variable",
+    "variable": "button",
+    "selector_prefix": ".product-info .btn-extra-%s&"
+  },
+  "icon": {
+    "type": "Icon",
+    "selector": ".btn-extra-%s::before"
+  },
+  "iconHover": {
+    "type": "Color",
+    "selector": ".btn-extra-%s:hover::before",
+    "property": "color"
+  },
+  "hideZeroPrice": {
+    "type": "Toggle",
+    "value": "false",
+    "rules": {
+      "true": {
+        ".has-zero-price .btn-extra-%s": "display: none !important"
+      }
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "menuTriggerFont": {
+    "type": "Font",
+    "selector": ".desktop-header-active .menu-trigger a"
+  },
+  "menuTriggerFontHover": {
+    "type": "Font",
+    "selector": ".desktop-header-active .menu-trigger a:hover"
+  },
+  "menuTriggerBackground": {
+    "type": "Background",
+    "selector": ".desktop-header-active .menu-trigger a"
+  },
+  "menuTriggerBackgroundHover": {
+    "type": "Background",
+    "selector": ".desktop-header-active .menu-trigger a:hover"
+  },
+  "menuTriggerPadding": {
+    "type": "InputNumber",
+    "rules":{
+      "@":{
+        ".desktop-header-active .menu-trigger a": "padding:0 %spx"
+      }
+    }
+  },
+  "menuTriggerIcon": {
+    "type": "Icon",
+    "selector": ".desktop-header-active .menu-trigger a::before",
+    "value": {
+      "icon": {
+        "name": "bars",
+        "code": "f0c9"
+      }
+    }
+  },
+  "menuTriggerIconHover": {
+    "type": "Color",
+    "selector": ".desktop-header-active .menu-trigger a:hover::before",
+    "property": "color"
+  },
+  "menuTriggerText": {
+    "type": "InputLang",
+    "value": "Menu",
+    "php": true
+  },
+  "mobileMenuOn": {
+    "type": "InputNumber",
+    "php": true,
+    "js": true
+  },
+
+  "mobileMenuDesktopWrapperStyle": {
+    "type": "Variable",
+    "variable": "mobile_wrapper",
+    "selector_prefix":".desktop-header-active"
+  },
+  "mobileMenuDesktopMenuStyle": {
+    "type": "Variable",
+    "variable": "accordion_menu",
+    "selector_prefix": ".desktop-header-active .mobile-main-menu-container .main-menu"
+  }
+}

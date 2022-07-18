@@ -1,0 +1,123 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "New Header"
+  },
+
+  "headerBG": {
+    "type": "Background",
+    "selector": ".desktop-header-active .header .mid-bar"
+  },
+
+  "headerBGHome": {
+    "type": "Background",
+    "selector": ".desktop-header-active.route-common-home .header .mid-bar"
+  },
+
+  "headerPadding": {
+    "type": "Padding",
+    "selector": ".desktop-header-active .header .mid-bar"
+  },
+
+  "headerFullwidthBG": {
+    "type": "Background",
+    "selector": ".desktop-header-active header"
+  },
+
+  "headerFullwidthBorder": {
+    "type": "Border",
+    "selector": ".desktop-header-active header"
+  },
+
+  "headerFullwidthBGHome": {
+    "type": "Background",
+    "selector": ".desktop-header-active.route-common-home header"
+  },
+
+  "headerShadow": {
+    "type": "Shadow",
+    "selector": ".desktop-header-active header"
+  },
+
+  "shadow": {
+    "type": "Shadow",
+    "selector": ".desktop-header-active .mid-bar"
+  },
+
+  "headerShadowHome": {
+    "type": "Shadow",
+    "selector": ".desktop-header-active.route-common-home header"
+  },
+
+
+  "shadowHome": {
+    "type": "Shadow",
+    "selector": ".desktop-header-active.route-common-home .mid-bar"
+  },
+
+  "headerHeight": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".desktop-header-active .header-lg .mid-bar": "height: %spx",
+        ".desktop-header-active .header-default": "height: %spx",
+        ".desktop-header-active .header-default::before": "content:''; height: calc(%spx / 3)"
+      }
+    },
+    "php": true,
+    "js": true
+  },
+
+  "headerCompactHeight": {
+    "type": "InputNumber",
+    "value": "60",
+    "rules": {
+      "@": {
+        ".desktop-header-active .header-sm .mid-bar": "height:%spx"
+      }
+    },
+    "php": true,
+    "js":true
+  },
+
+  "headerMaxWidth": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".desktop-header-active .header .mid-bar, .desktop-header-active .desktop-main-menu-wrapper, .desktop-header-active .mega-menu-content, .desktop-header-active .mega-menu-content .grid-cols": "max-width: %spx"
+      }
+    }
+  },
+
+  "headerMaxWidthHome": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".desktop-header-active.route-common-home .header .mid-bar, .desktop-header-active.route-common-home .desktop-main-menu-wrapper, .desktop-header-active.route-common-home .mega-menu-content, .desktop-header-active.route-common-home .mega-menu-content .grid-cols": "max-width: %spx"
+      }
+    }
+  },
+
+  "headerHeightHome-hold": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".desktop-header-active.route-common-home .header .mid-bar": "height: %spx",
+        ".desktop-header-active.route-common-home .header-default": "height: %spx",
+        ".desktop-header-active.route-common-home .header-default::before": "content:''; height: calc(%spx / 3)"
+      }
+    },
+    "php": true
+  },
+
+  "headerCompactHeightHome-hold": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".desktop-header-active.route-common-home .header-sm .mid-bar": "height:%spx"
+      }
+    },
+    "php": true
+  }
+}
+

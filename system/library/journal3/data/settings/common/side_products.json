@@ -1,0 +1,659 @@
+{
+  "Background": {
+    "type": "Background",
+    "selector": ".side-product"
+  },
+  "BackgroundHover": {
+    "type": "Background",
+    "selector": ".side-product:hover",
+    "desktop":true
+  },
+  "Shadow": {
+    "type": "Shadow",
+    "selector": ".side-product"
+  },
+  "ShadowHover": {
+    "type": "Shadow",
+    "selector": ".side-product:hover",
+    "desktop":true
+  },
+  "Border": {
+    "type": "Border",
+    "selector": ".side-product"
+  },
+  "BorderHover": {
+    "type": "Color",
+    "property": "border-color",
+    "selector": ".side-product:hover",
+    "desktop":true
+  },
+  "BorderRadius": {
+    "type": "BorderRadius",
+    "selector": ".side-product"
+  },
+  "Padding": {
+    "type": "Padding",
+    "selector": ".side-product"
+  },
+
+  "ItemSpacing": {
+    "type": "InputNumber",
+    "rules":{
+      "@":{
+        ".product-layout:not(.swiper-slide) + div": "margin-top:%spx"
+      }
+    }
+  },
+
+
+  "ImageBorder": {
+    "type": "Border",
+    "selector": ".side-product .image img"
+  },
+  "ImageBorderHover": {
+    "type": "Color",
+    "property": "border-color:%s",
+    "selector": ".side-product:hover .image img",
+    "desktop":true
+  },
+  "ImageBorderRadius": {
+    "type": "BorderRadius",
+    "selector": ".side-product .image img"
+  },
+  "ImagePadding": {
+    "type": "Padding",
+    "selector": ".side-product .product-img"
+  },
+  "ImageBackground": {
+    "type": "Background",
+    "selector": ".side-product .product-img"
+  },
+  "ImageShadow": {
+    "type": "Shadow",
+    "selector": ".side-product .image img"
+  },
+  "ImageShadowHover": {
+    "type": "Shadow",
+    "selector": ".side-product:hover .image img",
+    "desktop":true
+  },
+  "Grayscale": {
+    "type": "Radio",
+    "value": "",
+    "rules": {
+      "none": {
+        ".side-product .image img": "filter: grayscale(0)"
+      },
+      "always": {
+        ".side-product .image img": "filter: grayscale(1)"
+      },
+      "hover": {
+        ".side-product .image img": "filter: grayscale(1)",
+        ".side-product:hover .image img": "filter: grayscale(0)"
+      }
+    }
+  },
+
+
+  "SplitRatio": {
+    "type": "Select",
+    "value": "30",
+    "rules": {
+      "25": {
+        ".side-product .image": "width:%s%",
+        ".side-product .caption": "width:calc(100% - %s%)"
+      },
+      "30": {
+        ".side-product .image": "width:%s%",
+        ".side-product .caption": "width:calc(100% - %s%)"
+      },
+      "33": {
+        ".side-product .image": "width:%s.3333%",
+        ".side-product .caption": "width:calc(100% - %s.3333%)"
+      },
+      "40": {
+        ".side-product .image": "width:%s%",
+        ".side-product .caption": "width:calc(100% - %s%)"
+      },
+      "50": {
+        ".side-product .image": "width:%s%",
+        ".side-product .caption": "width:calc(100% - %s%)"
+      },
+      "100": {
+        ".side-product .image": "width:%s%",
+        ".side-product .caption": "width:%s%",
+        ".side-product":"display:flex"
+      }
+    }
+  },
+
+
+  "QuickviewVisibility": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".side-product .quickview-button": "display:inline-flex"
+      },
+      "false": {
+        ".side-product .quickview-button": "display:none"
+      }
+    }
+  },
+  "QuickviewPadding": {
+    "type": "Padding",
+    "selector": ".side-product .quickview-button .btn",
+    "important": true
+  },
+  "QuickviewRadius": {
+    "type": "BorderRadius",
+    "selector": ".side-product .quickview-button .btn",
+    "important": true
+  },
+  "QuickviewShow": {
+    "type": "Radio",
+    "value": "always",
+    "rules": {
+      "always": {
+        ".side-product .quickview-button": "visibility: visible; opacity: 1; left:50%; top:50%; transform: translate(-50%, -50%) scale(1);"
+      },
+      "hover": {
+        ".side-product .quickview-button": "visibility: hidden; opacity: 0; left:50%; top:50%; transform: translate(-50%, -50%) scale(.85);",
+        ".side-product:hover .quickview-button": "visibility: visible; opacity: 1; left:50%; top:50%; transform: translate(-50%, -50%) scale(1);"
+      }
+    }
+  },
+  "QuickviewOffset": {
+    "type": "InputPair",
+    "selector": ".side-product .btn-quickview",
+    "properties": {
+      "first": "margin-left:%spx",
+      "second": "margin-top:%spx; margin-bottom:calc(0px - (%spx))"
+    },
+    "rtlProperties": {
+      "first": "margin-left:calc(0px - (%spx))",
+      "second": "margin-top:%spx; margin-bottom:calc(0px - (%spx))"
+    }
+  },
+  "QuickviewSize": {
+    "type": "InputPair",
+    "selector": ".side-product .btn-quickview",
+    "properties": {
+      "first": "width:%spx",
+      "second": "height:%spx"
+    },
+    "important": true
+  },
+  "QuickviewIcon": {
+    "type": "Icon",
+    "selector": ".side-product .btn-quickview::before",
+    "value": {
+      "icon": {
+        "name": "eye",
+        "code": "f06e"
+      }
+    }
+  },
+  "QuickviewIconHover": {
+    "type": "Color",
+    "property": "color:%s",
+    "selector": ".side-product .btn-quickview:hover::before",
+    "desktop":true
+  },
+  "QuickviewTooltipStatus": {
+    "type": "Toggle",
+    "php": true
+  },
+  "QuickviewTooltipPosition": {
+    "type": "Radio",
+    "value": "top",
+    "php": true
+  },
+  "QuickviewTooltip": {
+    "type": "Variable",
+    "variable": "tooltip",
+    "selector_prefix": "&.quickview-tooltip"
+  },
+  "QuickviewButton": {
+    "type": "Variable",
+    "variable": "button",
+    "selector_prefix": ".side-product .btn-quickview&"
+  },
+
+  "DetailsBG": {
+    "type": "Background",
+    "selector": ".side-product .caption"
+  },
+  "DetailsBGHover": {
+    "type": "Background",
+    "selector": ".side-product:hover .caption",
+    "desktop":true
+  },
+  "DetailsShadow": {
+    "type": "Shadow",
+    "selector": ".side-product .caption"
+  },
+  "DetailsShadowHover": {
+    "type": "Shadow",
+    "selector": ".side-product:hover .caption",
+    "desktop":true
+  },
+  "DetailsBorder": {
+    "type": "Border",
+    "selector": ".side-product .caption"
+  },
+  "DetailsBorderHover": {
+    "type": "Color",
+    "property": "border-color:%s",
+    "selector": ".side-product:hover .caption",
+    "desktop":true
+  },
+  "DetailsBorderRadius": {
+    "type": "BorderRadius",
+    "selector": ".side-product .caption"
+  },
+  "DetailsPadding": {
+    "type": "Padding",
+    "selector": ".side-product .caption"
+  },
+
+  "NameStatus": {
+    "type": "Toggle",
+    "value": "true",
+    "rules": {
+      "true": {
+        ".side-product .name": "display:block"
+      },
+      "false": {
+        ".side-product .name": "display:none"
+      }
+    }
+  },
+  "NameOverflow": {
+    "type": "Toggle",
+    "value": "false",
+    "rules": {
+      "false": {
+        ".side-product .name a": "white-space: normal; overflow: visible; text-overflow: initial"
+      },
+      "true": {
+        ".side-product .name a": "white-space: nowrap; overflow: hidden; text-overflow: ellipsis"
+      }
+    }
+  },
+  "NameFont": {
+    "type": "Font",
+    "selector": ".side-product .name a"
+  },
+  "NameFontHover": {
+    "type": "Font",
+    "selector": ".side-product .name a:hover"
+  },
+  "NameBox": {
+    "include": "common",
+    "selector_prefix": ".side-product .name"
+  },
+
+  "PriceStatus": {
+    "type": "Toggle",
+    "value": "true",
+    "rules": {
+      "true": {
+        ".side-product .price": "display:flex"
+      },
+      "false": {
+        ".side-product .price": "display:none"
+      }
+    }
+  },
+  "PriceTaxFont": {
+    "type": "Font",
+    "selector": ".side-product .price-tax"
+  },
+  "PriceTaxStatus": {
+    "type": "Toggle",
+    "value": "false",
+    "rules": {
+      "true": {
+        ".side-product .price-tax": "display:block"
+      },
+      "false": {
+        ".side-product .price-tax": "display:none"
+      }
+    }
+  },
+  "PriceOldPosition": {
+    "type": "Radio",
+    "value": "side",
+    "rules": {
+      "left": {
+        ".side-product .price": "align-items: center; flex-direction: row",
+        ".side-product .price-old":"margin:0; order:0",
+        ".side-product .price-new":"margin: 0 0 0 5px; order:2"
+      },
+      "side": {
+        ".side-product .price": "align-items: center; flex-direction: row",
+        ".side-product .price-old":"margin:0; order:2",
+        ".side-product .price-new":"margin: 0 5px 0 0; order:1"
+      },
+      "top": {
+        ".side-product .price": "align-items: flex-start; flex-direction: column;",
+        ".side-product .price-old":"order:0",
+        ".side-product .price-new":"order:2"
+      },
+      "bottom": {
+        ".side-product .price": "align-items: flex-start; flex-direction: column;",
+        ".side-product .price-old":"order:2",
+        ".side-product .price-new":"order:0"
+      }
+    },
+    "rtlRules": {
+      "left": {
+        ".side-product .price": "align-items: center; flex-direction: row",
+        ".side-product .price-old":"margin:0; order:0",
+        ".side-product .price-new":"margin: 0 5px 0 0; order:2"
+      },
+      "side": {
+        ".side-product .price > div": "align-items: center; flex-direction: row",
+        ".side-product .price-old":"margin:0; order:2",
+        ".side-product .price-new":"margin: 0 0 0 5px; order:1"
+      },
+      "top": {
+        ".side-product .price": "align-items: flex-start; flex-direction: column;",
+        ".side-product .price-old":"margin: 0 0 5px 0; order:0",
+        ".side-product .price-new":"margin: 0; order:2"
+      },
+      "bottom": {
+        ".side-product .price > div": "align-items: flex-start; flex-direction: column;",
+        ".side-product .price-old":"margin: 5px 0 0 0; order:2",
+        ".side-product .price-new":"margin: 0; order:1"
+      }
+    }
+  },
+  "PriceOldFont": {
+    "type": "Font",
+    "selector": ".side-product .price-old",
+    "value": {
+      "text-decoration": "line-through"
+    }
+  },
+  "PriceNewFont": {
+    "type": "Font",
+    "selector": ".side-product .price-new"
+  },
+  "PriceFont": {
+    "type": "Font",
+    "selector": ".side-product .price"
+  },
+
+  "PriceBox": {
+    "include": "common",
+    "selector_prefix": ".side-product .price"
+  },
+  "TaxBox": {
+    "include": "common",
+    "selector_prefix": ".side-product .price-tax"
+  },
+
+
+  "RatingVisibility": {
+    "type": "Toggle",
+    "value": "true",
+    "rules": {
+      "true": {
+        ".side-product .rating": "display:flex"
+      },
+      "false": {
+        ".side-product .rating": "display:none"
+      }
+    },
+    "php": true
+  },
+
+  "RatingEmpty": {
+    "type": "Toggle",
+    "value": "true",
+    "rules": {
+      "true": {
+        ".side-product .rating.no-rating": "display:flex"
+      },
+      "false": {
+        ".side-product .rating.no-rating": "display:none"
+      }
+    }
+  },
+  "RatingStyle": {
+    "type": "Variable",
+    "variable": "stars",
+    "selector_prefix": ".side-product"
+  },
+  "RatingBox": {
+    "include": "common",
+    "selector_prefix": ".side-product .rating"
+  },
+  "RatingAlign": {
+    "type": "Radio",
+    "value": "left",
+    "rules": {
+      "left": {
+        ".side-product .rating": "justify-content:flex-start"
+      },
+      "center": {
+        ".side-product .rating": "justify-content:center"
+      },
+      "right": {
+        ".side-product .rating": "justify-content:flex-end"
+      }
+    }
+  },
+
+
+  "ButtonsStatus": {
+    "type": "Toggle",
+    "value": "false",
+    "rules": {
+      "true": {
+        ".side-product .button-group": "display:flex"
+      },
+      "false": {
+        ".side-product .button-group": "display:none"
+      }
+    }
+  },
+
+  "CartStatus": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".side-product .btn-cart": "display:inline-flex"
+      },
+      "false": {
+        ".side-product .btn-cart": "display:none"
+      }
+    }
+  },
+  "CartStockStatus": {
+    "type": "Toggle",
+    "value": "",
+    "rules": {
+      "true": {
+        ".out-of-stock .side-product .btn-cart": "display:inline-flex"
+      },
+      "false": {
+        ".out-of-stock .side-product .btn-cart": "display:none"
+      }
+    }
+  },
+
+  "CartSize": {
+    "type": "InputPair",
+    "selector": ".side-product .btn-cart",
+    "properties": {
+      "first": "width:%spx",
+      "second": "height:%spx"
+    }
+  },
+
+  "CartIcon": {
+    "type": "Icon",
+    "selector": ".side-product .btn-cart::before"
+  },
+  "CartIconHover": {
+    "type": "Color",
+    "property": "color:%s",
+    "selector": ".side-product .btn-cart:hover::before",
+    "desktop": true
+  },
+  "CartMargin": {
+    "type": "Margin",
+    "selector": ".side-product .btn-cart"
+  },
+  "CartButton": {
+    "type": "Variable",
+    "variable": "button",
+    "selector_prefix": ".side-product .btn-cart&"
+  },
+  "CartTooltipStatus": {
+    "type": "Toggle",
+    "php": true
+  },
+  "CartTooltipPosition": {
+    "type": "Radio",
+    "value": "top",
+    "php": true
+  },
+
+
+
+  "WishlistStatus": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".side-product .btn-wishlist": "display:inline-flex"
+      },
+      "false": {
+        ".side-product .btn-wishlist": "display:none"
+      }
+    }
+  },
+  "WishlistStockStatus": {
+    "type": "Toggle",
+    "value": "",
+    "rules": {
+      "true": {
+        ".out-of-stock .side-product .btn-wishlist": "display:inline-flex"
+      },
+      "false": {
+        ".out-of-stock .side-product .btn-wishlist": "display:none"
+      }
+    }
+  },
+
+  "WishlistSize": {
+    "type": "InputPair",
+    "selector": ".side-product .btn-wishlist",
+    "properties": {
+      "first": "width:%spx",
+      "second": "height:%spx"
+    }
+  },
+
+  "WishlistIcon": {
+    "type": "Icon",
+    "selector": ".side-product .btn-wishlist::before"
+  },
+  "WishlistIconHover": {
+    "type": "Color",
+    "property": "color:%s",
+    "selector": ".side-product .btn-wishlist:hover::before",
+    "desktop": true
+  },
+  "WishlistMargin": {
+    "type": "Margin",
+    "selector": ".side-product .btn-wishlist"
+  },
+  "WishlistButton": {
+    "type": "Variable",
+    "variable": "button",
+    "selector_prefix": ".side-product .btn-wishlist&"
+  },
+  "WishlistTooltipStatus": {
+    "type": "Toggle",
+    "php": true
+  },
+  "WishlistTooltipPosition": {
+    "type": "Radio",
+    "value": "top",
+    "php": true
+  },
+
+
+  "CompareStatus": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".side-product .btn-compare": "display:inline-flex"
+      },
+      "false": {
+        ".side-product .btn-compare": "display:none"
+      }
+    }
+  },
+  "CompareStockStatus": {
+    "type": "Toggle",
+    "value": "",
+    "rules": {
+      "true": {
+        ".out-of-stock .side-product .btn-compare": "display:inline-flex"
+      },
+      "false": {
+        ".out-of-stock .side-product .btn-compare": "display:none"
+      }
+    }
+  },
+
+  "CompareSize": {
+    "type": "InputPair",
+    "selector": ".side-product .btn-compare",
+    "properties": {
+      "first": "width:%spx",
+      "second": "height:%spx"
+    }
+  },
+
+  "CompareIcon": {
+    "type": "Icon",
+    "selector": ".side-product .btn-compare::before"
+  },
+  "CompareIconHover": {
+    "type": "Color",
+    "property": "color:%s",
+    "selector": ".side-product .btn-compare:hover::before",
+    "desktop": true
+  },
+  "CompareMargin": {
+    "type": "Margin",
+    "selector": ".side-product .btn-compare"
+  },
+  "CompareButton": {
+    "type": "Variable",
+    "variable": "button",
+    "selector_prefix": ".side-product .btn-compare&"
+  },
+  "CompareTooltipStatus": {
+    "type": "Toggle",
+    "php": true
+  },
+  "CompareTooltipPosition": {
+    "type": "Radio",
+    "value": "top",
+    "php": true
+  },
+  "ButtonsBox": {
+    "include": "common",
+    "selector_prefix": ".side-product .button-group"
+  }
+}
+
+
+
+

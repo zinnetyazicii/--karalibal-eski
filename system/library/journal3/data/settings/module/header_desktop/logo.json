@@ -1,0 +1,75 @@
+{
+  "headerLogoWidth": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".desktop-header-active .header .desktop-logo-wrapper": "width: %spx",
+        ".desktop-header-active .header-classic .mid-bar .desktop-logo-wrapper": "width: %spx"
+      }
+    }
+  },
+
+  "headerLogoAlign": {
+    "type": "Radio",
+    "selector": ".desktop-header-active .header #logo a",
+    "property": "justify-content",
+    "value": "flex-start"
+  },
+
+  "headerLogoPadding": {
+    "type": "Padding",
+    "selector": ".desktop-header-active .header #logo a"
+  },
+
+  "headerLogoBG": {
+    "type": "Background",
+    "selector": ".desktop-header-active .header #logo a"
+  },
+
+  "headerLogoBGHover": {
+    "type": "Background",
+    "selector": ".desktop-header-active .header #logo a:hover"
+  },
+
+  "headerLogoOffset": {
+    "type": "InputPair",
+    "selector": ".desktop-header-active .header #logo img",
+    "properties": {
+      "first": "left: %spx",
+      "second": "top: %spx"
+    },
+    "rtlProperties": {
+      "first": "right: %spx",
+      "second": "top: %spx"
+    }
+  },
+
+  "headerLogoPosition": {
+    "type": "Radio",
+    "value": "side",
+    "rules": {
+      "left": {
+        ".desktop-header-active .header-classic .mid-bar .desktop-logo-wrapper": "order:0; margin:0;",
+        ".desktop-header-active .header-classic .mid-bar .desktop-search-wrapper": "order:2; flex-grow:1;",
+        ".desktop-logo-wrapper":"width:auto",
+        ".desktop-search-wrapper":"width:auto",
+        ".classic-cart-wrapper":"width:auto",
+        ".desktop-header-active header:not(.header-slim) .header-compact .mid-bar": "justify-content: flex-start",
+        ".desktop-header-active header:not(.header-slim) .header-compact .mid-bar > div": "max-width:none",
+        ".desktop-header-active header:not(.header-slim) .header-compact .header-cart-group":"margin-left:auto",
+        ".desktop-header-active header:not(.header-slim) .header-compact .mid-bar .desktop-logo-wrapper": "position: relative; left: 0; transform: translateX(0)"
+      },
+      "center": {
+        ".desktop-header-active .header-classic .mid-bar .desktop-logo-wrapper": "order:2; margin:0 auto; flex-grow:1",
+        ".desktop-header-active .header-classic .mid-bar .desktop-search-wrapper": "order:1; flex-grow:0; margin:0",
+        ".desktop-logo-wrapper":"width:33%",
+        ".desktop-search-wrapper":"width:33%",
+        ".classic-cart-wrapper":"width:33%",
+        ".desktop-header-active header:not(.header-slim) .header-compact .mid-bar": "justify-content: space-between",
+        ".desktop-header-active header:not(.header-slim) .header-compact .mid-bar > div": "max-width:45%; z-index:1",
+        ".desktop-header-active header:not(.header-slim) .header-compact .header-cart-group":"margin:0",
+        ".desktop-header-active header:not(.header-slim) .header-compact .mid-bar .desktop-logo-wrapper": "position: absolute; left: 50%; transform: translateX(-50%); z-index: 2"
+      }
+    }
+  }
+}

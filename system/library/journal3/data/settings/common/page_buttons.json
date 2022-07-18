@@ -1,0 +1,160 @@
+{
+
+  "Buttons": {
+    "include": "common_hover",
+    "selector_prefix": ".buttons"
+  },
+
+  "ContinueButton": {
+    "type": "Variable",
+    "variable": "button",
+    "selector_prefix": ".buttons .pull-right"
+  },
+
+  "BackButton": {
+    "type": "Variable",
+    "variable": "button",
+    "selector_prefix": ".buttons .pull-left"
+  },
+
+  "ContinueButtonIcon": {
+    "type": "Icon",
+    "selector": ".buttons .pull-right .btn::after"
+  },
+
+  "BackButtonIcon": {
+    "type": "Icon",
+    "selector": ".buttons .pull-left .btn::before"
+  },
+
+  "BackButtonIconHover": {
+    "type": "Color",
+    "selector": ".buttons .pull-left .btn:hover::before",
+    "property": "color"
+  },
+
+  "BackButtonIconActive": {
+    "type": "Color",
+    "selector": ".buttons .pull-left .btn:active::before",
+    "property": "color"
+  },
+
+  "ContinueButtonIconHover": {
+    "type": "Color",
+    "selector": ".buttons .pull-right .btn:hover::after",
+    "property": "color"
+  },
+
+  "ContinueButtonIconActive": {
+    "type": "Color",
+    "selector": ".buttons .pull-right .btn:active::after",
+    "property": "color"
+  },
+
+  "ButtonWidth": {
+    "type": "Radio",
+    "value": "",
+    "rules": {
+      "auto": {
+        ".buttons > div": "flex:0 0 auto",
+        ".buttons > div .btn": "width:auto",
+        ".buttons .pull-left":"margin-right:auto;"
+      },
+      "full": {
+        ".buttons > div": "flex:1",
+        ".buttons > div .btn": "width:100%",
+        ".buttons .pull-left":"margin-right:0"
+      }
+    }
+  },
+
+  "ButtonDisplay": {
+    "type": "Radio",
+    "value": "",
+    "rules": {
+      "inline": {
+        ".buttons > div":"width:auto; flex-basis: 0"
+      },
+      "block": {
+        ".buttons > div":"width:100%; flex-basis: auto"
+      }
+    }
+  },
+
+  "ButtonSpace": {
+    "type": "Padding",
+    "selector": ".buttons > div + div"
+  },
+
+  "SingleButtonWidth": {
+    "type": "Radio",
+    "value": "",
+    "rules": {
+      "auto": {
+        ".buttons .pull-right:only-child": "flex:0 0 auto; width:auto",
+        ".buttons .pull-right:only-child .btn": " width:auto"
+      },
+      "full": {
+        ".buttons .pull-right:only-child": "flex:1",
+        ".buttons .pull-right:only-child .btn": " width:100%"
+      }
+    }
+  },
+
+  "ButtonAlign": {
+    "type": "Radio",
+    "value": "",
+    "rules": {
+      "left": {
+        ".buttons .pull-right:only-child": "margin:0 auto 0 0"
+      },
+      "center": {
+        ".buttons .pull-right:only-child": "margin:0 auto 0 auto"
+      },
+      "right": {
+        ".buttons .pull-right:only-child": "margin:0 0 0 auto"
+      }
+    },
+    "rtlRules": {
+      "left": {
+        ".buttons .pull-right:only-child": "margin:0 0 0 auto"
+      },
+      "center": {
+        ".buttons .pull-right:only-child": "margin:0 auto 0 auto"
+      },
+      "right": {
+        ".buttons .pull-right:only-child": "margin:0 auto 0 0"
+      }
+    }
+  },
+
+  "AgreeFont": {
+    "type": "Font",
+    "selector": ".buttons"
+  },
+  "AgreeLink": {
+    "type": "Font",
+    "selector": ".buttons a"
+  },
+  "AgreeLinkHover": {
+    "type": "Font",
+    "selector": ".buttons a:hover"
+  },
+  "AgreeLinkActive": {
+    "type": "Font",
+    "selector": ".buttons a:active"
+  },
+  "AgreeMargin": {
+    "type": "InputNumber",
+    "rules":{
+      "@":{
+        ".buttons input + .btn": "margin-top:%spx"
+      }
+    }
+  },
+  "AgreeCheckMargin": {
+    "type": "Margin",
+    "selector": ".buttons input[type=checkbox]",
+    "important": true
+  }
+}

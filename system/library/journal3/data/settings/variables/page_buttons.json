@@ -1,0 +1,9 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "NEW_PAGE_BUTTONS"
+  },
+  "value": {
+    "include": "page_buttons"
+  }
+}

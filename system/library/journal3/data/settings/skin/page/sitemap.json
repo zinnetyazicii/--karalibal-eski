@@ -1,0 +1,62 @@
+{
+  "sitemapBox": {
+    "include": "box",
+    "selector_prefix": ".route-information-sitemap #content > .row > div"
+  },
+  "sitemapBox2": {
+    "include": "box",
+    "selector_prefix": ".route-information-sitemap #content > .row > div + div"
+  },
+  "sitemapFont": {
+    "type": "Font",
+    "selector": ".route-information-sitemap #content .row ul li, .route-information-sitemap #content .row ul li a"
+  },
+  "sitemapFontHover": {
+    "type": "Font",
+    "selector": ".route-information-sitemap #content .row ul li a:hover"
+  },
+  "sitemapCategoryIcon": {
+    "type": "Icon",
+    "selector": ".route-information-sitemap #content > .row > div > ul > li > a::before",
+    "value": {
+      "icon": {
+        "name": "file-text",
+        "code": "f15c"
+      }
+    }
+  },
+  "sitemapCategoryIconHover": {
+    "type": "Color",
+    "selector": ".route-information-sitemap #content > .row > div > ul > li > a:hover::before",
+    "property": "color"
+  },
+  "sitemapSubCategoryIcon": {
+    "type": "Icon",
+    "selector": ".route-information-sitemap #content > .row > div > ul li ul li a::before",
+    "value": {
+      "icon": {
+        "name": "file-text-o",
+        "code": "f0f6"
+      }
+    }
+  },
+  "sitemapSubCategoryIconHover": {
+    "type": "Color",
+    "selector": ".route-information-sitemap #content > .row > div > ul li ul li a:hover::before",
+    "property": "color"
+  },
+  "sitemapColumns": {
+    "type": "Radio",
+    "value": "2",
+    "rules": {
+      "1": {
+        ".route-information-sitemap #content > .row": "flex-direction:column",
+        ".route-information-sitemap #content > .row > div": "width:100%"
+      },
+      "2": {
+        ".route-information-sitemap #content > .row": "flex-direction:row",
+        ".route-information-sitemap #content > .row > div": "width:auto"
+      }
+    }
+  }
+}

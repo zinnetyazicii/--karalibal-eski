@@ -1,0 +1,79 @@
+<?php $val = array (
+  'css' => '.module-blog_categories-42 .title.module-title{font-family:\'Ubuntu\';font-weight:400;font-size:13px;text-transform:uppercase;white-space:normal;overflow:visible;text-overflow:initial}.module-blog_categories-42
+a{padding:7px;padding-left:0px}.module-blog_categories-42 a
+span{color:rgba(51, 51, 51, 1)}.module-blog_categories-42 a:hover
+span{color:rgba(239, 80, 66, 1)}.module-blog_categories-42 a::before{content:\'\\e93f\' !important;font-family:icomoon !important;margin-right:4px}.module-blog_categories-42 a+a{border-style:solid;border-color:rgba(226, 226, 226, 1)}.module-blog_categories-42
+span{white-space:normal;overflow:visible;text-overflow:initial}',
+  'fonts' => 
+  array (
+    'fonts' => 
+    array (
+      'Ubuntu' => 
+      array (
+        400 => '400',
+      ),
+    ),
+    'subsets' => 
+    array (
+      'latin-ext' => 'latin-ext',
+    ),
+  ),
+  'settings' => 
+  array (
+    'schedule' => 
+    array (
+      'from' => '',
+      'to' => '',
+      'between' => true,
+    ),
+    'title' => 'Blog Kategorileri',
+    'status' => true,
+    'id' => 'blog_categories-62765a5450b56',
+    'module_id' => 42,
+    'classes' => 
+    array (
+      0 => 'module',
+      1 => 'module-blog_categories',
+      2 => 'module-blog_categories-42',
+    ),
+    'items' => 
+    array (
+      0 => 
+      array (
+        'classes' => 
+        array (
+          0 => 'module-item',
+        ),
+        'name' => 'Polen',
+        'href' => 'http://localhost/index.php?route=journal3/blog&amp;journal_blog_category_id=2',
+      ),
+      1 => 
+      array (
+        'classes' => 
+        array (
+          0 => 'module-item',
+        ),
+        'name' => 'Propolis',
+        'href' => 'http://localhost/index.php?route=journal3/blog&amp;journal_blog_category_id=3',
+      ),
+      2 => 
+      array (
+        'classes' => 
+        array (
+          0 => 'module-item',
+        ),
+        'name' => 'Bal',
+        'href' => 'http://localhost/index.php?route=journal3/blog&amp;journal_blog_category_id=4',
+      ),
+      3 => 
+      array (
+        'classes' => 
+        array (
+          0 => 'module-item',
+        ),
+        'name' => 'Tümü',
+        'href' => 'http://localhost/index.php?route=journal3/blog&amp;journal_blog_category_id=5',
+      ),
+    ),
+  ),
+);

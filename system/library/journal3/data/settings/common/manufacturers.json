@@ -1,0 +1,195 @@
+{
+  "Background": {
+    "type": "Background",
+    "selector": ".manufacturer-thumb"
+  },
+
+  "BackgroundHover": {
+    "type": "Background",
+    "selector": ".manufacturer-thumb:hover"
+  },
+
+  "Shadow": {
+    "type": "Shadow",
+    "selector": ".manufacturer-thumb"
+  },
+
+  "ShadowHover": {
+    "type": "Shadow",
+    "selector": ".manufacturer-thumb:hover"
+  },
+
+  "Border": {
+    "type": "Border",
+    "selector": ".manufacturer-thumb"
+  },
+
+  "BorderHover": {
+    "type": "Color",
+    "property": "border-color:%s",
+    "selector": ".manufacturer-thumb:hover"
+  },
+
+  "BorderRadius": {
+    "type": "BorderRadius",
+    "selector": ".manufacturer-thumb"
+  },
+
+  "ItemPadding": {
+    "type": "Padding",
+    "selector": ".manufacturer-thumb"
+  },
+
+  "ImageVisibility": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".manufacturer-thumb .image": "display: block"
+      },
+      "false": {
+        ".manufacturer-thumb .image": "display: none"
+      }
+    }
+  },
+
+  "ImageBackground": {
+    "type": "Background",
+    "selector": ".manufacturer-thumb .image a"
+  },
+
+  "ImagePadding": {
+    "type": "Padding",
+    "selector": ".manufacturer-thumb .image a"
+  },
+
+  "ImageBorder": {
+    "type": "Border",
+    "selector": ".manufacturer-thumb .image a"
+  },
+
+  "ImageBorderHover": {
+    "type": "Color",
+    "property": "border-color:%s",
+    "selector": ".manufacturer-thumb:hover .image a"
+  },
+
+  "ImageBorderRadius": {
+    "type": "BorderRadius",
+    "selector": ".manufacturer-thumb .image a"
+  },
+
+  "ImageShadow": {
+    "type": "Shadow",
+    "selector": ".manufacturer-thumb .image a"
+  },
+
+  "ImageShadowHover": {
+    "type": "Shadow",
+    "selector": ".manufacturer-thumb:hover .image a"
+  },
+
+  "ImagePadding": {
+    "type": "Padding",
+    "selector": ".manufacturer-thumb .image a"
+  },
+
+  "ImageOpacity": {
+    "type": "InputNumber",
+    "rules":{
+      "@":{
+        ".manufacturer-thumb .image img": "opacity:%s"
+      }
+    }
+  },
+
+  "ImageOpacityHover": {
+    "type": "InputNumber",
+    "rules":{
+      "@":{
+        ".manufacturer-thumb:hover .image img": "opacity:%s"
+      }
+    }
+  },
+
+  "ImageScale": {
+    "type": "Toggle",
+    "value": "false",
+    "rules": {
+      "true": {
+        ".manufacturer-thumb:hover .image img": "transform:scale(1.15)"
+      },
+      "false": {
+        ".manufacturer-thumb .image img": "transform:scale(1)"
+      }
+    }
+  },
+
+  "Grayscale": {
+    "type": "Radio",
+    "value": "",
+    "rules": {
+      "none": {
+        ".manufacturer-thumb .image img": "filter: grayscale(0)"
+      },
+      "always": {
+        ".manufacturer-thumb .image img": "filter: grayscale(1)"
+      },
+      "hover": {
+        ".manufacturer-thumb .image img": "filter: grayscale(1)",
+        ".manufacturer-thumb:hover .image img": "filter: grayscale(0)"
+      }
+    }
+  },
+
+  "NameDisplay": {
+    "type": "Radio",
+    "value": "none",
+    "rules": {
+      "always": {
+        ".manufacturer-thumb .name": "display:block; position:relative; opacity:1; transform: translate3d(0,0,0)"
+      },
+      "hover": {
+        ".manufacturer-thumb .name": "position:absolute; bottom:0; left:0; right:0; display:block; opacity:0; transform: translate3d(0,10px,0)",
+        ".manufacturer-thumb:hover .name": "opacity:1; transform: translate3d(0,0,0)"
+      },
+      "none": {
+        ".manufacturer-thumb .name": "display:none"
+      }
+    }
+  },
+
+  "NameOverflow": {
+    "type": "Toggle",
+    "value": "false",
+    "rules": {
+      "true": {
+        ".manufacturer-thumb .name a": "white-space: nowrap; overflow: hidden; text-overflow: ellipsis"
+      },
+      "false": {
+        ".manufacturer-thumb .name a": "white-space: normal; overflow: visible; text-overflow: initial"
+      }
+    }
+  },
+
+  "NameFont": {
+    "type": "Font",
+    "selector": ".manufacturer-thumb .name a",
+    "value": {
+      "text-align":"center"
+    }
+  },
+
+  "NameFontHover": {
+    "type": "Font",
+    "selector": ".manufacturer-thumb .name a:hover"
+  },
+
+  "NameContainer": {
+    "include": "common",
+    "selector_prefix": ".manufacturer-thumb .name"
+  }
+}
+
+
+
+

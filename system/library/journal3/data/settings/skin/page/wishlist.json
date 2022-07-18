@@ -1,0 +1,97 @@
+{
+  "wishlistPageTableStyle": {
+    "type": "Variable",
+    "variable": "table",
+    "selector_prefix": ".route-account-wishlist"
+  },
+  "wishlistPageCartButtonStyle": {
+    "type": "Variable",
+    "variable": "button",
+    "selector_prefix": ".route-account-wishlist td .btn-primary&"
+  },
+  "wishlistPageRemoveButtonStyle": {
+    "type": "Variable",
+    "variable": "button",
+    "selector_prefix": ".route-account-wishlist td .btn-remove&"
+  },
+  "wishlistPageButtonsStyle": {
+    "type": "Variable",
+    "variable": "page_buttons",
+    "selector_prefix": ".route-account-wishlist #content .buttons"
+  },
+
+
+  "wishlistPageImageVisibility": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".route-account-wishlist .td-image": "display: table-cell"
+      },
+      "false": {
+        ".route-account-wishlist .td-image": "display: none"
+      }
+    }
+  },
+  "wishlistPageNameVisibility": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".route-account-wishlist .td-name": "display: table-cell"
+      },
+      "false": {
+        ".route-account-wishlist .td-name": "display: none"
+      }
+    }
+  },
+  "wishlistPageModelVisibility": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".route-account-wishlist .td-model": "display: table-cell"
+      },
+      "false": {
+        ".route-account-wishlist .td-model": "display: none"
+      }
+    }
+  },
+  "wishlistPageStockVisibility": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".route-account-wishlist .td-stock": "display: table-cell"
+      },
+      "false": {
+        ".route-account-wishlist .td-stock": "display: none"
+      }
+    }
+  },
+  "wishlistPageUnitVisibility": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".route-account-wishlist .td-price": "display: table-cell"
+      },
+      "false": {
+        ".route-account-wishlist .td-price": "display: none"
+      }
+    }
+  },
+
+  "wishlistPageStockFont": {
+    "type": "Font",
+    "selector": ".route-account-wishlist .td-stock.in-stock"
+  },
+  "wishlistPageOutStockFont": {
+    "type": "Font",
+    "selector": ".route-account-wishlist .td-stock.out-of-stock"
+  },
+  "wishlistPageNewPriceFont": {
+    "type": "Font",
+    "selector": ".route-account-wishlist .td-price b"
+  },
+  "wishlistPageOldPriceFont": {
+    "type": "Font",
+    "selector": ".route-account-wishlist .td-price s"
+  }
+
+}

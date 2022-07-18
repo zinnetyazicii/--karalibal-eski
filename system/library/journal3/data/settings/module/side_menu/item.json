@@ -1,0 +1,45 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "New Item"
+  },
+  "title": {
+    "type": "InputLang",
+    "php": true
+  },
+  "status": {
+    "type": "Status"
+  },
+  "icon": {
+    "type": "Icon",
+    "selector": ".side-menu-%s .side-menu-item-%s > a::before"
+  },
+  "font": {
+    "type": "Font",
+    "selector": ".side-menu-%s > ul .side-menu-item-%s > a"
+  },
+  "fontHover": {
+    "type": "Font",
+    "selector": ".side-menu-%s > ul .side-menu-item-%s > a:hover"
+  },
+  "fontActive": {
+    "type": "Font",
+    "selector": ".side-menu-%s > ul .side-menu-item-%s > a:active"
+  },
+  "background": {
+    "type": "Background",
+    "selector": ".side-menu-%s > ul .side-menu-item-%s > a"
+  },
+  "backgroundHover": {
+    "type": "Background",
+    "selector": ".side-menu-%s > ul .side-menu-item-%s > a:hover"
+  },
+  "backgroundActive": {
+    "type": "Background",
+    "selector": ".side-menu-%s > ul .side-menu-item-%s > a:active"
+  },
+  "link": {
+    "type": "Link",
+    "php": true
+  }
+}

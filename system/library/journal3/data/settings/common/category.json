@@ -1,0 +1,388 @@
+{
+  "Background": {
+    "type": "Background",
+    "selector": ".category-thumb"
+  },
+  "BackgroundHover": {
+    "type": "Background",
+    "selector": ".category-thumb:hover",
+    "desktop":true
+  },
+  "Shadow": {
+    "type": "Shadow",
+    "selector": ".category-thumb"
+  },
+  "ShadowHover": {
+    "type": "Shadow",
+    "selector": ".category-thumb:hover",
+    "desktop":true
+  },
+  "Border": {
+    "type": "Border",
+    "selector": ".category-thumb"
+  },
+  "BorderHover": {
+    "type": "Color",
+    "property": "border-color:%s",
+    "selector": ".category-thumb:hover",
+    "desktop":true
+  },
+
+  "BorderRadius": {
+    "type": "BorderRadius",
+    "selector": ".category-thumb"
+  },
+
+  "ItemPadding": {
+    "type": "Padding",
+    "selector": ".category-thumb"
+  },
+
+  "ImageVisibility": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".category-thumb .image": "display: block"
+      },
+      "false": {
+        ".category-thumb .image": "display: none"
+      }
+    }
+  },
+  "ImageBorder": {
+    "type": "Border",
+    "selector": ".category-thumb .image a"
+  },
+  "ImageBorderHover": {
+    "type": "Color",
+    "property": "border-color:%s",
+    "selector": ".category-thumb:hover .image a",
+    "desktop":true
+  },
+  "ImageBorderRadius": {
+    "type": "BorderRadius",
+    "selector": ".category-thumb .image a"
+  },
+  "ImageShadow": {
+    "type": "Shadow",
+    "selector": ".category-thumb .image a"
+  },
+  "ImageShadowHover": {
+    "type": "Shadow",
+    "selector": ".category-thumb:hover .image a",
+    "desktop":true
+  },
+  "Grayscale": {
+    "type": "Radio",
+    "value": "",
+    "rules": {
+      "none": {
+        ".category-thumb .image img": "filter: grayscale(0)"
+      },
+      "always": {
+        ".category-thumb .image img": "filter: grayscale(1)"
+      },
+      "hover": {
+        ".category-thumb .image img": "filter: grayscale(1)",
+        ".category-thumb:hover .image img": "filter: grayscale(0)"
+      }
+    }
+  },
+
+  "ImageScale": {
+    "type": "Toggle",
+    "value": "false",
+    "rules": {
+      "true": {
+        ".category-thumb:hover .image img": "transform:scale(1.13)"
+      },
+      "false": {
+        ".category-thumb .image img": "transform:scale(1)"
+      }
+    }
+  },
+
+
+  "Position": {
+    "type": "Radio",
+    "value": "bottom",
+    "rules": {
+      "bottom": {
+        ".category-thumb": "flex-direction:column",
+        ".category-thumb .caption": "flex: 1 0 auto",
+        ".category-thumb .image": "width: 100%"
+      },
+      "side": {
+        ".category-thumb": "flex-direction:row",
+        ".category-thumb .caption": "flex: 1000 0 150px",
+        ".category-thumb .image": "width: auto"
+      }
+    }
+  },
+
+  "DetailsWidth": {
+    "type": "InputNumber",
+    "value": "150",
+    "rules":{
+      "@":{
+        ".post-thumb .caption": "flex-basis:%spx"
+      }
+    }
+  },
+
+  "DetailsBG": {
+    "type": "Background",
+    "selector": ".category-thumb .caption"
+  },
+  "DetailsBGHover": {
+    "type": "Background",
+    "selector": ".category-thumb:hover .caption",
+    "desktop":true
+  },
+  "DetailsShadow": {
+    "type": "Shadow",
+    "selector": ".category-thumb .caption"
+  },
+  "DetailsShadowHover": {
+    "type": "Shadow",
+    "selector": ".category-thumb:hover .caption",
+    "desktop":true
+  },
+  "DetailsBorder": {
+    "type": "Border",
+    "selector": ".category-thumb .caption"
+  },
+  "DetailsBorderHover": {
+    "type": "Color",
+    "property": "border-color:%s",
+    "selector": ".category-thumb:hover .caption",
+    "desktop":true
+  },
+  "DetailsBorderRadius": {
+    "type": "BorderRadius",
+    "selector": ".category-thumb .caption"
+  },
+  "DetailsPadding": {
+    "type": "Padding",
+    "selector": ".category-thumb .caption"
+  },
+  "DetailsMargin": {
+    "type": "Margin",
+    "selector": ".category-thumb .caption"
+  },
+
+
+  "NameStatus": {
+    "type": "Toggle",
+    "value": "true",
+    "rules": {
+      "true": {
+        ".category-thumb .name": "display:flex"
+      },
+      "false": {
+        ".category-thumb .name": "display:none"
+      }
+    }
+  },
+  "NameOverflow": {
+    "type": "Toggle",
+    "value": "false",
+    "rules": {
+      "true": {
+        ".category-thumb .name a": "white-space: nowrap; overflow: hidden; text-overflow: ellipsis"
+      },
+      "false": {
+        ".category-thumb .name a": "white-space: normal; overflow: visible; text-overflow: initial"
+      }
+    }
+  },
+
+  "NameFont": {
+    "type": "Font",
+    "selector": ".category-thumb .name a"
+  },
+  "NameFontHover": {
+    "type": "Font",
+    "selector": ".category-thumb:hover .name a",
+    "desktop":true
+  },
+  "NameWidth": {
+    "type": "Radio",
+    "value": "auto",
+    "rules": {
+      "auto": {
+        ".category-thumb .name": "width:auto; margin-left: auto; margin-right: auto"
+      },
+      "full": {
+        ".category-thumb .name": "width:100%; margin-left: 0; margin-right: 0"
+      }
+    }
+  },
+  "NameAlign": {
+    "type": "Radio",
+    "value": "start",
+    "rules": {
+      "start": {
+        ".category-thumb .name": "justify-content:flex-start; margin-left: 0; margin-right: auto; left:0; right:auto; transform: translate(0, -100%);"
+      },
+      "center": {
+        ".category-thumb .name": "justify-content:center; margin-left: auto; margin-right: auto; left:50%; right:auto; transform: translate(-50%, -100%);"
+      },
+      "end": {
+        ".category-thumb .name": "justify-content:flex-end; margin-left: auto; margin-right: 0; left:auto; right:0; transform: translate(0, -100%);"
+      }
+    }
+  },
+  "NamePosition": {
+    "type": "Radio",
+    "value": "default",
+    "rules": {
+      "default": {
+        ".category-thumb .name": "position: static; transform: none;"
+      },
+      "image": {
+        ".category-thumb .name": "position: absolute;"
+      }
+    }
+  },
+
+  "NameContainer": {
+    "include": "common",
+    "selector_prefix": ".category-thumb .name"
+  },
+
+
+  "DescriptionStatus": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".category-thumb .description": "display:block"
+      },
+      "false": {
+        ".category-thumb .description": "display:none"
+      }
+    }
+  },
+  "DescriptionFont": {
+    "type": "Font",
+    "selector": ".category-thumb .description"
+  },
+  "DescriptionContainer": {
+    "include": "common",
+    "selector_prefix": ".category-thumb .description"
+  },
+
+
+  "ButtonStatus": {
+    "type": "Toggle",
+    "value": "true",
+    "rules": {
+      "true": {
+        ".category-thumb .button-group": "display:flex"
+      },
+      "false": {
+        ".category-thumb .button-group": "display:none"
+      }
+    }
+  },
+  "ButtonAlign": {
+    "type": "Radio",
+    "value": "start",
+    "rules": {
+      "start": {
+        ".category-thumb .button-group": "justify-content:flex-start"
+      },
+      "center": {
+        ".category-thumb .button-group": "justify-content:center"
+      },
+      "end": {
+        ".category-thumb .button-group": "justify-content:flex-end"
+      }
+    }
+  },
+  "ButtonDisplay": {
+    "type": "Radio",
+    "value": "icon",
+    "rules": {
+      "icon": {
+        ".category-thumb .btn-view-more .btn-text": "display:none",
+        ".category-thumb .btn-view-more::before": "display:inline-block",
+        ".category-thumb .btn-view-more::after": "display:inline-block"
+      },
+      "text": {
+        ".category-thumb .btn-view-more::before": "display:none",
+        ".category-thumb .btn-view-more::after": "display:none",
+        ".category-thumb .btn-view-more .btn-text": "display:inline-block; padding:0;"
+      },
+      "both": {
+        ".category-thumb .btn-view-more::before": "display:inline-block",
+        ".category-thumb .btn-view-more::after": "display:inline-block",
+        ".category-thumb .btn-view-more .btn-text": "display:inline-block"
+      }
+    },
+    "php": true
+  },
+  "ButtonWidth": {
+    "type": "Icon",
+    "selector": ".category-thumb .btn-view-more::before"
+  },
+  "ButtonWidth": {
+    "type": "Radio",
+    "value": "auto",
+    "rules": {
+      "full": {
+        ".category-thumb .btn-view-more": "width:100%"
+      },
+      "auto": {
+        ".category-thumb .btn-view-more": "width:auto"
+      }
+    }
+  },
+  "ButtonIcon": {
+    "type": "Icon",
+    "selector": ".category-thumb .btn-view-more::before"
+  },
+  "ButtonIconHover": {
+    "type": "Color",
+    "property": "color:%s",
+    "selector": ".category-thumb .btn-view-more:hover::before",
+    "desktop":true
+  },
+  "ButtonRightIcon": {
+    "type": "Icon",
+    "selector": ".category-thumb .btn-view-more::after"
+  },
+  "ButtonRightIconHover": {
+    "type": "Color",
+    "property": "color:%s",
+    "selector": ".category-thumb .btn-view-more:hover::after",
+    "desktop":true
+  },
+  "ButtonButton": {
+    "type": "Variable",
+    "variable": "button",
+    "selector_prefix": ".category-thumb .btn-view-more&"
+  },
+  "ButtonContainer": {
+    "include": "common",
+    "selector_prefix": ".category-thumb .button-group"
+  },
+  "ButtonTooltipStatus": {
+    "type": "Toggle",
+    "php": true
+  },
+  "ButtonTooltipPosition": {
+    "type": "Radio",
+    "value": "top",
+    "php": true
+  },
+  "ButtonTooltip": {
+    "type": "Variable",
+    "variable": "tooltip",
+    "selector_prefix": "&.view-more-tooltip"
+  }
+}
+
+
+
+

@@ -1,0 +1,1142 @@
+{
+  "activeCheckout": {
+    "type": "Radio",
+    "value": "opencart",
+    "php": true
+  },
+  "checkoutAccordionStyle": {
+    "type": "Variable",
+    "variable": "accordion",
+    "selector_prefix": ".route-checkout-checkout #content"
+  },
+  "checkoutFormStyle": {
+    "type": "Variable",
+    "variable": "form",
+    "selector_prefix": ".route-checkout-checkout #content"
+  },
+  "checkoutPageButtonsStyle": {
+    "type": "Variable",
+    "variable": "page_buttons",
+    "selector_prefix": ".route-checkout-checkout #content"
+  },
+  "checkoutPageTableStyle": {
+    "type": "Variable",
+    "variable": "table",
+    "selector_prefix": ".route-checkout-checkout #content"
+  },
+  "checkoutPaymentFormStyle": {
+    "type": "Variable",
+    "variable": "form",
+    "selector_prefix": ".route-checkout-checkout #payment"
+  },
+  "checkoutTitle": {
+    "type": "InputLang",
+    "value": "Quick Checkout",
+    "php": true
+  },
+  "quickCheckoutAuthentication": {
+    "type": "Radio",
+    "value": "register",
+    "php": true
+  },
+  "quickCheckoutLoginBox": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".checkout-section.section-login": "display: block"
+      },
+      "false": {
+        ".checkout-section.section-login": "display: none"
+      }
+    }
+  },
+  "quickCheckoutAutoSaveFields": {
+    "type": "Toggle",
+    "value": "false",
+    "php": true
+  },
+  "quickCheckoutSameAddress": {
+    "type": "Toggle",
+    "value": "true",
+    "php": true
+  },
+  "quickCheckoutFormStyle": {
+    "type": "Variable",
+    "variable": "form",
+    "selector_prefix": ".quick-checkout-wrapper"
+  },
+  "quickCheckoutTitles": {
+    "type": "Variable",
+    "variable": "title",
+    "selector_prefix": ".quick-checkout-wrapper div .title.section-title"
+  },
+  "quickCheckoutSectionBoxStyles": {
+    "include": "common",
+    "selector_prefix": ".checkout-section"
+  },
+  "quickCheckoutSpaceColumn": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".quick-checkout-wrapper > div .right": "padding-left:%spx"
+      }
+    },
+    "rtlRules": {
+      "@": {
+        ".quick-checkout-wrapper > div .right": "padding-right:%spx"
+      }
+    }
+  },
+  "quickCheckoutSpaceSection": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".checkout-section": "margin-bottom:%spx"
+      }
+    }
+  },
+  "quickCheckoutColumnsSplit": {
+    "type": "Radio",
+    "value": "30",
+    "rules": {
+      "25": {
+        ".quick-checkout-wrapper > div .left": "width:%s%",
+        ".quick-checkout-wrapper > div .right": "width:calc(100% - %s%)"
+      },
+      "30": {
+        ".quick-checkout-wrapper > div .left": "width:%s%",
+        ".quick-checkout-wrapper > div .right": "width:calc(100% - %s%)"
+      },
+      "33": {
+        ".quick-checkout-wrapper > div .left": "width:%s%",
+        ".quick-checkout-wrapper > div .right": "width:calc(100% - %s%)"
+      },
+      "40": {
+        ".quick-checkout-wrapper > div .left": "width:%s%",
+        ".quick-checkout-wrapper > div .right": "width:calc(100% - %s%)"
+      },
+      "50": {
+        ".quick-checkout-wrapper > div .left": "width:%s%",
+        ".quick-checkout-wrapper > div .right": "width:calc(100% - %s%)"
+      },
+      "60": {
+        ".quick-checkout-wrapper > div .left": "width:%s%",
+        ".quick-checkout-wrapper > div .right": "width:calc(100% - %s%)"
+      },
+      "66": {
+        ".quick-checkout-wrapper > div .left": "width:%s%",
+        ".quick-checkout-wrapper > div .right": "width:calc(100% - %s%)"
+      },
+      "75": {
+        ".quick-checkout-wrapper > div .left": "width:%s%",
+        ".quick-checkout-wrapper > div .right": "width:calc(100% - %s%)"
+      },
+      "100": {
+        ".quick-checkout-wrapper > div .left": "width:%s%",
+        ".quick-checkout-wrapper > div .right": "width:%s%"
+      }
+    }
+  },
+  "quickCheckoutBoxStylesLogin": {
+    "include": "common",
+    "selector_prefix": ".quick-checkout-wrapper .left .section-login"
+  },
+  "quickCheckoutFormLogin": {
+    "type": "Variable",
+    "variable": "form",
+    "selector_prefix": ".quick-checkout-wrapper .left .section-login"
+  },
+  "quickCheckoutPageButtonsLogin": {
+    "type": "Variable",
+    "variable": "page_buttons",
+    "selector_prefix": ".quick-checkout-wrapper .left .section-login"
+  },
+  "quickCheckoutBoxStylesDetails": {
+    "include": "common",
+    "selector_prefix": ".quick-checkout-wrapper .left .section-register"
+  },
+  "quickCheckoutFormDetails": {
+    "type": "Variable",
+    "variable": "form",
+    "selector_prefix": ".quick-checkout-wrapper .left .section-register"
+  },
+  "quickCheckoutBoxStylesPaymentAddress": {
+    "include": "common",
+    "selector_prefix": ".quick-checkout-wrapper .left .payment-address"
+  },
+  "quickCheckoutFormPaymentAddress": {
+    "type": "Variable",
+    "variable": "form",
+    "selector_prefix": ".quick-checkout-wrapper .left .payment-address"
+  },
+  "quickCheckoutBoxStylesShippingAddress": {
+    "include": "common",
+    "selector_prefix": ".quick-checkout-wrapper .left .shipping-address"
+  },
+  "quickCheckoutFormShippingAddress": {
+    "type": "Variable",
+    "variable": "form",
+    "selector_prefix": ".quick-checkout-wrapper .left .shipping-address"
+  },
+  "quickCheckoutBoxStylesShipping": {
+    "include": "common",
+    "selector_prefix": ".quick-checkout-wrapper .right .shipping-payment"
+  },
+  "quickCheckoutFormShipping": {
+    "type": "Variable",
+    "variable": "form",
+    "selector_prefix": ".quick-checkout-wrapper .right .shipping-payment"
+  },
+  "quickCheckoutColumnPaymentPadding": {
+    "type": "Padding",
+    "selector": ".section-payment",
+    "value": {
+      "padding-left": "20"
+    }
+  },
+  "quickCheckoutSpaceColumnShippingSplit": {
+    "type": "Radio",
+    "value": "40",
+    "rules": {
+      "15": {
+        ".section-shipping": "width:%s%",
+        ".section-payment": "width:calc(100% - %s%)"
+      },
+      "20": {
+        ".section-shipping": "width:%s%",
+        ".section-payment": "width:calc(100% - %s%)"
+      },
+      "25": {
+        ".section-shipping": "width:%s%",
+        ".section-payment": "width:calc(100% - %s%)"
+      },
+      "30": {
+        ".section-shipping": "width:%s%",
+        ".section-payment": "width:calc(100% - %s%)"
+      },
+      "40": {
+        ".section-shipping": "width:%s%",
+        ".section-payment": "width:calc(100% - %s%)"
+      },
+      "50": {
+        ".section-shipping": "width:%s%",
+        ".section-payment": "width:calc(100% - %s%)"
+      },
+      "60": {
+        ".section-shipping": "width:%s%",
+        ".section-payment": "width:calc(100% - %s%)"
+      },
+      "66": {
+        ".section-shipping": "width:%s%",
+        ".section-payment": "width:calc(100% - %s%)"
+      },
+      "75": {
+        ".section-shipping": "width:%s%",
+        ".section-payment": "width:calc(100% - %s%)"
+      },
+      "100": {
+        ".section-shipping": "width:%s%",
+        ".section-payment": "width:%s%"
+      }
+    }
+  },
+  "quickCheckoutBoxStylesCoupon": {
+    "include": "common",
+    "selector_prefix": ".quick-checkout-wrapper .right .section-cvr"
+  },
+  "quickCheckoutFormCoupon": {
+    "type": "Variable",
+    "variable": "form",
+    "selector_prefix": ".quick-checkout-wrapper .right .section-cvr"
+  },
+  "sectionCVRVisibility": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".quick-checkout-wrapper .right .section-cvr": "display: block"
+      },
+      "false": {
+        ".quick-checkout-wrapper .right .section-cvr": "display: none"
+      }
+    }
+  },
+  "sectionCVRLabelVisibility": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".quick-checkout-wrapper .right .section-cvr .control-label": "display: flex"
+      },
+      "false": {
+        ".quick-checkout-wrapper .right .section-cvr .control-label": "display: none"
+      }
+    }
+  },
+  "sectionCVisibility": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".quick-checkout-wrapper .right .section-cvr .form-coupon": "display: flex"
+      },
+      "false": {
+        ".quick-checkout-wrapper .right .section-cvr .form-coupon": "display: none"
+      }
+    }
+  },
+  "sectionVVisibility": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".quick-checkout-wrapper .right .section-cvr .form-voucher": "display: flex"
+      },
+      "false": {
+        ".quick-checkout-wrapper .right .section-cvr .form-voucher": "display: none"
+      }
+    }
+  },
+  "sectionRVisibility": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".quick-checkout-wrapper .right .section-cvr .form-reward": "display: flex"
+      },
+      "false": {
+        ".quick-checkout-wrapper .right .section-cvr .form-reward": "display: none"
+      }
+    }
+  },
+  "quickCheckoutBoxStylesCard": {
+    "include": "common",
+    "selector_prefix": ".quick-checkout-wrapper .right .checkout-payment-details"
+  },
+  "quickCheckoutFormCard": {
+    "type": "Variable",
+    "variable": "form",
+    "selector_prefix": ".quick-checkout-wrapper .right .checkout-payment-details"
+  },
+  "quickCheckoutFormCardTypography": {
+    "type": "Variable",
+    "variable": "typography",
+    "selector_prefix": ".quick-checkout-wrapper .right .checkout-payment-details"
+  },
+  "sectionCartTitleVisibility": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".quick-checkout-wrapper .right .checkout-payment-details legend": "display: block"
+      },
+      "false": {
+        ".quick-checkout-wrapper .right .checkout-payment-details legend": "display: none"
+      }
+    }
+  },
+  "checkoutCartImageVisibility": {
+    "type": "Toggle",
+    "value": "",
+    "rules": {
+      "true": {
+        ".cart-section .td-image": "display: table-cell"
+      },
+      "false": {
+        ".cart-section .td-image": "display: none"
+      }
+    }
+  },
+  "checkoutCartNameVisibility": {
+    "type": "Toggle",
+    "value": "",
+    "rules": {
+      "true": {
+        ".cart-section .td-name": "display: table-cell"
+      },
+      "false": {
+        ".cart-section .td-name": "display: none"
+      }
+    }
+  },
+  "checkoutCartModelVisibility": {
+    "type": "Toggle",
+    "value": "",
+    "rules": {
+      "true": {
+        ".cart-section .td-model": "display: table-cell"
+      },
+      "false": {
+        ".cart-section .td-model": "display: none"
+      }
+    }
+  },
+  "checkoutCartUnitVisibility": {
+    "type": "Toggle",
+    "value": "",
+    "rules": {
+      "true": {
+        ".cart-section .td-price": "display: table-cell"
+      },
+      "false": {
+        ".cart-section .td-price": "display: none"
+      }
+    }
+  },
+  "sectionShippingVisibility": {
+    "type": "Toggle",
+    "php": true,
+    "rules": {
+      "true": {
+        ".section-shipping": "display: block"
+      },
+      "false": {
+        ".section-shipping": "display: none"
+      }
+    }
+  },
+  "sectionPaymentVisibility": {
+    "type": "Toggle",
+    "php": true,
+    "rules": {
+      "true": {
+        ".section-payment": "display: block"
+      },
+      "false": {
+        ".section-payment": "display: none"
+      }
+    }
+  },
+  "sectionShippingAutoSelect": {
+    "type": "Toggle",
+    "value": "true",
+    "php": true
+  },
+  "sectionPaymentAutoSelect": {
+    "type": "Toggle",
+    "value": "true",
+    "php": true
+  },
+  "quickCheckoutBoxStylesCart": {
+    "include": "common",
+    "selector_prefix": ".quick-checkout-wrapper .right .cart-section"
+  },
+  "quickCheckoutTableCart": {
+    "type": "Variable",
+    "variable": "table",
+    "selector_prefix": ".quick-checkout-wrapper .right .cart-section"
+  },
+  "quickCheckoutBoxStylesConfirm": {
+    "include": "common",
+    "selector_prefix": ".quick-checkout-wrapper .right .confirm-section"
+  },
+  "quickCheckoutFormConfirm": {
+    "type": "Variable",
+    "variable": "form",
+    "selector_prefix": ".quick-checkout-wrapper .right .confirm-section"
+  },
+  "quickCheckoutPageButtonsConfirm": {
+    "type": "Variable",
+    "variable": "page_buttons",
+    "selector_prefix": ".quick-checkout-wrapper .right .confirm-section"
+  },
+  "quickCheckoutConfirmNewsletter": {
+    "type": "Toggle",
+    "php": true
+  },
+  "quickCheckoutNewsConfirmNewsletterChecked": {
+    "type": "Toggle",
+    "php": true
+  },
+  "textareaVisibility": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".quick-checkout-wrapper .confirm-section textarea": "display: block"
+      },
+      "false": {
+        ".quick-checkout-wrapper .confirm-section textarea": "display: none"
+      }
+    }
+  },
+  "quickCheckoutComments": {
+    "type": "Radio",
+    "value": "visible",
+    "php": true,
+    "rules": {
+      "hidden": {
+        ".quick-checkout-wrapper .section-comments": "display: none !important"
+      },
+      "visible": {
+        ".quick-checkout-wrapper .section-comments label::after": "display: none !important"
+      }
+    }
+  },
+  "sectionTitleLogin": {
+    "type": "InputLang",
+    "value": "Login or Register",
+    "php": true
+  },
+  "sectionLoginText": {
+    "type": "InputLang",
+    "value": "Login",
+    "php": true
+  },
+  "sectionRegisterText": {
+    "type": "InputLang",
+    "value": "Register",
+    "php": true
+  },
+  "sectionGuestText": {
+    "type": "InputLang",
+    "value": "Guest",
+    "php": true
+  },
+  "sectionTitlePersonal": {
+    "type": "InputLang",
+    "value": "Your Personal Details",
+    "php": true
+  },
+  "sectionTitlePaymentAddress": {
+    "type": "InputLang",
+    "value": "Billing Address",
+    "php": true
+  },
+  "sectionTitleShippingAddress": {
+    "type": "InputLang",
+    "value": "Shipping Address",
+    "php": true
+  },
+  "sectionTitleShippingMethod": {
+    "type": "InputLang",
+    "value": "Shipping Method",
+    "php": true
+  },
+  "sectionTitlePaymentMethod": {
+    "type": "InputLang",
+    "value": "Payment Method",
+    "php": true
+  },
+  "sectionTitleCouponVoucherReward": {
+    "type": "InputLang",
+    "value": "Coupon / Voucher / Reward",
+    "php": true
+  },
+  "sectionTitlePaymentDetails": {
+    "type": "InputLang",
+    "value": "Payment Details",
+    "php": true
+  },
+  "sectionTitleShoppingCart": {
+    "type": "InputLang",
+    "value": "Shopping Cart",
+    "php": true
+  },
+  "sectionTitleConfirm": {
+    "type": "InputLang",
+    "value": "Confirm",
+    "php": true
+  },
+  "confirmOrderLanguage": {
+    "type": "InputLang",
+    "value": "Confirm Order",
+    "php": true
+  },
+  "confirmOrderLoadingText": {
+    "type": "InputLang",
+    "value": "",
+    "php": true
+  },
+  "confirmOrderAddressErrorText": {
+    "type": "InputLang",
+    "value": "Incomplete address, please edit your address in Account > Addresses",
+    "php": true
+  },
+  "titleVisibilityLogin": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".quick-checkout-wrapper .left .section-login .title": "display: block"
+      },
+      "false": {
+        ".quick-checkout-wrapper .left .section-login .title": "display: none"
+      }
+    }
+  },
+  "titleVisibilityPersonal": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".quick-checkout-wrapper .left .section-register .title": "display: block"
+      },
+      "false": {
+        ".quick-checkout-wrapper .left .section-register .title": "display: none"
+      }
+    }
+  },
+  "titleVisibilityPaymentAddress": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".quick-checkout-wrapper .left .payment-address .title": "display: block"
+      },
+      "false": {
+        ".quick-checkout-wrapper .left .payment-address .title": "display: none"
+      }
+    }
+  },
+  "titleVisibilityShippingAddress": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".quick-checkout-wrapper .left .shipping-address .title": "display: block"
+      },
+      "false": {
+        ".quick-checkout-wrapper .left .shipping-address .title": "display: none"
+      }
+    }
+  },
+  "titleVisibilityShipPay": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".quick-checkout-wrapper .right .shipping-payment .title": "display: block"
+      },
+      "false": {
+        ".quick-checkout-wrapper .right .shipping-payment .title": "display: none"
+      }
+    }
+  },
+  "titleVisibilityCouponVoucherReward": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".quick-checkout-wrapper .right .section-cvr .title": "display: block"
+      },
+      "false": {
+        ".quick-checkout-wrapper .right .section-cvr .title": "display: none"
+      }
+    }
+  },
+  "titleVisibilityPayment": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".quick-checkout-wrapper .right .checkout-payment-details .title": "display: block"
+      },
+      "false": {
+        ".quick-checkout-wrapper .right .checkout-payment-details .title": "display: none"
+      }
+    }
+  },
+  "titleVisibilityCart": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".quick-checkout-wrapper .right .cart-section .title": "display: block"
+      },
+      "false": {
+        ".quick-checkout-wrapper .right .cart-section .title": "display: none"
+      }
+    }
+  },
+  "titleVisibilityConfirm": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".quick-checkout-wrapper .right .confirm-section .title": "display: block"
+      },
+      "false": {
+        ".quick-checkout-wrapper .right .confirm-section .title": "display: none"
+      }
+    }
+  },
+  "quickCheckoutCustomerGroup": {
+    "type": "Radio",
+    "value": "visible",
+    "php": true,
+    "rules": {
+      "hidden": {
+        ".quick-checkout-wrapper .account-customer-group": "display: none !important"
+      },
+      "visible": {
+        ".quick-checkout-wrapper .account-customer-group label::after": "display: none !important"
+      }
+    }
+  },
+  "quickCheckoutAccountFirstNameField": {
+    "type": "Radio",
+    "value": "required",
+    "php": true,
+    "rules": {
+      "hidden": {
+        ".quick-checkout-wrapper .account-firstname": "display: none !important"
+      },
+      "visible": {
+        ".quick-checkout-wrapper .account-firstname label::after": "display: none !important"
+      }
+    }
+  },
+  "quickCheckoutAccountLastNameField": {
+    "type": "Radio",
+    "value": "required",
+    "php": true,
+    "rules": {
+      "hidden": {
+        ".quick-checkout-wrapper .account-lastname": "display: none !important"
+      },
+      "visible": {
+        ".quick-checkout-wrapper .account-lastname label::after": "display: none !important"
+      }
+    }
+  },
+  "quickCheckoutAccountTelephoneField": {
+    "type": "Radio",
+    "value": "required",
+    "php": true,
+    "rules": {
+      "hidden": {
+        ".quick-checkout-wrapper .account-telephone": "display: none !important"
+      },
+      "visible": {
+        ".quick-checkout-wrapper .account-telephone label::after": "display: none !important"
+      }
+    }
+  },
+  "quickCheckoutAccountFaxField": {
+    "type": "Radio",
+    "value": "visible",
+    "php": true,
+    "rules": {
+      "hidden": {
+        ".quick-checkout-wrapper .account-fax": "display: none !important"
+      },
+      "visible": {
+        ".quick-checkout-wrapper .account-fax label::after": "display: none !important"
+      }
+    }
+  },
+  "quickCheckoutAddressFirstNameField": {
+    "type": "Radio",
+    "value": "required",
+    "php": true,
+    "rules": {
+      "hidden": {
+        ".quick-checkout-wrapper .address-firstname": "display: none !important"
+      },
+      "visible": {
+        ".quick-checkout-wrapper .address-firstname label::after": "display: none !important"
+      }
+    }
+  },
+  "quickCheckoutAddressLastNameField": {
+    "type": "Radio",
+    "value": "required",
+    "php": true,
+    "rules": {
+      "hidden": {
+        ".quick-checkout-wrapper .address-lastname": "display: none !important"
+      },
+      "visible": {
+        ".quick-checkout-wrapper .address-lastname label::after": "display: none !important"
+      }
+    }
+  },
+  "quickCheckoutAddressCompanyField": {
+    "type": "Radio",
+    "value": "visible",
+    "php": true,
+    "rules": {
+      "hidden": {
+        ".quick-checkout-wrapper .address-company": "display: none !important"
+      },
+      "visible": {
+        ".quick-checkout-wrapper .address-company label::after": "display: none !important"
+      }
+    }
+  },
+  "quickCheckoutAddressAddress1Field": {
+    "type": "Radio",
+    "value": "required",
+    "php": true,
+    "rules": {
+      "hidden": {
+        ".quick-checkout-wrapper .address-address-1": "display: none !important"
+      },
+      "visible": {
+        ".quick-checkout-wrapper .address-address-1 label::after": "display: none !important"
+      }
+    }
+  },
+  "quickCheckoutAddressAddress2Field": {
+    "type": "Radio",
+    "value": "visible",
+    "php": true,
+    "rules": {
+      "hidden": {
+        ".quick-checkout-wrapper .address-address-2": "display: none !important"
+      },
+      "visible": {
+        ".quick-checkout-wrapper .address-address-2 label::after": "display: none !important"
+      }
+    }
+  },
+  "quickCheckoutAddressCityField": {
+    "type": "Radio",
+    "value": "required",
+    "php": true,
+    "rules": {
+      "hidden": {
+        ".quick-checkout-wrapper .address-city": "display: none !important"
+      },
+      "visible": {
+        ".quick-checkout-wrapper .address-city label::after": "display: none !important"
+      }
+    }
+  },
+  "quickCheckoutAddressCountryField": {
+    "type": "Radio",
+    "value": "required",
+    "php": true,
+    "rules": {
+      "hidden": {
+        ".quick-checkout-wrapper .address-country": "display: none !important"
+      },
+      "visible": {
+        ".quick-checkout-wrapper .address-country label::after": "display: none !important"
+      }
+    }
+  },
+  "quickCheckoutAddressRegionField": {
+    "type": "Radio",
+    "value": "required",
+    "php": true,
+    "rules": {
+      "hidden": {
+        ".quick-checkout-wrapper .address-zone": "display: none !important"
+      },
+      "visible": {
+        ".quick-checkout-wrapper .address-zone label::after": "display: none !important"
+      }
+    }
+  },
+  "quickCheckoutAddressPostcodeField": {
+    "type": "Radio",
+    "value": "required",
+    "php": true,
+    "rules": {
+      "hidden": {
+        ".quick-checkout-wrapper .address-postcode": "display: none !important"
+      },
+      "visible": {
+        ".quick-checkout-wrapper .address-postcode label::after": "display: none !important"
+      }
+    }
+  },
+  "quickCheckoutCustomerGroupSort": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".quick-checkout-wrapper .section-body .account-customer-group": "order:%s"
+      }
+    }
+  },
+  "quickCheckoutAccountFirstNameFieldSort": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".quick-checkout-wrapper .section-body .account-firstname": "order:%s"
+      }
+    }
+  },
+  "quickCheckoutAccountLastNameFieldSort": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".quick-checkout-wrapper .section-body .account-lastname": "order:%s"
+      }
+    }
+  },
+  "quickCheckoutAccountEmailFieldSort": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".quick-checkout-wrapper .section-body .account-email": "order:%s"
+      }
+    }
+  },
+  "quickCheckoutAccountPasswordFieldSort": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".quick-checkout-wrapper .section-body .account-pass": "order:%s"
+      }
+    }
+  },
+  "quickCheckoutAccountConfirmPasswordFieldSort": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".quick-checkout-wrapper .section-body .account-pass2": "order:%s"
+      }
+    }
+  },
+  "quickCheckoutAccountTelephoneFieldSort": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".quick-checkout-wrapper .section-body .account-telephone": "order:%s"
+      }
+    }
+  },
+  "quickCheckoutAccountFaxFieldSort": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".quick-checkout-wrapper .section-body .account-fax": "order:%s"
+      }
+    }
+  },
+  "quickCheckoutAddressFirstNameFieldSort": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".quick-checkout-wrapper .section-body .address-firstname": "order:%s"
+      }
+    }
+  },
+  "quickCheckoutAddressLastNameFieldSort": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".quick-checkout-wrapper .section-body .address-lastname": "order:%s"
+      }
+    }
+  },
+  "quickCheckoutAddressCompanyFieldSort": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".quick-checkout-wrapper .section-body .address-company": "order:%s"
+      }
+    }
+  },
+  "quickCheckoutAddressAddress1FieldSort": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".quick-checkout-wrapper .section-body .address-address-1": "order:%s"
+      }
+    }
+  },
+  "quickCheckoutAddressAddress2FieldSort": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".quick-checkout-wrapper .section-body .address-address-2": "order:%s"
+      }
+    }
+  },
+  "quickCheckoutAddressCityFieldSort": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".quick-checkout-wrapper .section-body .address-city": "order:%s"
+      }
+    }
+  },
+  "quickCheckoutAddressCountryFieldSort": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".quick-checkout-wrapper .section-body .address-country": "order:%s"
+      }
+    }
+  },
+  "quickCheckoutAddressRegionFieldSort": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".quick-checkout-wrapper .section-body .address-zone": "order:%s"
+      }
+    }
+  },
+  "quickCheckoutAddressPostcodeFieldSort": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".quick-checkout-wrapper .section-body .address-postcode": "order:%s"
+      }
+    }
+  },
+  "quickCheckoutAddressDefaultCountry": {
+    "type": "Select",
+    "value": "store_address",
+    "php": true
+  },
+  "quickCheckoutAddressDefaultZone": {
+    "type": "Select",
+    "value": "store_address",
+    "php": true
+  },
+  "shipVariantsTitleStatus": {
+    "type": "Toggle",
+    "value": "false",
+    "rules": {
+      "true": {
+        ".quick-checkout-wrapper .shipping-payment .shippings p": "display: block",
+        ".quick-checkout-wrapper .shipping-payment .ship-wrapper p": "display: block"
+      },
+      "false": {
+        ".quick-checkout-wrapper .shipping-payment .shippings p": "display: none",
+        ".quick-checkout-wrapper .shipping-payment .ship-wrapper p": "display: none"
+      }
+    }
+  },
+  "shipVariantsTitle": {
+    "type": "Font",
+    "selector": ".quick-checkout-wrapper .shipping-payment .shippings p",
+    "value": {
+      "font-weight": "bold"
+    }
+  },
+  "qcShipPaySpacing": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".shipping-payment .section-body .radio": "margin-bottom:%spx"
+      }
+    }
+  },
+  "qcShipPayPadding": {
+    "type": "Padding",
+    "selector": ".shipping-payment .section-body > div > div"
+  },
+  "qcShipIcon1": {
+    "type": "Icon",
+    "selector": ".section-shipping .section-body > div:first-child::before"
+  },
+  "qcShipIcon2": {
+    "type": "Icon",
+    "selector": ".section-shipping .section-body > div:nth-child(2)::before"
+  },
+  "qcShipIcon3": {
+    "type": "Icon",
+    "selector": ".section-shipping .section-body > div:nth-child(3)::before"
+  },
+  "qcShipIcon4": {
+    "type": "Icon",
+    "selector": ".section-shipping .section-body > div:nth-child(4)::before"
+  },
+  "qcShipIcon5": {
+    "type": "Icon",
+    "selector": ".section-shipping .section-body > div:nth-child(5)::before"
+  },
+  "qcShipIcon6": {
+    "type": "Icon",
+    "selector": ".section-shipping .section-body > div:nth-child(6)::before"
+  },
+  "qcShipIcon7": {
+    "type": "Icon",
+    "selector": ".section-shipping .section-body > div:nth-child(7)::before"
+  },
+  "qcShipIcon8": {
+    "type": "Icon",
+    "selector": ".section-shipping .section-body > div:nth-child(8)::before"
+  },
+  "qcShipIcon9": {
+    "type": "Icon",
+    "selector": ".section-shipping .section-body > div:nth-child(9)::before"
+  },
+  "qcShipIcon10": {
+    "type": "Icon",
+    "selector": ".section-shipping .section-body > div:nth-child(10)::before"
+  },
+  "qcPayIcon1": {
+    "type": "Icon",
+    "selector": ".section-payment .section-body > div:first-child::before"
+  },
+  "qcPayIcon2": {
+    "type": "Icon",
+    "selector": ".section-payment .section-body > div:nth-child(2)::before"
+  },
+  "qcPayIcon3": {
+    "type": "Icon",
+    "selector": ".section-payment .section-body > div:nth-child(3)::before"
+  },
+  "qcPayIcon4": {
+    "type": "Icon",
+    "selector": ".section-payment .section-body > div:nth-child(4)::before"
+  },
+  "qcPayIcon5": {
+    "type": "Icon",
+    "selector": ".section-payment .section-body > div:nth-child(5)::before"
+  },
+  "qcPayIcon6": {
+    "type": "Icon",
+    "selector": ".section-payment .section-body > div:nth-child(6)::before"
+  },
+  "qcPayIcon7": {
+    "type": "Icon",
+    "selector": ".section-payment .section-body > div:nth-child(7)::before"
+  },
+  "qcPayIcon8": {
+    "type": "Icon",
+    "selector": ".section-payment .section-body > div:nth-child(8)::before"
+  },
+  "qcPayIcon9": {
+    "type": "Icon",
+    "selector": ".section-payment .section-body > div:nth-child(9)::before"
+  },
+  "qcPayIcon10": {
+    "type": "Icon",
+    "selector": ".section-payment .section-body > div:nth-child(10)::before"
+  },
+
+  "quickCheckoutShipPaySort": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".quick-checkout-wrapper .shipping-payment": "order:%s"
+      }
+    }
+  },
+  "quickCheckoutCVRSort": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".quick-checkout-wrapper .section-cvr": "order:%s"
+      }
+    }
+  },
+  "quickCheckoutPaySort": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".quick-checkout-wrapper .checkout-payment-details": "order:%s"
+      }
+    }
+  },
+  "quickCheckoutCartSort": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".quick-checkout-wrapper .cart-section": "order:%s"
+      }
+    }
+  },
+  "checkoutPageStepperStyle": {
+    "type": "Variable",
+    "variable": "stepper",
+    "selector_prefix": ".quick-checkout-wrapper .cart-section .td-qty"
+  },
+  "checkoutPageUpdateButtonStyle": {
+    "type": "Variable",
+    "variable": "button",
+    "selector_prefix": ".quick-checkout-wrapper .cart-section .td-qty .btn-primary&"
+  },
+  "checkoutPageRemoveButtonStyle": {
+    "type": "Variable",
+    "variable": "button",
+    "selector_prefix": ".quick-checkout-wrapper .cart-section .td-qty .btn-danger&"
+  },
+  "quickCheckoutPaymentsPopup": {
+    "type": "Input",
+    "value": "paypal",
+    "php": true
+  }
+}

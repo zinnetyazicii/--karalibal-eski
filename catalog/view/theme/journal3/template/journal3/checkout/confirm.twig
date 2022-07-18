@@ -1,0 +1,42 @@
+<div class="checkout-section confirm-section">
+  <div class="title section-title">{{ j3.settings.get('sectionTitleConfirm') }}</div>
+
+  <div class="section-body">
+    <div class="section-comments" v-bind:class="{ 'has-error': error && error.comments }">
+      <textarea class="form-control" placeholder="{{ text_comments }}">{{ comment }}</textarea>
+    </div>
+
+    {% if newsletter %}
+      <div class="checkbox">
+        <label><input v-model="newsletter" type="checkbox"/>{{ newsletter }}</label>
+      </div>
+    {% endif %}
+
+    {% if privacy %}
+      <div class="checkbox">
+        <label><input v-model="privacy" type="checkbox"/>{{ privacy }}</label>
+        <span class="text-danger" v-if="error && error.privacy" v-html="error.privacy"></span>
+      </div>
+    {% endif %}
+
+    {% if agree %}
+      <div class="checkbox">
+        <label><input v-model="agree" type="checkbox"/>{{ agree }}</label>
+        <span class="text-danger" v-if="error && error.agree" v-html="error.agree"></span>
+      </div>
+    {% endif %}
+
+    {% if captcha %}
+      <div class="captcha" v-bind:class="{ 'has-error': error && error.captcha }">
+        {{ captcha }}
+        <span class="text-danger" v-if="error && error.captcha" v-html="error.captcha"></span>
+      </div>
+    {% endif %}
+
+    <div class="buttons confirm-buttons">
+      <div class="pull-right">
+        <button type="button" v-on:click="save(true)" data-loading-text="<span>{{ j3.settings.get('confirmOrderLoadingText') ? j3.settings.get('confirmOrderLoadingText') : j3.settings.get('confirmOrderLanguage') }}</span>" class="btn btn-primary" id="quick-checkout-button-confirm"><span>{{ j3.settings.get('confirmOrderLanguage') }}</span></button>
+      </div>
+    </div>
+  </div>
+</div>

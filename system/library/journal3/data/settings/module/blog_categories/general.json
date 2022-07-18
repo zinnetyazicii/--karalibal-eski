@@ -1,0 +1,77 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "New Blog Categories"
+  },
+  "status": {
+    "type": "Status"
+  },
+  "schedule": {
+    "type": "Range",
+    "php": true
+  },
+  "title": {
+    "type": "InputLang",
+    "php": true
+  },
+  "moduleTitle": {
+    "type": "Variable",
+    "variable": "title",
+    "selector_prefix": ".module-blog_categories-%s .title.module-title"
+  },
+  "moduleBorder": {
+    "type": "Border",
+    "selector": ".module-blog_categories-%s .module-body"
+  },
+  "linkPadding": {
+    "type": "Padding",
+    "selector": ".module-blog_categories-%s a"
+  },
+  "linkBackground": {
+    "type": "Background",
+    "selector": ".module-blog_categories-%s a"
+  },
+  "linkBackgroundHover": {
+    "type": "Background",
+    "selector": ".module-blog_categories-%s a:hover"
+  },
+  "linkFont": {
+    "type": "Font",
+    "selector": ".module-blog_categories-%s a span"
+  },
+  "linkFontHover": {
+    "type": "Font",
+    "selector": ".module-blog_categories-%s a:hover span"
+  },
+  "linkIcon": {
+    "type": "Icon",
+    "selector": ".module-blog_categories-%s a::before",
+    "value": {
+      "icon": {
+        "name": "icon-keyboard_arrow_right",
+        "code": "e315"
+      }
+    }
+  },
+  "linkIconHover": {
+    "type": "Color",
+    "selector": ".module-blog_categories-%s a::before",
+    "property": "color"
+  },
+  "linkDivider": {
+    "type": "Divider",
+    "selector": ".module-blog_categories-%s a + a"
+  },
+  "linkTruncate": {
+    "type": "Toggle",
+    "value": "false",
+    "rules": {
+      "true": {
+        ".module-blog_categories-%s span": "white-space: nowrap; overflow: hidden; text-overflow: ellipsis"
+      },
+      "false": {
+        ".module-blog_categories-%s span": "white-space: normal; overflow: visible; text-overflow: initial"
+      }
+    }
+  }
+}

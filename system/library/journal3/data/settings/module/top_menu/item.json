@@ -1,0 +1,65 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "New Item"
+  },
+  "status": {
+    "type": "Status"
+  },
+  "title": {
+    "type": "InputLang",
+    "php": true
+  },
+  "link": {
+    "type": "Link",
+    "php": true
+  },
+  "icon": {
+    "type": "Icon",
+    "selector": ".top-menu-%s .j-menu li.top-menu-item-%s > a::before"
+  },
+  "iconHover": {
+    "type": "Color",
+    "selector": ".top-menu-%s .j-menu li.top-menu-item-%s:hover > a::before",
+    "property": "color",
+    "desktop":true
+  },
+  "font": {
+    "type": "Font",
+    "selector": ".top-menu-%s .j-menu li.top-menu-item-%s > a:first-child"
+  },
+  "fontHover": {
+    "type": "Font",
+    "selector": ".top-menu-%s .j-menu li.top-menu-item-%s:hover > a:first-child",
+    "desktop":true
+  },
+  "iconOnly": {
+    "type": "Toggle",
+    "value": "false",
+    "important": true,
+    "rules": {
+      "true": {
+        ".top-menu-%s > ul > .top-menu-item-%s > a": "text-align:center",
+        ".top-menu-%s > ul > .top-menu-item-%s > a > .links-text": "display:none",
+        ".top-menu-%s > ul > .top-menu-item-%s > a .count-badge":"position: absolute; top: auto; right:auto;"
+      },
+      "false": {
+        ".top-menu-%s > ul > .top-menu-item-%s > a": "text-align:left",
+        ".top-menu-%s > ul > .top-menu-item-%s > a > .links-text": "display:block",
+        ".top-menu-%s > ul > .top-menu-item-%s > a .count-badge":"position: relative;"
+      }
+    },
+    "rtlRules": {
+      "true": {
+        ".top-menu-%s > ul > .top-menu-item-%s > a": "text-align:center",
+        ".top-menu-%s > ul > .top-menu-item-%s > a > .links-text": "display:none",
+        ".top-menu-%s > ul > .top-menu-item-%s > a .count-badge":"position: absolute; top: auto; right:auto;"
+      },
+      "false": {
+        ".top-menu-%s > ul > .top-menu-item-%s > a": "text-align:right",
+        ".top-menu-%s > ul > .top-menu-item-%s > a > .links-text": "display:block",
+        ".top-menu-%s > ul > .top-menu-item-%s > a .count-badge":"position: relative;"
+      }
+    }
+  }
+}

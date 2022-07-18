@@ -1,0 +1,44 @@
+{
+  "Font": {
+    "type": "Font"
+  },
+  "FontHover": {
+    "type": "Font",
+    "selector": "&:hover",
+    "desktop":true
+  },
+  "Background": {
+    "type": "Background"
+  },
+  "BackgroundHover": {
+    "type": "Background",
+    "selector": "&:hover",
+    "desktop":true
+  },
+  "Margin": {
+    "type": "Margin"
+  },
+  "Padding": {
+    "type": "Padding"
+  },
+  "Border": {
+    "type": "Border"
+  },
+  "BorderHover": {
+    "type": "Color",
+    "selector": "&:hover",
+    "property": "border-color",
+    "desktop":true
+  },
+  "BorderRadius": {
+    "type": "BorderRadius"
+  },
+  "Shadow": {
+    "type": "Shadow"
+  },
+  "ShadowHover": {
+    "type": "Shadow",
+    "selector": "&:hover",
+    "desktop":true
+  }
+}

@@ -1,0 +1,239 @@
+{
+  "Text1Font": {
+    "type": "Font",
+    "selector": ".info-block .info-block-title"
+  },
+  "Text1FontHover": {
+    "type": "Font",
+    "selector": "a.info-block:hover .info-block-title"
+  },
+  "Text2Font": {
+    "type": "Font",
+    "selector": ".info-block .info-block-text"
+  },
+  "Text2FontHover": {
+    "type": "Font",
+    "selector": "a.info-block:hover .info-block-text"
+  },
+  "Text1Spacing": {
+    "type": "InputNumber",
+    "rules":{
+      "@":{
+        ".info-block .info-block-title": "margin-bottom:%spx"
+      }
+    }
+  },
+  "Text1Visibility": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".info-block .info-block-title": "display: block"
+      },
+      "false": {
+        ".info-block .info-block-title": "display: none"
+      }
+    }
+  },
+  "Text2Visibility": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".info-block .info-block-text": "display: block"
+      },
+      "false": {
+        ".info-block .info-block-text": "display: none"
+      }
+    }
+  },
+  "Background": {
+    "type": "Background",
+    "selector": ".info-block"
+  },
+  "BackgroundHover": {
+    "type": "Background",
+    "selector": "a.info-block:hover"
+  },
+  "BorderRadius": {
+    "type": "BorderRadius",
+    "selector": ".info-block"
+  },
+  "Border": {
+    "type": "Border",
+    "selector": ".info-block"
+  },
+  "BorderHover": {
+    "type": "Color",
+    "selector": "a.info-block:hover",
+    "property": "border-color"
+  },
+  "FirstBorder": {
+    "type": "Border",
+    "selector": ".info-blocks:first-child .info-block"
+  },
+  "FirstBorderHover": {
+    "type": "Color",
+    "selector": ".info-blocks:first-child a.info-block:hover",
+    "property": "border-color"
+  },
+  "LastBorder": {
+    "type": "Border",
+    "selector": ".info-blocks:last-child .info-block"
+  },
+  "LastBorderHover": {
+    "type": "Color",
+    "selector": ".info-blocks:last-child a.info-block:hover",
+    "property": "border-color"
+  },
+  "Shadow": {
+    "type": "Shadow",
+    "selector": ".info-block"
+  },
+  "ShadowHover": {
+    "type": "Shadow",
+    "selector": "a.info-block:hover"
+  },
+  "Padding": {
+    "type": "Padding",
+    "selector": ".info-block"
+  },
+  "ContentPadding": {
+    "type": "Padding",
+    "selector": ".info-block-content"
+  },
+
+  "IconPosition": {
+    "type": "Radio",
+    "value": "side",
+    "rules": {
+      "side": {
+        ".info-block": "display:flex; flex-direction: row; justify-content: flex-start; text-align:left",
+        ".info-block-content":"display:flex"
+      },
+      "top": {
+        ".info-block": "display:flex; flex-direction: column; align-items:center; text-align:center",
+        ".info-block-content":"display:flex"
+      },
+      "float": {
+        ".info-block": "display:block; text-align:left",
+        ".info-block::before": "float:left",
+        ".info-block-img": "float:left;",
+        ".info-block-content":"display:block"
+      }
+    },
+    "rtlRules": {
+      "side": {
+        ".info-block": "display:flex; flex-direction: row; justify-content: flex-start; text-align:right"
+      },
+      "top": {
+        ".info-block": "display:flex; flex-direction: column; align-items:center; text-align:center"
+      },
+      "float": {
+        ".info-block": "display:block; text-align:right",
+        ".info-block::before": "float:right",
+        ".info-block-img": "float:right;",
+        ".info-block::after": "content:''; display:table; width:100%"
+      }
+    }
+  },
+
+  "IconAlign": {
+    "type": "Radio",
+    "value": "start",
+    "rules": {
+      "start": {
+        ".info-block::before": "align-self:flex-start",
+        ".info-block-img": "align-self:flex-start",
+        ".info-block-content":"justify-content:flex-start"
+      },
+      "center": {
+        ".info-block::before": "align-self:center",
+        ".info-block-img": "align-self:center"
+      },
+      "end": {
+        ".info-block::before": "align-self:flex-end",
+        ".info-block-img": "align-self:flex-end"
+      }
+    }
+  },
+
+  "IconSize": {
+    "type": "InputPair",
+    "selector": ".info-block::before",
+    "properties": {
+      "first": "width:%spx",
+      "second": "height:%spx"
+    }
+  },
+
+  "IconDimensions": {
+    "type": "InputNumber",
+    "rules":{
+      "@":{
+        ".info-block::before": "font-size:%spx"
+      }
+    }
+  },
+
+  "IconBackground": {
+    "type": "Background",
+    "selector": ".info-block::before"
+  },
+  "IconBackgroundHover": {
+    "type": "Background",
+    "selector": ".info-block:hover::before"
+  },
+  "IconColor": {
+    "type": "Color",
+    "selector": ".info-block::before",
+    "property": "color"
+  },
+  "IconColorHover": {
+    "type": "Color",
+    "selector": ".info-block:hover::before",
+    "property": "color"
+  },
+  "IconMargin": {
+    "type": "Margin",
+    "selector": ".info-block::before,.info-block-img"
+  },
+  "IconBorder": {
+    "type": "Border",
+    "selector": ".info-block::before, .info-block-img"
+  },
+  "IconBorderRadius": {
+    "type": "BorderRadius",
+    "selector": ".info-block::before, .info-block-img"
+  },
+
+  "CountBadge": {
+    "type": "Variable",
+    "variable": "count_badge",
+    "selector_prefix": ".info-block"
+  },
+
+  "CountBadgeOffset": {
+    "type": "InputPair",
+    "selector": ".info-block .count-badge",
+    "properties": {
+      "first": "transform: translateX(%spx)",
+      "second": "margin-top:%spx"
+    },
+    "rtlProperties":{
+      "first": "transform: translateX(calc(0px - (%spx)))",
+      "second": "margin-top:%spx"
+    }
+  },
+
+  "CountBadgeVisibility": {
+    "type": "Toggle",
+    "value": "false",
+    "rules": {
+      "true": {
+        ".info-block .count-badge": "display: inline-flex"
+      },
+      "false": {
+        ".info-block .count-badge": "display: none"
+      }
+    }
+  }
+}

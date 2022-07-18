@@ -1,0 +1,54 @@
+{% macro renderGallery(j3, context) %}
+  {% import _self as self %}
+  {% set index = 0 %}
+  {% for item in context.items[:context.thumbsLimit] %}
+    <div class="{{ j3.classes(item.classes) }}">
+      <a {% if item.type == 'link' %}href="{{ item.popup }}" {{ j3.linkAttrs(item.link) }}{% else %}data-gallery="#{{ context.id }} .lightgallery" data-index="{{ index }}"{% set index = index + 1 %}{% endif %} title="{{ item.alt }}">
+        <span class="gallery-image">
+          {% if j3.settings.get('performanceLazyLoadImagesStatus') %}
+            <img src="{{ context.dummy_image }}" data-src="{{ item.thumb }}" {% if item.thumb2x %}data-srcset="{{ item.thumb }} 1x, {{ item.thumb2x }} 2x"{% endif %} alt="{{ item.alt }}" width="{{ context.thumbDimensions.width }}" height="{{ context.thumbDimensions.height }}" class="lazyload"/>
+          {% else %}
+            <img src="{{ item.thumb }}" {% if item.thumb2x %}srcset="{{ item.thumb }} 1x, {{ item.thumb2x }} 2x"{% endif %} alt="{{ item.alt }}" width="{{ context.thumbDimensions.width }}" height="{{ context.thumbDimensions.height }}"/>
+          {% endif %}
+        </span>
+      </a>
+      {% if item.alt %}
+        <span class="gallery-image-caption">
+          {{ item.alt }}
+        </span>
+      {% endif %}
+    </div>
+  {% endfor %}
+{% endmacro %}
+{% import _self as self %}
+<div id="{{ id }}" class="{{ j3.classes(classes) }}">
+  {% if title %}
+    <h3 class="title module-title">{{ title }}</h3>
+  {% endif %}
+  <div class="module-body">
+    {% if button %}
+      <a class="btn open-btn" data-gallery="#{{ id }} .lightgallery" data-index="0">{{ buttonText }}</a>
+    {% else %}
+      {# grid #}
+      {% if not carousel %}
+        {{ self.renderGallery(j3, _context) }}
+      {% endif %}
+      {# grid + carousel #}
+      {% if carousel %}
+        <div class="swiper" data-items-per-row='{{ itemsPerRow|json_encode(constant('JSON_FORCE_OBJECT')) }}' data-options='{{ carouselOptions|json_encode }}'>
+          <div class="swiper-container" {% if j3.isRTL() %}dir="rtl"{% endif %}>
+            <div class="swiper-wrapper">
+              {{ self.renderGallery(j3, _context) }}
+            </div>
+          </div>
+          <div class="swiper-buttons">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      {% endif %}
+    {% endif %}
+  </div>
+  <div class="lightgallery" data-images='{{ images|json_encode|e }}' data-options='{{ options|json_encode }}'></div>
+</div>

@@ -1,0 +1,62 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "New Flyout"
+  },
+  "status": {
+    "type": "Status"
+  },
+  "menu": {
+    "type": "Variable",
+    "variable": "menu",
+    "selector_prefix": "div.flyout-menu.flyout-menu-%s"
+  },
+  "dropdown": {
+    "type": "Variable",
+    "variable": "dropdown",
+    "selector_prefix": ".flyout-menu-%s .flyout-menu-item"
+  },
+  "megamenu": {
+    "type": "Variable",
+    "variable": "mega_menu",
+    "selector_prefix": ".flyout-menu-%s"
+  },
+  "globalIcon": {
+    "type": "Icon",
+    "selector": ".flyout-menu-%s .j-menu > li > a::before"
+  },
+  "globalIconHover": {
+    "type": "Color",
+    "selector": ".flyout-menu-%s .j-menu > li:hover > a::before",
+    "property": "color"
+  },
+  "globalSubIcon": {
+    "type": "Icon",
+    "selector": ".flyout-menu-%s > .j-menu .j-menu > li > a::before"
+  },
+  "globalSubIconHover": {
+    "type": "Color",
+    "selector": ".flyout-menu-%s > .j-menu .j-menu > li:hover > a::before",
+    "property": "color"
+  },
+  "iconWidth": {
+    "type": "InputNumber",
+    "rules":{
+      "@":{
+        ".flyout-menu-%s > .j-menu > li.flyout-menu-item > a::before": "min-width:%spx"
+      }
+    }
+  },
+  "iconSize": {
+    "type": "InputNumber",
+    "rules":{
+      "@":{
+        ".flyout-menu-%s > .j-menu > li.flyout-menu-item > a::before": "font-size:%spx !important"
+      }
+    }
+  },
+  "iconMargin": {
+    "type": "Margin",
+    "selector":".flyout-menu-%s > .j-menu > li.flyout-menu-item > a::before"
+  }
+}

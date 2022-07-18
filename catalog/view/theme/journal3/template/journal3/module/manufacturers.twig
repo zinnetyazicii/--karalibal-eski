@@ -1,0 +1,90 @@
+{% macro renderManufacturersItem(item, context) %}
+  {% import _self as self %}
+  {% set manufacturers = item.manufacturers %}
+  {% if context.carousel %}
+    <div class="swiper" data-items-per-row='{{ context.itemsPerRow|json_encode(constant('JSON_FORCE_OBJECT')) }}' data-options='{{ context.carouselOptions|json_encode(constant('JSON_FORCE_OBJECT')) }}'>
+      <div class="swiper-container" {% if j3.isRTL() %}dir="rtl"{% endif %}>
+        <div class="swiper-wrapper manufacturer-grid">
+          {% include "journal3/template/journal3/manufacturer_grid.twig" with context %}
+        </div>
+      </div>
+      <div class="swiper-buttons">
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  {% else %}
+    <div class="manufacturer-grid">
+      {% include "journal3/template/journal3/manufacturer_grid.twig" with context %}
+    </div>
+  {% endif %}
+{% endmacro %}
+{% import _self as self %}
+<div class="{{ j3.classes(classes) }}">
+  <div class="module-body">
+  {# grid #}
+  {% if sectionsDisplay == 'blocks' %}
+    {% for item in items %}
+      <div class="{{ j3.classes(item.classes) }}">
+        {% if item.title %}
+          <h3 class="title module-title">{{ item.title }}</h3>
+        {% endif %}
+        {{ self.renderManufacturersItem(item, _context) }}
+      </div>
+    {% endfor %}
+  {% endif %}
+  {# tabs #}
+  {% if sectionsDisplay == 'tabs' %}
+    <ul class="nav nav-tabs">
+      {% for item in items %}
+        <li class="{{ j3.classes(item.tab_classes) }}">
+          <a href="#{{ id }}-tab-{{ loop.index }}" data-toggle="tab">{{ item.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+    <div class="tab-content">
+      {% for item in items %}
+        <div class="{{ j3.classes(item.classes) }}" id="{{ id }}-tab-{{ loop.index }}">
+          {{ self.renderManufacturersItem(item, _context) }}
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+  {# accordion #}
+  {% if sectionsDisplay == 'accordion' %}
+    <div class="panel-group" id="{{ id }}-collapse">
+      {% for item in items %}
+        <div class="{{ j3.classes(item.classes) }}">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a href="#{{ id }}-collapse-{{ loop.index }}" class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#{{ id }}-collapse" aria-expanded="false">
+                {{ item.title }}
+                <i class="fa fa-caret-down"></i>
+              </a>
+            </h4>
+          </div>
+          <div class="{{ j3.classes(item.panel_classes) }}" id="{{ id }}-collapse-{{ loop.index }}">
+            <div class="panel-body">
+              {{ self.renderManufacturersItem(item, _context) }}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+  {# isotope #}
+  {% if sectionsDisplay == 'isotope' %}
+    <ul class="nav nav-tabs">
+      {% for item in items %}
+        <li class="{{ j3.classes(item.tab_classes) }}">
+          <a data-filter=".{{ id }}-section-{{ loop.index }}">{{ item.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+    <div class="manufacturer-{{ display }} isotope-grid">
+      {% include "journal3/template/journal3/manufacturer_" ~ display ~ ".twig" %}
+    </div>
+  {% endif %}
+  </div>
+</div>

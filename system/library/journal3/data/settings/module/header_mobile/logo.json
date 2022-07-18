@@ -1,0 +1,22 @@
+{
+  "headerMobileLogoBG": {
+    "type": "Background",
+    "selector": ".mobile-header-active .mobile-default .mobile-logo-wrapper, .mobile-header-active .mobile-3 .mobile-bar"
+  },
+  "headerMobileLogoPadding": {
+    "type": "Padding",
+    "selector": ".mobile-header-active #logo a"
+  },
+  "headerMobileLogoOffset": {
+    "type": "InputPair",
+    "selector": ".mobile-header-active #logo img",
+    "properties": {
+      "first": "left: %spx",
+      "second": "top: %spx"
+    },
+    "rtlProperties": {
+      "first": "right: %spx",
+      "second": "top: %spx"
+    }
+  }
+}

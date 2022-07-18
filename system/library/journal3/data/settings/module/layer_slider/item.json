@@ -1,0 +1,59 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "New Slide"
+  },
+  "status": {
+    "type": "Toggle"
+  },
+  "type": {
+    "type": "Radio",
+    "value": "image",
+    "php": true
+  },
+  "image": {
+    "type": "ImageLang"
+  },
+  "background": {
+    "type": "Background",
+    "selector": ".ls-slide-%s-%s"
+  },
+  "alt": {
+    "type": "InputLang",
+    "php": true
+  },
+  "link": {
+    "type": "Link",
+    "php": true
+  },
+  "videoType": {
+    "type": "Radio",
+    "value": "html5",
+    "php": true
+  },
+  "videoHtml5Url": {
+    "type": "Input"
+  },
+  "videoYoutubeUrl": {
+    "type": "Input"
+  },
+  "videoVimeoUrl": {
+    "type": "Input"
+  },
+  "transition": {
+    "type": "Transition",
+    "value": ""
+  },
+  "transitionSpeed": {
+    "type": "Input",
+    "value": ""
+  },
+  "transitionDelay": {
+    "type": "Input",
+    "value": ""
+  },
+  "easing": {
+    "type": "Select",
+    "value": "Linear.easeNone"
+  }
+}

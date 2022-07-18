@@ -1,0 +1,79 @@
+<?php $val = array (
+  'data' => 
+  array (
+    46 => 
+    array (
+      'php' => 
+      array (
+        'type' => 'custom',
+        'label' => 'Satın Al',
+        'action' => 'quickbuy',
+        'link' => 
+        array (
+          'type' => 'popup',
+          'id' => '22',
+          'href' => 'javascript:open_popup(22)',
+          'name' => '',
+          'total' => NULL,
+          'attrs' => 
+          array (
+          ),
+          'classes' => 
+          array (
+          ),
+        ),
+      ),
+      'js' => 
+      array (
+      ),
+      'fonts' => 
+      array (
+      ),
+      'css' => '.btn-extra-46::before{content:\'\\eaaf\' !important;font-family:icomoon !important}',
+    ),
+    93 => 
+    array (
+      'php' => 
+      array (
+        'type' => 'custom',
+        'label' => 'Soru Sor',
+        'action' => 'link',
+        'link' => 
+        array (
+          'type' => 'popup',
+          'id' => '22',
+          'href' => 'javascript:open_popup(22)',
+          'name' => '',
+          'total' => NULL,
+          'attrs' => 
+          array (
+          ),
+          'classes' => 
+          array (
+          ),
+        ),
+      ),
+      'js' => 
+      array (
+      ),
+      'fonts' => 
+      array (
+      ),
+      'css' => '.btn-extra-93::before{content:\'\\f29c\' !important;font-family:icomoon !important}',
+    ),
+  ),
+  'all' => 
+  array (
+    46 => 46,
+    93 => 93,
+  ),
+  'special' => 
+  array (
+  ),
+  'outofstock' => 
+  array (
+  ),
+  'custom' => 
+  array (
+  ),
+);

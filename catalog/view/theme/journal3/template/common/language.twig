@@ -1,0 +1,36 @@
+{% if j3.settings.get('catalogLanguageStatus') %}
+{% if languages|length > 1 %}
+  {% set current_language = null %}
+  {% for language in languages %}
+    {% if language.code == code %}
+      {% set current_language = language %}
+    {% endif %}
+  {% endfor %}
+  <div id="language" class="language">
+    <form action="{{ action }}" method="post" enctype="multipart/form-data" id="form-language">
+      <div class="dropdown drop-menu">
+        <button type="button" class="dropdown-toggle" data-toggle="dropdown">
+          <span class="language-flag-title">
+            <span class="symbol"><img src="{{ j3.imageToBase64('catalog/language/' ~ current_language.code ~ '/' ~ current_language.code ~ '.png') }}" width="16" height="11" alt="{{ current_language.name }}" title="{{ current_language.name }}"/></span>
+            <span class="language-title">{{ current_language.name }}</span>
+          </span>
+        </button>
+        <div class="dropdown-menu j-dropdown">
+          <ul class="j-menu">
+            {% for language in languages %}
+              <li>
+                <a class="language-select" data-name="{{ language.code }}">
+                  <span class="language-flag"><img src="{{ j3.imageToBase64('catalog/language/' ~ language.code ~ '/' ~ language.code ~ '.png') }}" width="16" height="11" alt="{{ language.name }}" title="{{ language.name }}"/></span>
+                  <span class="language-title-dropdown">{{ language.name }}</span>
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      <input type="hidden" name="code" value=""/>
+      <input type="hidden" name="redirect" value="{{ redirect }}"/>
+    </form>
+  </div>
+{% endif %}
+{% endif %}

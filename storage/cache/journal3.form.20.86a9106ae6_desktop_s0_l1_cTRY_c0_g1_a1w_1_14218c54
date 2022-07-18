@@ -1,0 +1,165 @@
+<?php $val = array (
+  'css' => '.module-form-20 .form-group .control-label{display:none;max-width:9999px;padding-top:7px;padding-bottom:5px;justify-content:flex-start}.module-form-20 .required .control-label+div::before{display:inline}.module-form-20 .required .control-label::after{display:none}.module-form-20 .has-error{color:rgba(239, 80, 66, 1) !important}.module-form-20 .has-error .form-control{border-color:rgba(239, 80, 66, 1) !important}.module-form-20 .required .control-label::after, .module-form-20 .required .control-label + div::before, .module-form-20 .text-danger{color:rgba(143, 157, 166, 1)}.module-form-20 .form-group{margin-bottom:12px}.module-form-20 .required.has-error .control-label::after, .module-form-20 .required.has-error .control-label+div::before{color:rgba(239, 80, 66, 1) !important}.module-form-20 .required .control-label::after, .module-form-20 .required .control-label+div::before{margin-left:5px;margin-top:-3px}.module-form-20 input.form-control{background:rgba(255, 255, 255, 1) !important;border-width:1px !important;border-style:solid !important;border-color:rgba(226, 226, 226, 1) !important;border-radius:3px !important}.module-form-20 input.form-control:focus, .module-form-20 input.form-control:active{border-color:rgba(87, 154, 193, 1) !important}.module-form-20 input.form-control:hover{box-shadow:0 5px 35px -5px rgba(0, 0, 0, 0.07)}.module-form-20 input.form-control:focus{box-shadow:inset 0 0 5px rgba(0, 0, 0, 0.1)}.module-form-20 textarea.form-control{background:rgba(255, 255, 255, 1) !important;border-width:1px !important;border-style:solid !important;border-color:rgba(226, 226, 226, 1) !important;border-radius:3px !important}.module-form-20 textarea.form-control:focus, .module-form-20 textarea.form-control:active{border-color:rgba(87, 154, 193, 1) !important}.module-form-20 textarea.form-control:hover{box-shadow:0 5px 35px -5px rgba(0, 0, 0, 0.07)}.module-form-20 textarea.form-control:focus{box-shadow:inset 0 0 5px rgba(0, 0, 0, 0.1)}.module-form-20 select.form-control{background:rgba(255, 255, 255, 1) !important;border-width:1px !important;border-style:solid !important;border-color:rgba(226, 226, 226, 1) !important;border-radius:3px !important;max-width:200px}.module-form-20 select.form-control:focus, .module-form-20 select.form-control:active{border-color:rgba(87, 154, 193, 1) !important}.module-form-20 select.form-control:hover{box-shadow:0 5px 35px -5px rgba(0, 0, 0, 0.07)}.module-form-20 select.form-control:focus{box-shadow:inset 0 0 5px rgba(0, 0, 0, 0.1)}.module-form-20
+.radio{width:100%}.module-form-20
+.checkbox{width:100%}.module-form-20 .input-group .input-group-btn .btn, .module-form-20 .input-group .input-group-btn .btn:visited{font-size:13px;color:rgba(255, 255, 255, 1);font-weight:400;text-transform:uppercase;letter-spacing:1px}.module-form-20 .input-group .input-group-btn .btn:hover{color:rgba(255, 255, 255, 1) !important;background:rgba(239, 80, 66, 1) !important}.module-form-20 .input-group .input-group-btn .btn:active, .module-form-20 .input-group .input-group-btn .btn:hover:active, .module-form-20 .input-group .input-group-btn .btn:focus:active{color:rgba(255, 255, 255, 1) !important;background:rgba(215, 70, 58, 1) !important;box-shadow:inset 0 0 5px rgba(0, 0, 0, 0.1)}.module-form-20 .input-group .input-group-btn .btn:focus{color:rgba(255, 255, 255, 1) !important;background:rgba(215, 70, 58, 1);box-shadow:inset 0 0 5px rgba(0, 0, 0, 0.1)}.module-form-20 .input-group .input-group-btn
+.btn{background:rgba(8, 39, 77, 1);border-width:2px;padding:15px;padding-right:20px;padding-left:20px;border-radius:3px !important;min-width:35px;min-height:35px;margin-left:5px}.desktop .module-form-20 .input-group .input-group-btn .btn:hover{box-shadow:0 10px 40px rgba(0, 0, 0, 0.15)}.module-form-20 .input-group .input-group-btn .btn.btn.disabled::after{font-size:20px}.module-form-20 .product-option-file .btn i::before{content:\'\\ebd8\' !important;font-family:icomoon !important}.module-form-20 .title.module-title{font-size:24px;line-height:1.1;margin-bottom:15px;white-space:normal;overflow:visible;text-overflow:initial}.module-form-20 .title.module-title::after{display:none}.module-form-20 .title.module-title.page-title>span::after{display:none}',
+  'fonts' => 
+  array (
+  ),
+  'settings' => 
+  array (
+    'schedule' => 
+    array (
+      'from' => '',
+      'to' => '',
+      'between' => true,
+    ),
+    'title' => 'Bize Mesaj Bırakın',
+    'agree' => '3',
+    'sentText' => 'Sent',
+    'sentEmailTo' => 'zinnet.yazici@karalicay.com',
+    'sentEmailSubject' => '{{ $store }} - Enquiry from {{ $email }}',
+    'sentEmailLogo' => false,
+    'sentEmailTitle' => 'A new message has been received!',
+    'sentEmailField' => 'Field',
+    'sentEmailValue' => 'Value',
+    'sentEmailUsingModule' => 'Sent using module',
+    'sentEmailFrom' => 'Sent from',
+    'sentEmailIPAddress' => 'IP Address',
+    'status' => true,
+    'id' => 'form-627663e05bcb1',
+    'module_id' => 20,
+    'classes' => 
+    array (
+      0 => 'module',
+      1 => 'module-form',
+      2 => 'module-form-20',
+    ),
+    'text_select' => ' --- Seçiniz --- ',
+    'text_loading' => 'Yükleniyor...',
+    'button_submit' => 'Gönder',
+    'button_upload' => 'Dosya Yükle',
+    'datepicker' => 'tr',
+    'action' => 'http://localhost/index.php?route=journal3/form/send&amp;module_id=20',
+    'agree_data' => 
+    array (
+      'text' => '<a href="http://localhost/index.php?route=information/information/agree&amp;information_id=3" class="agree"><b>Güvenlik Koşulları</b></a>\'ni okudum ve kabul ediyorum.',
+      'error' => 'Uyarı: Güvenlik Koşulları kabul etmelisiniz!',
+    ),
+    'items' => 
+    array (
+      1 => 
+      array (
+        'name' => 'İsim',
+        'label' => 'İsim',
+        'placeholder' => '',
+        'type' => 'name',
+        'required' => true,
+        'id' => '20-1',
+        'classes' => 
+        array (
+          0 => 'module-item',
+          1 => 'module-item-1',
+        ),
+        'items' => 
+        array (
+        ),
+      ),
+      2 => 
+      array (
+        'name' => 'E-posta',
+        'label' => 'E-posta',
+        'placeholder' => '',
+        'type' => 'email',
+        'required' => true,
+        'id' => '20-2',
+        'classes' => 
+        array (
+          0 => 'module-item',
+          1 => 'module-item-2',
+        ),
+        'items' => 
+        array (
+        ),
+      ),
+      3 => 
+      array (
+        'name' => 'Konu',
+        'label' => 'Konu',
+        'placeholder' => '',
+        'type' => 'text',
+        'required' => false,
+        'id' => '20-3',
+        'classes' => 
+        array (
+          0 => 'module-item',
+          1 => 'module-item-3',
+        ),
+        'items' => 
+        array (
+          1 => 
+          array (
+            'name' => 'Option 1',
+            'label' => 'wasd<',
+            'id' => '20-3-1',
+            'classes' => 
+            array (
+              0 => 'module-subitem',
+              1 => 'module-subitem-1',
+            ),
+          ),
+          2 => 
+          array (
+            'name' => 'Option 2',
+            'label' => 'Add or remove any fields',
+            'id' => '20-3-2',
+            'classes' => 
+            array (
+              0 => 'module-subitem',
+              1 => 'module-subitem-2',
+            ),
+          ),
+          3 => 
+          array (
+            'name' => 'Option 3',
+            'label' => 'Your own custom criteria',
+            'id' => '20-3-3',
+            'classes' => 
+            array (
+              0 => 'module-subitem',
+              1 => 'module-subitem-3',
+            ),
+          ),
+          4 => 
+          array (
+            'name' => 'Option 4',
+            'label' => 'Make any field required or not',
+            'id' => '20-3-4',
+            'classes' => 
+            array (
+              0 => 'module-subitem',
+              1 => 'module-subitem-4',
+            ),
+          ),
+        ),
+      ),
+      4 => 
+      array (
+        'name' => 'Mesaj',
+        'label' => 'Mesaj',
+        'placeholder' => '',
+        'type' => 'textarea',
+        'required' => true,
+        'id' => '20-4',
+        'classes' => 
+        array (
+          0 => 'module-item',
+          1 => 'module-item-4',
+        ),
+        'items' => 
+        array (
+        ),
+      ),
+    ),
+  ),
+);

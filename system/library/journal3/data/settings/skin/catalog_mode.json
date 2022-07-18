@@ -1,0 +1,60 @@
+{
+  "catalogLanguageStatus": {
+    "type": "Toggle",
+    "value": "true",
+    "php": true
+  },
+  "catalogCurrencyStatus": {
+    "type": "Toggle",
+    "value": "true",
+    "php": true
+  },
+  "catalogSearchStatus": {
+    "type": "Toggle",
+    "value": "true",
+    "php": true
+  },
+  "catalogMiniCartStatus": {
+    "type": "Toggle",
+    "value": "true",
+    "php": true
+  },
+  "catalogCartStatus": {
+    "type": "Toggle",
+    "value": "true",
+    "php": true
+  },
+  "catalogWishlistStatus": {
+    "type": "Toggle",
+    "value": "true",
+    "php": true
+  },
+  "catalogCompareStatus": {
+    "type": "Toggle",
+    "value": "true",
+    "rules": {
+      "false": {
+        ".grid-list .compare-btn": "display:none"
+      }
+    },
+    "php": true
+  },
+  "catalogQuickviewTabletStatus": {
+    "type": "Toggle",
+    "value": "false",
+    "rules": {
+      "true": {
+        ".tablet a.btn-quickview": "display:inline-flex !important"
+      }
+    }
+  },
+  "catalogQuickviewPhoneStatus": {
+    "type": "Toggle",
+    "value": "false",
+    "rules": {
+      "true": {
+        ".phone a.btn-quickview": "display:inline-flex !important"
+      }
+    }
+  }
+}

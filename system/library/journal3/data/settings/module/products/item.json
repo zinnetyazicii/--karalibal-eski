@@ -1,0 +1,44 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "New Section"
+  },
+  "status": {
+    "type": "Status"
+  },
+  "title": {
+    "type": "InputLang",
+    "php": true
+  },
+  "tabType": {
+    "type": "Radio",
+    "value": "content",
+    "php": true
+  },
+  "link": {
+    "type": "Link",
+    "php": true
+  },
+  "filter": {
+    "type": "ProductFilter",
+    "php": true
+  },
+  "icon": {
+    "type": "Icon",
+    "selector": ".module-products-%s .nav-tabs > .tab-%s > a::before"
+  },
+  "iconHover": {
+    "type": "Color",
+    "selector": ".module-products-%s .nav-tabs > .tab-%s:not(.active):hover > a::before",
+    "property": "color"
+  },
+  "iconActive": {
+    "type": "Icon",
+    "selector": ".module-products-%s .nav-tabs > .tab-%s.active > a::before"
+  },
+  "iconActiveHover": {
+    "type": "Color",
+    "selector": ".module-products-%s .nav-tabs > .tab-%s.active:hover > a::before",
+    "property": "color"
+  }
+}

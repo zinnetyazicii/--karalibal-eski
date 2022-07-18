@@ -1,0 +1,428 @@
+{
+  "SearchBorder": {
+    "type": "Border",
+    "selector": ".header-search"
+  },
+  "SearchBorderHover": {
+    "type": "Color",
+    "selector": ".header-search:hover",
+    "property": "border-color",
+    "desktop":true
+  },
+  "SearchBorderActive": {
+    "type": "Color",
+    "selector": ".header-search.focused, .header-search.focused:hover",
+    "property": "border-color",
+    "desktop":true
+  },
+  "SearchFullBorderRadius": {
+    "type": "BorderRadius",
+    "selector": ".header-search"
+  },
+  "SearchShadow": {
+    "type": "Shadow",
+    "selector": ".header-search"
+  },
+  "SearchInputFont": {
+    "type": "Font",
+    "selector": ".header-search input"
+  },
+  "SearchInputBG": {
+    "type": "Background",
+    "selector": ".header-search input",
+    "important": true
+  },
+  "SearchInputBGHover": {
+    "type": "Background",
+    "selector": ".header-search:hover input",
+    "desktop":true,
+    "important": true
+  },
+  "SearchIcon": {
+    "type": "Icon",
+    "selector": ".header-search > .search-button::before",
+    "value": {
+      "icon": {
+        "name": "search",
+        "code": "f002"
+      }
+    }
+  },
+  "SearchIconHover": {
+    "type": "Color",
+    "selector": ".header-search > .search-button:hover::before",
+    "desktop":true,
+    "property": "color",
+    "important": true
+  },
+  "SearchIconBorder": {
+    "type": "Border",
+    "selector": ".header-search > .search-button"
+  },
+  "SearchIconBorderHover": {
+    "type": "Color",
+    "selector": ".header-search:hover > .search-button",
+    "property": "border-color"
+  },
+  "SearchIconBorderActive": {
+    "type": "Color",
+    "selector": ".header-search.focused > .search-button",
+    "property": "border-color"
+  },
+  "SearchIconActive": {
+    "type": "Color",
+    "selector": ".header-search > .search-button:active::before",
+    "property": "color",
+    "important": true
+  },
+  "SearchIconBG": {
+    "type": "Background",
+    "selector": ".header-search .search-button"
+  },
+  "SearchIconBGActive": {
+    "type": "Background",
+    "selector": ".header-search .search-button:active"
+  },
+  "SearchIconBGHover": {
+    "type": "Background",
+    "selector": ".header-search .search-button:hover",
+    "desktop":true
+  },
+  "SearchIconWidth": {
+    "type": "InputNumber",
+    "rules":{
+      "@":{
+        ".header-search .search-button": "min-width:%spx"
+      }
+    }
+  },
+  "SearchPlaceholder": {
+    "type": "InputLang",
+    "value": "Search...",
+    "php": true
+  },
+  "SearchCategories": {
+    "type": "InputLang",
+    "value": "All",
+    "php": true
+  },
+
+  "SearchPlaceholderColor": {
+    "type": "Color",
+    "rules": {
+      "@": {
+        "#search input::-webkit-input-placeholder": "color: %s",
+        "#search input::-moz-input-placeholder": "color: %s",
+        "#search input:-ms-input-placeholder": "color: %s"
+      }
+    }
+  },
+
+  "SearchCategoriesSelectorStatus": {
+    "type": "Toggle",
+    "value": "true",
+    "rules": {
+      "false": {
+        ".header-search > input":"border-top-left-radius: inherit; border-bottom-left-radius: inherit;"
+      }
+    },
+    "rtlRules": {
+      "false": {
+        ".header-search > input":"border-top-right-radius: inherit; border-bottom-right-radius: inherit;"
+      }
+    },
+    "php": true
+  },
+  "SearchCategoriesType": {
+    "type": "Radio",
+    "value": "all",
+    "php": true
+  },
+  "SearchCategoriesSelectorBG": {
+    "type": "Background",
+    "selector": ".search-categories"
+  },
+  "SearchCategoriesSelectorBGHover": {
+    "type": "Background",
+    "selector": ".search-categories:hover",
+    "desktop":true
+  },
+  "SearchCategoriesSelectorFont": {
+    "type": "Font",
+    "selector": ".search-categories-button, .search-categories-button > a"
+  },
+  "SearchCategoriesSelectorFontHover": {
+    "type": "Font",
+    "selector": ".search-categories:hover .search-categories-button",
+    "desktop":true
+  },
+  "SearchCategoriesBorder": {
+    "type": "Border",
+    "selector": ".search-categories"
+  },
+  "SearchCategoriesBorderHover": {
+    "type": "Color",
+    "selector": ".header-search:hover .search-categories",
+    "property": "border-color"
+  },
+  "SearchCategoriesBorderActive": {
+    "type": "Color",
+    "selector": ".header-search.focused .search-categories",
+    "property": "border-color"
+  },
+  "SearchCategoriesSelectorIcon": {
+    "type": "Icon",
+    "selector": ".search-categories-button::after",
+    "value": {
+      "icon": {
+        "name": "sort",
+        "code": "f0dc"
+      }
+    }
+  },
+  "SearchCategoriesSelectorIconHover": {
+    "type": "Color",
+    "selector": ".search-categories:hover .search-categories-button::after",
+    "property": "color",
+    "desktop":true
+  },
+
+  "SearchCategoriesSelectorDropdownWidth": {
+    "type": "InputNumber",
+    "selector": ".search-categories .dropdown-menu ul",
+    "property": "width:%spx"
+  },
+  "SearchCategoriesSelectorDropdownHeight": {
+    "type": "InputNumber",
+    "selector": ".search-categories .dropdown-menu ul",
+    "property": "max-height:%spx"
+  },
+
+  "SearchCategoriesSelectorDropdown": {
+    "type": "Variable",
+    "variable": "dropdown",
+    "selector_prefix": ".search-categories"
+  },
+
+  "SearchCategoriesTriangle": {
+    "include": "triangle",
+    "selector_prefix": ".search-categories .j-menu"
+  },
+
+  "SearchAutoSuggestStatus": {
+    "type": "Status",
+    "php": true,
+    "js": true
+  },
+  "SearchAutoSuggestLimit": {
+    "type": "Input",
+    "value": "10",
+    "php": true
+  },
+  "SearchAutoSuggestDescription": {
+    "type": "Toggle",
+    "value": "true",
+    "php": true,
+    "js": true
+  },
+  "SearchAutoSuggestSubCategories": {
+    "type": "Toggle",
+    "js": true,
+    "php": true
+  },
+  "SearchAutoSuggestWidth": {
+    "type": "InputNumber",
+    "selector": ".tt-menu > div",
+    "property": "width:%spx"
+  },
+
+  "SearchAutoSuggestHeight": {
+    "type": "InputNumber",
+    "selector": ".tt-menu > div",
+    "property": "max-height:%spx"
+  },
+
+  "SearchAutoSuggestBG": {
+    "type": "Background",
+    "selector": ".tt-menu > div"
+  },
+  "SearchAutoSuggestBGHover": {
+    "type": "Background",
+    "selector": ".tt-menu > div > div > a:hover, .tt-cursor"
+  },
+  "SearchAutoSuggestDivider": {
+    "type": "Divider",
+    "selector": ".tt-menu > div > div > a"
+  },
+  "SearchAutoSuggestDividerHover": {
+    "type": "Color",
+    "selector": ".tt-menu > div > div > a:hover, .tt-menu > div > div:hover + div > a",
+    "property": "border-color"
+  },
+  "SearchAutoSuggestShadow": {
+    "type": "Shadow",
+    "selector": ".tt-menu > div"
+  },
+  "SearchAutoSuggestBorder": {
+    "type": "Border",
+    "selector": ".tt-menu > div"
+  },
+  "SearchAutoSuggestBorderRadius": {
+    "type": "BorderRadius",
+    "selector": ".tt-menu > div"
+  },
+  "SearchAutoSuggestTriangle": {
+    "include": "triangle",
+    "selector_prefix": ".tt-menu:not(.tt-empty)"
+  },
+
+  "SearchAutoSuggestImageStatus": {
+    "type": "Toggle",
+    "value": "true",
+    "rules": {
+      "false": {
+        ".search-result > a > img":"display:none",
+        ".search-result > a > span":"padding-left:5px;"
+      }
+    }
+  },
+  "SearchAutoSuggestProductImageBorder": {
+    "type": "Border",
+    "selector": ".search-result > a > img"
+  },
+  "SearchAutoSuggestProductImageBorderHover": {
+    "type": "Color",
+    "selector": ".tt-menu > div > div > a:hover img",
+    "property": "border-color"
+  },
+  "SearchAutoSuggestProductImageBorderRadius": {
+    "type": "BorderRadius",
+    "selector": ".search-result > a > img"
+  },
+  "SearchAutoSuggestProductImageShadow": {
+    "type": "Shadow",
+    "selector": ".search-result > a > img"
+  },
+  "SearchAutoSuggestProductImageShadowHover": {
+    "type": "Shadow",
+    "selector": ".tt-menu > div > div > a:hover img"
+  },
+
+  "SearchAutoSuggestNameStatus": {
+    "type": "Toggle",
+    "value": "true",
+    "rules": {
+      "false": {
+        ".search-result .product-name":"display:none"
+      }
+    }
+  },
+  "SearchAutoSuggestPriceStatus": {
+    "type": "Toggle",
+    "value": "true",
+    "rules": {
+      "false": {
+        ".search-result .product-name + span":"display:none"
+      }
+    }
+  },
+
+  "SearchAutoSuggestFont": {
+    "type": "Font",
+    "selector": ".search-result .product-name"
+  },
+  "SearchAutoSuggestFontHover": {
+    "type": "Font",
+    "selector": ".tt-menu > div > div > a:hover .product-name"
+  },
+  "SearchAutoSuggestPriceFont": {
+    "type": "Font",
+    "selector": ".search-result .product-name + span"
+  },
+  "SearchAutoSuggestPriceFontHover": {
+    "type": "Font",
+    "selector": ".tt-menu > div > div > a:hover .product-name + span"
+  },
+  "SearchAutoSuggestPriceOldFont": {
+    "type": "Font",
+    "selector": ".search-result .price-old"
+  },
+  "SearchAutoSuggestPriceOldFontHover": {
+    "type": "Font",
+    "selector": ".tt-menu > div > div > a:hover .price-old"
+  },
+
+  "SearchAutoSuggestPriceOldBG": {
+    "type": "Background",
+    "selector": ".search-result .price-old"
+  },
+  "SearchAutoSuggestPriceOldBGHover": {
+    "type": "Background",
+    "selector": ".tt-menu > div > div > a:hover .price-old"
+  },
+
+  "SearchAutoSuggestViewMoreStatus": {
+    "type": "Toggle",
+    "value": "true",
+    "rules": {
+      "false": {
+        ".search-result.view-more":"display:none"
+      }
+    }
+  },
+  "SearchViewMoreText": {
+    "type": "InputLang",
+    "value": "View More",
+    "php": true
+  },
+  "SearchAutoSuggestViewMoreFont": {
+    "type": "Font",
+    "selector": ".search-result.view-more a"
+  },
+  "SearchAutoSuggestViewMoreFontHover": {
+    "type": "Font",
+    "selector": ".search-result.view-more a:hover"
+  },
+  "SearchAutoSuggestProductsAlign": {
+    "type": "Radio",
+    "value": "top",
+    "rules": {
+      "top": {
+        ".search-result > a > span": "justify-content:flex-start"
+      },
+      "center": {
+        ".search-result > a > span": "justify-content:center"
+      }
+    }
+  },
+  "SearchAutoSuggestViewMoreBG": {
+    "type": "Background",
+    "selector": ".search-result.view-more a"
+  },
+  "SearchAutoSuggestViewMoreBGHover": {
+    "type": "Background",
+    "selector": ".search-result.view-more a:hover"
+  },
+  "SearchAutoSuggestViewMorePadding": {
+    "type": "Padding",
+    "selector": ".search-result.view-more a"
+  },
+  "SearchAutoSuggestViewMoreIcon": {
+    "type": "Icon",
+    "selector": ".search-result.view-more a::after"
+  },
+  "SearchAutoSuggestViewMoreIconHover": {
+    "type": "Color",
+    "selector": ".search-result.view-more a:hover::after",
+    "property": "color"
+  },
+  "SearchNoResultsText": {
+    "type": "InputLang",
+    "value": "No results found.",
+    "php": true
+  },
+  "AutoSuggestPadding": {
+    "type": "Padding",
+    "selector": ".search-result > a"
+  }
+}

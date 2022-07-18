@@ -1,0 +1,60 @@
+{
+  "headerMobileTopBarVisibility": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".mobile-header-active .mobile-header .mobile-top-bar": "display: flex"
+      },
+      "false": {
+        ".mobile-header-active .mobile-header .mobile-top-bar": "display: none"
+      }
+    },
+    "php": true,
+    "js": true
+  },
+  "headerMobileTopBarHeight": {
+    "type": "InputNumber",
+    "value": "35",
+    "php": true,
+    "js": true,
+    "rules": {
+      "@": {
+        ".mobile-header-active .mobile-header .mobile-top-bar": "height: %spx"
+      }
+    }
+  },
+  "headerMobileTopBarBorder": {
+    "type": "Border",
+    "selector": ".mobile-header-active .mobile-header .mobile-top-bar"
+  },
+  "headerMobileTopPadding": {
+    "type": "Padding",
+    "selector": ".mobile-header-active .mobile-header .mobile-top-bar"
+  },
+  "headerMobileTopBarBG": {
+    "type": "Background",
+    "selector": ".mobile-header-active .mobile-header .mobile-top-bar"
+  },
+  "headerMobileTopBarShadow": {
+    "type": "Shadow",
+    "selector": ".mobile-header-active .mobile-header .mobile-top-bar"
+  },
+  "headerMobileTopBarAlign": {
+    "type": "Radio",
+    "value": "apart",
+    "rules": {
+      "start": {
+        ".mobile-header-active .mobile-header .mobile-top-bar": "justify-content:flex-start"
+      },
+      "center": {
+        ".mobile-header-active .mobile-header .mobile-top-bar": "justify-content:center"
+      },
+      "end": {
+        ".mobile-header-active .mobile-header .mobile-top-bar": "justify-content:flex-end"
+      },
+      "apart": {
+        ".mobile-header-active .mobile-header .mobile-top-bar": "justify-content:space-between"
+      }
+    }
+  }
+}

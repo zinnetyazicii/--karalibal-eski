@@ -1,0 +1,54 @@
+{{ header }}
+{% if j3.settings.get('pageTitlePosition') == 'top' %}
+  <h1 class="title page-title"><span>{{ heading_title }}</span></h1>
+{% endif %}
+<div class="container">
+  {% if error_warning %}
+    <div class="alert alert-danger alert-dismissible"><i class="fa fa-exclamation-circle"></i>{{ error_warning }}</div>
+  {% else %}
+    {{ j3.loadController('journal3/layout', 'top') }}
+    <div class="row">{{ column_left }}
+      {% if column_left and column_right %}
+        {% set class = 'col-sm-6' %}
+      {% elseif column_left or column_right %}
+        {% set class = 'col-sm-9' %}
+      {% else %}
+        {% set class = 'col-sm-12' %}
+      {% endif %}
+      <div id="content" class="{{ class }}">
+        {% if j3.settings.get('pageTitlePosition') == 'default' %}
+          <h1 class="title page-title">{{ heading_title }}</h1>
+        {% endif %}
+        {{ content_top }}
+        <form class="form-horizontal">
+          <fieldset>
+            <div class="form-group required">
+              <label class="col-sm-2 control-label" for="input-name">{{ entry_name }}</label>
+              <div class="col-sm-10">
+                <input type="text" name="name" value="{{ name }}" id="input-name" class="form-control"/>
+              </div>
+            </div>
+            <div class="form-group required">
+              <label class="col-sm-2 control-label" for="input-email">{{ entry_email }}</label>
+              <div class="col-sm-10">
+                <input type="text" name="email" value="{{ email }}" id="input-email" class="form-control"/>
+              </div>
+            </div>
+            <div class="form-group required">
+              <label class="col-sm-2 control-label" for="input-enquiry">{{ entry_enquiry }}</label>
+              <div class="col-sm-10">
+                <textarea name="enquiry" rows="10" id="input-enquiry" class="form-control">{{ enquiry }}</textarea>
+              </div>
+            </div>
+          </fieldset>
+          <div class="buttons">
+            <div class="pull-right">
+              <button class="btn btn-primary" type="submit"><span>{{ button_submit }}</span></button>
+            </div>
+          </div>
+        </form>
+        {{ content_bottom }}</div>
+      {{ column_right }}</div>
+  {% endif %}
+</div>
+{{ footer }}

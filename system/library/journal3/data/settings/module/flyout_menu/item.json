@@ -1,0 +1,134 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "New Menu Item"
+  },
+  "status": {
+    "type": "Status"
+  },
+  "title": {
+    "type": "InputLang",
+    "php": true
+  },
+  "label": {
+    "type": "InputLang",
+    "php": true
+  },
+  "labelStyle": {
+    "type": "Variable",
+    "variable": "menu_label",
+    "selector_prefix": ".flyout-menu-%s > ul.j-menu > li.flyout-menu-item-%s > a"
+  },
+  "icon": {
+    "type": "Icon",
+    "selector": ".flyout-menu-%s > ul.j-menu > li.flyout-menu-item-%s > a::before"
+  },
+  "iconHover": {
+    "type": "Color",
+    "selector": ".flyout-menu-%s > ul.j-menu > li.flyout-menu-item-%s:hover > a::before",
+    "property": "color",
+    "desktop":true,
+    "important": true
+  },
+  "font": {
+    "type": "Icon",
+    "selector": ".flyout-menu-%s > ul.j-menu > li.flyout-menu-item-%s > a",
+    "important": true
+  },
+  "fontHover": {
+    "type": "Font",
+    "selector": ".flyout-menu-%s > ul.j-menu > li.flyout-menu-item-%s:hover > a",
+    "desktop":true,
+    "important": true
+  },
+  "bg": {
+    "type": "Background",
+    "selector": ".flyout-menu-%s > ul.j-menu > li.flyout-menu-item-%s > a",
+    "important": true
+  },
+  "bgHover": {
+    "type": "Background",
+    "selector": ".flyout-menu-%s > ul.j-menu > li.flyout-menu-item-%s:hover > a",
+    "desktop":true,
+    "important": true
+  },
+  "link": {
+    "type": "Link",
+    "php": true
+  },
+  "subcategories": {
+    "type": "Toggle"
+  },
+  "type": {
+    "type": "Radio",
+    "value": "multilevel",
+    "php": true
+  },
+  "flyout": {
+    "type": "Module"
+  },
+  "position": {
+    "type": "Radio",
+    "value": "left",
+    "php": true
+  },
+  "flyoutMegaMenuWidth": {
+    "type": "InputNumber",
+    "selector": ".flyout-menu-%s .mega-menu.flyout-menu-item-%s .dropdown-menu",
+    "property": "width:%spx",
+    "value": "800"
+  },
+  "flyoutMegaMenuBG": {
+    "type": "Background",
+    "selector": ".flyout-menu-%s .mega-menu.flyout-menu-item-%s .dropdown-menu"
+  },
+  "flyoutMegaMenuBorder": {
+    "type": "Border",
+    "selector": ".flyout-menu-%s .mega-menu.flyout-menu-item-%s .dropdown-menu"
+  },
+  "flyoutMegaMenuShadow": {
+    "type": "Shadow",
+    "selector": ".flyout-menu-%s .mega-menu.flyout-menu-item-%s .dropdown-menu"
+  },
+  "flyoutMultiLevelPosition": {
+    "type": "Radio",
+    "value": "right",
+    "rules": {
+      "left": {
+        ".desktop-header-active .flyout-menu-%s .flyout-menu-item-%s.multi-level .dropdown-menu": "left:0%; transform: translateX(-100%);"
+      },
+      "right": {
+        ".desktop-header-active .flyout-menu-%s .flyout-menu-item-%s.multi-level .dropdown-menu": "left:100%"
+      }
+    },
+    "rtlRules": {
+      "right": {
+        ".desktop-header-active .flyout-menu-%s .flyout-menu-item-%s.multi-level .dropdown-menu": "right:100%"
+      },
+      "left": {
+        ".desktop-header-active .flyout-menu-%s .flyout-menu-item-%s.multi-level .dropdown-menu": "right:0; transform: translateX(100%);"
+      }
+    }
+  },
+  "flyoutMultiLevelOffset": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".desktop-header-active .flyout-menu-%s .flyout-menu-item-%s.multi-level .dropdown-menu": "margin-left:%spx"
+      }
+    },
+    "rtlRules": {
+      "@": {
+        ".desktop-header-active .flyout-menu-%s .flyout-menu-item-%s.multi-level .dropdown-menu": "margin-right:%spx"
+      }
+    }
+  },
+  "flyoutMultiLevelDropdownWidth": {
+    "type": "InputNumber",
+    "rules": {
+      "@": {
+        ".desktop-header-active .flyout-menu-%s .flyout-menu-item-%s.multi-level .dropdown-menu": "width:%spx"
+      }
+    }
+  }
+}

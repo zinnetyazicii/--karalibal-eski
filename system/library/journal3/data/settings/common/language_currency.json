@@ -1,0 +1,141 @@
+{
+  "Display": {
+    "type": "Radio",
+    "value": "full",
+    "rules": {
+      "symbol": {
+        ".dropdown-toggle .symbol": "display:flex",
+        ".dropdown-toggle .symbol ~ span": "display:none"
+      },
+      "text": {
+        ".dropdown-toggle .symbol": "display:none",
+        ".dropdown-toggle .symbol + span": "display:block; margin-left:0"
+      },
+      "code": {
+        ".dropdown-toggle .symbol": "display:none",
+        ".dropdown-toggle .language-title": "display:block; margin-left:0",
+        ".dropdown-toggle .currency-title ": "display:none",
+        ".dropdown-toggle .currency-code ": "display:block"
+      },
+      "full": {
+        ".dropdown-toggle .symbol": "display:flex",
+        ".dropdown-toggle .symbol + span": "display:block; margin-left:5px"
+      }
+    }
+  },
+  "DropdownDisplay": {
+    "type": "Radio",
+    "value": "full",
+    "rules": {
+      "symbol": {
+        ".language-flag": "display:inline-flex",
+        ".currency-symbol": "display:inline-flex",
+        ".language-flag ~ span": "display:none",
+        ".currency-symbol ~ span": "display:none"
+      },
+      "text": {
+        ".language-flag": "display:none",
+        ".currency-symbol": "display:none",
+        ".language-title-dropdown": "display:inline-flex",
+        ".currency-title-dropdown": "display:inline-flex",
+        ".currency-code-dropdown": "display:none"
+      },
+      "code": {
+        ".language-flag": "display:none",
+        ".currency-symbol": "display:none",
+        ".language-title-dropdown": "display:inline-flex",
+        ".currency-code-dropdown": "display:inline-flex",
+        ".currency-title-dropdown": "display:none"
+      },
+      "full": {
+        ".language-flag": "display:inline-flex",
+        ".currency-symbol": "display:inline-flex",
+        ".language-title-dropdown": "display:inline-flex",
+        ".currency-title-dropdown": "display:inline-flex",
+        ".currency-code-dropdown": "display:none"
+      }
+    }
+  },
+  "DropdownIndicator": {
+    "type": "Toggle",
+    "rules": {
+      "true": {
+        ".dropdown::after": "display: block"
+      },
+      "false": {
+        ".dropdown::after": "display: none"
+      }
+    }
+  },
+  "TextFont": {
+    "type": "Font",
+    "selector": ".dropdown-toggle > span, .dropdown::after"
+  },
+  "TextFontHover": {
+    "type": "Font",
+    "selector": ".dropdown:hover button > span, .dropdown:hover::after",
+    "desktop":true
+  },
+  "ButtonBackground": {
+    "type": "Background",
+    "selector": ".dropdown"
+  },
+  "ButtonBackgroundHover": {
+    "type": "Background",
+    "selector": ".dropdown:hover",
+    "desktop":true
+  },
+  "TextPadding": {
+    "type": "Padding",
+    "selector": ".dropdown-toggle"
+  },
+  "SymbolFontSize": {
+    "type": "InputNumber",
+    "rules":{
+      "@":{
+        ".dropdown-toggle .symbol": "font-size:%spx"
+      }
+    }
+  },
+  "SymbolSize": {
+    "type": "InputPair",
+    "selector": ".dropdown-toggle .symbol",
+    "properties": {
+      "first": "width:%spx",
+      "second": "height:%spx"
+    }
+  },
+  "SymbolColor": {
+    "type": "Color",
+    "selector": ".dropdown-toggle .symbol",
+    "property": "color"
+  },
+  "SymbolColorHover": {
+    "type": "Color",
+    "selector": ".dropdown:hover .dropdown-toggle .symbol",
+    "property": "color",
+    "desktop":true
+  },
+  "SymbolBackground": {
+    "type": "Background",
+    "selector": ".dropdown-toggle .symbol"
+  },
+  "SymbolBackgroundHover": {
+    "type": "Background",
+    "selector": ".dropdown:hover .dropdown-toggle .symbol",
+    "desktop":true
+  },
+  "SymbolRadius": {
+    "type": "BorderRadius",
+    "selector": ".dropdown-toggle .symbol"
+  },
+  "SymbolShadow": {
+    "type": "Shadow",
+    "selector": ".dropdown-toggle .symbol"
+  },
+  "SymbolShadowHover": {
+    "type": "Shadow",
+    "selector": ".dropdown:hover .dropdown-toggle .symbol",
+    "desktop":true
+  }
+}

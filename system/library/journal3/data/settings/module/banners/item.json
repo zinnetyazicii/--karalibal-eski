@@ -1,0 +1,44 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "Banner"
+  },
+  "status": {
+    "type": "Status"
+  },
+  "title": {
+    "type": "InputLang",
+    "value":  "",
+    "php": true
+  },
+  "title2": {
+    "type": "InputLang",
+    "value":  "",
+    "php": true
+  },
+  "title3": {
+    "type": "InputLang",
+    "value":  "",
+    "php": true
+  },
+  "image": {
+    "type": "ImageLang"
+  },
+  "alt": {
+    "type": "InputLang",
+    "value":  "",
+    "php": true
+  },
+  "link": {
+    "type": "Link",
+    "php": true
+  },
+  "itemIcon": {
+    "type": "Icon",
+    "selector": ".module-banners-%s .module-item-%s > a::after"
+  },
+  "background": {
+    "type": "Background",
+    "selector": ".module-banners-%s .module-item-%s > a"
+  }
+}

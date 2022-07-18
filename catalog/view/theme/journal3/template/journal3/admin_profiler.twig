@@ -1,0 +1,4 @@
+<script>
+  console.table({{ stats|json_encode }});
+  console.info('TTFB: ', '{{ ttfb ~ 'ms' }}');
+</script>

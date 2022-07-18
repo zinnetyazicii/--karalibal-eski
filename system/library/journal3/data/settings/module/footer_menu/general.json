@@ -1,0 +1,36 @@
+{
+  "name": {
+    "type": "Input",
+    "value": "New Footer"
+  },
+  "margin": {
+    "type": "Margin",
+    "selector": "footer > div"
+  },
+  "background": {
+    "type": "Background",
+    "selector": "footer > div"
+  },
+  "pad": {
+    "type": "Padding",
+    "selector": "footer > div"
+  },
+  "border": {
+    "type": "Border",
+    "selector": "footer > div"
+  },
+  "width": {
+    "type": "InputNumber",
+    "rules":{
+      "@":{
+        "footer .grid-cols": "max-width:%spx"
+      }
+    }
+  },
+  "footerType": {
+    "type": "Radio",
+    "value": "default",
+    "js": true,
+    "php": true
+  }
+}
